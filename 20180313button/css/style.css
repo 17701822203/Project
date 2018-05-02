@@ -1,0 +1,94 @@
+/*Created by huang.jun on 17-10-24*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .8;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.fix-button-box {
+  position: fixed;
+  height: 5rem;
+  background: #F1F1F1;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #E4E4E4;
+}
+.fix-button-box ul {
+  padding: 0 1.375rem;
+}
+.fix-button-box ul li {
+  font-size: .9rem;
+}
+.fix-button-box ul li a {
+  display: block;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+.fix-button-box ul li .top-button {
+  height: 2.2rem;
+  line-height: 2.2rem;
+  background: #FF8614;
+  margin-top: .275rem;
+  color: #fff;
+}
+.fix-button-box ul li .btm-button {
+  height: 1.7rem;
+  line-height: 1.7rem;
+  background: #F1F1F1;
+  border: 1px solid #BEBEBE;
+  margin-top: .5rem;
+  color: #5f5f5f;
+}
+.fix-button-box ul li .btm-button span {
+  color: #ff8614;
+}
+.fix-button-box .close {
+  position: absolute;
+  width: 1.55rem;
+  height: 1.45rem;
+  background: url("../img/close-button.png") no-repeat;
+  background-size: 100% 100%;
+  right: 0;
+  top: -1.45rem;
+}
+.fix-button-box .close:active {
+  opacity: .6;
+}

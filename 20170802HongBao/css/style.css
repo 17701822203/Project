@@ -1,0 +1,196 @@
+/*Created by huang.jun on 17-07-26*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: PingFang SC Medium, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+article {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+#red-up {
+  height: 100%;
+  position: absolute;
+  background: url("../img/up.png") no-repeat 0 0;
+  background-size: 100% 16.47rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+#red-down {
+  height: 100%;
+  position: absolute;
+  background: url("../img/down.png") no-repeat 0 12.1rem;
+  background-size: 100% 20.4rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+#red-button {
+  width: 4.725rem;
+  height: 5.5rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -2.3625rem;
+  background: url("../img/button.png") no-repeat;
+  background-size: 100% 100%;
+  z-index: 3;
+  top: 12.9rem;
+}
+.rotate {
+  -webkit-animation: anim 1.5s infinite alternate;
+  -ms-animation: anim 1.5s infinite alternate;
+  animation: anim 1.5s infinite alternate;
+}
+@-webkit-keyframes anim {
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+@-ms-keyframes anim {
+  from {
+    -ms-transform: rotateY(0deg);
+  }
+  to {
+    -ms-transform: rotateY(360deg);
+  }
+}
+@keyframes anim {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.animationUp {
+  -webkit-animation: animUp ease-in-out 0.2s 1 alternate forwards;
+  -ms-animation: animUp ease-in-out 0.2s 1 alternate forwards;
+  animation: animUp ease-in-out 0.2s 1 alternate forwards;
+}
+@-webkit-keyframes animUp {
+  from {
+    background-position: 0 0;
+    opacity: 1;
+  }
+  to {
+    background-position: 0 -16.025rem;
+    opacity: 0;
+  }
+}
+@-ms-keyframes animUp {
+  from {
+    background-position: 0 0;
+    opacity: 1;
+  }
+  to {
+    background-position: 0 -16.025rem;
+    opacity: 0;
+  }
+}
+@keyframes animUp {
+  from {
+    background-position: 0 0;
+    opacity: 1;
+  }
+  to {
+    background-position: 0 -16.025rem;
+    opacity: 0;
+  }
+}
+.animationDown {
+  -webkit-animation: animDown ease-in-out 0.2s 1 alternate forwards;
+  -ms-animation: animDown ease-in-out 0.2s 1 alternate forwards;
+  animation: animDown ease-in-out 0.2s 1 alternate forwards;
+}
+@-webkit-keyframes animDown {
+  from {
+    background-position: 0 11.9rem;
+    opacity: 1;
+  }
+  to {
+    background-position: 0 30rem;
+    opacity: 0;
+  }
+}
+@-ms-keyframes animDown {
+  from {
+    background-position: 0 11.9rem;
+    opacity: 1;
+  }
+  to {
+    background-position: 0 30rem;
+    opacity: 0;
+  }
+}
+@keyframes animDown {
+  from {
+    background-position: 0 11.9rem;
+    opacity: 1;
+  }
+  to {
+    background-position: 0 30rem;
+    opacity: 0;
+  }
+}
+.zlogo {
+  width: 5.65rem;
+  height: .8rem;
+  position: fixed;
+  left: 50%;
+  bottom: 5rem;
+  margin-left: -2.825rem;
+  z-index: 3;
+}
+.tlogo {
+  width: 5.3rem;
+  height: 1.25rem;
+  position: fixed;
+  left: 50%;
+  bottom: 5rem;
+  margin-left: -2.65rem;
+  z-index: 3;
+}
+.zhixing,
+.tieyou {
+  width: 10.325rem;
+  height: 1.1rem;
+  left: 50%;
+  margin-left: -5.1625rem;
+  position: absolute;
+  z-index: 3;
+  top: 7.8rem;
+}

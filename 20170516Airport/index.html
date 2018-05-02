@@ -1,0 +1,373 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <section>
+        <div class="shadow"></div>
+        <dl class="guize">
+            <dt>
+            <h3>1元秒杀规则</h3>
+            <p>1元仅适用于搭乘5.17-6.30期间的指定机场专线。每条线路名额有限，先到先得。</p>
+            </dt>
+            <dd>
+                <p><span>1</span>焦作-郑州新郑机场，每天2个名额</p>
+                <p><span>2</span>杭州萧山机场-义乌，每天5个名额</p>
+                <p><span>3</span>西安咸阳机场-西安市区，每天20个名额</p>
+                <p><span>4</span>腾冲驼峰机场-腾冲市内任意酒店，每天1元</p>
+                <p><span>5</span>西双版纳嘎洒机场-西双版纳市内任意酒店，每天1元不限量</p>
+                <p>本活动最终解释权归携程网所有，如有疑问请致电携程客服10106666</p>
+                <div class="ok"><a href="###">知道了</a></div>
+            </dd>
+        </dl>
+    </section>
+    <article>
+        <div class="img-box"><img src="img/Img1.jpg"></div>
+        <dl class="ms-txt">
+            <dt>连续一个月，1元秒杀不间断! </dt>
+            <dd>3000个秒杀名额 通通1元!<a class="lay-btn" href="###">详情</a></dd>
+        </dl>
+        <div class="img-box"><img src="img/Img2.jpg"></div>
+        <div class="airport-ms">
+            <div class="airport-card" onclick="location='###'">
+                <div class="airport-card-top">
+                    <span>苏州</span>
+                    <span>上海浦东机场</span>
+                </div>
+                <div class="airport-card-btm"><small>&yen;</small><b>1</b><span>&yen;70</span></div>
+            </div>
+            <div class="airport-card" onclick="location='###'">
+                <div class="airport-card-top">
+                    <span>苏州</span>
+                    <span>上海浦东机场</span>
+                </div>
+                <div class="airport-card-btm"><small>&yen;</small><b>1</b><span>&yen;70</span></div>
+            </div>
+            <div class="airport-card" onclick="location='###'">
+                <div class="airport-card-top">
+                    <span>苏州</span>
+                    <span>上海浦东机场</span>
+                </div>
+                <div class="airport-card-btm"><small>&yen;</small><b>1</b><span>&yen;70</span></div>
+            </div>
+            <div class="airport-card" onclick="location='###'">
+                <div class="airport-card-top">
+                    <span>苏州</span>
+                    <span>上海浦东机场</span>
+                </div>
+                <div class="airport-card-btm"><small>&yen;</small><b>1</b><span>&yen;70</span></div>
+            </div>
+            <div class="airport-card" onclick="location='###'">
+                <div class="airport-card-top">
+                    <span>苏州</span>
+                    <span>上海浦东机场</span>
+                </div>
+                <div class="airport-card-btm"><small>&yen;</small><b>1</b><span>&yen;70</span></div>
+            </div>
+            <div class="airport-card" onclick="location='###'">
+                <div class="airport-card-top">
+                    <span>苏州</span>
+                    <span>上海浦东机场</span>
+                </div>
+                <div class="airport-card-btm"><small>&yen;</small><b>1</b><span>&yen;70</span></div>
+            </div>
+            <div class="airport-card" onclick="location='###'">
+                <div class="airport-card-top">
+                    <span>苏州</span>
+                    <span>上海浦东机场</span>
+                </div>
+                <div class="airport-card-btm"><small>&yen;</small><b>1</b><span>&yen;70</span></div>
+            </div>
+            <div class="airport-card" onclick="location='###'">
+                <div class="airport-card-top">
+                    <span>苏州</span>
+                    <span>上海浦东机场</span>
+                </div>
+                <div class="airport-card-btm"><small>&yen;</small><b>1</b><span>&yen;70</span></div>
+            </div>
+            <div class="airport-card" onclick="location='###'">
+                <div class="airport-card-top">
+                    <span>苏州</span>
+                    <span>上海浦东机场</span>
+                </div>
+                <div class="airport-card-btm"><small>&yen;</small><b>1</b><span>&yen;70</span></div>
+            </div>
+            <div class="airport-card" onclick="location='###'">
+                <div class="airport-card-top">
+                    <span>苏州</span>
+                    <span>上海浦东机场</span>
+                </div>
+                <div class="airport-card-btm"><small>&yen;</small><b>1</b><span>&yen;70</span></div>
+            </div>
+        </div>
+        <div class="img-box"><img src="img/Img3.jpg"></div>
+        <ul class="tc">
+            <li><img onclick="location='###'" src="img/tc1.png"></li>
+            <li><img onclick="location='###'" src="img/tc2.png"></li>
+            <li><img onclick="location='###'" src="img/tc3.png"></li>
+        </ul>
+        <dl class="tehui">
+            <dt>5折起</dt>
+            <dd>更多特惠线路</dd>
+        </dl>
+        <div class="touch-nav-box">
+            <ul>
+                <li>杭州萧山机场</li>
+                <li>广州新白云机场</li>
+                <li>长沙黄花机场</li>
+                <li>西安咸阳机场</li>
+                <li>深圳宝安机场</li>
+                <li>昆明长水机场</li>
+                <li>九寨沟黄龙机场</li>
+                <li>腾冲驼峰机场</li>
+                <li>西双版纳嘎洒机场</li>
+            </ul>
+        </div>
+        <div class="touch-tab-box">
+            <ul class="switch-list">
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+            </ul>
+            <ul class="switch-list">
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+            </ul>
+            <ul class="switch-list">
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+            </ul>
+            <ul class="switch-list">
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+            </ul>
+            <ul class="switch-list">
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+            </ul>
+            <ul class="switch-list">
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+            </ul>
+            <ul class="switch-list">
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+            </ul>
+            <ul class="switch-list">
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+            </ul>
+            <ul class="switch-list">
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+                <li onclick="location='###'">
+                    <span>新白云机场 — 东莞厚街国际大酒店</span>
+                    <span>&yen;115</span>
+                </li>
+            </ul>
+        </div>
+        <div class="ButtonBox"><img onclick="location='###'" src="img/Button.png"></div>
+        <div onclick="location='###'" class="hb-box">
+            <img src="img/hb-icon.png">
+        </div>
+        <div class="title"><img src="img/title.jpg"></div>
+        <ul class="btm-box">
+            <li><img onclick="location='###'" src="img/a-img1.jpg"></li>
+            <li><img onclick="location='###'" src="img/a-img2.jpg"></li>
+            <li><img onclick="location='###'" src="img/a-img3.jpg"></li>
+        </ul>
+    </article>
+</body>
+</html>

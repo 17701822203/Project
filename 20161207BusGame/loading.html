@@ -1,0 +1,116 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        var fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script type="text/javascript">
+        $(function(){
+            var $txt=$('.red-btn');
+            (function(){
+                var v=parseInt($txt.html());
+                if(v<100){
+                    $txt.html(++v+'%');
+                    setTimeout(arguments.callee,60);
+                }
+            })();
+            setTimeout(function () {
+                window.location.href="###";
+            }, 6000);
+        });
+    </script>
+</head>
+<body>
+    <section>
+        <div class="shadow"></div>
+        <!--分享-->
+        <div class="share"></div>
+        <!--游戏成功-->
+        <div class="Success">
+            <div class="txt1">WOW,行驶了600KM，再接再厉！</div>
+            <dl class="txt2">
+                <dt>本次成绩</dt>
+                <dd>888KM</dd>
+            </dl>
+            <dl class="txt3">
+                <dt><small>&yen;</small><strong>218</strong></dt>
+                <dd>
+                    <p>火车票春节红包</p>
+                    <div><a href="###">立即领取</a></div>
+                </dd>
+            </dl>
+            <div class="txt4">恭喜你，可以领取一个红包，但我要开得更远！</div>
+            <div class="btn-box"><a class="btn1" href="###">炫耀成绩</a><a class="btn2" href="###">再玩一次</a></div>
+        </div>
+        <!--游戏结束-->
+        <div class="Success">
+            <div class="txt1"><big>还是没躲避票贩子的围攻！</big></div>
+            <dl class="txt2">
+                <dt>本次成绩</dt>
+                <dd>888KM</dd>
+            </dl>
+            <div class="lost"></div>
+            <div class="txt4" style="text-align: center;">很遗憾，没能领取到年终红包</div>
+            <div class="btn-box"><a class="btn1" href="###">分享成绩</a><a class="btn2" href="###">再玩一次</a></div>
+        </div>
+        <!--活动说明-->
+        <div class="activity-description">
+            <ul class="ad-txt">
+                <li>活动时间：<span>12月17日至1月27日</span></li>
+                <li>游戏玩法：通过点击左右页面控制火车OR汽车前进，请躲避前方突然出现的“票贩子”，碰到票贩子即游戏结束。 顺利乘车<span>600KM</span>米以上即可获得年终出行红包</li>
+            </ul>
+            <div class="select-button">
+                <span class="current">火车</span>
+                <span>汽车</span>
+            </div>
+            <div class="btn-box2"><a href="###"></a></div>
+        </div>
+    </section>
+    <article>
+        <div class="loading-box">
+            <em class="top-title"></em>
+            <div class="animation-box">
+                <i class="danmu1"></i>
+                <i class="danmu2"></i>
+                <i class="danmu3"></i>
+                <i class="danmu4"></i>
+                <i class="danmu5"></i>
+                <i class="danmu6"></i>
+                <i class="danmu7"></i>
+            </div>
+            <div class="btm-btn"><a class="red-btn" href="###">0%</a></div>
+        </div>
+        <div class="guide">
+
+        </div>
+    </article>
+</body>
+</html>

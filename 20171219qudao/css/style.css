@@ -1,0 +1,314 @@
+/*Created by huang.jun on 17-12-05*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopBg {
+  font-size: 0;
+  position: relative;
+  z-index: 1;
+}
+.TopBg img {
+  width: 100%;
+}
+.TopBg .TopDate {
+  width: 11.775rem;
+  height: 5.1rem;
+  background: url("../img/TopBgDate.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -5.8875rem;
+  top: 12%;
+}
+.TopBg .TopDate span {
+  font-size: .8rem;
+  color: #bb3d4a;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-top: 3.9rem;
+}
+.TopBg .logo {
+  position: absolute;
+  left: 3%;
+  top: 4%;
+  width: 23%;
+}
+.WrapBox {
+  background: #CC2E45;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+.Choice {
+  height: 13.8rem;
+  background: url("../img/Choice.png") no-repeat;
+  background-size: 100% 100%;
+  margin: 0 3.9%;
+  font-size: 1.1rem;
+  position: relative;
+}
+.Choice .CityBox {
+  color: #955858;
+}
+.Choice .CityBox:after,
+.Choice .CityBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Choice .CityBox div {
+  width: 6.4rem;
+  margin-top: 2.3rem;
+}
+.Choice .CityBox div:nth-of-type(1) {
+  float: left;
+  margin-left: 1rem;
+}
+.Choice .CityBox div:nth-of-type(2) {
+  float: right;
+  margin-right: 1.25rem;
+  text-align: right;
+}
+.Choice .CityBox i {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("../img/change.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.75rem;
+  top: 2.5rem;
+}
+.Choice .DateBox {
+  color: #955858;
+  margin: 1rem 0 0 1rem;
+}
+.Choice .DateBox span {
+  padding-left: .55rem;
+}
+.Choice .ChoiceBtn {
+  font-size: 0;
+  padding: 1.8rem .5rem 0 .5rem;
+}
+.Choice .ChoiceBtn img {
+  width: 100%;
+}
+.Choice .ChoiceOrder {
+  font-size: .7rem;
+  padding: .6rem 0 0 .9rem;
+}
+.Choice .ChoiceOrder a {
+  color: #A41333;
+  text-decoration: underline;
+}
+.Choice .dianliang {
+  width: 3.675rem;
+  height: 5.475rem;
+  position: absolute;
+  right: -1.5rem;
+  bottom: -4rem;
+  -webkit-animation: dianliang 5s linear infinite;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.Choice .dianliang .one {
+  width: 3.675rem;
+  height: 5.475rem;
+  background: url("../img/dianliang1.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.Choice .dianliang .two {
+  width: 3.675rem;
+  height: 5.475rem;
+  background: url("../img/dianliang2.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+@-webkit-keyframes dianliang {
+  0% {
+    -webkit-transform: rotateY(180deg);
+  }
+  20% {
+    -webkit-transform: rotateY(180deg);
+  }
+  40% {
+    -webkit-transform: rotateY(0deg);
+  }
+  80% {
+    -webkit-transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(180deg);
+  }
+}
+.VieForBox {
+  height: 8.96rem;
+  margin: 0 3.5%;
+  background: url("../img/VieFor.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.VieForBox .CityBox {
+  color: #aa666d;
+}
+.VieForBox .CityBox:after,
+.VieForBox .CityBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.VieForBox .CityBox dl {
+  margin-top: 1.3rem;
+}
+.VieForBox .CityBox dl:nth-of-type(1) {
+  float: left;
+  text-align: left;
+  padding-left: 1.25rem;
+}
+.VieForBox .CityBox dl:nth-of-type(2) {
+  float: right;
+  text-align: right;
+  padding-right: 1.25rem;
+}
+.VieForBox .CityBox dl dt {
+  font-family: "PingFangSC-Medium";
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+.VieForBox .CityBox dl dd {
+  font-family: "PingFangSC-Semibold";
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: .8rem;
+}
+.VieForBox .CityBox div {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: .7rem;
+  line-height: .7rem;
+  margin-top: 3.7rem;
+}
+.VieForBox .DateBox {
+  font-size: .7rem;
+  line-height: .7rem;
+  color: #aa666d;
+  padding: .9rem 0 0 1.25rem;
+}
+.VieForBox .DateBox span {
+  padding-left: .35rem;
+}
+.VieForBox .NumberBox {
+  font-size: .7rem;
+  padding: 0 1.25rem;
+  line-height: .7rem;
+  margin-top: 1.1rem;
+}
+.VieForBox .NumberBox:after,
+.VieForBox .NumberBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.VieForBox .NumberBox span {
+  float: left;
+  color: #aa666d;
+  margin-left: 1.25rem;
+}
+.VieForBox .NumberBox span:nth-of-type(1) {
+  margin-left: 0;
+}
+.VieForBox .NumberBox a {
+  float: right;
+  text-decoration: underline;
+  color: #6C3E43;
+}
+.TitleDate {
+  text-align: center;
+  height: 2.85rem;
+}
+.TitleDate dt {
+  color: #fbf5de;
+  line-height: 1rem;
+}
+.TitleDate dt span {
+  display: inline-block;
+  width: 2.05rem;
+  height: 1rem;
+  background: url("../img/DateBg.png") no-repeat;
+  background-size: 100% 100%;
+  color: #C01633;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: .2rem;
+  letter-spacing: .6rem;
+  font-family: "FZDBSJW-GB1-0";
+}
+.TitleDate dd {
+  color: #E1ABA3;
+  font-size: .75rem;
+  line-height: .75rem;
+  margin-top: .4rem;
+}

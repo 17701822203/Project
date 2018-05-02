@@ -1,0 +1,28 @@
+.PaymentBg {
+  background: url("../img/Bg.png") no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.PaymentBox {
+  text-align: center;
+  color: #fff;
+  padding-top: 5.65rem;
+}
+.PaymentBox dt div {
+  font-size: 0;
+}
+.PaymentBox dt img {
+  width: 3.325rem;
+}
+.PaymentBox dt p {
+  font-size: .9rem;
+  line-height: .9rem;
+  padding-top: .75rem;
+}
+.PaymentBox dd {
+  font-size: .65rem;
+  padding-top: 2.1rem;
+  line-height: 1.2rem;
+}

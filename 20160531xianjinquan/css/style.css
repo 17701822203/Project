@@ -1,0 +1,57 @@
+/*Created by huang.jun on 16-05-31*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:Microsoft YaHei;background:#EDEDEC;}
+
+.masks{width:7.5rem;height:1.29rem;background:url(../img/bg1.png) no-repeat;background-size:contain;position:absolute;left:0;top:4.76rem;}
+.top-box{position:relative;}
+.user-top{top:5.4rem;}
+.user-top2{top:4.7rem;}
+.user-top,.user-top2{width:5.17rem;height:2.08rem;background:url(../img/user-bg.png) no-repeat;background-size:5.17rem 2.08rem;text-align:center;position:absolute;left:50%;margin-left:-2.585rem;z-index:3;}
+.user-top dt,.user-top2 dt{font-size:0.36rem;color:#fd8725;padding-top:1.2rem;}
+.user-top dt img,.user-top2 dt img{width:1.12rem;height:1.12rem; position:absolute;left:2.02rem;top:0.03rem;-moz-border-radius:5rem;-webkit-border-radius:5rem;border-radius:5rem;}
+.user-top dd,.user-top2 dd{font-size:0.28rem;padding-top:0.1rem;}
+
+.user-input{padding:1.94rem 0 0 1.3rem;height:3rem;}
+.user-input dt{}
+.mob{width:4.92rem;height:0.82rem;border:0.02rem solid #D2D2D2;-moz-border-radius:0.1rem;-webkit-border-radius:0.1rem;border-radius:0.1rem;font-size:0.3rem;color:#ccc; text-align:center;}
+.user-input dd{padding-top:0.18rem;}
+.user-btn{-moz-border-radius:0.1rem;-webkit-border-radius:0.1rem;border-radius:0.1rem;display:block;width:4.92rem;height:0.87rem;line-height:0.87rem;background:#FF8A01;color:#fff;text-align:center;font-size:0.3rem;}
+.hdgz{position:absolute;left:5rem;top:10.1rem;color:#999;font-size:0.24rem; font-family:SimSun;}
+.masks2{width:7.5rem;height:1.12rem;background:url(../img/bg2.png) no-repeat;background-size:contain;position:absolute;left:0;top:4.04rem;z-index:2;}
+
+.coupon-box{padding-left:0.9rem;padding-bottom:2.6rem;margin-top:2rem;}
+.coupon{-moz-border-radius:0.1rem;-webkit-border-radius:0.1rem;border-radius:0.1rem;width:5.59rem;height:1.72rem;background:url(../img/coupon.png) no-repeat center center #FFF;background-size:contain;margin-top:0.2rem;}
+.coupon dt{height:1.2rem;border-bottom:1px dashed #000;}
+.coupon dt small,.coupon dt b,.coupon dt span{float:left;line-height:1.2rem;}
+.coupon dt small{font-size:0.46rem;padding-left:0.4rem;padding-right:0.1rem;color:#ff8a00;}
+.coupon dt b{font-size:0.95rem;width:1.3rem;color:#ff8a00;}
+.coupon dt span{font-size:0.41rem;}
+.coupon dd{height:0.5rem;line-height:0.5rem;font-size:0.24rem; text-align:center;}
+
+.pop-btm-btn{padding-top:0.25rem;padding-bottom:0.34rem;text-align:center;background:rgba(237,237,236,0.8); position:fixed;bottom:0;width:100%;}
+.pop-btm-btn a{display:inline-block;width:5.22rem;height:0.8rem;line-height:0.8rem;background:#FF8A01;color:#fff;font-size:0.3rem; text-align:center;-moz-border-radius:0.1rem;-webkit-border-radius:0.1rem;border-radius:0.1rem;}
+.pop-btm-btn dt{padding-bottom:0.15rem;}
+
+.huoche{height:0.55rem; position:absolute;width:100%;top:4.1rem;z-index:1;-webkit-animation:bg 2s infinite linear;background-repeat:no-repeat;background-size:cover;}
+
+@-webkit-keyframes bg{
+	0%{background:url(../img/huoche.png);background-repeat:no-repeat;background-position:24rem top;background-size:cover;}
+	50%{background:url(../img/huoche.png);background-repeat:no-repeat;background-position:12rem top;background-size:cover;}
+	100%{background:url(../img/huoche.png);background-repeat:no-repeat;background-position:-40rem top;background-size:cover;}
+}
+.shadow{width:100%;height:100%;position:fixed;z-index:4;background:#000;opacity:0.8;top:0;left:0;}
+.pop-box{ position:fixed;z-index:5;background:#fff;width:5.68rem;height:6.21rem;left:50%;margin-left:-2.84rem;margin-top:-3.105rem;top:50%;-moz-border-radius:0.1rem;-webkit-border-radius:0.1rem;border-radius:0.1rem;}
+.pop-box dt{font-size:0.32rem;padding:0.74rem 0.5rem 0.2rem 0.5rem;color:#ff7e00; position:relative;}
+.pop-box dt img{ position:absolute;right:0rem;top:-0.8rem;width:0.59rem;height:0.59rem;}
+.pop-box dd{font-size:0.28rem;padding:0 0.5rem;}
+.pop-box dd p{margin-top:0.1rem;line-height:0.5rem;}
+.hdgz2{position:absolute;left:6rem;top:0.4rem;color:#ffd892;font-size:0.24rem;font-family:SimSun;}
+
+
+
+
+
+

@@ -1,0 +1,53 @@
+/*Created by huang.jun on 16-02-25*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:Hiragino Sans GB;background:#F9DA5D;}
+input:focus,button:focus{outline:none;}
+
+.btnBox{padding-bottom:1rem;}
+.btnBox li{text-align:center;padding-top:0.6rem;}
+.btnBox li a{width:8.81596153846154rem;height:1.707692307692308rem;line-height:1.707692307692308rem;display:inline-block;background:#FFEFCF; text-align:center;border:5px solid #45363C;color:#45363C; font-weight:bold;-moz-border-radius:1rem;-webkit-border-radius:1rem;border-radius:1rem;-webkit-box-shadow: 3px 0.4rem 3px #B08655;  
+  -moz-box-shadow: 3px 0.4rem 3px #B08655;  
+  box-shadow: 3px 0.4rem 3px #B08655;  }
+.btnBox li a:active{ opacity:0.6;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

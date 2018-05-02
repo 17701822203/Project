@@ -1,0 +1,106 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>兴业银行</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="http://webresource.c-ctrip.com/code/lizard/2.2/web/3rdlibs/bridge.js" charset="utf-8"></script>
+    <script type="text/javascript">
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/6.4+'px';
+		window.addEventListener("resize",setRemSize,false);
+		function setRemSize(){
+			document.documentElement.style.fontSize=document.documentElement.clientWidth/6.4+'px';
+		}
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+	<script type="text/javascript">
+		var ua = navigator.userAgent,isInWechat = !!ua.match(/micromessenger/i),isInIOS = !!ua.match(/iphone|ipad|ipod/i),isInCtripApp = !!ua.match(/ctripwireless/i),
+				isInWebClient = !ua.match(/ctripwireless/i)&&(!ua.match(/micromessenger/i)&&!ua.match(/weibo/i));
+	</script>
+	<script>
+		var app = {
+			callback: function(json_obj) {
+				var tagname = json_obj.tagname;
+				if (tagname == 'web_view_finished_load') {
+					var nav_bar_config_json = {
+						"center": [{"tagname":"title","value": "兴业银行"}]
+					};
+					var json_str = JSON.stringify(nav_bar_config_json);
+					CtripBar.app_refresh_nav_bar(json_str);
+				}
+			}
+		};
+		
+		window.onload = function(){
+			if(isInCtripApp&&isInIOS){
+				var elem2 = document.createElement('div');
+				elem2.id = 'ios';
+				elem2.className = 'ios';
+				elem2.innerHTML = '该活动苹果不是赞助商，并且苹果也不会以任何形式参与其中！';
+				document.body.appendChild(elem2)
+				$('#ios').show();
+			};
+		}
+	</script>
+	<style>
+		#ios{ width:100%;padding-bottom:12px;font-size:10px;line-height:2;text-align:center; }
+	</style>
+	<script src="js/zepto.min.js"></script>
+	<!--<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>-->
+	<script type="text/javascript">
+		//父级.parent()
+		$(document).ready(function(){
+			$(".btn").click(function(){
+				$("section").show();
+			})
+			$(".close").click(function(){
+				$("section").hide();
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<section class="as" style="display:none;">
+		<div class="shadow"></div>
+		<div class="pop-txt-box">
+			<em class="close"></em>
+			<dl>
+				<dt style="padding-top:0;"> 一、活动简介</dt>
+				<dd><p>2016上海国际马拉松赛官方唯一指定合作银行，兴业银行联合携程共同推出“上马专享 兴业红毯礼遇”——悠悦住行专享计划，致力为上马参赛者提供悠悦、便捷、至惠的赛事期间住行与支付服务。上马参赛者均有机会享受赛事前夜（10月29日）起点外滩周边臻选品质酒店超值优惠，机场接送优惠百元补贴。资源稀缺，先到先得。</p></dd>
+				<dt>二、活动详情</dt>
+				<dd>
+					<h3>（一）活动内容</h3>
+					<p>1、酒店入住日期：仅限比赛前夜（2016.10.29）当日机场接送优惠券有效期：3个月（具体时间以携程活动页面宣告为准）</p>
+					<h3>2、悦享礼遇（舒适型酒店）：</h3>
+					<p>赢在起点，起点周边臻选舒适型酒店1晚，使用兴业信用卡/借记卡支付，最低悦享价41元起！</p>
+					<h3>3、尊享礼遇（高档型酒店+机场接送优惠券）：</h3>
+					<p>悠然畅享，起点周边臻选高档酒店1晚，使用兴业信用卡/借记卡支付，最低尊享价433元起！另赠价值100元机场接送优惠券1张（限量200张）。</p>
+					<h3>4、活动推出时间（数量有限，先到先得）</h3>
+					<p>第一波抢购时间：2016.9.29 </p>
+					<h3>（二）活动时间</h3>
+					<p>2016.9.29——2016.10.29（上马期间）</p>
+					<h3>（三）活动对象须同时满足以下2个条件</h3>
+					<p>1、成功报名2016上海国际马拉松赛事</p>
+					<p>2、持有兴业银行信用卡/借记卡（限双币卡，银联单币卡） ，且卡片状态正常</p>
+					<h3>（四）活动细则说明</h3>
+					<p>1、本活动为兴业银行与携程合作推出，相关服务标准，法律条款同携程公示标准。</p>
+					<p>2、本活动酒店入住日期仅限比赛前夜（10月29日）1晚。</p>
+					<p>3、悦享礼遇为起点周围舒适型酒店，限量420间；尊享礼遇为起点周围高档型酒店，限量380间。</p>
+					<p>4、成功预定尊享礼遇（高档型酒店）的客户有机会领取机场接送优惠券1张，价值100元，限量200张。</p>
+					<p>5、酒店入住规则及机场接送服务规则以酒店及携程官方规定为准。</p>
+					<p>6、本活动仅针对成功报名2016上海国际马拉松赛的兴业银行信用卡（限双币卡，银联单币卡）/借记卡持卡客户。客户首先须完成上马参赛者身份验证后（姓名、参赛号、手机号）进入订购页面。</p>
+					<p>7、本活动推出的酒店、房型、价格均以携程信息为准，请在付款前确认酒店相关信息，该价格仅包含酒店10月29号1晚的住宿费，客户在酒店的其他消费均自行承担。</p>
+					<p>8、客户直接在携程活动专享页面上使用兴业银行信用卡或借记卡支付，订购结果以携程短信通知为准；房源均为特价，订购成功后，无法退款，无法更换入住日期、酒店或房型。</p>
+				</dd>
+			</dl>
+		</div>
+	</section>
+    <article class="IndexBg">
+        <ul class="IndexBtnBox">
+            <li><button class="btn">活动细则</button></li>
+            <li><button onclick="window.location='hotel-input.html?disable_redirect_https=1'">我要参加</button></li>
+        </ul>
+    </article>
+</body>
+</html>

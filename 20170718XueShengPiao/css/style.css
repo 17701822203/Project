@@ -1,0 +1,116 @@
+/*Created by huang.jun on 17-07-18*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: PingFang SC Medium, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box {
+  position: relative;
+}
+.rules {
+  width: 3.1rem;
+  height: .9rem;
+  line-height: .9rem;
+  text-align: center;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: .65rem;
+  position: absolute;
+  top: .625rem;
+  right: .75rem;
+  z-index: 1;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.go-btn {
+  position: absolute;
+  bottom: -0.5%;
+  width: 80%;
+  left: 50%;
+  margin-left: -40%;
+}
+.Tanker {
+  position: absolute;
+  left: 50%;
+  width: 82%;
+  top: 22.5%;
+  margin-left: -41%;
+}
+.Details {
+  position: absolute;
+  right: 9%;
+  bottom: 4.5%;
+  width: 39.5%;
+}
+.rule-list {
+  padding: 0 .75rem 2rem .75rem;
+  background: #fff;
+}
+.rule-list dt {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.2rem;
+  padding-top: 1.35rem;
+}
+.rule-list dd {
+  padding-top: 1.15rem;
+}
+.rule-list dd h2 {
+  font-size: .8rem;
+  color: #e53425;
+  line-height: .8rem;
+  padding-bottom: .2rem;
+}
+.rule-list dd p {
+  font-size: .65rem;
+  line-height: 1rem;
+  margin-top: .2rem;
+}
+.rule-list dd p strong {
+  padding-left: .8rem;
+  position: relative;
+}
+.rule-list dd p strong:after {
+  content: "";
+  width: .25rem;
+  height: .25rem;
+  background: #000;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  left: .2rem;
+  top: .3rem;
+}

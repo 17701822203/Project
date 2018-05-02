@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+document.addEventListener('touchstart',function(){},false);
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+var a = 1;
+function myBtn(){ 
+	if(a==1) 
+	{
+		$("article").addClass("animation2");
+	}
+	else if(a==2) 
+	{
+		$("article").addClass("animation6");
+	}
+	else if(a==3)
+	{
+		$("article").addClass("animation9");
+	}
+	else if(a==4)
+	{
+		$("article").addClass("animation10");
+	}
+	else if(a==5)
+	{
+		$("article").addClass("animation6");
+		$(".CuiBtn").css("background-color","d85711");
+	}
+	else
+	{
+		$(".BatmanBody,.BatmanLeftHand,.BatmanRightHand,.BatManHead,.CuiBtn").remove()
+		setTimeout(function () {
+			$(".boom").animate({opacity: "1"}, 500);
+			return false;
+		}, 100);
+		setTimeout(function () {
+			$(".boom").animate({opacity: "0"}, 500);
+			return false;
+		}, 300);
+		setTimeout(function () {
+			$(".flashManBody,.flashManHandLft,.flashManHandRit,.header").animate({opacity: "1"}, 200);
+			return false;
+		}, 800);
+		$(".txt").text("不要再催了亲，闪电猿们的双手已经不能再快了，请再耐心等等吧，觉得好玩可以点击右上角分享给朋友哦~"); 
+		setTimeout(function () {
+			$(".flash").css("display","block")
+			return false;
+		}, 1000);
+	}
+	if(a<6)
+	{
+		a++;
+	}
+	else
+	{
+		a = 1;
+	}
+}
+
+$(document).ready(function(){
+	setTimeout(function () {
+		$("article").addClass("animation1");
+		$("article").addClass("flashBox");
+	},1); 
+})
+
+</script>
+</head>
+
+<body>
+	<article>
+    	<img src="img/bk.jpg">
+        <img class="LftIcon" src="img/LftIcon.png">
+        <img class="RitIcon" src="img/RitIcon.png">
+        <img class="BatmanBody" src="img/BatManBody.png">
+        <img class="BatmanLeftHand" src="img/leftHand.png">
+        <img class="BatmanRightHand" src="img/rightHand.png">
+        <img class="BatManHead" src="img/batManHead.png">
+        <img class="boom" src="img/boom.png">
+        <img class="flashManBody" src="img/flashMan.png">
+        <img class="flashManHandLft" src="img/flashManHandLft.png">
+        <img class="flashManHandRit" src="img/flashManHandRit.png">
+        <img class="flash" src="img/flash.png">
+        <!--img id="ball" class="flashManHead" src="img/flashManHead2.png"-->
+        <div class="header"></div>
+        <p class="txt">目前购票人多，订单排队，程序猿正加班抢票中，等待出票实在无聊？那就催他一下吧。</p>
+        <a onClick="myBtn()" class="CuiBtn" href="###">催他</a>
+    </article>
+</body>
+</html>

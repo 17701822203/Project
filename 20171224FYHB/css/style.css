@@ -1,0 +1,942 @@
+/*Created by huang.jun on 17-12-05*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+view {
+  display: block;
+}
+.Wrap {
+  padding: 12.4rpx 32rpx 0 32rpx;
+}
+.Fhb {
+  background: #fff;
+  padding: 136rpx 60rpx 88rpx 60rpx;
+  -webkit-border-radius: 6rpx;
+  -moz-border-radius: 6rpx;
+  border-radius: 6rpx;
+  position: relative;
+}
+.Fhb .hbtx {
+  width: 130rpx;
+  -webkit-border-radius: 130rpx;
+  -moz-border-radius: 130rpx;
+  border-radius: 130rpx;
+  border: 6rpx solid #fff;
+  position: absolute;
+  left: 50%;
+  top: -71rpx;
+  margin-left: -71rpx;
+}
+.Fhb .Details view {
+  position: relative;
+  margin-top: 62rpx;
+  display: block;
+}
+.Fhb .Details view text {
+  position: absolute;
+  width: 170rpx;
+  font-size: 32rpx;
+  color: #333;
+  left: 0;
+  top: 10rpx;
+}
+.Fhb .Details view label {
+  margin-left: 30%;
+  position: relative;
+}
+.Fhb .Details view label input {
+  width: 70%;
+  border: 0;
+  font-size: 28rpx;
+  color: #cfcfcf;
+  height: 40rpx;
+  line-height: 40rpx;
+  position: relative;
+}
+.Fhb .Details view label:after {
+  border-bottom: 1px solid #D9D9D9;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+}
+.Fhb .Details view:nth-of-type(1) {
+  margin-top: 0;
+}
+.Fhb .Details view .Recommend {
+  width: 41rpx;
+  height: 41rpx;
+  line-height: 41rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 36rpx;
+  position: absolute;
+  right: 0;
+  top: 8rpx;
+  background: #DF5F46;
+  font-style: normal;
+  -webkit-border-radius: 6rpx;
+  -moz-border-radius: 6rpx;
+  border-radius: 6rpx;
+}
+.Fhb .DetailsBtn .dt {
+  text-align: center;
+  color: #999;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  margin-top: 103rpx;
+}
+.Fhb .DetailsBtn .dd {
+  padding-top: 26rpx;
+}
+.Fhb .DetailsBtn .dd button {
+  display: block;
+  height: 88rpx;
+  width: 100%;
+  background: #DC563B;
+  color: #fff;
+  text-align: center;
+  line-height: 88rpx;
+  -webkit-border-radius: 44rpx;
+  -moz-border-radius: 44rpx;
+  border-radius: 44rpx;
+  border: 0;
+  font-size: 32rpx;
+}
+.BtmFix {
+  height: 122rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
+.BtmFix:after,
+.BtmFix:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.BtmFix view {
+  float: left;
+  width: 50%;
+  text-align: center;
+  padding-top: 20rpx;
+}
+.BtmFix view text {
+  color: #898989;
+  font-size: 24rpx;
+  padding-top: 52rpx;
+  display: inline-block;
+}
+.BtmFix view text.wdhb {
+  background: url(../img/Icon2.png) no-repeat center top;
+  background-size: 39rpx 45rpx;
+}
+.BtmFix view text.cjwt {
+  background: url(../img/Icon1.png) no-repeat center top;
+  background-size: 43rpx 45rpx;
+}
+.js_tab .jsTab_title {
+  background: #fff;
+  height: 94rpx;
+}
+.js_tab .jsTab_title navigator {
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30rpx;
+  line-height: 94rpx;
+  color: #999;
+}
+.js_tab .jsTab_title navigator.on {
+  color: #dc563c;
+  position: relative;
+}
+.js_tab .jsTab_title navigator.on:after {
+  content: "";
+  position: absolute;
+  width: 94rpx;
+  height: 5rpx;
+  background: #DC563C;
+  left: 50%;
+  margin-left: -47rpx;
+  bottom: -2.5rpx;
+}
+.js_tab .jsTab_con {
+  display: none;
+}
+.js_tab .DialectWrap {
+  margin-top: 70rpx;
+  padding: 0 42rpx;
+  background: #fff;
+  max-height: 736rpx;
+  overflow-y: scroll;
+  border-top: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+  -webkit-overflow-scrolling: touch;
+}
+.js_tab .DialectWrap .jsTxtList {
+  line-height: 48rpx;
+  font-size: 28rpx;
+  border-bottom: 1px solid #EBEBEB;
+  color: #333;
+  padding: 24rpx 180rpx 24rpx 34rpx;
+  position: relative;
+}
+.js_tab .DialectWrap .jsTxtList:after {
+  width: 8rpx;
+  height: 8rpx;
+  background: #999;
+  -webkit-border-radius: 40rpx;
+  -moz-border-radius: 40rpx;
+  border-radius: 40rpx;
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 44rpx;
+}
+.js_tab .DialectWrap .jsTxtList .horn {
+  width: 42rpx;
+  right: 0;
+  top: 24rpx;
+  position: absolute;
+}
+.js_tab .DialectWrap .jsTxtList .horn img {
+  width: 100%;
+}
+.js_tab .DialectWrap .active {
+  color: #d58904;
+}
+.GrayTipsTxt {
+  color: #999;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  margin-top: 16rpx;
+  text-align: right;
+  padding-right: 44rpx;
+}
+.CenterTips {
+  color: #333;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 48rpx;
+  letter-spacing: 2.4rpx;
+}
+.BtnBox {
+  text-align: center;
+  padding: 26rpx 90rpx 0 90rpx;
+}
+.BtnBox button {
+  height: 88rpx;
+  width: 100%;
+  color: #fff;
+  font-size: 32rpx;
+  border: 0;
+  -webkit-border-radius: 88rpx;
+  -moz-border-radius: 88rpx;
+  border-radius: 88rpx;
+}
+.BtnBox .redBtn {
+  background: #DC563C;
+}
+.BtnBox .grayBtn {
+  background: #C3C3C3;
+}
+.custom {
+  background: #fff;
+  margin-top: 70rpx;
+  border-top: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+}
+.custom .customWrap {
+  height: 430rpx;
+}
+.custom .customWrap text {
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #999;
+  display: block;
+}
+.custom .customWrap .TipsTop {
+  padding-top: 130rpx;
+}
+.custom .customWrap .TipsBtm {
+  padding-top: 42rpx;
+}
+.custom .customWrap .Voice {
+  margin-top: 266rpx;
+  position: relative;
+}
+.custom .customWrap .Voice img {
+  width: 229rpx;
+}
+.custom .customWrap .Voice text {
+  display: inline;
+  left: 50%;
+  top: 24rpx;
+  position: absolute;
+  margin-left: 128rpx;
+}
+.custom .TipsBtn {
+  padding: 0 92rpx 112rpx 92rpx;
+}
+.custom .TipsBtn text {
+  font-weight: bold;
+  color: #333;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  display: block;
+}
+.custom .TipsBtn view {
+  margin-top: 30rpx;
+}
+.custom .TipsBtn view button {
+  height: 86rpx;
+  width: 100%;
+  color: #fff;
+  font-size: 32rpx;
+  border: 0;
+  -webkit-border-radius: 88rpx;
+  -moz-border-radius: 88rpx;
+  border-radius: 88rpx;
+}
+.custom .TipsBtn view .redBtn {
+  background: #DC563C;
+}
+.custom .TipsBtn view .grayBtn {
+  background: #C3C3C3;
+}
+.PasswordTopWrap {
+  height: 616rpx;
+  background: #DC563C;
+  position: relative;
+}
+.PasswordTopWrap:after {
+  width: 100%;
+  height: 98rpx;
+  content: "";
+  background: url("../img/HbBtm.jpg") no-repeat;
+  background-size: 100% 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+.PasswordTopWrap .PasswordHimg {
+  width: 129rpx;
+  height: 129rpx;
+  border: 6rpx solid #fff;
+  -webkit-border-radius: 160rpx;
+  -moz-border-radius: 160rpx;
+  border-radius: 160rpx;
+  left: 50%;
+  margin-left: -70.5rpx;
+  top: 32rpx;
+  position: absolute;
+  background: #fff;
+}
+.PasswordTopWrap .TipsTop {
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #ebcd9b;
+  padding-top: 228rpx;
+}
+.PasswordTopWrap .TipsBig {
+  font-family: "PingFangSC-Heavy";
+  font-size: 48rpx;
+  line-height: 56rpx;
+  color: #ebcd9b;
+  text-align: center;
+  padding: 36rpx 40rpx 0 40rpx;
+  height: 232rpx;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.PasswordTopWrap .TipsBig img {
+  width: 252rpx;
+}
+.PasswordBtmWrap {
+  padding: 142rpx  66rpx 0 66rpx;
+}
+.PasswordBtmWrap button {
+  height: 83rpx;
+  line-height: 83rpx;
+  width: 100%;
+  border: 0;
+  margin-top: 40rpx;
+  -webkit-border-radius: 8rpx;
+  -moz-border-radius: 8rpx;
+  border-radius: 8rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+.PasswordBtmWrap button.PasswordYellow {
+  border: 1px solid #EBCD9B;
+  background: #EBCD9B;
+}
+.PasswordBtmWrap button.PasswordWhite {
+  border: 1px solid #999;
+  background: #F8F8F8;
+}
+.LingQuTop {
+  height: 690rpx;
+  background: #DC563C;
+  position: relative;
+}
+.LingQuTop .VoiceBtm {
+  text-align: center;
+  margin-top: 36rpx;
+}
+.LingQuTop .VoiceBtm .VoiceBtmTxt {
+  font-size: 32rpx;
+  display: block;
+  color: #ebcd9b;
+}
+.LingQuTop .VoiceBtm .VoiceBtmBtn {
+  margin-top: 16rpx;
+}
+.LingQuTop .VoiceBtm .VoiceBtmBtn img {
+  width: 252rpx;
+}
+.LingQuTop .LingQuTx {
+  text-align: center;
+  font-size: 0;
+  padding-top: 22rpx;
+}
+.LingQuTop .LingQuTx img {
+  width: 152rpx;
+  height: 152rpx;
+  border: 6rpx solid #fff;
+  -webkit-border-radius: 160rpx;
+  -moz-border-radius: 160rpx;
+  border-radius: 160rpx;
+  background: #fff;
+}
+.LingQuTop .LingQuTx text {
+  display: block;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #f1e1c6;
+  margin-top: 20rpx;
+}
+.LingQuTop .LingQuTopText {
+  font-size: 46rpx;
+  line-height: 52rpx;
+  color: #ebcd9b;
+  text-align: center;
+  display: block;
+  margin-top: 80rpx;
+  height: 140rpx;
+  overflow-y: scroll;
+  padding: 0 40rpx;
+  -webkit-overflow-scrolling: touch;
+}
+.LingQuTop .LingQuTopBtn {
+  padding: 0 90rpx;
+  margin-top: 20rpx;
+}
+.LingQuTop .LingQuTopBtn button {
+  width: 100%;
+  height: 86rpx;
+  background: #EBCD9B;
+  color: #333;
+  border: 0;
+  font-family: "MFJun-Ya-Regular";
+  font-size: 44rpx;
+  -webkit-border-radius: 160rpx;
+  -moz-border-radius: 160rpx;
+  border-radius: 160rpx;
+}
+.LingQuTop .Money {
+  height: 86rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  display: block;
+  color: #ebcd9b;
+}
+.LingQuTop .Money .MoneyBig {
+  font-family: "Helvetica-Bold";
+  font-size: 96rpx;
+}
+.LingQuTop .Money .MoneySmall {
+  font-size: 36rpx;
+}
+.LingQuTop .LingQuTopAn {
+  position: absolute;
+  color: #fff;
+  padding: 0 42rpx 0 42rpx;
+  font-size: 30rpx;
+  bottom: 16rpx;
+  left: 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.LingQuTop .LingQuTopAn .TextLeft {
+  float: left;
+}
+.LingQuTop .LingQuTopAn .TextRight {
+  float: right;
+}
+.LingQuTop .LingQuTopAn .TextCenter {
+  position: absolute;
+  text-align: center;
+  width: 123rpx;
+  left: 50%;
+  margin-left: -60rpx;
+}
+.LingQuTop .UserBox {
+  padding: 32rpx 0 0 96rpx;
+}
+.LingQuTop .UserBox:after,
+.LingQuTop .UserBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.LingQuTop .UserBox .UserLeft {
+  float: left;
+  font-size: 0;
+}
+.LingQuTop .UserBox .UserLeft img {
+  width: 80rpx;
+  height: 80rpx;
+  border: 4rpx solid #fff;
+  -webkit-border-radius: 160rpx;
+  -moz-border-radius: 160rpx;
+  border-radius: 160rpx;
+  background: #fff;
+}
+.LingQuTop .UserBox .UserRight {
+  float: left;
+  font-size: 32rpx;
+  line-height: 32rpx;
+  padding-left: 20rpx;
+}
+.LingQuTop .UserBox .UserRight .UserRightTxt1 {
+  color: #f1e1c6;
+  margin-top: 6rpx;
+}
+.LingQuTop .UserBox .UserRight .UserRightTxt2 {
+  color: #ebcd9b;
+  margin-top: 12rpx;
+}
+.LingQuTop .VoiceBtn {
+  padding: 20rpx 0 0 96rpx;
+  font-size: 0;
+}
+.LingQuTop .VoiceBtn img {
+  width: 252rpx;
+}
+.LingQuTop .VoiceTopTxt {
+  color: #ebcd9b;
+  line-height: 36rpx;
+  padding: 80rpx 0 0 96rpx;
+}
+.LingQuTop .VoiceTopTxt .VoiceTxtBig {
+  font-family: "PingFangSC-Heavy";
+  font-size: 36rpx;
+}
+.LingQuTop .VoiceTopTxt .VoiceTxtSmall {
+  font-size: 20rpx;
+}
+.LingQuTop .TranslateWrap {
+  color: #fff;
+  padding: 18rpx 96rpx 0 96rpx;
+  height: 154rpx;
+}
+.LingQuTop .TranslateWrap .TranslateWrapTop,
+.LingQuTop .TranslateWrap .TranslateWrapBtm {
+  display: block;
+  line-height: 40rpx;
+}
+.LingQuTop .TranslateWrap .TranslateWrapTop {
+  font-size: 24rpx;
+}
+.LingQuTop .TranslateWrap .TranslateWrapBtm {
+  font-size: 30rpx;
+}
+.LingQuTop .Price2 {
+  padding: 0 0 0 96rpx;
+  color: #ebcd9b;
+  line-height: 96rpx;
+}
+.LingQuTop .Price2 .Big {
+  font-family: "Helvetica-Bold";
+  font-size: 96rpx;
+}
+.LingQuTop .Price2 .Small {
+  font-size: 36rpx;
+}
+.LingQuBtm .Balance {
+  height: 90rpx;
+  line-height: 90rpx;
+  display: block;
+  font-size: 28rpx;
+  padding-left: 42rpx;
+  color: #979797;
+}
+.LingQuBtm .RobText1 {
+  padding-top: 166rpx;
+  text-align: center;
+  color: #c19853;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  display: block;
+}
+.LingQuBtm .RobText2 {
+  padding-top: 166rpx;
+  text-align: center;
+  color: #c19853;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  display: block;
+  color: #979797;
+}
+.LingQuBtm .MoneyListWrap .MoneyList {
+  height: 116rpx;
+  background: #fff;
+  border-top: 1px solid #E9E9E9;
+  border-bottom: 1px solid #E9E9E9;
+  margin-top: 20rpx;
+  padding: 22rpx 40rpx 26rpx 40rpx;
+  position: relative;
+}
+.LingQuBtm .MoneyListWrap .MoneyList:nth-of-type(1) {
+  margin-top: 0;
+}
+.LingQuBtm .MoneyListWrap .MoneyList .MoneyTx {
+  float: left;
+}
+.LingQuBtm .MoneyListWrap .MoneyList .MoneyTx img {
+  width: 114rpx;
+  height: 114rpx;
+  border: 1px solid #E9E9E9;
+  -webkit-border-radius: 10rpx;
+  -moz-border-radius: 10rpx;
+  border-radius: 10rpx;
+}
+.LingQuBtm .MoneyListWrap .MoneyList .Voice {
+  float: left;
+  margin-left: 20rpx;
+}
+.LingQuBtm .MoneyListWrap .MoneyList .Voice .Male,
+.LingQuBtm .MoneyListWrap .MoneyList .Voice .Female {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  display: block;
+  height: 46rpx;
+}
+.LingQuBtm .MoneyListWrap .MoneyList .Voice .Male img {
+  width: 24rpx;
+  margin-left: 10rpx;
+}
+.LingQuBtm .MoneyListWrap .MoneyList .Voice .Female img {
+  width: 16rpx;
+  margin-left: 10rpx;
+}
+.LingQuBtm .MoneyListWrap .MoneyList .Voice .VoiceBox img {
+  width: 229rpx;
+}
+.LingQuBtm .MoneyListWrap .MoneyList .Date {
+  float: right;
+  text-align: right;
+}
+.LingQuBtm .MoneyListWrap .MoneyList .Date .Price {
+  font-family: "PingFang-SC-Heavy";
+  font-size: 28rpx;
+  line-height: 28rpx;
+  display: block;
+  margin-top: 47rpx;
+  color: #333;
+}
+.LingQuBtm .MoneyListWrap .MoneyList .Date .Month {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  display: block;
+  margin-top: 14rpx;
+  color: #999;
+}
+.LayerBox {
+  background: rgba(0, 0, 0, 0.7);
+  width: 344rpx;
+  height: 192rpx;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  margin-left: -172rpx;
+  margin-top: -96rpx;
+  -webkit-border-radius: 10rpx;
+  -moz-border-radius: 10rpx;
+  border-radius: 10rpx;
+  color: #fff;
+}
+.LayerBox text {
+  font-size: 30rpx;
+  display: block;
+  text-align: center;
+  line-height: 30rpx;
+  padding-top: 132rpx;
+}
+.LayerBox:after {
+  width: 74rpx;
+  height: 75rpx;
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -37rpx;
+  background: url("../img/shibai.png") no-repeat;
+  background-size: 100% 100%;
+  top: 33rpx;
+}
+.WdTx {
+  text-align: center;
+  padding: 57rpx 0 24rpx 0;
+  font-size: 0;
+}
+.WdTx img {
+  width: 114rpx;
+  height: 114rpx;
+  border: 4rpx solid #fff;
+  background: #fff;
+  -webkit-border-radius: 123rpx;
+  -moz-border-radius: 123rpx;
+  border-radius: 123rpx;
+}
+.WdName {
+  font-size: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  color: #333;
+}
+.WdSummary {
+  text-align: center;
+  padding: 0 83rpx;
+  margin-top: 70rpx;
+}
+.WdSummary:after,
+.WdSummary:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WdSummary .left {
+  float: left;
+  width: 50%;
+}
+.WdSummary .right {
+  float: right;
+  width: 50%;
+}
+.WdSummary text {
+  display: block;
+}
+.WdSummary text.small {
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #999;
+}
+.WdSummary text.big {
+  font-size: 52rpx;
+  line-height: 52rpx;
+  font-family: "Helvetica-Bold";
+  margin-top: 28rpx;
+}
+.ListTx {
+  background: #fff;
+  margin-top: 80rpx;
+}
+.ListTx .ListTxBox {
+  height: 12.4rpx;
+  padding: 0 40rpx 0 32rpx;
+  border-top: 1px solid #EFEFEF;
+}
+.ListTx .ListTxBox .left {
+  float: left;
+  font-size: 0;
+  margin-top: 21rpx;
+  width: 100rpx;
+}
+.ListTx .ListTxBox .left img {
+  width: 82rpx;
+  height: 82rpx;
+  border: 1px solid #E9EAE9;
+  -webkit-border-radius: 10rpx;
+  -moz-border-radius: 10rpx;
+  border-radius: 10rpx;
+}
+.ListTx .ListTxBox .center {
+  float: left;
+}
+.ListTx .ListTxBox .center text {
+  display: block;
+}
+.ListTx .ListTxBox .center text:nth-of-type(1) {
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #333;
+  margin-top: 31rpx;
+}
+.ListTx .ListTxBox .center text:nth-of-type(2) {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #999;
+  margin-top: 17rpx;
+}
+.ListTx .ListTxBox .left2 {
+  float: left;
+}
+.ListTx .ListTxBox .left2 text {
+  display: block;
+}
+.ListTx .ListTxBox .left2 text:nth-of-type(1) {
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #666;
+  margin-top: 31rpx;
+}
+.ListTx .ListTxBox .left2 text:nth-of-type(2) {
+  font-size: 26rpx;
+  line-height: 26rpx;
+  color: #999;
+  margin-top: 17rpx;
+}
+.ListTx .ListTxBox .right {
+  float: right;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  margin-top: 48rpx;
+  color: #333;
+  font-family: "PingFangSC-Heavy";
+}
+.ListTx .ListTxBox .right2 {
+  float: right;
+}
+.ListTx .ListTxBox .right2 text {
+  display: block;
+}
+.ListTx .ListTxBox .right2 text:nth-of-type(1) {
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #666;
+  margin-top: 27rpx;
+}
+.ListTx .ListTxBox .right2 text:nth-of-type(2) {
+  font-size: 28rpx;
+  line-height: 28rpx;
+  color: #999;
+  margin-top: 20rpx;
+}
+.ListTx .ListTxBox:nth-of-type(1) {
+  border: 0;
+}
+/***************************************************************************************/
+.EnterpriseBg {
+  height: 1238rpx;
+  background: url("../img/Bg.jpg") no-repeat;
+  background-size: 100% 1248rpx;
+  padding: 10rpx 0 0 30rpx;
+  position: relative;
+}
+.EnterpriseBg .HBbox {
+  width: 26%;
+  float: left;
+  margin: 4% 0 0 4.5%;
+}
+.EnterpriseBg .HBbox .HB {
+  width: 100%;
+  height: 260rpx;
+  background: url("../img/HBBG.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  font-size: 0;
+}
+.EnterpriseBg .HBbox .HB img {
+  width: 100%;
+}
+.EnterpriseBg .HBbox .HB img {
+  width: 60rpx;
+  height: 60rpx;
+  -webkit-border-radius: 10rpx;
+  -moz-border-radius: 10rpx;
+  border-radius: 10rpx;
+  left: 50%;
+  top: 42rpx;
+  margin-left: -30rpx;
+  position: absolute;
+}
+.EnterpriseBg .HBbox .HBtxt {
+  font-size: 28rpx;
+  display: block;
+  line-height: 28rpx;
+  text-align: center;
+  color: #e0ba82;
+  margin-top: 24rpx;
+}
+.EnterpriseBg .HBbox:active {
+  opacity: .7;
+}
+.EnterpriseBg .RefreshBtn {
+  width: 202rpx;
+  height: 69rpx;
+  border: 0;
+  background: url("../img/shuaxin.png") no-repeat;
+  background-size: 100% 100%;
+  left: 50%;
+  margin-left: -101rpx;
+  position: absolute;
+  bottom: 100rpx;
+}
+.EnterpriseBg .RefreshBtn:active {
+  opacity: .9;
+}

@@ -1,0 +1,92 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body style="background:#FF8FB3;">
+	<section>
+    	<div class="shadow"></div>
+        <div class="popBox">
+        	<img class="p2Img" src="img/popBk.png">
+            <img class="ReturnPage" src="img/Return.png">
+            <dl class="popTxt" style="display:none;">
+            	<dt>环境好</dt>
+                <dd>
+                	<p><img src="img/g_icon.png"><big>中文服务</big>：新罗免税店为顾客打造最贴心的购物环境，各专柜都有中文导购员，卖场还有中文指南。</p>
+                    <p><img src="img/g_icon.png"><big>便捷支付</big>：全店开通微信/支付宝支付服务，通过手机就能完成扫码支付，还有多种银行卡支付，让您更加轻松便利的畅游韩国！</p>
+                    <p><img src="img/g_icon.png"><big>天空花园</big>：首尔三楼顶屋的天空花园可以尽享首尔的风景。还可以处处可见代言人Angelababy和SHINee的广告牌, 也可以和他们一起合影享受购物之余的快乐！</p>
+                </dd>
+            </dl>
+            <dl class="popTxt" style="display:none;">
+            	<dt>优惠多</dt>
+                <dd>
+                	<p><img src="img/g_icon.png"><big>网上会员专享优惠</big>：每天，每周都有多种优惠积分可领取，出国前攒积分以更优惠的价格买心仪的商品!</p>
+                    <p><img src="img/g_icon.png"><big>实体购物惊喜多</big>：新罗免税店更有打车报销、畅游礼包等全年优惠活动，根据购物总金额赠送韩币购物卡、有多种赠送优惠券活动等，新罗免税店让你的韩国旅行更加完美。</p>
+                    <p><img src="img/g_icon.png"><big>丰富多彩的线上活动 </big>：新罗免税店全年进行多种优惠活动，出发前可以到新罗中文官网或者新罗官方微博微信上查询最新优惠活动，让你的韩国之旅更便捷。</p>
+                </dd>
+            </dl>
+            <dl class="popTxt">
+            	<dt>品牌多</dt>
+                <dd>
+                	<p><img src="img/g_icon.png"><big>化妆品首选之地</big>：在韩国内拥有最全的化妆品品牌和香水品牌。从国际驰名化妆品到韩国本土化妆品，还有只在新罗入驻的独家化妆品品牌，尽在新罗供您选购。</p>
+                    <p><img src="img/g_icon.png"><big>国际名品一站搞定</big>： 新罗免税店拥有的品牌从路易威登（LV）、爱马仕（HERMES） 、香奈儿(chanel)、到韩国本土品牌雪花秀、后等550多种品牌，在这里可以high购全世界!</p>
+                    <p><img src="img/g_icon.png"><big>正品保证</big>：新罗免税店从奢侈品到国际大牌化妆品以及韩国本土化妆品所有商品保证100%正品。</p>
+                </dd>
+            </dl>
+        </div>
+    </section>
+	<article>
+    	<dl class="aTop">
+        	<dt><img src="img/tit.png"></dt>
+            <dd>
+            	<a href="###"><img src="img/img1.png"></a>
+            	<a href="###"><img src="img/img2.png"></a>
+            	<a href="###"><img src="img/img3.png"></a>
+            	<a href="###"><img src="img/img4.png"></a>
+            </dd>
+        </dl>
+        <div class="aBg">
+        	<img src="img/aBg.png">
+            <dl class="brand narrated1">
+            	<dd><big>品牌多</big></dd>
+                <dd><img src="img/g_icon.png">化妆品首选之地</dd>
+                <dd><img src="img/g_icon.png">国际名品一站搞定 </dd>
+                <dd><img src="img/g_icon.png">正品保证</dd>
+                <dt><a href="###">查看详情<img src="img/j_icon.png"></a></dt>
+            </dl>
+            <dl class="brand narrated2">
+            	<dd><big>优惠多</big></dd>
+                <dd><img src="img/g_icon.png">网上会员专享优惠</dd>
+                <dd><img src="img/g_icon.png">实体购物惊喜多</dd>
+                <dd><img src="img/g_icon.png">丰富多彩的线上活动</dd>
+                <dt><a href="###">查看详情<img src="img/j_icon.png"></a></dt>
+            </dl>
+            <dl class="brand narrated3">
+            	<dd><big>环境好</big></dd>
+                <dd><img src="img/g_icon.png">中文服务</dd>
+                <dd><img src="img/g_icon.png">便捷支付</dd>
+                <dd><img src="img/g_icon.png">天空花园</dd>
+                <dt><a href="###">查看详情<img src="img/j_icon.png"></a></dt>
+            </dl>
+        </div>
+    </article>
+</body>
+</html>

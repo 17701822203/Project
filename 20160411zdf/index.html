@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body>
+	<article>
+    	<img src="img/bk1.jpg">
+        <img src="img/bk2.jpg">
+        <img src="img/bk3.jpg">
+        <img src="img/bk4.jpg">
+        <img src="img/bk5.jpg">
+        <img src="img/bk6.jpg">
+        <img src="img/bk7.jpg">
+        <p class="txt1">预订完成北京--上海，广州--深圳线路，短信获得活动专属Ctrip Code</p>
+        <p class="txt2">凭Ctrip Code进门店消费现场最高2.5%返现</p>
+        <a class="btn" href="###">立即购票</a>
+        <ul class="ImgLst">
+        	<li><a href="###"><img src="img/img1.png"></a></li>
+        	<li><a href="###"><img src="img/img2.png"></a></li>
+        	<li><a href="###"><img src="img/img3.png"></a></li>
+        	<li><a href="###"><img src="img/img4.png"></a></li>
+        </ul>
+    </article>
+</body>
+</html>

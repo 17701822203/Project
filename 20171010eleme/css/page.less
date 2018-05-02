@@ -1,0 +1,107 @@
+/*Created by huang.jun on 17-10-10*/
+*{margin:0;padding:0;}
+a{text-decoration:none;-webkit-tap-highlight-color:transparent;
+  &:active{opacity:.7;}
+}
+ol,ul,li{list-style:none;}
+body{font-family:PingFang SC Regular,sans-serif;}
+.shadow{width:100%;height:100%;position:fixed;z-index:20;background:#000;opacity:.8;top:0;left:0;}
+.img-box{font-size:0;
+  img{width:100%;}
+}
+//四角的半径定制.border-radius-custom(20px, 20px, 0px, 0px);
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+  border-radius: @topleft @topright @bottomright @bottomleft;
+}
+//方块阴影.box-shadow(5px, 5px, 6px, 0.3);
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+//圆角.border-radius(@radius:5px)
+.border-radius(@radius:5px){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+//input默认字体.placeholder({color:#666;});
+.placeholder(@a){
+  &::-webkit-input-placeholder{@a();}
+  &:-moz-placeholder{@a();}
+  &::-moz-placeholder{@a();}
+  &:-ms-input-placeholder{@a();}
+}
+//线性渐变.gradient(left, #663333, #333333);
+.gradient(@origin:left,@start:#ffffff,@stop:#000000){
+  background-color:@start;
+  background-image:-webkit-linear-gradient(@origin,@start,@stop);
+  background-image:-moz-linear-gradient(@origin,@start,@stop);
+  background-image:-o-linear-gradient(@origin,@start,@stop);
+  background-image:-ms-linear-gradient(@origin,@start,@stop);
+  background-image:linear-gradient(@origin,@start,@stop);
+}
+//清除浮动
+.ClearBox{
+  &:after,&:before{content: " ";display: table;clear: both;}
+}
+
+article{background:url("../img/Bg.jpg") no-repeat #A8DAFB;background-size:100% auto;padding-bottom:1rem;}
+.WrapBox{padding:0 1rem;}
+
+.CouponBox{background:#DAF1FE;padding:.65rem;.border-radius(@radius:.25rem);.box-shadow(0px, 0px, .5rem, 0.1);
+  .Coupon{background:#fff;.border-radius(@radius:.25rem);padding:.125rem;.box-shadow(0px, .1rem, .5rem, 0.05);margin-bottom:.25rem;position: relative;
+    &:after,&:before{content:"";width:.3rem;height:.3rem;position:absolute;background:#DAF1FE;.border-radius(@radius:.15rem);left:3.85rem;}
+    &:after{top:-.1rem;}
+    &:before{bottom:-.1rem;}
+    .CouponBor{border:1px solid #eff3ff;height:3.75rem;position:relative;
+      &:after{content:"";position:absolute;left:3.8rem;top:.15rem;width:1px;height:3.45rem;background:url("../img/border.png") no-repeat;background-size:100% 100%;}
+      .CouponPrice{position:absolute;margin-top:.8rem;margin-left:1.025rem;
+        &:after{content:"";position:absolute;width:2.3rem;height:.75rem;background:url("../img/Icon.png") no-repeat;background-size:100% 100%;bottom:-.8rem;left:-.3rem;}
+        strong,b{float:left;color:#fb4e4e;}
+        b{font-size:.9rem;line-height:.9rem;margin-top:.4rem;font-family:'PingFang SC Heavy';}
+        strong{font-size:1.35rem;line-height:1.35rem;margin-left:.15rem;font-family:PingFang SC Heavy,sans-serif;}
+      }
+      .CouponYxq{position:absolute;left:4.7rem;top:.65rem;
+        dt{font-size:.8rem;line-height:.8rem;color:#333;padding-bottom:.5rem;}
+        dd{font-size:.5rem;line-height:.5rem;color:#888;padding-bottom:.3rem;}
+      }
+      .CouponBtn{position:absolute;width:3.7rem;height:1.4rem;line-height:1.4rem;text-align:center;background:#FB4E4E;color:#fff;font-size:.6rem;.border-radius(@radius:.15rem);top:1.175rem;right:.475rem;}
+    }
+  }
+  .CouponUser{text-align:center;padding-top:.75rem;padding-bottom:.3rem;color:#002b49;
+    dt{font-size:.7rem;line-height:.7rem;
+      span{color:#fb4e4e;padding-left:.3rem;}
+    }
+    dd{font-size:.6rem;line-height:.6rem;padding-top:.35rem;}
+  }
+}
+
+.RuleBox{background:#DAF1FE;padding:1rem;.border-radius(@radius:.25rem);.box-shadow(0px, 0px, .5rem, 0.1);margin-top:.5rem;font-family:'PingFang SC Regular';color:#333;font-size:.6rem;
+  h4{font-weight:normal;padding-bottom:.2rem;}
+  p{line-height:1.075rem;}
+}
+
+.LogoBg{background:url("../img/logo.png") no-repeat #DAF1FE center .8rem;background-size:6.075rem .925rem;padding:2.35rem .65rem .65rem .65rem;.border-radius(@radius:.25rem);.box-shadow(0px, 0px, .5rem, 0.1);
+  .EmptyBox{height:3.25rem;line-height:3.25rem;background:#fff;font-size:.8rem;color:#333;text-align:center;.box-shadow(0px, 0px, .5rem, 0.05);.border-radius(@radius:.25rem);}
+  .ErrorBox{text-align:center;background:#fff;.box-shadow(0px, 0px, .5rem, 0.05);.border-radius(@radius:.25rem);color:#333;
+    dt{font-size:.8rem;line-height:.8rem;padding-top:.95rem;}
+    dd:nth-of-type(1){font-size:.6rem;line-height:.6rem;padding-top:.4rem;}
+    dd:nth-of-type(2){text-align: center;padding:.5rem 0 .8rem 0;
+      a{display:inline-block;width:6rem;height:1.5rem;line-height:1.5rem;background:#3FA1FC;color:#fff;text-align:center;.border-radius(@radius:.75rem);}
+    }
+  }
+  .BtnBox{padding:0 .9rem .6rem .9rem;
+    li{
+      a{display:block;height:2.25rem;line-height:2.25rem;color:#fff;text-align:center;font-family:'PingFang SC Regular';font-size:.8rem;.border-radius(@radius:1.1rem);}
+      &:nth-of-type(1){margin-top:.2rem;
+        a{.gradient(left,#FF5645,#FF427C);}
+      }
+      &:nth-of-type(2){margin-top:.5rem;
+        a{background:#319AFF;}
+      }
+    }
+  }
+}

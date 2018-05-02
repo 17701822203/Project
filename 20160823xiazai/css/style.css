@@ -1,0 +1,31 @@
+/*Created by huang.jun on 16-08-17*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB";background:#fff;}
+
+.TopBg{width:7.5rem;height:6.12rem;background:url("../img/TopBg.jpg") no-repeat;background-size:7.5rem 6.12rem;position:relative;}
+.TopList{color:#fff;padding:1.25rem 0 0 0.6rem;}
+.TopList li:nth-of-type(1),
+.TopList li:nth-of-type(3){font-size:0.58rem;font-weight: bold;}
+.TopList li:nth-of-type(2){font-family:airal;font-size:0.77rem;}
+.TopList li:nth-of-type(2) small{font-size:0.55rem;font-family:"Hiragino Sans GB";font-weight: bold;}
+.WrapBox{height:6rem;}
+.tx{text-align: center;padding:0.5rem 0 0 0;}
+.tx img{width:1.2rem;height:1.2rem;-webkit-border-radius:1rem;}
+.Title{font-size:0.26rem;color:#666;text-align: center;padding:0.19rem 0 0 0;}
+.BtnBox{text-align: center;padding-top:0.35rem;}
+.DownBtn1,.DownBtn2{width:3.82rem;height:0.78rem;color:#fff;border:0;-webkit-border-radius:0.1rem;font-size:0.36rem;}
+.DownBtn1{background:#5495E6;}
+.DownBtn2{background:#fc6e51;}
+.DownBtn1:active,
+.DownBtn2:active{opacity: 0.6;}
+.OrgTxt{color:#fc6e51;font-size:0.28rem;text-align: center;padding-top:0.17rem;}
+.BtmTxt{width:5.3rem;margin:0 auto;font-size:0.26rem;color:#999;text-indent: -0.78rem;padding-left:0.78rem;letter-spacing: 0.02rem;padding-top:0.95rem;line-height:0.36rem;}
+
+
+
+
+
+

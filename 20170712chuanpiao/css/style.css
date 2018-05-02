@@ -1,0 +1,42 @@
+/*Created by huang.jun on 17-03-29*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"PingFang SC Medium","Microsoft YaHei",sans-serif;}
+
+.TopBg{height:13.825rem;background:url("../img/TopBg.jpg") no-repeat;background-size:100% 100%;}
+.WrapBg1{height:21.2rem;background:url("../img/WrapBg1.jpg") no-repeat;background-size:100% 100%;position:relative;}
+.WrapBg2{height:25.575rem;background:url("../img/WrapBg2.jpg") no-repeat;background-size:100% 100%;position:relative;}
+.WrapBg3{height:20.4rem;background:url("../img/WrapBg3.jpg") no-repeat;background-size:100% 100%;position:relative;}
+.WrapBg4{height:19.025rem;background:url("../img/WrapBg4.jpg") no-repeat;background-size:100% 100%;position:relative;}
+
+.fixed-top{height:1.875rem;}
+.nav-height{height:1.875rem;}
+.nav-wrap{height:1.875rem;background:#fff;width:100%;}
+.nav-wrap li{float:left;line-height:1.875rem;padding-left:2.1rem;font-size:0.7rem;position: relative;}
+.nav-wrap li .active{color:#0080c3;}
+.nav-wrap li .active:after{position: absolute;width:.65rem;height:.725rem;background:url("../img/NavIcon.png") no-repeat;background-size:100% 100%;content:"";left:1.2rem;top:0.5rem;}
+.nav-wrap li a{color:#000;}
+.nav_wrap_fix{position:fixed;top:0;z-index:3;}
+.BookingList{padding:0.5rem 0.675rem;width:15.75rem;background:#fff;margin:0 auto;overflow: hidden;-moz-border-radius:0.25rem;-webkit-border-radius:0.25rem;border-radius:0.25rem;}
+.BookingList li{height:2.575rem;position:relative;border-top:1px solid #ccc;}
+.BookingList li:nth-of-type(1){border:0;}
+.BookingList li big{font-size:0.75rem;color:#333;position:absolute;left:0.275rem;top:0.4rem}
+.BookingList li small{font-size:0.5rem;color:#999;position:absolute;left:0.275rem;top:1.4rem;}
+.BookingList li span{color:#00849e;position:absolute;left:6.8rem;top:0.8rem;font-size:0.6rem;}
+.BookingList li strong{color:#00849e;position:absolute;left:7.35rem;top:0.5rem;font-size:0.9rem;}
+.BookingList li a{position:absolute;right:0.275rem;top:0.6rem;width:3.75rem;height:1.45rem;line-height:1.45rem;text-align:center;background:#008097;-moz-border-radius:0.25rem;-webkit-border-radius:0.25rem;border-radius:0.25rem;color:#fff;font-size:0.75rem;}
+.md1{position: absolute;top:-2.5rem;}
+.md2{position: absolute;top:-4.9rem;}
+.md3{position: absolute;top:-5.1rem;}
+.md4{position: absolute;top:0;}
+.BtmBox{padding:1.725rem 25% 0 25%;}
+.BtmBox a{display:block;height:1.875rem;line-height:1.875rem;background:#E1175A;-moz-border-radius:3rem;-webkit-border-radius:3rem;border-radius:3rem;text-align: center;color:#fff;font-size:.75rem;}
+.BtmBox a:active{opacity:.7;}
+
+
+
+
+
+

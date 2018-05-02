@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/Progress.js"></script>
+
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+
+</head>
+<body>
+<section ontouchstart="" onmouseover="">
+    <div class="shadow"></div>
+    <div class="PopTxt">
+        <i class="CloseBtn"></i>
+        <!--成功-->
+        <dl>
+            <dt>
+                <p>手速超过了99%的人!<br/>恭喜你抢到了汽车票通用券!</p>
+            </dt>
+            <dd><a href="###">去买票</a></dd>
+        </dl>
+        <i class="Icon1"></i>
+        <i class="Icon2"></i>
+        <i class="Icon3"></i>
+        <i class="Icon4"></i>
+        <i class="Icon5"></i>
+        <!--失败-->
+        <!--<dl>-->
+            <!--<dt>-->
+                <!--<p>手慢了... 券已抢完!<br/>下一波秒杀再来~</p>-->
+            <!--</dt>-->
+            <!--<dd><a href="###">算了先去买票</a></dd>-->
+        <!--</dl>-->
+        <!--<i class="Icon6"></i>-->
+    </div>
+</section>
+<article ontouchstart="" onmouseover="">
+    <div class="VerificationBg">
+        <h3>XXXXX人正在和你一起秒杀<br/>填写以下信息,越快越好!</h3>
+        <ul class="inputList">
+            <li><input class="mobInput" type="text" placeholder="输入手机号"></li>
+            <li class="img-box"><img src="img/testImg.png"></li>
+            <li><input class="mobInput" type="text" placeholder="填写短信验证码"></li>
+            <li><a class="LingQuBtn" href="###">点击领取</a></li>
+        </ul>
+    </div>
+</article>
+
+</body>
+</html>
+

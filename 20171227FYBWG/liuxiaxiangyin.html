@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#E8E8E8;">
+    <view class="GrayBg">
+        <view class="pbox">
+            <text class="DialectBig">你要留下的乡音是</text>
+            <text class="DialectSmall">广东省-潮汕话</text>
+            <view class="SrBox">
+                <image class="luyin" src="img/BtnYy2.png"></image>
+                <button>重录</button>
+            </view>
+            <view class="TextareaBtm">
+                <text class="Title">补充方言释义，更容易被赞哦～</text>
+                <view class="TextareaBox">
+                    <textarea>这句话是什么意思?</textarea>
+                </view>
+            </view>
+            <view class="SubmitBtn">
+                <button>提交</button>
+            </view>
+        </view>
+    </view>
+</body>
+</html>

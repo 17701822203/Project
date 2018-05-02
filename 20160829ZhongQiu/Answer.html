@@ -1,0 +1,87 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>一元免单</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript">
+	document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+	window.addEventListener("resize",setRemSize,false);
+	function setRemSize(){
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+	}
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        $(function(){
+            $(".LeftBtn").click(function(){
+                $(".Answer").addClass("Disappear");
+                $("#fire").addClass("FireBig");
+            })
+        })
+    </script>
+</head>
+
+<body class="AnswerBox">
+    <article>
+        <div class="Answer">
+            <dl class="AnswerList">
+                <dt>
+                    <h2>xxx的6个小秘密</h2>
+                    <p>正确答案揭晓</p>
+                </dt>
+                <dd>
+                    <h3>1.如果下面一定要选一个菜吃掉，XXX会选择<span>(B)</span></h3>
+                    <ul>
+                        <li>A.香菜</li>
+                        <li>B.鱼腥草</li>
+                        <li>C.大蒜</li>
+                        <li>D.韭菜</li>
+                    </ul>
+                    <h3>2.XXX穿的鞋子尺码大小是<span>(A)</span></h3>
+                    <ul>
+                        <li>A.36以下</li>
+                        <li>B.37</li>
+                        <li>C.38</li>
+                        <li>D.40及以上</li>
+                    </ul>
+                    <h3>3.我的CUP是？<span>(C)</span></h3>
+                    <ul>
+                        <li>A.A以下</li>
+                        <li>B.B</li>
+                        <li>C.C</li>
+                        <li>D.D及以上</li>
+                    </ul>
+                    <h3>4.XXX旅游的时候都怎么败家的<span>(C)</span></h3>
+                    <ul>
+                        <li>A.节约是中华民族的传统美德</li>
+                        <li>B.买买买，来都来了</li>
+                        <li>C.酒店一定选携程最贵的</li>
+                    </ul>
+                    <h3>5.XXX喜欢穿什么风格的衣服<span>(B)</span></h3>
+                    <ul>
+                        <li>A.休闲运动风</li>
+                        <li>B.流行什么穿什么</li>
+                        <li>C.性感紧身秀身材</li>
+                        <li>D.无所谓</li>
+                    </ul>
+                    <h3>6.XXX最喜欢吃什么馅儿的月饼<span>(A)</span></h3>
+                    <ul>
+                        <li>A.黑无止境依然爱五仁</li>
+                        <li>B.榨菜肉丝月饼</li>
+                        <li>C.巧克力牛肉月饼</li>
+                        <li>D.老干妈月饼</li>
+                    </ul>
+                </dd>
+            </dl>
+            <i></i>
+        </div>
+        <div id="fire"><em class="FireBox"></em></div>
+        <div class="FireBtnBox">
+            <button class="LeftBtn">阅后即焚<span>>></span></button>
+            <button class="RightBtn">我也要玩<span>>></span></button>
+        </div>
+    </article>
+</body>
+</html>

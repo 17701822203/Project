@@ -1,0 +1,60 @@
+<html class="ie"><!--<![endif]--><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+		window.addEventListener("resize",setRemSize,false);
+		function setRemSize(){
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+		}	
+	};
+	$(document).ready(function(){
+		$("section,.blue,.btmtxt").css("display","none");
+		$(".eBtn").click(function(){
+			$(".yellow").hide(1000);
+			$(".blue,.btmtxt").show(1000);
+		})
+		$(".hdgz").click(function(){
+			$("section").show()	
+		})
+		$(".close,.shadow").click(function(){
+			$("section").hide();
+		})
+	})
+</script>
+</head>
+
+<body>
+	<section>
+    	<div class="shadow"></div>
+        <dl class="pop">
+        	<img class="close" src="img/cloce.png">
+        	<dt><img src="img/tit.png"></dt>
+            <dd>
+            	<p>1.领取的现金券，将会记录在您填写的手机号码账号下，您只需使用该手机号登陆铁友APP，即可使用；</p>
+                <p>2.现金券只用于在铁友火车票APP购买火车票产品时抵扣消费金额；</p>
+                <p>3.在法律允许的范围内，铁友旅行网可对活动的规则/条款作出适当调整/修改。</p>
+            </dd>
+        </dl>
+    </section>
+	<article>
+        <img class="lftIcon" src="img/lftHade.png">
+        <img class="ritIcon" src="img/ritHade.png">
+        <ul class="BtnList">
+        	<li class="blue"><a class="blueBtn" href="###">下载铁友APP</a></li>
+            <li class="blue"><a class="blueBtn" href="###">分享给好友</a></li>
+            <li class="yellow"><input value="输入手机号" type="text"></li>
+            <li class="yellow"><a class="eBtn" href="###">立即领券</a></li>
+        </ul>
+        <dl class="btmtxt">
+        	<dt>10元现金券已放入<span>22233333333</span>帐号内</dt>
+            <dd>立即下载APP查看使用吧</dd>
+        </dl>
+        <img class="hdgz" src="img/hdgz.png">
+    </article>
+</body>
+</html>

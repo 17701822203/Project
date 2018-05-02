@@ -1,0 +1,36 @@
+.ShopList img {
+  height: 7rem;
+  width: 100%;
+}
+.ShopList .ShopTxt {
+  background: #fff;
+  padding: .6rem;
+}
+.ShopList .ShopTxt dt {
+  font-size: .85rem;
+  line-height: .85rem;
+  position: relative;
+}
+.ShopList .ShopTxt dt span {
+  font-size: .7rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.ShopList .ShopTxt dd {
+  font-size: .65rem;
+}
+.ShopList .ShopTxt dd p {
+  line-height: .65rem;
+  margin-top: .4rem;
+}
+.ShopList .ShopTxt dd p span {
+  display: inline-block;
+  width: 1.75rem;
+  height: .8rem;
+  border: 1px solid #666;
+  text-align: center;
+  line-height: .8rem;
+  margin-left: .425rem;
+  color: #666;
+}

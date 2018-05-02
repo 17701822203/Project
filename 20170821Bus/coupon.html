@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/tween.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+<article ontouchstart="" onmouseover="">
+    <div class="CouponBg">
+        <dl class="Coupon-Top">
+            <dt>恭喜!你的1元路费</dt>
+            <dd><span>翻倍成为</span><b>100</b><span>元出行红包!</span></dd>
+        </dl>
+        <div class="CouponBox">
+
+            <div class="GreenBox">
+                <div class="MoneyIcon">&yen;</div>
+                <div class="Money">10</div>
+                <dl class="Type">
+                    <dt><span>汽车票</span></dt>
+                    <dd>汽车票3元现金券</dd>
+                </dl>
+            </div>
+
+            <div style="margin-top:.3rem;" class="RedBox">
+                <div class="MoneyIcon">&yen;</div>
+                <div class="Money">10</div>
+                <dl class="Type">
+                    <dt><span>船票</span></dt>
+                    <dd>船票3元现金券</dd>
+                </dl>
+            </div>
+
+            <div style="margin-top:.3rem;" class="PinkBox">
+                <div class="MoneyIcon">&yen;</div>
+                <div class="Money">10</div>
+                <dl class="Type">
+                    <dt><span>船票</span></dt>
+                    <dd>船票3元现金券</dd>
+                </dl>
+            </div>
+
+            <div style="margin-top:.3rem;" class="BlueBox">
+                <div class="MoneyIcon">&yen;</div>
+                <div class="Money">10</div>
+                <dl class="Type">
+                    <dt><span>船票</span></dt>
+                    <dd>船票3元现金券</dd>
+                </dl>
+            </div>
+
+            <div style="margin-top:.3rem;" class="YellowBox">
+                <div class="MoneyIcon">&yen;</div>
+                <div class="Money">10</div>
+                <dl class="Type">
+                    <dt><span>船票</span></dt>
+                    <dd>船票3元现金券</dd>
+                </dl>
+            </div>
+
+            <a class="Share" href="###">分享给好友</a>
+
+        </div>
+    </div>
+</article>
+</body>
+</html>
+

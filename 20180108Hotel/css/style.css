@@ -1,0 +1,245 @@
+/*Created by huang.jun on 17-12-05*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+button:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  background: #F4F4F4;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Nav {
+  position: relative;
+  height: 6rem;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #fff;
+}
+.Nav .scroller {
+  position: absolute;
+  width: 30rem;
+}
+.Nav .scroller li {
+  height: 2.25rem;
+  color: #333;
+  float: left;
+  line-height: 2.25rem;
+  font-size: .65rem;
+  text-align: center;
+}
+.Nav .scroller li a {
+  color: #808F9E;
+  display: block;
+  margin: 0 .8rem;
+}
+.Nav .scroller li.cur a {
+  color: #0493FF;
+  position: relative;
+}
+.Nav .scroller li.cur a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: .075rem;
+  background: #0493FF;
+  left: 0;
+  bottom: .2rem;
+}
+.HotelDetails {
+  background: #fff;
+  border-top: .25rem solid #F4F4F4;
+  padding: .55rem .5rem;
+  position: relative;
+}
+.HotelDetails .HotelImg {
+  font-size: 0;
+  position: relative;
+}
+.HotelDetails .HotelImg img {
+  width: 100%;
+}
+.HotelDetails .HotelImg img {
+  width: 100%;
+  height: 8rem;
+}
+.HotelDetails .HotelImg .Evaluate {
+  color: #fff;
+  left: .5rem;
+  bottom: .5rem;
+  position: absolute;
+  z-index: 2;
+}
+.HotelDetails .HotelImg .Evaluate dt {
+  float: left;
+}
+.HotelDetails .HotelImg .Evaluate dt big,
+.HotelDetails .HotelImg .Evaluate dt span {
+  float: left;
+}
+.HotelDetails .HotelImg .Evaluate dt big {
+  font-size: 1.05rem;
+  line-height: 1.05rem;
+  font-weight: bold;
+}
+.HotelDetails .HotelImg .Evaluate dt span {
+  font-size: .7rem;
+  line-height: .7rem;
+  padding: .3rem 0 0 0;
+}
+.HotelDetails .HotelImg .Evaluate dd {
+  padding: .35rem 0 0 .75rem;
+  font-size: .7rem;
+  line-height: .7rem;
+  float: left;
+}
+.HotelDetails .HotelImg:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2.5rem;
+  width: 100%;
+  z-index: 1;
+  background: url("../img/Bg.png") repeat-x;
+  background-size: 1.25rem auto;
+}
+.HotelDetails .HotelDescribe:after,
+.HotelDetails .HotelDescribe:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.HotelDetails .HotelDescribe .Left {
+  float: left;
+  font-size: .85rem;
+  font-family: "PingFang-SC-Bold";
+  line-height: .85rem;
+  margin-top: 1rem;
+  color: #333;
+  width: 50%;
+}
+.HotelDetails .HotelDescribe .Right {
+  float: right;
+  color: #FD4D21;
+  position: relative;
+}
+.HotelDetails .HotelDescribe .Right small {
+  float: left;
+  font-size: .75rem;
+  line-height: .75rem;
+  margin: 1.15rem .1rem 0 0;
+}
+.HotelDetails .HotelDescribe .Right strong {
+  float: left;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 1rem .2rem 0 0;
+}
+.HotelDetails .HotelDescribe .Right span {
+  float: left;
+  width: 3.8rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+  font-size: .75rem;
+  color: #fff;
+  background: #FD4D21;
+  -webkit-border-radius: 2.5rem;
+  -moz-border-radius: 2.5rem;
+  border-radius: 2.5rem;
+  margin-top: .6rem;
+}
+.HotelDetails .HotelDescribe .Right span:active {
+  opacity: .7;
+}
+.HotelDetails .HotelDescribe .Right i {
+  font-size: .5rem;
+  color: #FD4D21;
+  font-style: normal;
+  border: 1px solid #FD4D21;
+  line-height: .7rem;
+  padding: 0 .1rem;
+  float: left;
+  margin: 1.1rem .6rem 0 0;
+}
+.HotelDetails .HotelRecommend {
+  padding: 0 0 0 3.9rem;
+  position: relative;
+  font-size: .6rem;
+  margin-top: .5rem;
+}
+.HotelDetails .HotelRecommend span {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 3.3rem;
+  height: .925rem;
+  background: url("../img/tuijian.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.HotelDetails .HotelRecommend p {
+  color: #808F9E;
+}
+.HotelDetails .ranking1,
+.HotelDetails .ranking2,
+.HotelDetails .ranking3 {
+  position: absolute;
+  width: 1.625rem;
+  height: 2.275rem;
+  left: 1rem;
+  top: .2rem;
+  z-index: 2;
+}
+.HotelDetails .ranking1 {
+  background: url("../img/ranking1.png") no-repeat;
+  background-size: 100% 100%;
+}
+.HotelDetails .ranking2 {
+  background: url("../img/ranking2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.HotelDetails .ranking3 {
+  background: url("../img/ranking3.png") no-repeat;
+  background-size: 100% 100%;
+}

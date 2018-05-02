@@ -1,0 +1,47 @@
+/*Created by huang.jun on 16-09-06*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Microsoft YaHei";background:#fff;}
+
+/****************弹层*******************/
+.shadow{width:100%;height:100%;position:fixed;z-index:1;background:#000;opacity:0.5;top:0;left:0;}
+.hongbaoBox{width:15.625rem;height:22.075rem;position: absolute;z-index:2;left:50%;top:50%;margin-left:-7.8125rem;margin-top:-11.0375rem;}
+.hongbaoBg{width:15.625rem;height:22.075rem;background:url("../img/Bg.png") no-repeat;background-size:15.625rem 22.075rem;position: relative;}
+.close{width:2.075rem;height:2.075rem;background:url("../img/close.png") no-repeat;background-size:2.075rem 2.075rem;position: absolute;right:0;top:-0.5rem;}
+.ktv,.dangao,.dianying,.hongjiu{left:4rem;top:8rem;position: absolute;width:7.725rem;height:6.55rem;}
+.ktv span,.dangao span,.dianying span,.hongjiu span{font-size:0.7rem;color:#fff;text-align: center;width:100%;display:block;padding-top:5rem;}
+.ktv{background:url("../img/Ktv.png") no-repeat;background-size:7.725rem 6.55rem;}
+.dangao{background:url("../img/dangao.png") no-repeat;background-size:7.725rem 6.55rem;}
+.dianying{background:url("../img/dianying.png") no-repeat;background-size:7.725rem 6.55rem;}
+.hongjiu{background:url("../img/hongjiu.png") no-repeat;background-size:7.725rem 6.55rem;}
+.hongbaoTxt{font-size:0.55rem;color:#ff8d82;text-align:center;width:100%;position: absolute;top:14.9rem;}
+.BtmBtn{width:12rem;height:2.75rem;border:0;background:url("../img/BtnBg.png") no-repeat;background-size:12rem 2.75rem;position: absolute;left:50%;margin-left:-6rem;top:16rem;}
+.hezuoLogo{position: absolute;width:13.6rem;height:1.4rem;background:url("../img/hezuo.png") no-repeat;background-size:13.6rem 1.4rem;left:50%;margin-left:-6.8rem;top:20rem;}
+.TopTxt{font-size:0.7rem;color:#fdebc4;text-align: center;padding-top:2.6rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,159 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>红包</title>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <!--弹窗-->
+    <section style="display:none;">
+        <div class="shadow"></div>
+        <!--领取成功-->
+        <div class="Pop1">
+            <i class="close"></i>
+            <h4>恭喜你，领取成功！</h4>
+            <p>红包已放至您的携程账户<span>15158000507</span></p>
+            <div><span class="Btn1">立即抢票</span></div>
+        </div>
+
+        <!--验证码-->
+        <div class="Pop2" style="display:none;">
+            <div class="InputBox">
+                <div class="Mob"><input type="text" value="输入手机号" onfocus="if (value =='输入手机号'){value =''}" onblur="if (value ==''){value='输入手机号'}" ></div>
+                <div></div>
+                <div class="Verification"><input type="text" placeholder="输入验证码"><button>获取验证码</button></div>
+                <div class="PopBtn"><span class="Btn1">领 取</span></div>
+                <i class="close"></i>
+            </div>
+        </div>
+    </section>
+
+    <!--内容-->
+    <article class="Wrap">
+        <div class="TopBox">
+            <img class="logo" src="img/logo.png">
+            <!--建筑-->
+            <div class="Architecture">
+                <!--大红包1-->
+                <div class="RedEnvelopes">
+                    <span>10</span>
+                    <small>元</small>
+                </div>
+                <!--大红包2-->
+                <div class="GrayEnvelopes" style="display:none;">
+                    <span>10</span>
+                    <small>元</small>
+                </div>
+                <!--遮罩-->
+                <div class="Mask"></div>
+                <!--小红包-->
+                <i class="RedIcon1"></i>
+                <i class="RedIcon2"></i>
+                <i class="RedIcon3"></i>
+                <!--表情-->
+                <i class="laugh"></i>
+                <i class="cry" style="display:none;"></i>
+            </div>
+            <!--文字-->
+            <div class="TopTxt1" style="display:none;"></div>
+            <div class="TopTxt2"></div>
+        </div>
+        <div class="CenterWrap">
+            <!--默认-->
+            <dl class="LingQu">
+                <dt>抢票支付时可抵加速包，抢票快人一步！</dt>
+                <dd><span class="Btn1">立即领取</span></dd>
+            </dl>
+            <!--结束-->
+            <dl class="LingQu" style="display:none;">
+                <dt>登录携程App或小程序即可体验携程购票的便捷</dt>
+                <dd><span class="Btn1"><i>立即使用</i></span></dd>
+            </dl>
+            <!--已领-->
+            <dl class="LingQu2" style="display:none;">
+                <dt>
+                    <div>红包已放至您的携程账户<span>15158000507</span></div>
+                    <p>登录携程App或小程序即可使用(有效期至2018.02.20)</p>
+                </dt>
+                <dd><span class="Btn1"><i>立即使用</i></span></dd>
+            </dl>
+        </div>
+        <div class="BtmWrap">
+            <!--标题-->
+            <div class="Title"><span>看朋友们手气如何</span></div>
+            <!--列表-->
+            <div class="UserBox">
+                <div class="left"><img src="http://tpc.googlesyndication.com/daca_images/simgad/2950348894543298718"></div>
+                <dl class="center">
+                    <dt>landa</dt>
+                    <dd>2017-07-24 12:35:23</dd>
+                </dl>
+                <div class="right">5元</div>
+            </div>
+            <div class="UserBox">
+                <div class="left"><img src="http://tpc.googlesyndication.com/daca_images/simgad/2950348894543298718"></div>
+                <dl class="center">
+                    <dt>打炮的医疗兵</dt>
+                    <dd>2017-07-24 12:35:23</dd>
+                </dl>
+                <div class="right">5元</div>
+                <span class="Optimum">最佳手气</span>
+            </div>
+            <div class="UserBox">
+                <div class="left"><img src="http://tpc.googlesyndication.com/daca_images/simgad/2950348894543298718"></div>
+                <dl class="center">
+                    <dt>landa</dt>
+                    <dd>2017-07-24 12:35:23</dd>
+                </dl>
+                <div class="right">5元</div>
+            </div>
+            <!--标题-->
+            <div class="Title"><span>活动规则</span></div>
+            <ul class="RuleTxt">
+                <li>1.购票成功即可分享抽奖活动给小伙伴，每个小伙伴都有机会获得任意金额的火车票优惠券。</li>
+                <li>2.优惠券请至【我的】-【优惠券】-【火车票】中查看</li>
+                <li>3.每个分享活动，最多允许10位好友与你瓜分红包。</li>
+                <li>4.每位用户一天内最多可以参加三次活动。</li>
+            </ul>
+        </div>
+    </article>
+</body>
+</html>

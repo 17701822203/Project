@@ -1,0 +1,201 @@
+/*Created by huang.jun on 18-03-08*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+button:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  color: #000;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopBox {
+  font-size: 0;
+}
+.TopBox img {
+  width: 100%;
+}
+.TxtBox {
+  padding: 0 1.1rem;
+  margin-top: .5rem;
+}
+.TxtBox dt {
+  font-family: PingFangSC-Medium;
+  font-size: 1rem;
+  color: #333;
+  padding-top: .2rem;
+  line-height: 1.25rem;
+}
+.TxtBox dd {
+  font-size: .65rem;
+  color: #666;
+}
+.TxtBox dd p {
+  line-height: .95rem;
+  margin-top: 1.1rem;
+}
+.Txtbox2 {
+  padding: 0 1rem;
+}
+.Txtbox2 dt {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: #333;
+  font-weight: bold;
+}
+.Txtbox2 dd {
+  font-size: .7rem;
+  line-height: 1rem;
+  color: #666;
+  margin-top: .28rem;
+}
+.Downloads {
+  padding: 0 1rem 1rem 1rem;
+  margin-top: 1.225rem;
+}
+.Downloads:after,
+.Downloads:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Downloads dt {
+  float: left;
+  font-size: 0;
+}
+.Downloads dt img {
+  width: 2.25rem;
+}
+.Downloads dd {
+  float: left;
+  padding-left: .45rem;
+}
+.Downloads dd h4 {
+  color: #333;
+  line-height: 1.125rem;
+  font-size: .8rem;
+  font-weight: normal;
+}
+.Downloads dd p {
+  font-size: .55rem;
+  line-height: .75rem;
+  color: #666;
+  margin-top: .175rem;
+}
+.Downloads dd p:after,
+.Downloads dd p:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Downloads dd p img {
+  width: .8rem;
+  float: left;
+  margin-right: .125rem;
+}
+.Downloads dd p span {
+  float: left;
+  margin-left: .225rem;
+}
+.CommentsWrap {
+  padding: .55rem .5rem 4rem .5rem;
+  border-top: .5rem solid #F6F6F6;
+}
+.CommentsWrap h3 {
+  color: #333;
+  font-size: .8rem;
+  line-height: 1.125rem;
+  font-weight: normal;
+  padding-left: .5rem;
+}
+.CommentsWrap .Comments {
+  padding: 0 .5rem;
+  display: -webkit-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: .75rem;
+}
+.CommentsWrap .Comments .user-pic {
+  padding-right: .55rem;
+  font-size: 0;
+}
+.CommentsWrap .Comments .user-pic img {
+  width: 1.5rem;
+}
+.CommentsWrap .Comments .comment-entry {
+  -webkit-box-flex: 1;
+}
+.CommentsWrap .Comments .comment-entry h4 {
+  font-size: .7rem;
+  font-weight: normal;
+  line-height: 1rem;
+  color: #333;
+}
+.CommentsWrap .Comments .comment-entry p {
+  display: -webkit-box;
+  word-wrap: break-word;
+  font-size: .6rem;
+  color: #666;
+}
+.OpenBtn {
+  padding: .5rem;
+  position: fixed;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  border-top: 1px solid #F6F6F6;
+  background: #fff;
+}
+.OpenBtn a {
+  display: block;
+  background: #5695FF;
+  color: #fff;
+  text-align: center;
+  height: 2.4rem;
+  line-height: 2.4rem;
+  font-size: .85rem;
+  -webkit-border-radius: 2.4rem;
+  -moz-border-radius: 2.4rem;
+  border-radius: 2.4rem;
+}

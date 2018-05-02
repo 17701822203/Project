@@ -1,0 +1,165 @@
+/*Created by huang.jun on 17-10-10*/
+*{margin:0;padding:0;}
+a{text-decoration:none;-webkit-tap-highlight-color:transparent;
+  &:active{opacity:.7;}
+}
+ol,ul,li{list-style:none;}
+body{font-family:PingFang SC Regular,sans-serif;}
+.shadow{width:100%;height:100%;position:fixed;z-index:20;background:#4C4C4C;opacity:1;top:0;left:0;}
+.img-box{font-size:0;
+  img{width:100%;}
+}
+//四角的半径定制.border-radius-custom(20px, 20px, 0px, 0px);
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+  border-radius: @topleft @topright @bottomright @bottomleft;
+}
+//方块阴影.box-shadow(5px, 5px, 6px, 0.3);
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: .5) {
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+//圆角.border-radius(@radius:5px)
+.border-radius(@radius:5px){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+//input默认字体.placeholder({color:#666;});
+.placeholder(@a){
+  &::-webkit-input-placeholder{@a();}
+  &:-moz-placeholder{@a();}
+  &::-moz-placeholder{@a();}
+  &:-ms-input-placeholder{@a();}
+}
+//线性渐变.gradient(left, #663333, #333333);
+.gradient(@origin:left,@start:#fff,@stop:#000){
+  background-color:@start;
+  background-image:-webkit-linear-gradient(@origin,@start,@stop);
+  background-image:-moz-linear-gradient(@origin,@start,@stop);
+  background-image:-o-linear-gradient(@origin,@start,@stop);
+  background-image:-ms-linear-gradient(@origin,@start,@stop);
+  background-image:linear-gradient(@origin,@start,@stop);
+}
+//清除浮动
+.ClearBox{
+  &:after,&:before{content: " ";display: table;clear: both;}
+}
+
+article{background:#fff;}
+
+.InputList{padding:0 8%;
+  li{padding-top:.6rem;}
+}
+.InputTxt{border:1px solid #999;width:100%;height:2.1rem;font-size:.75rem;padding-left:.5rem;-webkit-box-sizing:border-box;box-sizing:border-box;.border-radius(@radius:.25rem);-webkit-appearance: none;}
+.InputBtn{display:block;height:2.15rem;line-height:2.15rem;text-align:center;color:#fff;.gradient(left,#F74825,#FF7B2D);.border-radius(@radius:.25rem);box-shadow:0 .1rem .8rem #FE752C;}
+.TopTxt{text-align:center;
+  dt{font-size:1.4rem;line-height:1.4rem;font-weight:bold;color:#f85327;padding-top:.9rem;}
+  dd{font-size:.7rem;line-height:.7rem;color:#666;padding-top:.35rem;}
+}
+.Coupon{width:16.85rem;height:4.95rem;background:url("../img/Coupon.png") no-repeat;background-size:100% 100%;margin:.5rem auto 0 auto;display:block;position:relative;color:#fff;
+  .CouponTop{float:left;width:100%;height:3.1rem;-webkit-box-sizing:border-box;box-sizing:border-box;
+    small{font-size:.95rem;line-height:.95rem;float:left;padding:1.75rem .1rem 0 1.6rem;font-family:PingFang SC Regular;}
+    b{font-size:2.1rem;line-height:2.1rem;float:left;padding:.75rem 0 0 0;}
+    ul{float:left;font-size:.7rem;line-height:.7rem;padding:.9rem 0 0 .4rem;
+      li{padding-top:.2rem;}
+    }
+  }
+  .CouponBtm{-webkit-box-sizing:border-box;box-sizing:border-box;float:left;width:100%;font-size:.65rem;height:1.5rem;line-height:1.5rem;padding-left:1.5rem;}
+}
+.EwmBox{text-align:center;padding-top:1.2rem;
+  dt{
+    img{width:4.2rem;height:4.2rem;}
+  }
+  dd{font-size:.7rem;line-height:.7rem;padding-top:.3rem;}
+}
+
+.PopHb{width:15.4rem;height:16.35rem;background:url("../img/HbBg.png") no-repeat;background-size:100% 100%;position: fixed;left:50%;margin-left:-7.7rem;z-index:30;top:4.4rem;
+  .TopTitle{color:#DB2F39;text-align:center;padding-top:2.6rem;
+    figcaption{font-size:1.4rem;line-height:1.4rem;font-weight:bold;padding-top:1.15rem;}
+    p{font-size:.8rem;line-height:.8rem;padding-top:.25rem;}
+  }
+  .HbWrap{text-align:center;color:#fff5da;padding-top:2.7rem;
+    b{font-size:2.8rem;font-weight: bold;position:relative;line-height:2.8rem;text-shadow: 2px 2px 10px #DB2F39;
+      span{font-size:.95rem;line-height:.95rem;position: absolute;top:1.8rem;right:-1.1rem;font-weight: normal;text-shadow: 2px 2px 2px red;}
+    }
+  }
+  .term{text-align:center;color:#fff5da;font-size:.6rem;margin-top:.4rem;}
+  .BtmBtnBox{text-align:center;padding-top:.3rem;
+    a{display:inline-block;width:8.3rem;height:2.3rem;background:url("../img/popBtn.png") no-repeat;background-size:100% 100%;}
+  }
+  .CloseBtn{width:1.925rem;height:3.675rem;background:url("../img/CloseBtn.png") no-repeat;background-size:100% 100%;position: absolute;left:50%;margin-left:-.9625rem;top:16.35rem;}
+}
+
+.Pop2{width:16.35rem;position:fixed;left:50%;margin-left:-8.175rem;z-index:30;top:5rem;
+  .TopTitle1{.img-box;color:#fff;position: relative;
+    p{font-size:1rem;line-height:1rem;position: absolute;text-align:center;bottom:.9rem;width:100%;}
+  }
+  .PopWrap{background:#fff;padding-bottom:2.5rem;width:16.075rem;.border-radius-custom(0,0,.5rem,.5rem);position: relative;
+    &:after{content:"";width:7.925rem;height:.975rem;background:url("../img/PopBtmBg.png") no-repeat;background-size:100% 100%;content:"";left:50%;margin-left:-3.9625rem;position: absolute;bottom:.8rem;}
+    .CouponBox{.ClearBox;
+      .CouponBor1{width:13.125rem;height:5.575rem;background:url("../img/CouponBor.png") no-repeat;background-size:100% 100%;margin:1.55rem auto 0 auto;position: relative;
+        .CouponLeft{float:left;width:5.75rem;height:5.425rem;
+          b{font-size:2.175rem;line-height:2.175rem;position: relative;color:#ff0000;font-weight: normal;float:left;margin:1.5rem 0 0 1.5rem;
+            span{font-size:1.05rem;position: absolute;left:-.6rem;top:.4rem;font-family:PingFang SC Regular;}
+          }
+        }
+        .CouponRight{float:left;width:7rem;
+          li{.ClearBox;
+            &:nth-of-type(1){padding-top:1.05rem;
+              span{border:1px solid #ff0000;font-size:.55rem;display:block;width:2.375rem;height:.725rem;line-height:.725rem;text-align:center;color:#ff0000;.border-radius(@radius:.1rem);}
+            }
+            &:nth-of-type(2){font-size:1.05rem;line-height:1.05rem;font-weight: bold;padding-top:.425rem;}
+            &:nth-of-type(3){font-size:.8rem;line-height:.8rem;color:#333;padding-top:.3rem;}
+          }
+        }
+      }
+      .TopTips{width:13rem;height:.95rem;line-height:.95rem;margin:.9rem auto 0 auto;font-size:.6rem;color:#666;border:1px solid #999;text-align:center;.border-radius(@radius:.95rem);}
+      .CouponBor2{width:13.125rem;height:4.95rem;background:url("../img/CouponBor2.png") no-repeat;background-size:100% 100%;margin:.825rem auto 0 auto;
+        .CouponLeft{float:left;width:5.75rem;height:4.95rem;
+          b{font-size:2.175rem;line-height:2.175rem;position: relative;color:#ff0000;font-weight: normal;float:left;margin:1.3rem 0 0 1.5rem;
+            span{font-size:1.05rem;position: absolute;left:-.6rem;top:.4rem;font-family:PingFang SC Regular;}
+          }
+        }
+        .CouponRight{float:left;width:7rem;
+          li{.ClearBox;
+            &:nth-of-type(1){padding-top:.625rem;
+              span{border:1px solid #ff0000;font-size:.55rem;display:block;width:2.375rem;height:.725rem;line-height:.725rem;text-align:center;color:#ff0000;.border-radius(@radius:.1rem);}
+            }
+            &:nth-of-type(2){font-size:1.05rem;line-height:1.05rem;font-weight: bold;padding-top:.425rem;}
+            &:nth-of-type(3){font-size:.8rem;line-height:.8rem;color:#333;padding-top:.3rem;}
+          }
+        }
+      }
+      .PopBtnBox{text-align:center;padding-top:.925rem;
+        a{display:inline-block;width:6.15rem;height:2.2rem;line-height:2.2rem;.gradient(left,#FF5C00,#FF0400);.border-radius(@radius:2.2rem);text-align:center;color:#fff;font-size:.75rem;
+          &:nth-of-type(2){margin-left:.5rem;}
+        }
+      }
+      .ShareBtn{width:13.125rem;height:2.2rem;line-height:2.2rem;display:block;text-align: center;margin:1.1rem auto 0 auto;font-size:.75rem;color:#fff;.gradient(left,#FF5C00,#FF0400);.border-radius(@radius:2.2rem);}
+    }
+  }
+  .CloseBtn{position:absolute;width:1.825rem;height:1.825rem;background:url("../img/CloseBtn2.png") no-repeat;background-size:100% 100%;left:50%;margin-left:-.9125rem;bottom:-2.625rem;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#A01528;">
+    <view class="IndexWrap">
+        <view class="IndexTopImg"><img src="img/IndexTopImg.jpg"><img class="logo2" src="img/Logo2.png"></view>
+        <view class="BtnBox">
+            <view><img src="img/NavTab.jpg"></view>
+            <view><img src="img/Btn1.jpg"></view>
+            <view><img src="img/Btn2.jpg"></view>
+            <view><img src="img/Btn3.jpg"></view>
+            <view><img src="img/Btn4.jpg"></view>
+            <img class="link1" src="img/Obtn.png">
+            <img class="link2" src="img/Obtn.png">
+            <img class="link3" src="img/Obtn.png">
+            <img class="link4" src="img/Obtn.png">
+            <img class="link5" src="img/Obtn.png">
+            <img class="link6" src="img/Obtn.png">
+            <img class="link7" src="img/Obtn.png">
+            <img class="link8" src="img/Obtn.png">
+        </view>
+    </view>
+</body>
+</html>

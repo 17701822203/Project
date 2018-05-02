@@ -1,0 +1,113 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var tabs=$(".js_tab");
+            tabs.each(function(){
+                $(this).find(".jsTab_title navigator").first().addClass("on");
+                $(this).find(".jsTab_con").first().show();
+            });
+            $(".NewsList").js_tab();
+//            $(".box2").js_tab();
+//            $(".box3").js_tab();
+//            $(".box4").js_tab();
+//            $(".box5").js_tab();
+        });
+        (function($){
+            $.fn.extend({
+                "js_tab":function(){
+                    $(this).find(".jsTab_title navigator").each(function(index){
+                        $(this).click(function(){
+                            $(this).siblings("navigator").removeClass("on");
+                            $(this).addClass("on");
+                            var tab_c=$(this).parents(".js_tab").find(".jsTab_con");
+                            tab_c.hide();
+                            tab_c.eq(index).show();
+                        });
+                        return $(this);
+                    });
+                }
+            });
+        })(jQuery);
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#F1F1F1;">
+    <view class="js_tab NewsList">
+        <view class="jsTab_title">
+            <navigator>方言口令库</navigator>
+            <navigator>自定义录音</navigator>
+        </view>
+        <view class="jsTab_con">
+            <view class="DialectWrap">
+                <view class="jsTxtList">广东话：各个国家有各个国家的国歌<text class="horn"><img src="img/horn.png"></text></view>
+                <view class="jsTxtList active">广东话：各个国家有各个国家的国歌<text class="horn"><img src="img/horn.png"></text></view>
+                <view class="jsTxtList">广东话：各个国家有各个国家的国歌<text class="horn"><img src="img/horn.png"></text></view>
+                <view class="jsTxtList">广东话：各个国家有各个国家的国歌<text class="horn"><img src="img/horn.png"></text></view>
+                <view class="jsTxtList">广东话：各个国家有各个国家的国歌<text class="horn"><img src="img/horn.png"></text></view>
+                <view class="jsTxtList">广东话：各个国家有各个国家的国歌<text class="horn"><img src="img/horn.png"></text></view>
+                <view class="jsTxtList">广东话：各个国家有各个国家的国歌各个国家有各个国家的国歌<text class="horn"><img src="img/horn.png"></text></view>
+                <view class="jsTxtList">广东话：各个国家有各个国家的国歌<text class="horn"><img src="img/horn.png"></text></view>
+                <view class="jsTxtList">广东话：各个国家有各个国家的国歌<text class="horn"><img src="img/horn.png"></text></view>
+            </view>
+            <view class="GrayTipsTxt">划动查看更多口令</view>
+            <view class="CenterTips">好友模仿说出口令  匹配成功可领红包</view>
+            <view class="BtnBox"><button class="redBtn">就用这个</button><button style="display:none;" class="grayBtn">就用这个</button></view>
+        </view>
+        <view class="jsTab_con">
+            <view class="custom">
+                <view class="customWrap">
+                    <!--<text class="Voice"><img src="img/Btn.png"><text>3"</text></text>-->
+                    <text class="TipsTop">温馨提示</text>
+                    <text class="TipsBtm">你可以教大家一句家乡话，最长9秒</text>
+                </view>
+                <view class="TipsBtn">
+                    <text>好友模仿说出口令  匹配成功可领红包</text>
+                    <view><button class="redBtn">长按录音</button></view>
+                    <view><button class="grayBtn">就用这个</button></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</body>
+</html>

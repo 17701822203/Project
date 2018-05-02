@@ -1,0 +1,158 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <section style="display:;">
+        <div class="shadow"></div>
+        <div class="PopupBox">
+            <a href="###" class="CloseBtn"></a>
+            <h4>国内城市</h4>
+            <dl>
+                <dt>热门城市：</dt>
+                <dd class="tieyou"><!--携程铁友2种颜色ctrip/tieyou-->
+                    <a href="###">北京</a>
+                    <a href="###">上海</a>
+                    <a href="###">杭州</a>
+                    <a href="###">北京</a>
+                    <a href="###">上海</a>
+                    <a href="###">杭州</a>
+                    <a href="###">北京</a>
+                    <a href="###">上海</a>
+                    <a href="###">杭州</a>
+                    <a href="###">北京</a>
+                    <a href="###">上海</a>
+                    <a href="###">杭州</a>
+                    <a href="###">北京</a>
+                    <a href="###">上海</a>
+                    <a href="###">杭州</a>
+                    <a href="###">北京</a>
+                    <a href="###">杭州</a>
+                    <a href="###">上海</a>
+                    <a href="###">杭州</a>
+                    <a href="###">上海</a>
+                </dd>
+            </dl>
+        </div>
+    </section>
+    <article>
+        <div class="TopImg">
+            <div class="img-box"><img src="img/hotelImg.jpg"></div>
+            <a class="CityBtn" href="###">上海</a>
+            <h3 class="HotelName">上海东方凯宾斯基酒店</h3>
+            <div class="CountDown">
+                <b>还剩</b>
+                <span>10</span>
+                <span>09</span>
+                <span>14</span>
+            </div>
+        </div>
+        <div class="Remind">
+            <small>&yen;</small>
+            <big>280</big>
+            <b>起</b>
+            <dl>
+                <dt>仅限20份</dt>
+                <dd><span>&yen;588</span></dd>
+            </dl>
+            <ul>
+                <li><a href="###">开抢提醒</a></li>
+                <li>已有666人设置提醒</li>
+            </ul>
+        </div>
+        <div class="ListBg">
+            <div class="img-box"><img src="img/TopIcon.png"></div>
+            <div class="WrapList">
+                <div class="Hotel">
+                    <div class="HotelImg"><a href="###"><img src="img/hotelImg.jpg"></a></div>
+                    <ul>
+                        <li class="HotelName">上海东方酒店</li>
+                        <li class="HotelPrice">品质酒店<span>188元起</span></li>
+                        <li class="HotelBtn"><a href="###">查看更多房型</a></li>
+                    </ul>
+                </div>
+                <div class="Hotel">
+                    <div class="HotelImg"><a href="###"><img src="img/hotelImg.jpg"></a></div>
+                    <ul>
+                        <li class="HotelName">上海东方酒店</li>
+                        <li class="HotelPrice">品质酒店<span>188元起</span></li>
+                        <li class="HotelBtn"><a href="###">查看更多房型</a></li>
+                    </ul>
+                </div>
+                <div class="Hotel">
+                    <div class="HotelImg"><a href="###"><img src="img/hotelImg.jpg"></a></div>
+                    <ul>
+                        <li class="HotelName">上海东方酒店</li>
+                        <li class="HotelPrice">品质酒店<span>188元起</span></li>
+                        <li class="HotelBtn"><a href="###">查看更多房型</a></li>
+                    </ul>
+                </div>
+                <div class="Hotel">
+                    <div class="HotelImg"><a href="###"><img src="img/hotelImg.jpg"></a></div>
+                    <ul>
+                        <li class="HotelName">上海东方酒店</li>
+                        <li class="HotelPrice">品质酒店<span>188元起</span></li>
+                        <li class="HotelBtn"><a href="###">查看更多房型</a></li>
+                    </ul>
+                </div>
+                <div class="Hotel">
+                    <div class="HotelImg"><a href="###"><img src="img/hotelImg.jpg"></a></div>
+                    <ul>
+                        <li class="HotelName">上海东方酒店</li>
+                        <li class="HotelPrice">品质酒店<span>188元起</span></li>
+                        <li class="HotelBtn"><a href="###">查看更多房型</a></li>
+                    </ul>
+                </div>
+                <div class="Hotel">
+                    <div class="HotelImg"><a href="###"><img src="img/hotelImg.jpg"></a></div>
+                    <ul>
+                        <li class="HotelName">上海东方酒店</li>
+                        <li class="HotelPrice">品质酒店<span>188元起</span></li>
+                        <li class="HotelBtn"><a href="###">查看更多房型</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+</html>
+

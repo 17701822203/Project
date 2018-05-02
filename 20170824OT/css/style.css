@@ -1,0 +1,252 @@
+/*Created by huang.jun on 17-06-17*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  opacity: .8;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+article {
+  background: #FFD35E;
+}
+.img-box {
+  font-size: 0;
+}
+.WrapBg {
+  background: url("../img/TopImg.jpg") no-repeat center top #2E8BD1;
+  padding-top: 413px;
+}
+.WrapBox {
+  width: 1000px;
+  margin: 0 auto;
+}
+.brief {
+  height: 422px;
+  background: url("../img/MapBg.jpg") no-repeat left top #fff;
+  padding-left: 457px;
+}
+.brief dt {
+  font-family: PingFang SC Heavy, sans-serif;
+  font-size: 54px;
+  line-height: 54px;
+  color: #C65B23;
+  padding-top: 64px;
+}
+.brief dt h3 {
+  padding-bottom: 22px;
+  position: relative;
+}
+.brief dt h3:after {
+  position: absolute;
+  width: 120px;
+  height: 6px;
+  background: #C65B23;
+  content: "";
+  left: 0;
+  bottom: 0;
+}
+.brief dd {
+  font-size: 22px;
+  line-height: 44px;
+  color: #543b39;
+  width: 474px;
+  padding-top: 20px;
+}
+.Title1 {
+  padding: 47px 0 36px 0;
+}
+.CityList {
+  background: #fff;
+  padding: 20px 0 40px 60px;
+}
+.CityBox {
+  height: 48px;
+  margin-top: 21px;
+}
+.CityLeft,
+.Icon,
+.CityRight,
+.Time {
+  float: left;
+  color: #543b39;
+  font-weight: normal;
+}
+.CityLeft {
+  width: 164px;
+  text-align: center;
+  font-size: 26px;
+  line-height: 26px;
+  margin-top: 11px;
+}
+.Icon {
+  width: 66px;
+  height: 12px;
+  background: url("../img/Icon.png") no-repeat;
+  margin-top: 18px;
+}
+.CityRight {
+  width: 202px;
+  text-align: center;
+  font-size: 26px;
+  line-height: 26px;
+  margin-top: 11px;
+}
+.Time {
+  padding-left: 40px;
+  font-size: 26px;
+  line-height: 26px;
+  margin-top: 11px;
+}
+.BookBtn {
+  float: right;
+  width: 174px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: #FF6000;
+  color: #fff;
+  font-size: 26px;
+  margin-right: 93px;
+}
+.TipsBox {
+  padding-top: 21px;
+}
+.TipsList {
+  background: #2073B8;
+  padding-bottom: 54px;
+}
+.TipsList dt {
+  padding: 41px 0 0 68px;
+  font-size: 40px;
+  color: #fff;
+}
+.TipsList dd {
+  font-size: 20px;
+  padding-left: 157px;
+}
+.TipsList dd p {
+  color: #fff;
+  line-height: 34px;
+  margin-top: 12px;
+}
+.TipsList dd p:nth-of-type(1) {
+  text-indent: -80px;
+}
+.TipsList dd p:nth-of-type(2) {
+  text-indent: -60px;
+}
+.TipsList dd p:nth-of-type(3) {
+  text-indent: -120px;
+}
+.Title2 {
+  padding: 60px 0 45px 0;
+}
+.Train {
+  background: #fff;
+  padding: 64px 0 55px 33px;
+}
+.TrainBrief {
+  padding-left: 468px;
+  position: relative;
+  width: 460px;
+}
+.TrainBrief img {
+  width: 418px;
+  height: 237px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.TrainBrief h3 {
+  font-size: 54px;
+  line-height: 54px;
+  color: #C65B23;
+}
+.TrainBrief h4 {
+  font-size: 26px;
+  line-height: 26px;
+  margin-top: 14px;
+  font-weight: normal;
+  padding-bottom: 16px;
+  color: #C65B23;
+  position: relative;
+}
+.TrainBrief h4:after {
+  content: "";
+  width: 100px;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  top: 35px;
+  background: #543B39;
+}
+.TrainBrief p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+.TrainBrief2 {
+  padding-right: 468px;
+  position: relative;
+  width: 460px;
+  margin: 56px 0;
+}
+.TrainBrief2 img {
+  width: 418px;
+  height: 237px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.TrainBrief2 h3 {
+  font-size: 54px;
+  line-height: 54px;
+  color: #C65B23;
+}
+.TrainBrief2 h4 {
+  font-size: 26px;
+  line-height: 26px;
+  margin-top: 14px;
+  font-weight: normal;
+  padding-bottom: 16px;
+  color: #C65B23;
+  position: relative;
+}
+.TrainBrief2 h4:after {
+  content: "";
+  width: 100px;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  top: 35px;
+  background: #543B39;
+}
+.TrainBrief2 p {
+  font-size: 20px;
+  line-height: 30px;
+  margin-top: 10px;
+}

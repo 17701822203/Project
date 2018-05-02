@@ -1,0 +1,52 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body style="background:url(img/Bg.png);">
+	<section>
+    	<div class="shadowF"></div>
+        <div class="popBg">
+        	<div class="imgBox"><a href="###"><img src="img/testImg.png"><span>韩国首尔4日自由行·东航爆款</span></a></div>
+            <div class="imgBox"><a href="###"><img src="img/testImg.png"><span>韩国首尔4日自由行·东航爆款</span></a></div>
+            <div class="imgBox"><a href="###"><img src="img/testImg.png"><span>韩国首尔4日自由行·东航爆款</span></a></div>
+            <div class="imgBox"><a href="###"><img src="img/testImg.png"><span>韩国首尔4日自由行·东航爆款</span></a></div>
+            <div class="imgBox"><a href="###"><img src="img/testImg.png"><span>韩国首尔4日自由行·东航爆款</span></a></div>
+            <div class="imgBox"><a href="###"><img src="img/testImg.png"><span>韩国首尔4日自由行·东航爆款</span></a></div>
+            <div class="imgBox"><a href="###"><img src="img/testImg.png"><span>韩国首尔4日自由行·东航爆款</span></a></div>
+            <div class="imgBox"><a href="###"><img src="img/testImg.png"><span>韩国首尔4日自由行·东航爆款</span></a></div>
+        </div>
+        <img class="btmReturn" src="img/Return.png">
+    </section>
+	<article>
+    	<img class="btmBg" src="img/btmBg.png">
+    	<dl class="topTitTxt">
+        	<dt><img src="img/topTit.png"></dt>
+            <dd>携程联合新罗免税店，特别甄选韩国热门线路，<br/>即日预订，立减1000元！<br/>数量有限，先到先得！<br/>韩国购物，首选新罗免税店 ！</dd>
+        </dl>
+        <ul class="btnBox">
+        	<li><a href="###"><img src="img/btn5.jpg"></a></li>
+        	<li><a href="###"><img src="img/btn6.jpg"></a></li>
+        	<li><a href="###"><img src="img/btn7.jpg"></a></li>
+        </ul>
+    </article>
+</body>
+</html>

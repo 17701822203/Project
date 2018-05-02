@@ -1,0 +1,183 @@
+/*Created by huang.jun on 17-10-10*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WrapBg {
+  background: url("../img/BtmBg.jpg") no-repeat left bottom #017A90;
+  background-size: 18.75rem 11.275rem;
+  height: 15rem;
+}
+.Content {
+  padding: 0 1.925rem;
+}
+.Content li {
+  padding-top: .6rem;
+}
+.Content li .InputBox {
+  width: 100%;
+  height: 1.9rem;
+  line-height: .8rem;
+  background: #017A90;
+  border: 1px solid #016177;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding-left: .6rem;
+  font-size: .8rem;
+  color: #f5efd6;
+  -webkit-appearance: none;
+}
+.Content li .InputBox::-webkit-input-placeholder {
+  color: #f5efd6;
+  padding-top: .05rem;
+}
+.Content li .InputBox:-moz-placeholder {
+  color: #f5efd6;
+  padding-top: .05rem;
+}
+.Content li .InputBox::-moz-placeholder {
+  color: #f5efd6;
+  padding-top: .05rem;
+}
+.Content li .InputBox:-ms-input-placeholder {
+  color: #f5efd6;
+  padding-top: .05rem;
+}
+.Content li .ReceiveBtn {
+  display: block;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  text-align: center;
+  color: #fff;
+  background-color: #D44D48;
+  background-image: -webkit-linear-gradient(top, #D44D48, #D44041);
+  background-image: -moz-linear-gradient(top, #D44D48, #D44041);
+  background-image: -o-linear-gradient(top, #D44D48, #D44041);
+  background-image: -ms-linear-gradient(top, #D44D48, #D44041);
+  background-image: linear-gradient(top, #D44D48, #D44041);
+  -webkit-border-radius: 2.2rem;
+  -moz-border-radius: 2.2rem;
+  border-radius: 2.2rem;
+  -webkit-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.1);
+}
+.PopupCoupon {
+  background: #fff;
+  position: fixed;
+  z-index: 30;
+  width: 14.5rem;
+  left: 50%;
+  margin-left: -7.25rem;
+  padding-bottom: 1.65rem;
+  top: 8rem;
+}
+.PopupCoupon dt {
+  text-align: center;
+  padding-top: 1.2rem;
+}
+.PopupCoupon dt h3 {
+  font-size: .9rem;
+  line-height: .9rem;
+  font-family: PingFangSC-Medium;
+}
+.PopupCoupon dt h4 {
+  font-size: .65rem;
+  line-height: .65rem;
+  font-family: PingFangSC-Regular;
+  padding-top: .4rem;
+}
+.PopupCoupon dd {
+  padding-top: .8rem;
+  text-align: center;
+  padding-left: .95rem;
+  position: relative;
+}
+.PopupCoupon dd .Coupon {
+  width: 12.6rem;
+  height: 3.1rem;
+  background: url("../img/YhqBg.png") no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  text-align: left;
+  color: #fff;
+  margin-top: .5rem;
+}
+.PopupCoupon dd .Coupon .Price,
+.PopupCoupon dd .Coupon .Place {
+  float: left;
+}
+.PopupCoupon dd .Coupon .Price {
+  padding-left: 1.5rem;
+  margin-top: .72rem;
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+  font-family: PingFangSC-Regular;
+  font-weight: bold;
+}
+.PopupCoupon dd .Coupon .Place {
+  padding-left: .4rem;
+}
+.PopupCoupon dd .Coupon .Place li {
+  font-family: PingFangSC-Regular;
+}
+.PopupCoupon dd .Coupon .Place li:nth-of-type(1) {
+  font-size: .7rem;
+  line-height: .7rem;
+  margin-top: .95rem;
+}
+.PopupCoupon dd .Coupon .Place li:nth-of-type(2) {
+  font-size: .6rem;
+  line-height: .6rem;
+  margin-top: .1rem;
+}
+.PopupCoupon dd .CloseBtn {
+  position: absolute;
+  width: 2.35rem;
+  height: 3.725rem;
+  background: url("../img/CloseBtn.png") no-repeat;
+  background-size: 100% 100%;
+  bottom: -5rem;
+  left: 50%;
+  margin-left: -1.175rem;
+}

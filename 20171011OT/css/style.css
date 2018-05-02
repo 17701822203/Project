@@ -1,0 +1,96 @@
+/*Created by huang.jun on 17-10-10*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .8;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+article {
+  background: #FFD300;
+}
+.Btn {
+  display: block;
+  width: 6.725rem;
+  height: 1.8rem;
+  background: url("../img/Btn.png") no-repeat;
+  background-size: 100% 100%;
+}
+.BtnBox {
+  padding-top: .95rem;
+}
+.BtnBox a {
+  margin: 0 auto;
+}
+.btm {
+  position: relative;
+}
+.btm .Btn {
+  position: absolute;
+  left: 50%;
+  margin-left: -3.3625rem;
+  top: 77%;
+}
+.nav-height {
+  height: 1.875rem;
+  position: relative;
+}
+.nav-height .nav-wrap {
+  height: 2.125rem;
+  width: 100%;
+  background: #FFF66C;
+}
+.nav-height .nav-wrap .clearfix li {
+  float: left;
+  height: 2.125rem;
+  line-height: 2.125rem;
+  font-size: .7rem;
+  width: 25%;
+  text-align: center;
+}
+.nav-height .nav-wrap .clearfix li a {
+  color: #000;
+}
+.nav-height .nav-wrap .clearfix li a.active {
+  position: relative;
+  color: #FF6C00;
+}
+.nav-height .nav_wrap_fix {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}

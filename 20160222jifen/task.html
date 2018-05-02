@@ -1,0 +1,146 @@
+<html class="ie">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+
+<script type="text/javascript">
+	function nTabs(thisObj,Num){ 
+	if(thisObj.className == "active")return; var tabObj = thisObj.parentNode.id; 
+	var tabList = document.getElementById("myTab1").getElementsByTagName("li"); for(i=0; i <tabList.length; i++) { 
+	if (i == Num) { 
+   thisObj.className = "active";  
+      document.getElementById("myTab1_Content"+i).style.display = "block"; }else{ 
+   tabList[i].className = "normal";  
+   document.getElementById("myTab1_Content"+i).style.display = "none"; } }  }
+
+	$(document).ready(function(){
+		$(".appBtn").click(function(){
+			$("#popBox").show();	
+		})
+		$(".application .close").click(function(){
+			$("#popBox").hide();	
+		})
+	})
+	
+	$(document).ready(function(){
+	   $(".taskList").toggle(function(){
+		 $(this).next(".taskListBtm").animate({height: 'toggle', opacity: 'toggle'}, "slow");
+	   },function(){
+		$(this).next(".taskListBtm").animate({height: 'toggle', opacity: 'toggle'}, "slow");
+	   });
+	});
+ </script>
+</head>
+
+<body>
+
+<section id="popBox" style="display:none;">
+	<div class="shadow"></div>
+    <div class="pop1">
+    	<div class="application">
+        	<span class="appLogo"><img src="img/my.png"></span>
+            <a href="###" class="close"></a>
+            <dl class="appList">
+            	<dt>下载安装把喇叭看</dt>
+                <dd>
+                	1.文字填充文字填充文字填充文字填充<br/>
+                    2.文字填充文字填充文字填充文字填充<br/>
+                    3.文字填充文字填充文字填充文字填充<br/>
+                    4.文字填充文字填充文字填充文字填充
+                </dd>
+                <dd><a href="###">蚂蚁短租</a></dd>
+                <dd>全选拷贝关键词后跳转app store</dd>
+            </dl>
+        </div>
+    </div>
+</section>
+
+<article>
+	<div class="headTop">
+    	<span class="left"><a href="###"></a></span>
+        <h1>任务中心</h1>
+    </div>
+	
+    <div class="banner_top_Box"><a href="###"><img src="img/test.png"></a></div>
+    
+    <ul id="myTab1" class="tab_top">
+    	<li class="active" onclick="nTabs(this,0);"><img src="img/task1.png"><span>轻松点</span></li>
+        <li class="normal" onclick="nTabs(this,1);"><img src="img/task2.png"><span>乐注册</span></li>
+        <li class="normal" onclick="nTabs(this,2);"><img src="img/task3.png"><span>趣分享</span></li>
+        <li class="normal" onclick="nTabs(this,3);"><img src="img/task4.png"><span>应用汇</span></li>
+    </ul>
+    
+    <div id="myTab1_Content0">
+    	<label>
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        <div class="taskListBtm">蚂蚁短租——注册送巴巴爸爸爸爸现在吗！咋所得阿生产擦擦手擦上厕所</div>
+        </label>
+        
+    	<label>
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        <div class="taskListBtm">蚂蚁短租——注册送巴巴爸爸爸爸现在吗！咋所得阿生产擦擦手擦上厕所</div>
+        </label>
+        
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        
+    </div>
+    
+    <div id="myTab1_Content1" style="display:none;">
+    	
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租2————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        <div class="taskListBtm">蚂蚁短租——注册送巴巴爸爸爸爸现在吗！咋所得阿生产擦擦手擦上厕所</div>
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="up"></b></div>
+        
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        
+    </div>
+    
+    <div id="myTab1_Content2" style="display:none;">
+    	
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租3————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        <div class="taskListBtm">蚂蚁短租——注册送巴巴爸爸爸爸现在吗！咋所得阿生产擦擦手擦上厕所</div>
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="up"></b></div>
+        
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        
+    </div>
+    
+    <div id="myTab1_Content3" style="display:none;">
+    	
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租3————注册送100</span><a class="task_List_btn appBtn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        <div class="taskListBtm">蚂蚁短租——注册送巴巴爸爸爸爸现在吗！咋所得阿生产擦擦手擦上厕所</div>
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn appBtn" href="###"><span>去看看</span><span>+100积分</span></a><b class="up"></b></div>
+        
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn appBtn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        
+        <div class="taskList"><img src="img/my.png"><span class="taskListTxt">蚂蚁短租————注册送100</span><a class="task_List_btn appBtn" href="###"><span>去看看</span><span>+100积分</span></a><b class="down"></b></div>
+        
+    </div>
+    
+</article>
+</body>
+</html>

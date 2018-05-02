@@ -1,0 +1,335 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <section style="display:none;">
+        <div class="shadow"></div>
+        <div class="rule-bg">
+            <ul class="rule-txt">
+                <li>活动时间：2018年3月28日至2018年4月7日。</li>
+                <li>1. 活动期间，用户登录账号，进入会场，可在活动首页领取新客优惠券（仅限新客领取并使用）；</li>
+                <li>2. 活动期间，用户获得的优惠券和加速包不得提现，不找零、不得转赠他人，以实际发放到用户账号的奖励为准；</li>
+                <li>3. 活动期间，用户获得的各类优惠券和火车票抢票加速包将在24小时内发送至中奖用户的账户，可点击至【个人中心】查询；</li>
+                <li>4. 活动期间，如果出现违规行为（如作弊领取、恶意套现等），智行将取消用户的活动资格；同时有权撤销违规交易，收回相关优惠券或加速包(包括已使用的以及未使用的)；必要时智行将追究违规用户的法律责任；</li>
+                <li>5. 智行可以根据本活动的实际举办情况对活动规则进行变动或调整，相关变动或调整将公布在活动页面上，并于公布时即时生效。</li>
+            </ul>
+            <span class="close"></span>
+        </div>
+    </section>
+    <div class="TopImg"><img src="img/TopImg.jpg"></div>
+    <div class="t1"><a href="###">活动规则</a></div>
+    <div class="Green">
+        <div class="WrapBor">
+            <dl>
+                <dt>国内机票新客券</dt>
+                <dd>
+                    <div class="top">
+                        <span>20</span>
+                    </div>
+                    <div class="btm">
+                        <span>立即领取</span>
+                    </div>
+                </dd>
+            </dl>
+
+            <dl>
+                <dt>国内机票新客券</dt>
+                <dd>
+                    <div class="top">
+                        <span>20</span>
+                    </div>
+                    <div class="btm">
+                        <span>立即领取</span>
+                    </div>
+                </dd>
+            </dl>
+
+            <dl style="margin-top:.6rem;">
+                <dt>国内机票新客券</dt>
+                <dd>
+                    <div class="top">
+                        <span>20</span>
+                    </div>
+                    <div class="btm">
+                        <span>立即领取</span>
+                    </div>
+                </dd>
+            </dl>
+
+            <dl style="margin-top:.6rem;">
+                <dt>国内机票新客券</dt>
+                <dd>
+                    <div class="top">
+                        <span>20</span>
+                    </div>
+                    <div class="btm">
+                        <span>立即领取</span>
+                    </div>
+                </dd>
+            </dl>
+
+        </div>
+    </div>
+    <ul class="date-box">
+        <li class="on">3月30日</li>
+        <li>3月31日</li>
+        <li>4月1日</li>
+        <li>4月2日</li>
+        <li>4月3日</li>
+        <li>4月4日</li>
+        <li>4月5日</li>
+        <li>4月6日</li>
+        <li>4月7日</li>
+    </ul>
+    <div class="img-box"><img src="img/Title1.jpg"></div>
+    <div class="Pink">
+        <div class="WrapBor">
+            <div class="ClearBox">
+                <dl class="rob">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+                <dl class="rob" style="margin:0 0 0 .4rem">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+                <dl class="rob" style="margin:.4rem 0 0 0">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+                <dl class="rob" style="margin:.4rem 0 0 .4rem">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+                <dl class="rob" style="margin:.4rem 0 0 0">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+                <dl class="rob" style="margin:.4rem 0 0 .4rem">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+            </div>
+            <div class="more-btn"><a href="###">更多早鸟价机票</a></div>
+        </div>
+    </div>
+    <div class="img-box"><img src="img/Title2.jpg"></div>
+    <div class="Yellow">
+        <div class="WrapBor">
+            <div class="ClearBox">
+                <dl class="hotel" style="margin-left:.1rem;">
+                    <dt><img src="https://dimg03.c-ctrip.com/images/100n0n000000e0g4sCD04_C_500_280.jpg" alt="柬埔寨暹粒吴哥窟6日4晚自由行·『淡季错峰』 直飞特价回馈  手慢无"></dt>
+                    <dd>入住时间：2018-03-30</dd>
+                </dl>
+                <dl class="hotel" style="margin-left:.65rem;">
+                    <dt><img src="https://dimg03.c-ctrip.com/images/100n0n000000e0g4sCD04_C_500_280.jpg" alt="柬埔寨暹粒吴哥窟6日4晚自由行·『淡季错峰』 直飞特价回馈  手慢无"></dt>
+                    <dd>入住时间：2018-03-30</dd>
+                </dl>
+                <dl class="hotel" style="margin:.65rem 0 0 .1rem">
+                    <dt><img src="https://dimg03.c-ctrip.com/images/100n0n000000e0g4sCD04_C_500_280.jpg" alt="柬埔寨暹粒吴哥窟6日4晚自由行·『淡季错峰』 直飞特价回馈  手慢无"></dt>
+                    <dd>入住时间：2018-03-30</dd>
+                </dl>
+                <dl class="hotel" style="margin:.65rem 0 0 .65rem">
+                    <dt><img src="https://dimg03.c-ctrip.com/images/100n0n000000e0g4sCD04_C_500_280.jpg" alt="柬埔寨暹粒吴哥窟6日4晚自由行·『淡季错峰』 直飞特价回馈  手慢无"></dt>
+                    <dd>入住时间：2018-03-30</dd>
+                </dl>
+            </div>
+            <div class="more-btn"><a href="###">更多早鸟价机票</a></div>
+        </div>
+    </div>
+    <div class="img-box"><img src="img/Title3.jpg"></div>
+    <div class="Violet">
+        <div class="WrapBor">
+            <div class="ClearBox">
+                <dl class="rob">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+                <dl class="rob" style="margin:0 0 0 .4rem">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+                <dl class="rob" style="margin:.4rem 0 0 0">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+                <dl class="rob" style="margin:.4rem 0 0 .4rem">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+                <dl class="rob" style="margin:.4rem 0 0 0">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+                <dl class="rob" style="margin:.4rem 0 0 .4rem">
+                    <dd>
+                        <div class="top">
+                            <span class="left">广州</span>
+                            <span class="right">上海</span>
+                        </div>
+                        <div class="btm">
+                            <small>&yen;</small>
+                            <big>270</big>
+                            <span>起</span>
+                        </div>
+                    </dd>
+                    <dt>出发时间：2018-02-14</dt>
+                </dl>
+            </div>
+            <div class="more-btn"><a href="###">更多早鸟价机票</a></div>
+        </div>
+    </div>
+    <div class="img-box"><img src="img/btm.jpg"></div>
+</body>
+</html>
+

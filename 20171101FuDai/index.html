@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#FFC52C;">
+    <article>
+        <div class="img-box TopBg">
+            <img src="img/TopBg.jpg">
+            <div class="SpeedBox">
+                <div class="Speed1">你的专属福袋到了，快散播出去给朋友看看谁的手气好吧</div>
+                <div class="Speed2"><i style="width:20%;"></i></div>
+                <div class="Speed3">已有<span>2</span>／10 个好友领取你的福袋</div>
+                <div class="Speed4"><a href="###">散播福袋</a></div>
+            </div>
+        </div>
+        <dl class="RuleList">
+            <dt>福袋规则：</dt>
+            <dd>
+                <p>1、每次散播福袋最多可被10个好友领取。</p>
+                <p>2、活动有效期为2017年11月1日-2017年12月31日，活动期间每个携程账号仅能领取一位朋友的福袋。</p>
+                <p>3、福袋中包含最高20元的携程火车票抢票优惠券。</p>
+                <p>4、携程火车票保留法律允许范围内对活动的最终解释权。</p>
+            </dd>
+        </dl>
+    </article>
+</body>
+</html>
+

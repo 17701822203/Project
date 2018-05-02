@@ -1,0 +1,22 @@
+/*Created by huang.jun on 16-08-05*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB W6";font-size:0.26rem;color:#fff;}
+article{height:100%;}
+
+.shadow{width:100%;height:100%;position:fixed;z-index:10;background:#000;opacity:0.8;top:0;left:0;}
+.pop-box-eleven{width:5.6rem;height:7.4rem;position: absolute;z-index:11;background:url("../img/pop-Bg.png") no-repeat;background-size:5.6rem 7.4rem;left:50%;top:50%;margin-left:-2.8rem;margin-top:-3.7rem;}
+.pop-box-eleven .pop-close{width:0.64rem;height:1.1rem;background:url("../img/pop-close.png") no-repeat;background-size:0.64rem 1.1rem;position: absolute;right:0;top:-1.1rem;}
+.pop-button{width:4.2rem;height:0.8rem;background:url("../img/pop-button.png") no-repeat;background-size:4.2rem 0.8rem;position: absolute;left:50%;margin-left:-2.1rem;top:5.99rem;}
+.pop-button:active{opacity: 0.8;}
+
+
+
+
+
+
+
+
+

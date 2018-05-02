@@ -1,0 +1,23 @@
+.log_list {
+  padding: 2rem .75rem 0 1.5rem;
+}
+.log_list dt {
+  font-size: .85rem;
+  color: #fff;
+}
+.log_list dd .Catalog:after,
+.log_list dd .Catalog:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.log_list dd .Catalog .date_icon {
+  color: #fff;
+  font-size: .7rem;
+  float: left;
+  width: 21%;
+  background: #ccc;
+}
+.log_list dd .Catalog .clue {
+  float: left;
+}

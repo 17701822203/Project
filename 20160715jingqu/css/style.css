@@ -1,0 +1,36 @@
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Lucida Grande",Verdana,"Microsoft YaHei",hei;}
+
+.top-bg{width:7.5rem;height:8.67rem;position:relative;background:url(../img/top-bg.jpg) no-repeat;background-size:contain;}
+.btn{width:4.07rem;height:0.97rem;position:absolute;left:50%;margin-left:-2.035rem;top:6.96rem;background:url(../img/btn.png) no-repeat;background-size:contain;}
+.btn:active{background:url(../img/btnActive.png) no-repeat;background-size:contain;}
+.wrap-box{background:#FDF199;}
+.list{width:6.99rem;height:5.03rem;padding-top:0.6rem;margin:0 auto;display:block;overflow:hidden;background:url(../img/txtlist-bg.png) no-repeat;background-size:contain;}
+.list li{font-size:0.26rem;color:#4d561e;line-height:0.36rem;padding-top:0.2rem;padding-left:0.83rem;padding-right:0.7rem;position:relative;background:url(../img/d.png) 0.55rem  0.32rem no-repeat;background-size:0.17rem 0.17rem;}
+.btm-txt{height:0.8rem;background:url(../img/btm-txt.png) center no-repeat;background-size:3rem 0.27rem;}
+
+/*弹层*/
+.shadow{width:100%;height:100%;position:fixed;z-index:10;background:#000;opacity:0.5;top:0;left:0;}
+.pop-box{width:5.82rem;height:8.83rem;left:50%;top:50%;margin-top:-4.415rem;margin-left:-2.91rem;background:url("../img/pop-bg.png") no-repeat;background-size:contain;position:fixed;z-index:11;}
+.pop-wrap{position:relative;}
+.pop-wrap h3{position:absolute;left:0;top:1.04rem;font-size:0.28rem;color:#fdebc4;text-align: center;width:5.8rem;font-weight: normal;}
+.pop-wrap dl{color:#db2312;text-align: center;position:absolute;top:3.5rem;right:0.82rem;}
+.pop-wrap dl dt{font-size:0.3rem;line-height:0.36rem;}
+.pop-wrap dl dd{font-size:0.22rem;line-height:0.36rem;}
+.pop-wrap button{width:4.8rem;height:1.12rem;border:0;-webkit-border-radius:0.5rem;background:url("../img/pop-btn.png") no-repeat;background-size:contain;position: absolute;left:50%;margin-left:-2.4rem;top:6.8rem;}
+.pop-wrap button:active{opacity: 0.8;}
+.pop-wrap span{width:0.83rem;height:0.83rem;background:url("../img/close.png") no-repeat;background-size:contain;left:50%;top:9rem;margin-left:-0.415rem;position: absolute;}
+
+/*弹层2*/
+.pop-box2{width:15.625rem;height:22.025rem;background:url("../img/pop-bg2.png") no-repeat;background-size:15.625rem 22.025rem;z-index:11;position: absolute;left:50%;margin-left:-7.8125rem;top:50%;margin-top:-11.0125rem;}
+.button2{width:12rem;height:2.8rem;background:#FFCF00;border:0;left:50%;margin-left:-6rem;position: absolute;top:16.6rem;color:#8c3b14;-webkit-border-radius:1.25rem;font-family:Microsoft YaHei;border-bottom:0.05rem solid #FFEFA9;}
+.button2 big{font-size:1.2rem;display: block;}
+.button2 span{font-size:0.6rem;display:block;}
+.close{position: absolute;width:2.075rem;height:2.075rem;top:0;right:0;z-index:20;background:url("../img/close.png") no-repeat;background-size:2.075rem 2.075rem;}
+.pop-top-txtList{font-size:0.7rem;width:100%;line-height:1rem;position: absolute;top:1.4rem;color:#fdebc4;font-size:0.7rem;text-align: center;}
+.bottomTxt{font-size:0.6rem;color:#430f0a;text-align: center;position: absolute;top:20.4rem;width:100%;}
+
+

@@ -1,0 +1,341 @@
+/*Created by huang.jun on 18-03-08*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+button:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  color: #000;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.WrapBg {
+  background: url("../img/TopBg.jpg") no-repeat left top #26935C;
+  background-size: 100% 12.05rem;
+  padding: 11.575rem .8rem 2.25rem .8rem;
+}
+.WhiteBox {
+  background: #fff;
+}
+.TopInput {
+  padding: .8rem 1.125rem 1.25rem 1.125rem;
+}
+.TopInput dd {
+  margin-top: .75rem;
+}
+.TopInput dd:after,
+.TopInput dd:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopInput dd input {
+  height: 1.95rem;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 0.075rem;
+  -moz-border-radius: 0.075rem;
+  border-radius: 0.075rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: .7rem;
+  font-size: .8rem;
+  color: #666;
+  outline: none;
+  -webkit-appearance: none;
+}
+.TopInput dd input::-webkit-input-placeholder {
+  color: #ccc;
+}
+.TopInput dd input:-moz-placeholder {
+  color: #ccc;
+}
+.TopInput dd input::-moz-placeholder {
+  color: #ccc;
+}
+.TopInput dd input:-ms-input-placeholder {
+  color: #ccc;
+}
+.TopInput dd input.InputSj {
+  width: 100%;
+}
+.TopInput dd input.InputYzm {
+  width: 8.7rem;
+  float: left;
+}
+.TopInput dd .BtnYzm {
+  width: 6.1rem;
+  height: 1.95rem;
+  float: right;
+  border: 1px solid #FE6553;
+  -webkit-border-radius: 0.075rem;
+  -moz-border-radius: 0.075rem;
+  border-radius: 0.075rem;
+  background: #fff;
+  color: #FE6553;
+  font-size: .8rem;
+}
+.TopInput dt {
+  margin-top: .75rem;
+}
+.TopInput dt span {
+  display: block;
+  width: 100%;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  background: #FF6553;
+  color: #fff;
+  font-size: .8rem;
+  text-align: center;
+  -webkit-border-radius: 1.1rem;
+  -moz-border-radius: 1.1rem;
+  border-radius: 1.1rem;
+}
+.TopInput dt span:active {
+  opacity: .7;
+}
+.clear {
+  height: 1.05rem;
+  background: url("../img/clear.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.guize {
+  padding: 1.2rem 1.1rem 2.75rem 1.1rem;
+  position: relative;
+}
+.guize dt {
+  font-family: "PingFangSC-Medium";
+  color: #333;
+}
+.guize dt strong {
+  font-size: .85rem;
+  line-height: .85rem;
+  display: block;
+  position: relative;
+  padding-left: .65rem;
+}
+.guize dt strong:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: .2rem;
+  height: .825rem;
+  background: #26935C;
+}
+.guize dd {
+  font-size: .65rem;
+  color: #666;
+}
+.guize dd p {
+  padding-left: .65rem;
+  margin-top: .65rem;
+  line-height: 1rem;
+  position: relative;
+}
+.guize dd p:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .35rem;
+  width: .2rem;
+  height: .2rem;
+  background: #B1D4BE;
+}
+.guize:after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 1.325rem;
+  background: url("../img/guize-icon.png") no-repeat;
+  background-size: 100% 100%;
+  right: .35rem;
+  bottom: 0;
+}
+.CouponList {
+  padding: 1.05rem 1.425rem 1.3rem 1.425rem;
+}
+.CouponList dt .CouponRed {
+  margin-top: .9rem;
+  height: 3.6rem;
+  background: url("../img/redYhq.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.CouponList dt .CouponRed .left {
+  float: left;
+  width: 35%;
+  position: relative;
+  height: 3.6rem;
+  color: #FF6553;
+}
+.CouponList dt .CouponRed .left span,
+.CouponList dt .CouponRed .left strong {
+  display: block;
+  padding-left: 1.45rem;
+}
+.CouponList dt .CouponRed .left strong {
+  font-family: "PingFang-SC-Semibold";
+  font-size: 1.15rem;
+  line-height: 1.15rem;
+  margin-top: .85rem;
+}
+.CouponList dt .CouponRed .left span {
+  font-family: "PingFang-SC-Regular";
+  font-size: .8rem;
+  line-height: .8rem;
+  margin-top: .15rem;
+}
+.CouponList dt .CouponRed .left:after {
+  height: 2.2rem;
+  width: 1px;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -1.1rem;
+  border-left: 1px dashed #FFC2BC;
+}
+.CouponList dt .CouponRed .right {
+  float: left;
+  width: 65%;
+  color: #f16f5c;
+}
+.CouponList dt .CouponRed .right p {
+  font-size: .6rem;
+  line-height: 1rem;
+  padding: 0 .5rem;
+  margin-top: .825rem;
+}
+.CouponList dt .CouponGreen {
+  margin-top: .9rem;
+  height: 3.6rem;
+  background: url("../img/greenYhq.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.CouponList dt .CouponGreen .left {
+  float: left;
+  width: 35%;
+  position: relative;
+  height: 3.6rem;
+  color: #7da76d;
+}
+.CouponList dt .CouponGreen .left strong,
+.CouponList dt .CouponGreen .left b {
+  float: left;
+}
+.CouponList dt .CouponGreen .left strong {
+  font-size: 1.55rem;
+  line-height: 1.55rem;
+  margin: 1.45rem 0 0 1.7rem;
+  font-weight: normal;
+}
+.CouponList dt .CouponGreen .left b {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-family: Arial;
+  margin: .7rem 0 0 .2rem;
+  font-weight: normal;
+}
+.CouponList dt .CouponGreen .left:after {
+  height: 2.2rem;
+  width: 1px;
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -1.1rem;
+  border-left: 1px dashed #C6DDC3;
+}
+.CouponList dt .CouponGreen .right {
+  float: left;
+  width: 65%;
+  color: #f16f5c;
+}
+.CouponList dt .CouponGreen .right span,
+.CouponList dt .CouponGreen .right big {
+  display: block;
+  margin-left: .875rem;
+}
+.CouponList dt .CouponGreen .right span {
+  width: 3.25rem;
+  height: .825rem;
+  line-height: .825rem;
+  text-align: center;
+  background: #6FA966;
+  color: #fff;
+  font-size: .6rem;
+  -webkit-border-radius: 0.825rem;
+  -moz-border-radius: 0.825rem;
+  border-radius: 0.825rem;
+  margin-top: .75rem;
+}
+.CouponList dt .CouponGreen .right big {
+  font-size: .8rem;
+  color: #7da76d;
+  line-height: .8rem;
+  margin-top: .4rem;
+}
+.CouponList dd {
+  margin-top: 1.05rem;
+}
+.CouponList dd span {
+  display: block;
+  width: 100%;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  background: #FF6553;
+  color: #fff;
+  font-size: .8rem;
+  text-align: center;
+  -webkit-border-radius: 1.1rem;
+  -moz-border-radius: 1.1rem;
+  border-radius: 1.1rem;
+}
+.CouponList dd span:active {
+  opacity: .7;
+}
+.CouponList dd p {
+  font-size: .65rem;
+  line-height: .65rem;
+  color: #999;
+  margin-top: .5rem;
+  text-align: center;
+}

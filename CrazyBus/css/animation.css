@@ -1,0 +1,112 @@
+@keyframes BusUpDown {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(-700%) translateY(460%);
+  }
+}
+@-webkit-keyframes BusUpDown {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(-700%) translateY(460%);
+  }
+}
+@keyframes FireworksS {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(-700%);
+    opacity: .8;
+  }
+  100% {
+    transform: translateY(-800%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes FireworksS {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(-700%);
+    opacity: .8;
+  }
+  100% {
+    transform: translateY(-800%);
+    opacity: 0;
+  }
+}
+@keyframes FireworksB {
+  from {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(9, 9);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes FireworksB {
+  from {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(9, 9);
+    opacity: 0;
+  }
+}
+@keyframes ShipUpDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+@-webkit-keyframes ShipUpDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+@keyframes ad1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes ad1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes ad2 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes ad2 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

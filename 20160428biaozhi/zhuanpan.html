@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body style="background:#2789C8;">
+	<section>
+    	<div class="shadow"></div>
+        <div class="page5Pop">
+        	<img src="img/za.png">
+            <ul class="topTit">
+            	<li>恭喜您</li>
+                <li>您获得的是<span>携程优惠券</span></li>
+            </ul>
+            <button class="on1">关闭</button>
+        </div>
+    </section>
+	<article>
+    	<img class="zhuanpan" src="img/zhuanpan.png">
+        <img class="zhizhen" src="img/zhizhen.png">
+        <button class="shili">向好友炫耀我的实力吧</button>
+    </article>
+</body>
+</html>

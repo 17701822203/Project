@@ -1,0 +1,614 @@
+/*Created by huang.jun on 17-09-6*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .8;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.PageBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/IndexBg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.swiper-container {
+  position: absolute;
+  height: 17.475rem;
+  background: url("../img/Notebook.png") no-repeat center top;
+  background-size: 13.85rem 17.475rem;
+  bottom: 2.5rem;
+  width: 100%;
+  visibility: hidden;
+}
+.swiper-slide {
+  width: 100%;
+}
+.Problem dt {
+  font-weight: bold;
+  color: #e1573c;
+  text-align: center;
+}
+.Problem dd {
+  padding-top: .5rem;
+}
+.Problem dd p {
+  padding-top: .8rem;
+  text-align: center;
+}
+.Problem dd p a {
+  width: 10.275rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  display: inline-block;
+  border: 2px solid #4E416E;
+  font-size: .75rem;
+  color: #4e426c;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.List1 {
+  padding-top: 4.05rem;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.List2 {
+  padding-top: 3.35rem;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.List2 dt {
+  line-height: 1.2rem;
+}
+.List5 {
+  padding-top: 2.3rem;
+}
+.List5 dt {
+  font-size: .85rem;
+}
+.List5 dd {
+  padding-top: 0;
+}
+.List5 dd p {
+  padding-top: .325rem;
+}
+.List6 {
+  text-align: center;
+}
+.List6 dt {
+  font-size: .9rem;
+  color: #e1573c;
+  padding-top: 5rem;
+}
+.List6 dd {
+  padding-top: 1rem;
+}
+.List6 dd p input {
+  width: 10.275rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  display: inline-block;
+  border: 2px solid #4E416E;
+  font-size: .75rem;
+  color: #4e426c;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.List6 dd div {
+  padding-top: 2rem;
+}
+.List6 dd div a {
+  width: 8.125rem;
+  height: 1.975rem;
+  display: inline-block;
+  background: url("../img/tijiao.png") no-repeat;
+  background-size: 100% 100%;
+}
+.List4 dt {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #e1573c;
+  font-weight: bold;
+  padding-top: 2.2rem;
+}
+.List4 dd {
+  width: 12.75rem;
+  margin: 0 auto;
+}
+.List4 dd a {
+  width: 5.2rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  float: left;
+  border: 2px solid #4E416E;
+  margin: .55rem 0 0 .7rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: .75rem;
+  text-align: center;
+  color: #4e426c;
+}
+.DragBox {
+  position: relative;
+  padding-top: 1.5rem;
+}
+.project-screening {
+  background: #ddd;
+  width: 10rem;
+  margin: 0 auto;
+  position: relative;
+  height: .3rem;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+}
+.screening-select {
+  background: #999;
+  width: .5rem;
+  height: .5rem;
+  position: absolute;
+  top: -0.1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+}
+.select-1 {
+  left: -1px;
+}
+.select-2 {
+  left: 20%;
+}
+.select-3 {
+  left: 40%;
+}
+.select-4 {
+  left: 60%;
+}
+.select-5 {
+  left: 80%;
+}
+.select-6 {
+  left: 99%;
+}
+.project-screening-yellow {
+  background: #E1573C;
+  height: .3rem;
+  overflow: hidden;
+  width: 0;
+}
+.screening-select a {
+  position: absolute;
+  left: -23px;
+  top: 1rem;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  width: 56px;
+  text-align: center;
+  line-height: 16px;
+  font-size: .6rem;
+  color: #928e9b;
+}
+.screening-select a:hover {
+  color: #ff8b24;
+}
+.project-screening .select-1-yellow {
+  background: url(../img/Ticon.png) no-repeat;
+  width: .9rem;
+  height: .9rem;
+  position: absolute;
+  left: -7px;
+  bottom: -0.3rem;
+  z-index: 3;
+  background-size: 100% 100%;
+}
+.project-screening .current a {
+  color: #e1573c;
+  height: 21px;
+}
+body .swiper-container-horizontal > .swiper-pagination {
+  bottom: 1rem;
+}
+body .swiper-pagination-bullet-active {
+  background: #E1573C;
+}
+.swiper-pagination-bullet {
+  background: #4E426C;
+  opacity: 1;
+}
+.autotype {
+  text-align: center;
+  padding-top: 3rem;
+}
+.autotype dt {
+  font-size: .9rem;
+  font-weight: bold;
+  color: #e1573c;
+  line-height: 1.1rem;
+}
+.autotype dd {
+  font-size: .7rem;
+  color: #4e426c;
+  padding-top: .3rem;
+}
+.autotype dd span {
+  color: #e1573c;
+}
+.Notebook2Bg {
+  height: 18.525rem;
+  background: url("../img/Notebook2.png") no-repeat center 0;
+  background-size: auto 18.525rem;
+}
+.ResultBox {
+  text-align: center;
+  padding-top: 2rem;
+}
+.ResultBox h3 {
+  color: #e1573c;
+  line-height: 1.65rem;
+  padding-top: .5rem;
+}
+.ResultBox h3 strong {
+  font-size: 1.65rem;
+  font-weight: bold;
+  font-family: PingFang SC Heavy, sans-serif;
+  vertical-align: middle;
+  position: relative;
+}
+.ResultBox h3 strong small {
+  position: absolute;
+  right: -0.8rem;
+  top: .9rem;
+  font-size: .7rem;
+  line-height: .7rem;
+}
+.ResultBox p {
+  color: #4e426c;
+  font-size: .7rem;
+  line-height: .7rem;
+}
+.ResultBox p:nth-of-type(2),
+.ResultBox p:nth-of-type(4) {
+  font-size: .6rem;
+  line-height: .6rem;
+}
+.ResultBox p:nth-of-type(1),
+.ResultBox p:nth-of-type(2) {
+  padding-bottom: .6rem;
+  background: url("../img/more-icon.png") no-repeat center bottom;
+  background-size: .1rem .45rem;
+}
+.ResultBox p:nth-of-type(2) {
+  padding-top: .2rem;
+}
+.ResultBox p:nth-of-type(1) {
+  padding-top: .2rem;
+}
+.ResultBox p:nth-of-type(3) {
+  padding: .3rem;
+}
+.ResultBox p:nth-of-type(4) {
+  padding-top: .4rem;
+}
+.ResultBox h4 {
+  font-size: 1.65rem;
+  font-weight: bold;
+  font-family: PingFang SC Heavy, sans-serif;
+  color: #e1573c;
+  line-height: 1.65rem;
+}
+.ResultBox h4 strong {
+  position: relative;
+}
+.ResultBox h4 strong small {
+  position: absolute;
+  right: -0.8rem;
+  top: .9rem;
+  font-size: .7rem;
+  line-height: .7rem;
+}
+.mayun {
+  width: 10.625rem;
+  height: 3.7rem;
+  background: url("../img/mayun.png") no-repeat center 0;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.nixi {
+  text-align: center;
+  padding-top: .6rem;
+}
+.nixi a {
+  display: inline-block;
+  width: 8.875rem;
+  height: 1.9rem;
+  background: url("../img/nixi.png") no-repeat;
+  background-size: 100% 100%;
+}
+.BcBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/Bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.TopTxt {
+  font-size: .7rem;
+  color: #4e416e;
+  position: relative;
+  z-index: 2;
+  padding: .5rem 1rem;
+  line-height: .9rem;
+  visibility: hidden;
+}
+.TopTxt span {
+  color: #e1573c;
+}
+.BorBg {
+  height: 22.575rem;
+  width: 18.5rem;
+  background: url("../img/borderBg.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  z-index: 2;
+  visibility: hidden;
+  margin: 0 auto;
+}
+.BorBg .HW {
+  width: 3.775rem;
+  height: 3.375rem;
+  background: url("../img/haowai.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 1rem;
+  top: .7rem;
+  visibility: hidden;
+}
+.BorBg .nxrb {
+  width: 9.375rem;
+  height: 3.325rem;
+  background: url("../img/nxrb.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 5.1rem;
+  top: .7rem;
+  visibility: hidden;
+}
+.BorBg .day {
+  width: 2.8rem;
+  height: 3.325rem;
+  background: url("../img/day.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 14.8rem;
+  top: .7rem;
+  visibility: hidden;
+}
+.BorBg .day b {
+  position: absolute;
+  font-size: .8rem;
+  font-weight: bold;
+  color: #4e416e;
+  left: .34rem;
+  top: 1.9rem;
+}
+.BorBg .sjBox {
+  width: 16.775rem;
+  height: 4.05rem;
+  background: url("../img/Sj.jpg") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: .85rem;
+  top: 5rem;
+  visibility: hidden;
+}
+.BorBg .sjBox img {
+  width: 2.075rem;
+  height: 2.075rem;
+  border: 2px solid #EDECE9;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+  left: .6rem;
+  top: .3rem;
+  position: absolute;
+}
+.BorBg .sjBox p {
+  color: #fff;
+  font-size: .75rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  padding-top: 2.7rem;
+}
+.BorBg .Border {
+  width: 16.6rem;
+  height: 12.2rem;
+  border: .1rem solid #4E416E;
+  position: absolute;
+  left: .85rem;
+  top: 9.4rem;
+  visibility: hidden;
+}
+.BorBg .Border .LeftImg {
+  width: 11.24rem;
+  position: absolute;
+  height: 100%;
+  background: #EFEDEB;
+  border-right: .1rem solid #4E416E;
+  visibility: hidden;
+}
+.BorBg .Border .LeftImg img {
+  width: 100%;
+}
+.BorBg .Border .LeftImg p {
+  line-height: .9rem;
+  font-size: .65rem;
+  padding: .2rem;
+  color: #4e416e;
+}
+.BorBg .Border .LeftImg p span {
+  color: #e1573c;
+}
+.BorBg .Border .shade {
+  width: 5.3rem;
+  height: 100%;
+  background: url("../img/zhezhao.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  visibility: hidden;
+}
+.BorBg .Border .renwu {
+  width: 5rem;
+  height: 7.6rem;
+  background: url("../img/ren.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  visibility: hidden;
+  -webkit-animation-name: shake-rotate;
+  -ms-animation-name: shake-rotate;
+  animation-name: shake-rotate;
+  -webkit-animation-duration: 100ms;
+  -ms-animation-duration: 100ms;
+  animation-duration: 100ms;
+  -webkit-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-play-state: running;
+  -ms-animation-play-state: running;
+  animation-play-state: running;
+}
+.BorBg .Border .chijing {
+  width: 3.2rem;
+  height: 3.275rem;
+  position: absolute;
+  background: url("../img/BeAmazed.png") no-repeat;
+  background-size: 100% 100%;
+  right: -1rem;
+  top: -1rem;
+  z-index: 3;
+  visibility: hidden;
+}
+.BtmBtn {
+  position: fixed;
+  z-index: 2;
+  text-align: center;
+  left: 0;
+  bottom: 0;
+  background: url("../img/Bg.jpg") no-repeat;
+  width: 100%;
+  height: 4rem;
+}
+.BtmBtn div {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  margin-top: -1rem;
+}
+.BtmBtn a {
+  width: 8.125rem;
+  height: 1.975rem;
+  display: inline-block;
+}
+.BtmBtn a:nth-of-type(1) {
+  background: url("../img/LeftBtn.png") no-repeat;
+  background-size: 100% 100%;
+}
+.BtmBtn a:nth-of-type(2) {
+  background: url("../img/RightBtn.png") no-repeat;
+  background-size: 100% 100%;
+  margin-left: .5rem;
+}
+.RwmBox {
+  position: relative;
+  z-index: 2;
+  width: 18.5rem;
+  font-size: 0;
+  margin: .3rem auto 0 auto;
+  visibility: hidden;
+}
+.RwmBox img {
+  width: 100%;
+  display: block;
+}
+.RwmBox img.ewm {
+  width: 15%;
+  position: absolute;
+  left: 1.5rem;
+  top: 1rem;
+}
+.produce {
+  position: absolute;
+  z-index: 21;
+  padding: 4%;
+}
+.produce img {
+  width: 100%;
+}
+.produce span {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+  width: 9.65rem;
+  line-height: 1.75rem;
+  position: absolute;
+  z-index: 22;
+  left: 50%;
+  top: 50%;
+  margin-left: -4.825rem;
+  margin-top: -6%;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}

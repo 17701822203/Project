@@ -1,0 +1,52 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>老虎机</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+
+<body>
+    <section>
+        <div class="shadow"></div>
+        <div class="pop-box2">
+            <p class="pop-top-txtList">亲，分享后<br/>送你出游礼包:零食、红酒、扇子<br/>(随机),领取方式将以短信通知！</p>
+            <em class="close"></em>
+            <button class="button2">
+                <big>立即分享></big>
+                <span>送你出游礼包:零食、红酒、扇子(随机)</span>
+            </button>
+            <p class="bottomTxt">仅限长沙、杭州、广州、南京部分预订用户使用</p>
+        </div>
+    </section>
+</body>
+</html>

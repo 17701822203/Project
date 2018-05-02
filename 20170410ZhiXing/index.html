@@ -1,0 +1,118 @@
+﻿<html class="ie" xmlns="http://www.w3.org/1999/html"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+<body>
+    <article>
+        <div><img src="img/img1.jpg"></div>
+        <div><img src="img/img2.jpg"></div>
+        <div class="Bg1"></div>
+        <div class="buttonBox">
+            <a class="button" href="###">抢先体验</a>
+        </div>
+        <div><img src="img/img4.jpg"></div>
+        <div class="Bg2">
+            <dl class="List">
+                <dd>
+                    <div>
+                        <strong>大连-葫芦岛</strong>
+                        <span>
+                            <small>&yen;</small>
+                            <big>197</big>
+                        </span>
+                        <span>
+                            <small>&yen;</small>
+                            <big>197</big>
+                        </span>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong>大连-葫芦岛</strong>
+                        <span>
+                            <small>&yen;</small>
+                            <big>197</big>
+                        </span>
+                        <span>
+                            <small>&yen;</small>
+                            <big>197</big>
+                        </span>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong>大连-葫芦岛</strong>
+                        <span>
+                            <small>&yen;</small>
+                            <big>197</big>
+                        </span>
+                        <span>
+                            <small>&yen;</small>
+                            <big>197</big>
+                        </span>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong>大连-葫芦岛</strong>
+                        <span>
+                            <small>&yen;</small>
+                            <big>197</big>
+                        </span>
+                        <span>
+                            <small>&yen;</small>
+                            <big>197</big>
+                        </span>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong>大连-葫芦岛</strong>
+                        <span>
+                            <small>&yen;</small>
+                            <big>197</big>
+                        </span>
+                        <span>
+                            <small>&yen;</small>
+                            <big>197</big>
+                        </span>
+                        <a href="###">预订</a>
+                    </div>
+                </dd>
+                <dt>
+                    <a href="###"><span>更多线路</span></a>
+                </dt>
+            </dl>
+        </div>
+        <div class="buttonBox">
+            <a class="button" href="###">点我预订机票</a>
+        </div>
+    </article>
+</body>
+</html>

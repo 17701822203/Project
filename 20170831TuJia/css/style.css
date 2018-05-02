@@ -1,0 +1,530 @@
+/*Created by huang.jun on 17-08-21*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: PingFang SC Medium, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.75);
+  display: block;
+}
+.img-box {
+  font-size: 0;
+}
+section {
+  display: none;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Relative {
+  position: relative;
+}
+.TopBtn {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  width: 62%;
+}
+.TsBox {
+  background: #F2A852;
+  padding: 1.15rem 1.4rem 4.75rem 1.4rem;
+}
+.TsTabBox {
+  padding: .8rem .95rem;
+  background: #F6C462;
+  border-bottom: 1px solid #D2730D;
+  border-right: 1px solid #D2730D;
+}
+.TsTab {
+  background: #fff;
+  padding: 0 .75rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: relative;
+}
+.TsTab em {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2.075rem;
+  height: 1.525rem;
+  background: url("../img/HotIcon.png") no-repeat;
+  background-size: 100% 100%;
+}
+.TsTabDecorate {
+  position: relative;
+  height: 3.75rem;
+  color: #333;
+}
+.TsTabDecorate i {
+  content: "";
+  height: 2px;
+  background: #E0E0E0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: -1px;
+}
+.TsTabDecorate i:after {
+  width: .3rem;
+  height: .3rem;
+  background: #E0E0E0;
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  top: 50%;
+  margin-top: -0.15rem;
+}
+.TsTabDecorate i:before {
+  width: .3rem;
+  height: .3rem;
+  background: #E0E0E0;
+  content: "";
+  position: absolute;
+  right: 0;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  top: 50%;
+  margin-top: -0.15rem;
+}
+.TsTabDecorate span {
+  font-size: .6rem;
+  line-height: .6rem;
+  position: absolute;
+  top: 16%;
+}
+.TsTabDecorate span.TimeLeft {
+  left: 25%;
+  margin-left: -8%;
+}
+.TsTabDecorate span.TimeRight {
+  right: 25%;
+  margin-right: -8%;
+}
+.TsTabDecorate big {
+  border: 1px solid #ccc;
+  position: absolute;
+  font-size: .6rem;
+  left: 50%;
+  height: .9rem;
+  line-height: .9rem;
+  padding: 0 .3rem;
+  margin-left: -7%;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  top: 50%;
+  margin-top: -0.5rem;
+  background: #fff;
+}
+.TsTabDecorate b {
+  font-size: .7rem;
+  position: absolute;
+  bottom: .5rem;
+}
+.TsTabDecorate b.TimeLeft {
+  left: 0;
+}
+.TsTabDecorate b.TimeRight {
+  right: 0;
+}
+.TsTabDecorate img {
+  width: .725rem;
+  height: .7rem;
+  position: absolute;
+  top: 1.5rem;
+}
+.TsTabDecorate img.IconLeft {
+  left: 21%;
+}
+.TsTabDecorate img.IconRight {
+  right: 21%;
+}
+.TsTabBtn {
+  line-height: .65rem;
+}
+.TsTabBtn a {
+  color: #c37440;
+  font-size: .65rem;
+  padding: .4rem 0 .75rem 0;
+  display: block;
+  background-image: -webkit-linear-gradient(left, #C37040, #925430 25%, #985935 50%, #925430 75%, #C37040);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: masked-animation 4s infinite linear;
+}
+.TsTabBtn a span img {
+  font-size: 0;
+  width: .475rem;
+  vertical-align: middle;
+  margin-left: .1rem;
+}
+.more {
+  color: #993300;
+  text-align: center;
+  font-size: .7rem;
+  display: block;
+}
+.more img {
+  width: .5rem;
+  height: .375rem;
+  vertical-align: middle;
+  margin-left: .2rem;
+}
+.active img {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  -moz-transform: rotate(180deg);
+  /* Firefox */
+  -webkit-transform: rotate(180deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(180deg);
+}
+.Fix {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 4.15rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+.Fix .BtmBtn {
+  position: absolute;
+  display: block;
+  width: 86%;
+  top: 0;
+  left: 0;
+  padding: 1.4% 7% 0 7%;
+}
+#panel {
+  display: none;
+}
+@-webkit-keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+.share {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("../img/Bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.shareTit {
+  text-align: center;
+  padding-top: 3rem;
+}
+.shareTit img {
+  width: 8.625rem;
+}
+input[type="text"] {
+  -webkit-appearance: none;
+}
+.inputList {
+  padding: 3rem 1.4rem 0 1.4rem;
+}
+.inputList li:nth-of-type(1) {
+  border: 1px solid #FFE0CD;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  height: 1.9rem;
+}
+.inputList li:nth-of-type(2) {
+  margin-top: .625rem;
+}
+.inputList li:nth-of-type(3) {
+  margin-top: .625rem;
+}
+.inputList li:nth-of-type(3):after,
+.inputList li:nth-of-type(3):before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.inputList li:nth-of-type(4) {
+  margin-top: 2.275rem;
+}
+.mobInput {
+  height: 1.9rem;
+  border: 0;
+  width: 100%;
+  font-size: .8rem;
+  text-indent: .9rem;
+  background: none;
+  color: #fff;
+}
+.mobInput::-webkit-input-placeholder {
+  color: #fff;
+}
+.mobInput:-moz-placeholder {
+  color: #fff;
+}
+.mobInput::-moz-placeholder {
+  color: #fff;
+}
+.mobInput:-ms-input-placeholder {
+  color: #fff;
+}
+.YzmInput {
+  width: 54%;
+  height: 1.9rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid #FFE0CD;
+  font-size: .8rem;
+  text-indent: .9rem;
+  float: left;
+  background: none;
+  color: #fff;
+}
+.YzmInput::-webkit-input-placeholder {
+  color: #fff;
+}
+.YzmInput:-moz-placeholder {
+  color: #fff;
+}
+.YzmInput::-moz-placeholder {
+  color: #fff;
+}
+.YzmInput:-ms-input-placeholder {
+  color: #fff;
+}
+.YzmBtn {
+  height: 2rem;
+  line-height: 2rem;
+  background: url("../img/YzBtn.png");
+  background-size: 100% 100%;
+  float: right;
+  width: 42%;
+  text-align: center;
+  font-size: .8rem;
+  color: #883800;
+}
+.LingQuBtn {
+  display: block;
+  background: url("../img/dianjichakan.png") no-repeat;
+  background-size: 100% 100%;
+  height: 2.15rem;
+  line-height: 2.15rem;
+  text-align: center;
+  font-size: .8rem;
+  color: #883800;
+}
+.YzmInput::-webkit-input-placeholder {
+  /* WebKit browsers */
+  line-height: normal;
+}
+.mobInput::-webkit-input-placeholder {
+  /* WebKit browsers */
+  line-height: normal;
+}
+.shareBox {
+  display: none;
+  width: 15.625rem;
+  height: 8.775rem;
+  background: url("../img/shareBg.png") no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  margin-left: -7.8125rem;
+  margin-top: -4.3875rem;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+}
+.shareBox dt {
+  text-align: center;
+  font-size: .8rem;
+  color: #fff;
+  line-height: .8rem;
+  padding-top: 1rem;
+}
+.shareBox dt p {
+  padding-top: .75rem;
+}
+.shareBox dd {
+  text-align: center;
+  padding-top: 1.5rem;
+}
+.shareBox dd .shareBtn {
+  width: 11.75rem;
+  height: 2.15rem;
+  line-height: 2.15rem;
+  background: url("../img/shareBtn.png") no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  text-align: center;
+  font-size: .9rem;
+  color: #873600;
+}
+.Coupon {
+  width: 15.625rem;
+  height: 23.15rem;
+  background: url("../img/CouponBg.png") no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  margin-left: -7.8125rem;
+  margin-top: -11.575rem;
+}
+.Coupon .CouponTitle {
+  text-align: center;
+  padding-top: 1.3rem;
+  font-size: 0;
+}
+.Coupon .CouponTitle img {
+  width: 5.95rem;
+}
+.Coupon .CouponList {
+  width: 13.55rem;
+  margin: 0 auto;
+  font-family: PingFang SC Heavy, sans-serif;
+  padding-top: .5rem;
+}
+.Coupon .CouponList .Train {
+  height: 3.5rem;
+  background: url("../img/Train.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: .5rem;
+  position: relative;
+  color: #80ad4f;
+}
+.Coupon .CouponList .Train strong {
+  font-size: 2rem;
+  position: absolute;
+  left: 1.5rem;
+  top: .7rem;
+  line-height: 2.25rem;
+  font-weight: normal;
+}
+.Coupon .CouponList .Train span {
+  font-size: .65rem;
+  position: absolute;
+  line-height: .65rem;
+  left: 5rem;
+  top: 2rem;
+}
+.Coupon .CouponList .BB {
+  height: 3.5rem;
+  background: url("../img/BB.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: .5rem;
+  position: relative;
+  color: #ff7c62;
+}
+.Coupon .CouponList .BB strong {
+  font-size: 2rem;
+  position: absolute;
+  left: 1.5rem;
+  top: .7rem;
+  line-height: 2.25rem;
+  font-weight: normal;
+}
+.Coupon .CouponList .BB span {
+  font-size: .65rem;
+  position: absolute;
+  line-height: .65rem;
+  left: 5rem;
+  top: 2rem;
+}
+.Coupon .CouponList .Bus {
+  height: 3.5rem;
+  background: url("../img/Bus.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: .5rem;
+  position: relative;
+  color: #fa935f;
+}
+.Coupon .CouponList .Bus strong {
+  font-size: 2rem;
+  position: absolute;
+  left: 1.5rem;
+  top: .7rem;
+  line-height: 2.25rem;
+  font-weight: normal;
+}
+.Coupon .CouponList .Bus span {
+  font-size: .65rem;
+  position: absolute;
+  line-height: .65rem;
+  left: 5rem;
+  top: 2rem;
+}
+.Coupon .CouponList .hire {
+  height: 3.5rem;
+  background: url("../img/hire.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: .5rem;
+  position: relative;
+  color: #b53ef0;
+}
+.Coupon .CouponList .hire strong {
+  font-size: 2rem;
+  position: absolute;
+  left: 1.5rem;
+  top: .7rem;
+  line-height: 2.25rem;
+  font-weight: normal;
+}
+.Coupon .CouponList .hire span {
+  font-size: .65rem;
+  position: absolute;
+  line-height: .65rem;
+  left: 5rem;
+  top: 2rem;
+}
+.Coupon .CouponBtnBox {
+  padding-top: .8rem;
+}
+.Coupon .CouponBtn {
+  display: inline-block;
+  width: 13.5rem;
+  height: 2.15rem;
+  line-height: 2.15rem;
+  background: url("../img/CouponBtn.png") no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  color: #fff;
+  font-size: .9rem;
+}

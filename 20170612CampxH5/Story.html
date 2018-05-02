@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>jQuery手机触屏滑动切换选项卡代码</title>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+<div class="find_nav">
+    <div class="find_nav_left">
+        <div class="find_nav_list" id="pagenavi1">
+            <ul>
+                <li><a href="#" class="active">巨石岛屿</a></li>
+                <li><a href="#">冰火岛区</a></li>
+                <li><a href="#">金字塔区</a></li>
+                <li><a href="#">&nbsp;</a></li>
+                <li class="sideline"></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div id="slider1" class="swipe">
+    <ul class="box01_list">
+        <li class="Story_list">
+            <dl class="main">
+                <dt>1.土坦亚蒙<span id="show">展开</span></dt>
+                <dd class="main-list">
+                    <p>沙中过度永恒的暴君，他解开了远古的封印，吸收了些神的力量，使用禁忌的无数将不同时空的友邦领袖的灵魂胫骨与自己的神殿内，借此获得永恒的生命和无上的权利。即使在最终被几位大祭司同时封印的状态下任然对整个世界设下了无尽的诅咒。他的传说已经被深埋于海底，是否会有人让...</p>
+                </dd>
+            </dl>
+        </li>
+        <li class="Story_list">
+            <dl class="main">
+                <dt>1.土坦亚蒙<span id="show">展开</span></dt>
+                <dd class="main-list">
+                    <p>沙中过度永恒的暴君，他解开了远古的封印，吸收了些神的力量，使用禁忌的无数将不同时空的友邦领袖的灵魂胫骨与自己的神殿内，借此获得永恒的生命和无上的权利。即使在最终被几位大祭司同时封印的状态下任然对整个世界设下了无尽的诅咒。他的传说已经被深埋于海底，是否会有人让...</p>
+                </dd>
+            </dl>
+        </li>
+        <li class="Story_list">
+            <dl class="main">
+                <dt>1.土坦亚蒙<span id="show">展开</span></dt>
+                <dd class="main-list">
+                    <p>沙中过度永恒的暴君，他解开了远古的封印，吸收了些神的力量，使用禁忌的无数将不同时空的友邦领袖的灵魂胫骨与自己的神殿内，借此获得永恒的生命和无上的权利。即使在最终被几位大祭司同时封印的状态下任然对整个世界设下了无尽的诅咒。他的传说已经被深埋于海底，是否会有人让...</p>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/touchslider.js"></script>
+<script type="text/javascript" src="js/style.js"></script>
+<script type="text/javascript">
+    $(".find_nav_list").css("left",0);
+
+    $(".find_nav_list li").each(function(){
+        $(".sideline").css({left:0});
+        $(".find_nav_list li").eq(0).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+    });
+    var nav_w=$(".find_nav_list li").first().width();
+    $(".sideline").width(nav_w);
+    $(".find_nav_list li").on('click', function(){
+        nav_w=$(this).width();
+        $(".sideline").stop(true);
+        $(".sideline").animate({left:$(this).position().left},300);
+        $(".sideline").animate({width:nav_w});
+        $(this).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+        var fn_w = ($(".find_nav").width() - nav_w) / 2;
+        var fnl_l;
+        var fnl_x = parseInt($(this).position().left);
+        if (fnl_x <= fn_w){
+            fnl_l = 0;
+        }else if (fn_w - fnl_x <= flb_w - fl_w){
+            fnl_l = flb_w - fl_w;
+        }else{
+            fnl_l = fn_w - fnl_x;
+        }
+        $(".find_nav_list").animate({
+            "left" : fnl_l
+        }, 300);
+
+    });
+    var fl_w=$(".find_nav_list").width();
+    var flb_w=$(".find_nav_left").width();
+    $(".find_nav_list").on('touchstart', function (e) {
+        var touch1 = e.originalEvent.targetTouches[0];
+        x1 = touch1.pageX;
+        y1 = touch1.pageY;
+        ty_left = parseInt($(this).css("left"));
+    });
+    $(".find_nav_list").on('touchmove', function (e) {
+        var touch2 = e.originalEvent.targetTouches[0];
+        var x2 = touch2.pageX;
+        var y2 = touch2.pageY;
+        if(ty_left + x2 - x1>=0){
+            $(this).css("left", 0);
+        }else if(ty_left + x2 - x1<=flb_w-fl_w){
+            $(this).css("left", flb_w-fl_w);
+        }else{
+            $(this).css("left", ty_left + x2 - x1);
+        }
+        if(Math.abs(y2-y1)>0){
+            e.preventDefault();
+        }
+    });
+
+
+    for(n=1;n<9;n++){
+        var page='pagenavi'+n;
+        var mslide='slider'+n;
+        var mtitle='emtitle'+n;
+        arrdiv = 'arrdiv' + n;
+        var as=document.getElementById(page).getElementsByTagName('a');
+        var tt=new TouchSlider({id:mslide,'auto':'-1',fx:'ease-out',direction:'left',speed:600,timeout:5000,'before':function(index){
+            var as=document.getElementById(this.page).getElementsByTagName('a');
+            as[this.p].className='';
+            this.p=index;
+
+            fnl_x =  parseInt($(".find_nav_list li").eq(this.p).position().left);
+
+            nav_w=$(".find_nav_list li").eq(this.p).width();
+            $(".sideline").stop(true);
+            $(".sideline").animate({left:$(".find_nav_list li").eq(this.p).position().left},300);
+            $(".sideline").animate({width:nav_w},100);
+            $(".find_nav_list li").eq(this.p).addClass("find_nav_cur").siblings().removeClass("find_nav_cur");
+            var fn_w = ($(".find_nav").width() - nav_w) / 2;
+            var fnl_l;
+            if (fnl_x <= fn_w) {
+                fnl_l = 0;
+            } else if (fn_w - fnl_x <= flb_w - fl_w) {
+                fnl_l = flb_w - fl_w;
+            } else {
+                fnl_l = fn_w - fnl_x;
+            }
+            $(".find_nav_list").animate({
+                "left" : fnl_l
+            }, 300);
+        }});
+        tt.page = page;
+        tt.p = 0;
+        //console.dir(tt); console.dir(tt.__proto__);
+
+        for(var i=0;i<as.length;i++){
+            (function(){
+                var j=i;
+                as[j].tt = tt;
+                as[j].onclick=function(){
+                    this.tt.slide(j);
+                    return false;
+                }
+            })();
+        }
+    }
+</script>
+</body>
+</html>

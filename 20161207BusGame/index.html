@@ -1,0 +1,48 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        var fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+<body>
+    <article>
+        <div class="bg">
+            <em class="music on"><!--off--></em>
+            <dl class="monologue">
+                <dt>春运虐我千百遍，我待春运如初恋<br/>每次回家都是一次<span>战斗啊</span>！</dt>
+                <dd>告别2016----启程2017</dd>
+            </dl>
+            <button class="yellow-btn"></button>
+            <div style="font-size:0.55rem;text-align: center;position:absolute;width:100%;bottom:0.2rem;font-family:'PingFang SC Medium';">苹果不是本次活动的赞助商</div>
+        </div>
+    </article>
+</body>
+</html>

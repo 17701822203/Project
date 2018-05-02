@@ -1,0 +1,78 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>红包</title>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="TopImg">
+        <img src="img/TopImg1.jpg">
+        <img src="img/TopImg2.jpg">
+        <img src="img/TopImg3.jpg">
+        <img src="img/TopImg4.jpg">
+        <div class="RiLi">
+            <span class="left">今日可抢</span>
+            <span class="right">大年三十</span>
+            <ul class="center">
+                <li class="number">1</li>
+                <li class="number">7</li>
+                <li>年</li>
+                <li class="number">0</li>
+                <li class="number">1</li>
+                <li>月</li>
+                <li class="number">3</li>
+                <li class="number">0</li>
+                <li>日</li>
+            </ul>
+        </div>
+    </div>
+    <div class="CalendarTop">
+        <img src="img/CalendarTop.jpg">
+        <div class="Date">
+            <a class="DateLeft" href="###"></a>
+            <span>2018年02月</span>
+            <a class="DateRight" href="###"></a>
+        </div>
+    </div>
+    <div class="img-box"><img src="img/December.jpg"></div>
+    <div class="BtmBtn">立即购票</div>
+</body>
+</html>

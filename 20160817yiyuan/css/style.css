@@ -1,0 +1,24 @@
+/*Created by huang.jun on 16-08-17*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB";background:#fff;}
+
+.bg1,.bg2,.bg3,.bg4,.bg5{width:7.5rem;}
+.bg1{height:4.89rem;background:url("../img/bg1.jpg") no-repeat;background-size:7.5rem 4.89rem;}
+.bg2{height:7.89rem;background:url("../img/bg2.jpg") no-repeat;background-size:7.5rem 7.89rem;position: relative;}
+.bg3{height:5.43rem;background:url("../img/bg3.jpg") no-repeat;background-size:7.5rem 5.43rem;}
+.bg4{height:5.96rem;background:url("../img/bg4.jpg") no-repeat;background-size:7.5rem 5.96rem;position: relative;}
+.bg5{height:7.42rem;background:url("../img/bg5.jpg") no-repeat;background-size:7.5rem 7.42rem;}
+.bg2 .txt{color:#fff;font-size:0.26rem;padding-top:4.4rem;text-align: center;letter-spacing: 0.02rem;}
+.bg4 .txt{color:#424bff;font-size:0.26rem;padding-top:5.2rem;text-align: center;letter-spacing: 0.02rem;}
+.bg4 .txt2{color:#424bff;font-size:0.26rem;padding-top:0.2rem;text-align: center;letter-spacing: 0.02rem;}
+.txt2 a{display:inline-block;background:#FF0569;padding:0.06rem 0.1rem 0.06rem 0.1rem;color:#fff;margin-left:0.1rem;-webkit-border-radius:0.5rem;font-size:0.24rem;}
+.BtnBox{text-align: center;padding-top:5.5rem;}
+.Btn{width:3.68rem;height:0.9rem;border:0;background:url("../img/button.png") no-repeat;background-size:contain;}
+.Btn:active{opacity: 0.6;-webkit-tap-highlight-color: rgba(0,0,0,0);-webkit-tap-highlight-color: transparent;}
+
+
+
+

@@ -1,0 +1,121 @@
+/*Created by huang.jun on 17-06-17*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+body{font-family:PingFang SC Regular,sans-serif;}
+.shadow{width:100%;height:100%;position:fixed;z-index:2;background:#000;opacity:0.7;top:0;left:0;}
+article{background:#FFD35E;}
+.img-box{font-size:0;}
+//四角的半径定制.border-radius-custom(20px, 20px, 0px, 0px);
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+  border-radius: @topleft @topright @bottomright @bottomleft;
+}
+//方块阴影.box-shadow(5px, 5px, 6px, 0.3);
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+//圆角.border-radius(@radius:5px)
+.border-radius(@radius:5px){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+//input默认字体.placeholder({color:#666;});
+.placeholder(@a){
+  &::-webkit-input-placeholder{@a();}
+  &:-moz-placeholder{@a();}
+  &::-moz-placeholder{@a();}
+  &:-ms-input-placeholder{@a();}
+}
+//线性渐变.gradient(left, #663333, #333333);
+.gradient(@origin:left,@start:#ffffff,@stop:#000000) {
+  background-color:@start;
+  background-image:-webkit-linear-gradient(@origin,@start,@stop);
+  background-image:-moz-linear-gradient(@origin,@start,@stop);
+  background-image:-o-linear-gradient(@origin,@start,@stop);
+  background-image:-ms-linear-gradient(@origin,@start,@stop);
+  background-image:linear-gradient(@origin,@start,@stop);
+}
+
+.nav-height{height:88px;z-index:2;}
+.Wrap{width:1230px;margin:0 auto;}
+.Nav_Box{background:#222;}
+.nav-wrap{height:88px;background:#222;width:1230px;left:50%;margin-left:-615px;position:fixed;z-index:3;
+  &.navFix{position:fixed;left:50%;width:1230px;margin-left:-615px;}
+}
+.nav-mobile{width:74px;height:70px;float:left;margin:9px 0 0 5px;
+  img{width:74px;height:70px;}
+}
+.Head_Box{width:1094px;margin:0 auto;height:88px;}
+.clearfix{float:right;margin-top:39px;margin-right:92px;
+  li{float:left;margin-left:50px;
+    a{color:#fff;font-size:16px;display:block;
+      &.active{padding-bottom:12px;border-bottom:3px solid #F7D945;color:#F7D945;}
+    }
+  }
+}
+.Expect{height:560px;}
+.Sign{height:560px;position:relative;
+  img{bottom:2px;left:0;position:absolute;}
+}
+.Sign_txt{color:#333;float:right;padding:100px 78px 0 0;
+  dt{font-size:56px;line-height:56px;}
+  dd{font-size:20px;padding-top:54px;
+    p{text-align:right;}
+    &:nth-of-type(2){padding-top:110px;
+      &:after,&:before{content: " ";display: table;clear: both;}
+    }
+    .yellow_btn{width:410px;height:114px;line-height:114px;text-align:center;background:#F7D945;.border-radius(@radius:50px);float:right;font-size:36px;color:#333;font-family:PingFang SC Light,sans-serif;
+      &:hover{background:#000;color:#fff;}
+    }
+  }
+}
+.Video{height:560px;background:#000;}
+.Sign2{height:560px;position: relative;
+  img{top:168px;right:0;position:absolute;}
+  .Sign_txt{float:left;padding:115px 0 0 100px;
+    dd{
+      p{text-align:left;}
+      &:nth-of-type(2){padding-top:84px;}
+      .yellow_btn{float:left;}
+    }
+  }
+}
+
+.about_us{height:560px;background:#F7D945;position: relative;
+  img{bottom:0;left:0;position:absolute;}
+  .Sign_txt{
+    dt{text-align: right;}
+    dd{
+      .yellow_btn{background:#000;color:#fff;}
+    }
+  }
+}
+
+.Join_us{height:560px;position: relative;
+  img{top:168px;right:0;position:absolute;}
+  .Sign_txt{float:left;padding:115px 0 0 70px;
+    dd{
+      p{text-align:left;}
+      &:nth-of-type(2){padding-top:84px;}
+      .yellow_btn{float:left;}
+    }
+  }
+}
+
+.scanning{background:#F7D945;height:578px;
+  dl{text-align: center;padding-top:110px;
+    dt{font-size:56px;line-height:56px;color:#333;}
+    dd{
+      img{width:186px;height:186px;}
+      &:nth-of-type(1){font-size:0;padding-top:70px;}
+      &:nth-of-type(2){font-size:20px;color:#333;padding-top:28px;}
+    }
+  }
+}
+
+.section-content{ border-bottom: 5px solid #0000FF; min-height: 500px; background: #eee; width: 1200px; margin: auto; line-height: 500px; text-align: center; }

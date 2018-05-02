@@ -1,0 +1,106 @@
+/*Created by huang.jun on 17-09-6*/
+*{margin:0;padding:0;}
+a{text-decoration:none;-webkit-tap-highlight-color:transparent;
+  &:active{opacity:.7;}
+}
+ol,ul,li{list-style:none;}
+body{font-family:PingFang SC Regular,sans-serif;}
+.shadow{width:100%;height:100%;position:fixed;z-index:2;background:#000;opacity:0.7;top:0;left:0;}
+.img-box{font-size:0;}
+//四角的半径定制.border-radius-custom(20px, 20px, 0px, 0px);
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+  border-radius: @topleft @topright @bottomright @bottomleft;
+}
+//方块阴影.box-shadow(5px, 5px, 6px, 0.3);
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: 0.5) {
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+//圆角.border-radius(@radius:5px)
+.border-radius(@radius:5px){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+//input默认字体.placeholder({color:#666;});
+.placeholder(@a){
+  &::-webkit-input-placeholder{@a();}
+  &:-moz-placeholder{@a();}
+  &::-moz-placeholder{@a();}
+  &:-ms-input-placeholder{@a();}
+}
+//线性渐变.gradient(left, #663333, #333333);
+.gradient(@origin:left,@start:#ffffff,@stop:#000000) {
+  background-color:@start;
+  background-image:-webkit-linear-gradient(@origin,@start,@stop);
+  background-image:-moz-linear-gradient(@origin,@start,@stop);
+  background-image:-o-linear-gradient(@origin,@start,@stop);
+  background-image:-ms-linear-gradient(@origin,@start,@stop);
+  background-image:linear-gradient(@origin,@start,@stop);
+}
+//清除浮动
+.ClearBox{
+  &:after,&:before{content: " ";display: table;clear: both;}
+}
+
+
+.img-box{
+  img{width:100%;}
+}
+.WrapBox{padding:0 1.25rem 1rem 1.25rem;}
+.InputBox{background:#FFC554;padding:1.05rem;.border-radius(@radius:.175rem);}
+.MobInput{.border-radius(@radius:.2rem);overflow: hidden;
+  input{height:.75rem;background:#FFEAC0;border:0;width:100%;font-size:.75rem;color:#333;padding:.75rem 0;text-indent:.85rem;
+    .placeholder({color:rgba(51,51,51,.3);});
+  }
+}
+.yzm{margin-top:.5rem;
+  div{height:2.25rem;background:#FF7D25;.border-radius(@radius:.2rem);overflow:hidden;position: relative;color:#fff;text-align:center;line-height:2.25rem;font-size:.75rem;
+    span{width:2.7rem;height:2.25rem;background:url("../img/block.png") no-repeat;background-size:100% 100%;position: absolute;left:0;top:0;}
+  }
+}
+.yzmInput{.border-radius(@radius:.2rem);overflow: hidden;background:#FFEAC0;margin-top:.5rem;
+  input{height:.75rem;background:#FFEAC0;border:0;width:60%;font-size:.75rem;color:#333;padding:.75rem 0;text-indent:.85rem;
+    .placeholder({color:rgba(51,51,51,.3);});float:left;
+  }
+  a{float:right;height:.75rem;line-height:.75rem;padding:.75rem 0;font-size:.75rem;color:#ee782f;width:40%;text-align: center;position: relative;
+    &:after{content:"";position: absolute;width:1px;height:1.25rem;background:#CDBB99;left:0;top:50%;margin-top:-.625rem;opacity:.3;}
+  }
+}
+.InputBtn{margin-top:.5rem;
+  a{display:block;width:100%;height:2.25rem;line-height:2.25rem;text-align:center;color:#fff;font-size:.8rem;background:#FF4D2F;.border-radius(@radius:.2rem);}
+}
+.ActivityRules{padding:1rem;background:#FFC554;.border-radius(@radius:.175rem);margin-top:.5rem;
+  dl{
+    dt{text-align:center;font-size:0;padding-bottom:.5rem;
+      img{width:10.475rem;}
+    }
+    dd{
+      p{color:#4b140b;line-height:1.2rem;font-size:.6rem;}
+    }
+  }
+}
+.CouponBox{.InputBox;}
+.Coupon{height:4.2rem;background:url("../img/Coupon.png") no-repeat;background-size:100% 100%;position:relative;font-family:PingFang SC Heavy;color:#f7561e;
+  small{font-size:.9rem;line-height:.9rem;position:absolute;left:1rem;top:1.8rem;}
+  b{font-size:1.5rem;line-height:1.5rem;position:absolute;left:1.825rem;top:1.3rem;}
+  dl{padding-left:5.05rem;
+    dt{font-size:.8rem;color:#333;line-height:.8rem;padding-top:1.15rem;}
+    dd{font-size:.5rem;color:#888;line-height:.5rem;padding-top:.4rem;}
+  }
+}
+.MobileLogin{font-size:.6rem;color:#46151e;text-align:center;line-height:.6rem;margin-top:.75rem;
+  dt{
+    span{color:#f7561e;}
+  }
+  dd{padding-top:.35rem;}
+}
+.Step{text-align:center;padding-top:.95rem;
+  img{width:12.525rem;}
+}
+
+
+

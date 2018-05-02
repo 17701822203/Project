@@ -1,0 +1,287 @@
+/*Created by huang.jun on 17-10-10*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+  background: #558AF9;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+input {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-appearance: none;
+}
+.Bg1 {
+  font-size: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.Bg1 img {
+  width: 100%;
+}
+.befor-bd {
+  position: relative;
+  margin: 14.5rem 1.875rem 0;
+  background: #D4E4FF;
+  border-radius: .25rem;
+  padding: 1rem 1.15rem 1.15rem;
+  z-index: 5;
+}
+.befor-bd .import-list li {
+  margin-top: .75rem;
+  position: relative;
+  overflow: hidden;
+}
+.befor-bd .import-list li:nth-of-type(1) {
+  margin-top: 0;
+}
+.befor-bd .import-list li .input-txt {
+  width: 100%;
+  height: 2.15rem;
+  background: #fff;
+  font-size: .75rem;
+  border-radius: 4px;
+  line-height: 1.1;
+  text-indent: .8rem;
+}
+.befor-bd .import-list li .input-txt::-webkit-input-placeholder {
+  line-height: 1.1;
+  font-size: .75rem;
+  color: #ccc;
+}
+.befor-bd .import-list li .input-code {
+  width: 58%;
+  float: left;
+  height: 2.15rem;
+  background: #fff;
+  padding: 0 0.8rem;
+  box-sizing: border-box;
+  border-radius: 4px 0 0 4px;
+  line-height: 1.1;
+  font-size: .75rem;
+}
+.befor-bd .import-list li .input-code::-webkit-input-placeholder {
+  font-size: .75rem;
+  color: #ccc;
+  line-height: 1.1;
+}
+.befor-bd .import-list li .btn-code {
+  font-size: .65rem;
+  color: #ff723d;
+  background: #fff;
+  width: 42%;
+  float: right;
+  height: 2.15rem;
+  border-radius: 0 4px 4px 0;
+  border: 0;
+  position: relative;
+}
+.befor-bd .import-list li .btn-code:before {
+  width: 1px;
+  height: 2.6rem;
+  background: #d6d6d6;
+  position: absolute;
+  content: '';
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  z-index: 0;
+  left: 0;
+  top: 50%;
+  margin-top: -0.65rem;
+}
+.btn-get {
+  width: 100%;
+  height: 2.25rem;
+  border-radius: 3rem;
+  margin-top: 0.6rem;
+  border: 0;
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 600;
+}
+.btn-get.btn-zt {
+  background-color: #FE6077;
+  background-image: -webkit-linear-gradient(left, #FE6077, #E55C46);
+  background-image: -moz-linear-gradient(left, #FE6077, #E55C46);
+  background-image: -o-linear-gradient(left, #FE6077, #E55C46);
+  background-image: -ms-linear-gradient(left, #FE6077, #E55C46);
+  background-image: linear-gradient(left, #FE6077, #E55C46);
+}
+.Bg2 {
+  font-size: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.Bg2 img {
+  width: 100%;
+}
+.CouponBox {
+  padding: .875rem;
+  margin: 8.825rem 1.5rem 0 1.5rem;
+  background: #D4E4FF;
+  position: relative;
+  border-radius: .25rem;
+  z-index: 5;
+}
+.CouponBox .CouponList {
+  height: 3.9rem;
+  background: #fff;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  margin-top: .5rem;
+  position: relative;
+}
+.CouponBox .CouponList:after,
+.CouponBox .CouponList:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.CouponBox .CouponList:nth-of-type(1) {
+  margin-top: 0;
+}
+.CouponBox .CouponList .CouponLeft {
+  float: left;
+  width: 30%;
+  height: 3.9rem;
+  color: #f77878;
+  position: relative;
+}
+.CouponBox .CouponList .CouponLeft strong {
+  float: left;
+  font-size: .9rem;
+  line-height: .9rem;
+  margin-top: 1.8rem;
+  margin-left: 1rem;
+  font-family: Arial, sans-serif;
+}
+.CouponBox .CouponList .CouponLeft b {
+  float: left;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  margin-top: 1.4rem;
+  margin-left: .1rem;
+}
+.CouponBox .CouponList .CouponLeft:after {
+  content: "";
+  position: absolute;
+  height: 3.15rem;
+  right: 0;
+  top: .4rem;
+  border-right: 1px dashed #DCDCDC;
+}
+.CouponBox .CouponList .CouponRight {
+  float: left;
+  width: 70%;
+  height: 3.9rem;
+  color: #333;
+  padding-left: .575rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.CouponBox .CouponList .CouponRight h4 {
+  font-size: .75rem;
+  line-height: .75rem;
+  margin-top: .75rem;
+  padding-left: .3rem;
+  font-weight: normal;
+}
+.CouponBox .CouponList .CouponRight h5 {
+  font-size: .6rem;
+  line-height: .6rem;
+  margin-top: .3rem;
+  font-weight: normal;
+}
+.CouponBox .CouponList .CouponRight p {
+  font-size: .5rem;
+  line-height: .5rem;
+  margin-top: .35rem;
+  padding-left: .3rem;
+  color: #888;
+}
+.CouponBox .CouponList .sy,
+.CouponBox .CouponList .qg {
+  width: 3.225rem;
+  height: 2.575rem;
+  position: absolute;
+  right: .65rem;
+  top: .65rem;
+}
+.CouponBox .CouponList .sy {
+  background: url("../img/sy.png") no-repeat;
+  background-size: 100% 100%;
+}
+.CouponBox .CouponList .qg {
+  background: url("../img/qg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.CouponBox .Gray .CouponLeft,
+.CouponBox .Gray .CouponRight,
+.CouponBox .Gray .CouponRight p {
+  color: #C1C1C1;
+}
+.BtmTxt {
+  padding: .875rem;
+  margin: .5rem 1.5rem 1rem 1.5rem;
+  background: #D4E4FF;
+  position: relative;
+  border-radius: .25rem;
+  z-index: 5;
+}
+.BtmTxt dl:nth-of-type(2) {
+  margin-top: .75rem;
+}
+.BtmTxt dl dt {
+  font-size: .65rem;
+}
+.BtmTxt dl dd {
+  font-size: .55rem;
+  margin-top: .5rem;
+  color: #666;
+}
+.BtmTxt dl dd p {
+  line-height: 1rem;
+}

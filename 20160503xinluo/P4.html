@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body style="background:#FFEDC5;">
+	<article>
+    	<dl class="top">
+        	<dt><img src="img/topImg.png"></dt>
+            <dd>看看他们是如何玩转韩国<br/>让你快速了解怎么赏美景<br/>购美物，品美食</dd>
+        </dl>
+        <div class="ImgLst">
+        	<a href="###"><img src="img/pimg1.png"></a>
+            <a href="###"><img src="img/pimg2.png"></a>
+            <a href="###"><img src="img/pimg3.png"></a>
+            <a href="###"><img src="img/pimg4.png"></a>
+        </div>
+    </article>
+</body>
+</html>

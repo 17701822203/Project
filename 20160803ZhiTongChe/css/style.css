@@ -1,0 +1,41 @@
+/*Created by huang.jun on 16-07-18*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB";}
+article{height:100%;}
+
+.bg1{height:5.93rem;background:url("../img/bg1.jpg") no-repeat;background-size:cover;}
+.bg2{height:3.41rem;background:url("../img/bg2.jpg") no-repeat;background-size:cover;}
+.bg3{height:4.21rem;background:url("../img/bg3.jpg") no-repeat;background-size:cover;}
+.TabWrap dt{background:#D93E32;font-size:0.32rem;color:#fdbb00;height:0.8rem;line-height:0.8rem;}
+.TabWrap dt span{float:left;margin:0 0.4rem;height:0.8rem;line-height:0.8rem;}
+.TabWrap dd{background:#FFDD5D;}
+.TabBox{display:none;padding:0.3rem 0.3rem 0.3rem 0.2rem}
+.clear{clear: both;}
+.Tab1TopImg{width:6.78rem;height:2.8rem;overflow:hidden;}
+.Tab1Box{width:6.78rem;height:3.98rem;border:0.06rem solid #fff;background:#fff;position: relative;}
+.Tab1Box h3{font-size:0.32rem;color:#707070;font-weight: normal;padding:0.16rem 0 0 0.13rem;line-height:0.4rem;height:0.4rem;}
+.jiage{padding:0.06rem 0 0 0.13rem;line-height:0.4rem;height:0.4rem;}
+.jiage span{color:#ff6962;}
+.jiage span small{font-size:0.28rem;}
+.jiage span big{font-size:0.42rem;font-family: "Hiragino Sans GB W6";}
+.jiage em{font-style:normal;color:#999;font-size:0.24rem;padding-left:0.15rem;text-decoration: line-through;}
+.red-btn{position: absolute;border:0;width:3.2rem;height:0.8rem;background:#EF372F;color:#fff;font-size:0.36rem;right:0.14rem;top:3.03rem;-webkit-border-radius:0.1rem;}
+.red-btn:active{opacity: 0.8;}
+.Airport{width:3.28rem;height:3.58rem;border:0.06rem solid #fff;background:#fff;float:left;margin:0.1rem 0 0 0.1rem;position: relative;}
+.Airport h3{font-size:0.32rem;color:#707070;font-weight: normal;padding:0.15rem 0 0 0.13rem;}
+.AirportImg,.AirportImg img{width:3.28rem;height:2.4rem;}
+.TabWrap dd .TabBox:nth-of-type(1){padding:0.3rem;}
+.txtcor{color:#fff;}
+.hezuo{height:1.98rem;background:url("../img/hezuo.jpg") no-repeat;background-size:contain;}
+
+.hotIcon{width:0.6rem;height:0.42rem;line-height:0.42rem;background:url("../img/hotIcon.png") no-repeat;background-size:contain;text-align:center;font-style: normal;font-size:0.24rem;color:#fff;position: absolute;left:0.1rem;top:0;}
+
+
+
+
+
+
+

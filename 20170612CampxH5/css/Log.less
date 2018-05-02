@@ -1,0 +1,21 @@
+.log_list{padding:2rem .75rem 0 1.5rem;
+  dt{font-size:.85rem;color:#fff;}
+  dd{
+    .Catalog{margin-top:.5rem;
+      &:nth-of-type(1){
+        .date_icon{
+          &:before{display:none;}
+        }
+      }
+      &:after,&:before{content: " ";display: table;clear: both;}
+      .date_icon{color:#fff;font-size:.7rem;float:left;width:22%;line-height:2rem;position:relative;
+        &:after{content:"";width:.4rem;height:.4rem;background:#8B94AF;position:absolute;right:.8rem;top:.8rem;.border-radius(@radius:1rem);}
+        &:before{content:"";width:.1rem;height:2.4rem;background:#8B94AF;position:absolute;right:.95rem;bottom:1rem;}
+      }
+      .clue{float:left;position:relative;width:76%;height:2rem;line-height:2rem;background:#fff;.border-radius(@radius:.25rem);font-size:.7rem;
+        &:after{position:absolute;top:.6rem;left:-16px;width:0;height:0;font-size:0;border:solid 8px;border-color:#3E4D7B #fff #3E4D7B #3E4D7B;content:"";}
+        p{padding-left:.8rem;}
+      }
+    }
+  }
+}

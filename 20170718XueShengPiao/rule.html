@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <dl class="rule-list">
+        <dt>活动规则</dt>
+        <dd>
+            <h2>一、活动参与规则</h2>
+            <p>(一)活动时间：2017.7.17-2017.7.23</p>
+            <p>(二)参与要求：活动期间内，凡是在携程APP或M站购买学生火车票，未退票且成功出行，即有机会获得以下奖品。</p>
+            <p>(三)活动奖品</p>
+            <p><strong>七夕大奖：</strong>天海免费邮轮海景舱，活动结束后，从购买学生票的用户里随机抽选一位赠送。</p>
+            <p><strong>人人尽享：</strong>活动期间购买学生票且出行成功，即享免费流量。随机瓜分，先到先得，送完即止。手机流量会充值到下单时预留的手机号里，当月有效。</p>
+            <p><strong>随机礼包：</strong>200元天海邮轮优惠券，活动结束后，从购买学生票的用户里随机抽选1000位赠送。</p>
+            <p>(四)本活动解释权归携程火车票所有，如有发现恶意盗刷等行为，携程有权收回该行为涉及的奖品，并保留追责的权利。</p>
+        </dd>
+        <dd>
+            <h2>二、天海邮轮免费邮轮海景舱使用规则</h2>
+            <p>(一)免费船票仅限于2017-08-24上海出发，天海邮轮新世纪号日本神户（过夜）+宮崎7日游航次使用；</p>
+            <p>(二)免费船票为标准海景双人房一间，供两人同游，如单人出行，房差金额不做退补；</p>
+            <p>(三)免费船票仅包含双人船票和港务税费，不含领队费、岸上观光费、保险、船上服务费以及其他任何私人消费等；</p>
+            <p>(四)免费船票只供在上述所限航次中一次性使用，不得转让，不与其他优惠共享，不做兑现及找零、遗失不补，复印无效</p>
+            <p>(五)以航次起航日为基准，请于起航日前15天以上（含）拨打天海邮轮客服热线进行预定，过期作废；一经使用，该免费船票即刻失效；</p>
+            <p>(六)如因不可抗力等特殊原因导致航次取消，天海邮轮有权决定取消、终止、或暂停上述所限航次；</p>
+            <p>(七)天海邮轮客服热线：400-920-6666（9:00-19:00）</p>
+            <p>在法律允许的范围内，天海邮轮享有修改、补充本规则的权利。</p>
+        </dd>
+    </dl>
+</body>
+</html>

@@ -1,0 +1,115 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+<body>
+    <section style="display:none;">
+        <div class="shadow"></div>
+        <dl class="lay-box">
+            <dt>
+                <h3>恭喜您抽到</h3>
+                <h4>火车票5元立减券</h4>
+                <p>2017.6.1-2017.6.30</p>
+            </dt>
+            <dd>
+                <a class="lay-red-btn" href="#">明天再来</a>
+                <a class="lay-blue-btn" href="#">明天再来</a>
+            </dd>
+        </dl>
+    </section>
+    <article>
+        <div class="lottery-bg">
+            <div class="img-box"><img src="img/top-bg.jpg"></div>
+            <div id="lottery">
+                <span class="lay-share">分享增加抽奖机会</span>
+                <table border="0" cellpadding="0" cellspacing="0">
+                    <tr class="lottery-group">
+                        <td class="lottery-unit td_1 active" ><img src="img/Icon1.png" /><span><img src="img/bor-bg.png"></span></td>
+                        <td class="lottery-unit td_2"><img src="img/Icon2.png" /><span><img src="img/bor-bg.png"></span></td>
+                        <td class="lottery-unit td_3"><img src="img/Icon4.png" /><span><img src="img/bor-bg.png"></span></td>
+                    </tr>
+                    <tr class="lottery-group">
+                        <td class="lottery-unit td_4"><img src="img/Icon7.png" /><span><img src="img/bor-bg.png"></span></td>
+                        <td class="lottery-unit td_5"><img src="img/Icon5.png" /><span><img src="img/bor-bg.png"></span></td>
+                        <td class="lottery-unit td_6"><img src="img/Icon9.png" /><span><img src="img/bor-bg.png"></span></td>
+                    </tr>
+                    <tr class="lottery-group">
+                        <td class="lottery-unit td_7"><img src="img/Icon3.png" /><span><img src="img/bor-bg.png"></span></td>
+                        <td class="lottery-unit td_8"><img src="img/Icon6.png" /><span><img src="img/bor-bg.png"></span></td>
+                        <td class="lottery-unit td_9"><img src="img/Icon8.png" /><span><img src="img/bor-bg.png"></span></td>
+                    </tr>
+                </table>
+                <a class="gray-btn" href="#">点击抽奖</a>
+                <!--<a class="red-btn" href="#">点击抽奖</a>-->
+                <a class="share-btn" href="#">分享</a>
+            </div>
+        </div>
+        <div class="activity-rules">
+            <dl class="activity-rules-list">
+                <dt>活动规则:</dt>
+                <dd>
+                    <p>1.每个用户每天限参与一次<b>（分享到朋友圈可增加一次抽奖机会，最多增加一次）。</b></p>
+                    <p>2.抽到的优惠券会放到您的携程账户里，在<b>“我的-优惠券”里可查看。</b></p>
+                    <p>3.抽奖后优惠券使用请详见优惠券细则。</p>
+                </dd>
+            </dl>
+        </div>
+    </article>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/lottery.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            lottery.lottery({
+                selector:     '#lottery',
+                width:        3,
+                height:       3,
+                index:        0,    // 初始位置
+                initSpeed:    800,  // 初始转动速度
+                // upStep:       50,   // 加速滚动步长
+                // upMax:        50,   // 速度上限
+                // downStep:     30,   // 减速滚动步长
+                // downMax:      500,  // 减速上限
+                // waiting:      5000, // 匀速转动时长
+                beforeRoll: function () { // 重写滚动前事件：beforeRoll
+                    // console.log(this);
+                    // alert(1);
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+/*Created by huang.jun on 17-04-17*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"PingFang SC Medium","Microsoft YaHei",sans-serif;background:#fff;}
+.bg1{height:13.1rem;background:url("../img/img1.jpg") no-repeat;background-size:100% 100%;}
+.bg2{height:5.8rem;background:url("../img/img2.jpg") no-repeat;background-size:100% 100%;}
+.bg3{height:12.275rem;background:url("../img/img3.jpg") no-repeat;background-size:100% 100%;position: relative;}
+.bg3 a{width:4.775rem;height:1.675rem;line-height:1.675rem;position: absolute;background:#B78050;color:#fff;font-size:.6rem;color:#fff;text-align: center;-moz-border-radius:0.875rem;-webkit-border-radius:0.875rem;border-radius:0.875rem;top:9rem;}
+.btn1{left:1rem;}
+.btn2{left:7rem;}
+.btn3{left:13.5rem;}
+.bg4{height:14.1rem;background:url("../img/img4.jpg") no-repeat;background-size:100% 100%;}
+.bg5{height:6.7rem;background:url("../img/img5.jpg") no-repeat;background-size:100% 100%;}
+.bg6{height:22.225rem;background:url("../img/img6.jpg") no-repeat;background-size:100% 100%;}
+.bg7{height:7.1rem;background:url("../img/img7.jpg") no-repeat;background-size:100% 100%;}
+
+.btn{}
+
+

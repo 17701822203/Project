@@ -1,0 +1,85 @@
+<html class="ie">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+<section>
+	<div class="shadow"></div>
+    <div class="pop_box regret" style="display:none;">
+    	<div class="closeBox"><a class="close" href="###"></a></div>
+        <dl class="popTxt">
+        	<dt>what a pity!</dt>
+            <dd>你仅答对了1题，击败了10%迪士尼粉丝！<br/>赶紧买张门票去乐园补补课吧！</dd>
+        </dl>
+        <div class="btnBox"><a href="###"><img src="img/gp.png"></a><a href="###"><img src="img/fx.png"></a></div>
+        <div class="pop_btm_txt">携程现已开通迪士尼车票＋门票VIP直购通道</div>
+    </div>
+    <div class="pop_box congratulate">
+    	<div class="closeBox"><a class="close" href="###"></a></div>
+        <dl class="popTxt">
+        	<dt>Congratulation!</dt>
+            <dd>你全部答对，击败了99%迪士尼粉丝！快去<br/>买张乐园门票开启童话旅程吧</dd>
+        </dl>
+        <div class="btnBox"><a href="###"><img src="img/gp.png"></a><a href="###"><img src="img/fx.png"></a></div>
+        <div class="pop_btm_txt">携程现已开通迪士尼车票＋门票VIP直购通道</div>
+    </div>
+</section>
+<article>
+	<img src="img/img1.jpg">
+    <img src="img/img2.jpg">
+    <img src="img/img3.jpg">
+    <img src="img/img4.jpg">
+    <img src="img/img5.jpg">
+    <img src="img/img6.jpg">
+    <img src="img/img7.jpg">
+    <img src="img/img8.jpg">
+    <img src="img/img9.jpg">
+    <img src="img/img10.jpg">
+    <img src="img/img11.jpg">
+    <img src="img/img12.jpg">
+    <dl class="txtLst box1">
+    	<dt><img src="img/img13.png"></dt>
+    	<dd><span>A《超能陆战队》</span><i class="on"></i></dd>
+        <dd><span>B《星际宝贝》</span><i></i></dd>
+        <dd><span>C《机器人总动员》</span><i></i></dd>
+        <dd><span>D《电子世界争霸战2》</span><i></i></dd>
+    </dl>
+    <dl class="txtLst box2">
+    	<dt><img src="img/img14.png"></dt>
+    	<dd><span>A《超能陆战队》</span><i></i></dd>
+        <dd><span>B《星际宝贝》</span><i></i></dd>
+        <dd><span>C《机器人总动员》</span><i></i></dd>
+        <dd><span>D《电子世界争霸战2》</span><i></i></dd>
+    </dl>
+    <dl class="txtLst box3">
+    	<dt><img src="img/img15.png"></dt>
+    	<dd><span>A《超能陆战队》</span><i></i></dd>
+        <dd><span>B《星际宝贝》</span><i></i></dd>
+        <dd><span>C《机器人总动员》</span><i></i></dd>
+        <dd><span>D《电子世界争霸战2》</span><i></i></dd>
+    </dl>
+    <a class="tijiao" href="###"><img src="img/tijiao.png"></a>
+</article>
+
+</body>
+</html>

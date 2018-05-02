@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script>
+  document.addEventListener('touchstart',function(){},false);
+</script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+setTimeout(function () {
+	$(".topBg img").animate({height:"14.36rem"}, 300);
+	return false;
+}, 100);
+setTimeout(function () {
+	$(".later,.TxtBox,.btmBox,.ago").animate({opacity:"1"}, 300);
+	return false;
+}, 400);
+</script>
+</head>
+
+<body>
+	<article>
+    	<div class="topBg"><img src="img/topBk.png"></div>
+        <div class="ago" style="display:none;">
+        	<a href="###"><img class="btn1" src="img/btn1.png"></a>
+        </div>
+        <dl class="later">
+        	<dt><p>云抢票体验券已放入您的携程帐号</p><a href="###"><img src="img/look.png"></a></dt>
+            <dd><a href="###"><img src="img/btn2.png"></a></dd>
+            <dd><a href="###"><img src="img/btn3.png"></a></dd>
+        </dl>
+        <div class="TxtBox">
+        	<img class="tit" src="img/tit.png">
+            <dl>
+            	<dt>亮点1：</dt>
+                <dd>不消耗流量&电量极速云抢票，携程公司级服务器刷票一旦出现余票，光速秒抢！</dd>
+                <dt>亮点2：</dt>
+                <dd>首创7*24小时VIP抢票在原先7点--23点的抢票基础上全天24小时为您抢票大数据显示，夜间为火车票放票高峰期</dd>
+                <dt>亮点3：</dt>
+                <dd>海量数据支持依靠携程亿万次全国出行数据可以轻松算出您的云抢票成功率为你制定出行方案提供支持</dd>
+            </dl>
+        </div>
+        <div class="btmBox"><img src="img/txt.png"></div>
+    </article>
+</body>
+</html>

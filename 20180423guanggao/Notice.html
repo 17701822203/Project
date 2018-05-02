@@ -1,0 +1,56 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="TopBox"><img src="img/toutu.png"></div>
+    <dl class="TxtBox">
+        <dt>TrainPal - Saving you real money by splitting tickets.</dt>
+        <dd>
+            <p>There are amber and yellow weather warnings for snow and ice across Britain this week. A red weather warning has been issued for today  for parts of Scotland. Disruption to your train journey may continue today and tomorrow.</p>
+            <p>A number of Train Operating Companies have issued warnings of service changes, or disruption to your journey. We will update this page if more areas or Train Operating Companies become affected.</p>
+            <p>For more details, please check here: http://<br/>www.nationalrail.co.uk/service_disruptions/185048.aspx</p>
+        </dd>
+    </dl>
+</body>
+</html>
+

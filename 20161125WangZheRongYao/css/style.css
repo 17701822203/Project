@@ -1,0 +1,143 @@
+/*Created by huang.jun on 16-11-24*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Microsoft YaHei";background:#fff;}
+
+.top-bg{height:29.5rem;background:url("../img/top-bg.jpg") no-repeat;background-size:100% 100%;position:relative;}
+.gy{height:17.275rem;background:url("../img/gy.png") no-repeat;background-size:100% 17.275rem;display:block;-webkit-animation:guangyun 2s 0.4s infinite;}
+.wrap{height:34.175rem;background:url("../img/main-bg.jpg") no-repeat;background-size:100% 100%;}
+
+/*牌子*/
+.ul-box{padding:1.7rem 0 0 0.7rem;}
+.ul-box li{float:left;margin-top:0.5rem;width:2.875rem;height:5.525rem;font-family:STHeiti;margin-left:0.5rem;}
+.ul-box li figure{position:relative;}
+.ul-box li figure .paizi{display:block;width:2.875rem;height:5.525rem;}
+
+.ul-box li:nth-of-type(1) figure .paizi,
+.ul-box li:nth-of-type(2) figure .paizi,
+.ul-box li:nth-of-type(3) figure .paizi,
+.ul-box li:nth-of-type(4) figure .paizi,
+.ul-box li:nth-of-type(5) figure .paizi,
+.ul-box li:nth-of-type(11) figure .paizi,
+.ul-box li:nth-of-type(12) figure .paizi,
+.ul-box li:nth-of-type(13) figure .paizi,
+.ul-box li:nth-of-type(14) figure .paizi,
+.ul-box li:nth-of-type(15) figure .paizi,
+.ul-box li:nth-of-type(1) figure figcaption,
+.ul-box li:nth-of-type(2) figure figcaption,
+.ul-box li:nth-of-type(3) figure figcaption,
+.ul-box li:nth-of-type(4) figure figcaption,
+.ul-box li:nth-of-type(5) figure figcaption,
+.ul-box li:nth-of-type(11) figure figcaption,
+.ul-box li:nth-of-type(12) figure figcaption,
+.ul-box li:nth-of-type(13) figure figcaption,
+.ul-box li:nth-of-type(14) figure figcaption,
+.ul-box li:nth-of-type(15) figure figcaption{background:url("../img/paizi-bg1.png") no-repeat;background-size:100% 100%;}
+
+.ul-box li:nth-of-type(6) figure .paizi,
+.ul-box li:nth-of-type(7) figure .paizi,
+.ul-box li:nth-of-type(8) figure .paizi,
+.ul-box li:nth-of-type(9) figure .paizi,
+.ul-box li:nth-of-type(10) figure .paizi,
+.ul-box li:nth-of-type(16) figure .paizi,
+.ul-box li:nth-of-type(17) figure .paizi,
+.ul-box li:nth-of-type(18) figure .paizi,
+.ul-box li:nth-of-type(19) figure .paizi,
+.ul-box li:nth-of-type(20) figure .paizi,
+.ul-box li:nth-of-type(6) figure figcaption,
+.ul-box li:nth-of-type(7) figure figcaption,
+.ul-box li:nth-of-type(8) figure figcaption,
+.ul-box li:nth-of-type(9) figure figcaption,
+.ul-box li:nth-of-type(10) figure figcaption,
+.ul-box li:nth-of-type(16) figure figcaption,
+.ul-box li:nth-of-type(17) figure figcaption,
+.ul-box li:nth-of-type(18) figure figcaption,
+.ul-box li:nth-of-type(19) figure figcaption,
+.ul-box li:nth-of-type(20) figure figcaption{background:url("../img/paizi-bg2.png") no-repeat;background-size:100% 100%;}
+
+.ul-box li figure figcaption{position: absolute;top:0;text-align:center;width:2.875rem;height:5.525rem;display:none;}
+.ul-box li figure .paizi span,.ul-box li figure .paizi b{text-align: center;display:block;width:100%;}
+.ul-box li figure .paizi span:nth-of-type(1),.ul-box li figure .paizi span:nth-of-type(2){font-size:0.65rem;}
+.ul-box li figure .paizi span:nth-of-type(1){padding-top:0.8rem;}
+.ul-box li figure .paizi b:nth-of-type(1){font-size:0.7rem;color:#336666;height:0.7rem;line-height:0.7rem;padding-top:0.2rem;}
+.ul-box li .paizi b:nth-of-type(2){font-size:0.65rem;height:0.65rem;line-height:0.65rem;}
+.ul-box li .paizi b:nth-of-type(3){font-size:0.55rem;color:#990000;height:0.55rem;line-height:0.55rem;padding-top:0.2rem;}
+.ul-box li figure .paizi span:nth-of-type(2){padding-top:0.3rem;font-size:0.5rem;height:0.5rem;line-height:0.5rem;}
+.ul-box li figure figcaption b{display:block;width:100%;text-align: center;}
+.ul-box li figure figcaption b:nth-of-type(1){font-size:0.75rem;padding-top:1rem;}
+.ul-box li figure figcaption b:nth-of-type(2){font-size:0.65rem;height:0.65rem;}
+.ul-box li figure figcaption b:nth-of-type(3){font-size:0.75rem;color:#990000;height:0.75rem;padding-top:0.4rem;}
+.ul-box li figure figcaption b:nth-of-type(4){font-size:0.65rem;color:#990000;height:0.65rem;padding-top:0.1rem;}
+
+.ul-box li figure.Positive figcaption{-webkit-animation:zhuan 1s 0.2s forwards;display: block;width: 2.875rem;height: 5.525rem;}
+.ul-box li figure.Positive figcaption b{-webkit-animation:zhuan2 1s 0.1s forwards;}
+.ul-box li figure.Positive2 figcaption{-webkit-animation:zhuan3 1s linear 0ms infinite normal forwards;}
+/*.ul-box li figure.Positive2 figcaption b{-webkit-animation:zhuan4 1s 0.1s forwards;}*/
+.Positive{-webkit-animation:Positive 1s 0s forwards;}
+.Positive2{-webkit-animation:Positive2 1s 0s forwards;}
+/******动画******/
+@-webkit-keyframes guangyun
+{
+    0%{opacity:1;}
+    50%{opacity:0.6;}
+    100%{opacity:1;}
+}
+@-webkit-keyframes Positive
+{
+    from{-webkit-transform:rotateY(0deg);}
+    to{-webkit-transform:rotateY(180deg);}
+}
+@-webkit-keyframes Positive2
+{
+    from{-webkit-transform:rotateY(180deg);}
+    to{-webkit-transform:rotateY(0deg);}
+}
+@-webkit-keyframes zhuan
+{
+    from{opacity:1;}
+    to{opacity:1;}
+}
+@-webkit-keyframes zhuan2
+{
+    from{opacity:1;-webkit-transform:rotateY(0deg)}
+    to{opacity:1;-webkit-transform:rotateY(180deg)}
+}
+@-webkit-keyframes zhuan3
+{
+    from{display:none;}
+    to{display:block;}
+}
+/*@-webkit-keyframes zhuan4*/
+/*{*/
+    /*from{opacity:1;-webkit-transform:rotateY(180deg)}*/
+    /*to{opacity:0;-webkit-transform:rotateY(0deg)}*/
+/*}*/
+
+.btn-box{text-align:center;padding-top:1rem;clear: both;}
+.btn-box a{width:8.225rem;height:3.5rem;background:url("../img/btn.png") no-repeat;background-size:100% 100%;display:inline-block;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

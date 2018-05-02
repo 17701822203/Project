@@ -1,0 +1,128 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
+    <script>
+        var fontSize = 0;
+
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        $(document).ready(function(){
+            $(".Magnifier").click(function(){
+                $(".big-img,.shadow").fadeIn();
+            })
+            $(".hdgz").click(function(){
+                $(".pop-box,.shadow").fadeIn();
+            })
+            $(".shadow,.close").click(function(){
+                $(".big-img,.pop-box,.shadow").fadeOut();
+            })
+        })
+    </script>
+</head>
+<body>
+    <section>
+        <!--黑色遮罩-->
+        <div class="shadow" style="display:none;"></div>
+        <!--图片放大-->
+        <img style="display:none;" class="big-img" src="img/big-img.jpg">
+        <!--活动详情-->
+        <dl class="pop-box" style="display:none;">
+            <dt>活动规则</dt>
+            <dd>
+                <p>即日起至2017年1月24日，凡下单购买Italo火车票，即赠送欧洲不限流量上网卡。越早预订，越容易获得优惠票价。</p>
+                <p>一天卡，普快包邮，下单时请务必备注好联系方式和地址。您的手机在国内支持联通网络或者是全网通手机就可使用此卡。（注意：合约机、定制机、有琐机、解琐机、港版机不能使用）</p>
+                <p>欧洲34国覆盖：爱沙尼亚、爱尔兰、奥地利、保加利亚、比利时、冰岛、波兰、丹麦、德国、芬兰、法国、黑山、荷兰、捷克、克罗地亚、拉脱维亚、立陶宛、卢森堡、罗马尼亚、马耳他、挪威、葡萄牙、瑞典、瑞士、塞浦路斯、斯洛伐克、斯洛文尼亚、土耳其、乌克兰、希腊、匈牙利、西班牙、意大利、英国。</p>
+            </dd>
+            <a class="close" href="###"></a>
+        </dl>
+    </section>
+    <article>
+        <div class="img-bg">
+        </div>
+        <div class="introduce">
+            <dl class="Product-introduction">
+                <dt>法拉利Italo</dt>
+                <dd>
+                    <p>意大利第二大铁路公司NTV（Nuovo Trasporto Viaggiatori）所运营的高速列车。优雅时尚的红色法拉利Italo列车，运行时速高达360公里，连接意大利各个主要城市。凭借车票参考编号，即可便利登车。</p>
+                </dd>
+            </dl>
+            <a class="reservation-button" href="###"></a>
+            <i class="Magnifier"></i>
+        </div>
+        <div class="Product-list">
+            <strong class="top-title">当地酒店推荐</strong>
+            <dl>
+                <dt><img src="img/landmark1.jpg"></dt>
+                <dd>
+                    <h3>米兰</h3>
+                    <p>古典与摩登的完美融合</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/landmark2.jpg"></dt>
+                <dd>
+                    <h3>罗马</h3>
+                    <p>露天历史博物馆</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/landmark3.jpg"></dt>
+                <dd>
+                    <h3>威尼斯</h3>
+                    <p>这座水城，浪漫，神秘</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/landmark4.jpg"></dt>
+                <dd>
+                    <h3>博洛尼亚</h3>
+                    <p>低调，保守，却又典雅</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/landmark5.jpg"></dt>
+                <dd>
+                    <h3>佛罗伦萨</h3>
+                    <p>人文主义贯注于整个花都</p>
+                </dd>
+            </dl>
+            <dl>
+                <dt><img src="img/landmark6.jpg"></dt>
+                <dd>
+                    <h3>那不勒斯</h3>
+                    <p>阳光和欢乐之城</p>
+                </dd>
+            </dl>
+        </div>
+    </article>
+</body>
+</html>

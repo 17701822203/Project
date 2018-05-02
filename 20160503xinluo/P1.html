@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body>
+	<article>
+    	<img src="img/P2Bg.jpg">
+        <dl class="stepBox step1">
+        	<dt>新罗网上免税店提前下单<br/>回程机场取货更方便</dt>
+            <dd>
+            	<p><a href="###">加入会员获得积分</a></p>
+            	<p><a href="###">网上会员专享优惠</a></p>
+            </dd>
+        </dl>
+        <dl class="stepBox step2">
+        	<dt>打车到新罗可以报销打车费<br/>最高可报销2万韩币</dt>
+            <dd>
+            	<p><a href="###">首尔打车报销费</a></p>
+            	<p><a href="###">济州打车报销费</a></p>
+            </dd>
+        </dl>
+        <dl class="stepBox step3">
+        	<dt>在免税店购买商品可兑换<br/>韩国旅行必备-畅游礼包</dt>
+            <dd>
+            	<p><a href="###">首尔畅游礼包</a></p>
+            	<p><a href="###">济州畅游礼包</a></p>
+            </dd>
+        </dl>
+        <dl class="stepBox step4">
+        	<dt>在新罗仁川机场免税店<br/>提货补货满足购物欲</dt>
+            <dd>
+            	<p><a href="###">仁川机场代金卷</a></p>
+            	<p><a href="###">机场提货指南</a></p>
+            </dd>
+        </dl>
+    </article>
+</body>
+</html>

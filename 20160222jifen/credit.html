@@ -1,0 +1,115 @@
+<html class="ie">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body>
+
+	<div class="headTop">
+        <h1>我的积分</h1>
+    </div>
+    
+	<article>
+    
+    	<div class="credit_top">
+        	<div class="credit1">
+                <h2>积分</h2>
+                <span><a href="###">积分规则&gt;</a></span>
+            </div>
+            <div class="credit2">800</div>
+            <div class="credit3">
+            	<button>积分商城</button>
+                <button>兑换记录</button>
+            </div>
+        </div>
+        
+        
+        <div class="credit_tab_box">
+        
+            <div class="credit_lst_tit">
+                <span>本月</span>
+                <span>积分明细</span>
+            </div>
+        
+            <div class="credit_tab">
+                <div class="left">今天<br/>03:01</div>
+                <div class="center"><img src="img/renwu.png"></div>
+                <div class="right">
+                    <strong>-100</strong>
+                    <p>1元抗皱除稳面霜</p>
+                </div>
+            </div>
+            
+            <div class="credit_tab">
+                <div class="left">今天<br/>03:01</div>
+                <div class="center"><img src="img/renwu.png"></div>
+                <div class="right">
+                    <strong>-100</strong>
+                    <p>1元抗皱除稳面霜</p>
+                </div>
+            </div>
+            
+            <div class="credit_tab">
+                <div class="left">今天<br/>03:01</div>
+                <div class="center"><img src="img/renwu.png"></div>
+                <div class="right">
+                    <strong>-100</strong>
+                    <p>1元抗皱除稳面霜</p>
+                </div>
+            </div>
+
+            <div class="credit_tab">
+                <div class="left">今天<br/>03:01</div>
+                <div class="center"><img src="img/renwu.png"></div>
+                <div class="right">
+                    <strong>-100</strong>
+                    <p>1元抗皱除稳面霜</p>
+                </div>
+            </div>
+        
+            <div class="credit_lst_tit">
+                <span>1月</span>
+            </div>
+        
+            <div class="credit_tab">
+                <div class="left">今天<br/>03:01</div>
+                <div class="center"><img src="img/renwu.png"></div>
+                <div class="right">
+                    <strong>-100</strong>
+                    <p>1元抗皱除稳面霜</p>
+                </div>
+            </div>
+
+            <div class="credit_tab">
+                <div class="left">今天<br/>03:01</div>
+                <div class="center"><img src="img/renwu.png"></div>
+                <div class="right">
+                    <strong>-100</strong>
+                    <p>1元抗皱除稳面霜</p>
+                </div>
+            </div>
+        
+        </div>
+        
+    </article>
+
+</body>
+</html>

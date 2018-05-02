@@ -1,0 +1,80 @@
+/*Created by huang.jun on 17-12-05*/
+*{margin:0;padding:0;}
+a{text-decoration:none;-webkit-tap-highlight-color:transparent;
+  &:active{opacity:.7;}
+}
+ol,ul,li{list-style:none;}
+body{font-family:PingFang-SC-Regular,sans-serif;-webkit-text-size-adjust: 100% !important;text-size-adjust: 100% !important;-moz-text-size-adjust: 100% !important; }
+.shadow{width:100%;height:100%;position:fixed;z-index:20;background:#000;opacity:.6;top:0;left:0;}
+.img-box{font-size:0;
+  img{width:100%;}
+}
+//四角的半径定制.border-radius-custom(20px, 20px, 0px, 0px);
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+  border-radius: @topleft @topright @bottomright @bottomleft;
+}
+//方块阴影.box-shadow(5px, 5px, 6px, 0.3);
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: .5) {
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+//圆角.border-radius(@radius:5px)
+.border-radius(@radius:5px){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+//input默认字体.placeholder({color:#666;});
+.placeholder(@a){
+  &::-webkit-input-placeholder{@a();}
+  &:-moz-placeholder{@a();}
+  &::-moz-placeholder{@a();}
+  &:-ms-input-placeholder{@a();}
+}
+//线性渐变.gradient(left, #663333, #333333);
+.gradient(@origin:left,@start:#fff,@stop:#000){
+  background-color:@start;
+  background-image:-webkit-linear-gradient(@origin,@start,@stop);
+  background-image:-moz-linear-gradient(@origin,@start,@stop);
+  background-image:-o-linear-gradient(@origin,@start,@stop);
+  background-image:-ms-linear-gradient(@origin,@start,@stop);
+  background-image:linear-gradient(@origin,@start,@stop);
+}
+//清除浮动
+.ClearBox{
+  &:after,&:before{content: " ";display: table;clear: both;}
+}
+
+.ImgBg{.img-box;padding-bottom:3rem;background:#CC3046;
+  li{
+    &:nth-of-type(1){position:relative;
+      .LogoCtrip,.LogoTieyou,.LogoZhixing{position: absolute;left:3%;top:5%;width:26%;}
+    }
+    &:last-child{position:relative;
+      .ShareBtn{position:absolute;left:0;top:14%;width:100%;text-align:center;
+        dt{font-size:.8rem;color:#f8f2d6;line-height:.8rem;}
+        dd{padding:1rem 2rem 0 2rem;
+          a{display:block;height:2.55rem;line-height:2.55rem;background:#FE9F07;color:#962a20;font-size:1.2rem;.border-radius(@radius:2.55rem);}
+        }
+      }
+    }
+  }
+}
+.FixBtn{position: fixed;left:0;bottom:0;width:100%;
+  li{float:left;width:50%;
+    span{display:block;height:3rem;color:#F8EDC5;text-align:center;line-height:3rem;
+      &.Btn1{.gradient(left,#E7261D,#EE6014);}
+      &.Btn2{.gradient(left,#FF7400,#FF9800);}
+      &:active{opacity:.7;}
+    }
+  }
+}
+
+
+
+
+
+

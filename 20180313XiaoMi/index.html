@@ -1,0 +1,411 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/parts.js"></script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+<!--弹窗-->
+<section style="display:none;">
+    <div class="shadow"></div>
+    <!--到账提醒-->
+    <div class="Popup" style="display:none;">
+        <div class="PopupTitle">您已成功助攻</div>
+        <p class="PopupTxt">10元火车票优惠券<br/>已存放至135****2075</p>
+        <div class="PopupBtn"><a href="###">立即使用</a></div>
+        <i class="CloseBtn"></i>
+    </div>
+    <!--好友助攻-->
+    <div class="Popup" style="display:none;">
+        <div class="PopupTitle">您已成功助攻</div>
+        <div class="CouponBox">
+            <h4>好友送你</h4>
+            <div class="CouponWrap">
+                <div class="Coupon1">
+                    <span>&yen;</span>
+                    <b>3</b>
+                    <small>3元优惠券<i>火车票</i></small>
+                </div>
+                <div class="Coupon1">
+                    <span>&yen;</span>
+                    <b>3</b>
+                    <small>3元优惠券<i>火车票</i></small>
+                </div>
+            </div>
+        </div>
+        <div class="PopupBtn"><a href="###">立即使用</a></div>
+        <i class="CloseBtn"></i>
+    </div>
+    <!--好友助攻-->
+    <div class="Popup" style="display:;">
+        <div class="PopupTitle">恭喜获得</div>
+        <div class="CouponBox">
+            <div class="CouponWrap">
+                <div class="Coupon2">
+                    <span>&yen;</span>
+                    <b>10</b>
+                    <small>3元优惠券<i>火车票</i></small>
+                </div>
+                <div class="CouponBtmTxt">可累计砍价获得更高价值出行优惠</div>
+            </div>
+        </div>
+        <div class="PopupBtn"><a href="###">立即使用</a></div>
+        <i class="CloseBtn"></i>
+    </div>
+
+</section>
+<div class="img-box TopBox"><img src="img/TopBg.jpg"></div>
+<div class="WrapBg">
+    <!--倒计时-->
+    <div class="TopTimeBox">
+        <dl class="TopTimeL">
+            <dt>赢免单倒计时</dt>
+            <dd>
+                <span class="white">2</span>
+                <span class="white">4</span>
+                <span>:</span>
+                <span class="white">0</span>
+                <span class="white">0</span>
+                <span>:</span>
+                <span class="white">0</span>
+                <span class="white">0</span>
+            </dd>
+        </dl>
+        <a class="TopTimeR" href="###">活动规则</a>
+    </div>
+
+    <!--出发到达-->
+    <div class="DisplayBox">
+        <div class="DisplayTop">
+            <dl class="chufa">
+                <dt>出发城市</dt>
+                <dd><input type="text" placeholder="上海虹桥"></dd>
+            </dl>
+            <dl class="daoda">
+                <dt>出发城市</dt>
+                <dd><input type="text" placeholder="北京南"></dd>
+            </dl>
+            <div>
+                <span>&yen;</span>
+                <big>?</big>
+                <small>起</small>
+            </div>
+        </div>
+        <div class="DisplayBtm">
+            <div class="DisplayTips">还差<span>3个</span>好友助攻，就能得到5元火车出行优惠了</div>
+            <div class="TargetBox">
+                <div class="TargetBorBg1">
+                    <span class="TargetTopTxt1">&yen;0</span>
+                    <span class="TargetTopTxt2">&yen;5</span>
+                    <span class="TargetTopTxt3">&yen;10</span>
+                    <span class="TargetTopTxt4">&yen;20</span>
+                    <span class="TargetTopTxt5">&yen;30</span>
+                    <span class="TargetTopTxt6">免单</span>
+                    <span class="TargetBtmTxt1">0人</span>
+                    <span class="TargetBtmTxt2">3人</span>
+                    <span class="TargetBtmTxt3">8人</span>
+                    <span class="TargetBtmTxt4">15人</span>
+                    <span class="TargetBtmTxt5">25人</span>
+                    <span class="TargetBtmTxt6"></span>
+                    <div class="TargetBorBg2">
+                        <div class="TargetBorBg3" style="width:20%;"><!--进度条--></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="TipsTxt">每天获得助攻最多的前3位可免单出行</div>
+    <div style="display:none;" class="ShareBtn"><a href="###" class="BigBtn"></a></div>
+    <!--参与活动的好友页按钮-->
+    <div class="ShareBtn">
+        <a class="BtnLeft" href="###"><img src="img/Button1.png"></a>
+        <a class="BtnRight" href="###"><img src="img/Button2.png"></a>
+    </div>
+
+    <!--公告-->
+    <div class="News">
+        <div class="horn my-scroll">
+            <span>公告</span>
+            <ul>
+                <li>用户138xxxx2456获得0元火车票</li>
+                <li>用户138xxxx2456获得0元火车票</li>
+                <li>用户138xxxx2456获得0元火车票</li>
+                <li>用户138xxxx2456获得0元火车票</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--助攻的小伙伴-->
+    <div class="FriendBox">
+        <div class="FriendTitle"></div>
+        <div class="Friend">
+            <div class="Ranking">
+                <div class="RankingList">
+                    <span class="UserNumber">05</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">04</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">03</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">02</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">01</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">05</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">04</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">03</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">02</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">01</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Tab-->
+    <div class="js_tab box1">
+        <ul class="jsTab_title">
+            <li class="on">帮你助攻的小伙伴</li>
+            <li>可领取的优惠</li>
+        </ul>
+        <div class="jsTab_con" style="display: block;">
+            <div class="Ranking">
+                <div class="RankingList">
+                    <span class="UserNumber">05</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">04</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">03</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">02</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">01</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">05</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">04</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">03</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">02</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+                <div class="RankingList">
+                    <span class="UserNumber">01</span>
+                    <img class="UserImg" src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg">
+                    <span class="UserName">麦*上助攻了你</span>
+                    <span class="UserTxt">感谢老铁支持</span>
+                </div>
+            </div>
+        </div>
+        <div class="jsTab_con">
+            <div class="VoucherBox">
+                <a class="Voucher1" href="###">
+                    <div class="VoucherLeft">
+                        <span>&yen;</span>
+                        <b>5</b>
+                        <small>火车票5元优惠券
+                            <i>火车票</i>
+                        </small>
+                    </div>
+                    <div class="VoucherRight"><span>现在<br/>使用</span></div>
+                </a>
+                <a class="Voucher2" href="###">
+                    <div class="VoucherLeft">
+                        <span>&yen;</span>
+                        <b>5</b>
+                        <small>火车票5元优惠券
+                            <i>火车票</i>
+                        </small>
+                    </div>
+                    <div class="VoucherRight"><span>现在<br/>使用</span></div>
+                </a>
+                <a class="Voucher3" href="###">
+                    <div class="VoucherLeft">
+                        <span>&yen;</span>
+                        <b>5</b>
+                        <small>火车票5元优惠券
+                            <i>火车票</i>
+                        </small>
+                    </div>
+                    <div class="VoucherRight"><span>现在<br/>使用</span></div>
+                </a>
+                <a class="Voucher4" href="###">
+                    <div class="VoucherLeft">
+                        <span>&yen;</span>
+                        <b>5</b>
+                        <small>火车票5元优惠券
+                            <i>火车票</i>
+                        </small>
+                    </div>
+                    <div class="VoucherRight"><span>现在<br/>使用</span></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--热门城市-->
+    <div class="CityWrap">
+        <div class="CityBox">
+            <div class="CityTitle"></div>
+            <div class="CityList ClearBox">
+                <div class="CityImg"><img src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg"></div>
+                <div class="CityProject">
+                    <h4>上海周边城市景点</h4>
+                    <p>上海城市周边景点介绍，上海城市周边景点介绍，上海城市周边景点介绍...</p>
+                    <div><a href="###">查看详情</a></div>
+                </div>
+            </div>
+            <div class="CityList ClearBox">
+                <div class="CityImg"><img src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg"></div>
+                <div class="CityProject">
+                    <h4>上海周边城市景点</h4>
+                    <p>上海城市周边景点介绍，上海城市周边景点介绍，上海城市周边景点介绍...</p>
+                    <div><a href="###">查看详情</a></div>
+                </div>
+            </div>
+            <div class="CityList ClearBox">
+                <div class="CityImg"><img src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg"></div>
+                <div class="CityProject">
+                    <h4>上海周边城市景点</h4>
+                    <p>上海城市周边景点介绍，上海城市周边景点介绍，上海城市周边景点介绍...</p>
+                    <div><a href="###">查看详情</a></div>
+                </div>
+            </div>
+            <div class="CityList ClearBox">
+                <div class="CityImg"><img src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg"></div>
+                <div class="CityProject">
+                    <h4>上海周边城市景点</h4>
+                    <p>上海城市周边景点介绍，上海城市周边景点介绍，上海城市周边景点介绍...</p>
+                    <div><a href="###">查看详情</a></div>
+                </div>
+            </div>
+            <div class="CityList ClearBox">
+                <div class="CityImg"><img src="https://dimg04.c-ctrip.com/images/30060k000000bwidr765D_C_500_280.jpg"></div>
+                <div class="CityProject">
+                    <h4>上海周边城市景点</h4>
+                    <p>上海城市周边景点介绍，上海城市周边景点介绍，上海城市周边景点介绍...</p>
+                    <div><a href="###">查看详情</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

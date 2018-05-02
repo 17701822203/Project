@@ -1,0 +1,26 @@
+/*Created by huang.jun on 16-08-12*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB";}
+
+.TopBox1{width:7.5rem;height:6.25rem;background:url("../img/Bg1.jpg") no-repeat;background-size:7.5rem 6.25rem;}
+.TopBox2{width:7.5rem;height:7.33rem;background:url("../img/Bg2.jpg") no-repeat;background-size:7.5rem 7.33rem;}
+.TopBox3{width:7.5rem;height:11.64rem;background:url("../img/Bg3.jpg") no-repeat;background-size:7.5rem 11.64rem;}
+.BorBox{width:7.39rem;height:2.41rem;position: relative;padding-top:0.6rem;margin:0 auto;}
+.title1,.title2,.title3{position: absolute;width:2.55rem;height:1.86rem;left:0;top:0.74rem;}
+.title1{background:url("../img/wen.png") no-repeat;background-size:contain;}
+.title2{background:url("../img/zhun.png") no-repeat;background-size:contain;}
+.title3{background:url("../img/heng.png") no-repeat;background-size:contain;}
+.bor{width:6.81rem;height:2.41rem;background:url("../img/bor.png") no-repeat;background-size:contain;position: absolute;right:0;top:0.6rem;}
+.bor dl{padding:0.4rem 0 0 1.8rem;}
+.bor dl dt{font-size:0.34rem;font-weight: bold;color:#00ffea;padding:0rem 0 0 0.76rem;line-height:0.4rem;}
+.bor dl dd{font-size:0.26rem;color:#fff;line-height:0.48rem;padding-top:0.1rem;letter-spacing: 0.02rem;}
+
+.btn{width:3.84rem;height:0.98rem;background:url("../img/btn.png") no-repeat;background-size:contain;border:0;position: absolute;left:50%;margin-left:-1.92rem;top:23.2rem;}
+.btn:active{opacity:0.6;}
+
+
+
+

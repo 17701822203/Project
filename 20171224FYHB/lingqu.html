@@ -1,0 +1,120 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#F1F1F1;">
+    <view class="LayerBox">
+        <text>匹配失败 再试一次</text>
+    </view>
+    <view class="LingQuTop">
+        <!--<view class="LingQuTx"><img src="http://img2.imgtn.bdimg.com/it/u=2450994032,3525797548&amp;fm=27&amp;gp=0.jpg"><text>Mavis</text></view>-->
+        <!--<text class="LingQuTopText">一二三四五六</text>-->
+        <!--<view class="Money"><text class="MoneyBig">1.00</text><text class="MoneySmall">元</text></view>-->
+        <!--<view class="LingQuTopBtn"><button>按住说出以上口令开红包</button></view>-->
+        <view class="LingQuTopAn">
+            <text class="TextLeft">我的红包</text>
+            <text class="TextCenter">发红包</text>
+            <text class="TextRight">去转发</text>
+        </view>
+
+
+        <!--<view class="UserBox">-->
+            <!--<view class="UserLeft"><img src="http://img2.imgtn.bdimg.com/it/u=2450994032,3525797548&amp;fm=27&amp;gp=0.jpg"></view>-->
+            <!--<view class="UserRight">-->
+                <!--<view class="UserRightTxt1">Mavis</view>-->
+                <!--<view class="UserRightTxt2">发了一个语音红包</view>-->
+            <!--</view>-->
+        <!--</view>-->
+        <!--<view class="VoiceBtn"><img src="img/Btn2.png"></view>-->
+        <!--<view class="VoiceTopTxt">-->
+            <!--<text class="VoiceTxtBig">老板新年大赚</text><text class="VoiceTxtSmall">（潮汕话）</text>-->
+        <!--</view>-->
+        <!--<view class="TranslateWrap">-->
+            <!--<text class="TranslateWrapTop">参考发音：</text>-->
+            <!--<text class="TranslateWrapBtm">lao bang xin ni dua tan glao bang xin ni dua tang lao bang xin ni dua tang</text>-->
+        <!--</view>-->
+        <!--<view class="Price2">-->
+            <!--<text class="Big">1.00</text><text class="Small">元</text>-->
+        <!--</view>-->
+        <!--<view class="LingQuTopAn">-->
+            <!--<text class="TextLeft">我的红包</text>-->
+            <!--<text class="TextCenter">发红包</text>-->
+            <!--<text class="TextRight">去转发</text>-->
+        <!--</view>-->
+        <view class="LingQuTx"><img src="http://img2.imgtn.bdimg.com/it/u=2450994032,3525797548&amp;fm=27&amp;gp=0.jpg"><text>Mavis</text></view>
+        <view class="VoiceBtm">
+            <text class="VoiceBtmTxt">发了一个语音红包</text>
+            <view class="VoiceBtmBtn"><img src="img/Btn2.png"></view>
+        </view>
+        <view class="LingQuTopBtn" style="margin-top:2.1rem;"><button>按住说出以上口令开红包</button></view>
+    </view>
+    <view class="LingQuBtm">
+        <text class="Balance">共88.88元，已领取2/3个</text>
+        <!--<text class="RobText1">还没有人成功领取，赶紧抢！</text>-->
+        <!--<text class="RobText2">未领取的金额，将于24小时后退回你的钱包</text>-->
+        <view class="MoneyListWrap">
+            <view class="MoneyList">
+                <view class="MoneyTx"><img src="http://img2.imgtn.bdimg.com/it/u=2450994032,3525797548&amp;fm=27&amp;gp=0.jpg"></view>
+                <view class="Voice">
+                    <text class="Male">喵球<img src="img/Male.png"></text>
+                    <view class="VoiceBox"><img src="img/Btn.png"></view>
+                </view>
+                <view class="Date">
+                    <text class="Price">1.00&nbsp;元</text>
+                    <text class="Month">12月05日&nbsp;11:29</text>
+                </view>
+            </view>
+            <view class="MoneyList">
+                <view class="MoneyTx"><img src="http://img2.imgtn.bdimg.com/it/u=2450994032,3525797548&amp;fm=27&amp;gp=0.jpg"></view>
+                <view class="Voice">
+                    <text class="Female">喵球<img src="img/Female.png"></text>
+                    <view class="VoiceBox"><img src="img/Btn.png"></view>
+                </view>
+                <view class="Date">
+                    <text class="Price">1.00&nbsp;元</text>
+                    <text class="Month">12月05日&nbsp;11:29</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</body>
+</html>

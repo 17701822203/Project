@@ -1,0 +1,690 @@
+/*Created by huang.jun on 17-09-21*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  opacity: .7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+article {
+  background: #FB3367;
+  padding-bottom: 2.5rem;
+}
+.AnimationBox {
+  font-size: 0;
+  position: relative;
+  overflow: hidden;
+}
+.AnimationBox img {
+  width: 100%;
+}
+.AnimationBox img.Am1 {
+  width: 10%;
+  position: absolute;
+  left: 12%;
+  top: 10%;
+  animation: Block2UpDown 2s infinite linear alternate;
+}
+.AnimationBox img.Am2 {
+  width: 13%;
+  position: absolute;
+  left: 76%;
+  top: 15%;
+  animation: Block3UpDown 1s infinite linear alternate;
+}
+.AnimationBox img.Am3 {
+  width: 32%;
+  position: absolute;
+  left: 0;
+  top: 88%;
+  animation: Train 3s linear infinite;
+}
+.AnimationBox img.logo {
+  position: absolute;
+  left: 1.5%;
+  top: 2%;
+  width: 15%;
+}
+.TitleImg1 {
+  font-size: 0;
+}
+.TitleImg1 img {
+  width: 100%;
+}
+.YellowBox {
+  background: #FCD343;
+  margin: 0 2.7%;
+}
+.CountDown {
+  height: 2rem;
+  background: #FFE487;
+  padding-left: .5rem;
+}
+.CountDown span {
+  float: left;
+}
+.CountDown span.txt1 {
+  font-size: .65rem;
+  line-height: 2rem;
+  padding: 0 .2rem;
+}
+.CountDown span.time1 {
+  width: 1.65rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  background: #FFF7DB;
+  -webkit-border-radius: 0.125rem;
+  -moz-border-radius: 0.125rem;
+  border-radius: 0.125rem;
+  font-size: .8rem;
+  color: #fb3367;
+  font-weight: bold;
+  margin-top: .375rem;
+}
+.CountDown span.txt2 {
+  font-size: .65rem;
+  line-height: 2rem;
+  padding: 0 .2rem;
+}
+.CountDown span.time2 {
+  width: 1.65rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  background: #FFF7DB;
+  -webkit-border-radius: 0.125rem;
+  -moz-border-radius: 0.125rem;
+  border-radius: 0.125rem;
+  font-size: .8rem;
+  color: #fb3367;
+  font-weight: bold;
+  margin-top: .375rem;
+}
+.CountDown span.txt3 {
+  font-size: .65rem;
+  line-height: 2rem;
+  padding: 0 .2rem;
+}
+.CountDown span.time3 {
+  width: 1.65rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  background: #FFF7DB;
+  -webkit-border-radius: 0.125rem;
+  -moz-border-radius: 0.125rem;
+  border-radius: 0.125rem;
+  font-size: .8rem;
+  color: #fb3367;
+  font-weight: bold;
+  margin-top: .375rem;
+}
+.CountDown span.txt4 {
+  font-size: .65rem;
+  line-height: 2rem;
+  padding: 0 .2rem;
+}
+.CountDown a {
+  float: right;
+  width: 3.5rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  color: #fff;
+  background: #FFA422;
+  -webkit-border-radius: 0.125rem;
+  -moz-border-radius: 0.125rem;
+  border-radius: 0.125rem;
+  font-size: .65rem;
+  margin: .375rem .5rem 0 0;
+}
+.CouponBox {
+  padding-bottom: .3rem;
+}
+.CouponBox .CouponTop {
+  padding-top: .625rem;
+}
+.CouponBox .CouponTop:after,
+.CouponBox .CouponTop:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.CouponBox .CouponBtm {
+  padding-top: 0;
+}
+.CouponBox .CouponBtm:after,
+.CouponBox .CouponBtm:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.CouponBox .CouponBg {
+  width: 31%;
+  height: 4.725rem;
+  background: url("../img/CouponBg.png") no-repeat;
+  background-size: 100% 100%;
+  float: left;
+  margin-left: 1.7%;
+}
+.CouponBox .CouponBg dt {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #fb3367;
+  text-align: center;
+  padding-top: .4rem;
+}
+.CouponBox .CouponBg dt small {
+  font-size: .7rem;
+  line-height: .7rem;
+}
+.CouponBox .CouponBg dt b {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+.CouponBox .CouponBg dt p {
+  font-size: .6rem;
+  color: #3c0f0f;
+  text-align: center;
+  line-height: .6rem;
+}
+.CouponBox .CouponBg dt span {
+  font-size: .65rem;
+  font-weight: normal;
+  vertical-align: middle;
+}
+.CouponBox .CouponBg dd {
+  text-align: center;
+  padding-top: .4rem;
+}
+.CouponBox .CouponBg dd a {
+  display: inline-block;
+  width: 4.65rem;
+  height: 1.25rem;
+  background: #FB3763;
+  color: #fff;
+  -webkit-border-radius: 0.125rem;
+  -moz-border-radius: 0.125rem;
+  border-radius: 0.125rem;
+  line-height: 1.25rem;
+  text-align: center;
+  font-size: .6rem;
+}
+.CouponBox .CouponTitle {
+  padding: .5rem 28% .7rem 28%;
+  font-size: 0;
+}
+.CouponBox .CouponTitle img {
+  width: 100%;
+}
+.AppBg {
+  font-size: 0;
+  margin: 0 2.7%;
+  padding-top: .5rem;
+  position: relative;
+}
+.AppBg img {
+  width: 100%;
+  display: block;
+}
+.AppBg .AppBtn {
+  width: 22%;
+  position: absolute;
+  background: url("../img/AppBtn.png") no-repeat;
+  background-size: 100% 100%;
+  right: 2%;
+  top: 24%;
+  animation: AppButton .8s infinite linear alternate;
+}
+.AircraftTitle {
+  font-size: 0;
+  padding: .5rem 2.7% 0 2.7%;
+  position: relative;
+}
+.AircraftTitle img {
+  width: 100%;
+  display: block;
+}
+.AircraftTitle span {
+  font-size: .7rem;
+  color: #3c0f0f;
+  position: absolute;
+  left: 12%;
+  bottom: 12%;
+}
+.AircraftTitle span:after {
+  content: "";
+  position: absolute;
+  width: .575rem;
+  height: .75rem;
+  background: url("../img/Location.png") no-repeat;
+  background-size: 100% 100%;
+  left: -51%;
+  top: 5%;
+}
+.PlaneTicketNav {
+  background: #FFE487;
+}
+.PlaneTicketNav:after,
+.PlaneTicketNav:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.PlaneTicketNav li {
+  float: left;
+  height: 2rem;
+  line-height: 2rem;
+  width: 18.5%;
+  text-align: center;
+  font-size: .7rem;
+}
+.PlaneTicketNav li:nth-of-type(5) {
+  width: 24%;
+}
+.PlaneTicketNav li.on {
+  color: #f1317a;
+}
+.PlaneTicketBox {
+  padding: 0 0 .65rem 0;
+}
+.PlaneTicketBox:after,
+.PlaneTicketBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.PlaneTicketBox .PlaneTicketWrap {
+  float: left;
+  background: #fff;
+  width: 45%;
+  margin-left: 3.2%;
+  margin-top: .5rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  height: 4.55rem;
+  position: relative;
+}
+.PlaneTicketBox .PlaneTicketWrap .CityName {
+  font-size: .7rem;
+  color: #3c0f0f;
+  line-height: .7rem;
+  position: absolute;
+  left: 5%;
+  top: .5rem;
+}
+.PlaneTicketBox .PlaneTicketWrap .Week {
+  font-size: .55rem;
+  line-height: .55rem;
+  color: #B19F9F;
+  position: absolute;
+  left: 5%;
+  top: 1.6rem;
+}
+.PlaneTicketBox .PlaneTicketWrap .Discount {
+  width: 22%;
+  height: .6rem;
+  line-height: .6rem;
+  text-align: center;
+  color: #fb3367;
+  font-size: .5rem;
+  border: 1px solid #FB3367;
+  position: absolute;
+  -webkit-border-radius: 0.05rem;
+  -moz-border-radius: 0.05rem;
+  border-radius: 0.05rem;
+  right: 5%;
+  top: 1.5rem;
+}
+.PlaneTicketBox .PlaneTicketWrap .Price {
+  right: 5%;
+  position: absolute;
+  color: #fb3367;
+  top: .1rem;
+}
+.PlaneTicketBox .PlaneTicketWrap .Price em {
+  font-style: normal;
+  font-size: .6rem;
+  font-family: Arial, sans-serif;
+}
+.PlaneTicketBox .PlaneTicketWrap .Price b {
+  font-size: .8rem;
+  padding-left: .1rem;
+}
+.PlaneTicketBox .PlaneTicketWrap a {
+  position: absolute;
+  background: #FA3764;
+  font-size: .7rem;
+  color: #fff;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  width: 90%;
+  left: 50%;
+  margin-left: -45%;
+  text-align: center;
+  bottom: .425rem;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+}
+.PlaneTicketBox .PlaneTicketWrap:after,
+.PlaneTicketBox .PlaneTicketWrap:before {
+  content: "";
+  position: absolute;
+  width: .075rem;
+  height: .6rem;
+  background: #FCD343;
+  top: 3.075rem;
+}
+.PlaneTicketBox .PlaneTicketWrap:after {
+  left: 0;
+}
+.PlaneTicketBox .PlaneTicketWrap:before {
+  right: 0;
+}
+.HotelTitle {
+  font-size: 0;
+  padding: .5rem 2.7% 0 2.7%;
+  position: relative;
+}
+.HotelTitle img {
+  width: 100%;
+  display: block;
+}
+.HotelTitle span {
+  font-size: .7rem;
+  color: #3c0f0f;
+  position: absolute;
+  left: 12%;
+  bottom: 12%;
+}
+.HotelTitle span:after {
+  content: "";
+  position: absolute;
+  width: .575rem;
+  height: .75rem;
+  background: url("../img/Location.png") no-repeat;
+  background-size: 100% 100%;
+  left: -51%;
+  top: 5%;
+}
+.LingQuanBtn {
+  font-size: 0;
+  padding: 0 .4rem .2rem .4rem;
+  position: relative;
+}
+.LingQuanBtn img {
+  width: 100%;
+}
+.LingQuanBtn a img {
+  width: 16%;
+  position: absolute;
+  right: 6%;
+  top: 10%;
+}
+.HotelNav {
+  background: #FFE487;
+  height: 2rem;
+}
+.HotelNav:after,
+.HotelNav:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.HotelNav li {
+  float: left;
+  line-height: 2rem;
+  width: 30%;
+  text-align: center;
+  font-size: .7rem;
+  color: #3c0f0f;
+}
+.HotelNav li:nth-of-type(2) {
+  width: 40%;
+}
+.HotelNav li.on {
+  color: #f1317a;
+}
+.HotelBox {
+  padding: 0 0 .65rem 1%;
+}
+.HotelBox:after,
+.HotelBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.HotelBox .HotelWrap {
+  float: left;
+  width: 45.5%;
+  margin-left: 2.5%;
+  background: #fff;
+  padding-bottom: 2%;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+  overflow: hidden;
+  margin-top: .5rem;
+}
+.HotelBox .HotelWrap img {
+  display: block;
+  width: 100%;
+}
+.HotelBox .HotelWrap li {
+  padding-left: .65rem;
+}
+.HotelBox .HotelWrap li:nth-of-type(1) {
+  padding: 0;
+}
+.HotelBox .HotelWrap li:nth-of-type(2) {
+  font-size: .7rem;
+  color: #3c0f0f;
+  line-height: .7rem;
+  padding-top: .6rem;
+}
+.HotelBox .HotelWrap li:nth-of-type(3) {
+  font-size: .55rem;
+  line-height: .55rem;
+  color: #B19F9F;
+  padding-top: .35rem;
+  padding-bottom: .3rem;
+}
+.HotelBox .HotelWrap li:nth-of-type(3) span {
+  color: #fb3367;
+  padding-left: .2rem;
+}
+.Extension {
+  padding: 0 .5rem;
+  position: relative;
+}
+.Extension img {
+  width: 100%;
+  padding-top: .5rem;
+}
+.Extension a {
+  width: 4.5rem;
+  height: 1.45rem;
+  position: absolute;
+  background: #F13179;
+  color: #fff;
+  line-height: 1.45rem;
+  text-align: center;
+  left: 10%;
+  bottom: 14%;
+  font-size: .65rem;
+  font-weight: bold;
+  -webkit-border-radius: 0.125rem;
+  -moz-border-radius: 0.125rem;
+  border-radius: 0.125rem;
+}
+.FixedNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 2.25rem;
+  width: 100%;
+  background: rgba(38, 8, 16, 0.95);
+}
+.FixedNav li {
+  float: left;
+  width: 25%;
+  line-height: 2.25rem;
+  font-size: .7rem;
+  text-align: center;
+}
+.FixedNav li.active a {
+  background: rgba(136, 0, 36, 0.95);
+}
+.FixedNav li a {
+  color: #fff;
+  display: block;
+  width: 100%;
+}
+.AMBTN {
+  animation: AppButton .3s infinite linear alternate;
+}
+.GuiZeBox {
+  width: 15rem;
+  height: 16.15rem;
+  background: url("../img/guizeBg.png") no-repeat;
+  background-size: 100% 100%;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -8.075rem;
+  margin-left: -7.5rem;
+  z-index: 12;
+}
+.GuiZeBox .CloseBtn {
+  position: absolute;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: url("../img/close.png") no-repeat;
+  background-size: 100% 100%;
+  right: 0;
+  top: -1.8rem;
+}
+.GuiZeBox .HideBox {
+  overflow-y: scroll;
+  height: 13rem;
+  margin-top: 2.5rem;
+  padding: 0 1.2rem;
+  color: #3c0f0f;
+}
+.GuiZeBox .HideBox p {
+  font-size: .6rem;
+  line-height: 1rem;
+}
+.GuiZeBox .HideBox h4 {
+  font-size: .65rem;
+  padding-top: .4rem;
+  padding-bottom: .2rem;
+}
+.jsTab_con {
+  display: none;
+}
+.jsTab_con:nth-of-type(1) {
+  display: block;
+}
+@keyframes Block2UpDown {
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@-webkit-keyframes Block2UpDown {
+  /* Safari 和 Chrome */
+  from {
+    transform: translateY(-10%);
+  }
+  to {
+    transform: translateY(50%);
+  }
+}
+@keyframes Block3UpDown {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(90%);
+  }
+}
+@-webkit-keyframes Block3UpDown {
+  /* Safari 和 Chrome */
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(90%);
+  }
+}
+@keyframes Train {
+  from {
+    transform: translateX(-130%);
+  }
+  to {
+    transform: translateX(330%);
+  }
+}
+@-webkit-keyframes Train {
+  /* Safari 和 Chrome */
+  from {
+    transform: translateX(-130%);
+  }
+  to {
+    transform: translateX(330%);
+  }
+}
+@keyframes AppButton {
+  from {
+    transform: scale(0.9, 0.9);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+@-webkit-keyframes AppButton {
+  /* Safari 和 Chrome */
+  from {
+    transform: scale(0.9, 0.9);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}

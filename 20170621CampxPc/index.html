@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<!--<script type="text/javascript" src="js/jquery-1.js"></script>-->
+<!--<script src='js/nav.js'></script>-->
+</head>
+
+<body>
+    <div class="nav-height" id="navHeight">
+        <nav class="nav-wrap" id="nav-wrap">
+            <div class="nav-mobile"><img src="img/Logo_Img.png"></div>
+            <ul class="clearfix">
+                <li><a href="#section1" class="active">首页</a></li>
+                <li><a href="#section2">签到兑门票</a></li>
+                <li><a href="#section3">关于campx</a></li>
+                <li><a href="#section4">联系我们</a></li>
+                <li><a href="#section5">加入我们</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="Wrap">
+        <div class="Expect" id="section1">
+            <img src="img/expect.png">
+        </div>
+        <div class="Sign" id="section2">
+            <img src="img/Icon1.png">
+            <dl class="Sign_txt">
+                <dt>玩腻了线上游戏？</dt>
+                <dd>
+                    <p>亚洲首家营地探险线下体验馆强势来袭，巨石岛屿有几个关卡比较<br/>难，先说下最后一关，巨石迷宫3-6的过关心得。</p>
+                </dd>
+                <dd>
+                    <a class="yellow_btn" href="###">签到兑门票</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="Video" id="section3">
+            <video width="1230" height="560" background="#000" controls="controls" autoplay="autoplay">
+                <source src="img/movie.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="Sign2">
+            <img src="img/Icon2.png">
+            <dl class="Sign_txt">
+                <dt>玩腻了线上游戏？</dt>
+                <dd>
+                    <p>亚洲首家营地探险线下体验馆强势来袭，巨石岛屿有几个关卡比较<br/>难，先说下最后一关，巨石迷宫3-6的过关心得。</p>
+                </dd>
+                <dd>
+                    <a class="yellow_btn" href="###">签到兑门票</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="about_us" id="section4">
+            <img src="img/Icon1.png">
+            <dl class="Sign_txt">
+                <dt>联系我们</dt>
+                <dd>
+                    <p>亚洲首家营地探险线下体验馆强势来袭，巨石岛屿有几个关卡比较<br/>难，先说下最后一关，巨石迷宫3-6的过关心得。</p>
+                </dd>
+                <dd>
+                    <a class="yellow_btn" href="###">签到兑门票</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="Join_us" id="section5">
+            <img src="img/Icon2.png">
+            <dl class="Sign_txt">
+                <dt>加入我们</dt>
+                <dd>
+                    <p>亚洲首家营地探险线下体验馆强势来袭，巨石岛屿有几个关卡比较<br/>难，先说下最后一关，巨石迷宫3-6的过关心得。</p>
+                </dd>
+                <dd>
+                    <a class="yellow_btn" href="###">加入我们</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="scanning">
+            <!--<div id="section7"></div>-->
+            <dl>
+                <dt>连续签到21天兑换门票</dt>
+                <dd><img src="img/Ewm.png"></dd>
+                <dd>关注公众号立即签到</dd>
+            </dl>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.navScroll.js"></script>
+    <script>
+        $('.nav-wrap').navScroll({
+            mobileDropdown: true,
+            mobileBreakpoint: 768,
+            scrollSpy: true
+        });
+
+//        $('.click-me').navScroll({
+//            navHeight: 0
+//        });
+
+//        $('.nav').on('click', '.nav-mobile', function (e) {
+//            e.preventDefault();
+//            $('.nav ul').slideToggle('fast');
+//        });
+    </script>
+</body>
+
+</html>

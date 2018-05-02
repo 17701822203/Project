@@ -1,0 +1,331 @@
+/*Created by huang.jun on 17-10-10*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopImg {
+  position: relative;
+}
+.TopImg .CityBtn {
+  height: 1.375rem;
+  line-height: 1.375rem;
+  padding: 0 .5rem 0 1.75rem;
+  color: #fff;
+  font-size: .7rem;
+  position: absolute;
+  left: 0;
+  top: .7rem;
+  background: rgba(251, 51, 103, 0.7);
+  -webkit-border-radius: 0 0.75rem 0.75rem 0;
+  -moz-border-radius: 0 0.75rem 0.75rem 0;
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+.TopImg .CityBtn:after {
+  width: .575rem;
+  height: .75rem;
+  position: absolute;
+  content: "";
+  background: url("../img/fixIcon.png") no-repeat;
+  background-size: 100% 100%;
+  left: .75rem;
+  top: .25rem;
+}
+.TopImg .HotelName {
+  font-size: .85rem;
+  line-height: .85rem;
+  color: #fff;
+  position: absolute;
+  left: .6rem;
+  bottom: .95rem;
+  letter-spacing: .1rem;
+}
+.TopImg .CountDown {
+  height: .875rem;
+  position: absolute;
+  bottom: .95rem;
+  right: .7rem;
+}
+.TopImg .CountDown b {
+  color: #FB3367;
+  font-weight: normal;
+  font-size: .65rem;
+  line-height: .875rem;
+  float: left;
+}
+.TopImg .CountDown span {
+  width: .875rem;
+  height: .875rem;
+  float: left;
+  color: #fff;
+  background: #FB3367;
+  text-align: center;
+  line-height: .875rem;
+  font-family: PingFangHK Semibold;
+  font-size: .7rem;
+  margin-left: .425rem;
+  position: relative;
+  -webkit-border-radius: 0.075rem;
+  -moz-border-radius: 0.075rem;
+  border-radius: 0.075rem;
+}
+.TopImg .CountDown span:nth-of-type(2):after,
+.TopImg .CountDown span:nth-of-type(2):before {
+  width: .075rem;
+  height: .425rem;
+  position: absolute;
+  content: "";
+  background: url("../img/Symbol.png") no-repeat;
+  background-size: 100% 100%;
+  top: .25rem;
+}
+.TopImg .CountDown span:nth-of-type(2):after {
+  left: -0.25rem;
+}
+.TopImg .CountDown span:nth-of-type(2):before {
+  right: -0.25rem;
+}
+.Remind {
+  height: 2.75rem;
+  background: url("../img/TopBg.jpg") no-repeat right top #F7CF49;
+  background-size: 5.5rem 2.75rem;
+}
+.Remind small {
+  float: left;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #8b0125;
+  padding-left: .6rem;
+  margin-top: 1rem;
+  font-family: Arial;
+}
+.Remind big {
+  float: left;
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  color: #8b0125;
+  margin: .3rem 0 0 .2rem;
+}
+.Remind b {
+  float: left;
+  font-weight: normal;
+  font-size: 1rem;
+  padding-top: 1rem;
+  color: #8b0125;
+}
+.Remind dl {
+  float: left;
+  color: #8b0125;
+  font-size: .6rem;
+  text-align: center;
+  line-height: .6rem;
+  margin-left: .3rem;
+}
+.Remind dl dt {
+  margin-top: .7rem;
+}
+.Remind dl dd {
+  margin-top: .35rem;
+  font-family: PingFang-SC Regular;
+}
+.Remind dl dd span {
+  text-decoration: line-through;
+}
+.Remind ul {
+  float: right;
+  padding-right: .6rem;
+  margin-top: .25rem;
+}
+.Remind ul li {
+  text-align: center;
+}
+.Remind ul li:nth-of-type(1) a {
+  display: inline-block;
+  width: 3.45rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  text-align: center;
+  color: #fff;
+  font-size: .6rem;
+  background: #FB3367;
+  -webkit-border-radius: 0.075rem;
+  -moz-border-radius: 0.075rem;
+  border-radius: 0.075rem;
+}
+.Remind ul li:nth-of-type(2) {
+  font-size: .4rem;
+  color: #8b0125;
+  margin-top: .15rem;
+}
+.ListBg {
+  background: url("../img/Bg.jpg") no-repeat #F8494C;
+  background-size: 100% 36.875rem;
+  padding: 1.15rem .5rem 1rem .5rem;
+}
+.ListBg .WrapList {
+  background: #F7D047;
+  padding: 0 0 .7rem .5rem;
+}
+.ListBg .WrapList:after,
+.ListBg .WrapList:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.ListBg .WrapList .Hotel {
+  width: 8rem;
+  height: 8.925rem;
+  background: #fff;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+  overflow: hidden;
+  float: left;
+  margin: .45rem 0 0 .45rem;
+}
+.ListBg .WrapList .Hotel .HotelImg {
+  font-size: 0;
+}
+.ListBg .WrapList .Hotel .HotelImg img {
+  width: 8rem;
+  height: 4.5rem;
+}
+.ListBg .WrapList .Hotel ul {
+  padding: 0 .5rem 0 .5rem;
+}
+.ListBg .WrapList .Hotel ul .HotelName {
+  font-size: .7rem;
+  line-height: .7rem;
+  color: #3c0f0f;
+  font-weight: bold;
+  padding-top: .55rem;
+}
+.ListBg .WrapList .Hotel ul .HotelPrice {
+  font-size: .55rem;
+  line-height: .55rem;
+  padding-top: .3rem;
+  color: #B19F9F;
+}
+.ListBg .WrapList .Hotel ul .HotelPrice span {
+  color: #FB3367;
+}
+.ListBg .WrapList .Hotel ul .HotelBtn {
+  padding-top: .375rem;
+}
+.ListBg .WrapList .Hotel ul .HotelBtn a {
+  display: block;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  color: #fff;
+  text-align: center;
+  background: #FA3765;
+  font-size: .7rem;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+}
+.PopupBox {
+  position: fixed;
+  width: 16.125rem;
+  background: #fff;
+  z-index: 30;
+  left: 50%;
+  margin-left: -8.0625rem;
+  top: 5rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.PopupBox .CloseBtn {
+  width: 1.325rem;
+  height: 1.325rem;
+  background: url("../img/Close.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: -1.95rem;
+  left: 50%;
+  margin-left: -0.6625rem;
+}
+.PopupBox h4 {
+  font-size: .8rem;
+  line-height: .8rem;
+  text-align: center;
+  padding-top: 1.05rem;
+  color: #333;
+}
+.PopupBox dl {
+  padding: 0 1.55rem 1.65rem 0;
+}
+.PopupBox dl dt {
+  font-size: .65rem;
+  line-height: .65rem;
+  color: #999;
+  padding: 1.5rem 0 0 1.8rem;
+}
+.PopupBox dl dd {
+  padding: .3rem 0 0 1.3rem;
+}
+.PopupBox dl dd:after,
+.PopupBox dl dd:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.PopupBox dl dd a {
+  float: left;
+  width: 3.65rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  text-align: center;
+  font-size: .7rem;
+  margin: .5rem 0 0 .5rem;
+  -webkit-border-radius: 0.075rem;
+  -moz-border-radius: 0.075rem;
+  border-radius: 0.075rem;
+}
+.PopupBox dl dd.ctrip a {
+  color: #5495E6;
+  border: 1px solid #5495E6;
+}
+.PopupBox dl dd.tieyou a {
+  color: #FC6E51;
+  border: 1px solid #FC6E51;
+}

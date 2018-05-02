@@ -1,0 +1,52 @@
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Lucida Grande",Verdana,"Microsoft YaHei",hei;}
+article{background:#F1F1B8;padding-bottom:0.4rem;}
+
+.top-bg{width:7.5rem;height:4.96rem;background:url("../img/top-bg.jpg") no-repeat;background-size:contain;}
+.msg{width:7.5rem;height:1.06rem;background:url("../img/gonggao.jpg") no-repeat;background-size:contain;}
+.msg-txt{width:5.8rem;height:1.06rem;line-height:1.06rem;overflow: hidden;margin-left:1.21rem;position: relative;}
+.msg-txt li{font-size:0.34rem;color:#ffffdc;line-height:1.06rem;letter-spacing: 0.06rem;-webkit-animation: txt 11s infinite linear;position: absolute;width:7.5rem;height:1.06rem;}
+@-webkit-keyframes txt{
+    from{left:7rem;}
+    to{left:-7rem;}
+}
+.gonggao{width:7.5rem;height:5.03rem;background:url("../img/top-bg2.jpg") no-repeat;background-size:contain;}
+.gonggao-txt{height:2.2rem;overflow: hidden;}
+.gonggao-txt li{font-size:0.24rem;color:#fff;height:0.4rem;line-height:0.4rem;}
+.gonggao-txt li span{display:block;float: left;}
+.gonggaobox{padding:2.1rem 0 0 1.24rem;}
+.gonggao-txt li span:nth-of-type(1){width:1.66rem;}
+.gonggao-txt li span:nth-of-type(2){width:1.84rem;}
+.gonggao-txt li span:nth-of-type(3){width:1.7rem;}
+
+.btn-box{padding:0.34rem 0 0.59rem 0;text-align: center;height:0.94rem;}
+button{width:5.7rem;height:0.88rem;line-height:0.88rem;background:#CE3A48;border:0;border-bottom:0.06rem solid #9E1D29;font-size:0.56rem;color:#ffecb2;-webkit-border-radius:0.2rem;}
+button:active{border-bottom:0;margin-top:0.06rem;}
+
+.txt-box{width:6.8rem;margin:0 auto;border:0.03rem solid #7B0000;-webkit-border-radius:0.2rem;overflow: hidden;position: relative;}
+.txt-box ol{font-size:0.26rem;color:#862c00;background:#FFFCE1;padding:0.2rem 0.25rem 0.25rem 0.57rem;text-indent: -0.32rem;}
+.txt-box ol li{line-height:0.38rem;margin-top:0.2rem;}
+.title{ position: absolute;width:2.93rem;height:0.59rem;background:url("../img/icon.png") no-repeat;background-size:contain;left:50%;margin-left:-1.465rem;top:-0.29rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

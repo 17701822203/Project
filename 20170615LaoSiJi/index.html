@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+</head>
+<body style="background:#FED749;">
+    <!--弹层-->
+    <section style="display:none;">
+        <div class="shadow"></div>
+        <dl class="lay_box">
+            <dt>恭喜你</dt>
+            <dd>得<span>汽车票免票券</span>一张</dd>
+        </dl>
+    </section>
+    <article class="bg1">
+        <div class="Top_Touch">
+            <i class="Top_Btn shake-slow">
+                <em class="label1"></em>
+            </i>
+        </div>
+        <div class="my-scroll">
+            <ul>
+                <li>138****1545抽到1元汽车票优惠券</li>
+                <li>138****1545抽到1元汽车票优惠券</li>
+                <li>138****1545抽到1元汽车票优惠券</li>
+                <li>138****1545抽到1元汽车票优惠券</li>
+                <li>138****1545抽到1元汽车票优惠券</li>
+            </ul>
+        </div>
+        <div class="Luck_box">
+            <div class="Luck_Top">
+                <h2>您还有<span>2</span>次抽奖</h2>
+                <p>点评订单可以得到更多抽奖机会</p>
+            </div>
+            <div class="Luck_Btm">
+                <!--抽奖-->
+                <ul style="display:none;">
+                    <li>
+                       <h2>9月27日&nbsp;周四&nbsp;14:25</h2>
+                       <p>上海客运总站-苏州</p>
+                       <a href="###">点评</a>
+                   </li>
+                    <li>
+                        <h2>9月27日&nbsp;周四&nbsp;14:25</h2>
+                        <p>上海客运总站-苏州</p>
+                        <a href="###">点评</a>
+                    </li>
+                </ul>
+                <!--抽奖空-->
+                <dl>
+                    <dt>
+                        <p>当前没有订单，<br/>立即购票后可点评抽奖</p>
+                    </dt>
+                    <dd><a href="###">立即购票</a></dd>
+                </dl>
+            </div>
+        </div>
+    </article>
+</body>
+</html>

@@ -1,0 +1,154 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/Progress.js"></script>
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <script>
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 40 * fontSize){
+                $('.nav-wrap').addClass('nav_wrap_fix');
+            }else{
+                $('.nav-wrap').removeClass('nav_wrap_fix');
+            }
+        });
+    </script>
+
+</head>
+<body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var tabs=$(".js_tab");
+        tabs.each(function(){
+            $(this).find(".jsTab_title li").first().addClass("on");
+            $(this).find(".jsTab_con").first().show();
+        });
+        $(".box1").js_tab();
+        $(".box2").js_tab();
+        $(".box3").js_tab();
+        $(".box4").js_tab();
+        $(".box5").js_tab();
+    });
+    (function($){
+        $.fn.extend({
+            "js_tab":function(){
+                $(this).find(".jsTab_title li").each(function(index){
+                    $(this).click(function(){
+                        $(this).siblings("li").removeClass("on");
+                        $(this).addClass("on");
+                        var tab_c=$(this).parents(".js_tab").find(".jsTab_con");
+                        tab_c.hide();
+                        tab_c.eq(index).show();
+                    });
+                    return $(this);
+                });
+            }
+        });
+    })(jQuery);
+</script>
+
+<article ontouchstart="" onmouseover="">
+    <div class="nav img-box">
+        <img class="navBg" src="img/Nav.jpg">
+        <!--链接图片-->
+        <a href="###"><img class="link1" src="img/link.png"></a>
+        <a href="###"><img class="link2" src="img/link.png"></a>
+        <a href="###"><img class="link3" src="img/link.png"></a>
+        <a href="###"><img class="link4" src="img/link.png"></a>
+    </div>
+    <style>
+        .nav{position:relative;}
+        .navBg{width:100%;}
+        .link1,.link2,.link3,.link4{width:25%;position:absolute;top:0;}
+        .link1{left:0;}
+        .link2{left:25%;}
+        .link3{left:50%;}
+        .link4{left:75%;}
+    </style>
+    <div class="Animation img-box">
+        <img src="img/Top.jpg">
+        <img class="TopTitleB" src="img/TopTitleB.png">
+        <img class="TopTitleS" src="img/TopTitleS.png">
+        <img class="House" src="img/HouseIcon.png">
+        <img class="Yacht" src="img/YachtIcon.png">
+        <img class="Bus" src="img/BusIcon.png">
+        <img class="Mask" src="img/Mask.png">
+        <img style="left:3%;bottom:14%;animation:FireworksS 2s linear infinite;" class="FireworksS" src="img/FireworksS.png">
+        <img style="left:5%;top:20%;animation:FireworksB 2s linear infinite;" class="FireworksB" src="img/FireworksB.png">
+        <img style="right:8%;top:7%;animation:FireworksB 2.5s linear infinite;" class="FireworksB" src="img/FireworksB.png">
+        <img style="right:11%;top:7%;animation:FireworksB 2.2s linear infinite;" class="FireworksB" src="img/FireworksB.png">
+        <img style="right:8%;bottom:33%;animation:FireworksS 2.0s linear infinite;" class="FireworksS" src="img/FireworksS.png">
+        <img style="right:60%;top:35%;animation:FireworksB 2.5s linear infinite;" class="FireworksB" src="img/FireworksB.png">
+        <img class="ad1" src="img/ad1.png">
+        <img class="ad2" src="img/ad2.png">
+        <a class="TopBtn" href="###">订车票 抽免单</a>
+    </div>
+    <div style="background:#FFC501;padding:.4rem 0 1.1rem 0;">
+        <div class="horn my-scroll">
+            <ul>
+                <li>1今天免单名单，将于明天10点公布!</li>
+                <li>2今天免单名单，将于明天10点公布!</li>
+                <li>3今天免单名单，将于明天10点公布!</li>
+                <li>4今天免单名单，将于明天10点公布!</li>
+            </ul>
+        </div>
+    </div>
+    <ul class="JsRuleList">
+        <li><img src="img/txt1.png"></li>
+        <li style="margin-top:.1rem;" id="panel"><img src="img/txt2.png"></li>
+    </ul>
+    <div class="adBox"><a href="###"><img src="img/ad.jpg"></a></div>
+</article>
+<script src="js/jquery.navScroll.js"></script>
+<script>
+    $('.nav-wrap').navScroll({
+        mobileDropdown:true,
+        mobileBreakpoint:1,
+        scrollSpy:true
+    });
+</script>
+
+</body>
+</html>
+

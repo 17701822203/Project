@@ -1,0 +1,80 @@
+<html class="ie"><!--<![endif]--><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript" src="js/jquery.rotate.min.js"></script>
+	<script type="text/javascript">
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+        };
+     
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+	
+	$(document).ready(function(){
+		$(".red_btn").click(function(){
+			$("section").show();	
+		})
+		$("section").click(function(){
+			$("section").hide();	
+		})
+		setTimeout(function () {
+			$(".lft").animate({height: "8.502415458937198rem"},2000);
+			return false;
+		}, 100);   
+		setTimeout(function () {
+			$(".lft_icon1,.t1").animate({opacity:"1"},3000);
+			return false;
+		}, 600);   
+		setTimeout(function () {
+			$(".lft_icon2,.t2").animate({opacity:"1"},3000);
+			return false;
+		}, 800);   
+		setTimeout(function () {
+			$(".lft_icon3,.t3").animate({opacity:"1"},3000);
+			return false;
+		}, 1600);  
+		setTimeout(function () {
+			$(".btmBtn .red_btn").animate({opacity:"1"},3000);
+			return false;
+		}, 1600);  
+	})
+    </script>
+</head>
+
+<body>
+	<section style="display:none;">
+    	<div class="shadow"></div>
+        <img class="pop" src="img/share.png">
+    </section>
+	<dl class="top_box">
+    	<dt><img src="img/girl.png"></dt>
+        <dd>亲爱的Charming<br/>携程大数据告诉您：</dd>
+    </dl>
+    <div class="txt_box">
+    	<div class="lft"></div>
+        <img class="lft_icon1" src="img/point.gif">
+        <img class="lft_icon2" src="img/point.gif">
+        <img class="lft_icon3" src="img/point.gif">
+    	<dl class="txt_lst">
+        	<dt class="t1">春节返程我需要翻越<big>1219.6</big>公里</dt>
+            <dd class="t1">返程路上，把我最好的身影留给家乡</dd>
+            <dt class="t2">我的返程难度超过<big>80%</big>的人</dt>
+            <dd class="t2">拼上所有力气，为了对美好的向往</dd>
+            <dt class="t3">有<big>97638</big>位携程用户和我一起，<br/>从<span>乌鲁木齐</span>去往<span>哈尔滨</span></dt>
+            <dd class="t3">我和我的奋斗，永远年轻，在路上</dd>
+        </dl>
+    </div>
+    <div class="btmBtn"><button class="red_btn">和TA分享，你的返程路</button></div>
+    <div class="bottom"><a href="###"><img src="img/logo.png"></a></div>
+</body>
+</html>

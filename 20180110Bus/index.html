@@ -1,0 +1,403 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>酒店年度排行</title>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var tabs=$(".js_tab");
+            tabs.each(function(){
+                $(this).find(".jsTab_title li").first().addClass("on");
+                $(this).find(".jsTab_con").first().show();
+            });
+            $(".Calendar").js_tab();
+//            $(".box2").js_tab();
+//            $(".box3").js_tab();
+//            $(".box4").js_tab();
+//            $(".box5").js_tab();
+        });
+        (function($){
+            $.fn.extend({
+                "js_tab":function(){
+                    $(this).find(".jsTab_title li").each(function(index){
+                        $(this).click(function(){
+                            $(this).siblings("li").removeClass("on");
+                            $(this).addClass("on");
+                            var tab_c=$(this).parents(".js_tab").find(".jsTab_con");
+                            tab_c.hide();
+                            tab_c.eq(index).show();
+                        });
+                        return $(this);
+                    });
+                }
+            });
+        })(jQuery);
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="TopImg"><img src="img/TopImg.jpg"><img class="TopLogo" src="img/Logo.png"><img class="HbBtn" src="img/hb.png"></div>
+    <article>
+        <div class="js_tab Calendar">
+            <ul class="jsTab_title">
+                <li>2018年1月</li>
+                <li>2018年2月</li>
+            </ul>
+            <div class="jsTab_con">
+                <ul class="Week">
+                    <li>一</li>
+                    <li>二</li>
+                    <li>三</li>
+                    <li>四</li>
+                    <li>五</li>
+                    <li>六</li>
+                    <li>日</li>
+                </ul>
+                <ul class="Day">
+                    <li>
+                        <big>1</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>2</big>
+                        <span>初八</span>
+                        <small>可售</small>
+                    </li>
+                    <li class="RedBg">
+                        <big>3</big>
+                        <span>初八</span>
+                        <small>可售</small>
+                    </li>
+                    <li>
+                        <big>4</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>5</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>6</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>7</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>8</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>9</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>10</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>11</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>12</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>13</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>14</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>15</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>16</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>17</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>18</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>19</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>20</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>21</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>22</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>23</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>24</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>25</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>26</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>27</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>28</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>29</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>30</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>31</big>
+                        <span>十六</span>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="jsTab_con">
+                <ul class="Week">
+                    <li>一</li>
+                    <li>二</li>
+                    <li>三</li>
+                    <li>四</li>
+                    <li>五</li>
+                    <li>六</li>
+                    <li>日</li>
+                </ul>
+                <ul class="Day">
+                    <li></li>
+                    <li></li>
+                    <li class="RedBg">
+                        <big>1</big>
+                        <span>十六</span>
+                        <small>可售</small>
+                    </li>
+                    <li class="RedBg">
+                        <big>2</big>
+                        <span>初八</span>
+                        <small>可售</small>
+                    </li>
+                    <li class="RedBg">
+                        <big>3</big>
+                        <span>初八</span>
+                        <small>可售</small>
+                    </li>
+                    <li class="GreenBg">
+                        <big>4</big>
+                        <span>十六</span>
+                        <small>预约</small>
+                    </li>
+                    <li class="GreenBg">
+                        <big>4</big>
+                        <span>十六</span>
+                        <small>预约</small>
+                    </li>
+                    <li class="GreenBg">
+                        <big>4</big>
+                        <span>十六</span>
+                        <small>预约</small>
+                    </li>
+                    <li class="GreenBg">
+                        <big>4</big>
+                        <span>十六</span>
+                        <small>预约</small>
+                    </li>
+                    <li class="GreenBg">
+                        <big>4</big>
+                        <span>十六</span>
+                        <small>预约</small>
+                    </li>
+                    <li class="GreenBg">
+                        <i></i>
+                        <big>4</big>
+                        <span>十六</span>
+                        <small>预约</small>
+                    </li>
+                    <li class="on">
+                        <big>4</big>
+                        <span>十六</span>
+                        <small>预约</small>
+                    </li>
+                    <li>
+                        <big>11</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>12</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>13</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>14</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>15</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>16</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>17</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>18</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>19</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>20</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>21</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>22</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>23</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>24</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>25</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>26</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>27</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>28</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>29</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>30</big>
+                        <span>十六</span>
+                    </li>
+                    <li>
+                        <big>31</big>
+                        <span>十六</span>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="TipsTxt">全国各地汽车站预售开启时间略有差异，请以购票页面为准</div>
+        </div>
+        <div class="img-box"><img src="img/Title.jpg"></div>
+        <div class="search_box">
+            <div class="City">
+                <div class="left">出发地</div>
+                <div class="right">到达地</div>
+                <button class="change"></button>
+            </div>
+            <div class="Date">2月25日<span>明天</span></div>
+            <div class="Btn"><span>立即预约/抢票</span></div>
+        </div>
+        <div class="ChoiceBtn">
+            <span class="chuan"><img src="img/chuan.png"></span>
+            <span class="feiji"><img src="img/feiji.png"></span>
+            <span class="bashi"><img src="img/bashi.png"></span>
+        </div>
+        <ul class="BtmBtn">
+            <li><img src="img/fybwg.png"></li>
+        </ul>
+    </article>
+</body>
+</html>

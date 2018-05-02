@@ -1,0 +1,183 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>免单</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript">
+        document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+        window.addEventListener("resize",setRemSize,false);
+        function setRemSize(){
+            document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+        }
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+
+<body>
+    <article>
+        <div class="top-bg1">
+            <dl class="count-down">
+                <dt>下次开奖倒计时：</dt>
+                <dd>02<span>天</span>09<span>时</span>32<span>分</span>02<span>秒</span></dd>
+            </dl>
+        </div>
+        <div class="scrolled-box">
+            <div class="scrolled">
+                <ul>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                    <li>
+                        <span>2016-6-21</span>
+                        <span>238****263</span>
+                        <span>138****2456</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tips">
+            <p>用户中奖后，铁友客服将马上通过短信联系免单事宜并退还票款。请保持手机畅通。</p>
+        </div>
+        <div class="rules-box">
+            <ul>
+                <li><em>1</em>即日起，在铁友app中购票，即可参与随机免单活动。</li>
+                <li><em>2</em>每张火车票均有一次机会参与抽奖。</li>
+                <li><em>3</em>每天铁友火车票官方将抽取10位幸运会员，其车票款全免，免单金额无上限。中奖信息将在次日中午十二点前在铁友app首页进行公示，周末、节假日顺延。</li>
+                <li><em>4</em>用户中奖后，铁友客服将马上通过短信联系免单事宜并退还票款。请保持手机畅通。</li>
+                <li><em>5</em>本活动，铁友火车票官方对活动规则有最终解释权。</li>
+            </ul>
+        </div>
+    </article>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/fx.js"></script>
+    <script src="js/touch-0.2.14.min.js"></script>
+    <script>
+        $(function(){
+            $(".scrolled").textSlider({
+                speed: 50,
+                line:10
+            });
+        });
+        (function($){
+            $.fn.textSlider = function(options){
+                var defaults = {
+                    speed:40,
+                    line:1
+                };
+
+                var opts = $.extend({}, defaults, options);
+
+                var $timer;
+                function marquee(obj, _speed){
+                    var top = 0;
+                    var margintop;
+                    $timer = setInterval(function(){
+                        top++;
+                        margintop = 0-top;
+                        obj.find("ul").animate({
+                            marginTop: margintop
+                        },0,function(){
+                            var s = Math.abs(parseInt($(this).css("margin-top")));
+                            if(s >= 20){
+                                top = 0;
+                                $(this).css("margin-top", 0);
+                                $(this).find("li").slice(0, 1).appendTo($(this));
+                            }
+                        });
+                    }, _speed);
+                }
+                this.each(function(){
+                    var speed = opts["speed"],line = opts["line"],_this = $(this);
+                    var $ul =_this.find("ul");
+                    if($ul.height() > _this.height()){
+                        marquee(_this, speed);
+                    }
+                    _this.on('touchstart', function(ev){
+                        ev.preventDefault();
+                        clearInterval($timer);
+                    });
+                    _this.on('swipeup', function(ev){
+                        ev.preventDefault();
+                        clearInterval($timer);
+                        if($ul.height() > _this.height()){
+                            for(i=0;i<opts.line;i++){
+                                $ul.find("li").first().appendTo($ul);
+                            }
+                            $ul.css("margin-top",0);
+                        }
+                    });
+                    _this.on('swipedown', function(ev){
+                        ev.preventDefault();
+                        clearInterval($timer);
+                        if($ul.height() > _this.height()){
+                            for(i=0;i<opts.line;i++){
+                                $ul.find("li").first().before($ul.find("li").last());
+                            }
+                            $ul.css("margin-top",0);
+                        }
+                    });
+                    _this.on('touchend',function(ev){
+                        ev.preventDefault();
+                        if($ul.height() > _this.height()){
+                            marquee(_this, speed);
+                        }
+                    });
+                });
+            }
+        })(Zepto);
+    </script>
+</body>
+</html>

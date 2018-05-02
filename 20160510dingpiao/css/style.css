@@ -1,0 +1,52 @@
+/*Created by huang.jun on 16-05-10*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:Microsoft YaHei;background:#FF6A66;}
+
+article{padding-bottom:0.5rem;}
+section{display:none;}
+
+.btn1{width:2.19rem;position:absolute;margin-left:-1.095rem;left:50%;top:4.7rem;}
+.nav{display:block;padding-left:0.25rem;height:2.5rem;}
+.nav li{float:left;font-size:0;padding-top:0.25rem;}
+.nav li:nth-child(even){padding-left:0.25rem;}
+.nav li a,.nav li span{width:2.8rem;background:url(../img/NavBtn1.png) no-repeat;background-size:cover;display:block;height:0.8rem;line-height:0.8rem;text-align:center;font-size:0.3rem;color:#FF4D4D;font-weight:bold;}
+.nav li.txtcor span{background:url(../img/NavBtn2.png) no-repeat;background-size:cover;color:#fff;}
+
+.box{padding:0rem 0.2rem}
+.list{-moz-border-radius:0.2rem;-webkit-border-radius:0.2rem;border-radius:0.2rem;overflow:hidden;display:none;}
+.list dt{background:#5D5D5D;height:0.68rem;line-height:0.68rem;font-size:0.36rem;color:#fff;padding-left:0.2rem;}
+.list dt span{float:left;}
+.list dt span:nth-of-type(1){width:2.5rem;}
+.list dt span:nth-of-type(2){width:1.2rem;}
+.list dd{background:#fff;font-size:0.28rem;float:left;width:100%;}
+.list dd p{padding:0.1rem 0.1rem;border-top:1px solid #5D5D5D;color:#5D5D5D;float:left;width:100%;}
+.list dd p:nth-of-type(1){border:0;}
+.list dd span{float:left;}
+.list dd small{font-weight:normal;font-size:0.2rem;}
+.list dd span:nth-of-type(1){width:2.26rem; font-weight:bold;font-size:0.22rem;margin-top:0.08rem;}
+.list dd span:nth-of-type(2){width:1.3rem; text-align:center;margin-top:0.08rem;}
+.list dd span:nth-of-type(3){width:1rem; text-align:center;margin-top:0.08rem;}
+.list dd span:nth-of-type(4) a{display:block;font-size:0.24rem;background:#06A3E0;color:#fff;height:0.45rem;line-height:0.45rem;width:1.2rem; text-align:center;-moz-border-radius:0.16rem;-webkit-border-radius:0.16rem;border-radius:0.16rem;}
+.shadow{width:100%;height:100%;position:fixed;z-index:1;background:#000;opacity:0.8;top:0;left:0;}
+.boxpOp{width:5.4rem;left:50%;top:1rem;margin-left:-2.7rem;position:absolute;z-index:3;background:#FF6A66;-moz-border-radius:0.2rem;-webkit-border-radius:0.2rem;border-radius:0.2rem;}
+.txtLst{color:#fff;padding:0.4rem 0.2rem 0.2rem 0.2rem;}
+.txtLst dt{ font-size:0.3rem; position:relative; text-align:center;}
+.txtLst dt img{width:0.5rem;left:4.5rem;top:-0.2rem; position:absolute;}
+.txtLst dd{font-size:0.24rem;}
+.txtLst dd p{margin-top:0.1rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+

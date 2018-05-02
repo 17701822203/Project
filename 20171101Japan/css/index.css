@@ -1,0 +1,392 @@
+/*Created by huang.jun on 17-10-24*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .8;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Banner {
+  height: 555px;
+  background: url("../img/Banner.jpg") no-repeat center top;
+}
+.Bg1 {
+  height: 519px;
+  background: url("../img/Img1.jpg") no-repeat center top;
+}
+.Bg2 {
+  height: 468px;
+  background: url("../img/Img2.jpg") no-repeat center top;
+}
+.Bg3 {
+  height: 513px;
+  background: url("../img/Img3.jpg") no-repeat center top;
+}
+.Bg4 {
+  height: 491px;
+  background: url("../img/Img4.jpg") no-repeat center top;
+}
+.Bg5 {
+  height: 243px;
+  background: url("../img/Img5.jpg") no-repeat center top;
+}
+.Bg6 {
+  height: 595px;
+  background: url("../img/Img6.jpg") no-repeat center top;
+}
+.Bg7 {
+  height: 1560px;
+  background: url("../img/Img7.jpg") no-repeat center top;
+}
+.Bg8 {
+  height: 514px;
+  background: url("../img/Img8.jpg") no-repeat center top;
+}
+.Bg9 {
+  height: 553px;
+  background: url("../img/Img9.jpg") no-repeat center top;
+}
+.Bg10 {
+  height: 492px;
+}
+.Bg11 {
+  height: 723px;
+  background: url("../img/Img10.jpg") no-repeat center top;
+}
+.Bg12 {
+  height: 608px;
+  background: url("../img/Img11.jpg") no-repeat center top;
+}
+.Bg13 {
+  height: 412px;
+  background: url("../img/Img12.jpg") no-repeat center top;
+}
+.Bg14 {
+  height: 618px;
+  background: url("../img/Img13.jpg") no-repeat center top;
+}
+.Bg15 {
+  height: 922px;
+  background: url("../img/Img14.jpg") no-repeat center top;
+}
+.Bg16 {
+  height: 950px;
+  background: url("../img/Img15.jpg") no-repeat center top;
+}
+.Wrap {
+  width: 1122px;
+  margin: 0 auto;
+}
+.Wrap:after,
+.Wrap:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.box1 {
+  width: 544px;
+  height: 241px;
+  float: right;
+  border: 1px solid #666;
+  overflow: hidden;
+  background: #fff;
+}
+.box1 .box-btm {
+  height: 65px;
+  position: relative;
+  padding-left: 15px;
+}
+.box1 .box-btm h4 {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 20px;
+  padding-top: 8px;
+}
+.box1 .box-btm p {
+  line-height: 23px;
+  padding-top: 2px;
+}
+.box1 .box-btm p span {
+  display: inline-block;
+  height: 21px;
+  line-height: 21px;
+  font-size: 18px;
+  border: 1px solid #F10637;
+  padding: 0 10px;
+  -webkit-border-radius: 21px;
+  -moz-border-radius: 21px;
+  border-radius: 21px;
+  color: #F10637;
+}
+.box1 .box-btm .Price {
+  position: absolute;
+  right: 195px;
+  top: 14px;
+  color: #f10637;
+}
+.box1 .box-btm .Price i,
+.box1 .box-btm .Price big,
+.box1 .box-btm .Price b {
+  float: left;
+}
+.box1 .box-btm .Price i {
+  font-size: 20px;
+  line-height: 20px;
+  font-style: normal;
+  padding-top: 13px;
+}
+.box1 .box-btm .Price big {
+  font-size: 36px;
+  line-height: 36px;
+}
+.box1 .box-btm .Price b {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 12px;
+}
+.box1 .box-btm a {
+  position: absolute;
+  width: 191px;
+  height: 65px;
+  background: #F10637;
+  color: #fff;
+  text-align: center;
+  line-height: 65px;
+  font-size: 24px;
+  top: 0;
+  right: 0;
+}
+.product {
+  width: 301px;
+  height: 306px;
+  border: 1px solid #666;
+  float: left;
+}
+.product img {
+  width: 301px;
+  height: 153px;
+}
+.product .MS {
+  padding: 20px 0 0 7px;
+  position: relative;
+  height: 93px;
+  box-sizing: border-box;
+}
+.product .MS h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: normal;
+}
+.product .MS p {
+  line-height: 21px;
+  margin-top: 10px;
+}
+.product .MS p span {
+  display: inline-block;
+  height: 21px;
+  line-height: 21px;
+  font-size: 18px;
+  border: 1px solid #F10637;
+  padding: 0 10px;
+  -webkit-border-radius: 21px;
+  -moz-border-radius: 21px;
+  border-radius: 21px;
+  color: #F10637;
+}
+.product .MS .Price {
+  position: absolute;
+  right: 16px;
+  top: 40px;
+  color: #f10637;
+}
+.product .MS .Price i,
+.product .MS .Price big,
+.product .MS .Price b {
+  float: left;
+}
+.product .MS .Price i {
+  font-size: 20px;
+  line-height: 20px;
+  font-style: normal;
+  padding-top: 13px;
+}
+.product .MS .Price big {
+  font-size: 36px;
+  line-height: 36px;
+}
+.product .MS .Price b {
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  padding-top: 12px;
+}
+.product a {
+  display: block;
+  height: 60px;
+  background: #F10637;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+}
+.Bg7 .product {
+  margin: 59px 15px 0 42px;
+}
+.Bg8 .product {
+  margin: 157px 19px 0 44px;
+}
+.Bg10 .product {
+  margin: 66px 19px 0 44px;
+}
+.Bg12 .product {
+  width: 544px;
+  height: 241px;
+  position: relative;
+  margin: 0 0 20px 0;
+}
+.Bg12 .product img {
+  width: 544px;
+  height: 176px;
+}
+.Bg12 .product .MS {
+  padding: 10px 0 0 16px;
+  height: 65px;
+}
+.Bg12 .product .MS p {
+  margin-top: 5px;
+}
+.Bg12 .product .MS .Price {
+  top: 16px;
+  right: 209px;
+}
+.Bg12 .product a {
+  position: absolute;
+  width: 191px;
+  height: 65px;
+  right: 0;
+  bottom: 0;
+}
+.Bg14 .product {
+  width: 544px;
+  height: 241px;
+  position: relative;
+  margin: 0 0 20px 0;
+}
+.Bg14 .product img {
+  width: 544px;
+  height: 176px;
+}
+.Bg14 .product .MS {
+  padding: 10px 0 0 16px;
+  height: 65px;
+}
+.Bg14 .product .MS p {
+  margin-top: 5px;
+}
+.Bg14 .product .MS .Price {
+  top: 16px;
+  right: 209px;
+}
+.Bg14 .product a {
+  position: absolute;
+  width: 191px;
+  height: 65px;
+  right: 0;
+  bottom: 0;
+}
+.Bg15 .Wrap {
+  padding-top: 354px;
+}
+.Bg15 .product {
+  width: 544px;
+  height: 241px;
+  position: relative;
+  margin: 0 0 20px 0;
+  background: #fff;
+}
+.Bg15 .product img {
+  width: 544px;
+  height: 176px;
+}
+.Bg15 .product .MS {
+  padding: 10px 0 0 16px;
+  height: 65px;
+}
+.Bg15 .product .MS p {
+  margin-top: 5px;
+}
+.Bg15 .product .MS .Price {
+  top: 16px;
+  right: 209px;
+}
+.Bg15 .product a {
+  position: absolute;
+  width: 191px;
+  height: 65px;
+  right: 0;
+  bottom: 0;
+}
+.Bg16 .product {
+  width: 544px;
+  height: 241px;
+  position: relative;
+  background: #fff;
+  margin: 418px 0 0 566px;
+}
+.Bg16 .product img {
+  width: 544px;
+  height: 176px;
+}
+.Bg16 .product .MS {
+  padding: 10px 0 0 16px;
+  height: 65px;
+}
+.Bg16 .product .MS p {
+  margin-top: 5px;
+}
+.Bg16 .product .MS .Price {
+  top: 16px;
+  right: 209px;
+}
+.Bg16 .product a {
+  position: absolute;
+  width: 191px;
+  height: 65px;
+  right: 0;
+  bottom: 0;
+}

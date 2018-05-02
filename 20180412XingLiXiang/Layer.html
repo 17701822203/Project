@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+<div class="fill-in" v-show="index2">
+    <dl class="top">
+        <dt>
+            <span class="left">我为</span>
+            <span class="center"><i><!--==点击后去除==--></i><input type="text"></span>
+            <span class="right">整理了一个行李箱</span>
+        </dt>
+        <dd>填写想一起出去玩的TA<br/>家人，基友，姐妹，明星或者自己....</dd>
+    </dl>
+    <div class="btm"><button>完成</button></div>
+</div>
+
+<!--==已经登陆==-->
+<div class="layer-box" v-show="index3">
+    <i class="close"></i>
+    <div class="top-tit">为促成一段双宿双飞的佳话<br/>送你五一出行红包！</div>
+    <div class="coupon-box">
+        <dl class="Coupon">
+            <dt>
+                <span>&yen;</span>
+                <strong>10</strong>
+                <big>火车票加速包</big>
+            </dt>
+            <dd>有效期至2018.05.31</dd>
+        </dl>
+    </div>
+    <div class="layer-btn"><button>领取成功<span>去使用</span></button></div>
+</div>
+
+<!--==领取成功==-->
+<div class="layer-box" v-show="index4">
+    <i class="close"></i>
+    <div class="top-tit"><h4>成功领取红包！</h4></div>
+    <div class="coupon-box">
+        <dl class="Coupon">
+            <dt>
+                <span>&yen;</span>
+                <strong>10</strong>
+                <big>火车票加速包</big>
+            </dt>
+            <dd>有效期至2018.05.31</dd>
+        </dl>
+    </div>
+    <div class="layer-btn"><button>去使用</button></div>
+</div>
+
+</body>
+</html>
+

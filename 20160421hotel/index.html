@@ -1,0 +1,128 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script src="js/simplefoucs.js" type="text/javascript"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+$(document).ready(function() {
+	$(".xianlu div").first().css("display","block")
+	$(".navBox li").first().addClass("on")
+	var nav=$(".navBox li");
+	nav.click(function(){
+		$(this).addClass("on").siblings().removeClass("on");
+		var index=nav.index(this);
+		$(".xianlu div")
+		.eq(index).show()
+		.siblings().hide()
+	})
+});
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($){ 
+	$('a.nav1').click(function(){$('html,body').animate({scrollTop:$('.md1').offset().top}, 800);});
+	$('a.nav2').click(function(){$('html,body').animate({scrollTop:$('.md2').offset().top}, 800);});
+	$('a.nav3').click(function(){$('html,body').animate({scrollTop:$('.md3').offset().top}, 800);});
+});
+$.fn.smartFloat = function() {
+	var position = function(element) {
+		var top = element.position().top, pos = element.css("position");
+		$(window).scroll(function() {
+			var scrolls = $(this).scrollTop();
+			if (scrolls > top) {
+				if (window.XMLHttpRequest) {
+					element.css({
+						position: "fixed",
+						top:"0",
+						display:"block"
+					}).addClass("shadow");
+				} else {
+					element.css({
+						top: scrolls
+					});
+				}
+			}else {
+				element.css({
+					position: pos,
+					top:0
+				})
+			}
+		});
+	};
+	return $(this).each(function() {
+		position($(this));
+	});
+};
+$(function(){
+	$("#mytool").smartFloat();
+});
+</script>
+</head>
+
+<body>
+	<span class="md1"></span>
+    <span class="md2"></span>
+    <span class="md3"></span>
+	<a class="youhuiquan" href="###"><img src="img/youhuiquan.png"></a>
+	<div><img src="img/topBg.png"></div>
+    <div id="mytool">
+        <ul class="navBox">
+            <li class="nav1"><a class="nav1" href="###"></a></li>
+            <li class="nav2"><a class="nav2" href="###"></a></li>
+            <li class="nav3"><a class="nav3" href="###"></a></li>
+        </ul>
+        <div class="xianlu">
+            <div><img src="img/navBg1.png"><a class="qBtn" href="###"><img src="img/btn1.png"></a></div>
+            <div><img src="img/navBg2.png"><a class="qBtn" href="###"><img src="img/btn1.png"></a></div>
+            <div><img src="img/navBg3.png"><a class="qBtn" href="###"><img src="img/btn1.png"></a></div>
+        </div>
+    </div>
+    <dl class="hotel">
+    	<dt class="jinghu"><img src="img/jinghuTit.png"></dt>
+        <dd>
+        	<div class="hotelImg"><a href="###"><img src="img/img1.png"></a></div>
+            <div class="hotelImg"><a href="###"><img src="img/img2.png"></a></div>
+            <div class="hotelBtn"><a href="###"><img src="img/btn2.png"></a></div>
+            <div class="sTit"><img src="img/zhoubianTit.png"></div>
+            <div class="hotelImg"><a href="###"><img src="img/img3.png"></a></div>
+            <div class="hotelImg"><a href="###"><img src="img/img4.png"></a></div>
+            <div class="hotelBtn"><a href="###"><img src="img/btn2.png"></a></div>
+        </dd>
+    	<dt class="hukun"><img src="img/hukunTit.png"></dt>
+        <dd>
+        	<div class="hotelImg"><a href="###"><img src="img/img5.png"></a></div>
+            <div class="hotelImg"><a href="###"><img src="img/img6.png"></a></div>
+            <div class="hotelBtn"><a href="###"><img src="img/btn2.png"></a></div>
+            <div class="sTit"><img src="img/zhoubianTit.png"></div>
+            <div class="hotelImg"><a href="###"><img src="img/img7.png"></a></div>
+            <div class="hotelImg"><a href="###"><img src="img/img8.png"></a></div>
+            <div class="hotelBtn"><a href="###"><img src="img/btn2.png"></a></div>
+        </dd>
+    	<dt class="jgsg"><img src="img/jgsgTit.png"></dt>
+        <dd>
+        	<div class="hotelImg"><a href="###"><img src="img/img9.png"></a></div>
+            <div class="hotelImg"><a href="###"><img src="img/img10.png"></a></div>
+            <div class="hotelBtn"><a href="###"><img src="img/btn2.png"></a></div>
+            <div class="sTit"><img src="img/zhoubianTit.png"></div>
+            <div class="hotelImg"><a href="###"><img src="img/img11.png"></a></div>
+            <div class="hotelImg"><a href="###"><img src="img/img12.png"></a></div>
+            <div class="hotelBtn"><a href="###"><img src="img/btn2.png"></a></div>
+        </dd>
+    </dl>
+</body>
+</html>

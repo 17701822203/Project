@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+</head>
+<body style="background:#fff;">
+    <ul class="map_nav">
+        <li><a href="#"><img src="img/Nav_BG1.png"></a></li>
+        <li><a href="#"><img src="img/Nav_BG2.png"></a></li>
+        <li><a href="#"><img src="img/Nav_BG3.png"></a></li>
+    </ul>
+    <div class="map_box"><img src="img/map.jpg"></div>
+    <ul class="map_tab">
+        <li class="cur">简介</li>
+        <li>餐饮娱乐</li>
+    </ul>
+    <div class="map_content">
+        <dl>
+            <dt>简介</dt>
+            <dd>
+                <p>巨石岛屿有几个关卡比较难，先说一下最后一关，局势迷宫3-6的过关心的。最后一关国法。先知走哪一个比，然后往回走左拐能拿到一个比，按机关，走到滚落的是他有哪里，注意石油跳起来的时候穿过去，别被石头砸了，然后又能拿笔，然后看到有个生姜很高的柱子。</p>
+                <p>占到柱子上，调到飞过来；爱的是他忧伤，石头送你到原始人那里，就很好过了。巨石岛屿有几个关卡比较难。</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt>餐饮娱乐</dt>
+            <dd>
+                <p>巨石岛屿有几个关卡比较难，先说一下最后一关，局势迷宫3-6的过关心的。最后一关国法。先知走哪一个比，然后往回走左拐能拿到一个比，按机关，走到滚落的是他有哪里，注意石油跳起来的时候穿过去，别被石头砸了，然后又能拿笔，然后看到有个生姜很高的柱子。</p>
+                <p>占到柱子上，调到飞过来；爱的是他忧伤，石头送你到原始人那里，就很好过了。巨石岛屿有几个关卡比较难。</p>
+            </dd>
+        </dl>
+
+    </div>
+</body>
+</html>

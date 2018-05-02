@@ -1,0 +1,187 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <ul class="TabNav">
+        <li class="grayBg">12:00 已结束</li>
+        <li class="redBg">16:00 开抢中</li>
+        <li class="yellowBg">22:00 开抢中</li>
+    </ul>
+    <div class="CountDown">
+        <div class="CountDownTop"><span>距离开抢时间还有</span></div>
+        <ul class="CountDownBtm">
+            <li class="TimeBg">1</li>
+            <li class="TimeBg">0</li>
+            <li>时</li>
+            <li class="TimeBg">2</li>
+            <li class="TimeBg">3</li>
+            <li>分</li>
+            <li class="TimeBg">1</li>
+            <li class="TimeBg">8</li>
+            <li>秒</li>
+        </ul>
+        <span class="CityLay">上海</span>
+    </div>
+    <article>
+        <div class="HotelImg" style="border-top:0;"><img src="img/HotelImg.jpg"><h4>上海东方凯宾斯基酒店</h4></div>
+        <ul class="HotelPrice">
+            <li class="left">
+                <small>&yen;</small>
+                <big>280</big>
+            </li>
+            <li class="center">
+                <small>仅限20份</small>
+                <big>&yen;588</big>
+            </li>
+            <li class="right">
+                <button>开抢提醒</button>
+                <small>已有666人设置提醒</small>
+            </li>
+        </ul>
+
+        <div class="HotelImg"><img src="img/HotelImg.jpg"><h4>上海东方凯宾斯基酒店</h4></div>
+        <ul class="HotelPrice">
+            <li class="left">
+                <small>&yen;</small>
+                <big>280</big>
+            </li>
+            <li class="center">
+                <small>仅限20份</small>
+                <big>&yen;588</big>
+            </li>
+            <li class="right">
+                <button>开抢提醒</button>
+                <small>已有666人设置提醒</small>
+            </li>
+        </ul>
+
+        <div class="HotelImg"><img src="img/HotelImg.jpg"><h4>上海东方凯宾斯基酒店</h4></div>
+        <ul class="HotelPrice">
+            <li class="left">
+                <small>&yen;</small>
+                <big>280</big>
+            </li>
+            <li class="center">
+                <small>仅限20份</small>
+                <big>&yen;588</big>
+            </li>
+            <li class="right">
+                <button>开抢提醒</button>
+                <small>已有666人设置提醒</small>
+            </li>
+        </ul>
+    </article>
+    <article class="YellowBg2">
+        <div class="img-box"><img src="img/TopBg.png"></div>
+        <div class="HotelList">
+            <div class="Hotel">
+                <div class="img-box"><img src="img/HotelImg.jpg"></div>
+                <div class="ImgTxt">
+                    <h4>上海东方酒店</h4>
+                    <dl class="HotelPriceTxt">
+                        <dt>品质酒店</dt>
+                        <dd>188元起</dd>
+                    </dl>
+                    <a href="###">查看更多房型</a>
+                </div>
+            </div>
+            <div class="Hotel">
+                <div class="img-box"><img src="img/HotelImg.jpg"></div>
+                <div class="ImgTxt">
+                    <h4>上海东方酒店</h4>
+                    <dl class="HotelPriceTxt">
+                        <dt>品质酒店</dt>
+                        <dd>188元起</dd>
+                    </dl>
+                    <a href="###">查看更多房型</a>
+                </div>
+            </div>
+            <div class="Hotel">
+                <div class="img-box"><img src="img/HotelImg.jpg"></div>
+                <div class="ImgTxt">
+                    <h4>上海东方酒店</h4>
+                    <dl class="HotelPriceTxt">
+                        <dt>品质酒店</dt>
+                        <dd>188元起</dd>
+                    </dl>
+                    <a href="###">查看更多房型</a>
+                </div>
+            </div>
+            <div class="Hotel">
+                <div class="img-box"><img src="img/HotelImg.jpg"></div>
+                <div class="ImgTxt">
+                    <h4>上海东方酒店</h4>
+                    <dl class="HotelPriceTxt">
+                        <dt>品质酒店</dt>
+                        <dd>188元起</dd>
+                    </dl>
+                    <a href="###">查看更多房型</a>
+                </div>
+            </div>
+            <div class="Hotel">
+                <div class="img-box"><img src="img/HotelImg.jpg"></div>
+                <div class="ImgTxt">
+                    <h4>上海东方酒店</h4>
+                    <dl class="HotelPriceTxt">
+                        <dt>品质酒店</dt>
+                        <dd>188元起</dd>
+                    </dl>
+                    <a href="###">查看更多房型</a>
+                </div>
+            </div>
+            <div class="Hotel">
+                <div class="img-box"><img src="img/HotelImg.jpg"></div>
+                <div class="ImgTxt">
+                    <h4>上海东方酒店</h4>
+                    <dl class="HotelPriceTxt">
+                        <dt>品质酒店</dt>
+                        <dd>188元起</dd>
+                    </dl>
+                    <a href="###">查看更多房型</a>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+</html>

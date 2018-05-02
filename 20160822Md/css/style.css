@@ -1,0 +1,14 @@
+/*Created by huang.jun on 16-08-17*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB";background:#3995C8;}
+
+.TopBg{height:8.32rem;background:url("../img/TopImg.jpg") no-repeat;background-size:contain;}
+.WrapBox{height:8.32rem;background:url("../img/WrapBg.jpg") no-repeat;background-size:contain;}
+.txtList{padding:0.5rem 0.5rem 0 0.5rem;}
+.txtList li{font-size:0.26rem;color:#3d4245;margin-top:0.2rem;line-height:0.3rem;padding-left:0.7rem;background:url("../img/Icon.png") no-repeat 0.3rem 0.08rem;background-size:0.17rem 0.17rem;}
+.button{width:3.67rem;height:0.97rem;background:url("../img/button.png") no-repeat;background-size:contain;position: absolute;left:50%;margin-left:-1.835rem;border:0;top:6.5rem;}
+
+

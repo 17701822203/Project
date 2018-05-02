@@ -1,0 +1,39 @@
+/*Created by huang.jun on 16-08-12*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB";background:#fff;}
+
+.Top1{background:#F8F6FB;padding:0.3rem 0.2rem;border-bottom:1px solid #ccc;}
+.Top1Lst{color:#fff;background:#DB3752;padding:0.2rem;-webkit-border-radius:0.1rem;letter-spacing: 0.01rem;line-height:0.36rem;}
+.Top1Lst dt{font-size:0.28rem;font-weight: bold;}
+.Top1Lst dd{font-size:0.24rem;padding-top:0.1rem;}
+
+.WrapBox{padding:0.3rem 0.2rem;border-bottom:1px solid #ccc;position: relative;}
+.WrapList{color:#333;line-height:0.36rem;}
+.WrapList dt{font-size:0.28rem;font-weight: bold;}
+.WrapList dd{font-size:0.24rem;padding-top:0.1rem;color:#666;}
+.WrapList dd h3{text-align:center;color:#333;}
+.WrapList dd h3 span{padding-left:0.1rem;}
+.RedTxt{color:#DB3752;}
+.down-btn{font-size:0.28rem;color:#0099CC;position: absolute;right:0.1rem;bottom:0.1rem;padding:0.1rem;}
+.HList{background:#F8F6FB;color:#666;}
+.HList th,.HList td{border:0;}
+.HList th{font-weight: normal;font-size:0.28rem;border-bottom:1px solid #ccc;line-height:0.6rem;}
+.HList th:nth-of-type(1){width:5.4rem;}
+.HList td{font-size:0.24rem;line-height:0.4rem;border-bottom:1px solid #ccc;}
+.HList td:nth-of-type(1){padding-left:0.1rem;}
+.HList td:nth-of-type(2){padding-right:0.1rem;}
+
+
+
+
+
+
+
+
+
+
+
+

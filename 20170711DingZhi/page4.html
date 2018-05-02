@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+<body>
+    <div class="box-scroll white">
+        <dl class="Top-Bg">
+            <dt><img src="img/Tx_img.png"></dt>
+            <dd>
+                <h2>建议更换座席</h2>
+                <p>由于您订购的下铺已无票，其他座位票量充足，<br/>建议您更换其他座位，我们会尽快帮您购票并及<br/>时配送给您。</p>
+            </dd>
+        </dl>
+
+        <div class="Station-wrap">
+            <div class="Station-Top">
+                <ul class="Station-Left">
+                    <li>上海虹桥站</li>
+                    <li>08:00</li>
+                    <li>06月19日&nbsp;周一</li>
+                </ul>
+                <span class="Station-Center">G123</span>
+                <ul class="Station-Right">
+                    <li>上海虹桥站</li>
+                    <li>08:00</li>
+                    <li>06月19日&nbsp;周一</li>
+                </ul>
+            </div>
+            <div class="Station-Btm">
+                <dl class="personnel-list">
+                    <dt>乘车人：</dt>
+                    <dd>刘昆鹏、李鲲鹏、张鲲鹏、</dd>
+                </dl>
+                <span class="Total">订单总额&nbsp;&yen;553</span>
+            </div>
+        </div>
+        <dl class="btm-btn">
+            <dt><a href="###">同意更换</a></dt>
+            <dd><a href="###">不想要了</a></dd>
+        </dl>
+    </div>
+</body>
+</html>

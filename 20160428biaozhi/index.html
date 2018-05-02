@@ -1,0 +1,70 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body>
+	<section>
+    	<div class="shadow"></div>
+        <div class="popBox">
+        	<h1>活动须知</h1>
+            <dl>
+            	<dt><strong>活动时间</strong></dt>
+                <dd><p>4月27日-5月27日</p></dd>
+                <dt><strong>活动奖品</strong></dt>
+                <dd>
+                	<p>艾瑞泽5城市领跑出行大奖共6名，每条线路1名 ；</p>
+                    <p>艾瑞泽5自驾游产品现金抵用券100元，数量1200张；</p>
+                    <p>携程周边游满4000减200元优惠券，数量2000张。</p>
+                </dd>
+                <dt><strong>中奖机制</strong></dt>
+                <dd>
+                	<p>用户参与领跑计划，获取徽章，每轮徽章排名第一者可获得相应的领跑城市出行大奖，参与线下艾瑞泽5城市自驾游活动（油费用户需自行承担）。</p>
+                </dd>
+                <dt><strong>中奖机制</strong></dt>
+                <dd>
+                	<p>Step1:填写资料，立刻加入领跑者计划，参与游戏</p>
+                    <p>Step2:屏幕抓取，速度、力量、视野三种属性徽章</p>
+                    <p>Step3:抽取奖品，分享排名</p>
+                    <p>注：活动期间，每个手机号码每日可参与一次转盘抽奖，且只有一次中奖机</p>
+                </dd>
+                <dt><strong>出行大奖设置</strong><span>（领跑者线路）</span></dt>
+                <dd>
+                	<p>1、杭州站-杭州陇林山居酒店1晚+中国滑翔伞训练基地门票·俯瞰大地 放胆飞翔</p>
+                	<p>2、无锡站-无锡希尔顿逸林酒店（新区）1晚+鼋头渚+自助早、晚餐2份+免费游泳池，健身房</p>
+                	<p>3、临安站-浙西大峡谷颐和山庄+大明山景区+浙西大峡谷门票+可加购周边景点</p>
+                	<p>4、大连站-大连远洋洲际酒店1晚+大连圣亚海洋世界套票·览海底奇观 体浪漫海洋主题乐园 </p>
+                	<p>5、福州站-福州永泰香米拉温泉酒店+云顶徒步成人票【天然氧吧、花海梯田、青云山近在咫尺】</p>
+                	<p>6、重庆站-酉阳喜悦秘境酒店1晚（含双早）+酉阳桃花源套票2张</p>
+                </dd>
+            </dl>
+            <div class="btmTxt">活动最终解释权归奇瑞汽车所有。</div>
+            <div class="fanhuiBox"><button class="btnFan">返回</button></div>
+        </div>
+    </section>
+	<article>
+    	<img src="img/page1Img.jpg">
+        <img class="btn1" src="img/btn1.png">
+        <img class="btn2" src="img/btn2.png">
+    </article>
+</body>
+</html>

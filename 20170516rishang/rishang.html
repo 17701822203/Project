@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="http://webresource.c-ctrip.com/styles/h5/common/n_main.css" rel="stylesheet" />
+    <style type="text/css">
+        .banner{width:100%;display:block;}
+        .img-banner{width:100%;height:auto;display:block}
+        .mainbox{background:#FDE7E9;padding:0 1rem 1.25rem;}
+        .mainbox h2.tit{font-size:16px;color:#333;text-align:center;margin-bottom:.6rem;}
+        .mainbox h2.tit:before,.mainbox h2.tit:after{width:.65rem;height:.55rem;background:url("http://images3.c-ctrip.com/chuangxin/rishang/icon-rishang.png") no-repeat;background-size:1.5rem .8rem;background-position:-.75rem 0;display:inline-block;vertical-align:middle; content:'';margin:-2px .3rem 0}
+        .mainbox h2.tit:after{transform: rotate(180deg);}
+        .mainbox .txt{font-size:.7rem;line-height:1.15rem;color:#666;text-indent:2em;}
+        .whitebox{background:#fff;padding:1.5rem 0 1.25rem;text-align:center;margin-top:.9rem;border-radius:0 0 6px 6px;position:relative}
+        .whitebox:before{width:100%;height:8px;position:absolute;content:"";top:0;left:0;;background-image: -webkit-radial-gradient(circle, transparent, transparent 7px, #FDE7E9 7px, #FDE7E9);background-image: radial-gradient(circle, transparent, transparent 7px, #FDE7E9 7px, #FDE7E9);background-size: 20px 20px;}
+        .whitebox h4.tit{font-size:1.2rem;color:#D0A46B;font-weight:600;}
+        .icon-location{width:.65rem;height:.8rem;background:url("http://images3.c-ctrip.com/chuangxin/rishang/icon-rishang.png") no-repeat;background-size:1.5rem .8rem;display:inline-block;vertical-align:middle;margin:-2px .3rem 0 0}
+        .whitebox h5.city{margin:1.5rem 0 1rem;}
+        .whitebox h5.city:before,.whitebox h5.city:after{width:5.9rem;height:1px;background:#E0E0E0;display:inline-block;vertical-align:middle; content:"";-webkit-transform: scale(.50);transform: scale(.50);margin-top:-2px;}
+        .whitebox h5.city:before{-webkit-transform-origin: right top;transform-origin: right top;margin-right:.75rem;}
+        .whitebox h5.city:after{ -webkit-transform-origin: left top;transform-origin: left top;margin-left:.75rem;}
+        .btn-draw{width:14rem;height:2.2rem;background:#D0A46B;color:#fff;border-radius:2.2rem;margin-bottom:1.2rem;font-size:.85rem;}
+        .btn-draw.disabled{background:#e0e0e0;}
+        .whitebox p{font-size:.7rem;color:#333;margin-bottom:.5rem;}
+        .beijing h5.city{margin-top:2.5rem;}
+    </style>
+    <script language="JavaScript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        var fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+
+</head>
+<body>
+    <div class="banner">
+        <img src="http://images3.c-ctrip.com/chuangxin/rishang/banner.jpg" class="img-banner" />
+    </div>
+    <div class="mainbox">
+        <h2 class="tit">日上免税店</h2>
+        <p class="txt">日上免税店是经中国政府批准的经营机场免税店的专业机构。精选来自全球的著名奢侈品牌免税系列商品，整合高效的专业管理带来极具优势的价格实惠，致力于为中外旅客提供优质的商品、超值购物享受。</p>
+        <div class="whitebox">
+            <h4 class="tit">扫码领取优惠券</h4>
+            <div class="shanghai">
+                <h5 class="city"><i class="icon-location"></i>上海店</h5>
+                <button class="btn-draw" onclick="window.location='http://m.ctrip.com/webapp/gshop/coupon/coupondetailinfo?CouponClassID=4397&StoreID=18073&allianceid=109054&sid=826632'">立即领取</button>
+                <p>日上免税行(上海虹桥机场T1、T2航站楼店)</p>
+                <p>日上免税行(上海浦东机场T1航站楼店)</p>
+            </div>
+            <div class="beijing">
+                <h5 class="city"><i class="icon-location"></i>北京店</h5>
+                <button class="btn-draw disabled" onclick="window.location='http://m.ctrip.com/webapp/gshop/coupon/coupondetailinfo?CouponClassID=3877&StoreID=10518&allianceid=109054&sid=826632'">立即领取</button>
+                <p>日上免税行(北京首都机场T2、T3航站楼店)</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

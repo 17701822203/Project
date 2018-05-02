@@ -1,0 +1,9 @@
+/*Created by huang.jun on 16-03-15*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:SimHei;}
+
+button{width:8.657004830917874rem;height:1.855072463768116rem;background:#2051AB;color:#fff;position:absolute;font-size:1.2rem;border:0;-moz-border-radius:0.5rem;-webkit-border-radius:0.5rem;border-radius:0.5rem;font-style:italic;left:3.6rem;top:1.4rem;}
+button:active{ opacity:0.8;}

@@ -1,0 +1,221 @@
+/*Created by huang.jun on 17-10-10*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+input[type="text"] {
+  -webkit-appearance: none;
+}
+textarea {
+  -webkit-appearance: none;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.InputList dd {
+  margin-top: .6rem;
+  padding: 0 1.9rem;
+}
+.InputList dd:after,
+.InputList dd:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.InputList dd input {
+  border: 1px solid #F7997C;
+  height: 1.9rem;
+  text-indent: .55rem;
+  color: #fff;
+  font-size: .7rem;
+  background: #D4664F;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.InputList dd input::-webkit-input-placeholder {
+  color: #fff;
+}
+.InputList dd input:-moz-placeholder {
+  color: #fff;
+}
+.InputList dd input::-moz-placeholder {
+  color: #fff;
+}
+.InputList dd input:-ms-input-placeholder {
+  color: #fff;
+}
+.InputList dd input.txtb {
+  width: 100%;
+}
+.InputList dd input.txts {
+  width: 42%;
+  float: left;
+}
+.InputList dd .yzm {
+  float: right;
+  width: 54%;
+  border: 1px solid #F7997C;
+  height: 1.9rem;
+  line-height: 1.9rem;
+  color: #fff;
+  font-size: .7rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+.InputList dd .yzm button {
+  height: 1.9rem;
+  line-height: 1.9rem;
+  background: linear-gradient(to left, #EA7762, #DE5C58);
+  width: 2.1rem;
+  border: 1px solid #F7997C;
+  margin-top: -1px;
+  margin-left: -1px;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.InputList dd .yzm button:after {
+  content: "";
+  position: absolute;
+  width: 1.05rem;
+  height: 1.05rem;
+  background: url("../img/hk.png") no-repeat;
+  background-size: 100% 100%;
+  left: 50%;
+  margin-left: -0.525rem;
+  margin-top: -0.525rem;
+  top: 50%;
+}
+.InputList dd .yzm span {
+  text-indent: 2.6rem;
+  display: block;
+}
+.InputList dt {
+  margin-top: .7rem;
+  padding: 0 1.7rem;
+}
+.InputList dt .BtnBtm {
+  width: 100%;
+  height: 2.675rem;
+  line-height: 2.2rem;
+  text-align: center;
+  display: block;
+  background: url("../img/Btn.png") no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  font-size: .8rem;
+}
+.InputList dt .BtnBtm:active {
+  opacity: .7;
+}
+.CouponWrap {
+  padding-top: .7rem;
+}
+.CouponWrap .Coupon {
+  width: 14.875rem;
+  height: 4.275rem;
+  background: url("../img/yhq.png") no-repeat;
+  background-size: 100% 100%;
+  margin: .6rem auto 0 auto;
+}
+.CouponWrap .Coupon dt {
+  height: 4.275rem;
+  width: 25%;
+  color: #d44644;
+  float: left;
+}
+.CouponWrap .Coupon dt small {
+  float: left;
+  font-size: .75rem;
+  line-height: .75rem;
+  font-family: "PingFangSC-Regular";
+  margin: 2rem 0 0 .45rem;
+}
+.CouponWrap .Coupon dt strong {
+  float: left;
+  font-family: "PingFangSC-Medium";
+  font-size: 1.35rem;
+  line-height: 1.35rem;
+  margin: 1.5rem 0 0 .1rem;
+}
+.CouponWrap .Coupon dd {
+  height: 4.275rem;
+  width: 75%;
+  float: right;
+}
+.CouponWrap .Coupon dd div {
+  font-family: "PingFangSC-Medium";
+  font-size: .75rem;
+  line-height: .75rem;
+  margin: 1.6rem 0 0 .5rem;
+  position: relative;
+}
+.CouponWrap .Coupon dd div span {
+  height: .6rem;
+  border: 1px solid #1C8CA4;
+  color: #317EE8;
+  line-height: .6rem;
+  left: 0;
+  top: -1rem;
+  position: absolute;
+  background: #fff;
+  font-size: .5rem;
+  padding: 0 .15rem;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  border-radius: 0.6rem;
+}
+.CouponWrap .Coupon dd p {
+  font-size: .55rem;
+  line-height: .55rem;
+  color: #ccc;
+  margin: .35rem 0 0 .5rem;
+}
+.CouponWrap .Coupon:active {
+  opacity: .8;
+}

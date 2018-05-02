@@ -1,0 +1,10 @@
+/*Created by huang.jun on 16-03-03*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:Microsoft YaHei;background:#FFF3F6;}
+input:focus,button:focus{outline:none;}
+
+.btnBox{ text-align:center;padding:1rem 0 3rem 0;}
+.btnBox a{display:inline-block;width:4.830917874396135rem;height:0.927536231884058rem;line-height:0.927536231884058rem;border:0.0579710144927536rem solid #69545C;color:#69545C;font-size:0.5797101449275362rem;-moz-border-radius:0.2rem;-webkit-border-radius:0.2rem;border-radius:0.2rem; font-weight:bold;}

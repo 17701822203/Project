@@ -1,0 +1,61 @@
+.map_box {
+  height: 12.15rem;
+  overflow: hidden;
+}
+.map_nav {
+  font-size: 0;
+  padding: 1rem 0;
+}
+.map_nav:after,
+.map_nav:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.map_nav li {
+  float: left;
+  width: 20%;
+  margin-left: 10%;
+}
+.map_tab {
+  font-size: .8rem;
+}
+.map_tab:after,
+.map_tab:before {
+  content: " ";
+  display: table;
+  clear: both;
+  font-family: PingFang SC Bold, sans-serif;
+}
+.map_tab li {
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 2.5rem;
+  border-bottom: 3px solid #ccc;
+}
+.map_tab li.cur {
+  border-bottom: 3px solid #5793FF;
+}
+.map_content {
+  padding: 0 .7rem;
+}
+.map_content dl {
+  display: none;
+}
+.map_content dl dt {
+  font-size: .8rem;
+  font-family: PingFang SC Bold, sans-serif;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+.map_content dl dd {
+  font-size: .7rem;
+}
+.map_content dl dd p {
+  line-height: 1rem;
+  margin-top: .4rem;
+}
+a:active {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

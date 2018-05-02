@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body style="background:#EEFEFF;">
+    <article>
+        <div class="Top_Box">
+            <h2>恭喜你成功领取红包</h2>
+            <p>请用领券手机号登陆携程旅行客户端<br/>至“我的-优惠券"中查看具体使用规则 </p>
+        </div>
+        <div class="coupon">
+            <dl class="coupon_btn" onclick="window.open('###','_self');">
+                <dt>
+                    <div>
+                        <span>&yen;</span>
+                        <strong>5</strong>
+                        <b>立减券</b>
+                    </div>
+                    <p>适用范围：汽车票app新客</p>
+                </dt>
+                <dd>立即<br/>使用</dd>
+            </dl>
+            <dl class="coupon_btn" onclick="window.open('###','_self');">
+                <dt>
+                    <div>
+                        <span>&yen;</span>
+                        <strong>5</strong>
+                        <b>立减券</b>
+                    </div>
+                    <p>适用范围：汽车票app新客</p>
+                </dt>
+                <dd>立即<br/>使用</dd>
+            </dl>
+        </div>
+        <div class="btn_box"><a href="###">查看我的优惠券</a></div>
+    </article>
+</body>
+</html>

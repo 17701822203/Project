@@ -1,0 +1,134 @@
+/*Created by huang.jun on 17-7-3*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: PingFang SC Medium, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+article {
+  background: #fff;
+  padding-left: 1.125rem;
+}
+.top_txt {
+  padding: 1.125rem;
+  font-size: .75rem;
+  margin-bottom: .5rem;
+  background: #fff;
+  line-height: 1rem;
+}
+.box dl {
+  border-top: 1px solid #ccc;
+}
+.box dl:nth-of-type(1) {
+  border: 0;
+}
+.box dl dt {
+  padding: .75rem 0 .75rem .75rem;
+  font-size: .75rem;
+  position: relative;
+  color: #000;
+  font-weight: bold;
+}
+.box dl dt:after {
+  width: .4rem;
+  height: .4rem;
+  content: "";
+  position: absolute;
+  background: #538BFC;
+  left: 0;
+  top: 1.05rem;
+}
+.box dl dt span {
+  width: .3rem;
+  height: .3rem;
+  border-top: 1px solid #787878;
+  border-right: 1px solid #787878;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  position: absolute;
+  content: "";
+  right: .9rem;
+  top: 50%;
+  margin-top: -0.3rem;
+}
+.box dl dt span.on {
+  transform: rotate(316deg);
+  -ms-transform: rotate(316deg);
+  -moz-transform: rotate(316deg);
+  -webkit-transform: rotate(316deg);
+  -o-transform: rotate(316deg);
+}
+.box dl dd {
+  line-height: 1rem;
+  display: none;
+  font-size: .65rem;
+  padding: 0 1rem .5rem 0;
+}
+.box dl dd p {
+  padding: .25rem 0;
+}
+.btm_txt {
+  padding: 1.125rem;
+  font-size: .65rem;
+  margin-bottom: .5rem;
+  line-height: 1rem;
+  color: #666;
+}
+.btm_txt a {
+  color: #666;
+  text-decoration: underline;
+}
+.btn_box {
+  padding: 1.125rem 1.125rem 1.125rem 0;
+}
+.btn_box:after,
+.btn_box:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.btn_box a {
+  height: 1.65rem;
+  line-height: 1.65rem;
+  width: 47%;
+  text-align: center;
+  border: 1px solid #538BFC;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: .75rem;
+}
+.btn_box a.left_btn {
+  float: left;
+  color: #fff;
+  background: #538BFC;
+}
+.btn_box a.right_btn {
+  float: right;
+  color: #538BFC;
+}

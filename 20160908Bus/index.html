@@ -1,0 +1,412 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>一元免单</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script src="js/simplefoucs.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var fontSize = document.documentElement.clientWidth/7.5;
+	document.documentElement.style.fontSize=fontSize+'px';
+	window.addEventListener("resize",setRemSize,false);
+	function setRemSize(){
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+	}
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        $(document).ready(function(){
+            $("#TopNav li").click(function(){
+                $("#TopNav li").eq($(this).index()).addClass("txtcor").siblings().removeClass('txtcor');
+                $(".Tab").hide().eq($(this).index()).show();
+            })
+            $(".qiehuan li").click(function(){
+                $(".qiehuan li").eq($(this).index()).addClass("txtcor").siblings().removeClass('txtcor');
+            })
+        })
+    </script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+            $('li.nav1').click(function(){$('html,body').animate({scrollTop:$('.md1').offset().top}, 800);});
+            $('li.nav2').click(function(){$('html,body').animate({scrollTop:$('.md2').offset().top}, 800);});
+            $('li.nav3').click(function(){$('html,body').animate({scrollTop:$('.md3').offset().top}, 800);});
+            $('li.nav4').click(function(){$('html,body').animate({scrollTop:$('.md4').offset().top}, 800);});
+        });
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num>(10.2 * fontSize)){
+                $('#TopNav').addClass('nav_wrap_fix');
+                $('#TopNav').removeClass('BigBtn');
+            }else{
+                $('#TopNav').removeClass('nav_wrap_fix');
+                $('#TopNav').addClass('BigBtn');
+            }
+        });
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num>(21 * fontSize)){
+                $('#sNav').addClass('nav_wrap_fix2');
+                $('#sNav').removeClass('Fnav');
+            }else{
+                $('#sNav').removeClass('nav_wrap_fix2');
+                $('#sNav').addClass('Fnav');
+            }
+        });
+    </script>
+</head>
+<body>
+<section style="display:none;">
+    <div class="shadow"></div>
+    <dl class="Pictures" style="display:none;">
+        <dt><em class="Close"></em></dt>
+        <dd>
+            <div class="PicturesBox">
+                <span></span>
+            </div>
+            <div class="InputBox"><input type="text" value="拉票宣言（不超过22字）"></div>
+            <div class="InputBox"><input type="text" value="输入手机号"></div>
+            <div class="BtnBox"><button>确定上传</button></div>
+        </dd>
+    </dl>
+    <dl class="Pictures" style="display:none;">
+        <dt><h3>拍照活动规则</h3><em class="Close"></em></dt>
+        <dd class="FontBox">
+            <p>以“我和携程的出行故事”为主题进行创意摆拍，参与人气王评选，<span>100%送国庆礼包，赢东南亚海岛游。</span></p>
+            <p>活动时间：<br/>2016.9.19-10.20</p>
+            <p>参与方式：<br/>只要活动期间在长途汽车客运站内，轮船港口，机场，景区内与带有携程元素背景创意摆拍，体现“我和携程的出行故事”主题，上传照片，即可参与人气王评选，赢取大奖。</p>
+            <p>评选规则：<br/>所有上传照片，经过筛选后，择优上墙在活动页面上公示投票，10.19投票截止，10.20公布评选结果并颁奖。</p>
+            <p>奖项设置：<br/>按照照片得票数多少排序确定如下奖项：<br/>一等奖1名：东南亚海岛游1名<br/>二等奖2名：300元礼品卡1张<br/>三等奖3名：100元礼品卡1张</p>
+            <p>其它说明：<br/><small></small>对于以不正当方式参与活动的用户，包括但不限于恶意刷票、利用程序漏洞等，携程旅行网有权在不事先通知的情况下取消其参与活动的资格</p>
+            <p><small></small>在法律允许范围内,携程旅行网可能对活动的规则/条款作出适当修改/调整,且对本次活动拥有最终解释权。如有疑问请致电携程客服热线<br/>1010-6666。</p>
+        </dd>
+    </dl>
+    <dl class="Pictures" style="display:;">
+        <dt><h3>赠品规则</h3><em class="Close"></em></dt>
+        <dd class="FontBox">
+            <p>1.活动时间：9.19-10.20</p>
+            <p>2.活动期间成功预订任意汽车票、景区直通车、船票、机场巴士产品均可获赠以下四种礼品之一（随机发放）,同一产品每位用户仅限参与1次<br/><span>138元西班牙红酒券</span><br/><span>40元诺心蛋糕券</span><br/><span>100分钟好乐迪欢唱券（每日限量3000份）</span> <br/><span>10元格瓦拉电影券（每日限量3000份）</span></p>
+            <p>3.奖品电子兑换券将于出票成功后以短信形式发送，请注意查看</p>
+            <p>4.奖品具体兑换和使用规则以奖品赞助商具体描述为准</p>
+            <p>5.对于以不正当方式参与活动的用户，包括但不限于恶意套现、恶意下单、恶意注册、利用程序漏洞等，携程旅行网有权在不事先通知的情况下取消其参与活动的资格并收回相应奖品</p>
+            <p>6. 在法律允许范围内,携程旅行网可能对活动的规则/条款作出适当修改/调整,且对本次活动拥有最终解释权。如有疑问请致电携程客服热线1010-6666。</p>
+        </dd>
+    </dl>
+    <div class="PopDate" style="display:none">
+        <div class="DateBg">
+            <em class="Close"></em>
+            <span>订票小高峰</span>
+            <span>订票大高峰</span>
+        </div>
+    </div>
+</section>
+    <article>
+        <div class="TopBg">
+            <em class="TopAnimation1"></em>
+            <em class="TopAnimation2">
+                <strong class="PriceBox">123</strong>
+                <button class="Btn1"></button>
+            </em>
+        </div>
+        <div style="height:1.8rem;">
+            <ul id="TopNav" class="BigBtn">
+                <li class="txtcor"><a style="display:block;height:1.8rem;width:100%;" href="#"></a></li>
+                <li><a style="display:block;height:1.8rem;width:100%;" href="#"></a></li>
+            </ul>
+        </div>
+        <div class="Tab1 Tab">
+            <div class="ImgBg">
+
+            </div>
+            <h3 class="tips"><span>正确姿势必读▶</span></h3>
+            <div class="TakeBox">
+                <span></span>
+            </div>
+            <div class="TitleBox"></div>
+            <div class="VoteBox">
+
+                <div class="VoteList">
+                    <img src="img/Img1.jpg">
+                    <h4><b>NO.1</b>第一次在携程上订了汽车票顺利完成异地约会</h4>
+                    <div class="VoteListBtm">
+                        <strong>1234票</strong>
+                        <button>投票</button>
+                    </div>
+                </div>
+
+                <div class="VoteList">
+                    <img src="img/Img1.jpg">
+                    <h4><b>NO.1</b>第一次在携程上订了汽车票顺利完成异地约会</h4>
+                    <div class="VoteListBtm">
+                        <strong>1234票</strong>
+                        <button>投票</button>
+                    </div>
+                </div>
+
+                <div class="VoteList">
+                    <img src="img/Img1.jpg">
+                    <h4><b>NO.1</b>第一次在携程上订了汽车票顺利完成异地约会</h4>
+                    <div class="VoteListBtm">
+                        <strong>1234票</strong>
+                        <button>投票</button>
+                    </div>
+                </div>
+
+                <div class="VoteList">
+                    <img src="img/Img1.jpg">
+                    <h4><b>NO.1</b>第一次在携程上订了汽车票顺利完成异地约会</h4>
+                    <div class="VoteListBtm">
+                        <strong>1234票</strong>
+                        <button>投票</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="Tab2 Tab">
+            <h3 class="Title3"></h3>
+            <div class="guize"><span>赠品规则▶</span></div>
+            <div class="JpBox">
+                <span>138元西班牙红酒</span>
+                <span>40元诺心蛋糕</span>
+                <span>100分钟欢畅券</span>
+                <span>10元格瓦拉电影券</span>
+            </div>
+            <div style="height:2rem;">
+                <div id="sNav" class="Fnav">
+                    <ul class="qiehuan">
+                        <li class="nav1">汽车票</li>
+                        <li class="nav2">景区直通车</li>
+                        <li class="nav3">船票</li>
+                        <li class="nav4">机场巴士</li>
+                    </ul>
+                </div>
+            </div>
+            <em class="md1"></em>
+            <div class="PartBox1">
+                <div class="TopTxt">超低价线路元<span>7</span>出发</div>
+                <dl>
+                    <dd>
+                        <div>
+                            <label>
+                                <span>东阳</span>
+                                <em></em>
+                                <span>义乌</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>7</strong>
+                            <button>预订</button>
+                        </div>
+                        <div>
+                            <label>
+                                <span>宜昌</span>
+                                <em></em>
+                                <span>宜化</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>7</strong>
+                            <button>预订</button>
+                        </div>
+                        <div>
+                            <label>
+                                <span>宜昌</span>
+                                <em></em>
+                                <span>宜都</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>15</strong>
+                            <button>预订</button>
+                        </div>
+                        <div>
+                            <label>
+                                <span>义乌</span>
+                                <em></em>
+                                <span>横店</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>15</strong>
+                            <button>预订</button>
+                        </div>
+                        <a href="###">查看更多▶</a>
+                    </dd>
+                </dl>
+                <div style="clear: both;"></div>
+            </div>
+
+            <div class="date">
+                <em></em>
+                <div><strong>9.20—10.7</strong>为国庆出行订票高峰期，</div>
+                <p>请提前购票安排好行程哦</p>
+            </div>
+            <em class="md2"></em>
+            <div class="PartBox2">
+                <div class="TopTxt">超低价线路元<b>7折</b>起</div>
+                <dl>
+                    <dt><h3>四 川</h3></dt>
+                    <dd>
+                        <div>
+                            <label>
+                                <span>成都</span>
+                                <em></em>
+                                <span>熊猫基地往返</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>7</strong>
+                            <cite>原价&yen;15</cite>
+                            <button>预订</button>
+                        </div>
+                        <div>
+                            <label>
+                                <span>成都</span>
+                                <em></em>
+                                <span>九寨沟往返</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>7</strong>
+                            <cite>原价&yen;235</cite>
+                            <button>预订</button>
+                        </div>
+                        <div style="border:0;">
+                            <label>
+                                <span>成都</span>
+                                <em></em>
+                                <span>都江堰往返车票+门票</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>15</strong>
+                            <cite>原价&yen;138</cite>
+                            <button>预订</button>
+                        </div>
+                    </dd>
+                    <dt><h3>云 南</h3></dt>
+                    <dd>
+                        <div>
+                            <label>
+                                <span>丽江</span>
+                                <em></em>
+                                <span>泸沽湖专线往返</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>165</strong>
+                            <cite>原价&yen;155</cite>
+                            <button>预订</button>
+                        </div>
+                        <div>
+                            <label>
+                                <span>大理</span>
+                                <em></em>
+                                <span>丽江</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>90</strong>
+                            <cite>原价&yen;85</cite>
+                            <button>预订</button>
+                        </div>
+                        <a href="###">查看更多▶</a>
+                    </dd>
+                </dl>
+                <div style="clear: both;"></div>
+            </div>
+            <em class="md3"></em>
+            <div class="PartBox3">
+                <div class="TopTxt">超低价线路元<b>7折</b>起</div>
+                <dl>
+                    <dd>
+                        <div>
+                            <label>
+                                <span>厦门</span>
+                                <em></em>
+                                <span>鼓浪屿</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>118</strong>
+                            <cite>原价&yen;88</cite>
+                            <button>预订</button>
+                        </div>
+                        <div>
+                            <label>
+                                <span>台山川岛</span>
+                                <em></em>
+                                <span>上下川岛</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>148</strong>
+                            <cite>原价&yen;118</cite>
+                            <button>预订</button>
+                        </div>
+                        <div>
+                            <label>
+                                <span>虎门</span>
+                                <em></em>
+                                <span>香港</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>300</strong>
+                            <cite>原价&yen;270</cite>
+                            <button>预订</button>
+                        </div>
+                        <a href="###">查看更多▶</a>
+                    </dd>
+                </dl>
+                <div style="clear: both;"></div>
+            </div>
+            <em class="md4"></em>
+            <div class="PartBox4">
+                <div class="TopTxt">超低价线路元<b>6折</b>起</div>
+                <dl>
+                    <dd>
+                        <div>
+                            <label>
+                                <span>深圳机场</span>
+                                <em></em>
+                                <span>香港</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>80</strong>
+                            <cite>原价&yen;200</cite>
+                            <button>预订</button>
+                        </div>
+                        <div>
+                            <label>
+                                <span>香港机场</span>
+                                <em></em>
+                                <span>深圳</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>115</strong>
+                            <cite>原价&yen;200</cite>
+                            <button>预订</button>
+                        </div>
+                        <div>
+                            <label>
+                                <span>虎门</span>
+                                <em></em>
+                                <span>香港</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>180</strong>
+                            <cite>原价&yen;200</cite>
+                            <button>预订</button>
+                        </div>
+                        <div>
+                            <label>
+                                <span>香港</span>
+                                <em></em>
+                                <span>深圳机场</span>
+                            </label>
+                            <small>&yen;</small>
+                            <strong>80</strong>
+                            <cite>原价&yen;120</cite>
+                            <button>预订</button>
+                        </div>
+                        <a href="###">查看更多▶</a>
+                    </dd>
+                </dl>
+                <div style="clear: both;"></div>
+            </div>
+
+        </div>
+        <div class="BtmBg"></div>
+    </article>
+</body>
+</html>

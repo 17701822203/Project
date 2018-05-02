@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body>
+	<section style="display:none;">
+    	<div class="shadow"></div>
+        <div class="Loading">
+        	<img class="img1" src="img/img1.png">
+            <img class="img2" src="img/img2.png">
+        </div>
+    </section>
+	<article>
+    	<img src="img/bk2.jpg">
+        <dl class="infoList">
+        	<dt><img src="img/tit1.png"></dt>
+            <dd><input placeholder="输入手机号码" class="mobile" type="text"></dd>
+            <dd><input placeholder="输入短信验证码" class="code" type="text"><button class="codeBtn">发送验证码</button></dd>
+            <dd><input placeholder="输入验证码" class="code" type="text"><button class="codeBtn"></button></dd>
+            <dd><a href="###"><img src="img/btn2.png"></a></dd>
+        </dl>
+    </article>
+</body>
+</html>

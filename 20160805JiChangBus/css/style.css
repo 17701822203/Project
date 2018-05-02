@@ -1,0 +1,60 @@
+/*Created by huang.jun on 16-08-05*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB";}
+article{height:100%;}
+.Bg1,.Bg2,.Bg3{font-size:0;}
+.Bg1{height:6.46rem;background:url("../img/bg1.jpg") no-repeat;background-size:7.5rem 6.46rem;}
+.Bg2{height:5.54rem;background:url("../img/bg2.jpg") no-repeat;background-size:7.5rem 5.54rem;position:relative;}
+.Bg3{height:3.36rem;background:url("../img/bg3.jpg") no-repeat;background-size:7.5rem 3.36rem;}
+.LeftBox,.RightBox{width:3.36rem;height:3.74rem;background:url("../img/bg4.png") no-repeat;background-size:3.36rem 3.74rem;position: absolute;top:1.28rem;}
+.LeftBox{left:0.34rem;}
+.RightBox{left:3.8rem;}
+.photoBox dt{padding:0.08rem;}
+.photoBox dt img{width:3.2rem;height:2.4rem;}
+.photoBox dd h3{height:0.5rem;font-size:0.32rem;color:#333;font-weight: normal;padding-left:0.17rem;line-height:0.5rem;}
+.photoBox dd p small,.photoBox dd p big{color:#EE3B37;font-family: "Hiragino Sans GB W6";}
+.photoBox dd p small{padding-left:0.17rem;font-size:0.28rem;}
+.photoBox dd p big{font-size:0.42rem;}
+.photoBox dd p em{font-size:0.24rem;color:#999;font-style: normal;padding-left:0.15rem;text-decoration:line-through;}
+.TopTit{color:#fff;font-size:0.28rem; text-align: center;padding-top:0.52rem;}
+.Bg3{position: relative;}
+.btn{width:2.86rem;height:0.77rem;background:url("../img/button.png") no-repeat;background-size:contain;border:0;position: absolute;top:1.24rem;left:3.87rem;}
+.btn:active{opacity: 0.8;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

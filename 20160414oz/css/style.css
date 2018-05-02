@@ -1,0 +1,32 @@
+/*Created by huang.jun on 16-04-14*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:Microsoft YaHei;}
+
+.bk{position:absolute;bottom:0;z-index:1;}
+.animation{z-index:2; position:absolute;right:0;width:0;top:0;height:12.5rem;}
+.navLst{ position:absolute;z-index:3;width:12rem;left:2rem;top:13rem; opacity:0;}
+.navLst li{float:left;height:2rem;margin-top:0.4rem}
+.navLst li img{width:6rem;}
+.animation2{position:absolute;z-index:2;top:10.4rem;left:0.34rem;width:15.6rem;height:0; opacity:0;}
+.btnBox{position:absolute;left:0;top:15.4rem;padding:0 2.6rem;}
+.btnBox dt{padding:0.5rem 1rem 3.4rem 1rem;}
+.btnBox dd{margin-top:0.3rem;}
+.gl{padding:0 1rem; position:relative;}
+.gl dt{text-align:center;}
+.gl dt img{width:5rem;}
+.gl dd{padding:0.6rem 0 1rem 0;}
+.gl dd p{font-size:0.57rem;line-height:0.8rem;margin-top:0.4rem;}
+.btmBk{margin-top:-3rem;}
+.deguo .btnBox{top:9.2rem;}
+.yingguo .btnBox{top:10.2rem;}
+.yingguo{color:#fff;}
+.xibanya .btnBox{top:10.7rem;}
+.xibanya{color:#fff;}
+.yidali .btnBox{top:10.1rem;}
+.yidali{color:#fff;}
+.ruishi .btnBox{top:11.1rem;}
+.ruishi .btnBox dt{padding:0.5rem 1rem 4rem 1rem;}
+.ruishi{color:#fff;}

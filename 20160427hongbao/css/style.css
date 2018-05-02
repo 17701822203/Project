@@ -1,0 +1,38 @@
+/*Created by huang.jun on 16-04-27*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:Microsoft YaHei;}
+
+.shadow{width:100%;height:100%;position:fixed;z-index:6;background:#000;opacity:0.5;top:0;left:0;}
+.popBox{position:absolute;z-index:7;left:50%;top:5rem;width:12rem;margin-left:-6rem;}
+.popBox dt,.popBox dd{position:relative;}
+.popBox dd a{ position:absolute;left:50%;top:-6rem;margin-left:-5rem;width:10rem;}
+.close{ position:absolute;right:-1.2rem;top:-1.8rem;width:1.5rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+﻿<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+<body>
+    <section style="display:none;">
+        <!--活动规则-->
+        <div class="shadow"></div>
+        <div class="LayBox">
+            <dl class="TxtList">
+                <dd>
+                    <h4>活动规则</h4>
+                    <p>领取现金券将会记录在您的手机号码下，只需要用该手机号码登录携程即可使用；</p>
+                    <p>该优惠券适用于携程网站、携程APP(6.10版本以上)国际火车票频道下的欧铁/日铁产品。（国际火车票入口：火车票—国际火车票）;</p>
+                    <p>优惠券可抵扣25元，订单金额满500元即可使用；</p>
+                    <p>优惠券自获得之日起30天内有效；</p>
+                    <p>每个手机号仅限领取1张现金券，每张优惠券仅限使用一次，每个订单仅可使用一张优惠券；</p>
+                    <p>在法律允许的范围内，携程旅行网可能对活动的规则/条款作出适当调整；</p>
+                </dd>
+                <dt><a href="###">知道了</a></dt>
+            </dl>
+        </div>
+        <!--表单提示-->
+        <div class="tips" style="display:none;">
+            <span style="display:none;">请输入正确的手机号</span>
+            <span style="display:none;">请输入正确的短信验证码</span>
+            <span>请输入正确的验证码</span>
+        </div>
+    </section>
+    <article>
+        <div class="TopBox"><a href="###">规则</a></div>
+        <div class="WrapBg">
+            <!--主页面-->
+            <div class="List" style="display:none;">
+                <div class="ListTop">
+                    <ul class="ListBox">
+                        <li><input type="text" class="Mob" placeholder="输入手机号"></li>
+                        <li><input type="text" class="Message" placeholder="短信验证码"><a class="YzmBtn" href="###">发送验证码</a></li>
+                        <li><input type="text" class="Message" placeholder="输入验证码"><img class="Yzm" src=""> </li>
+                    </ul>
+                </div>
+                <a href="###" class="button1" style="display:none;"></a><a href="###" class="button2"></a>
+            </div>
+            <!--领取红包-->
+            <div class="Coupon" style="display:;">
+                <div class="CouponTxt" style="display: none">现金券已放入您的携程账号：151****0875</div>
+                <div class="CouponTxt">该携程账号：134****2456已领取过红包，</br>无法重复领取哦~</div>
+                <div class="CouponBg"><span><small>&yen;</small><strong>25</strong></span></div>
+                <a href="###" class="button1"></a><a href="###" class="button2"></a><a href="###" class="button3"></a>
+            </div>
+            <div class="BottomTxt"><span>携程 国际火车票</span></div>
+        </div>
+    </article>
+</body>
+</html>

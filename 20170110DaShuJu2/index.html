@@ -1,0 +1,84 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+	<title></title>
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+	<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        function scroll(){
+            $(".top-txt ul").animate({"margin-top":"-1rem"},function(){
+                $(".top-txt ul li:eq(0)").appendTo($(".top-txt ul"))
+                $(".top-txt ul").css({"margin-top":"0"})
+            })
+        }
+        setInterval(scroll,2000)
+    </script>
+    <style>
+        *{margin:0;padding:0;}
+        body{font-family:"PingFang SC Regular","Microsoft yahei",arial,Simsun,sans-serif;}
+        img{width:100%;}
+        div{font-size:0;position:relative;}
+        .btn1,.btn2,.btn3{position: absolute;left:50%;width:9.375rem;margin-left:-4.6875rem;top:0;}
+        .top-txt{position:absolute;top:0;left:0;text-align:center;width:100%;margin-top:0.2rem;color:#999;font-size:0.6rem;overflow: hidden;height:1rem;z-index:1;}
+        ol,ul,li{list-style:none;}
+        .top-txt ul li{height:1rem;line-height:1rem;}
+    </style>
+</head>
+<body>
+	<article>
+        <div class="top-txt">
+            <ul>
+                <li>用户：1880****222，已通过携程</li>
+                <li>用户：1880****222，已通过携程</li>
+                <li>用户：1880****222，已通过携程</li>
+                <li>用户：1880****222，已通过携程</li>
+                <li>用户：1880****222，已通过携程</li>
+                <li>用户：1880****222，已通过携程</li>
+            </ul>
+        </div>
+        <div><img src="img/img1.jpg"></div>
+        <div><img src="img/img2.jpg"></div>
+        <div><img src="img/img3.jpg"></div>
+        <div>
+            <img src="img/img4.jpg">
+            <a href="###" class="btn1"><img src="img/btn1.png"></a>
+        </div>
+        <div>
+            <img src="img/img5.jpg">
+            <a href="###" class="btn2"><img src="img/btn2.png"></a>
+        </div>
+        <div>
+            <img src="img/img6.jpg">
+            <a href="###" class="btn3"><img src="img/btn3.png"></a>
+        </div>
+    </article>
+</body>
+</html>

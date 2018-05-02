@@ -1,0 +1,25 @@
+/*Created by huang.jun on 16-08-17*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB";}
+
+.Bg1{height:5.1rem;background:url("../img/Bg1.jpg") no-repeat;background-size:7.5rem 5.1rem;}
+.Bg2{height:5.12rem;background:url("../img/Bg2.jpg") no-repeat;background-size:7.5rem 5.12rem;}
+.Bg3{height:5.36rem;background:url("../img/Bg3.jpg") no-repeat;background-size:7.5rem 5.36rem;}
+.Bg4{height:2rem;background:url("../img/bg4.jpg") no-repeat;background-size:7.5rem 2rem;position: relative;}
+.Bg5{height:8.21rem;background:url("../img/bg5.jpg") no-repeat;background-size:7.5rem 8.21rem;}
+.button{width:4.21rem;height:1rem;border:0;background:url("../img/button.png") no-repeat;background-size:4.21rem 1rem;position: absolute;left:50%;margin-left:-2.105rem;top:0.3rem;}
+.txtList{color:#fff;font-size:0.28rem;padding:0.6rem 0.5rem 0 0.6rem;}
+.txtList li{line-height:0.55rem;text-indent:-0.3rem;padding-left:0.3rem;margin-top:0.1rem;}
+
+
+
+
+
+
+
+
+
+

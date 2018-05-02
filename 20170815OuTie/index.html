@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+        $(document).ready(function(){
+            $(".TopBtn").click(function(){
+                $("section").show();
+            })
+            $(".shadow,.close").click(function(){
+                $("section").hide();
+            })
+        })
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+<section>
+    <div class="shadow"></div>
+    <dl class="LatBox">
+        <dt>
+            <p>恭喜您!</p>
+            <p>15元优惠券以放入您的帐户</p>
+        </dt>
+        <dd><a class="close" href="###">知道了</a></dd>
+    </dl>
+</section>
+<article class="img-box" ontouchstart="" onmouseover="">
+    <div class="Relative">
+        <a class="TopBtn" href="###"><img src="img/Btn.png"></a>
+        <img src="img/ImgTop.jpg">
+    </div>
+    <div class="Relative">
+        <a class="Img1" href="###"><img src="img/Img1.png"></a>
+        <a class="Img2" href="###"><img src="img/Img2.png"></a>
+        <a class="Img3" href="###"><img src="img/Img3.png"></a>
+        <a class="Img4" href="###"><img src="img/Img4.png"></a>
+        <a class="Img5" href="###"><img src="img/Img5.png"></a>
+        <a class="Img6" href="###"><img src="img/Img6.png"></a>
+        <a class="Img7" href="###"><img src="img/Img7.png"></a>
+        <img src="img/List.jpg">
+    </div>
+    <div class="Relative">
+        <img src="img/rule.jpg">
+        <a class="Img1" href="###"><img src="img/Img8.png"></a>
+        <a class="Img2" href="###"><img src="img/Img9.png"></a>
+        <a class="Img8" href="###"><img src="img/BigBtn.png"></a>
+    </div>
+    <div class="Relative">
+        <img src="img/btm.jpg">
+        <a class="BtmBtn" href="###"><img src="img/BtmBtn.png"></a>
+    </div>
+</article>
+</body>
+</html>
+

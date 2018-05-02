@@ -1,0 +1,52 @@
+<html class="ie">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript" src="js/myJs.js"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+	<section>
+    	<div class="shadow"></div>
+        <img class="pop" src="img/fenxiang.png">
+    </section>
+	<article>
+    	<img src="img/bk.jpg">
+        <img class="sjq" src="img/sjq.png">
+        <img class="cb" src="img/mz.png">
+        <img class="clickme" src="img/btn.png">
+        <img class="ewm" src="img/ewm.jpg">
+        <dl class="mobLst">
+        	<dt>请输入手机号</dt>
+            <dd><input type="text"></dd>
+            <dd>中奖后，我们将通过手机<br/>号联系您，请如实填写</dd>
+        </dl>
+        <dl class="bmcg">
+        	<dt>
+            	<big>恭喜报名成功</big><br/><small>即刻查看您的抽奖码</small>
+            </dt>
+            <dd>1.请长按识别点击后出现的二维码</dd>
+            <dd>2.请点击公众号的活动，<br/>查看您的抽奖码</dd>
+        </dl>
+        <button class="canyuBtn">立即参与</button>
+    </article>
+</body>
+</html>

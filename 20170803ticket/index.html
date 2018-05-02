@@ -1,0 +1,502 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <!--<script src="js/jquery.lwtCountdown-1.0.js"></script>-->
+    <script>
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 24.025 * fontSize){
+                $('.nav-wrap').addClass('nav_wrap_fix');
+            }else{
+                $('.nav-wrap').removeClass('nav_wrap_fix');
+            }
+        });
+    </script>
+
+</head>
+<body>
+<section>
+    <div class="shadow"></div>
+    <div class="LayBox">
+        <em class="CloseBtn"></em>
+        <dl>
+            <dt>活动规则</dt>
+            <dd>
+                <p>1、船票2周年庆专享优惠价，仅限8月10日0:00-8月16日23:59期间预订。活动结束后，价格即会恢复原价。</p>
+                <p>2、仅成人票参与立减活动，儿童票、学生票不参与立减。</p>
+                <p>3、若遇无票或退票发生退款时，按实际支付的金额计算，立减的金额不予退回。且收取一定的退票手续费。手续费依不同线路而不同，按港口规则收取。</p>
+                <p>4、本次活动最终解释权归携程旅行网所有，如有疑问请致电携程客服10106666。</p>
+            </dd>
+        </dl>
+        <div>携程船票</div>
+    </div>
+</section>
+
+<article>
+    <div class="TopBox">
+        <a href="###" class="LayBtn"></a>
+        <img src="img/TopImg.jpg">
+        <em class="liwu"></em>
+        <div id="countdown">
+            <div class="dash days_dash">
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+            </div>
+
+            <div class="dash hours_dash">
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+            </div>
+
+            <div class="dash minutes_dash">
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+            </div>
+
+            <div class="dash seconds_dash">
+                <div class="digit">0</div>
+                <div class="digit">0</div>
+            </div>
+
+        </div>
+    </div><!--头图-->
+
+    <div class="nav-height" id="navHeight">
+        <nav class="nav-wrap" id="nav-wrap">
+            <ul class="clearfix">
+                <li><a href="#section1" class="active">最火船票</a></li>
+                <li><a href="#section2">珠港澳</a></li>
+                <li><a href="#section3">渤海湾</a></li>
+                <li><a href="#section4">消暑海岛游</a></li>
+            </ul>
+            <span></span>
+            <dl class="sNav">
+                <dd><a href="#section5">东南亚&nbsp;&nbsp;&nbsp;</a></dd>
+                <dd><a href="#section6">日韩台</a></dd>
+                <dd><a href="#section7">长江三峡</a></dd>
+            </dl>
+        </nav>
+    </div><!--导航-->
+
+    <div class="list-box">
+        <div class="img-box" id="section1"><img src="img/Title1.jpg"></div>
+        <div class="CityTab">
+
+            <div class="CityBox" style="margin-top:0;">
+                <div class="CityImg"><img src="img/img1.jpg"></div>
+                <div class="CityPrice">
+                    <strong>北海—涠洲岛</strong>
+                </div>
+                <div class="CityButton"><a href="###">最高立减150元</a></div>
+            </div>
+
+            <div class="CityBox" style="margin-top:0;">
+                <div class="CityImg"><img src="img/img2.jpg"></div>
+                <div class="CityPrice">
+                    <strong>厦门—鼓浪屿</strong>
+                </div>
+                <div class="CityButton"><a href="###">最高立减10元</a></div>
+            </div>
+
+            <div class="CityBox">
+                <div class="CityImg"><img src="img/img3.jpg"></div>
+                <div class="CityPrice">
+                    <strong>香港—澳门</strong>
+                </div>
+                <div class="CityButton"><a href="###">最高立减30元</a></div>
+            </div>
+
+            <div class="CityBox">
+                <div class="CityImg"><img src="img/img4.jpg"></div>
+                <div class="CityPrice">
+                    <strong>上海—嵊泗</strong>
+                </div>
+                <div class="CityButton"><a href="###">最高立减10元</a></div>
+            </div>
+
+            <div class="CityBox">
+                <div class="CityImg"><img src="img/img5.jpg"></div>
+                <div class="CityPrice">
+                    <strong>普吉岛—皮皮岛</strong>
+                </div>
+                <div class="CityButton"><a href="###">最高立减10元</a></div>
+            </div>
+
+            <div class="CityBox">
+                <div class="CityImg"><img src="img/img6.jpg"></div>
+                <div class="CityPrice">
+                    <strong>新加坡—民丹岛</strong>
+                </div>
+                <div class="CityButton"><a href="###">最高立减10元</a></div>
+            </div>
+
+            <div class="CityBox">
+                <div class="CityImg"><img src="img/img7.jpg"></div>
+                <div class="CityPrice">
+                    <strong>重庆—宜昌</strong>
+                </div>
+                <div class="CityButton"><a href="###">最高立减50元</a></div>
+            </div>
+
+            <div class="CityBox">
+                <div class="CityImg"><img src="img/img8.jpg"></div>
+                <div class="CityPrice">
+                    <strong>宜昌—重庆</strong>
+                </div>
+                <div class="CityButton"><a href="###">最高立减50元</a></div>
+            </div>
+
+            <div class="CityBox">
+                <div class="CityImg"><img src="img/img9.jpg"></div>
+                <div class="CityPrice">
+                    <strong>珠海—深圳</strong>
+                </div>
+                <div class="CityButton"><a href="###">最高立减5元</a></div>
+            </div>
+
+            <div class="CityBox">
+                <div class="CityImg"><img src="img/img10.jpg"></div>
+                <div class="CityPrice">
+                    <strong>大连—威海</strong>
+                </div>
+                <div class="CityButton"><a href="###">最高立减66元</a></div>
+            </div>
+
+        </div>
+        <div class="img-box" id="section2"><img src="img/Title2.jpg"></div>
+        <div class="bor-orange" style="padding:.55rem .75rem 0 .75rem;">
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">珠海—深圳</div>
+                <div class="hide-price">最高立减&nbsp;&yen;3</div>
+                <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">深圳—珠海</div>
+                <div class="hide-price">最高立减&nbsp;&yen;3</div>
+                <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">珠海—香港</div>
+                <div class="hide-price">最高立减&nbsp;&yen;3</div>
+                <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">澳门—深圳</div>
+                <div class="hide-price">最高立减&nbsp;&yen;25</div>
+                <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">深圳—澳门</div>
+                <div class="hide-price">最高立减&nbsp;&yen;15</div>
+                <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+            </div>
+            <div class="lab">
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">香港—澳门</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;40</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">澳门—香港</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;30</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">深圳—香港</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;3</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">广州—香港</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;40</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">中山—香港</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;10</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">香港—广州</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;35</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">虎门—香港</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;30</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">香港—深圳</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;15</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">香港—虎门</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;80</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button1.png"></a>
+                </div>
+            </div>
+            <div class="bor-orange-js"><span>更多线路</span></div>
+        </div>
+        <div class="img-box" id="section3"><img src="img/Title3.jpg"></div>
+        <div class="bor-blue" style="padding:.55rem .75rem 0 .75rem;">
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">大连—威海</div>
+                <div class="hide-price">最高立减&nbsp;&yen;66</div>
+                <a class="bor-orange-button" href="###"><img src="img/button2.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">威海—大连</div>
+                <div class="hide-price">最高立减&nbsp;&yen;66</div>
+                <a class="bor-orange-button" href="###"><img src="img/button2.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">大连—烟台</div>
+                <div class="hide-price">最高立减&nbsp;&yen;15</div>
+                <a class="bor-orange-button" href="###"><img src="img/button2.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">烟台—大连</div>
+                <div class="hide-price">最高立减&nbsp;&yen;58</div>
+                <a class="bor-orange-button" href="###"><img src="img/button2.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">旅顺—蓬莱</div>
+                <div class="hide-price">最高立减&nbsp;&yen;10</div>
+                <a class="bor-orange-button" href="###"><img src="img/button2.png"></a>
+            </div>
+            <div class="lab">
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">蓬莱—旅顺</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;50</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button2.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">旅顺—龙口</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;12</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button2.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">龙口—旅顺</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;50</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button2.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">旅顺—东营</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;40</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button2.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">东营—旅顺</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;40</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button2.png"></a>
+                </div>
+            </div>
+            <div class="bor-orange-js"><span>更多线路</span></div>
+        </div>
+        <div class="img-box" id="section4"><img src="img/Title4.jpg"></div>
+        <div class="bor-red" style="padding:.55rem .75rem 0 .75rem;">
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">北海—海口</div>
+                <div class="hide-price">最高立减&nbsp;&yen;10</div>
+                <a class="bor-orange-button" href="###"><img src="img/button3.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">上海—普陀山</div>
+                <div class="hide-price">最高立减&nbsp;&yen;20</div>
+                <a class="bor-orange-button" href="###"><img src="img/button3.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">上海—嵊泗</div>
+                <div class="hide-price">最高立减&nbsp;&yen;10</div>
+                <a class="bor-orange-button" href="###"><img src="img/button3.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">厦门—鼓浪屿</div>
+                <div class="hide-price">最高立减&nbsp;&yen;10</div>
+                <a class="bor-orange-button" href="###"><img src="img/button3.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">珠海—外伶仃岛</div>
+                <div class="hide-price">最高立减&nbsp;&yen;5</div>
+                <a class="bor-orange-button" href="###"><img src="img/button3.png"></a>
+            </div>
+            <div class="lab">
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">外伶仃岛—珠海</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;5</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button3.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">珠海—东澳岛</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;5</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button3.png"></a>
+                </div>
+            </div>
+            <div class="bor-orange-js"><span>更多线路</span></div>
+        </div>
+        <div class="img-box" id="section5"><img src="img/Title5.jpg"></div>
+        <div class="bor-green" style="padding:.15rem .75rem 0 .75rem;">
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">槟城—兰卡威</div>
+                <div class="hide-price">最高立减&nbsp;&yen;10</div>
+                <a class="bor-orange-button" href="###"><img src="img/button4.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">新加坡—民丹岛</div>
+                <div class="hide-price">最高立减&nbsp;&yen;10</div>
+                <a class="bor-orange-button" href="###"><img src="img/button4.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">普吉岛—皮皮岛</div>
+                <div class="hide-price">最高立减&nbsp;&yen;10</div>
+                <a class="bor-orange-button" href="###"><img src="img/button4.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">皮皮岛—普吉岛</div>
+                <div class="hide-price">最高立减&nbsp;&yen;10</div>
+                <a class="bor-orange-button" href="###"><img src="img/button4.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">新加坡—巴淡岛</div>
+                <div class="hide-price">最高立减&nbsp;&yen;10</div>
+                <a class="bor-orange-button" href="###"><img src="img/button4.png"></a>
+            </div>
+        </div>
+        <div class="img-box" id="section6"><img src="img/Title6.jpg"></div>
+        <div class="bor-yellow" style="padding:.55rem .75rem 0 .75rem;">
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">青岛—仁川</div>
+                <div class="hide-price">最高立减&nbsp;&yen;100</div>
+                <a class="bor-orange-button" href="###"><img src="img/button5.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">威海—仁川</div>
+                <div class="hide-price">最高立减&nbsp;&yen;100</div>
+                <a class="bor-orange-button" href="###"><img src="img/button5.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">大连—仁川</div>
+                <div class="hide-price">最高立减&nbsp;&yen;80</div>
+                <a class="bor-orange-button" href="###"><img src="img/button5.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">烟台—仁川</div>
+                <div class="hide-price">最高立减&nbsp;&yen;100</div>
+                <a class="bor-orange-button" href="###"><img src="img/button5.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">大阪—上海</div>
+                <div class="hide-price">最高立减&nbsp;&yen;600</div>
+                <a class="bor-orange-button" href="###"><img src="img/button5.png"></a>
+            </div>
+            <div class="lab">
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">上海—大阪</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;200</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button5.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">厦门—台中</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;60</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button5.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">台中—厦门</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;60</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button5.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">基隆—厦门</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;60</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button5.png"></a>
+                </div>
+                <div class="bor-orange-list">
+                    <div class="bor-orange-name">厦门—基隆</div>
+                    <div class="hide-price">最高立减&nbsp;&yen;60</div>
+                    <a class="bor-orange-button" href="###"><img src="img/button5.png"></a>
+                </div>
+            </div>
+            <div class="bor-orange-js"><span>更多线路</span></div>
+        </div>
+        <div class="img-box" id="section7"><img src="img/Title7.jpg"></div>
+        <div class="bor-purple" style="padding:.15rem .75rem 0 .75rem;">
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">重庆—宜昌</div>
+                <div class="hide-price">最高立减&nbsp;&yen;50</div>
+                <a class="bor-orange-button" href="###"><img src="img/button6.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">宜昌—重庆</div>
+                <div class="hide-price">最高立减&nbsp;&yen;50</div>
+                <a class="bor-orange-button" href="###"><img src="img/button6.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">奉节—宜昌</div>
+                <div class="hide-price">最高立减&nbsp;&yen;50</div>
+                <a class="bor-orange-button" href="###"><img src="img/button6.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">万州—宜昌</div>
+                <div class="hide-price">最高立减&nbsp;&yen;50</div>
+                <a class="bor-orange-button" href="###"><img src="img/button6.png"></a>
+            </div>
+            <div class="bor-orange-list">
+                <div class="bor-orange-name">宜昌—万州</div>
+                <div class="hide-price">最高立减&nbsp;&yen;50</div>
+                <a class="bor-orange-button" href="###"><img src="img/button6.png"></a>
+            </div>
+        </div>
+    </div>
+    <div class="img-box"><img src="img/btm.jpg"></div>
+    <div class="flx-btn"><a href="###"><img src="img/flx-btn.png"></a> </div>
+</article>
+<script src="js/jquery.navScroll.js"></script>
+<script>
+    $('.nav-wrap').navScroll({
+        mobileDropdown: true,
+        mobileBreakpoint:100,
+        scrollSpy: true
+    });
+</script>
+<script src="js/ticket.js"></script>
+
+</body>
+</html>
+

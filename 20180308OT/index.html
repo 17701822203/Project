@@ -1,0 +1,180 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function (){
+            <!--==点击切换==-->
+            $(".Nav-List li").each(function(index){
+                $(this).click(function(){
+                    $(".Nav-List li").removeClass("on");
+                    $(".Nav-List li").eq(index).addClass("on");
+                });
+            });
+            <!--==锚点==-->
+            $('#scroll_a').click(function(){$('html,body').animate({scrollTop:$('.a').offset().top}, 800);});
+            $('#scroll_b').click(function(){$('html,body').animate({scrollTop:$('.b').offset().top}, 800);});
+            $('#scroll_c').click(function(){$('html,body').animate({scrollTop:$('.c').offset().top}, 800);});
+            $('#scroll_d').click(function(){$('html,body').animate({scrollTop:$('.d').offset().top}, 800);});
+            $('#scroll_e').click(function(){$('html,body').animate({scrollTop:$('.e').offset().top}, 800);});
+            $('#scroll_f').click(function(){$('html,body').animate({scrollTop:$('.f').offset().top}, 800);});
+            $('#scroll_g').click(function(){$('html,body').animate({scrollTop:$('.g').offset().top}, 800);});
+        });
+        <!--==屏幕距离隐藏显示==-->
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 27.8 * fontSize){
+                $('#TopNav').addClass('Nav-List');
+            }else{
+                $('#TopNav').removeClass('Nav-List');
+            }
+        });
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#F1F1F1;">
+    <!--==悬浮导航==-->
+    <nav id="TopNav">
+        <ul class="Nav-List">
+            <li class="on" id="scroll_a">全国券</li>
+            <li id="scroll_b">西日本</li>
+            <li id="scroll_c">九州</li>
+            <li id="scroll_d">东日本</li>
+            <li id="scroll_e">北海道</li>
+            <li id="scroll_f">东海</li>
+            <li id="scroll_g">四国</li>
+        </ul>
+    </nav>
+    <div class="img-box"><img src="img/TopImg.jpg"></div>
+    <div class="img-box"><img src="img/TopImg2.jpg"></div>
+    <div class="img-box"><img src="img/TopImg3.jpg"></div>
+    <dl class="ImgList">
+        <dt>
+            <i class="a"></i>
+            <img src="img/Img1.jpg">
+            <a class="Btn1" href="###"><img src="img/ButtonBtn.png"></a>
+        </dt>
+        <dd><img src="img/Img2.jpg"></dd>
+        <dt>
+            <img src="img/Img3.jpg">
+            <i class="b"></i>
+        </dt>
+        <dd>
+            <img src="img/Img4-1.jpg">
+            <img src="img/Img4-2.jpg">
+            <img src="img/Img4-3.jpg">
+            <img src="img/Img4-4.jpg">
+            <img src="img/Img4-5.jpg">
+            <!--==链接按钮==-->
+            <a class="Btn2" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn3" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn4" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn5" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn6" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn7" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn8" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn9" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn10" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn11" href="###"><img src="img/ButtonBtn.png"></a>
+        </dd>
+        <dt><img src="img/Img5.jpg"></dt>
+        <dd>
+            <img src="img/Img6.jpg">
+            <!--==链接按钮==-->
+            <a class="Btn12" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn13" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn14" href="###"><img src="img/ButtonBtn.png"></a>
+        </dd>
+        <dt><img src="img/Img7.jpg"></dt>
+        <dd>
+            <img src="img/Img8.jpg">
+            <!--==链接按钮==-->
+            <a class="Btn15" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn16" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn17" href="###"><img src="img/ButtonBtn.png"></a>
+        </dd>
+        <dt>
+            <img src="img/Img9.jpg">
+            <i class="c"></i>
+        </dt>
+        <dd>
+            <img src="img/Img10.jpg">
+            <!--==链接按钮==-->
+            <a class="Btn18" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn19" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn20" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn21" href="###"><img src="img/ButtonBtn.png"></a>
+        </dd>
+        <dt>
+            <img src="img/Img11.jpg">
+            <i class="d"></i>
+            <i class="e"></i>
+        </dt>
+        <dd>
+            <img src="img/Img12.jpg">
+            <!--==链接按钮==-->
+            <a class="Btn22" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn23" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn24" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn25" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn26" href="###"><img src="img/ButtonBtn.png"></a>
+            <!--==<a class="Btn32" href="###"><img src="img/ButtonBtn.png"></a>==-->
+        </dd>
+        <dt>
+            <img src="img/Img13.jpg">
+            <i class="f"></i>
+        </dt>
+        <dd>
+            <img src="img/Img14.jpg">
+            <!--==链接按钮==-->
+            <a class="Btn27" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn28" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn29" href="###"><img src="img/ButtonBtn.png"></a>
+            <a class="Btn30" href="###"><img src="img/ButtonBtn.png"></a>
+        </dd>
+        <dt>
+            <img src="img/Img15.jpg">
+            <i class="g"></i>
+        </dt>
+        <dd>
+            <img src="img/Img16.jpg">
+            <!--==链接按钮==-->
+            <a class="Btn31" href="###"><img src="img/ButtonBtn.png"></a>
+        </dd>
+    </dl>
+    <div class="img-box"><img src="img/Img17.jpg"></div>
+</body>
+</html>

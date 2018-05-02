@@ -1,0 +1,135 @@
+﻿<html class="ie" xmlns="http://www.w3.org/1999/html"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+<body>
+    <article>
+        <div class="Title1"></div>
+        <div class="TabBox" style="padding-top:0.5rem;">
+            <ul class="TabNav">
+                <li class="on">火车</li>
+                <li>飞机</li>
+            </ul>
+            <label>
+                <small>&yen;</small>
+                <strong>99</strong>
+                <span>起</span>
+            </label>
+        </div>
+        <div id="ListBox" style="padding:0.725rem 0.8rem 0 0.8rem;">
+            <ul class="ListBox" style="display:block;">
+                <li><span>上海-西安1</span><label><small>&yen;</small><strong>899</strong></label><a href="###">预订</a></li>
+                <li><span>广州-武汉</span><label><small>&yen;</small><strong>3889</strong></label><a href="###">预订</a></li>
+                <li><span>郑州-西安</span><label><small>&yen;</small><strong>268</strong></label><a href="###">预订</a></li>
+            </ul>
+            <ul class="ListBox">
+                <li><span>上海-西安2</span><label><small>&yen;</small><strong>899</strong></label><a href="###">预订</a></li>
+                <li><span>广州-武汉</span><label><small>&yen;</small><strong>3889</strong></label><a href="###">预订</a></li>
+                <li><span>郑州-西安</span><label><small>&yen;</small><strong>268</strong></label><a href="###">预订</a></li>
+            </ul>
+        </div>
+        <div class="OffersBox" style="padding-top:0.5rem;">
+            <div class="Offers">
+                <strong>杭州-贵阳</strong>
+                <span>&yen;19</span>
+                <a href="###">预订</a>
+            </div>
+        </div>
+        <div class="Title2"></div>
+        <div class="TabBox" style="padding-top:0.5rem;">
+            <ul class="TabNav">
+                <li class="on">火车</li>
+                <li>飞机</li>
+            </ul>
+            <label>
+                <small>&yen;</small>
+                <strong>99</strong>
+                <span>起</span>
+            </label>
+        </div>
+        <div id="ListBox" style="padding:0.725rem 0.8rem 0 0.8rem;">
+            <ul class="ListBox" style="display:block;">
+                <li><span>上海-西安1</span><label><small>&yen;</small><strong>899</strong></label><a href="###">预订</a></li>
+                <li><span>广州-武汉</span><label><small>&yen;</small><strong>3889</strong></label><a href="###">预订</a></li>
+                <li><span>郑州-西安</span><label><small>&yen;</small><strong>268</strong></label><a href="###">预订</a></li>
+            </ul>
+            <ul class="ListBox">
+                <li><span>上海-西安2</span><label><small>&yen;</small><strong>899</strong></label><a href="###">预订</a></li>
+                <li><span>广州-武汉</span><label><small>&yen;</small><strong>3889</strong></label><a href="###">预订</a></li>
+                <li><span>郑州-西安</span><label><small>&yen;</small><strong>268</strong></label><a href="###">预订</a></li>
+            </ul>
+        </div>
+        <div class="OffersBox" style="padding-top:0.5rem;">
+            <div class="Offers">
+                <strong>杭州-贵阳</strong>
+                <span>&yen;19</span>
+                <a href="###">预订</a>
+            </div>
+        </div>
+        <div class="Title3"></div>
+        <div class="TabBox" style="padding-top:0.5rem;">
+            <ul class="TabNav">
+                <li class="on">火车</li>
+                <li>飞机</li>
+            </ul>
+            <label>
+                <small>&yen;</small>
+                <strong>99</strong>
+                <span>起</span>
+            </label>
+        </div>
+        <div id="ListBox" style="padding:0.725rem 0.8rem 0 0.8rem;">
+            <ul class="ListBox" style="display:block;">
+                <li><span>上海-西安1</span><label><small>&yen;</small><strong>899</strong></label><a href="###">预订</a></li>
+                <li><span>广州-武汉</span><label><small>&yen;</small><strong>3889</strong></label><a href="###">预订</a></li>
+                <li><span>郑州-西安</span><label><small>&yen;</small><strong>268</strong></label><a href="###">预订</a></li>
+            </ul>
+            <ul class="ListBox">
+                <li><span>上海-西安2</span><label><small>&yen;</small><strong>899</strong></label><a href="###">预订</a></li>
+                <li><span>广州-武汉</span><label><small>&yen;</small><strong>3889</strong></label><a href="###">预订</a></li>
+                <li><span>郑州-西安</span><label><small>&yen;</small><strong>268</strong></label><a href="###">预订</a></li>
+            </ul>
+        </div>
+        <div class="OffersBox" style="padding-top:0.5rem;">
+            <div class="Offers">
+                <strong>杭州-贵阳</strong>
+                <span>&yen;19</span>
+                <a href="###">预订</a>
+            </div>
+        </div>
+        <a class="LayerButton" href="###">立即抢票</a>
+    </article>
+</body>
+</html>

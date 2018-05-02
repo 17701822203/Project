@@ -1,0 +1,158 @@
+/*Created by huang.jun on 18-1-11*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+button:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopImg {
+  font-size: 0;
+  position: relative;
+}
+.TopImg img {
+  width: 100%;
+}
+.TopImg .RiLi {
+  height: 1.5rem;
+  position: absolute;
+  color: #fff;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.TopImg .RiLi .left,
+.TopImg .RiLi .right {
+  font-size: .75rem;
+  line-height: 1rem;
+  font-weight: bold;
+}
+.TopImg .RiLi .left {
+  float: left;
+  padding-left: 1.25rem;
+}
+.TopImg .RiLi .right {
+  float: right;
+  padding-right: 1.25rem;
+}
+.TopImg .RiLi .center {
+  width: 8rem;
+  height: .9rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.8rem;
+}
+.TopImg .RiLi .center li {
+  float: left;
+  font-size: .75rem;
+  font-family: "PingFangSC-Medium";
+  margin-left: .1rem;
+  line-height: 1rem;
+}
+.TopImg .RiLi .center li.number {
+  font-size: .85rem;
+  width: .75rem;
+  height: 1rem;
+  line-height: 1rem;
+  background: #fff;
+  color: #670086;
+  text-align: center;
+  font-weight: bold;
+}
+.CalendarTop {
+  font-size: 0;
+  position: relative;
+}
+.CalendarTop img {
+  width: 100%;
+}
+.CalendarTop .Date {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: .55rem;
+  width: 100%;
+}
+.CalendarTop .Date span {
+  font-size: .75rem;
+  line-height: .75rem;
+}
+.CalendarTop .Date .DateLeft,
+.CalendarTop .Date .DateRight {
+  width: .825rem;
+  height: .825rem;
+  position: absolute;
+  background: url("../img/DateIcon.png") no-repeat;
+  background-size: 100% 100%;
+}
+.CalendarTop .Date .DateLeft {
+  margin-left: -3.5rem;
+  left: 50%;
+}
+.CalendarTop .Date .DateRight {
+  margin-right: -3.5rem;
+  right: 50%;
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.BtmBtn {
+  border-top: 2px solid #FFC6BA;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  background-color: #EC0028;
+  background-image: -webkit-linear-gradient(left, #EC0028, #F04122);
+  background-image: -moz-linear-gradient(left, #EC0028, #F04122);
+  background-image: -o-linear-gradient(left, #EC0028, #F04122);
+  background-image: -ms-linear-gradient(left, #EC0028, #F04122);
+  background-image: linear-gradient(left, #EC0028, #F04122);
+  font-family: "PingFangSC-Medium";
+  color: #fef1e0;
+  font-size: .95rem;
+}
+.BtmBtn:active {
+  opacity: .8;
+}

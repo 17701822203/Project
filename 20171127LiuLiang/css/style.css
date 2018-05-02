@@ -1,0 +1,145 @@
+/*Created by huang.jun on 17-10-10*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+  background: #FEF7EE;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.BtnBox {
+  position: relative;
+}
+.BtnBox .yellow {
+  height: 2.25rem;
+  line-height: 2.25rem;
+  position: absolute;
+  text-align: center;
+  -webkit-border-radius: 2.25rem;
+  -moz-border-radius: 2.25rem;
+  border-radius: 2.25rem;
+  background-color: #FFB921;
+  background-image: -webkit-linear-gradient(left, #FFB921, #FF9700);
+  background-image: -moz-linear-gradient(left, #FFB921, #FF9700);
+  background-image: -o-linear-gradient(left, #FFB921, #FF9700);
+  background-image: -ms-linear-gradient(left, #FFB921, #FF9700);
+  background-image: linear-gradient(left, #FFB921, #FF9700);
+  left: 0;
+  top: 1.6rem;
+  font-size: .9rem;
+  color: #fff;
+  width: 74%;
+  margin: 0 13%;
+  -webkit-box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+}
+.BtnBox .red {
+  height: 2.25rem;
+  line-height: 2.25rem;
+  position: absolute;
+  text-align: center;
+  -webkit-border-radius: 2.25rem;
+  -moz-border-radius: 2.25rem;
+  border-radius: 2.25rem;
+  background-color: #FF6B57;
+  background-image: -webkit-linear-gradient(left, #FF6B57, #F78845);
+  background-image: -moz-linear-gradient(left, #FF6B57, #F78845);
+  background-image: -o-linear-gradient(left, #FF6B57, #F78845);
+  background-image: -ms-linear-gradient(left, #FF6B57, #F78845);
+  background-image: linear-gradient(left, #FF6B57, #F78845);
+  left: 0;
+  top: 5rem;
+  font-size: .9rem;
+  color: #fff;
+  width: 74%;
+  margin: 0 13%;
+  -webkit-box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+}
+.txt {
+  background: #fff;
+  margin: 0 1.1rem 1.5rem 1.1rem;
+  padding: 0 1.25rem 1.5rem 1.25rem;
+  position: relative;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.txt h4 {
+  font-size: .8rem;
+  line-height: .8rem;
+  color: #eca536;
+  text-align: center;
+  padding-top: 1.05rem;
+}
+.txt p {
+  font-size: .65rem;
+  line-height: 1rem;
+  margin-top: .5rem;
+  padding-left: .75rem;
+  position: relative;
+  color: #666;
+}
+.txt p:after {
+  width: .2rem;
+  height: .2rem;
+  position: absolute;
+  left: 0;
+  top: .35rem;
+  background: #FFDA9E;
+  content: "";
+}
+.txt .TopIcon {
+  position: absolute;
+  width: 2.4rem;
+  height: 2.15rem;
+  background: url("../img/Icon1.png") no-repeat;
+  background-size: 100% 100%;
+  right: -0.8rem;
+  top: .75rem;
+}
+.txt .BtmIcon {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.425rem;
+  background: url("../img/Icon2.png") no-repeat;
+  background-size: 100% 100%;
+  left: -0.7rem;
+  bottom: 4.15rem;
+}

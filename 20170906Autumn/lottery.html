@@ -1,0 +1,191 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/style.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <article class="Lottery">
+        <img class="LotteryTitle" src="img/Top-Title2.png">
+        <div class="light"></div>
+        <i class="Icon1"></i>
+        <i class="Icon2"></i>
+        <i class="Icon3"></i>
+        <i class="Icon4"></i>
+        <i class="Icon6"></i>
+        <i class="Icon7"></i>
+        <i class="Icon8"></i>
+        <div class="LotteryBox">
+            <h4>奖池金额:&yen;1233932</h4>
+            <div class="container">
+                <div class="num num1">
+                    <div class="num-con num-con1">
+                        <div class="num-img"></div>
+                        <div class="num-img"></div>
+                    </div>
+                    <span>元</span>
+                </div>
+                <div class="num num2">
+                    <div class="num-con num-con2">
+                        <div class="num-img"></div>
+                        <div class="num-img"></div>
+                    </div>
+                    <span>角</span>
+                </div>
+                <div class="num num3">
+                    <div class="num-con num-con3">
+                        <div class="num-img"></div>
+                        <div class="num-img"></div>
+                    </div>
+                    <span>分</span>
+                </div>
+            </div>
+            <a class="LotteryBtn" href="###"></a>
+            <span class="Icon5"></span>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+            <i class="lamp2"></i>
+            <i class="lamp1"></i>
+        </div>
+    </article>
+    <script type="text/javascript">
+        var chance = 3;
+
+        setChance(chance);
+
+        //老虎机
+        $(".LotteryBtn").click(function () {
+            if(chance > 0){
+//                        $("#d1").addClass("d1");
+//                        $("#d2").addClass("d2");
+//                        $("#d3").addClass("d3");
+//                        $("#d4").addClass("d4");
+//                        $("#d5").addClass("d5");
+//                        $("#deng").addClass("deng");
+//                        $("#deng2").addClass("deng2");
+        //                $(".yaogan").addClass("rod");
+                if(!flag){
+                    flag=true;
+                    reset();
+                    letGo(Math.floor(Math.random()*10), Math.floor(Math.random()*10), Math.floor(Math.random()*10));
+                    setTimeout(function () {
+//                        showSection('很遗憾，您没有中奖！');
+                        chance --;
+                        setChance(chance);
+                    }, 3000);
+                    index++;
+                }
+            }else{
+                showSection('抽奖机会已经用完');
+            }
+        });
+
+        var flag=false;
+        var index=0;
+        var TextNum1;
+        var TextNum2;
+        var TextNum3;
+
+        function letGo(a, b, c){
+            var unit = -4.55;
+
+            $(".num-con1").animate({top:"-45.5rem"},800,"linear", function () {
+                $(this).css("top",0).animate({top: (a * unit) + "rem"}, 1000, "linear");
+            });
+            $(".num-con2").animate({top:"-45.5rem"},800,"linear", function () {
+                $(this).css("top",0).animate({top: (b * unit) + "rem"}, 1800, "linear");
+            });
+            $(".num-con3").animate({top:"-45.5rem"},800,"linear", function () {
+                $(this).css("top",0).animate({top: (c * unit) + "rem"},1300,"linear");
+            });
+
+            setTimeout(function(){
+                flag = false;
+//                        $("#d1").removeClass("d1");
+//                        $("#d2").removeClass("d2");
+//                        $("#d3").removeClass("d3");
+//                        $("#d4").removeClass("d4");
+//                        $("#d5").removeClass("d5");
+//                        $("#deng").removeClass("deng");
+//                        $("#deng2").removeClass("deng2");
+//                        $(".yaogan").removeClass("rod");
+            }, 3000);
+        }
+
+        function reset(){
+            $(".num-con1,.num-con2,.num-con3").css({top:"0rem"});
+        }
+
+        function setChance(chance){
+//            $('.title5').html('您还有' + chance + '次抽奖机会');
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="js/swiper.animate.min.js"></script>
+    <script src="js/stam.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="BcBg"></div>
+    <article>
+        <div class="TopTxt"><span>饭家的RVP</span>参加超级秋运终于实现买票不再排队!节省了这辈子547天的排队时间,价值XXXXX元,由此逆袭走上天生巅峰。</div>
+        <div class="BorBg">
+            <i class="HW"></i>
+            <i class="nxrb"></i>
+            <span class="day">
+                <b>09.25</b>
+            </span>
+            <div class="sjBox">
+                <img src="img/tx.jpg">
+                <p>原身价：34350万元 逆袭后身价：689899万元</p>
+            </div>
+            <div class="Border">
+                <div class="LeftImg">
+                    <div class="img-box"><img src="img/Img8.jpg"></div>
+                    <p><span>饭家的RvP</span>驾滑翔伞环球旅行13载,多次被当成外星人,打破吉尼斯世界纪录。</p>
+                </div>
+                <div class="shade"></div>
+                <i class="renwu"></i>
+                <i class="chijing"></i>
+            </div>
+        </div>
+        <div class="BtmBtn">
+            <a href="###"></a>
+            <a href="###"></a>
+        </div>
+    </article>
+</body>
+</html>
+

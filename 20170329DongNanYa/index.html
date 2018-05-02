@@ -1,0 +1,238 @@
+﻿<html class="ie" xmlns="http://www.w3.org/1999/html"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 27.8 * fontSize){
+                $('#TopNav').addClass('nav_wrap_fix');
+            }else{
+                $('#TopNav').removeClass('nav_wrap_fix');
+            }
+        });
+    </script>
+</head>
+<body>
+    <article>
+        <div class="TopBg"></div>
+        <div class="fixed-top">
+            <div id="TopNav" class="hidden-box" style="width:100%;">
+                <ul class="fixed-nav">
+                    <li class="nav1"><a href="###">泰国</a></li>
+                    <li class="nav2"><a href="###">越南</a></li>
+                    <li class="nav3"><a href="###">柬埔寨</a></li>
+                    <li class="nav4"><a href="###">马来西亚</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="WrapBg1">
+            <em class="md1"></em>
+            <div style="padding-top:9rem;">
+                <ul class="BookingList">
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="WrapBg2">
+            <em class="md2"></em>
+            <div style="padding-top:6.75rem;">
+                <ul class="BookingList">
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="WrapBg3">
+            <em class="md3"></em>
+            <div style="padding-top:6.75rem;">
+                <ul class="BookingList">
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="WrapBg4">
+            <em class="md4"></em>
+            <div style="padding-top:6.25rem;">
+                <ul class="BookingList">
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>曼谷-普吉岛</big>
+                        <small>(车程耗时：90分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </article>
+</body>
+</html>

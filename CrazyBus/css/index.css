@@ -1,0 +1,1016 @@
+/*Created by huang.jun on 17-08-21*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Medium, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  background: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+section {
+  display: block;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Relative {
+  position: relative;
+}
+.TopNav:after,
+.TopNav:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopNav a {
+  float: left;
+  width: 25%;
+  background: #00BF8E;
+  height: 2.75rem;
+  color: #fff;
+  text-align: center;
+}
+.TopNav a span {
+  font-size: .55rem;
+  line-height: .55rem;
+  display: block;
+  margin-top: .3rem;
+}
+.TopNav a strong {
+  font-size: .7rem;
+  line-height: .7rem;
+  display: block;
+  margin-top: .25rem;
+}
+.TopNav a small {
+  font-size: .5rem;
+  line-height: .5rem;
+  display: block;
+  margin-top: .2rem;
+}
+.TopNav a.on {
+  background: #CE0000;
+  color: #ffde00;
+}
+.Animation {
+  position: relative;
+  overflow: hidden;
+}
+.Animation img {
+  width: 100%;
+}
+.Animation img.TopTitleB {
+  width: 75%;
+  position: absolute;
+  left: 12%;
+  top: 3%;
+}
+.Animation img.TopTitleS {
+  width: 50%;
+  position: absolute;
+  left: 23%;
+  top: 25%;
+}
+.Animation img.House {
+  width: 24%;
+  position: absolute;
+  left: 17.3%;
+  top: 69%;
+  z-index: 2;
+}
+.Animation img.Yacht {
+  width: 15%;
+  position: absolute;
+  right: 13.3%;
+  top: 75%;
+  animation: ShipUpDown 2.6s infinite linear alternate;
+  z-index: 1;
+}
+.Animation img.Bus {
+  width: 8%;
+  position: absolute;
+  right: 18.3%;
+  top: 51%;
+  animation: BusUpDown 3s linear infinite;
+  z-index: 1;
+}
+.Animation img.FireworksS {
+  width: 2%;
+  position: absolute;
+  z-index: 1;
+}
+.Animation img.FireworksB {
+  width: 2%;
+  position: absolute;
+  z-index: 1;
+}
+.Animation img.Mask {
+  width: 18.4%;
+  position: absolute;
+  left: 66.8%;
+  top: 43.2%;
+  z-index: 2;
+}
+.Animation img.ad1 {
+  position: absolute;
+  left: 61%;
+  top: 64.5%;
+  width: 7%;
+  opacity: 0;
+  animation: ad1 3s infinite linear alternate;
+  z-index: 1;
+}
+.Animation img.ad2 {
+  position: absolute;
+  left: 60.4%;
+  top: 66.8%;
+  width: 8%;
+  opacity: 0;
+  animation: ad2 3s infinite linear alternate;
+  z-index: 1;
+}
+.Animation .TopBtn {
+  height: 2.2rem;
+  line-height: 2.2rem;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 92%;
+  margin-left: -46%;
+  background-color: #FF3000;
+  background-image: -webkit-linear-gradient(top, #FF3000, #FF7D00);
+  background-image: -moz-linear-gradient(top, #FF3000, #FF7D00);
+  background-image: -o-linear-gradient(top, #FF3000, #FF7D00);
+  background-image: -ms-linear-gradient(top, #FF3000, #FF7D00);
+  background-image: linear-gradient(top, #FF3000, #FF7D00);
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  border-radius: 2rem;
+  color: #fff;
+  font-size: .95rem;
+}
+.Animation .TopBtn:after {
+  width: 2.1rem;
+  height: 1.85rem;
+  position: absolute;
+  background: url("../img/RabbitIcon.png") no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  left: 0;
+  top: -1.1rem;
+}
+.nav-height {
+  height: 2.2rem;
+  position: relative;
+}
+.nav-wrap {
+  height: 2.2rem;
+  background: #fff;
+  position: relative;
+}
+.nav-wrap ul {
+  width: 31rem;
+}
+.nav-wrap ul:after,
+.nav-wrap ul:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.nav-wrap ul li {
+  float: left;
+  line-height: 2.2rem;
+  font-size: .7rem;
+}
+.nav-wrap ul li a {
+  color: #333;
+  padding-left: 1.4rem;
+  position: relative;
+}
+.nav-wrap ul li a.active {
+  color: #de4e70;
+}
+.nav-wrap ul li a.active:after {
+  content: "";
+  position: absolute;
+  width: .5rem;
+  height: .675rem;
+  background: url("../img/NavIcon.png") no-repeat;
+  background-size: 100% 100%;
+  left: .6rem;
+  top: .08rem;
+}
+.nav-wrap:after {
+  content: "";
+  width: 1.2rem;
+  height: 2.2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #fff;
+  border-left: 1px solid #ccc;
+}
+.nav_wrap_fix {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+.NavBox {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  width: 18.75rem;
+  position: relative;
+}
+.horn {
+  height: 1.375rem;
+  overflow: hidden;
+  margin: 0 4%;
+  font-size: .65rem;
+  color: #fff;
+  background: url("../img/HornIcon.png") no-repeat #FF9F00;
+  background-size: 2.075rem 1.375rem;
+  padding-left: 20%;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  border-radius: 2rem;
+}
+.horn ul {
+  height: 1.375rem;
+}
+.horn ul li {
+  line-height: 1.375rem;
+}
+.TitBus {
+  font-size: 0;
+  position: relative;
+}
+.TitBus img {
+  width: 100%;
+}
+.TitBus .RuleBtn {
+  position: absolute;
+  text-align: center;
+  width: 2.75rem;
+  line-height: .85rem;
+  border: 1px solid #fff;
+  font-size: .55rem;
+  right: .8rem;
+  top: 2.2rem;
+  color: #fff;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+}
+.TimeTab {
+  background: #FFAE00;
+  height: 2.5rem;
+  color: #fff;
+}
+.TimeTab:after,
+.TimeTab:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TimeTab li {
+  float: left;
+  width: 20%;
+  text-align: center;
+  height: 2.5rem;
+}
+.TimeTab li strong,
+.TimeTab li span {
+  display: block;
+}
+.TimeTab li strong {
+  font-size: .75rem;
+  line-height: .75rem;
+  margin-top: .5rem;
+}
+.TimeTab li span {
+  font-size: .6rem;
+  line-height: .6rem;
+  margin-top: .2rem;
+}
+.TimeTab li.on {
+  background: #FF8400;
+}
+.box1 .jsTab_con {
+  background: #FFC300;
+  padding-top: 1rem;
+  display: none;
+}
+.jsTab_con {
+  display: none;
+}
+.BusTp {
+  width: 17.275rem;
+  height: 4.6rem;
+  background: url("../img/BusTp.png") no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.BookingTicket {
+  padding: 1.25rem 1.1rem;
+}
+.BookingTicket a {
+  line-height: 2.15rem;
+  display: block;
+  background-color: #FF3400;
+  background-image: -webkit-linear-gradient(top, #FF3400, #FF9900);
+  background-image: -moz-linear-gradient(top, #FF3400, #FF9900);
+  background-image: -o-linear-gradient(top, #FF3400, #FF9900);
+  background-image: -ms-linear-gradient(top, #FF3400, #FF9900);
+  background-image: linear-gradient(top, #FF3400, #FF9900);
+  text-align: center;
+  font-size: .9rem;
+  color: #fff;
+  -webkit-border-radius: 2.15rem;
+  -moz-border-radius: 2.15rem;
+  border-radius: 2.15rem;
+}
+.TitSteamer {
+  font-size: 0;
+  position: relative;
+}
+.TitSteamer img {
+  width: 100%;
+}
+.TitSteamer .RuleBtn {
+  position: absolute;
+  text-align: center;
+  width: 2.75rem;
+  line-height: .85rem;
+  border: 1px solid #fff;
+  font-size: .55rem;
+  right: .8rem;
+  top: 2.5rem;
+  color: #fff;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+}
+.Discount:after,
+.Discount:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Discount li {
+  height: 2rem;
+  float: left;
+  width: 50%;
+  background: #303FD2;
+  line-height: 2rem;
+  text-align: center;
+  color: #fff;
+  font-size: .8rem;
+}
+.Discount li.on {
+  background: #3B45E3;
+}
+.SeckillBox {
+  padding: 0 .75rem 1.35rem .75rem;
+  background: #3B45E3;
+}
+.Seckill {
+  font-size: 0;
+  border-top: .75rem solid #3B45E3;
+  position: relative;
+}
+.Seckill img {
+  width: 100%;
+}
+.Seckill .TopLabel {
+  height: 1.1rem;
+  line-height: 1.1rem;
+  color: #000;
+  background: #F2B834;
+  font-size: .6rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 .25rem;
+}
+.Seckill .TopLabelEnd {
+  width: 3rem;
+  height: 1.75rem;
+  font-size: .6rem;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #8A8A8A;
+}
+.Seckill .TopLabelEnd b {
+  font-weight: normal;
+  line-height: .6rem;
+  display: block;
+  padding: .2rem 0 0 .3rem;
+}
+.Seckill .KillBtn {
+  position: absolute;
+  right: .5rem;
+  bottom: .65rem;
+  width: 6.5rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  color: #fff;
+  font-size: .9rem;
+  text-align: center;
+  background-color: #F1A04D;
+  background-image: -webkit-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: -moz-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: -o-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: -ms-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: linear-gradient(left, #F1A04D, #F26E62);
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.Seckill h3 {
+  font-size: .9rem;
+  line-height: .9rem;
+  position: absolute;
+  left: .65rem;
+  bottom: 1.75rem;
+  color: #fff;
+}
+.Seckill i {
+  font-size: .75rem;
+  font-style: normal;
+  position: absolute;
+  color: #fff;
+  left: .65rem;
+  bottom: .3rem;
+}
+.Seckill big {
+  font-size: 1.25rem;
+  position: absolute;
+  color: #fff;
+  left: 1.2rem;
+  bottom: .1rem;
+}
+.Seckill small {
+  font-size: .75rem;
+  position: absolute;
+  color: #fff;
+  left: 2.3rem;
+  bottom: .3rem;
+  text-decoration: line-through;
+}
+.SeckillBtn {
+  padding: .75rem 2.3rem 0 2.3rem;
+}
+.SeckillBtn a {
+  height: 2.15rem;
+  line-height: 2.15rem;
+  text-align: center;
+  display: block;
+  background-color: #F1A04D;
+  background-image: -webkit-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: -moz-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: -o-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: -ms-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: linear-gradient(left, #F1A04D, #F26E62);
+  -webkit-border-radius: 2.15rem;
+  -moz-border-radius: 2.15rem;
+  border-radius: 2.15rem;
+  font-size: .9rem;
+  color: #fff;
+}
+.TitleAirport {
+  font-size: 0;
+  position: relative;
+}
+.TitleAirport img {
+  width: 100%;
+}
+.TitleAirport .RuleBtn {
+  position: absolute;
+  text-align: center;
+  width: 2.75rem;
+  line-height: .85rem;
+  border: 1px solid #fff;
+  font-size: .55rem;
+  right: .8rem;
+  top: 2.1rem;
+  color: #fff;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+}
+.AirportList {
+  padding: .6rem .75rem 1.25rem .75rem;
+  background: #EF2E82;
+}
+.AirportList .AirporColumn {
+  height: 2rem;
+  background: #fff;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  border-radius: 2rem;
+  margin-top: .4rem;
+  padding: 0 0 0 .6rem;
+}
+.AirportList .AirporColumn:after,
+.AirportList .AirporColumn:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.AirportList .AirporColumn h4 {
+  float: left;
+  width: 10rem;
+  font-size: .7rem;
+  font-weight: normal;
+  line-height: 2rem;
+}
+.AirportList .AirporColumn .AirporPrice {
+  float: left;
+  color: #333;
+}
+.AirportList .AirporColumn .AirporPrice big,
+.AirportList .AirporColumn .AirporPrice b,
+.AirportList .AirporColumn .AirporPrice span {
+  float: left;
+}
+.AirportList .AirporColumn .AirporPrice big {
+  font-size: .75rem;
+  margin-top: .55rem;
+}
+.AirportList .AirporColumn .AirporPrice b {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin: .3rem 0 0 .1rem;
+  font-weight: normal;
+}
+.AirportList .AirporColumn .AirporPrice span {
+  font-size: .6rem;
+  line-height: .6rem;
+  text-decoration: line-through;
+  margin: .8rem 0 0 .1rem;
+}
+.AirportList .AirporColumn .AirporBtn {
+  float: right;
+  width: 3.25rem;
+  height: 1.65rem;
+  background: #E12374;
+  line-height: 1.65rem;
+  text-align: center;
+  color: #fff;
+  font-size: .75rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  border-radius: 4rem;
+  margin: .175rem .175rem 0 0;
+}
+.AirportList .AirporColumn .SellOut {
+  width: 3.15rem;
+  height: 1.55rem;
+  line-height: 1.55rem;
+  border: 1px solid #E41B73;
+  background: #fff;
+  color: #E41B73;
+  font-size: .55rem;
+}
+.AirportList .AirporMore {
+  margin-top: .4rem;
+}
+.AirportList .AirporMore a {
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #fff;
+  font-size: .75rem;
+  background: #DC2475;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  border-radius: 4rem;
+}
+.TitleTourism {
+  font-size: 0;
+  position: relative;
+}
+.TitleTourism img {
+  width: 100%;
+}
+.TitleTourism .RuleBtn {
+  position: absolute;
+  text-align: center;
+  width: 2.75rem;
+  line-height: .85rem;
+  border: 1px solid #fff;
+  font-size: .55rem;
+  right: .8rem;
+  top: 2.7rem;
+  color: #fff;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+}
+.RegionNav {
+  background: #6B47E7;
+}
+.RegionNav:after,
+.RegionNav:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.RegionNav li {
+  float: left;
+  width: 25%;
+  text-align: center;
+  height: 2rem;
+  line-height: 2rem;
+  color: #fff;
+  font-size: .8rem;
+}
+.RegionNav li.on {
+  background: #744FF6;
+}
+.RegionBox {
+  padding: .35rem .5rem 1.25rem .5rem;
+  background: #744FF6;
+}
+.Region {
+  padding: .375rem 0 .425rem .25rem;
+  margin-top: .4rem;
+  background: #fff;
+}
+.Region:after,
+.Region:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Region img {
+  float: left;
+  width: 7.75rem;
+}
+.Region .RegionRight {
+  float: left;
+  padding-left: .5rem;
+  color: #333;
+  position: relative;
+  width: 9rem;
+}
+.Region .RegionRight h4 {
+  font-size: .75rem;
+  line-height: .8rem;
+  margin-top: .35rem;
+}
+.Region .RegionRight img {
+  width: 3.425rem;
+  height: 2.425rem;
+  position: absolute;
+  right: 0;
+  top: 1.1rem;
+}
+.Region .RegionRight div:nth-of-type(1):after,
+.Region .RegionRight div:nth-of-type(1):before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Region .RegionRight div:nth-of-type(1) strong,
+.Region .RegionRight div:nth-of-type(1) b,
+.Region .RegionRight div:nth-of-type(1) span {
+  float: left;
+}
+.Region .RegionRight div:nth-of-type(1) strong {
+  font-size: .8rem;
+  line-height: .8rem;
+  margin-top: 1.15rem;
+  font-weight: normal;
+}
+.Region .RegionRight div:nth-of-type(1) b {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-top: .5rem;
+  font-weight: normal;
+}
+.Region .RegionRight div:nth-of-type(1) span {
+  font-size: .75rem;
+  line-height: .75rem;
+  margin: 1.1rem 0 0 .2rem;
+  text-decoration: line-through;
+}
+.Region .RegionRight div:nth-of-type(2) {
+  margin-top: .65rem;
+}
+.Region .RegionRight div:nth-of-type(2) a {
+  display: block;
+  width: 7.75rem;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  text-align: center;
+  font-size: .8rem;
+  color: #fff;
+  background-color: #F1A04D;
+  background-image: -webkit-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: -moz-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: -o-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: -ms-linear-gradient(left, #F1A04D, #F26E62);
+  background-image: linear-gradient(left, #F1A04D, #F26E62);
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.TitleRegion {
+  font-size: 0;
+}
+.TitleRegion img {
+  width: 100%;
+  display: block;
+}
+.TitleRegion .RuleBtn {
+  position: absolute;
+  text-align: center;
+  width: 2.75rem;
+  line-height: .85rem;
+  border: 1px solid #fff;
+  font-size: .55rem;
+  right: .8rem;
+  top: 2.7rem;
+  color: #fff;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+}
+.InBusNav {
+  background: #0CAAA4;
+}
+.InBusNav:after,
+.InBusNav:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.InBusNav li {
+  line-height: 2rem;
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: .8rem;
+  color: #fff;
+}
+.InBusNav li.on {
+  background: #19BFB9;
+}
+.InBusBox {
+  padding: .35rem .5rem 1.25rem .5rem;
+  background: #19BFB9;
+}
+.circle {
+  width: 2.45rem;
+  height: 2.45rem;
+  position: absolute;
+  border-radius: 50%;
+  right: 6.5%;
+  top: .25rem;
+  background-color: #F1665A;
+  background-image: -webkit-linear-gradient(left, #F1665A, #E53D52);
+  background-image: -moz-linear-gradient(left, #F1665A, #E53D52);
+  background-image: -o-linear-gradient(left, #F1665A, #E53D52);
+  background-image: -ms-linear-gradient(left, #F1665A, #E53D52);
+  background-image: linear-gradient(left, #F1665A, #E53D52);
+}
+.circle .pie_left,
+.circle .pie_right {
+  width: 2.45rem;
+  height: 2.45rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.circle .left,
+.circle .right {
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #FD9AA8;
+}
+.circle .pie_right,
+.circle .right {
+  clip: rect(0, auto, auto, 1.22rem);
+}
+.circle .pie_left,
+.circle .left {
+  clip: rect(0, 1.22rem, auto, 0);
+}
+.circle .mask {
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 50%;
+  left: .15rem;
+  top: .15rem;
+  background: #FFF;
+  position: absolute;
+  text-align: center;
+  font-size: .55rem;
+  font-weight: bold;
+  color: #e02c6b;
+}
+.circle .mask em {
+  position: absolute;
+  font-style: normal;
+  left: 0;
+  top: .55rem;
+  width: 100%;
+  line-height: .55rem;
+}
+.circle .mask small {
+  font-size: .55rem;
+}
+.circle .mask .CountDown {
+  text-align: center;
+  line-height: .55rem;
+  margin-top: 1.25rem;
+}
+.RedBtn {
+  width: 3.75rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  position: absolute;
+  background-color: #EF735C;
+  background-image: -webkit-linear-gradient(left, #EF735C, #DF3E61);
+  background-image: -moz-linear-gradient(left, #EF735C, #DF3E61);
+  background-image: -o-linear-gradient(left, #EF735C, #DF3E61);
+  background-image: -ms-linear-gradient(left, #EF735C, #DF3E61);
+  background-image: linear-gradient(left, #EF735C, #DF3E61);
+  font-size: .7rem;
+  color: #fff;
+  text-align: center;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  border-radius: 2rem;
+  right: .55rem;
+  top: 2.9rem;
+}
+.grayBtn {
+  width: 3.75rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  position: absolute;
+  background-color: #EF735C;
+  background-image: -webkit-linear-gradient(left, #EF735C, #DF3E61);
+  background-image: -moz-linear-gradient(left, #EF735C, #DF3E61);
+  background-image: -o-linear-gradient(left, #EF735C, #DF3E61);
+  background-image: -ms-linear-gradient(left, #EF735C, #DF3E61);
+  background-image: linear-gradient(left, #EF735C, #DF3E61);
+  font-size: .7rem;
+  color: #fff;
+  text-align: center;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  border-radius: 2rem;
+  right: .55rem;
+  top: 2.9rem;
+  background: #A9A9A9;
+}
+.time {
+  width: 4.825rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.time dt {
+  font-size: .7rem;
+  line-height: .7rem;
+  text-align: center;
+  padding-top: 1.15rem;
+}
+.time dd {
+  padding: .4rem 0 0 .5rem;
+}
+.time dd:after,
+.time dd:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.time dd time,
+.time dd span {
+  float: left;
+}
+.time dd time {
+  width: 1rem;
+  height: 1rem;
+  font-size: .65rem;
+  line-height: 1rem;
+  text-align: center;
+  background-color: #F1665A;
+  background-image: -webkit-linear-gradient(top, #F1665A, #E53D52);
+  background-image: -moz-linear-gradient(top, #F1665A, #E53D52);
+  background-image: -o-linear-gradient(top, #F1665A, #E53D52);
+  background-image: -ms-linear-gradient(top, #F1665A, #E53D52);
+  background-image: linear-gradient(top, #F1665A, #E53D52);
+  color: #fff;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  border-radius: 0.1rem;
+}
+.time dd span {
+  width: .4rem;
+  line-height: 1rem;
+  text-align: center;
+  color: #FBBEC1;
+}
+.ZuCheNav {
+  background: #F43F44;
+}
+.ZuCheNav:after,
+.ZuCheNav:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.ZuCheNav li {
+  line-height: 2rem;
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-size: .8rem;
+  color: #fff;
+}
+.ZuCheNav li.on {
+  background: #FF595E;
+}
+.ZuCheBox {
+  padding: .35rem .5rem 1.25rem .5rem;
+  background: #FF595E;
+}
+.JsRuleList {
+  background: #FFC501;
+  padding: 0 5% .4rem 5%;
+}
+.JsRuleList img {
+  width: 100%;
+}
+.JsRuleList li:nth-of-type(3) {
+  text-align: center;
+}
+.JsRuleList li:nth-of-type(3) span {
+  position: relative;
+  color: #ff6600;
+  font-size: .5rem;
+}
+.JsRuleList li:nth-of-type(3) span:after {
+  content: "";
+  position: absolute;
+  width: .475rem;
+  height: .225rem;
+  background: url("../img/Eicon.png") no-repeat;
+  background-size: 100% 100%;
+  right: -0.7rem;
+  top: .25rem;
+}
+.JsRuleList li:nth-of-type(3) span.active:after {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.adBox {
+  padding: 0 5%;
+  background: #FFC501;
+}
+.adBox img {
+  width: 100%;
+}

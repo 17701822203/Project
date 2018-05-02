@@ -1,0 +1,164 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="">
+<img class="MusicIco" src="img/MusicIco.png">
+<div class="review" style="display:none;">
+    <img class="Bg1" src="img/Bg1.png">
+    <img class="Bg2" src="img/Bg2.png">
+    <img class="Bg3" src="img/Bg2.1.png">
+    <img class="Bg4" src="img/Bg3.png">
+    <img class="Bg5" src="img/Bg3.1.png">
+    <img class="Bg6" src="img/Swallow.png">
+    <img class="Bg7" src="img/TxtBg1.png">
+    <img class="Bg8" src="img/TxtBg2.png">
+    <img class="Bg9" src="img/Btn1.png">
+</div>
+
+<div class="swipe-wrap" id="slip">
+    <article class="swipe">
+        <div class="swipe-box SwipeBg1" style="display:none;">
+            <img class="Swipe1TicketIcon" src="img/Swipe1TicketIcon.png">
+            <img class="Swipe1Icon1" src="img/Swipe1Icon1.png">
+            <img class="Swipe1Icon2" src="img/Swipe1Icon2.png">
+            <div class="Swipe1Icon3Box"><img class="Swipe1Icon3" src="img/Swipe1Icon3.png"></div>
+            <div class="TxtBg3"><b>500</b></div>
+            <ul class="TopTxt1 TopAm1">
+                <li>最远的一次出行</li>
+                <li>是从<b>上海</b>去了<b>杭州</b></li>
+                <li>相隔<b>170</b>公里，花了<b>1</b>个小时</li>
+            </ul>
+            <!--第二种状态-->
+            <ul class="TopTxt1" style="display:none;">
+                <li>是从<b>上海</b>去了<b>杭州</b></li>
+                <li>花了1个小时</li>
+            </ul>
+            <img class="UpIcon" src="img/UpIcon.png">
+        </div>
+
+        <div class="swipe-box SwipeBg2" style="display:none">
+            <img class="Swipe2Icon1" src="img/Swipe2Icon1.png">
+            <img class="Swipe2Icon2" src="img/Swipe2Icon2.png">
+            <img class="Swipe2Icon3" src="img/Swipe2Icon3.png">
+            <div class="Swipe2Icon4"><img src="img/Swipe2Icon4.png"></div>
+            <div class="Swipe2Icon5"><img src="img/Swipe2Icon5.png"></div>
+            <img class="Swipe2Icon6" src="img/Swipe2Icon6.png">
+            <img class="Swipe2Icon7" src="img/Swipe2Icon7.png">
+            <div class="Swipe2Icon8"><b>50</b></div>
+            <ul class="Swipe2Txt">
+                <li>记录了你去过的<b>4</b>个地方</li>
+                <li>去过最多的地方是</li>
+                <li><b>上海、杭州</b>和<b>乌鲁木齐</b></li>
+                <li style="margin-top:1.6rem;">相同车次、时间</li>
+                <li>有<b>123</b>个小伙伴与你同行</li>
+            </ul>
+            <ul class="Swipe2Txt" style="display:none;">
+                <li>记录了你去过的<b>2</b>个地方</li>
+                <li>是<b>上海</b>和<b>杭州</b></li>
+                <li style="margin-top:2.8rem;">相同车次、时间</li>
+                <li>有<b>123</b>个小伙伴与你同行</li>
+            </ul>
+            <img class="UpIcon" src="img/UpIcon.png">
+        </div>
+
+        <div class="swipe-box SwipeBg3" style="display:none;">
+            <!--<img style="width:100%;" src="img/q2.png">-->
+            <img class="Swipe3Icon1" src="img/Swipe3Icon1.png">
+            <img class="Swipe3Icon2" src="img/Swipe3Icon2.png">
+            <img class="Swipe3Icon3" src="img/Swipe3Icon3.png">
+            <img class="Swipe3Icon4" src="img/Swipe3Icon4.png">
+            <img class="Swipe3Icon5" src="img/Swipe3Icon5.png">
+            <img class="Swipe3Icon6" src="img/Swipe3Icon6.png">
+            <img class="Swipe3Icon7" src="img/Swipe3Icon7.png">
+            <img class="Swipe3Icon8" src="img/Swipe3Icon8.png">
+            <div class="Swipe3Txt" style="display:;"><b>1</b><b>9999</b></div>
+            <ul class="Swipe3Txt_1" style="display:;">
+                <li>
+                    <p>2017年，携程累计</p>
+                    <p>为<b>3.5亿</b>人次抢票</p>
+                </li>
+                <li>
+                    <p>春运期间，抢票最多的</p>
+                    <p>地区是<b>广州</b>和<b>上海</b></p>
+                </li>
+            </ul>
+            <div class="Swipe3Txt1" style="display:none;"><b>5</b><b>9999</b></div>
+            <ul class="Swipe3Txt_2" style="display:none;">
+                <li>
+                    <p>2017年，携程累计</p>
+                    <p>为<b>3.5亿</b>人次抢票</p>
+                </li>
+                <li>
+                    <p>春运期间，抢票最多的</p>
+                    <p>地区是<b>广州</b>和<b>上海</b></p>
+                </li>
+            </ul>
+            <img class="UpIcon" src="img/UpIcon.png">
+        </div>
+
+        <div class="swipe-box SwipeBg4">
+            <img class="Swipe4Icon1" src="img/TxtBg7.png">
+            <div class="Swipe4Icon2">
+                <div class="TxtInput">
+                    <i class="TxtAm"></i>
+                    <input type="text" value="回家">
+                </div>
+                <span class="Again">再看一遍</span>
+            </div>
+            <button class="Button"></button>
+            <!--<div class="shadow"></div>-->
+            <!--<img class="share" src="img/share.png">-->
+        </div>
+
+    </article>
+</div>
+</body>
+<script type="text/javascript" src="js/slip.min.js"></script>
+<script type="text/javascript">
+    var container = document.getElementById('slip');
+    var pages = document.querySelectorAll('.swipe-box');
+    var slip = Slip(container, 'y').webapp(pages);
+</script>
+</html>

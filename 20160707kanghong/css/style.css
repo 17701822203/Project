@@ -1,0 +1,55 @@
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Lucida Grande",Verdana,"Microsoft YaHei",hei;}
+
+article{width:7.5rem;height:21.62rem;background:url(../img/bg.jpg) no-repeat;background-size:contain;}
+.tit{ position:absolute;width:3.58rem;height:6.52rem;background:url(../img/tit.png) no-repeat;background-size:contain;left:2.1rem;top:1.24rem;}
+.top-txt{font-size:0.34rem;color:#ffef00;padding-top:0.28rem;letter-spacing:0.09rem;}
+#scroll{ position:absolute;left:0;top:0;}
+.number{width:3.25rem;height:1.51rem;border:0.03rem solid #FFEF00;position:absolute;top:8.51rem;left:2.1rem;}
+.number dt{padding:0.17rem 0 0 0.12rem;height:0.54rem; position:relative;}
+.number dt span{display:block;float:left;width:0.35rem;height:0.54rem;line-height:0.54rem;margin-left:0.07rem;background:#FFEF00;text-align:center;font-size:0.5rem;font-weight:bold;}
+.number dd{font-size:0.41rem;color:#ffef00;padding-top:0.1rem;text-align:center;letter-spacing:0.02rem;}
+
+.btn{width:4.4rem;height:0.88rem;line-height:0.88rem;text-align:center;color:#000;font-size:0.4rem;background:#FFEF00;font-family:Microsoft YaHei;border:0;-moz-border-radius:0.1rem;-webkit-border-radius:0.1rem;border-radius:0.1rem; position:absolute;left:1.55rem;top:10.85rem;}
+.txt-list{color:#fff;width:6.2rem;margin:0 auto;padding:11.6rem 0 0 0;}
+.txt-list dt{font-size:0.34rem;line-height:0.17rem;}
+.txt-list dd{padding-top:0.3rem;}
+.txt-list dd p{font-size:0.28rem;padding-left:0.48rem;text-indent:-0.48rem;line-height:0.44rem;letter-spacing:0.01rem;}
+
+.btm{width:4.72rem;height:0.46rem;background:url(../img/logoBus.png) no-repeat;background-size:contain; position:absolute;top:17.2rem;left:50%;margin-left:-2.36rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

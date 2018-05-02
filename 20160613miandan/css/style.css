@@ -1,0 +1,13 @@
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Lucida Grande",Verdana,"Microsoft YaHei",hei;}
+
+article{width:7.5rem;height:16.62rem;background:url(../img/bg.jpg) no-repeat;background-size:7.5rem 16.62rem;}
+.btnBox{padding:6.78rem 0 0 1.92rem;}
+.btn{display:block;width:3.67rem;height:0.97rem;}
+.btn:active{opacity:0.8;}
+.txtList{color:#fff7d2;padding:0.1rem 0.31rem 0 0.31rem;}
+.txtList dt{font-size:0.32rem;padding-top:0.2rem;font-weight:bold;}
+.txtList dd{font-size:0.26rem;line-height:0.36rem;padding-top:0.09rem;}

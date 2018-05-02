@@ -1,0 +1,29 @@
+/*Created by huang.jun on 17-03-21*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"PingFang SC Medium","Microsoft YaHei",sans-serif;}
+article{background:#4AB7EF;}
+.buttonBox{height:4.75rem;text-align: center;}
+.button{display:inline-block;width:17.175rem;height:2.325rem;background:url("../img/button.png") no-repeat;background-size:100% 100%;margin-top:1.075rem;font-size:0.85rem;color:#fff;text-align: center;line-height:2.325rem;}
+.Bg1{height:13.525rem;background:url("../img/img3.jpg") no-repeat;background-size:100% 100%;}
+.Bg2{height:15.875rem;background:url("../img/img5.jpg") no-repeat;background-size:100% 100%;}
+.List{padding:2.2rem 5.4% 0 5.4%;}
+.List dd{padding:0 2%;}
+.List dd div{border-bottom:1px solid #DCDCDC;height:2.2rem;line-height:2.2rem;position:relative;}
+.List dd div strong{float:left;width:38%;font-size:0.75rem;font-weight:normal;padding-left:4%;line-height:2.2rem;}
+.List dd div span:nth-of-type(1){float:left;color:#fc6e51;}
+.List dd div span:nth-of-type(1) small{font-size:0.6rem;float:left;}
+.List dd div span:nth-of-type(1) big{font-size:0.9rem;float:left;padding-left:0.2rem;}
+.List dd div span:nth-of-type(2){float:left;color:#999;padding-left:4%;position: relative;}
+.List dd div span:nth-of-type(2):after{position: absolute;height:1px;width:80%;content:"";left:50%;margin-left:-25%;top:50%;background:#999;}
+.List dd div span:nth-of-type(2) small{font-size:0.6rem;float:left;}
+.List dd div span:nth-of-type(2) big{font-size:0.6rem;float:left;padding-left:0.2rem;}
+.List dd div a{position:absolute;width:2.825rem;height:1.45rem;line-height:1.45rem;text-align:center;color:#fff;font-size:0.6rem;background:#4990E2;right:0;top:50%;margin-top:-0.725rem;-moz-border-radius:0.2rem;-webkit-border-radius:0.2rem;border-radius:0.2rem;}
+.List dt{text-align:center;}
+.List dt a{height:2.1rem;line-height:2.1rem;display:block;font-size:0.65rem;color:#333;}
+.List dt a span{position:relative;}
+.List dt a span:after{position:absolute;content:"";width:0.325rem;height:0.425rem;background:url("../img/icon.png") no-repeat;background-size:100% 100%;top:50%;margin-top:-0.2125rem;right:-0.6rem;}
+
+

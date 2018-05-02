@@ -1,0 +1,48 @@
+/*Created by huang.jun on 15-12-15*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:SimHei;background:#ff727c;}
+*{ pointer-events: none; }
+
+.tit1{height:1.6rem;line-height:1.6rem;text-align:center;background:#E85A6A;color:#fff;font-size:0.8rem;margin:1.5rem 0 1.6rem 0;}
+.button{width:13.25rem;height:2.65rem;line-height:2.65rem; text-align:center;border-bottom:0.225rem solid #813552;background:#B13A59;color:#FFF8BD;display:inline-block;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;font-size:1.4rem;}
+.button:active,.btnBox2 a:active{opacity:0.8;}
+.btnBox1{height:2.875rem;text-align:center;padding:2rem 0 1.5rem 0;}
+.adlist{padding:0 1.5rem 1.5rem 1.5rem;}
+.adlist li{height:3rem;background:#F5E7AD;margin-top:1.5rem; overflow:hidden;width:13rem;}
+.adlist li img{height:3rem;width:13rem;}
+.topIcon{position:absolute;right:1rem;top:3.4rem;width:2.821256038647343rem;height:3.536231884057971rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

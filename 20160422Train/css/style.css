@@ -1,0 +1,61 @@
+/*Created by huang.jun on 16-04-21*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:Microsoft YaHei;color:#0a4148;background:#DAFFB6;}
+
+.txtLst{padding:0 1rem;}
+.txtLst dt{text-align:center;}
+.txtLst dt img{width:8.4rem;}
+.txtLst dd{font-size:0.6rem;padding:0.5rem 0 0.5rem 0;}
+.txtLst dd p{margin-top:0.4rem;}
+
+.btnBox{text-align:center;height:2rem;padding:0.5rem 0 1rem 0;}
+.btnBox a{display:inline-block;width:11rem;height:1.8rem;line-height:1.8rem;color:#fff;background:#FC4E43;font-size:0.8rem;-moz-border-radius:1rem;-webkit-border-radius:1rem;border-radius:1rem;}
+.btmTxt{font-size:0.4rem; text-align:center;margin-top:1rem;}
+.btnBox a:active{-webkit-animation: gelatine 0.5s 1;-webkit-animation-iteration-count:1;}
+@-webkit-keyframes gelatine{
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}
+.imgBox{ text-align:center;padding-bottom:1rem;}
+.imgBox img{width:15rem;}
+

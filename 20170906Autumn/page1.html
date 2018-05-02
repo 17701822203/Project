@@ -1,0 +1,82 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/style.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#fff;">
+    <article>
+        <div class="PageTopBg">
+            <img class="TopImg" src="img/TopBg1.jpg">
+            <div class="CountDown">
+                <span class="day">01</span>
+                <span class="hour">01</span>
+                <span class="minute">01</span>
+                <span class="second">01</span>
+            </div>
+            <div class="TopName">饭尧舜</div>
+            <img class="HeadImg" src="img/IndexBtm.jpg">
+        </div>
+        <div class="Explain"><img src="img/Explain.jpg"></div>
+        <div class="BtnBox"><a class="orangeBtn" href="###">召唤好友瓜分一个亿</a></div>
+        <dl class="JsRuleList">
+            <dt><span>活动规则</span></dt>
+            <dd>
+                <p>活动时间：9月22日-10月8日</p>
+                <p>1、用户通过此活动页面购买汽车票，出票成功后即可发起瓜分活动。</p>
+                <p>2、瓜分有效时间：从发起人发起瓜分至车票出发后24小时。</p>
+                <p>3、瓜分规则：邀请好友参与瓜分，每个好友为发起人摇奖决定返现金额，最终发起人将获得有效时间内每位好友摇奖金额的总和；同时参与好友将获得最高168元的出行大礼包。</p>
+                <label id="panel">
+                    <p>4、最终返现金额以系统通知为准，返现将在1-7个工作日内打到原支付账户，请留意查收。</p>
+                    <p>5、若发生退票，瓜分活动自动结束。发起人将不会获得返现。</p>
+                    <p>6、每日返现奖金池总额随参与热度波动，先到先得。</p>
+                    <p>7、活动期间，每个用户只能发起至多2次瓜分活动，每笔订单只能发起一次瓜分活动。（同一携程账户、同一手机号、同一设备号、同一支付账号、同一乘车人身份证号，均被视为同一用户）</p>
+                    <p>8、本活动最终解释权归携程旅行网所有，如有疑问请致电携程客服热线10106666。</p>
+                </label>
+                <div class="more"><span>展开更多活动规则</span><img src="img/DIcon.png"></div>
+            </dd>
+        </dl>
+        <div class="BtmButton"><a href="###">召唤好友瓜分一个亿</a></div>
+    </article>
+</body>
+</html>
+

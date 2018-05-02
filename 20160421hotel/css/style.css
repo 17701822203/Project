@@ -1,0 +1,99 @@
+/*Created by huang.jun on 16-04-21*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:Microsoft YaHei;background:#DAFFB6;}
+
+#mytool{position:relative;top:0rem;left:0;z-index:20;width:100%;}
+.navBox{padding:0 5%;width:90%;height:1.4rem;}
+.navBox li{float:left;width:33%; }
+.navBox li a{height:1rem;width:100%;display:block;}
+.navBox li .nav1{background:url(../img/nav1.png) no-repeat;background-size:100% 1rem;}
+.navBox li .nav2{background:url(../img/nav2.png) no-repeat;background-size:100% 1rem;}
+.navBox li .nav3{background:url(../img/nav3.png) no-repeat;background-size:100% 1rem;}
+.navBox li.on .nav1{background:url(../img/nav1_1.png) no-repeat;background-size:100% 1rem;}
+.navBox li.on .nav2{background:url(../img/nav2_2.png) no-repeat;background-size:100% 1rem;}
+.navBox li.on .nav3{background:url(../img/nav3_3.png) no-repeat;background-size:100% 1rem;}
+
+.md1,.md2,.md3{position:absolute;width:1rem;height:1rem;}
+.md1{top:10rem;}
+.md2{top:54rem;}
+.md3{top:106rem;}
+
+.xianlu{padding:0rem 0.5rem 0 0.5rem;position:relative;}
+.xianlu div{display:none;}
+
+.qBtn{ position:absolute;left:6.6rem;top:5.9rem;width:3rem;}
+
+.hotel dt{padding:1.5rem 3rem 0 3rem;}
+.hotel dd{padding-top:0.3rem;}
+.hotel dd .hotelImg{padding:0.5rem 0.5rem 0 0.5rem;}
+.hotel dd .hotelBtn{padding:0.5rem 0.5rem 0 0.5rem;}
+.hotel dd .sTit{padding:1rem 0.5rem 0 0.5rem;}
+
+.hotelBtn a:active{-webkit-animation: btn 0.5s 1;-webkit-animation-iteration-count:1;}
+.youhuiquan{ position:fixed;right:0;bottom:1rem;width:2rem;-webkit-animation: gelatine 0.4s 1;}
+@-webkit-keyframes btn{0%{opacity:0;}50%{opacity:1;}100%{opacity:0;}}
+@-webkit-keyframes gelatine{
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

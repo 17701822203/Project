@@ -1,0 +1,15 @@
+/*Created by huang.jun on 16-08-05*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB W6";}
+article{height:100%;}
+
+.TopBox{width:7.5rem;height:8.64rem;background:url("../img/TopBg.jpg") no-repeat;background-size:7.5rem 8.64rem;position:relative;}
+.BtmBox{width:7.5rem;height:7.28rem;background:url("../img/BtmBg.jpg") no-repeat;background-size:7.5rem 7.28rem;}
+.TopBox button{width:5.14rem;height:1.33rem;background:url("../img/Btn.png") no-repeat;background-size:5.14rem 1.33rem;border:0;position: absolute;left:50%;margin-left:-2.57rem;top:6.8rem;}
+.TopBox button:active{width:5.14rem;height:1.33rem;background:url("../img/BtnActive.png") no-repeat 0 bottom;background-size:5.14rem 1.12rem;}
+.TxtList{font-size:0.24rem;color:#fff;width:6rem;padding:0.6rem 0 0 0.8rem;}
+.TxtList li{padding:0.14rem 0 0 0.32rem;line-height:0.34rem;position: relative;}
+.TxtList li:after{content:"";position: absolute;width:0.17rem;height:0.17rem;background:url("../img/Icon.png") no-repeat;background-size:0.17rem 0.17rem;left:0;top:0.2rem;}

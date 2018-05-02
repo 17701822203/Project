@@ -1,0 +1,794 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/Progress.js"></script>
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 24.025 * fontSize){
+                $('.nav-wrap').addClass('nav_wrap_fix');
+            }else{
+                $('.nav-wrap').removeClass('nav_wrap_fix');
+            }
+        });
+    </script>
+
+</head>
+<body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var tabs=$(".js_tab");
+        tabs.each(function(){
+            $(this).find(".jsTab_title li").first().addClass("on");
+            $(this).find(".jsTab_con").first().show();
+        });
+        $(".box1").js_tab();
+        $(".box2").js_tab();
+        $(".box3").js_tab();
+        $(".box4").js_tab();
+        $(".box5").js_tab();
+    });
+    (function($){
+        $.fn.extend({
+            "js_tab":function(){
+                $(this).find(".jsTab_title li").each(function(index){
+                    $(this).click(function(){
+                        $(this).siblings("li").removeClass("on");
+                        $(this).addClass("on");
+                        var tab_c=$(this).parents(".js_tab").find(".jsTab_con");
+                        tab_c.hide();
+                        tab_c.eq(index).show();
+                    });
+                    return $(this);
+                });
+            }
+        });
+    })(jQuery);
+</script>
+
+<article ontouchstart="" onmouseover="">
+    <div class="TopNav">
+        <a href="###">
+            <span>9.8开启</span>
+            <strong>十一储蓄罐</strong>
+            <small>存路费&nbsp;翻100倍</small>
+        </a>
+        <a class="on" href="###">
+            <span>9.15开启</span>
+            <strong>1元秒杀</strong>
+            <small>抢100000张车票</small>
+        </a>
+        <a href="###">
+            <span>9.22开启</span>
+            <strong>瓜分1个亿</strong>
+            <small>秋运补贴大返现</small>
+        </a>
+        <a href="###">
+            <span>9.29开启</span>
+            <strong>黄金周狂欢</strong>
+            <small>1元再来&nbsp;疯狂免单</small>
+        </a>
+    </div>
+    <div class="Animation img-box">
+        <img src="img/Top.jpg">
+        <img class="IconBus" src="img/Bus.png">
+        <img class="GoldLeft" src="img/GoldLeft.png">
+        <img class="GoldRight" src="img/GoldRight.png">
+        <img class="Balloon" src="img/Balloon.png">
+        <img class="Yacht" src="img/Yacht.png">
+        <img class="CloudLeft" src="img/CloudLeft.png">
+        <img class="CloudRight" src="img/CloudRight.png">
+        <img class="CloudCenter" src="img/CloudCenter.png">
+        <img class="MaskLeft" src="img/MaskLeft.png">
+        <img class="MaskRight" src="img/MaskRight.png">
+    </div>
+    <!--导航开始-->
+    <div class="nav-height" id="navHeight">
+        <nav class="nav-wrap" id="nav-wrap">
+            <div class="scroller">
+                <ul class="clearfix">
+                    <li><a href="#section1" class="active">1元汽车票</a></li>
+                    <li><a href="#section2">1元船票</a></li>
+                    <li><a href="#section3">1元机场专线</a></li>
+                    <li><a href="#section4">1元旅游专线</a></li>
+                    <li><a href="#section5">1元国际汽车票</a></li>
+                    <li><a href="#section6">1元租车</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--导航结束-->
+    <div class="TitBus" id="section1">
+        <img src="img/TitleBus.png">
+        <span class="RuleBtn">活动规则</span>
+    </div>
+    <div class="js_tab box1">
+        <ul class="TimeTab jsTab_title">
+            <li>
+                <strong>0:00</strong>
+                <span>已结束</span>
+            </li>
+            <li>
+                <strong>9:00</strong>
+                <span>秒杀中</span>
+            </li>
+            <li>
+                <strong>12:00</strong>
+                <span>即将开始</span>
+            </li>
+            <li>
+                <strong>15:00</strong>
+                <span>即将开始</span>
+            </li>
+            <li>
+                <strong>21:00</strong>
+                <span>即将开始</span>
+            </li>
+        </ul>
+        <div class="jsTab_con">
+            <div class="BusTp">
+                <div class="circle">
+                    <div class="pie_left"><div class="left"></div></div>
+                    <div class="pie_right"><div class="right"></div></div>
+                    <div class="mask"><em>已抢</em><div class="CountDown"><span>0</span>%</div></div>
+                </div>
+                <a class="grayBtn" href="###">已抢完</a>
+            </div>
+            <div class="BookingTicket"><a href="###">预订车票>></a></div>
+        </div>
+        <div class="jsTab_con">
+            <div class="BusTp">
+                <div class="circle">
+                    <div class="pie_left"><div class="left"></div></div>
+                    <div class="pie_right"><div class="right"></div></div>
+                    <div class="mask"><em>已抢</em><div class="CountDown"><span>0</span>%</div></div>
+                </div>
+                <a class="RedBtn" href="###">马上领取</a>
+                <script type="text/javascript">
+                    //addPercent(30);
+                    function addPercent(num){
+                        if(num>80)return;
+                        var c=document.getElementsByClassName("circle")[0];
+                        c.getElementsByTagName("span")[0].innerHTML=num;
+                        num=num*3.6;
+                        if(num<=180){
+                            c.getElementsByClassName("right")[0].style.transform="rotate(" + num + "deg)";
+                        }else{
+                            c.getElementsByClassName("right")[0].style.transform="rotate(180deg)";
+                            c.getElementsByClassName("left")[0].style.transform="rotate(" + (num - 180) + "deg)";
+                        }
+                    }
+                    var count=0;
+                    var t=setInterval(function(){
+                        if(count>100){
+                            clearInterval(t);
+                        }
+                        addPercent(++count);
+                    },50);
+                </script>
+            </div>
+            <div class="BookingTicket"><a href="###">预订车票>></a></div>
+        </div>
+        <div class="jsTab_con">
+            <div class="BusTp">
+                <dl class="time">
+                    <dt>距开抢还有</dt>
+                    <dd>
+                        <time>02</time>
+                        <span>:</span>
+                        <time>02</time>
+                        <span>:</span>
+                        <time>02</time>
+                    </dd>
+                </dl>
+            </div>
+            <div class="BookingTicket"><a href="###">预订车票>></a></div>
+        </div>
+        <div class="jsTab_con">
+            <div class="BusTp">
+                <dl class="time">
+                    <dt>距开抢还有</dt>
+                    <dd>
+                        <time>02</time>
+                        <span>:</span>
+                        <time>02</time>
+                        <span>:</span>
+                        <time>02</time>
+                    </dd>
+                </dl>
+            </div>
+            <div class="BookingTicket"><a href="###">预订车票>></a></div>
+        </div>
+        <div class="jsTab_con">
+            <div class="BusTp">
+                <dl class="time">
+                    <dt>距开抢还有</dt>
+                    <dd>
+                        <time>02</time>
+                        <span>:</span>
+                        <time>02</time>
+                        <span>:</span>
+                        <time>02</time>
+                    </dd>
+                </dl>
+            </div>
+            <div class="BookingTicket"><a href="###">预订车票>></a></div>
+        </div>
+
+    </div>
+    <div class="TitSteamer" id="section2">
+        <img src="img/TitleSteamer.png">
+        <span class="RuleBtn">活动规则</span>
+    </div>
+    <div class="js_tab box2">
+        <ul class="Discount jsTab_title">
+            <li>1元秒杀</li>
+            <li>更多特惠</li>
+        </ul>
+        <div class="SeckillBox jsTab_con">
+            <div class="Seckill">
+                <img src="img/Img1.jpg">
+                <span class="TopLabelEnd">
+                    <b>今日抢完</b>
+                    <b>明天再来</b>
+                </span>
+                <a class="KillBtn" href="###">更多班次</a>
+                <h3>涠洲岛-鼓浪屿</h3>
+                <i>&yen;</i>
+                <big>1</big>
+                <small>&yen;&nbsp;120</small>
+            </div>
+            <div class="Seckill">
+                <img src="img/Img2.jpg">
+                <span class="TopLabel">正在进行</span>
+                <a class="KillBtn" href="###">立即秒杀</a>
+                <h3>涠洲岛-鼓浪屿</h3>
+                <i>&yen;</i>
+                <big>1</big>
+                <small>&yen;&nbsp;120</small>
+            </div>
+            <div class="Seckill">
+                <img src="img/Img2.jpg">
+                <a style="background:#B4B4B4;"  class="KillBtn" href="###">10点开抢</a>
+                <h3>涠洲岛-鼓浪屿</h3>
+                <i>&yen;</i>
+                <big>1</big>
+                <small>&yen;&nbsp;120</small>
+            </div>
+            <div class="SeckillBtn"><a href="###">更多线路>></a></div>
+        </div>
+        <div class="SeckillBox jsTab_con">
+            <div class="Seckill">
+                <img src="img/Img1.jpg">
+                <span class="TopLabel">正在进行</span>
+                <a class="KillBtn" href="###">立即秒杀</a>
+                <h3>涠洲岛-鼓浪屿</h3>
+                <i>&yen;</i>
+                <big>1</big>
+                <small>&yen;&nbsp;120</small>
+            </div>
+            <div class="Seckill">
+                <img src="img/Img2.jpg">
+                <span class="TopLabel">正在进行</span>
+                <a class="KillBtn" href="###">立即秒杀</a>
+                <h3>涠洲岛-鼓浪屿</h3>
+                <i>&yen;</i>
+                <big>1</big>
+                <small>&yen;&nbsp;120</small>
+            </div>
+            <div class="SeckillBtn"><a href="###">更多线路>></a></div>
+        </div>
+    </div>
+    <div class="TitleAirport" id="section3">
+        <img src="img/TitleAirport.png">
+        <span class="RuleBtn">活动规则</span>
+    </div>
+    <div class="AirportList">
+        <div class="AirporColumn">
+            <h4>郫县汽车站-成都双流机场</h4>
+            <div class="AirporPrice">
+                <big>&yen;</big>
+                <b>1</b>
+                <span>&yen;120</span>
+            </div>
+            <a class="AirporBtn SellOut" href="###">今日已抢完</a>
+        </div>
+        <div class="AirporColumn">
+            <h4>成都东站-成都双流机场</h4>
+            <div class="AirporPrice">
+                <big>&yen;</big>
+                <b>1</b>
+                <span>&yen;120</span>
+            </div>
+            <a style="background:#B4B4B4;font-size:.55rem;"  class="AirporBtn" href="###">10点开抢</a>
+        </div>
+        <div class="AirporColumn">
+            <h4>成都双流机场-郫县汽车站</h4>
+            <div class="AirporPrice">
+                <big>&yen;</big>
+                <b>1</b>
+                <span>&yen;120</span>
+            </div>
+            <a class="AirporBtn" href="###">秒杀</a>
+        </div>
+        <div class="AirporColumn">
+            <h4>成都双流机场-成都东站</h4>
+            <div class="AirporPrice">
+                <big>&yen;</big>
+                <b>1</b>
+                <span>&yen;120</span>
+            </div>
+            <a class="AirporBtn" href="###">秒杀</a>
+        </div>
+        <div class="AirporColumn">
+            <h4>扬州-南京禄口机场</h4>
+            <div class="AirporPrice">
+                <big>&yen;</big>
+                <b>1</b>
+                <span>&yen;120</span>
+            </div>
+            <a class="AirporBtn" href="###">秒杀</a>
+        </div>
+        <div class="AirporColumn">
+            <h4>广州新白云机场-佛山高明区</h4>
+            <div class="AirporPrice">
+                <big>&yen;</big>
+                <b>1</b>
+                <span>&yen;120</span>
+            </div>
+            <a class="AirporBtn" href="###">秒杀</a>
+        </div>
+        <div class="AirporColumn">
+            <h4>苏州南门好又多-上海浦东机场</h4>
+            <div class="AirporPrice">
+                <big>&yen;</big>
+                <b>1</b>
+                <span>&yen;120</span>
+            </div>
+            <a class="AirporBtn" href="###">秒杀</a>
+        </div>
+        <div class="AirporColumn">
+            <h4>苏州邻里中心-上海浦东机场</h4>
+            <div class="AirporPrice">
+                <big>&yen;</big>
+                <b>1</b>
+                <span>&yen;120</span>
+            </div>
+            <a class="AirporBtn" href="###">秒杀</a>
+        </div>
+        <div class="AirporColumn">
+            <h4>苏州东环大润发-上海浦东机场</h4>
+            <div class="AirporPrice">
+                <big>&yen;</big>
+                <b>1</b>
+                <span>&yen;120</span>
+            </div>
+            <a class="AirporBtn" href="###">秒杀</a>
+        </div>
+        <div class="AirporColumn">
+            <h4>苏州体育场-上海浦东机场</h4>
+            <div class="AirporPrice">
+                <big>&yen;</big>
+                <b>1</b>
+                <span>&yen;120</span>
+            </div>
+            <a class="AirporBtn" href="###">秒杀</a>
+        </div>
+        <div class="AirporMore"><a href="###">更多线路>></a></div>
+    </div>
+    <div class="TitleTourism" id="section4">
+        <img src="img/TitleTourism.png">
+        <span class="RuleBtn">活动规则</span>
+    </div>
+    <div class="js_tab box3">
+        <ul class="RegionNav jsTab_title">
+            <li>华东</li>
+            <li>西南</li>
+            <li>华中&华南</li>
+            <li>华北</li>
+        </ul>
+        <div class="jsTab_con">
+            <div class="RegionBox">
+                <div class="Region">
+                    <img src="img/Img3.jpg">
+                    <div class="RegionRight">
+                        <img src="img/Seal.png">
+                        <h4>南京-乌镇</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">更多班次</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img4.jpg">
+                    <div class="RegionRight">
+                        <h4>西双版纳机场-市区</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img5.jpg">
+                    <div class="RegionRight">
+                        <h4>香格里拉机场-独克宗古城</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a style="background:#B4B4B4;"  href="###">10点开抢</a></div>
+                    </div>
+                </div>
+                <div class="SeckillBtn"><a href="###">更多线路&gt;&gt;</a></div>
+            </div>
+        </div>
+        <div class="jsTab_con">
+            <div class="RegionBox">
+                <div class="Region">
+                    <img src="img/Img3.jpg">
+                    <div class="RegionRight">
+                        <h4>南京-乌镇</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img4.jpg">
+                    <div class="RegionRight">
+                        <h4>西双版纳机场-市区</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img5.jpg">
+                    <div class="RegionRight">
+                        <h4>香格里拉机场-独克宗古城</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="SeckillBtn"><a href="###">更多线路&gt;&gt;</a></div>
+            </div>
+        </div>
+        <div class="jsTab_con">
+            <div class="RegionBox">
+                <div class="Region">
+                    <img src="img/Img3.jpg">
+                    <div class="RegionRight">
+                        <h4>南京-乌镇</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img4.jpg">
+                    <div class="RegionRight">
+                        <h4>西双版纳机场-市区</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img5.jpg">
+                    <div class="RegionRight">
+                        <h4>香格里拉机场-独克宗古城</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="SeckillBtn"><a href="###">更多线路&gt;&gt;</a></div>
+            </div>
+        </div>
+        <div class="jsTab_con">
+            <div class="RegionBox">
+                <div class="Region">
+                    <img src="img/Img3.jpg">
+                    <div class="RegionRight">
+                        <h4>南京-乌镇</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img4.jpg">
+                    <div class="RegionRight">
+                        <h4>西双版纳机场-市区</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img5.jpg">
+                    <div class="RegionRight">
+                        <h4>香格里拉机场-独克宗古城</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="SeckillBtn"><a href="###">更多线路&gt;&gt;</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="TitleRegion" id="section5">
+        <img src="img/TitleRegion.png">
+    </div>
+    <div class="js_tab box4">
+        <ul class="InBusNav jsTab_title">
+            <li>1元秒杀</li>
+            <li>更多特惠</li>
+        </ul>
+        <div class="jsTab_con">
+            <div class="InBusBox">
+                <div class="Region">
+                    <img src="img/Img6.jpg">
+                    <div class="RegionRight">
+                        <h4>厦门厦门-鼓浪屿</h4>
+                        <img src="img/Seal.png">
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">更多班次</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img7.jpg">
+                    <div class="RegionRight">
+                        <h4>厦门厦门-鼓浪屿</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img8.jpg">
+                    <div class="RegionRight">
+                        <h4>厦门厦门-鼓浪屿</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a style="background:#B4B4B4;"  href="###">10点开抢</a></div>
+                    </div>
+                </div>
+                <div class="SeckillBtn"><a href="###">更多线路&gt;&gt;</a></div>
+            </div>
+        </div>
+        <div class="jsTab_con">
+            <div class="InBusBox">
+                <div class="Region">
+                    <img src="img/Img6.jpg">
+                    <div class="RegionRight">
+                        <h4>厦门厦门-鼓浪屿</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img7.jpg">
+                    <div class="RegionRight">
+                        <h4>厦门厦门-鼓浪屿</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/Img8.jpg">
+                    <div class="RegionRight">
+                        <h4>厦门厦门-鼓浪屿</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                            <span>&yen;150</span>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="SeckillBtn"><a href="###">更多线路&gt;&gt;</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="TitleRegion" id="section6">
+        <img src="img/TitleZuChe.png">
+    </div>
+    <div class="js_tab box5">
+        <ul class="ZuCheNav jsTab_title">
+            <li>1元秒杀</li>
+            <li>更多特惠</li>
+        </ul>
+        <div class="jsTab_con">
+            <div class="ZuCheBox">
+                <div class="Region">
+                    <img src="img/testImg2.jpg">
+                    <div class="RegionRight">
+                        <h4>1元购45元国内租车券</h4>
+                        <img src="img/Seal.png">
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>1</b>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="SeckillBtn"><a href="###">更多线路&gt;&gt;</a></div>
+            </div>
+        </div>
+        <div class="jsTab_con">
+            <div class="ZuCheBox">
+                <div class="Region">
+                    <img src="img/testImg2.jpg">
+                    <div class="RegionRight">
+                        <h4>9元购60元国内租车券</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>9</b>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/testImg2.jpg">
+                    <div class="RegionRight">
+                        <h4>19元购100元国内租车券</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>19</b>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="Region">
+                    <img src="img/testImg2.jpg">
+                    <div class="RegionRight">
+                        <h4>39元购200元国内租车券</h4>
+                        <div>
+                            <strong>&yen;</strong>
+                            <b>39</b>
+                        </div>
+                        <div><a href="###">立即秒杀</a></div>
+                    </div>
+                </div>
+                <div class="SeckillBtn"><a href="###">更多线路&gt;&gt;</a></div>
+            </div>
+        </div>
+    </div>
+</article>
+<script src="js/jquery.navScroll.js"></script>
+<script>
+    $('.nav-wrap').navScroll({
+        mobileDropdown:true,
+        mobileBreakpoint:1,
+        scrollSpy:true
+    });
+</script>
+
+<script type="text/javascript" src="js/flexible.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/navbarscroll.js"></script>
+<script type="text/javascript">
+    $(function(){
+
+        //demo示例一到四 通过lass调取，一句可以搞定，用于页面中可能有多个导航的情况
+        $('.nav-wrap').navbarscroll();
+
+        //demo示例五 通过id调取
+        $('#demo05').navbarscroll({
+            defaultSelect:6,
+            endClickScroll:function(obj){
+                console.log(obj.text())
+            }
+        });
+
+        //demo示例六 通过id调取
+        $('#demo06').navbarscroll({
+            defaultSelect:3,
+            scrollerWidth:6,
+            fingerClick:1,
+            endClickScroll:function(obj){
+                console.log(obj.text())
+            }
+        });
+    });
+</script>
+</body>
+</html>
+

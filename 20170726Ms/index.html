@@ -1,0 +1,206 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#tabs_container .tabs_box").first().css("display","block")
+            $("#TabNav li").first().addClass("tabulous_active")
+            var nav=$("#TabNav li");
+            nav.click(function(){
+                $(this).addClass("tabulous_active").siblings().removeClass("tabulous_active");
+                var index=nav.index(this);
+                $("#tabs_container>.tabs_box")
+                        .eq(index).show()
+                        .siblings().hide()
+            })
+        });
+    </script>
+</head>
+<body>
+    <article>
+        <div class="img-box"><img src="img/TopImg.jpg"></div>
+        <div class="TabTop" id="tabs">
+            <ul id="TabNav">
+                <li><a href="###" title="">华东</a></li>
+                <li><a href="###" title="">西南</a></li>
+                <li><a href="###" title="">华中&华南</a></li>
+                <li><a href="###" title="">华北</a></li>
+            </ul>
+            <div id="tabs_container">
+                <div class="tabs_box">
+                    <div class="CityList">
+                        <strong style="width:5.85rem;">南京-西塘</strong>
+                        <small>&yen;</small>
+                        <b>1</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong style="width:5.85rem;">南京-西塘</strong>
+                        <small>&yen;</small>
+                        <b>1</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong style="width:5.85rem;">南京-西塘</strong>
+                        <small>&yen;</small>
+                        <b>1</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong style="width:5.85rem;">南京-西塘</strong>
+                        <small>&yen;</small>
+                        <b>1</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                </div>
+                <div class="tabs_box">
+                    <div class="CityList">
+                        <strong style="font-size:.7rem;">南京南京-西塘西塘</strong>
+                        <small>&yen;</small>
+                        <b>2</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong style="font-size:.75rem;">南京京-西塘西塘</strong>
+                        <small>&yen;</small>
+                        <b>2</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong>南京京-西塘塘</strong>
+                        <small>&yen;</small>
+                        <b>2</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong>南京-西塘</strong>
+                        <small>&yen;</small>
+                        <b>2</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                </div>
+                <div class="tabs_box">
+                    <div class="CityList">
+                        <strong style="font-size:.7rem;">南京南京-西塘西塘</strong>
+                        <small>&yen;</small>
+                        <b>3</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong style="font-size:.75rem;">南京京-西塘西塘</strong>
+                        <small>&yen;</small>
+                        <b>3</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong>南京京-西塘塘</strong>
+                        <small>&yen;</small>
+                        <b>3</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong>南京-西塘</strong>
+                        <small>&yen;</small>
+                        <b>3</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                </div>
+                <div class="tabs_box">
+                    <div class="CityList">
+                        <strong style="width:5.85rem;">南京-西塘</strong>
+                        <small>&yen;</small>
+                        <b>1</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong style="width:5.85rem;">南京-西塘</strong>
+                        <small>&yen;</small>
+                        <b>1</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong style="width:5.85rem;">南京-西塘</strong>
+                        <small>&yen;</small>
+                        <b>1</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                    <div class="CityList">
+                        <strong style="width:5.85rem;">南京-西塘</strong>
+                        <small>&yen;</small>
+                        <b>1</b>
+                        <em>&yen;&nbsp;188</em>
+                        <a href="###">立即秒杀</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rules">
+            <dl class="rulesList">
+                <dt>活动规则</dt>
+                <dd>
+                    <p>活动时间：即日起—2017.08.31</p>
+                    <p>活动时间：即日起—2017.08.31</p>
+                    <p>本次活动最终解释权归携程旅行网所有，如有疑问请致电携程客服热线10106666</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="img-box"><img src="img/btm.jpg"></div>
+    </article>
+    <!--导航栏-->
+    <ul class="fix-nav">
+        <li><a href="###"><img src="img/nav1.png"></a></li>
+        <li><a href="###"><img src="img/nav2.png"></a></li>
+        <li><a href="###"><img src="img/nav3.png"></a></li>
+    </ul>
+    <!--导航栏-->
+</body>
+</html>

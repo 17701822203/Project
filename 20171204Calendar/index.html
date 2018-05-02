@@ -1,0 +1,457 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="CalendarTop">
+        <div class="img-box"><img src="img/TopBg.jpg"></div>
+        <div class="TopTxt">智行已为<span>89070490</span>人抢到回家的火车票</div>
+        <!--点击后预约期外-->
+        <label style="display:none;">
+            <div class="TopTxt1">
+                <dl class="Date">
+                    <dt>选中日期</dt>
+                    <dd>02月15日</dd>
+                </dl>
+                <dl class="State">
+                    <dt>出售状态</dt>
+                    <dd>不可预约</dd>
+                </dl>
+            </div>
+            <div class="TopTxt2"><span>该日期的票12月15日才可开始预约</span></div>
+        </label>
+        <!--点击后-->
+        <label style="display:none;">
+            <div class="TopTxt3">
+                <dl class="Date">
+                    <dt>选中日期</dt>
+                    <dd>02月15日</dd>
+                </dl>
+                <dl class="State">
+                    <dt>出售状态</dt>
+                    <dd>预约</dd>
+                </dl>
+                <dl class="Number">
+                    <dt>已预约人数</dt>
+                    <dd>65098880</dd>
+                </dl>
+                <span class="yyBtn"></span>
+            </div>
+        </label>
+        <!--点击前-->
+        <label>
+            <dl class="LayerDate">
+                <dt>
+                    <span>今日开售</span>
+                    <b>02</b>
+                    <span>月</span>
+                    <b>04</b>
+                    <span>日</span>
+                    <span>大年三十</span>
+                </dt>
+                <dd>今日可预约抢<span>01</span>月<span>05</span>日至<span>02</span>月<span>27</span>日车票</dd>
+            </dl>
+        </label>
+
+        <div class="TopCity">
+            <div class="CityLeft">北京</div>
+            <div class="CityRight">上海</div>
+            <span class="change"></span>
+        </div>
+    </div>
+    <div class="CalendarWrap">
+        <div class="CalendarTopWrap">
+            <div class="TopDate">2017年01月</div>
+            <ul class="Week">
+                <li>一</li>
+                <li>二</li>
+                <li>三</li>
+                <li>四</li>
+                <li>五</li>
+                <li>六</li>
+                <li>日</li>
+            </ul>
+        </div>
+        <ul class="DateList bor-top">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li>
+                <b>1</b>
+                <span>十三</span>
+                <i class="mode1"></i>
+            </li>
+            <li>
+                <b>2</b>
+                <span>十四</span>
+            </li>
+            <li>
+                <b>3</b>
+                <span>十五(元旦)</span>
+            </li>
+        </ul>
+        <ul class="DateList">
+            <li>
+                <b>4</b>
+                <span>十六</span>
+                <i class="mode2">开售</i>
+            </li>
+            <li class="on">
+                <b>5</b>
+                <span>十七</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>6</b>
+                <span>十八</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>7</b>
+                <span>十八</span>
+                <i class="mode3">预约</i>
+                <div class="buoy"></div>
+            </li>
+            <li>
+                <b>8</b>
+                <span>十九(小寒)</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>9</b>
+                <span>廿一</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>10</b>
+                <span>廿二</span>
+                <i class="mode3">预约</i>
+            </li>
+        </ul>
+        <ul class="DateList">
+            <li>
+                <b>11</b>
+                <span>廿三</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>12</b>
+                <span>廿四</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>13</b>
+                <span>廿五</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>14</b>
+                <span>廿六</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>15</b>
+                <span>廿七</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>16</b>
+                <span>廿八</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>17</b>
+                <span>廿九</span>
+                <i class="mode3">预约</i>
+            </li>
+        </ul>
+        <ul class="DateList">
+            <li>
+                <b>18</b>
+                <span>三十</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>19</b>
+                <span>腊月初一</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>20</b>
+                <span>腊月初二</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>21</b>
+                <span>腊月初三</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>22</b>
+                <span>腊月初四</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>23</b>
+                <span>腊月初五</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>24</b>
+                <span>腊月初六</span>
+                <i class="mode3">预约</i>
+            </li>
+        </ul>
+        <ul class="DateList">
+            <li>
+                <b>25</b>
+                <span>腊月初七</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>26</b>
+                <span>腊月初八</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>27</b>
+                <span>腊月初九</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>28</b>
+                <span>腊月初十</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>29</b>
+                <span>腊月十一</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>30</b>
+                <span>腊月十二</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>31</b>
+                <span>腊月十三</span>
+                <i class="mode3">预约</i>
+            </li>
+        </ul>
+        <div class="February">02月</div>
+        <ul class="DateList bor-top">
+            <li>
+                <b>1</b>
+                <span>廿三</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>2</b>
+                <span>廿四</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>3</b>
+                <span>廿五</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>4</b>
+                <span>廿六</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>5</b>
+                <span>十三</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>6</b>
+                <span>十四</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>7</b>
+                <span>十五(元旦)</span>
+                <i class="mode3">预约</i>
+            </li>
+        </ul>
+        <ul class="DateList bor-top">
+            <li>
+                <b>8</b>
+                <span>十六</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>9</b>
+                <span>十七</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>10</b>
+                <span>十八</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>11</b>
+                <span>十九(小寒)</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>12</b>
+                <span>二十</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>13</b>
+                <span>廿一</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>14</b>
+                <span>廿二</span>
+                <i class="mode3">预约</i>
+            </li>
+        </ul>
+        <ul class="DateList bor-top">
+            <li>
+                <b>15</b>
+                <span>廿三</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li class="Rest">
+                <b>16</b>
+                <span>廿四</span>
+                <i class="mode3">预约</i>
+                <strong>休</strong>
+            </li>
+            <li class="Rest">
+                <b>17</b>
+                <span>廿五</span>
+                <i class="mode3">预约</i>
+                <strong>休</strong>
+            </li>
+            <li class="Rest">
+                <b>18</b>
+                <span>廿六</span>
+                <i class="mode3">预约</i>
+                <strong>休</strong>
+            </li>
+            <li>
+                <b>19</b>
+                <span>廿七</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>20</b>
+                <span>廿八</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>21</b>
+                <span>廿九</span>
+                <i class="mode3">预约</i>
+            </li>
+        </ul>
+        <ul class="DateList bor-top">
+            <li>
+                <b>22</b>
+                <span>三十</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>23</b>
+                <span>腊月初一</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>24</b>
+                <span>腊月初二</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>25</b>
+                <span>腊月初三</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>26</b>
+                <span>腊月初四</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>27</b>
+                <span>腊月初五</span>
+                <i class="mode3">预约</i>
+            </li>
+            <li>
+                <b>28</b>
+                <span>腊月初六</span>
+            </li>
+        </ul>
+        <ul class="DateList bor-top">
+            <li>
+                <b>29</b>
+                <span>腊月初七</span>
+            </li>
+            <li>
+                <b>30</b>
+                <span>腊月初八</span>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="LayerBtm">
+        <img src="img/huoche.png">
+        <span>预约抢票，就来智行</span>
+        <b>进入APP</b>
+    </div>
+</body>
+</html>

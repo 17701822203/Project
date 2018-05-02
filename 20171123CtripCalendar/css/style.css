@@ -1,0 +1,345 @@
+/*Created by huang.jun on 17-10-10*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopNav {
+  height: 2.35rem;
+}
+.TopNav b {
+  float: left;
+  width: 33%;
+  text-align: center;
+  height: 2.35rem;
+  display: block;
+  color: #fff;
+  background: #E60012;
+  font-weight: normal;
+}
+.TopNav b:nth-of-type(2) {
+  width: 34%;
+}
+.TopNav b.on {
+  background: url("../img/NavBg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.TopNav b strong {
+  display: block;
+  font-size: .7rem;
+  line-height: .7rem;
+  margin-top: .5rem;
+}
+.TopNav b span {
+  display: block;
+  font-size: .55rem;
+  line-height: .55rem;
+  margin-top: .25rem;
+}
+.TopImg {
+  width: 100%;
+  height: 13rem;
+  position: relative;
+  background: url("../img/TopBg.jpg") no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+.TopImg .CalendarLeft,
+.TopImg .CalendarRight {
+  position: absolute;
+  font-size: .75rem;
+  line-height: .75rem;
+  bottom: .5rem;
+  z-index: 11;
+}
+.TopImg .CalendarLeft {
+  color: #fff;
+  left: 1.25rem;
+}
+.TopImg .DateBox {
+  color: #670086;
+  position: absolute;
+  width: 7.475rem;
+  height: .975rem;
+  line-height: .975rem;
+  background: url("../img/DateBg.png") no-repeat;
+  background-size: 100% 100%;
+  bottom: .4rem;
+  left: 50%;
+  margin-left: -3.7375rem;
+  z-index: 11;
+}
+.TopImg .DateBox li {
+  float: left;
+  font-weight: bold;
+  font-size: .85rem;
+  line-height: .85rem;
+  padding-top: .1rem;
+}
+.TopImg .DateBox li:nth-of-type(1) {
+  padding-left: .2rem;
+  letter-spacing: .4rem;
+}
+.TopImg .DateBox li:nth-of-type(2) {
+  padding-left: .85rem;
+  letter-spacing: .4rem;
+}
+.TopImg .DateBox li:nth-of-type(3) {
+  padding-left: .75rem;
+  letter-spacing: .4rem;
+}
+.TopImg .CalendarRight {
+  color: #fff;
+  right: 1.25rem;
+}
+.TopImg .img3 {
+  animation: AmGoldIcon 4s linear infinite;
+  position: absolute;
+  left: 71%;
+  top: 0;
+  -webkit-transform: scale(0);
+}
+.TopImg .img4 {
+  animation: AmGoldIcon 2s 1s linear infinite;
+  position: absolute;
+  left: 8%;
+  top: 8%;
+  -webkit-transform: scale(0);
+}
+.TopImg .img5 {
+  animation: AmGoldIcon 5s 0s linear infinite;
+  position: absolute;
+  left: 10%;
+  top: 0;
+  -webkit-transform: scale(0);
+}
+@keyframes AmGoldIcon {
+  0% {
+    -webkit-transform: scale(0);
+  }
+  30% {
+    -webkit-transform: scale(0.6);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+    opacity: 0;
+  }
+}
+.CalendarTop {
+  font-size: 0;
+  position: relative;
+}
+.CalendarTop img {
+  width: 100%;
+}
+.CalendarTop .Date {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: .55rem;
+  width: 100%;
+}
+.CalendarTop .Date span {
+  font-size: .75rem;
+  line-height: .75rem;
+}
+.CalendarTop .Date .DateLeft,
+.CalendarTop .Date .DateRight {
+  width: .825rem;
+  height: .825rem;
+  position: absolute;
+  background: url("../img/DateIcon.png") no-repeat;
+  background-size: 100% 100%;
+}
+.CalendarTop .Date .DateLeft {
+  margin-left: -3.5rem;
+  left: 50%;
+}
+.CalendarTop .Date .DateRight {
+  margin-right: -3.5rem;
+  right: 50%;
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.TicketTop {
+  height: 5.1rem;
+  background: url("../img/TicketTop.jpg") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.TicketTop a {
+  color: #fff;
+  font-size: .65rem;
+  line-height: .65rem;
+  bottom: .35rem;
+  right: 1.1rem;
+  position: absolute;
+}
+.TicketTop a span {
+  position: absolute;
+  right: -0.5rem;
+  top: 0;
+  font-family: Arial, sans-serif;
+}
+.TicketWrap {
+  height: 8.05rem;
+  background: url("../img/TicketWrap.jpg") no-repeat;
+  background-size: 100% 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 .55rem;
+  color: #333;
+}
+.TicketWrap .TicketCity {
+  height: 3.15rem;
+  position: relative;
+}
+.TicketWrap .TicketCity .ChangeBtn {
+  width: 1.5rem;
+  height: 1.5rem;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  margin-left: -0.75rem;
+  margin-top: -0.75rem;
+  background: url("../img/Change.png") no-repeat;
+  background-size: 100% 100%;
+}
+.TicketWrap .TicketCity .TicketLeft,
+.TicketWrap .TicketCity .TicketRight {
+  width: 6.25rem;
+  position: absolute;
+  height: 3.15rem;
+  border: 0;
+  font-size: 1.1rem;
+  top: 0;
+  color: #333;
+  line-height: 3.15rem;
+}
+.TicketWrap .TicketCity .TicketLeft {
+  left: 0;
+  padding-left: .75rem;
+}
+.TicketWrap .TicketCity .TicketRight {
+  right: 0;
+  text-align: right;
+  padding-right: .75rem;
+}
+.TicketWrap .TicketItem {
+  height: 2.3rem;
+  line-height: 2.3rem;
+  padding: 0 .75rem;
+  font-size: 1.1rem;
+}
+.TicketWrap .TicketItem .TicketLeft {
+  float: left;
+}
+.TicketWrap .TicketItem .TicketRight {
+  float: right;
+}
+.TicketWrap .TicketBtm {
+  height: 2.55rem;
+  line-height: 2.55rem;
+  text-align: center;
+  font-size: .95rem;
+}
+.TicketWrap .TicketBtm span {
+  color: #ff6600;
+  font-weight: bold;
+}
+.TicketBtnBg {
+  height: 2.825rem;
+  background: url("../img/TicketBtnBg.jpg") no-repeat;
+  background-size: 100% 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: .4rem;
+}
+.TicketBtnBg a {
+  width: 94%;
+  height: 2.4rem;
+  background: url("../img/Btn.png") no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  margin: 0 auto;
+}
+.Title {
+  width: 10.1rem;
+  position: absolute;
+  left: 50%;
+  top: 1.8rem;
+  z-index: 11;
+  margin-left: -5.05rem;
+}
+.btmBg {
+  position: relative;
+  font-size: 0;
+}
+.btmBg img {
+  width: 100%;
+}
+.btmBg:after,
+.btmBg:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.btmBg a {
+  height: 2.4rem;
+  line-height: 2.4rem;
+  background: #FBB216;
+  color: #fff;
+  text-align: center;
+  font-size: .95rem;
+  position: absolute;
+  bottom: 9%;
+  left: 50%;
+  width: 94%;
+  margin-left: -47%;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}

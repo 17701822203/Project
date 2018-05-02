@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+
+        $(document).ready(function(){
+            $(".PopWrap").height($(window).height());
+            $(".ReceiveBtn").click(function(){
+                $("body").addClass("PopWrap");
+                $("section").show();
+            })
+            $(".CloseBtn").click(function(){
+                $("body").removeClass();
+                $("section").hide();
+            })
+        })
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <section style="display:none;">
+        <div class="shadow"></div>
+        <dl class="PopupCoupon">
+            <dt>
+                <h3>恭喜你，领券成功！</h3>
+                <h4>请在携程APP“我的”里查看优惠券详情</h4>
+            </dt>
+            <dd>
+                <a href="###" class="Coupon">
+                    <div class="Price">50</div>
+                    <ul class="Place">
+                        <li>欧洲</li>
+                        <li>火车票优惠券</li>
+                    </ul>
+                </a>
+
+                <a href="###" class="Coupon">
+                    <div class="Price">50</div>
+                    <ul class="Place">
+                        <li>欧洲</li>
+                        <li>火车票优惠券</li>
+                    </ul>
+                </a>
+
+                <a href="###" class="Coupon">
+                    <div class="Price">50</div>
+                    <ul class="Place">
+                        <li>欧洲</li>
+                        <li>火车票优惠券</li>
+                    </ul>
+                </a>
+                <a class="CloseBtn" href="###"><!--关闭按钮--></a>
+            </dd>
+        </dl>
+    </section>
+    <div class="TopBg img-box"><img src="img/TopImg.jpg"></div>
+    <div class="WrapBg">
+        <ul class="Content">
+            <li><input class="InputBox" type="text" readonlyunselectable="on" placeholder="输入手机号"></li>
+            <li><div class="Verification" style="height:1.9rem;border:1px solid #016177;box-sizing:border-box;-webkit-border-radius:.25rem;-moz-border-radius:.25rem;border-radius:.25rem;overflow:hidden;background:#086677;color:#F5EFD6;"><i style="width:2.475rem;height:1.9rem;display:block;background:url(img/YzmBtn.png) no-repeat;background-size:100% 100%;"></i></div></li>
+            <li><input class="InputBox" type="text" readonlyunselectable="on" placeholder="输入短信验证码"></li>
+            <li><a class="ReceiveBtn" href="###">立即领取</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+

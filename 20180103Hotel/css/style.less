@@ -1,0 +1,126 @@
+/*Created by huang.jun on 17-12-05*/
+*{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+a{text-decoration:none;-webkit-tap-highlight-color:transparent;
+  &:active{opacity:.7;}
+}
+button:active{opacity:.7;}
+ol,ul,li{list-style:none;}
+body{font-family:PingFang-SC-Regular,sans-serif;-webkit-text-size-adjust: 100% !important;text-size-adjust: 100% !important;-moz-text-size-adjust: 100% !important; }
+.shadow{width:100%;height:100%;position:fixed;z-index:20;background:#000;opacity:.6;top:0;left:0;}
+.img-box{font-size:0;
+  img{width:100%;}
+}
+//四角的半径定制.border-radius-custom(20px, 20px, 0px, 0px);
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+  border-radius: @topleft @topright @bottomright @bottomleft;
+}
+//方块阴影.box-shadow(5px, 5px, 6px, 0.3);
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: .5) {
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+//圆角.border-radius(@radius:5px)
+.border-radius(@radius:5px){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+//input默认字体.placeholder({color:#666;});
+.placeholder(@a){
+  &::-webkit-input-placeholder{@a();}
+  &:-moz-placeholder{@a();}
+  &::-moz-placeholder{@a();}
+  &:-ms-input-placeholder{@a();}
+}
+//线性渐变.gradient(left, #663333, #333333);
+.gradient(@origin:left,@start:#fff,@stop:#000){
+  background-color:@start;
+  background-image:-webkit-linear-gradient(@origin,@start,@stop);
+  background-image:-moz-linear-gradient(@origin,@start,@stop);
+  background-image:-o-linear-gradient(@origin,@start,@stop);
+  background-image:-ms-linear-gradient(@origin,@start,@stop);
+  background-image:linear-gradient(@origin,@start,@stop);
+}
+//清除浮动
+.ClearBox{
+  &:after,&:before{content: " ";display: table;clear:both;}
+}
+
+.TabNav{height:2.4rem;
+  li{font-size:.7rem;line-height:2.4rem;text-align:center;float:left;
+    &:nth-of-type(1){width:33%;}
+    &:nth-of-type(2){width:34%;}
+    &:nth-of-type(3){width:33%;}
+    &.grayBg{background:#E5E5E5;color:#666;}
+    &.redBg{background:#FB3367;color:#fff;}
+    &.yellowBg{background:#FFF7C2;color:#333;}
+  }
+}
+.CountDown{height:4.7rem;position:relative;
+  .CountDownTop{text-align:center;line-height:.65rem;padding:1rem 0 0 0 ;
+    span{color:#222;letter-spacing:.3rem;font-size:.65rem;position: relative;
+      &:after,&:before{width:1.35rem;height:.075rem;background:#999;content:"";position:absolute;top:.4rem;}
+      &:after{left:-1.75rem;}
+      &:before{right:-1.35rem;}
+    }
+  }
+  .CountDownBtm{padding-top:.8rem;width:9.6rem;margin:0 auto;
+    li{float:left;font-family:"PingFangHK-Regular";font-size:.65rem;height:1.2rem;line-height:1.2rem;margin:0 .25rem;.border-radius(@radius:.1rem);
+      &.TimeBg{width:.9rem;background:#222;color:#fff;font-size:.8rem;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box;margin:0 0 0 .075rem;}
+    }
+  }
+  .CityLay{position:absolute;left:1.6rem;top:2.8rem;font-size:.85rem;line-height:.85rem;font-weight: bold;color:#FB3367;
+    &:after,&:before{content:"";position:absolute;}
+    &:after{width:.7rem;height:.925rem;background:url("../img/Location.png") no-repeat;background-size:100% 100%;left:-.85rem;top:-.1rem;}
+    &:before{width:.525rem;height:.325rem;background:url("../img/dropdown.png") no-repeat;background-size:100% 100%;right:-.8rem;top:.3rem;}
+  }
+}
+.HotelImg{position:relative;font-size:0;border-top:.5rem solid #F4F4F4;
+  img{width:100%;}
+  h4{position:absolute;font-size:.85rem;color:#fff;left:.6rem;bottom:.95rem;}
+}
+.HotelPrice{height:2.7rem;
+  .left{float:left;padding-left:.6rem;color:#fb3367;
+    small,big{float:left;}
+    small{font-size:1.4rem;line-height:1.4rem;padding-top:.85rem;}
+    big{font-size:2rem;line-height:2rem;padding:.35rem 0 0 0;}
+  }
+  .center{float:left;text-align:center;padding-left:.2rem;
+    small,big{display:block;}
+    small{font-size:.6rem;line-height:.6rem;color:#fb3367;padding-top:.75rem;}
+    big{font-size:.6rem;line-height:.6rem;color:#999;text-decoration:line-through;margin-top:.35rem;}
+  }
+  .right{float:right;width:5.9rem;height:2.7rem;background:url("../img/icon.jpg") no-repeat left top #FFE487;background-size:.85rem 2.7rem;padding-left:1.4rem;-webkit-box-sizing:border-box;box-sizing:border-box;
+    button{width:3.825rem;height:1.55rem;border:0;background:#FB3367;color:#fff;font-size:.6rem;.border-radius(@radius:.075rem);margin-top:.3rem;}
+    small{display:block;font-size:.4rem;line-height:.4rem;margin-top:.15rem;color:#8b0125;}
+  }
+}
+
+.YellowBg2{background:#FFF7C2;padding:.95rem .6rem .7rem .6rem;
+  .HotelList{background:#F7D047;padding:0 0 .7rem .75rem;.ClearBox;
+    .Hotel{width:47%;height:8.95rem;float:left;background:#fff;.border-radius(@radius:.15rem);overflow:hidden;margin-top:.25rem;
+      .img-box{
+        img{height:4.5rem;}
+      }
+      .ImgTxt{padding:0 .5rem;
+        h4{font-size:.7rem;color:#3c0f0f;line-height:.7rem;margin-top:.55rem;}
+        .HotelPriceTxt{.ClearBox;font-size:.55rem;line-height:.55rem;margin-top:.3rem;
+          dt{float:left;color:#B19F9F;}
+          dd{float:left;font-weight:bold;color:#FA3663;padding-left:.2rem;}
+        }
+        a{display:block;height:1.5rem;line-height:1.5rem;text-align:center;font-size:.7rem;background:#FB3662;color:#fff;.border-radius(@radius:.15rem);margin-top:.4rem;}
+      }
+      &:nth-child(even){margin-left:.25rem;}
+    }
+  }
+}
+
+
+
+
+
+
+

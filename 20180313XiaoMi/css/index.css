@@ -1,0 +1,1040 @@
+/*Created by huang.jun on 17-10-24*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .8;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopBox {
+  position: relative;
+  overflow: hidden;
+}
+.TopBox .TrainAm {
+  position: absolute;
+  bottom: -0.65rem;
+  right: 0;
+  width: 76rem;
+  height: 4.975rem;
+  animation: Block2UpDown 3s  forwards alternate;
+}
+.TopBox .TrainAm2 {
+  position: absolute;
+  bottom: -0.65rem;
+  right: 0;
+  width: 76rem;
+  height: 4.975rem;
+  animation: Block2UpDown2 4.5s  forwards alternate;
+}
+.WrapBg {
+  background: #29AE9B;
+  padding: 0 .5rem .5rem .5rem;
+}
+.TopTimeBox {
+  height: 1rem;
+  padding-bottom: .5rem;
+}
+.TopTimeBox .TopTimeL {
+  float: left;
+  font-size: .7rem;
+}
+.TopTimeBox .TopTimeL dt {
+  float: left;
+  color: #fff;
+  padding-right: .325rem;
+}
+.TopTimeBox .TopTimeL dd {
+  float: left;
+  padding-top: 2.5px;
+}
+.TopTimeBox .TopTimeL dd span {
+  margin: 0 2px;
+  float: left;
+  height: .75rem;
+  line-height: .75rem;
+  color: #fff;
+}
+.TopTimeBox .TopTimeL dd span.white {
+  background: #fff;
+  width: .75rem;
+  text-align: center;
+  color: #29AE9B;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  border-radius: 0.1rem;
+}
+.TopTimeBox .TopTimeR {
+  float: right;
+  font-size: .7rem;
+  color: #fff;
+  width: 3.4rem;
+  height: .9rem;
+  line-height: .9rem;
+  border: 1px solid #fff;
+  text-align: center;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.DisplayBox {
+  height: 9.625rem;
+  background: #EFEFEF;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.DisplayBox .DisplayTop {
+  height: 4.1rem;
+  background: #fff;
+  position: relative;
+  -webkit-border-radius: 0.25rem 0.25rem 0 0;
+  -moz-border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
+  -webkit-box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.05);
+}
+.DisplayBox .DisplayTop dl {
+  float: left;
+}
+.DisplayBox .DisplayTop dl dt {
+  font-size: .6rem;
+  line-height: .6rem;
+  color: #9090B7;
+  padding-top: .8rem;
+}
+.DisplayBox .DisplayTop dl dd {
+  height: .9rem;
+  line-height: .9rem;
+  font-size: 0;
+  padding-top: .8rem;
+}
+.DisplayBox .DisplayTop dl dd input {
+  width: 4.25rem;
+  height: .9rem;
+  line-height: .9rem;
+  border: 0;
+  font-size: .9rem;
+  font-family: PingFangSC-Semibold;
+  color: #464687;
+}
+.DisplayBox .DisplayTop dl dd input::-webkit-input-placeholder {
+  font-size: .9rem;
+  line-height: .9rem;
+  font-family: PingFangSC-Semibold;
+  color: #464687;
+}
+.DisplayBox .DisplayTop dl dd input:-moz-placeholder {
+  font-size: .9rem;
+  line-height: .9rem;
+  font-family: PingFangSC-Semibold;
+  color: #464687;
+}
+.DisplayBox .DisplayTop dl dd input::-moz-placeholder {
+  font-size: .9rem;
+  line-height: .9rem;
+  font-family: PingFangSC-Semibold;
+  color: #464687;
+}
+.DisplayBox .DisplayTop dl dd input:-ms-input-placeholder {
+  font-size: .9rem;
+  line-height: .9rem;
+  font-family: PingFangSC-Semibold;
+  color: #464687;
+}
+.DisplayBox .DisplayTop dl.chufa {
+  padding: 0 0 0 .75rem;
+  width: 9.15rem;
+  position: relative;
+}
+.DisplayBox .DisplayTop dl.chufa:after {
+  content: "";
+  position: absolute;
+  width: 1.125rem;
+  height: .4rem;
+  background: url("../img/IconArrow.png") no-repeat;
+  background-size: 100% 100%;
+  right: 2.4rem;
+  top: 2.3rem;
+}
+.DisplayBox .DisplayTop dl.daoda {
+  width: 5rem;
+}
+.DisplayBox .DisplayTop div {
+  float: left;
+  padding-top: 1.2rem;
+}
+.DisplayBox .DisplayTop div span {
+  float: left;
+  font-size: .65rem;
+  line-height: .65rem;
+  color: #ff1647;
+  padding-top: .45rem;
+  font-family: PingFang SC Regular;
+}
+.DisplayBox .DisplayTop div big {
+  float: left;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  color: #ff1647;
+}
+.DisplayBox .DisplayTop div small {
+  float: left;
+  font-size: .6rem;
+  line-height: .6rem;
+  color: #afaee7;
+  padding: .45rem 0 0 .4rem;
+}
+.DisplayBox .DisplayTop:after,
+.DisplayBox .DisplayTop:before {
+  position: absolute;
+  content: "";
+  width: .8rem;
+  height: .8rem;
+  background: #29AE9B;
+  top: 3.725rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+}
+.DisplayBox .DisplayTop:after {
+  left: -0.375rem;
+}
+.DisplayBox .DisplayTop:before {
+  right: -0.375rem;
+}
+.DisplayBox .DisplayTips {
+  font-size: .7rem;
+  line-height: .7rem;
+  padding: .55rem 0 0 .875rem;
+}
+.DisplayBox .DisplayTips span {
+  color: #FF1647;
+}
+.DisplayBox .TargetBox {
+  padding: .975rem 1rem 0 1rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 {
+  background-color: #B3B3B3;
+  background-image: -webkit-linear-gradient(top, #B3B3B3, #D5D5D5);
+  background-image: -moz-linear-gradient(top, #B3B3B3, #D5D5D5);
+  background-image: -o-linear-gradient(top, #B3B3B3, #D5D5D5);
+  background-image: -ms-linear-gradient(top, #B3B3B3, #D5D5D5);
+  background-image: linear-gradient(top, #B3B3B3, #D5D5D5);
+  margin-top: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  padding: .075rem;
+  position: relative;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span {
+  color: #6B6BA3;
+  position: absolute;
+  font-size: .75rem;
+  font-family: PingFang SC Regular;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt1,
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt2,
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt3,
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt4,
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt5,
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt6 {
+  top: -1.4rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt1 {
+  left: 0;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt1:after {
+  content: "";
+  position: absolute;
+  width: .075rem;
+  height: .25rem;
+  background: #B3B3B3;
+  left: .3rem;
+  bottom: -0.47rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt2 {
+  left: 18%;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt2:after {
+  content: "";
+  position: absolute;
+  width: .075rem;
+  height: .25rem;
+  background: #B3B3B3;
+  left: .3rem;
+  bottom: -0.47rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt3 {
+  left: 38%;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt3:after {
+  content: "";
+  position: absolute;
+  width: .075rem;
+  height: .25rem;
+  background: #B3B3B3;
+  left: .3rem;
+  bottom: -0.47rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt4 {
+  left: 58%;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt4:after {
+  content: "";
+  position: absolute;
+  width: .075rem;
+  height: .25rem;
+  background: #B3B3B3;
+  left: .3rem;
+  bottom: -0.47rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt5 {
+  left: 78%;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt5:after {
+  content: "";
+  position: absolute;
+  width: .075rem;
+  height: .25rem;
+  background: #B3B3B3;
+  left: .3rem;
+  bottom: -0.47rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt6 {
+  right: 0;
+  font-size: .65rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetTopTxt6:after {
+  content: "";
+  position: absolute;
+  width: .075rem;
+  height: .25rem;
+  background: #B3B3B3;
+  left: .6rem;
+  bottom: -0.47rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt1,
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt2,
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt3,
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt4,
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt5,
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt6 {
+  bottom: -1.15rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt1 {
+  left: 0;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt2 {
+  left: 18%;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt3 {
+  left: 38%;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt4 {
+  left: 58%;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt5 {
+  left: 78%;
+}
+.DisplayBox .TargetBox .TargetBorBg1 span.TargetBtmTxt6 {
+  width: .925rem;
+  height: .925rem;
+  background: url("../img/Icon.png") no-repeat;
+  background-size: 100% 100%;
+  right: .15rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 .TargetBorBg2 {
+  background-color: #FFFFFF;
+  background-image: -webkit-linear-gradient(top, #FFFFFF, #EDEBEA);
+  background-image: -moz-linear-gradient(top, #FFFFFF, #EDEBEA);
+  background-image: -o-linear-gradient(top, #FFFFFF, #EDEBEA);
+  background-image: -ms-linear-gradient(top, #FFFFFF, #EDEBEA);
+  background-image: linear-gradient(top, #FFFFFF, #EDEBEA);
+  height: .45rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+}
+.DisplayBox .TargetBox .TargetBorBg1 .TargetBorBg2 .TargetBorBg3 {
+  background-color: #FE8E63;
+  background-image: -webkit-linear-gradient(left, #FE8E63, #FF4690);
+  background-image: -moz-linear-gradient(left, #FE8E63, #FF4690);
+  background-image: -o-linear-gradient(left, #FE8E63, #FF4690);
+  background-image: -ms-linear-gradient(left, #FE8E63, #FF4690);
+  background-image: linear-gradient(left, #FE8E63, #FF4690);
+  height: .45rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+}
+.TipsTxt {
+  text-align: right;
+  font-size: .8rem;
+  line-height: .8rem;
+  color: #fff;
+  padding: .5rem 0 1.375rem 0;
+}
+.ShareBtn {
+  font-size: 0;
+}
+.ShareBtn img {
+  width: 100%;
+}
+.ShareBtn:after,
+.ShareBtn:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.ShareBtn .BtnLeft {
+  float: left;
+  width: 61%;
+}
+.ShareBtn .BtnRight {
+  float: right;
+  width: 36%;
+}
+.ShareBtn img {
+  height: 2.375rem;
+}
+.BigBtn {
+  width: 16.3rem;
+  height: 2.425rem;
+  background: url("../img/Button.png") no-repeat;
+  background-size: 100% 100%;
+  display: block;
+  margin: 0 auto;
+}
+.News {
+  padding: 1.15rem .25rem 0 .25rem;
+}
+.News .horn {
+  height: 1.55rem;
+  background: #229986;
+  overflow: hidden;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  position: relative;
+  padding-left: 4.75rem;
+}
+.News .horn span {
+  width: 3rem;
+  height: 1.325rem;
+  background: #38A393;
+  color: #fff;
+  position: absolute;
+  left: .125rem;
+  top: .125rem;
+  font-size: .7rem;
+  text-align: center;
+  line-height: 1.325rem;
+  -webkit-border-radius: 1rem 0 0 1rem;
+  -moz-border-radius: 1rem 0 0 1rem;
+  border-radius: 1rem 0 0 1rem;
+}
+.News .horn ul {
+  line-height: 1.55rem;
+  color: #fff;
+  font-size: .7rem;
+}
+.CityWrap {
+  padding-top: 1.95rem;
+}
+.CityWrap .CityBox {
+  background: #fff;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0 .5rem .5rem .5rem;
+}
+.CityWrap .CityBox .CityTitle {
+  height: 1.85rem;
+  position: relative;
+}
+.CityWrap .CityBox .CityTitle:after {
+  width: 13.625rem;
+  height: 1.8rem;
+  position: absolute;
+  content: "";
+  background: url("../img/TitleBg.png") no-repeat;
+  background-size: 100% 100%;
+  left: 50%;
+  margin-left: -6.8125rem;
+  top: -0.225rem;
+}
+.CityWrap .CityBox .CityList {
+  padding-top: 1rem;
+}
+.CityWrap .CityBox .CityList .CityImg {
+  width: 8.075rem;
+  height: 6.25rem;
+  font-size: 0;
+  float: left;
+  margin-right: .5rem;
+}
+.CityWrap .CityBox .CityList .CityImg img {
+  width: 8.075rem;
+  height: 6.25rem;
+}
+.CityWrap .CityBox .CityList .CityProject h4 {
+  font-family: PingFangSC-Semibold;
+  font-size: .8rem;
+  line-height: .8rem;
+  color: #313086;
+  padding-top: .3rem;
+}
+.CityWrap .CityBox .CityList .CityProject p {
+  color: #313086;
+  font-family: PingFang SC Regular;
+  font-size: .6rem;
+  line-height: .8rem;
+  padding-top: .35rem;
+  height: 3.2rem;
+  overflow: hidden;
+}
+.CityWrap .CityBox .CityList .CityProject div a {
+  width: 6.5rem;
+  height: 1.55rem;
+  line-height: 1.55rem;
+  text-align: center;
+  color: #fff;
+  font-size: .7rem;
+  background: #FF7DB1;
+  display: inline-block;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  border-radius: 2rem;
+}
+.box1 {
+  padding-top: 1.25rem;
+}
+.box1 .jsTab_title {
+  height: 2.275rem;
+}
+.box1 .jsTab_title:after,
+.box1 .jsTab_title:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.box1 .jsTab_title li {
+  float: left;
+  width: 50%;
+  text-align: center;
+  height: 2rem;
+  line-height: 2rem;
+  background: url("../img/TabNav.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: .275rem;
+  color: #fff;
+}
+.box1 .jsTab_title li.on {
+  background: #fff;
+  height: 2.275rem;
+  line-height: 2.275rem;
+  margin-top: 0;
+  -webkit-border-radius: 0.25rem 0.25rem 0 0;
+  -moz-border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
+  color: #464687;
+}
+.box1 .jsTab_con {
+  display: none;
+  background: #fff;
+  -webkit-border-radius: 0 0 0.25rem 0.25rem;
+  -moz-border-radius: 0 0 0.25rem 0.25rem;
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+.box1 .jsTab_con .Ranking {
+  height: 10rem;
+  white-space: nowrap;
+  overflow: scroll;
+  padding-bottom: 1.1rem;
+}
+.box1 .jsTab_con .VoucherBox {
+  padding: 1rem;
+  font-family: PingFang SC Regular;
+}
+.box1 .jsTab_con .VoucherBox a {
+  height: 3.5rem;
+  display: block;
+  margin-top: .75rem;
+}
+.box1 .jsTab_con .VoucherBox a .VoucherLeft {
+  float: left;
+  color: #fff;
+  width: 11.4rem;
+  height: 3.5rem;
+}
+.box1 .jsTab_con .VoucherBox a .VoucherLeft span,
+.box1 .jsTab_con .VoucherBox a .VoucherLeft b,
+.box1 .jsTab_con .VoucherBox a .VoucherLeft small,
+.box1 .jsTab_con .VoucherBox a .VoucherLeft i {
+  float: left;
+}
+.box1 .jsTab_con .VoucherBox a .VoucherLeft span {
+  font-size: 1.35rem;
+  line-height: 1.35rem;
+  padding: 1.5rem 0 0 .75rem;
+}
+.box1 .jsTab_con .VoucherBox a .VoucherLeft b {
+  font-size: 2.45rem;
+  line-height: 2.45rem;
+  padding: .5rem 0 0 .3rem;
+}
+.box1 .jsTab_con .VoucherBox a .VoucherLeft small {
+  font-size: .7rem;
+  line-height: .7rem;
+  padding: 1.95rem 0 0 .3rem;
+  position: relative;
+}
+.box1 .jsTab_con .VoucherBox a .VoucherLeft small i {
+  background: #fff;
+  position: absolute;
+  font-size: .5rem;
+  height: .5rem;
+  line-height: .6rem;
+  padding: .1rem .2rem;
+  font-style: normal;
+  white-space: nowrap;
+  left: .4rem;
+  top: .8rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+}
+.box1 .jsTab_con .VoucherBox a.Voucher1 {
+  background: url("../img/VoucherBg1.png") no-repeat;
+  background-size: 100% 100%;
+}
+.box1 .jsTab_con .VoucherBox a.Voucher1 .VoucherLeft i {
+  color: #a442db;
+}
+.box1 .jsTab_con .VoucherBox a.Voucher2 {
+  background: url("../img/VoucherBg2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.box1 .jsTab_con .VoucherBox a.Voucher2 .VoucherLeft i {
+  color: #ec7a6e;
+}
+.box1 .jsTab_con .VoucherBox a.Voucher3 {
+  background: url("../img/VoucherBg3.png") no-repeat;
+  background-size: 100% 100%;
+}
+.box1 .jsTab_con .VoucherBox a.Voucher3 .VoucherLeft i {
+  color: #ec7a6e;
+}
+.box1 .jsTab_con .VoucherBox a.Voucher4 {
+  background: url("../img/VoucherBg4.png") no-repeat;
+  background-size: 100% 100%;
+}
+.box1 .jsTab_con .VoucherBox a.Voucher4 .VoucherLeft i {
+  color: #ec7a6e;
+}
+.box1 .jsTab_con .VoucherBox a .VoucherRight {
+  float: right;
+  width: 4rem;
+  height: 3.5rem;
+  color: #fff;
+  position: relative;
+}
+.box1 .jsTab_con .VoucherBox a .VoucherRight span {
+  font-size: .7rem;
+  line-height: .95rem;
+  position: absolute;
+  left: .4rem;
+  top: .85rem;
+}
+.box1 .jsTab_con .VoucherBox a .VoucherRight span:after {
+  position: absolute;
+  width: .7rem;
+  height: .7rem;
+  background: url("../img/jt.png") no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  right: -1.2rem;
+  top: .5rem;
+}
+.box1 .jsTab_con .VoucherBox a:nth-of-type(1) {
+  margin-top: 0;
+}
+.RankingList {
+  padding-left: .975rem;
+  height: 1.5rem;
+  overflow: hidden;
+  font-family: PingFang SC Regular;
+  margin-top: .5rem;
+}
+.RankingList:after,
+.RankingList:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.RankingList .UserNumber {
+  float: left;
+  width: 1.975rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #a3a3be;
+  margin-top: .3rem;
+}
+.RankingList .UserImg {
+  float: left;
+  width: 1.35rem;
+  height: 1.35rem;
+  border: .075rem solid #FF6B71;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+}
+.RankingList .UserName {
+  float: left;
+  padding-left: .55rem;
+  width: 7.1rem;
+  font-size: .7rem;
+  line-height: .7rem;
+  color: #fa4471;
+  margin-top: .4rem;
+}
+.RankingList .UserTxt {
+  float: left;
+  color: #464687;
+  font-size: .7rem;
+  line-height: .7rem;
+  margin-top: .4rem;
+}
+.FriendBox {
+  background: #fff;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  margin-top: 1.7rem;
+}
+.FriendBox .FriendTitle {
+  height: 1.575rem;
+  position: relative;
+}
+.FriendBox .FriendTitle:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 13.625rem;
+  margin-left: -6.8125rem;
+  height: 1.875rem;
+  background: url("../img/TitleBg2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.FriendBox .Friend {
+  height: 10rem;
+  white-space: nowrap;
+  overflow: scroll;
+  padding-bottom: 1.1rem;
+}
+.Popup {
+  position: fixed;
+  left: 50%;
+  margin-left: -7.5rem;
+  width: 15rem;
+  top: 30%;
+  z-index: 21;
+  background: #fff;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+  padding-bottom: 1.5rem;
+  font-family: PingFang SC Regular;
+}
+.Popup .PopupTitle {
+  height: 2.45rem;
+  line-height: 2.45rem;
+  background-color: #FA7C71;
+  background-image: -webkit-linear-gradient(left, #FA7C71, #F02C6E);
+  background-image: -moz-linear-gradient(left, #FA7C71, #F02C6E);
+  background-image: -o-linear-gradient(left, #FA7C71, #F02C6E);
+  background-image: -ms-linear-gradient(left, #FA7C71, #F02C6E);
+  background-image: linear-gradient(left, #FA7C71, #F02C6E);
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  font-family: PingFang SC Semibold;
+  -webkit-border-radius: 0.2rem 0.2rem 0px 0px;
+  -moz-border-radius: 0.2rem 0.2rem 0px 0px;
+  border-radius: 0.2rem 0.2rem 0px 0px;
+}
+.Popup .PopupTxt {
+  font-size: .75rem;
+  color: #464687;
+  text-align: center;
+  line-height: 1.2rem;
+  padding-top: 1.65rem;
+}
+.Popup .PopupBtn {
+  text-align: center;
+  padding-top: 1rem;
+}
+.Popup .PopupBtn a {
+  width: 10rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  background-color: #FA7173;
+  background-image: -webkit-linear-gradient(left, #FA7173, #F53F8E);
+  background-image: -moz-linear-gradient(left, #FA7173, #F53F8E);
+  background-image: -o-linear-gradient(left, #FA7173, #F53F8E);
+  background-image: -ms-linear-gradient(left, #FA7173, #F53F8E);
+  background-image: linear-gradient(left, #FA7173, #F53F8E);
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+}
+.Popup .CloseBtn {
+  position: absolute;
+  width: 2.45rem;
+  height: 4.225rem;
+  background: url("../img/Close.png") no-repeat;
+  background-size: 100% 100%;
+  left: 50%;
+  margin-left: -1.225rem;
+  bottom: -4.225rem;
+}
+.Popup .CouponBox {
+  padding-top: .8rem;
+}
+.Popup .CouponBox h4 {
+  font-size: .6rem;
+  color: #464687;
+  line-height: .6rem;
+  text-align: center;
+  font-weight: normal;
+}
+.Popup .CouponBox .CouponWrap {
+  text-align: center;
+  padding-top: .45rem;
+}
+.Popup .CouponBox .CouponWrap:after,
+.Popup .CouponBox .CouponWrap:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Popup .CouponBox .CouponWrap .Coupon1 {
+  width: 6rem;
+  height: 2.55rem;
+  background: url("../img/CouponBg.png") no-repeat;
+  background-size: 100% 100%;
+  display: inline-block;
+  color: #DF2873;
+}
+.Popup .CouponBox .CouponWrap .Coupon1 span,
+.Popup .CouponBox .CouponWrap .Coupon1 b,
+.Popup .CouponBox .CouponWrap .Coupon1 small {
+  float: left;
+}
+.Popup .CouponBox .CouponWrap .Coupon1 span {
+  font-size: .95rem;
+  line-height: .95rem;
+  padding: 1.15rem 0 0 .5rem;
+}
+.Popup .CouponBox .CouponWrap .Coupon1 b {
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  padding: .5rem 0 0 .1rem;
+}
+.Popup .CouponBox .CouponWrap .Coupon1 small {
+  font-size: .65rem;
+  line-height: .65rem;
+  position: relative;
+  padding: 1.4rem 0 0 .1rem;
+}
+.Popup .CouponBox .CouponWrap .Coupon1 small i {
+  position: absolute;
+  font-style: normal;
+  white-space: nowrap;
+  left: .2rem;
+  top: .6rem;
+  font-size: .5rem;
+  height: .6rem;
+  line-height: .7rem;
+  color: #fff;
+  background: #DF2873;
+  padding: 0 .2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  border-radius: 2rem;
+}
+.Popup .CouponBox .CouponWrap .Coupon2 {
+  display: inline-block;
+  width: 7.5rem;
+  height: 2.55rem;
+  background: url("../img/CouponBg2.png") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  color: #df2873;
+}
+.Popup .CouponBox .CouponWrap .Coupon2 span,
+.Popup .CouponBox .CouponWrap .Coupon2 b,
+.Popup .CouponBox .CouponWrap .Coupon2 small {
+  float: left;
+}
+.Popup .CouponBox .CouponWrap .Coupon2 span {
+  font-size: .95rem;
+  line-height: .95rem;
+  padding: 1.1rem 0 0 .85rem;
+}
+.Popup .CouponBox .CouponWrap .Coupon2 b {
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  padding: .4rem 0 0 0;
+}
+.Popup .CouponBox .CouponWrap .Coupon2 small {
+  font-size: .65rem;
+  line-height: .65rem;
+  position: relative;
+  padding: 1.3rem 0 0 .1rem;
+}
+.Popup .CouponBox .CouponWrap .Coupon2 small i {
+  position: absolute;
+  font-style: normal;
+  white-space: nowrap;
+  left: .2rem;
+  top: .6rem;
+  font-size: .5rem;
+  height: .6rem;
+  line-height: .7rem;
+  color: #fff;
+  background: #DF2873;
+  padding: 0 .2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  border-radius: 2rem;
+}
+.Popup .CouponBox .CouponWrap .CouponBtmTxt {
+  font-size: .7rem;
+  line-height: .7rem;
+  color: #ACACC9;
+  padding-top: .7rem;
+}
+.ActivityRules {
+  background: #fff;
+  padding: 0 .75rem;
+  color: #333;
+}
+.ActivityRules h4 {
+  font-family: PingFang SC Medium;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  text-align: center;
+  padding-top: 1.55rem;
+}
+.ActivityRules .TitleImg {
+  font-size: 0;
+  padding-top: .75rem;
+}
+.ActivityRules .TitleImg img {
+  width: 100%;
+}
+.ActivityRules .hdTime {
+  font-size: .7rem;
+  line-height: .7rem;
+  padding: 1.05rem 0 0 .6rem;
+}
+.ActivityRules .ArList {
+  padding: 0 0 0 .6rem;
+}
+.ActivityRules .ArList dt {
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  font-family: PingFang SC Medium;
+  padding-top: 1.15rem;
+}
+.ActivityRules .ArList dd p {
+  font-size: .7rem;
+  line-height: .95rem;
+  margin-top: .4rem;
+  position: relative;
+}
+.ActivityRules .ArList dd p span {
+  color: #ee1035;
+}
+.ActivityRules .ArList dd p i {
+  width: .425rem;
+  height: .425rem;
+  position: absolute;
+  top: .25rem;
+  left: -0.5rem;
+  background: url("../img/TxtIcon.png") no-repeat;
+  background-size: 100% 100%;
+}
+@keyframes Block2UpDown {
+  from {
+    transform: translateX(-10rem);
+  }
+  to {
+    transform: translateX(104rem);
+  }
+}
+@keyframes Block2UpDown2 {
+  from {
+    transform: translateX(-184rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+@-webkit-keyframes Block2UpDown {
+  from {
+    transform: translateX(-10rem);
+  }
+  to {
+    transform: translateX(104rem);
+  }
+}
+@-webkit-keyframes Block2UpDown2 {
+  from {
+    transform: translateX(-184rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}

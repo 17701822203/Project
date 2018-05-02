@@ -1,0 +1,59 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+	<title></title>
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<script>
+    $(document).ready(function(){
+        $(".AmBtn").click(function(){
+            setTimeout(function () {
+                $(".topAm").addClass("BusAnimation");
+                $('.AmBtn').contents().unwrap().wrap('<span class="button"/>');
+                return false;
+            },0);
+            setTimeout(function () {
+                $(".topAm").removeClass("BusAnimation");
+                $(".gls").animate({opacity:"1"}, 400);
+                return false;
+            },3000);
+            setTimeout(function () {
+                $(".gls").animate({opacity:"0",top:"-4rem"}, 1000);
+                return false;
+            },3200);
+        })
+    })
+</script>
+    <article>
+        <div class="topAm">
+            <h1 class="logo"></h1>
+            <div class="TopRight">
+                <img class="headImg" src="img/headImg.png">
+                <div class="UserName">KEVIN</div>
+                <div class="ProgressBox"><div class="ProgressBar"><i style="width:30%;"><!--进度条--></i></div></div>
+                <div class="GongLi">600/800&nbsp;KM</div>
+            </div>
+            <i class="busIcon">
+                <span class="gls">600KM</span>
+                <i class="wq1"></i>
+                <i class="wq2"></i>
+                <i class="wq3"></i>
+            </i>
+        </div>
+        <div class="btmBtn">
+            <p class="clstxt1" style="display:none">您的好友在携程成功购买了<span>长沙南</span>到<span>上海</span>的汽车票，全程约<span> S km</span>，点击下方立即送ta一程，集满里程数ta将有更高概率赢取车票全免资格！ta会很感激你的喲~~~</p>
+            <p class="clstxt2" style="display:none">感谢你为TA贡献<span>600km</span><br/>Ta的里程已满，坐等高概率开奖啦~</p>
+            <p class="clstxt3">感谢你为TA贡献<span>600km</span><br/>Ta离免单更进一步啦~</p>
+            <a class="button AmBtn" href="#">点击送Ta一程</a>
+            <dl class="btmTxt">
+                <dt>没用过携程买汽车票？</dt>
+                <dd><a href="###">我要领取新客优惠券，首单立减n元</a></dd>
+            </dl>
+        </div>
+    </article>
+</body>
+</html>

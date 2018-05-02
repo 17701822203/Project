@@ -1,0 +1,35 @@
+/*Created by huang.jun on 16-09-06*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Microsoft YaHei";background:#fff;}
+
+/****************弹层*******************/
+.shadow{width:100%;height:100%;position:fixed;z-index:1;background:#000;opacity:0.5;top:0;left:0;}
+.hongbaoBox{width:15.625rem;height:22.025rem;background:url("../img/bg.png") no-repeat;background-size:15.625rem 22.025rem;position: fixed;z-index:2;left:50%;margin-left:-7.8125rem;top:50%;margin-top:-11.0125rem;}
+.hongbaoBox h3{font-size:0.7rem; text-align: center;font-weight: normal;color:#ffffcc;padding-top:2.2rem;}
+.hongbaoBox h4{font-size:0.55rem;color:#ff9999;font-weight: normal;text-align:center;padding-top:11.6rem;}
+.hongbaoBox .img1{width:10.75rem;height:9.825rem;position: absolute;left:50%;margin-left:-5.375rem;top:6rem;}
+.hongbaoBox button{width:12rem;height:2.75rem;background:url("../img/btn.png") no-repeat;background-size:12rem 2.75rem;border:0;left:50%;margin-left:-6rem;position: absolute;top:16.5rem;}
+.hongbaoBox .img2{width:6.175rem;height:2.1rem;position: absolute;left:50%;margin-left:-3.0875rem;top:19.6rem;}
+.close{width:2.075rem;height:2.075rem;background:url("../img/close.png") no-repeat;background-size:2.075rem 2.075rem;position: absolute;right:0;top:0;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

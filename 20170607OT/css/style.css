@@ -1,0 +1,32 @@
+/*Created by huang.jun on 17-06-07*/
+*{margin:0;padding:0;border:0;}
+ol,ul,li{list-style:none;}
+a{ text-decoration:none;}
+body{font-family:PingFang SC Regular, sans-serif;color:#333;}
+
+.top-box{height:692px;background:url("../img/top-bg.jpg") no-repeat center top;}
+.txtlist{height:696px;background:url("../img/txtlist.png") no-repeat center top;margin-top:76px;}
+.hot-recommendation{width:945px;margin:0 auto;}
+.hot-recommendation dt{font-size:48px;line-height:48px;font-weight: bold;text-align:center;margin-top:130px;padding-bottom:20px;color:#000;}
+.hot-recommendation dd{border-bottom:1px solid #ccc;padding-left:44px;height:113px;line-height:113px;position:relative;}
+.hot-recommendation dd span{float:left;width:370px;font-size:30px;}
+.hot-recommendation dd span.hot{position:relative;}
+.hot-recommendation dd span.hot:after{position:absolute;content:"";width:42px;height:27px;background:url("../img/hot.png") no-repeat;top:18px;}
+.hot-recommendation dd strong{font-size:30px;float:left;width:200px;font-weight:normal;}
+.hot-recommendation dd a{position:absolute;width:183px;height:52px;line-height:52px;text-align:center;border:1px solid #FF7200;top:30px;right:35px;font-size:30px;color:#FF7200;-moz-border-radius:25px;-webkit-border-radius:25px;border-radius:25px;}
+.hot-recommendation dd a:hover{color:#fff;background:#FF7200;}
+.title-txt{text-align:center;margin-top:120px;}
+.title-txt dt{font-size:48px;font-weight:bold;line-height:48px;color:#000;margin-bottom:15px;}
+.title-txt dd p{line-height:22px;font-size:22px;padding-top:25px;}
+.btm-bg{min-height:896px;background:url("../img/btm-bg.jpg") no-repeat center bottom;padding-bottom:366px;}
+.product-list{width:1175px;margin:40px auto 0 auto;}
+.product-list:after,.product-list:before{content:" ";display:table;clear:both;}
+.product-box{float:left;margin-top:35px;}
+.product-img{font-size:0;width:560px;height:455px;overflow:hidden;}
+.product-img img{width:100%;transition:transform 0.3s ease 0s;}
+.product-img a{position:relative;}
+.product-img a:hover:after{position:absolute;content:"";width:560px;height:455px;background:rgba(0,0,0,0.2);left:0;top:-455px;}
+.product-img a:hover img{-webkit-transform:scale(1.2);transform:scale(1.2);}
+.product-btm dt{color:#ff7200;font-size:36px;line-height:36px;margin-top:22px;}
+.product-btm dt small{font-size:20px;}
+.product-btm dd{font-size:30px;}

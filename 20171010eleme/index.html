@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+<article>
+    <div class="img-box"><img src="img/TopImg.jpg"></div>
+    <div class="WrapBox">
+        <!--已领取开始-->
+        <div class="CouponBox" style="display:;">
+            <!--饿了么券-->
+            <div class="Coupon">
+                <div class="CouponBor">
+                    <!--金额-->
+                    <div class="CouponPrice">
+                        <b>&yen;</b>
+                        <strong>5</strong>
+                    </div>
+                    <dl class="CouponYxq">
+                        <dt>饿了么红包</dt>
+                        <dd>满30可用</dd>
+                        <dd>领取后7天内有效</dd>
+                    </dl>
+                    <a class="CouponBtn" href="###">立即使用</a>
+                </div>
+            </div>
+            <!--饿了么券-->
+            <div class="Coupon">
+                <div class="CouponBor">
+                    <!--金额-->
+                    <div class="CouponPrice">
+                        <b>&yen;</b>
+                        <strong>5</strong>
+                    </div>
+                    <dl class="CouponYxq">
+                        <dt>饿了么红包</dt>
+                        <dd>满30可用</dd>
+                        <dd>领取后7天内有效</dd>
+                    </dl>
+                    <a class="CouponBtn" href="###">立即使用</a>
+                </div>
+            </div>
+            <!--账户-->
+            <dl class="CouponUser">
+                <dt>红包已放至账户<span>13485236985</span></dt>
+                <dd>请用该手机号登陆或注册饿了么使用</dd>
+            </dl>
+        </div>
+        <!--领完-->
+        <div class="LogoBg" style="display:none;">
+            <div class="EmptyBox">今日优惠券已发放完毕</div>
+        </div>
+        <!--报错-->
+        <div class="LogoBg" style="display:none;">
+            <dl class="ErrorBox">
+                <dt>服务器出小差了</dt>
+                <dd>您的红包尚未发放，请刷新页面</dd>
+                <dd><a href="###">立即刷新</a></dd>
+            </dl>
+        </div>
+        <!--按钮-->
+        <div class="LogoBg" style="display:none;">
+            <ul class="BtnBox">
+                <li><a href="###">买火车票</a></li>
+                <li><a href="###">购票成功领红包</a></li>
+            </ul>
+        </div>
+        <!--活动规则-->
+        <div class="RuleBox">
+            <h4>活动规则：</h4>
+            <p>1、活动时间为2017年10月16日-10月22日。</p>
+            <p>2、每位携程用户每天最多领取3个饿了么红包，红包仅限在线支付时使用，每张订单仅限使用一张红包，红包不找零。</p>
+            <p>3、饿了么红包将自动发放到您在携程下定成功火车票订单时所使用的手机号。</p>
+            <p>4、红包发放手机号须在饿了么注册或绑定饿了么账户后，并登陆饿了么方可使用</p>
+            <p>5、每日饿了么红包发放数量有限，按火车票订单下单成功时间顺序发放。</p>
+            <p>6、本活动最终解释权在法律允许范围内归饿了么和携程所有。</p>
+        </div>
+    </div>
+</article>
+</body>
+</html>
+

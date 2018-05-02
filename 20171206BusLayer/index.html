@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#ccc;">
+    <div class="Layer1">
+        <div class="LayerTitle"><img src="img/TopTitle.png"></div>
+        <div class="LayerWrap">
+            <h4>已有2人使用了你分享的汽车票优惠券</h4>
+            <h5>你已获得<b>10</b>元现金</h5>
+            <div class="BtnBox"><span>查看返现进度</span></div>
+            <div class="BtmTxt"><img src="img/LayerBtmTxt.png"></div>
+        </div>
+        <i class="CloseBtn"></i>
+    </div>
+    <div class="Layer2">
+        <div class="LayerTitle"><img src="img/TopTitle2.png"><div class="TopTxt">好友领3元红包</div></div>
+        <div class="LayerWrap">
+            <div class="CouponBg">
+                <dl>
+                    <dt>
+                        <b>&yen;</b>
+                        <strong>3</strong>
+                        <span>好友专享</span>
+                    </dt>
+                    <dd>
+                        <h4>汽车票红包</h4>
+                        <p>7天内有效</p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="BtnBox"><span>邀请好友</span></div>
+            <dl class="fxgz">
+                <dt><span>返现规则</span></dt>
+                <dd>
+                    <p>你的好友领券后在携程预订汽车票，每个新客订单奖励你<b>5</b>元现金 ，累计计算，上不封顶</p>
+                    <p><strong>可从“携程APP-我的-我的钱包-返现“中提现</strong></p>
+                </dd>
+            </dl>
+            <div class="BtmTxt"><img src="img/LayerBtmTxt.png"></div>
+        </div>
+        <i class="CloseBtn"></i>
+    </div>
+    <div class="Layer3">
+        <div class="LayerTitle">
+            <dl>
+                <dt>好友领3元红包</dt>
+                <dd><img src="img/TopTitle3.png"></dd>
+            </dl>
+        </div>
+        <div class="LayerWrap">
+            <div class="CouponBg">
+                <dl>
+                    <dt>
+                        <b>&yen;</b>
+                        <strong>3</strong>
+                        <span>好友专享</span>
+                    </dt>
+                    <dd>
+                        <h4>汽车票红包</h4>
+                        <p>7天内有效</p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="LayerBtnBox">
+                <span class="Btn-left">邀请好友</span>
+                <span class="Btn-Right">查看奖励</span>
+            </div>
+            <dl class="fxgz">
+                <dt><span>返现规则</span></dt>
+                <dd>
+                    <p>1. 好友领取了你分享出去的汽车票新客券并且使用，每单你将获得5元现金 ，累计计算，上部封顶</p>
+                    <p>2. 好友仅限携程汽车票无线新客领取和使用</p>
+                    <p>3. 好友使用该优惠券预订并成功出行后，你即可获得返现，若产生退票或取消订单，则活动自动作废</p>
+                    <p>4. 返现金额将于好友出行后的1-7个工作日内，打入到“我的钱包”中，可提现；返现进度可在订单详情页查看</p>
+                    <p>5. 该活动最终解释权归携程所有，如发现恶意刷券等行为，一律取消活动资格</p>
+                </dd>
+            </dl>
+            <div class="BtmTxt"><img src="img/LayerBtmTxt.png"></div>
+        </div>
+        <i class="CloseBtn"></i>
+    </div>
+</body>
+</html>

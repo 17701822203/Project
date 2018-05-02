@@ -1,0 +1,380 @@
+/*Created by huang.jun on 18-2-1*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+button:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  color: #333;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+/**********************index************************/
+.TopNav {
+  height: 2rem;
+  z-index: 100;
+  position: absolute;
+  width: 100%;
+}
+.TopNav .Logo {
+  width: 4.575rem;
+  height: .775rem;
+  background: url("../img/Logo.png") no-repeat;
+  background-size: 100% 100%;
+  float: left;
+  margin: .625rem 0 0 .925rem;
+}
+.TopNav .Menu {
+  width: .85rem;
+  height: .7rem;
+  background: url("../img/Nav.png") no-repeat;
+  background-size: 100% 100%;
+  float: right;
+  margin: .675rem .85rem 0 0;
+}
+.TopNav .Menu:active {
+  opacity: .7;
+}
+.TopBanner {
+  font-size: 0;
+  position: relative;
+}
+.TopBanner img {
+  width: 100%;
+}
+.TopBanner .ButtonBtn {
+  opacity: 0;
+  position: absolute;
+  left: 32%;
+  top: 42%;
+  width: 39%;
+  height: 9.3%;
+}
+.TopBanner .ButtonBtn img {
+  height: 100%;
+}
+.FeaturesTitle {
+  font-size: 0;
+  text-align: center;
+}
+.FeaturesTitle img {
+  width: 100%;
+}
+.FeaturesTitle img {
+  width: 2.875rem;
+  margin-top: .75rem;
+}
+.FeaturesList {
+  padding-bottom: 4rem;
+}
+.FeaturesList:after,
+.FeaturesList:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.FeaturesList li {
+  float: left;
+  text-align: center;
+  margin-top: 1.7rem;
+  width: 50%;
+}
+.FeaturesList li strong,
+.FeaturesList li span,
+.FeaturesList li i {
+  display: block;
+}
+.FeaturesList li i {
+  margin: 0 auto;
+  height: 2rem;
+}
+.FeaturesList li strong {
+  font-size: .7rem;
+  line-height: .7rem;
+  font-family: PingFang-SC-Heavy, "Tahoma", sans-serif;
+  font-weight: normal;
+}
+.FeaturesList li span {
+  font-family: PingFang, "Tahoma", sans-serif;
+  font-size: .6rem;
+  line-height: .6rem;
+  margin-top: .2rem;
+  color: #666;
+}
+.FeaturesList li.Icon1 i {
+  width: 1.7rem;
+  background: url("../img/Icon1.png") no-repeat;
+  background-size: 1.7rem 1.275rem;
+}
+.FeaturesList li.Icon2 i {
+  width: 1.8rem;
+  background: url("../img/Icon2.png") no-repeat;
+  background-size: 1.8rem 1.35rem;
+}
+.FeaturesList li.Icon3 i {
+  width: 1.45rem;
+  background: url("../img/Icon4.png") no-repeat;
+  background-size: 1.45rem 1.45rem;
+}
+.FeaturesList li.Icon4 i {
+  width: 1.3rem;
+  background: url("../img/Icon3.png") no-repeat;
+  background-size: 1.3rem 1.35rem;
+}
+.FeaturesList li.Icon5 i {
+  width: 1.475rem;
+  background: url("../img/Icon5.png") no-repeat;
+  background-size: 1.475rem 1.125rem;
+}
+.FeaturesList li.Icon6 i {
+  width: 1.65rem;
+  background: url("../img/Icon6.png") no-repeat;
+  background-size: 1.65rem 1.2rem;
+}
+.BottomBg {
+  height: 2rem;
+  background: #494D56;
+  font-size: 0;
+}
+.BottomBg img {
+  width: 100%;
+}
+.BottomBg .sLogo1 {
+  float: left;
+  width: 1rem;
+  margin: .5rem 0 0 .85rem;
+}
+.BottomBg .sLogo2 {
+  float: left;
+  width: 1rem;
+  margin: .5rem 0 0 .5rem;
+}
+.BottomBg .sLogo3 {
+  float: right;
+  width: 1.875rem;
+  margin: .6rem 1.35rem 0 0;
+}
+.BottomBg .sLogo4 {
+  float: right;
+  width: 2.675rem;
+  margin: .5rem 1rem 0 0;
+}
+.BottomBg .sLogo5 {
+  float: right;
+  width: 2.25rem;
+  margin: .725rem .9rem 0 0;
+}
+.MenuList {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 2rem;
+  z-index: 20;
+  background: #3A91FF;
+  font-family: HelveticaNeue, "Tahoma";
+  font-size: .7rem;
+  display: none;
+}
+.MenuList li {
+  height: 2.5rem;
+  line-height: 2.5rem;
+}
+.MenuList li a {
+  display: block;
+  padding-left: 1.1rem;
+  line-height: 2.5rem;
+  color: #fff;
+}
+.MenuList li.on {
+  background: #fff;
+}
+.MenuList li.on a {
+  color: #3C8FFF;
+}
+/**************************aboutus***************************/
+.TopBanner2 {
+  font-size: 0;
+  background: #3E97FF;
+}
+.TopBanner2 img {
+  width: 100%;
+}
+.TopBanner2 dl {
+  margin-top: 1rem;
+}
+.TopBanner2 dl dt {
+  height: .95rem;
+  background: url("../img/TxtTitle.png") no-repeat center bottom;
+  background-size: 10.5rem .95rem;
+}
+.TopBanner2 dl dd {
+  color: #fff;
+  font-size: .6rem;
+  line-height: .85rem;
+  padding: 1rem;
+  font-family: HelveticaNeue-Light, "Tahoma";
+}
+.ArticleBox {
+  padding: 0 1rem 0 1rem;
+  font-size: 0;
+}
+.ArticleBox img {
+  width: 100%;
+}
+.ArticleBox dt {
+  height: 1.4rem;
+  margin-top: 1.5rem;
+}
+.ArticleBox dt.t1 {
+  background: url("../img/Title1.png") no-repeat center bottom;
+  background-size: 7.55rem 1.4rem;
+}
+.ArticleBox dt.t2 {
+  background: url("../img/Title2.png") no-repeat center bottom;
+  background-size: 6.325rem 1.4rem;
+}
+.ArticleBox dt.t3 {
+  background: url("../img/Title3.png") no-repeat center bottom;
+  background-size: 4.075rem 1.4rem;
+}
+.ArticleBox dd {
+  font-size: .65rem;
+  color: #666;
+  margin-top: .7rem;
+  text-align: center;
+}
+.ArticleBox dd p {
+  line-height: .95rem;
+  margin-bottom: 2.1rem;
+  text-align: left;
+  font-family: HelveticaNeue-Light, "Tahoma";
+}
+.ArticleBox dd:nth-of-type(1) img {
+  width: 9.775rem;
+}
+.ArticleBox dd:nth-of-type(2) img {
+  width: 11.6rem;
+}
+/***********************help************************************/
+.TopBor {
+  height: 2rem;
+  background: #3E97FF;
+}
+.QuestionsTop {
+  margin-top: .625rem;
+  background: #fff;
+  padding: 1rem;
+}
+.QuestionsTop h3 {
+  height: 1.45rem;
+  background: url("../img/TopTitle.png") no-repeat left bottom;
+  background-size: 9.05rem 1.45rem;
+}
+.QuestionsTop p {
+  font-size: .7rem;
+  line-height: .95rem;
+  color: #4e87fb;
+  font-family: HelveticaNeue, "Tahoma";
+  margin-top: .8rem;
+}
+.QuestionsTop p:nth-of-type(1) {
+  margin-top: .75rem;
+}
+.QuestionsBtm {
+  margin-top: .5rem;
+  background: #fff;
+}
+.QuestionsBtm dl {
+  border-top: 1px solid #EAEAEA;
+  padding: 1.25rem 1.05rem;
+}
+.QuestionsBtm dl dt {
+  font-size: .75rem;
+  line-height: 1rem;
+  color: #4e87fb;
+  font-family: HelveticaNeue-Bold, "Tahoma";
+}
+.QuestionsBtm dl dd {
+  font-size: .65rem;
+  line-height: .95rem;
+  font-family: HelveticaNeue-Light, "Tahoma";
+}
+.QuestionsBtm dl dd p {
+  margin-top: 1rem;
+}
+.QuestionsBtm dl dd p span {
+  color: #4e87fb;
+  padding-right: .3rem;
+}
+.QuestionsBtm dl:nth-of-type(1) {
+  border: 0;
+}
+.SubmitBox {
+  padding: 1.1rem;
+  background: #fff;
+  margin-top: .5rem;
+}
+.SubmitBox h3 {
+  height: 1.45rem;
+  background: url("../img/TopTitle2.png") no-repeat;
+  background-size: 3.725rem 1.45rem;
+}
+.SubmitBox .SubmitList dt {
+  font-family: HelveticaNeue, "Tahoma";
+  font-size: .65rem;
+  line-height: .65rem;
+  margin-top: .8rem;
+}
+.SubmitBox .SubmitList dd {
+  margin-top: .85rem;
+  font-size: 0;
+}
+.SubmitBox .SubmitList dd img {
+  width: 100%;
+}
+input[type="text"] {
+  -webkit-appearance: none;
+}
+textarea {
+  -webkit-appearance: none;
+}

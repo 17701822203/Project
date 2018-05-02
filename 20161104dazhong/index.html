@@ -1,0 +1,127 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+                        // doc.body.style.fontSize = '1rem';
+                    };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+        if(navigator.userAgent.toLowerCase().indexOf("micromessenger") > 0){
+            var si = setInterval(function () {
+                if (typeof(window.Mkt) != "undefined" && typeof(window.Mkt.Weixin) != "undefined") {
+                    if (typeof(window.Mkt.Weixin.wxIsInstall) != "undefined") {
+                        window.Mkt.Weixin.wxIsInstall(function (data) {
+                            if (data) {
+                                isAppInstalled = true;
+                            } else {
+                                isAppInstalled = false;
+                            }
+                            clearInterval(si);
+                        });
+                    }
+                }
+            }, 200);
+        }
+        var isAppInstalled = undefined;
+
+        $(document).ready(function(){
+            $(".btn2").click(function(){
+                $("section").show();
+            })
+            $("#fh").click(function(){
+                $("section").hide();
+            })
+        })
+    </script>
+</head>
+<body>
+<section style="display:none;">
+    <div class="shadow"></div>
+    <div class="lay-box">
+        <ul class="lay-top-box" style="padding-top:2.75rem;">
+            <li><strong>真实姓名：</strong><input class="input300" type="text" value="请填写姓名"><label class="radio"><i></i><span>男</span></label><label class="radio"><i class="on"></i><span>女</span></label></li>
+            <li style="padding-top:0.65rem;"><strong>手机号码：</strong><input class="input450" type="text" value="请填写移动电话"></li>
+        </ul>
+        <ul class="lay-top-box" style="border-top:1px solid #3C3C3C;padding-top:0.4rem;margin-top:0.7rem;">
+            <li><strong>是否接受经销商回访</strong><label class="radio"><i class="on"></i><span>是</span></label><label class="radio"><i></i><span>否</span></label></li>
+        </ul>
+        <ul class="lay-top-box">
+            <li>
+                <strong style="margin-top:0.7rem;">意向经销商：</strong>
+                <div class="lay-right-box">
+                    <cite>
+                        <select class="sel-type">
+                            <option>经销商省</option>
+                        </select>
+                    </cite>
+                    <cite>
+                        <select class="sel-type">
+                            <option>经销商市</option>
+                        </select>
+                    </cite>
+                    <cite>
+                        <select class="sel-type">
+                            <option>经销商</option>
+                        </select>
+                    </cite>
+                </div>
+            </li>
+        </ul>
+        <dl class="tips">
+            <dt>温馨提示：</dt>
+            <dd>只需提交您的试乘试驾申请，我们会把您的申请转达至您所在地区的经销商处，您将获得难忘的试乘试驾体验！</dd>
+        </dl>
+        <ul class="btn-box">
+            <li><a href="###">确认提交</a></li>
+            <li><a id="fh" href="###">返回</a></li>
+        </ul>
+    </div>
+</section>
+<button class="btn3"></button>
+    <div class="swipe-wrap" id="slip">
+        <article class="swipe">
+            <div class="swipe-box bg1">
+                <button class="btn1"></button>
+                <button class="btn2"></button>
+            </div>
+            <div class="swipe-box bg2">
+
+            </div>
+            <div class="swipe-box bg3">
+
+            </div>
+            <div class="swipe-box bg4">
+
+            </div>
+            <div class="swipe-box bg5">
+
+            </div>
+            <div class="swipe-box bg6">
+
+            </div>
+            <div class="swipe-box bg7">
+
+            </div>
+        </article>
+    </div>
+    <script type="text/javascript" src="js/slip.min.js"></script>
+    <script type="text/javascript">
+        var container = document.getElementById('slip');
+        var pages = document.querySelectorAll('.swipe-box');
+        var slip = Slip(container, 'y').webapp(pages);
+    </script>
+</body>
+</html>

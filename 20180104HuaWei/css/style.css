@@ -1,0 +1,393 @@
+/*Created by huang.jun on 17-12-05*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+button:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopImg {
+  font-size: 0;
+}
+.TopImg img {
+  width: 100%;
+}
+.TopBg {
+  background-color: #C6252B;
+  background-image: -webkit-linear-gradient(top, #C6252B, #B5232D);
+  background-image: -moz-linear-gradient(top, #C6252B, #B5232D);
+  background-image: -o-linear-gradient(top, #C6252B, #B5232D);
+  background-image: -ms-linear-gradient(top, #C6252B, #B5232D);
+  background-image: linear-gradient(top, #C6252B, #B5232D);
+  padding: 0 .75rem;
+  position: relative;
+}
+.TopBg .VerificationBox {
+  background: #FFE3C1;
+  -webkit-border-radius: 0.25rem 0.25rem 0 0;
+  -moz-border-radius: 0.25rem 0.25rem 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
+  position: relative;
+}
+.TopBg .VerificationBox .InputList {
+  padding: .6rem 1.15rem 1.6rem 1.15rem;
+}
+.TopBg .VerificationBox .InputList li {
+  margin-top: .8rem;
+}
+.TopBg .VerificationBox .InputList li.Mob input {
+  width: 100%;
+  border: 0;
+  height: 2.25rem;
+  padding-left: .6rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  font-size: .8rem;
+  color: #a26f6f;
+  background: #fff;
+}
+.TopBg .VerificationBox .InputList li.Verification:after,
+.TopBg .VerificationBox .InputList li.Verification:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopBg .VerificationBox .InputList li.Verification input {
+  height: 2.2rem;
+  background: #fff;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  border: 0;
+  text-align: center;
+  font-size: .8rem;
+  color: #a26f6f;
+  width: 50%;
+  float: left;
+}
+.TopBg .VerificationBox .InputList li.Verification button {
+  float: right;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  height: 2.2rem;
+  border: 0;
+  background: #F8AF96;
+  color: #ac3638;
+  width: 40%;
+  font-size: .8rem;
+}
+.TopBg .VerificationBox .InputList li.ReceiveBtn button {
+  width: 100%;
+  border: 0;
+  height: 2.5rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: #F26936;
+  background-image: -webkit-linear-gradient(left, #F26936, #DD352F);
+  background-image: -moz-linear-gradient(left, #F26936, #DD352F);
+  background-image: -o-linear-gradient(left, #F26936, #DD352F);
+  background-image: -ms-linear-gradient(left, #F26936, #DD352F);
+  background-image: linear-gradient(left, #F26936, #DD352F);
+  font-family: "PingFangSC-Medium";
+  font-size: .85rem;
+  color: #fce4c5;
+  -webkit-box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+.TopBg .VerificationBox:after {
+  height: 1.25rem;
+  background: url("../img/BtmBg.png") no-repeat;
+  background-size: 100% 100%;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1.25rem;
+  width: 100%;
+}
+#verification-code {
+  width: 100% !important;
+  border-radius: 4px;
+  background: #c6c4b4 !important;
+  overflow: hidden;
+  height: 2.15rem !important;
+}
+#verification-code .cpt-info-board {
+  color: #fff!important;
+  background: none !important;
+  -webkit-text-fill-color: #fff !important;
+  font-size: 14px;
+  height: 2.15rem !important;
+}
+#verification-code .cpt-drop-btn {
+  border: 0 !important;
+  border-radius: 4px;
+  width: 40px !important;
+  height: 2.15rem !important;
+  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.18);
+}
+#verification-code .cpt-drop-btn .cpt-logo {
+  background: none;
+}
+#verification-code .cpt-drop-bg {
+  border-radius: 4px;
+  background: #e14340 !important;
+  height: 2.15rem !important;
+}
+#verification-code .ctp-logo {
+  background: none !important;
+  position: relative;
+}
+#verification-code .cpt-img-double-right:after,
+#verification-code .cpt-img-double-right:before {
+  position: absolute;
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-left: 2px solid #FBEFC7;
+  border-bottom: 2px solid #FBEFC7;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  top: 50%;
+  left: 50%;
+  margin-top: -5px;
+}
+#verification-code .cpt-img-double-right:after {
+  margin-left: -10px;
+}
+#verification-code .cpt-img-double-right:before {
+  margin-left: -3px;
+}
+#verification-code .cpt-img-check-right:after {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 7px;
+  border-left: 3px solid #95de47;
+  border-bottom: 3px solid #95de47;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  top: 50%;
+  left: 50%;
+  margin: -8px 0 0 -8px;
+}
+#verification-code .cpt-bg-bar {
+  height: 2.15rem !important;
+  line-height: 2.15rem !important;
+}
+#verification-code .cpt-drop-btn {
+  background-color: #ED7622;
+  background-image: -webkit-linear-gradient(left, #ED7622, #E83F46);
+  background-image: -moz-linear-gradient(left, #ED7622, #E83F46);
+  background-image: -o-linear-gradient(left, #ED7622, #E83F46);
+  background-image: -ms-linear-gradient(left, #ED7622, #E83F46);
+  background-image: linear-gradient(left, #ED7622, #E83F46);
+}
+.TxtList {
+  background: #B5232D;
+  padding: 2.8rem 1.5rem 0 1.5rem;
+  color: #fce4c5;
+}
+.TxtList dt {
+  text-align: center;
+  font-size: .9rem;
+  line-height: .9rem;
+}
+.TxtList dt span {
+  position: relative;
+}
+.TxtList dt span:after,
+.TxtList dt span:before {
+  content: "";
+  position: absolute;
+  width: 1.225rem;
+  height: 1.125rem;
+  background: url("../img/LiWu.png") no-repeat;
+  background-size: 100% 100%;
+}
+.TxtList dt span:after {
+  left: -1.9rem;
+}
+.TxtList dt span:before {
+  right: -1.9rem;
+}
+.TxtList dd {
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+}
+.TxtList dd p {
+  font-size: .65rem;
+  line-height: .9rem;
+  margin-top: .5rem;
+}
+.CouponBox {
+  padding: 1.625rem 1.5rem 1rem 1.5rem;
+}
+.CouponBox li .Coupon {
+  width: 100%;
+  height: 4.1rem;
+  background: url("../img/bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.CouponBox li .Coupon .left {
+  float: left;
+  width: 30%;
+}
+.CouponBox li .Coupon .left small,
+.CouponBox li .Coupon .left big {
+  float: left;
+  color: #ffe6c6;
+}
+.CouponBox li .Coupon .left small {
+  font-size: .9rem;
+  line-height: .9rem;
+  margin-top: 2.1rem;
+  padding-left: .5rem;
+}
+.CouponBox li .Coupon .left big {
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  font-family: "PingFangSC-Medium";
+  margin-top: 1rem;
+  padding-left: .2rem;
+}
+.CouponBox li .Coupon .right {
+  float: right;
+  width: 70%;
+  color: #ffe6c6;
+}
+.CouponBox li .Coupon .right big,
+.CouponBox li .Coupon .right small {
+  display: block;
+  padding-left: .9rem;
+}
+.CouponBox li .Coupon .right big {
+  font-size: .75rem;
+  line-height: .75rem;
+  margin-top: 1.05rem;
+}
+.CouponBox li .Coupon .right small {
+  font-size: .5rem;
+  line-height: .5rem;
+  margin-top: .4rem;
+}
+.CouponBox li.Account {
+  font-size: .6rem;
+  line-height: .6rem;
+  color: #81483c;
+  text-align: center;
+}
+.CouponBox li.GreenBtn button,
+.CouponBox li.RedBtn button {
+  height: 2.2rem;
+  width: 100%;
+  border: 0;
+  color: #fce4c5;
+  font-family: "PingFangSC-Medium";
+  font-size: .85rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.CouponBox li.GreenBtn button {
+  background-color: #82B127;
+  background-image: -webkit-linear-gradient(left, #82B127, #6A9D1A);
+  background-image: -moz-linear-gradient(left, #82B127, #6A9D1A);
+  background-image: -o-linear-gradient(left, #82B127, #6A9D1A);
+  background-image: -ms-linear-gradient(left, #82B127, #6A9D1A);
+  background-image: linear-gradient(left, #82B127, #6A9D1A);
+  margin-top: 1.45rem;
+  -webkit-box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+.CouponBox li.RedBtn button {
+  background-color: #F16B2E;
+  background-image: -webkit-linear-gradient(left, #F16B2E, #DD3630);
+  background-image: -moz-linear-gradient(left, #F16B2E, #DD3630);
+  background-image: -o-linear-gradient(left, #F16B2E, #DD3630);
+  background-image: -ms-linear-gradient(left, #F16B2E, #DD3630);
+  background-image: linear-gradient(left, #F16B2E, #DD3630);
+  margin-top: .75rem;
+  -webkit-box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+.Shake {
+  width: 3rem;
+  position: fixed;
+  right: 0;
+  top: 18rem;
+  z-index: 20;
+  -webkit-animation: 3s seconddiv  linear infinite;
+  background: transparent;
+}
+@keyframes seconddiv {
+  0% {
+    transform: scale(1.4, 1.4);
+  }
+  5% {
+    transform: scale(1, 1);
+  }
+  15% {
+    transform: scale(1.2, 1.2);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  35% {
+    transform: scale(1.2, 1.2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

@@ -1,0 +1,50 @@
+/*Created by huang.jun on 16-12-13*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{background:#fff;}
+article{height:100%;font-family:"PingFang SC Medium";}
+
+.img-bg,.introduce,.Product-list{position: relative;width:18.75rem;}
+.img-bg{height:21.125rem;background:url("../img/img1.jpg") no-repeat;background-size:100% 100%;}
+.introduce{height:14.45rem;background:url("../img/img2.jpg") no-repeat;background-size:100% 100%;}
+.Product-list{height:34.375rem;background:url("../img/img3.jpg") no-repeat;background-size:100% 100%;}
+.date{color:#a5342c;font-size:0.6rem;position: absolute;left:11.4rem;top:18.6%;}
+.top-txt{color:#fffae7;font-size:0.65rem;position: absolute;left:3.4rem;top:30.8%;}
+.Product-introduction{position: absolute;left:8.6rem;top:9%;width:8rem;}
+.Product-introduction dt{font-size:1.15rem;color:#9c2f2f;}
+.Product-introduction dd{padding-top:6%;line-height:76%;}
+.Product-introduction dd p{font-size:0.6rem;color:#532c19;}
+.Reservation-button{width:15.7rem;height:2.975rem;background:url("../img/btn.png") no-repeat;background-size:100% 100%;position: absolute;left:50%;margin-left:-7.85rem;top:73%;}
+.Magnifier{width:1.95rem;height:1.95rem;background:url("../img/Magnifier.png") no-repeat;background-size:100% 100%;position: absolute;left:4.2rem;top:28%;}
+.top-title{font-size:0.95rem;color:#ffba25;position: absolute;left:6.3rem;top:4.4%;}
+.Product-list dl{position:absolute;}
+.Product-list dl dt img{width:8.125rem;height:5.5rem;}
+.Product-list dl dd{padding-left:0.425rem;}
+.Product-list dl dd h3{font-size:0.8rem;color:#333;padding-top:4%;}
+.Product-list dl dd p{font-size:0.65rem;color:#666;padding-top:2%;}
+.Product-list dl:nth-of-type(1){left:1.15rem;top:11.9%;}
+.Product-list dl:nth-of-type(2){left:9.57rem;top:11.9%;}
+.Product-list dl:nth-of-type(3){left:1.15rem;top:36.6%;}
+.Product-list dl:nth-of-type(4){left:9.57rem;top:36.6%;}
+.Product-list dl:nth-of-type(5){left:1.14rem;top:61.1%;}
+.Product-list dl:nth-of-type(6){left:9.57rem;top:61.1%;}
+.hdgz{width:3.625rem;height:1.125rem;line-height:1.125rem;-webkit-border-radius:0.25rem;border:1px solid #471930;color:#471930;font-size:0.775rem;text-align:center;position:absolute;right:0.325rem;top:2%;}
+.shadow{width:100%;height:100%;position:fixed;z-index:2;background:#000;opacity:0.8;top:0;left:0;}
+.big-img{width:15.5rem;height:20.85rem;position: fixed;z-index:3;left:50%;top:50%;margin-left:-7.75rem;margin-top:-10.425rem;}
+.pop-box{width:16.75rem;height:16.975rem;background:url("../img/huabu.jpg") no-repeat;background-size:100% 100%;position: fixed;z-index:3;left:50%;top:50%;margin-left:-8.375rem;margin-top:-10.05rem;}
+.pop-box dt{text-align: center;font-family:"PingFang SC Heavy";color:#bd2323;font-size:1.2rem;padding:1rem 0 0rem 0;}
+.pop-box dd{padding:0 1rem;position: relative;}
+.pop-box dd p{font-size:0.7rem;color:#512d25;font-family:"PingFang SC Medium";line-height:0.85rem;margin-top:0.4rem;padding-left:0.75rem;background:url("../img/dian.png") no-repeat 0 0.2rem;background-size:0.425rem 0.425rem;}
+.close{width:2.15rem;height:3.125rem;background:url("../img/close.png") no-repeat;background-size:100% 100%;position: absolute;z-index:3;bottom:-3.1rem;left:50%;margin-left:-1.075rem;}
+
+
+
+
+
+
+
+
+
+

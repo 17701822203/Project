@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#E8E8E8;">
+    <view class="RedBg">
+        <view class="TopTitle">你要说哪里的方言？</view>
+        <view class="City">
+            <view class="left">省份</view>
+            <view class="right"><input type="text" value="方言类别？如长沙话"></view>
+        </view>
+        <view class="TextList">
+            <text class="bold">提示</text>
+            <text>用你的家乡话</text>
+            <text>说一句拜年的吉利话</text>
+            <text>平时见面会怎么打招呼</text>
+            <text>夸一个小姑娘好看</text>
+            <text>说一句绕口令</text>
+            <text>吵架时会怎么说</text>
+            <text>......</text>
+        </view>
+        <view class="SrBtn">
+            <button>
+                <view class="am">
+                    <view class="AmIcon1 am1"></view>
+                    <view class="AmIcon2 am2"></view>
+                    <view class="AmIcon3 am3"></view>
+                    <view class="AmIcon2 am4"></view>
+                    <view class="AmIcon3 am5"></view>
+                    <view class="AmIcon2 am6"></view>
+                    <view class="AmIcon1 am7"></view>
+                </view>
+            </button>
+        </view>
+    </view>
+</body>
+</html>

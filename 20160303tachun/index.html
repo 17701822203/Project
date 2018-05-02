@@ -1,0 +1,645 @@
+<html class="ie">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+$(document).ready(function() {
+	$(".tabWrap dd").first().css("display","block")
+	$(".Nav li").first().addClass("on")
+	var nav=$(".Nav li");
+	nav.click(function(){
+		$(this).addClass("on").siblings().removeClass("on");
+		var index=nav.index(this);
+		$(".tabWrap > dd")
+		.eq(index).show()
+		.siblings().hide()
+	})
+});
+
+$(document).ready(function(){
+    $(".tabBox").click(function(){
+		$(this).find(".tabLay").fadeIn();
+		$(this).find(".tabBtmLay").fadeOut();
+	})
+});
+</script>
+	<article>
+    	<div class="headBg">
+        	<img src="img/headTop.jpg">
+        </div>
+        <div class="txtBg">
+        	<img src="img/txtBg.jpg">
+            <ul class="Nav">
+            	<li><button>华东</button></li>
+            	<li><button>华南</button></li>
+            	<li><button>西南</button></li>
+            	<li><button>北部</button></li>
+            </ul>
+            <p class="poetry">死宅了一个冬天的你，还要继续辜负大好春光和美景美女吗？春天不出门，一年徒伤悲。出发吧~十里春风，怎能少你~让我们随着高铁，一路踏春远行。</p>
+        </div>
+        
+        <dl class="tabWrap">
+        
+        	<dd class="ddBtm1">
+            
+                <div class="lstBg1">
+                
+                    <div class="topTxt">迟日江山丽，春风花草香。泥融飞燕子，沙暖睡鸳鸯。</div>
+                    
+                    <div class="LstBox">
+                    
+                        <div class="tabBox">
+                            <img src="img/img1.jpg">
+                            <ul class="tabBtmLay">
+                                <li>扬州</li>
+                                <li>兴化-油菜花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：扬州</dt>
+                                <dd>江苏兴化油菜花，以千岛样式形成的垛田景观享誉全国。清明前后，油菜花开，蓝天、碧水、“金岛”织就了“河有万湾多碧水，田无一垛不黄花”的奇丽画。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img2.jpg">
+                            <ul class="tabBtmLay">
+                                <li>婺源站</li>
+                                <li>婺源-油菜花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：婺源站</dt>
+                                <dd>江西最美丽的油菜花在“江岭”。走进婺源，处处是粉红的桃花、洁白的梨花与层层金黄的梯田油菜花、构成一幅幅唯美的天然画卷。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img3.jpg">
+                            <ul class="tabBtmLay">
+                                <li>苏州</li>
+                                <li>西山-梅花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：苏州</dt>
+                                <dd>在全国著名赏梅胜地中，西山林屋梅海可是最大的赏梅胜地之一。苏州西山植梅始于唐而盛于明清，已有500多年历史。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img4.jpg">
+                            <ul class="tabBtmLay">
+                                <li>南京</li>
+                                <li>梅花山-梅花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：南京</dt>
+                                <dd>梅花山梅园以品种奇特著称，来此赏梅的游人摩肩接踵，高潮时节每天都在十万以上，如今的梅花山植梅面积1533余亩，有近400个品种的4万余株梅树。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img5.jpg">
+                            <ul class="tabBtmLay">
+                                <li>上海</li>
+                                <li>顾村公园-樱花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：上海</dt>
+                                <dd>顾村公园樱花节在每年3月的中下旬到4月的中旬，顾村公园的赏樱面积已达1000亩，品种增至50余种，数量有万余株。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="lstBg2">
+                
+                    <div class="topTxt">人闲桂花落，夜静春山空。月出惊山鸟，时鸣春涧中。</div>
+                    
+                    <div class="LstBox">
+                    
+                        <div class="tabBox">
+                            <img src="img/img6.jpg">
+                            <ul class="tabBtmLay">
+                                <li>杭州</li>
+                                <li>西湖</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：杭州</dt>
+                                <dd>西湖，是中国大陆主要的观赏性淡水湖泊之一，也是现今《世界遗产名录》中少数几个和中国唯一一个湖泊类文化遗产。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img7.jpg">
+                            <ul class="tabBtmLay">
+                                <li>江西</li>
+                                <li>鄱阳湖</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：江西</dt>
+                                <dd>鄱阳湖范围内有鸟类300多种，其中水鸟115种，珍禽50多种，约占全国225种水鸟的51%，是世界上最大的鸟类保护区，被称为“白鹤世界”，“珍禽王国”。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img8.jpg">
+                            <ul class="tabBtmLay">
+                                <li>无锡</li>
+                                <li>太湖</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：无锡</dt>
+                                <dd>太湖，位于中国江苏和浙江两省的交界处，是中国五大淡水湖之一，以优美的湖光山色和灿烂的人文景观著称，是中国著名的风景名胜区。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="lstBg3">
+                    
+                    <div class="topTxt">翠色山峦下，商居掩古城。花溪迎曲巷，岁月久悠增。</div>
+                    
+                    <div class="LstBox">
+                    
+                        <div class="tabBox">
+                            <img src="img/img9.jpg">
+                            <ul class="tabBtmLay">
+                                <li>常州</li>
+                                <li>鹤溪村</li>
+                            </ul>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img10.jpg">
+                            <ul class="tabBtmLay">
+                                <li>杭州</li>
+                                <li>桐庐荻浦村</li>
+                            </ul>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img11.jpg">
+                            <ul class="tabBtmLay">
+                                <li>衢州</li>
+                                <li>开化霞山古镇</li>
+                            </ul>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img12.jpg">
+                            <ul class="tabBtmLay">
+                                <li>金华</li>
+                                <li>金华浦江</li>
+                            </ul>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </dd>
+            
+        	<dd class="ddBtm2">
+            
+                <div class="lstBg1">
+                
+                    <div class="topTxt">迟日江山丽，春风花草香。泥融飞燕子，沙暖睡鸳鸯。</div>
+                    
+                    <div class="LstBox">
+                    
+                        <div class="tabBox">
+                            <img src="img/img13.jpg">
+                            <ul class="tabBtmLay">
+                                <li>来宾市</li>
+                                <li>圣堂山-杜鹃</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：来宾市</dt>
+                                <dd>圣堂山是广西金秀县大瑶山的主峰，海拔达1979米，是华南最高的山峰之一。万亩变色杜鹃花争相竞放，山上成了花的海洋。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img14.jpg">
+                            <ul class="tabBtmLay">
+                                <li>桂林</li>
+                                <li>桂林-油菜花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：桂林</dt>
+                                <dd>春季的桂林，花季雨季，春意盎然，令人心情舒畅，众多美景也纷纷在这个季节绽放着她们特有的美，油菜花、桃花散发这春天的气息。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img15.jpg">
+                            <ul class="tabBtmLay">
+                                <li>桂林北站</li>
+                                <li>阳朔-油菜花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：桂林北站</dt>
+                                <dd>阳朔，在中国最美丽县名单中， 阳朔以秀领天下美居第一，也有阳朔山水甲桂林的美誉。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img16.jpg">
+                            <ul class="tabBtmLay">
+                                <li>南宁</li>
+                                <li>青秀山-桃花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：南宁</dt>
+                                <dd>青秀山风景区是南宁的国家5A级景区。海拔高度八十二米至二百八十九米，气候宜人，奇山异卉，四季常开。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img17.jpg">
+                            <ul class="tabBtmLay">
+                                <li>广州</li>
+                                <li>石门森林公园</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：广州</dt>
+                                <dd>石门森林公园距广州市85公里，场内有林木300多种，有珍贵的红花荷，还有原始次生林。公园景色四时常新，春天云雾绕山，竹木吐翠，山花烂漫，百鸟争鸣。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="lstBg2">
+                
+                    <div class="topTxt">人闲桂花落，夜静春山空。月出惊山鸟，时鸣春涧中。</div>
+                    
+                    <div class="LstBox">
+                    
+                        <div class="tabBox">
+                            <img src="img/img18.jpg">
+                            <ul class="tabBtmLay">
+                                <li>衡阳东站</li>
+                                <li>南岳衡山</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：衡阳东站</dt>
+                                <dd>衡山，中国五岳之一，海拔1300.2米，是著名的道、佛教圣地，环山有寺、庙、庵、观200多处。道教“三十六洞天，七十二福地”，有四处位于衡山之中。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img19.jpg">
+                            <ul class="tabBtmLay">
+                                <li>英德西</li>
+                                <li>英西峰林走廊</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：英德西</dt>
+                                <dd>英西峰林走廊位于英西南地区，穿越九龙、明迳、岩背三镇，连绵20多公里，是广东目前已发现的最长峰林走廊，并欣然命名“南天第一峰林风光”。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img20.jpg">
+                            <ul class="tabBtmLay">
+                                <li>韶关站</li>
+                                <li>丹霞山</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：韶关站</dt>
+                                <dd>丹霞山（中国红石公园），总面积292平方千米，是广东省面积最大的风景区、以丹霞地貌景观为主的风景区和世界自然遗产地。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="lstBg4">
+                    
+                    <div class="topTxt">翠色山峦下，商居掩古城。花溪迎曲巷，岁月久悠增。</div>
+                    
+                    <div class="LstBox">
+                    
+                        <div class="tabBox">
+                            <img src="img/img21.jpg">
+                            <ul class="tabBtmLay">
+                                <li>海南</li>
+                                <li>海南</li>
+                            </ul>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img22.jpg">
+                            <ul class="tabBtmLay">
+                                <li>厦门站</li>
+                                <li>曾厝垵</li>
+                            </ul>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img23.jpg">
+                            <ul class="tabBtmLay">
+                                <li>潮汕站</li>
+                                <li>南澳岛</li>
+                            </ul>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img24.jpg">
+                            <ul class="tabBtmLay">
+                                <li>泉州</li>
+                                <li>戴云村</li>
+                            </ul>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </dd>
+            
+        	<dd class="ddBtm3">
+            
+                <div class="lstBg1">
+                
+                    <div class="topTxt">迟日江山丽，春风花草香。泥融飞燕子，沙暖睡鸳鸯。</div>
+                    
+                    <div class="LstBox">
+                    
+                        <div class="tabBox">
+                            <img src="img/img25.jpg">
+                            <ul class="tabBtmLay">
+                                <li>云南</li>
+                                <li>罗平-油菜花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：云南</dt>
+                                <dd>罗平是我国的油菜生产基地县，也是蜜蜂春繁和蜂产品加工基地。每年2、3月份，20万亩油菜花在罗平坝子竞相争放，放眼望去，是一片一望无际的金黄。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img26.jpg">
+                            <ul class="tabBtmLay">
+                                <li>大理</li>
+                                <li>大理-山茶花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：大理</dt>
+                                <dd>大理市地处云贵高原上的洱海平原，苍山之麓，洱海之滨，是古代南诏国和大理国的都城，作为古代云南地区的政治、经济和文化中心，时间长达五百余年。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img27.jpg">
+                            <ul class="tabBtmLay">
+                                <li>成都</li>
+                                <li>彭州梨花坪-梨花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：成都</dt>
+                                <dd>梨花坪位于彭州北部的红岩镇梨花村，交通便利。目前梨园面积万余亩，现已开发赏花、观景、品果等旅游项目，并成功举办了8届梨花会。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img28.jpg">
+                            <ul class="tabBtmLay">
+                                <li>成都</li>
+                                <li>龙泉-桃花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：成都</dt>
+                                <dd>龙泉被誉为桃花故里，这里漫山桃花，如霞似锦，一朵比一朵开得艳丽，每年的桃花海都会吸引不少中外游客前来这里欣赏。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img29.jpg">
+                            <ul class="tabBtmLay">
+                                <li>林芝</li>
+                                <li>林芝-桃花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：林芝</dt>
+                                <dd>在整个桃花季，林芝桃花将从察隅、波密开始盛开，沿着318国道一直向西，随后巴宜区、米林县、朗县及工布江达县的桃花也将漫山遍野铺满山坡。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="lstBg2">
+                
+                    <div class="topTxt">人闲桂花落，夜静春山空。月出惊山鸟，时鸣春涧中。</div>
+                    
+                    <div class="LstBox">
+                    
+                        <div class="tabBox">
+                            <img src="img/img30.jpg">
+                            <ul class="tabBtmLay">
+                                <li>贵州</li>
+                                <li>贵州从江</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：贵州/dt>
+                                <dd>从江县位于贵州省东南部，旅游资源丰富，被文化部命名为“中国民间艺术之乡”</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img31.jpg">
+                            <ul class="tabBtmLay">
+                                <li>都姜堰</li>
+                                <li>青城山</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：都姜堰</dt>
+                                <dd>青城山，中国四大道教名山之一。全山林木青翠，四季常青，诸峰环峙，状若城廓。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+            </dd>
+            
+        	<dd class="ddBtm4">
+            
+                <div class="lstBg1">
+                
+                    <div class="topTxt">迟日江山丽，春风花草香。泥融飞燕子，沙暖睡鸳鸯。</div>
+                    
+                    <div class="LstBox">
+                    
+                        <div class="tabBox">
+                            <img src="img/img32.jpg">
+                            <ul class="tabBtmLay">
+                                <li>青岛</li>
+                                <li>青岛-樱花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：青岛</dt>
+                                <dd>青岛樱花引进的历史已近百年，多栽植于中山公园，总数达2万余株。青岛樱花会已有80余年的历史，每年4、5月间在中山公园举行。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img33.jpg">
+                            <ul class="tabBtmLay">
+                                <li>北京</li>
+                                <li>颐和园-玉兰</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：北京</dt>
+                                <dd>颐和园玉兰花四月初开放，绽开的花朵如同朵朵莲花，亭亭玉立，随着春的呼唤，一切都活动起来。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img34.jpg">
+                            <ul class="tabBtmLay">
+                                <li>洛阳</li>
+                                <li>中国国画园-牡丹</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：洛阳</dt>
+                                <dd>中国国花园位于洛南隋唐古城遗址上，东起洛阳桥，西至牡丹桥，南临洛宜路，北至洛浦公园南堤，是目前国内最大牡丹专类观赏园。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img35.jpg">
+                            <ul class="tabBtmLay">
+                                <li>樱花</li>
+                                <li>武汉-樱花</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：成都</dt>
+                                <dd>三月中旬，武汉大学樱花、武汉植物园郁金香将相继进入盛花期，樱花盛开的季节，天气晴好，春天的味道弥漫三镇每个角落。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img36.jpg">
+                            <ul class="tabBtmLay">
+                                <li>伊犁伊宁站</li>
+                                <li>新疆杏花沟</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：伊犁伊宁站</dt>
+                                <dd>新疆杏花沟4月中旬，吐尔根乡朝阳的山坡上杏花便已打苞和开花，鲜嫩粉色的渲染，大气磅礴的场面，风光绝佳，大家如约而至，欣赏杏花兼踏春。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="lstBg2">
+                
+                    <div class="topTxt">人闲桂花落，夜静春山空。月出惊山鸟，时鸣春涧中。</div>
+                    
+                    <div class="LstBox">
+                    
+                        <div class="tabBox">
+                            <img src="img/img37.jpg">
+                            <ul class="tabBtmLay">
+                                <li>凤凰市</li>
+                                <li>凤凰山</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：凤凰市</dt>
+                                <dd>凤凰山位于辽宁省丹东市凤城市，最高峰“攒云峰”海拔836米，被誉为“国门名山”、“中国历险第一名山”。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>
+                        
+                        <div class="tabBox">
+                            <img src="img/img38.jpg">
+                            <ul class="tabBtmLay">
+                                <li>武汉</li>
+                                <li>云雾山</li>
+                            </ul>
+                            <dl class="tabLay">
+                                <dt>高铁站：武汉</dt>
+                                <dd>木兰云雾山是武汉市唯一的城市郊野公园，方圆25平方公里，地貌奇特而秀美，集峰、谷、堰、川、古寨、古建筑于一体，被称为木兰生态旅游区中的百景园。</dd>
+                            </dl>
+                            <a class="tabBtmBtn" href="###">预订车票</a>
+                        </div>                        
+                        
+                    </div>
+                    
+                </div>
+                
+            </dd>
+            
+        </dl>
+        
+    </article>
+</body>
+</html>

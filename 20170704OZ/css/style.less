@@ -1,0 +1,51 @@
+/*Created by huang.jun on 17-07-03*/
+*{margin:0;padding:0;}
+a{text-decoration:none;-webkit-tap-highlight-color:transparent;
+  &:active{opacity:.7;}
+}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:PingFang SC Medium,sans-serif;}
+.shadow{width:100%;height:100%;position:fixed;z-index:2;background:#000;opacity:0.7;top:0;left:0;}
+.img-box {font-size:0;}
+
+//四角的半径定制.border-radius-custom(20px, 20px, 0px, 0px);
+.border-radius-custom(@topleft:5px,@topright:5px,@bottomleft:5px,@bottomright:5px) {
+  -webkit-border-radius:@topleft @topright @bottomright @bottomleft;
+  -moz-border-radius:@topleft @topright @bottomright @bottomleft;
+  border-radius:@topleft @topright @bottomright @bottomleft;
+}
+//方块阴影.box-shadow(5px,5px,6px,.3);
+.box-shadow(@x:0px,@y:3px,@blur:5px,@alpha:.5) {
+  -webkit-box-shadow:@x @y @blur rgba(0,0,0,@alpha);
+  -moz-box-shadow:@x @y @blur rgba(0,0,0,@alpha);
+  box-shadow:@x @y @blur rgba(0,0,0,@alpha);
+}
+//圆角.border-radius(@radius:5px)
+.border-radius(@radius:5px) {
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+//input默认字体.placeholder({color:#666;});
+.placeholder(@a) {
+  &::-webkit-input-placeholder{@a();}
+  &:-moz-placeholder{@a();}
+  &::-moz-placeholder{@a();}
+  &:-ms-input-placeholder{@a();}
+}
+//线性渐变.gradient(left, #633, #333);
+.gradient(@origin:left,@start:#fff,@stop:#000) {
+  background-color:@start;
+  background-image:-webkit-linear-gradient(@origin,@start,@stop);
+  background-image:-moz-linear-gradient(@origin,@start,@stop);
+  background-image:-o-linear-gradient(@origin,@start,@stop);
+  background-image:-ms-linear-gradient(@origin,@start,@stop);
+  background-image:linear-gradient(@origin,@start,@stop);
+}
+
+article{background:#915D45;}
+.city_box{padding-bottom:1.25rem;
+  &:after,&:before{content:" ";display:table;clear:both;}
+  li{float:left;.img-box;width:28%;margin-left:4%;}
+}

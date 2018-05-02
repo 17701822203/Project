@@ -1,0 +1,96 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+	<title></title>
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        var fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+	<script>
+		function scroll(){
+			$(".content ul").animate({"margin-top":"-1.45rem"},function(){
+				$(".content ul li:eq(0)").appendTo($(".content ul"))
+				$(".content ul").css({"margin-top":0})
+			})
+		}
+		setInterval(scroll,2000)
+	</script>
+</head>
+<body>
+	<article>
+
+		<div class="Notice">
+			<dl class="Notice-List">
+				<dt>免单公告</dt>
+				<dd class="content">
+					<ul>
+						<li><span>钟*东1</span><small>1345654****</small></li>
+						<li><span>钟*东2</span><small>1345654****</small></li>
+						<li><span>钟*东3</span><small>1345654****</small></li>
+						<li><span>钟*东4</span><small>1345654****</small></li>
+						<li><span>钟*东5</span><small>1345654****</small></li>
+						<li><span>钟*东6</span><small>1345654****</small></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		<div class="time-txt">今日可购<span style="padding:0 0.5rem;">1月20日(腊月廿三)</span>火车票</div>
+		<div class="btn-box"><a href="###">抢火车票</a></div>
+		<dl class="btm-txt">
+			<dt style="padding-top:0;"><img style="width:3.2rem" src="img/st1.png"></dt>
+			<dd style="font-size:0.55rem;">
+				<p>2016年12月15日-2017年1月13日</p>
+			</dd>
+			<dt><img style="width:3.2rem" src="img/st2.png"></dt>
+			<dd style="font-size:0.6rem;">
+				<p>1. 活动期间，共随机抽取30份免单，凡通过此活动页面成功购买火车票的用户，均可参与抽奖；未成功支付及全额退款的订单，无法参与活动。</p>
+				<p>2. 同一用户（同一IP地址、联系方式或身份证信息等，均视为同一用户）最多享有1笔订单的免单机会。</p>
+				<p>3.中奖名单会实时在活动页面中公布，请关注。</p>
+			</dd>
+			<dt><img style="width:5.525rem" src="img/st3.png"></dt>
+			<dd style="font-size:0.55rem;">
+				<p>1.短信发送中奖信息（以预定、购买火车票时填写的联系号码为准）</p>
+				<p>2.免单金额将在火车票成功使用后的7个工作日内沿原支付渠道返还；</p>
+				<p>3.凡以不正当手段（包括但不限于作弊、虚假交易、扰乱系统、恶意套取、实施网络攻击等）参与本次活动的用户，主办方有权终止其参与活动的资格；</p>
+				<p>4.本次活动最终解释权归火车票所有。</p>
+				<p>客服电话：400-830-6666</p>
+			</dd>
+		</dl>
+
+		<div class="title-txt"><img src="img/txt-title.png"></div>
+		<div class="bus-bg"><img src="img/bus-img.png"></div>
+		<dl class="txt-box">
+			<dt>携程汽车票</dt>
+			<dd>舒舒服服躺着回家</dd>
+		</dl>
+		<div class="btn2-box"><a href="###">汽车票</a></div>
+	</article>
+</body>
+</html>

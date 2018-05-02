@@ -1,0 +1,64 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+$(document).ready(function(){
+	$(".btn1").click(function(){
+		$(".txtLst,.btn2,.btn3,.txtBox2").show();
+		$(".btn1,.txtBox1").hide();
+		$(".txt").html('铁友订酒店&nbsp;&nbsp;&nbsp;&nbsp;真的超划算');
+	})
+})
+
+</script>
+</head>
+
+<body>
+	<article>
+    	<div class="bk1">
+        	<ul style="display:none;" class="txtLst">
+            	<li><span>恭</span></li>
+                <li><span>喜</span></li>
+                <li><span>您</span></li>
+                <li><span>获</span></li>
+                <li><span>得</span></li>
+                <li><span>10</span></li>
+                <li><span>元</span></li>
+                <li><span>酒</span></li>
+                <li><span>店</span></li>
+                <li><span>优</span></li>
+                <li><span>惠</span></li>
+                <li><span>券</span></li>
+            </ul>
+        	<a href="###" class="btn1"><img src="img/btn1.png"></a>
+            <a style="display:none;"href="###" class="btn2"><img src="img/btn2.png"></a>
+            <a style="display:none;"href="###" class="btn3"><img src="img/btn3.png"></a>
+            <img class="lftIcon" src="img/lftHade.png">
+            <img class="ritIcon" src="img/ritHade.png">
+        </div>
+        <div class="bk2">
+        	<img class="yun" src="img/yun.png">
+            <p class="txt">酒店红包使用规则</p>
+            <img class="txtBox1" src="img/txtBox1.png">
+            <img style="display:none;"  class="txtBox2" src="img/txtBox2.png">
+        </div>
+    </article>
+</body>
+</html>

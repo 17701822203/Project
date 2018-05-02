@@ -1,0 +1,208 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/style.js"></script>
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 15.85 * fontSize){
+                $('.DivideButton').addClass('DivideButton-fix');
+            }else{
+                $('.DivideButton').removeClass('DivideButton-fix');
+            }
+        });
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#fff;">
+    <article>
+        <div class="PageTopBg">
+            <img class="TopImg" src="img/TopBg1.jpg">
+            <div class="CountDown">
+                <span class="day">01</span>
+                <span class="hour">01</span>
+                <span class="minute">01</span>
+                <span class="second">01</span>
+            </div>
+            <img class="HeadImg" src="img/IndexBtm.jpg">
+        </div>
+        <div class="Take">
+            <dl class="TakeDetails2">
+                <dt>你成功帮韩梅梅摇出<span>7.77</span>元</dt>
+                <dd>送你&yen;100秋运红包以表谢意</dd>
+            </dl>
+            <ul class="TakeBtn">
+                <li><a href="###">召唤好友来瓜分</a></li>
+                <li><a href="###">我也要买票拿返现</a></li>
+            </ul>
+        </div>
+        <div class="CouponBox">
+            <div class="CouponTitle"><span>秋运红包已放入你15210597103的携程账户</span></div>
+            <div class="Coupon">
+                <a href="###">
+                    <div class="CouponLeft">
+                        <small>&yen;</small>
+                        <b>3</b>
+                    </div>
+                    <div class="CouponRight">
+                        <span>汽车票</span>
+                        <h4>【超级秋运】三元汽车票优惠券</h4>
+                        <p>2016.12.22前有效</p>
+                    </div>
+                </a>
+            </div>
+            <div class="Coupon">
+                <a href="###">
+                    <div class="CouponLeft">
+                        <small>&yen;</small>
+                        <b>3</b>
+                    </div>
+                    <div class="CouponRight">
+                        <span>汽车票</span>
+                        <h4>【超级秋运】三元汽车票优惠券</h4>
+                        <p>2016.12.22前有效</p>
+                    </div>
+                </a>
+            </div>
+            <div class="Coupon">
+                <a href="###">
+                    <div class="CouponLeft">
+                        <small>&yen;</small>
+                        <b>3</b>
+                    </div>
+                    <div class="CouponRight">
+                        <span>汽车票</span>
+                        <h4>【超级秋运】三元汽车票优惠券</h4>
+                        <p>2016.12.22前有效</p>
+                    </div>
+                </a>
+            </div>
+            <div class="Coupon">
+                <a href="###">
+                    <div class="CouponLeft">
+                        <small>&yen;</small>
+                        <b>3</b>
+                    </div>
+                    <div class="CouponRight">
+                        <span>汽车票</span>
+                        <h4>【超级秋运】三元汽车票优惠券</h4>
+                        <p>2016.12.22前有效</p>
+                    </div>
+                </a>
+            </div>
+            <div class="Coupon">
+                <a href="###">
+                    <div class="CouponLeft">
+                        <small>&yen;</small>
+                        <b>30</b>
+                    </div>
+                    <div class="CouponRight">
+                        <span>汽车票</span>
+                        <h4>【超级秋运】三元汽车票优惠券</h4>
+                        <p>2016.12.22前有效</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="JsRuleBox">
+            <dl class="JsRuleList">
+            <dt><span>活动规则</span></dt>
+            <dd>
+                <p>活动时间：9月22日-10月8日</p>
+                <p>1、用户通过此活动页面购买汽车票，出票成功后即可发起瓜分活动。</p>
+                <p>2、瓜分有效时间：从发起人发起瓜分至车票出发后24小时。</p>
+                <p>3、瓜分规则：邀请好友参与瓜分，每个好友为发起人摇奖决定返现金额，最终发起人将获得有效时间内每位好友摇奖金额的总和；同时参与好友将获得最高168元的出行大礼包。</p>
+                <label id="panel">
+                    <p>4、最终返现金额以系统通知为准，返现将在1-7个工作日内打到原支付账户，请留意查收。</p>
+                    <p>5、若发生退票，瓜分活动自动结束。发起人将不会获得返现。</p>
+                    <p>6、每日返现奖金池总额随参与热度波动，先到先得。</p>
+                    <p>7、活动期间，每个用户只能发起至多2次瓜分活动，每笔订单只能发起一次瓜分活动。（同一携程账户、同一手机号、同一设备号、同一支付账号、同一乘车人身份证号，均被视为同一用户）</p>
+                    <p>8、本活动最终解释权归携程旅行网所有，如有疑问请致电携程客服热线10106666。</p>
+                </label>
+                <div class="more"><span>展开更多活动规则</span><img src="img/DIcon.png"></div>
+            </dd>
+        </dl>
+        </div>
+        <div class="details">
+            <dl class="detailsTitle">
+                <dt><span>瓜分详情</span></dt>
+                <dd>已有2位好友帮你砍价</dd>
+            </dl>
+            <div class="MessageWrap">
+                <div class="MessageBox">
+                    <div class="MessageImg"><img src="img/IndexBtm.jpg"></div>
+                    <div class="MessageText">
+                        <h4>李雷</h4>
+                        <p>一二三四五六七八九十</p>
+                        <span>&yen;0.12</span>
+                    </div>
+                </div>
+                <div class="MessageBox">
+                    <div class="MessageImg"><img src="img/IndexBtm.jpg"></div>
+                    <div class="MessageText">
+                        <h4>李雷</h4>
+                        <p>一二三四五六七八九十一二三四五六</p>
+                        <span>&yen;0.12</span>
+                    </div>
+                </div>
+                <div class="MessageBox">
+                    <div class="MessageImg"><img src="img/IndexBtm.jpg"></div>
+                    <div class="MessageText">
+                        <h4>李雷</h4>
+                        <p>一二三四五六七八九十一二三四</p>
+                        <span>&yen;0.12</span>
+                    </div>
+                </div>
+                <div class="MessageBox">
+                    <div class="MessageImg"><img src="img/IndexBtm.jpg"></div>
+                    <div class="MessageText">
+                        <h4>李雷</h4>
+                        <p>一二三四五六七八九十一二三四五六七八九十</p>
+                        <span>&yen;0.12</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="DivideButton">
+            <li><a href="###">我也要买票拿返现</a></li>
+            <li><a href="###">召唤好友来瓜分</a></li>
+        </ul>
+    </article>
+</body>
+</html>
+

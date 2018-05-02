@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="img-box"><img src="img/TopImg1.jpg"></div>
+    <div class="img-box"><img src="img/TopImg2.jpg"></div>
+    <div class="img-box BtnBox"><img src="img/TopImg3.jpg"><a class="yellow" href="###">立即体验学生优惠</a><a class="red" href="###">随机流量 分享翻倍</a></div>
+    <div class="txt">
+        <h4>活动规则</h4>
+        <p>活动时间：2017.12.1-2018.3.31</p>
+        <p>活动仅限在携程购买学生火车票，购票且出行成功后，用户可获得随机送出的10-100M手机流量。分享好友，可随机翻倍获赠流量。</p>
+        <p>瓜分1000万兆手机流量，送完即止，先到先得。</p>
+        <p>手机流量将充值到下单预留的手机号中，当月有效。</p>
+        <p>支持移动、联通、电信三网用户参与流量充值，但不包含用户欠费、停机等用户个人原因造成无法充值成功的情况。</p>
+        <p>本活动解释权归携程火车票所有，如发现恶意盗刷等行为，携程有权收回该行为涉及的手机流量，并保留追责的权利。</p>
+        <i class="TopIcon"></i>
+        <i class="BtmIcon"></i>
+    </div>
+</body>
+</html>
+

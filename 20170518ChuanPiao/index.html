@@ -1,0 +1,247 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+
+<body>
+    <section>
+        <div class="shadow"></div>
+        <dl class="lay-box">
+            <dt>活动规则</dt>
+            <dd>
+                <p>优惠仅限6月出发的指定航次，<br/>所有舱位（标准房/豪华C/豪华B）均适用。</p>
+                <p>2人同行，其中1人可享受免费船票。但燃油<br/>附加费、码头清洁费、港商服务费不参与特<br/>惠，需要人头缴纳。</p>
+                <p>下单时，添加2位乘客后，订单价格会自动<br/>立减，减免1人的船票费用；添加4位乘客后，<br/>订单价格会自动立减，减免2人的船票费用；<br/>以此类推。</p>
+                <p>特惠船票一经售卖，线上和港口均不退不改。</p>
+            </dd>
+            <dt>参加此优惠的航次包括</dt>
+            <dd>
+                <p>厦门-基隆（每周四出发）</p>
+                <p>基隆-厦门（每周日出发）</p>
+                <p>厦门-台中（每周二出发）</p>
+                <p>台中-厦门（每周三出发）</p>
+                <p>大麦屿-基隆 (每周六出发)</p>
+                <p>基隆-大麦屿 (每周五出发)</p>
+            </dd>
+            <dd>
+                <p>该活动最终解释权归携程所有，如有疑问请致电携程客服热线10106666。</p>
+            </dd>
+            <dd>
+                <a class="close-btn" href="###">知道了</a>
+            </dd>
+        </dl>
+    </section>
+    <article>
+        <div class="img-box"><img src="img/Img1.jpg"></div>
+        <dl class="pop-txt">
+            <dt>购买6月出发的闽台航线</dt>
+            <dd>可享受2人同行1人免单!<a class="lay-btn" href="###">详情</a></dd>
+        </dl>
+        <ul class="card-box">
+            <li><img src="img/card1.png"></li>
+            <li><img src="img/card2.png"></li>
+            <li><img src="img/card3.png"></li>
+            <li><img src="img/card4.png"></li>
+            <li><img src="img/card6.png"></li>
+            <li><img src="img/card5.png"></li>
+        </ul>
+        <div class="img-box"><img src="img/title-img.jpg"></div>
+        <div class="bg-green">
+            <div class="spike-img"><img src="img/BigCard1.jpg"><a href="###"><img src="img/BigCardBtn.png"></a></div>
+            <div class="spike-txt">即日起- 5月31日 每天前50名下单可享受半价特惠</div>
+            <div class="more-title"><img src="img/title-img2.jpg"></div>
+            <ul class="tab-nav">
+                <li>海岛</li>
+                <li>三峡</li>
+                <li>珠港澳</li>
+                <li>国际</li>
+            </ul>
+            <div class="tab-box">
+                <ul class="tab-list">
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                </ul>
+                <ul class="tab-list">
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                </ul>
+                <ul class="tab-list">
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                </ul>
+                <ul class="tab-list">
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                    <li>
+                        <span>北海海—涠洲岛</span>
+                        <strong>优惠价:</strong>
+                        <small>&yen;</small>
+                        <b>150</b>
+                        <cite>起</cite>
+                        <a href="###">立即预订></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hb-box">
+                <div class="img-box"><img src="img/hb-bg.png"></div>
+                <a href="###"><img src="img/hb-btn.png"></a>
+            </div>
+        </div>
+        <div class="img-box"><img src="img/title-img3.jpg"></div>
+        <ul class="btm-list">
+            <li><img src="img/btm-img1.jpg"></li>
+            <li><img src="img/btm-img2.jpg"></li>
+            <li><img src="img/btm-img3.jpg"></li>
+        </ul>
+        <div class="img-box"><img src="img/btm.jpg"></div>
+    </article>
+</body>
+</html>

@@ -1,0 +1,778 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#F1F1F1;">
+    <section style="display:none;">
+        <div class="shadow"></div><!--==阴影==-->
+        <div class="Rules" style="display:none;"><!--活动规则-->
+            <ul>
+                <li>1.活动时间：2018.3.15——2018.4.8</li>
+                <li>2.同一用户每天可获得2次抽奖机会，分享给微信好友或朋友圈可额外增加1次抽奖机会；</li>
+                <li>3.优惠券具体使用规则请至“我的—优惠券”中查看；</li>
+                <li>4.抽中“船票免单”的用户，携程客服将于您中奖后的3个工作日内联系您兑奖事宜；</li>
+                <li>5.对于以不正当方式参与活动的用户，包括但不限于恶意套现、恶意下单、恶意注册，利用程序漏洞等，携程有权取消对应权益的领取资格；</li>
+                <li>6.在法律允许的范围内，携程旅行网有权对活动的规则/条款作出适当修改/调整，如有疑问请致电携程客服</li>
+            </ul>
+            <a href="###"></a>
+        </div>
+        <dl class="share-c" style="display:none;"><!--==分享1==-->
+           <dt>恭喜您抽中：<span>5元</span>船票优惠券<a href="###"></a></dt>
+           <dd>
+               <a class="red-btn" href="###"></a>
+               <a class="green-btn" href="###"></a>
+           </dd>
+        </dl>
+        <dl class="share-b"><!--==分享2==-->
+            <dt>今日抽奖次数已用完，<br/>立刻分享多1次抽奖机会哦！<a href="###"></a></dt>
+            <dd>
+                <a class="red-btn" href="###"></a>
+            </dd>
+        </dl>
+    </section>
+    <article>
+        <div class="TopBg">
+            <ul class="TopBtn">
+                <li><a href="###">活动规则</a></li>
+                <li><a href="###">我的奖品</a></li>
+            </ul>
+        </div>
+        <div class="Bg1">
+            <div class="Turntable">
+                <ul id="luck">
+                    <li class="luck-unit luck-unit-0 active"><img src="img/luckImg1.jpg"></li>
+                    <li class="luck-unit luck-unit-1"><img src="img/luckImg2.jpg"></li>
+                    <li class="luck-unit luck-unit-2"><img src="img/luckImg3.jpg"></li>
+                    <li class="luck-unit luck-unit-7"><img src="img/luckImg8.jpg"></li>
+                    <li class="luck-btn" id="btn"><img src="img/luckBtn.png"></li>
+                    <li class="luck-unit luck-unit-3"><img src="img/luckImg4.jpg"></li>
+                    <li class="luck-unit luck-unit-6"><img src="img/luckImg7.jpg"></li>
+                    <li class="luck-unit luck-unit-5"><img src="img/luckImg6.jpg"></li>
+                    <li class="luck-unit luck-unit-4"><img src="img/luckImg5.jpg"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="Bg2">
+             <dl class="ShareBox">
+                 <dt>您今天还有<span>2</span>次机会，每天分享<span>+1</span>次抽奖机会</dt>
+                 <dd><a class="ShareBtn" href="###"></a></dd>
+             </dl>
+        </div>
+        <div class="Bg3">
+            <!--==悬浮导航==-->
+            <nav id="TopNav">
+                <ul class="Nav-List">
+                    <li class="on" id="scroll_a">国内海岛</li>
+                    <li id="scroll_b">礼佛</li>
+                    <li id="scroll_c">珠港澳</li>
+                    <li id="scroll_d">渤海湾</li>
+                    <li id="scroll_e">长江三峡</li>
+                    <li id="scroll_f">台湾</li>
+                    <li id="scroll_g">国际线</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="Bg4"><i class="a"></i></div>
+        <div class="Bg5">
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>888</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+        </div>
+        <div class="Bg6"><a class="More-Btn" href="###"></a></div>
+        <div class="Bg7"><i class="b"></i></div>
+        <div class="Bg8">
+            <div class="B-Box">
+                <div class="B-Img"><img src="img/Img.png"><span>买2免1</span></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+            <div class="B-Box">
+                <div class="B-Img"><img src="img/Img.png"><span>买2免1</span></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+            <div class="B-Box" style="margin-top:.4rem;">
+                <div class="B-Img"><img src="img/Img.png"></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+            <div class="B-Box" style="margin-top:.4rem;">
+                <div class="B-Img"><img src="img/Img.png"></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+        </div>
+        <div class="Bg9"><a class="More-Btn" href="###"></a></div>
+        <div class="Bg10"><i class="c"></i></div>
+        <div class="Bg11">
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+        </div>
+        <div class="Bg12"><a class="More-Btn" href="###"></a></div>
+        <div class="Bg13"><i class="d"></i></div>
+        <div class="Bg14">
+            <div class="B-Box">
+                <div class="B-Img"><img src="img/Img.png"><span>买2免1</span></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+            <div class="B-Box">
+                <div class="B-Img"><img src="img/Img.png"><span>买2免1</span></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+            <div class="B-Box" style="margin-top:.4rem;">
+                <div class="B-Img"><img src="img/Img.png"></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+            <div class="B-Box" style="margin-top:.4rem;">
+                <div class="B-Img"><img src="img/Img.png"></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+            <div class="B-Box" style="margin-top:.4rem;">
+                <div class="B-Img"><img src="img/Img.png"></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+            <div class="B-Box" style="margin-top:.4rem;">
+                <div class="B-Img"><img src="img/Img.png"></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+            <div class="B-Box" style="margin-top:.4rem;">
+                <div class="B-Img"><img src="img/Img.png"></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+            <div class="B-Box" style="margin-top:.4rem;">
+                <div class="B-Img"><img src="img/Img.png"></div>
+                <dl class="B-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="B-Btn" href="###">火速预订</a>
+            </div>
+        </div>
+        <div class="Bg15"><a class="More-Btn" href="###"></a></div>
+        <div class="Bg16"><i class="e"></i></div>
+        <div class="Bg17">
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+        </div>
+        <div class="Bg18"><a class="More-Btn" href="###"></a></div>
+        <div class="Bg19"><i class="f"></i></div>
+        <div class="Bg20">
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+         </div>
+        <div class="Bg21"><a class="More-Btn" href="###"></a></div>
+        <div class="Bg22"><i class="g"></i></div>
+        <div class="Bg23">
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box">
+                <div class="S-Img"><img src="img/Img.png"><span>直降</span></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+            <div class="S-Box" style="margin-top:.4rem;">
+                <div class="S-Img"><img src="img/Img.png"></div>
+                <dl class="S-Txt">
+                    <dt>北海-涠洲岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>起</small>
+                        <em>&yen;&nbsp;125起</em>
+                    </dd>
+                </dl>
+                <a class="S-Btn" href="###">火速预订</a>
+            </div>
+        </div>
+        <div class="Bg24"><a class="More-Btn" href="###"></a></div>
+        <div class="Bg25"></div>
+    </article>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script>
+        var luck={
+            index:0,	//当前转动到哪个位置，起点位置
+            count:0,	//总共有多少个位置
+            timer:0,	//setTimeout的ID，用clearTimeout清除
+            speed:20,	//初始转动速度
+            times:0,	//转动次数
+            cycle:50,	//转动基本次数：即至少需要转动多少次再进入抽奖环节
+            prize:-1,	//中奖位置
+            init:function(id){
+                if ($("#"+id).find(".luck-unit").length>0) {
+                    $luck = $("#"+id);
+                    $units = $luck.find(".luck-unit");
+                    this.obj = $luck;
+                    this.count = $units.length;
+                    $luck.find(".luck-unit-"+this.index).addClass("active");
+                };
+            },
+
+
+            roll:function(){
+                var index = this.index;
+                var count = this.count;
+                var luck = this.obj;
+                $(luck).find(".luck-unit-"+index).removeClass("active");
+                index += 1;
+                if (index>count-1) {
+                    index = 0;
+                };
+                $(luck).find(".luck-unit-"+index).addClass("active");
+                this.index=index;
+                return false;
+            },
+            stop:function(index){
+                this.prize=index;
+                return false;
+            }
+        };
+
+
+        function roll(){
+            luck.times += 1;
+            luck.roll();
+            if (luck.times > luck.cycle+10 && luck.prize==luck.index) {
+                clearTimeout(luck.timer);
+                luck.prize=-1;
+                luck.times=0;
+                click=false;
+            }else{
+                if (luck.times<luck.cycle) {
+                    luck.speed -= 10;
+                }else if(luck.times==luck.cycle) {
+                    var index = Math.random()*(luck.count)|0;
+                    if(index>5){
+                        index = 7;
+                    }else {
+                        index = 5;
+                    }
+                    luck.prize = index;//最终中奖位置
+                }else{
+                    if (luck.times > luck.cycle+10 && ((luck.prize==0 && luck.index==7) || luck.prize==luck.index+1)) {
+                        luck.speed += 110;
+                    }else{
+                        luck.speed += 20;
+                    }
+                }
+                if (luck.speed<40) {
+                    luck.speed=40;
+                };
+
+                luck.timer = setTimeout(roll,luck.speed);
+            }
+            return false;
+        }
+
+
+        var click=false;
+        window.onload=function(){
+            luck.init('luck');
+            $("#btn").click(function(){
+                /*//按下弹起效果
+                 $("#btn").addClass("cjBtnDom");
+                 setTimeout(function(){
+                 $("#btn").removeClass("cjBtnDom");
+                 },200);*/
+
+
+                if(click) {
+                    return false;
+                }
+                else{
+                    luck.speed=100;
+                    roll();
+                    click=true;
+                    return false;
+                }
+
+            });
+        };
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function (){
+            <!--==点击切换==-->
+            $(".Nav-List li").each(function(index){
+                $(this).click(function(){
+                    $(".Nav-List li").removeClass("on");
+                    $(".Nav-List li").eq(index).addClass("on");
+                });
+            });
+            <!--==锚点==-->
+            $('#scroll_a').click(function(){$('html,body').animate({scrollTop:$('.a').offset().top}, 800);});
+            $('#scroll_b').click(function(){$('html,body').animate({scrollTop:$('.b').offset().top}, 800);});
+            $('#scroll_c').click(function(){$('html,body').animate({scrollTop:$('.c').offset().top}, 800);});
+            $('#scroll_d').click(function(){$('html,body').animate({scrollTop:$('.d').offset().top}, 800);});
+            $('#scroll_e').click(function(){$('html,body').animate({scrollTop:$('.e').offset().top}, 800);});
+            $('#scroll_f').click(function(){$('html,body').animate({scrollTop:$('.f').offset().top}, 800);});
+            $('#scroll_g').click(function(){$('html,body').animate({scrollTop:$('.g').offset().top}, 800);});
+        });
+        <!--==屏幕距离隐藏显示==-->
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 44.25 * fontSize){
+                $('#TopNav').addClass('Nav-List');
+            }else{
+                $('#TopNav').removeClass('Nav-List');
+            }
+        });
+    </script>
+</body>
+</html>

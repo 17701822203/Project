@@ -1,0 +1,189 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#EBEBEB;">
+<article>
+    <div class="img-box TopPhoto"><img src="img/TestImg.jpg"><span>10张</span></div>
+    <dl class="Introduce">
+        <dt>比特王国</dt>
+        <dd>
+            <p>主题介绍比特王国主题介绍比特王国主题介绍比特王国主题介绍比特王国主题介绍比特王特王国主题介绍比特王国</p>
+            <span>[展开]</span>
+        </dd>
+    </dl>
+    <div class="ChoiceBox">
+        <h4>选择房型</h4>
+        <div class="js_tab box1">
+            <ul class="jsTab_title">
+                <li class="on">
+                    <dl>
+                        <dt><big>中包</big><small>2-6人</small></dt>
+                        <dd><small>&yen;</small><b>99</b><span>/小时</span></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt><big>中包</big><small>2-6人</small></dt>
+                        <dd><small>&yen;</small><b>199</b><span>/小时</span></dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt><big>中包</big><small>2-6人</small></dt>
+                        <dd><small>&yen;</small><b>299</b><span>/小时</span></dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="jsTab_con">
+                <div class="PerCapita">人均最低&yen;16.5/小时</div>
+                <dl class="Configure">
+                    <dt>房内包含：</dt>
+                    <dd>
+                        <p>中号帐篷1个；3人沙发一组；懒人沙发2个；<br/>2-6人桌椅 1套；杯具6件；50寸彩电1台； iPad 1部；<br/>Xbox 1部；狼人杀1副...等等</p>
+                        <span>[展开]</span>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <ul class="Choice">
+        <li class="date">
+            <b>使用日期</b>
+            <span>2018.01.24</span>
+        </li>
+        <li class="time">
+            <b>使用时段</b>
+            <span>12:00-13:00</span>
+        </li>
+    </ul>
+    <ul class="InputFillIn">
+        <li><b>姓名</b><input type="text" placeholder="预订人姓名"></li>
+        <li><b>电话</b><input type="text" placeholder="预订人电话"></li>
+    </ul>
+    <dl class="Remarks">
+        <dt>留言备注</dt>
+        <dd><textarea placeholder="您如有个性化需求可以留言告诉我们哦～"></textarea></dd>
+    </dl>
+    <div class="SubmitBox">
+        <span>我的信用分：</span>
+        <b>100</b>
+        <i><a href="###">扣分规则</a></i>
+        <a class="SubmitBtn" href="###">提交预订</a>
+    </div>
+</article>
+<div class="GearDate">
+    <div class="date_ctrl slideInUp" style="display:none;">
+        <div class="date_btn_box">
+            <div class="lcalendar_cancel">取消</div>
+            <div class="lcalendar_finish">确定</div>
+        </div>
+        <div class="date_roll_mask">
+            <div class="FlxBor"></div>
+            <div class="date_roll">
+                <div class="Mask">
+                    <div class="gear">
+                        <div class="tooth">2011年</div>
+                        <div class="tooth">2012年</div>
+                        <div class="tooth">2013年</div>
+                        <div class="tooth">2014年</div>
+                        <div class="tooth">2015年</div>
+                        <div class="tooth">2016年</div>
+                        <div class="tooth">2017年</div>
+                    </div>
+                </div>
+                <div class="Mask">
+                    <div class="gear">
+                        <div class="tooth">01月01日周五</div>
+                        <div class="tooth">01月01日周五</div>
+                        <div class="tooth">01月01日周五</div>
+                        <div class="tooth">01月01日周五</div>
+                        <div class="tooth">01月01日周五</div>
+                        <div class="tooth">01月01日周五</div>
+                        <div class="tooth">01月01日周五</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="time_ctrl slideInUp">
+        <div class="date_btn_box">
+            <div class="lcalendar_cancel">取消</div>
+            <div class="lcalendar_finish">确定</div>
+            <span class="lcalendar_center">请选择开始时间</span>
+            <!--请选择结束时间-->
+        </div>
+        <table>
+            <tr>
+                <td class="GrayTxt">10:30</td>
+                <td class="DarkGreenTxt"><dl><dt>16:00</dt><dd>开始</dd></dl></td>
+                <td class="PaleGreenTxt">10:30</td>
+                <td>10:30</td>
+                <td>10:30</td>
+            </tr>
+            <tr>
+                <td>10:30</td>
+                <td>10:30</td>
+                <td>10:30</td>
+                <td>10:30</td>
+                <td>10:30</td>
+            </tr>
+            <tr>
+                <td>10:30</td>
+                <td>10:30</td>
+                <td>10:30</td>
+                <td>10:30</td>
+                <td>10:30</td>
+            </tr>
+            <tr>
+                <td>10:30</td>
+                <td>10:30</td>
+                <td>10:30</td>
+                <td>10:30</td>
+                <td>10:30</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
+

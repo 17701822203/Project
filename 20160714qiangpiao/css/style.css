@@ -1,0 +1,42 @@
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Lucida Grande",Verdana,"Microsoft YaHei",hei;}
+
+.header{width:7.5rem;height:3.78rem;background:url("../img/top-img.png") no-repeat;background-size:contain;}
+.bg1{width:7.5rem;height:7.73rem;background:url("../img/bg1.jpg") no-repeat;background-size:contain;}
+.img-list dd{padding:0 1.01em;}
+.img-list dd p{font-size:0.3rem;color:#000;line-height:0.48rem;letter-spacing:0.025rem;text-indent:-0.52rem;padding-left:-0.52rem;}
+.img-list dd p span{color:#ff9900;}
+.bg2{width:7.5rem;height:8.71rem;background:url("../img/bg2.jpg") no-repeat;background-size:contain;}
+.bg3{width:7.5rem;height:6.27rem;background:url("../img/bg3.jpg") no-repeat;background-size:contain;}
+.bg4{width:7.5rem;height:6.27rem;background:url("../img/bg4.jpg") no-repeat;background-size:contain;}
+.btm-txt{font-size:0.28rem;color:#fd9915;text-align: center;padding:0.6rem 0 0.5rem 0;font-weight: bold;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

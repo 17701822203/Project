@@ -1,0 +1,20 @@
+/*Created by huang.jun on 16-06-29*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Microsoft YaHei"}
+
+.bg1{height:3.82rem;background:url(../img/bg1.jpg) no-repeat;background-size:cover;}
+.bg2{height:2.94rem;background:url(../img/bg2.jpg) no-repeat;background-size:cover;}
+.bg3{height:3.34rem;background:url(../img/bg3.jpg) no-repeat;background-size:cover;}
+.bg4{height:3.21rem;background:url(../img/bg4.jpg) no-repeat;background-size:cover;}
+.bg5{height:6.56rem;background:url(../img/bg5.jpg) no-repeat;background-size:cover;}
+.btn-box{text-align:center;}
+.btn-box a{display:inline-block;width:4.68rem;height:1.08rem;background:url(../img/btn.png) no-repeat;background-size:cover;}
+.btn-box a:active{ opacity:0.8;}
+.txt-list{color:#fffb36;padding:0 0.45rem;}
+.txt-list dt{font-size:0.32rem;padding-top:0.2rem;text-align:center;}
+.txt-list dd{font-size:0.28rem;padding-top:0.1rem;}
+.txt-list dd p{line-height:0.48rem;padding-left:0.24rem; text-indent:-0.24rem;}
+.btm{text-align:center;font-size:0.28rem;padding-top:0.2rem;color:#fffb36;}

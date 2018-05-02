@@ -1,0 +1,68 @@
+/*Created by huang.jun on 16-04-19*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:Microsoft YaHei;background:url(../img/bg.jpg) repeat-y;background-size:100%;}
+
+.ago{text-align:center;padding:1.6rem 0;}
+.btn1{width:9rem;}
+a img:active{-webkit-animation:gelatine 0.5s 1;}
+@-webkit-keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+
+  from, to {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+    transform: scale(0.95, 1.05);
+  }
+}
+.txtBox{position:relative;}
+.tit{position:absolute;width:10rem;left:3rem;top:-1.3rem;}
+.TxtBox{margin-top:1.2rem;}
+.txtBox dl{width:12rem;border:0.1rem solid #000;margin:0 auto;font-size:0.6rem; font-weight:bold;background:#FFF4A9;padding:2rem 1rem 0 1rem;-moz-border-radius:0.5rem;-webkit-border-radius:0.5rem;border-radius:0.5rem;}
+.txtBox dl dt{color:#ff2a00;}
+.txtBox dl dd{padding-bottom:1rem;line-height:1rem;}
+.later{text-align:center;padding-bottom:2rem;}
+.later dt{font-size:0.54rem;padding:1rem 0 0.6rem 0;}
+.later dt p{padding-bottom:0.4rem;}
+.later dt a img{width:3rem;}
+.later dd{padding-top:0.4rem;}
+.later dd img{width:9rem;}
+.btmBox{text-align:center;}
+.btmBox img{width:6rem;padding:1.2rem 0;}
+.topBg{height:14.36rem;}
+.later,.TxtBox,.btmBox,.ago{opacity:0;}
+.topBg img{height:0;}

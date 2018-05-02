@@ -1,0 +1,420 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var tabs=$(".js_tab");
+            tabs.each(function(){
+                $(this).find(".jsTab_title li").first().addClass("on");
+                $(this).find(".jsTab_con").first().show();
+            });
+            $(".NewsList").js_tab();
+//            $(".box2").js_tab();
+//            $(".box3").js_tab();
+//            $(".box4").js_tab();
+//            $(".box5").js_tab();
+        });
+        (function($){
+            $.fn.extend({
+                "js_tab":function(){
+                    $(this).find(".jsTab_title li").each(function(index){
+                        $(this).click(function(){
+                            $(this).siblings("li").removeClass("on");
+                            $(this).addClass("on");
+                            var tab_c=$(this).parents(".js_tab").find(".jsTab_con");
+                            tab_c.hide();
+                            tab_c.eq(index).show();
+                        });
+                        return $(this);
+                    });
+                }
+            });
+        })(jQuery);
+    </script>
+</head>
+
+<body>
+<div class="container top">
+    <div class="banner" id="top">
+        <ul>
+            <li>
+                <img src="img/1.png">
+                <dl>
+                    <dt>
+                        <div>洛阳汽车站</div>
+                        <p>地址：河南省洛阳市 西工区道南路71号(火车站斜对面)</p>
+                    </dt>
+                    <dd>
+                        <p>洛阳长途客运东站是位于中州路东出口，占地面积50亩，具备高速客运、普通客运、旅游客运等多种运输服务功能。</p>
+                        <p>洛阳东部规模最大、设施最全、功能最完善的国家一级汽车长途客运站。</p>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <img src="img/2.png">
+                <dl>
+                    <dt>
+                    <div>洛阳汽车站</div>
+                    <p>地址：河南省洛阳市 西工区道南路71号(火车站斜对面)</p>
+                    </dt>
+                    <dd>
+                        <p>洛阳长途客运东站是位于中州路东出口，占地面积50亩，具备高速客运、普通客运、旅游客运等多种运输服务功能。</p>
+                        <p>洛阳东部规模最大、设施最全、功能最完善的国家一级汽车长途客运站。</p>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <img src="img/3.png">
+                <dl>
+                    <dt>
+                    <div>洛阳汽车站</div>
+                    <p>地址：河南省洛阳市 西工区道南路71号(火车站斜对面)</p>
+                    </dt>
+                    <dd>
+                        <p>洛阳长途客运东站是位于中州路东出口，占地面积50亩，具备高速客运、普通客运、旅游客运等多种运输服务功能。</p>
+                        <p>洛阳东部规模最大、设施最全、功能最完善的国家一级汽车长途客运站。</p>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <img src="img/4.png">
+                <dl>
+                    <dt>
+                    <div>洛阳汽车站</div>
+                    <p>地址：河南省洛阳市 西工区道南路71号(火车站斜对面)</p>
+                    </dt>
+                    <dd>
+                        <p>洛阳长途客运东站是位于中州路东出口，占地面积50亩，具备高速客运、普通客运、旅游客运等多种运输服务功能。</p>
+                        <p>洛阳东部规模最大、设施最全、功能最完善的国家一级汽车长途客运站。</p>
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="BgBox">
+    <div class="Wrap1064 ClearBox">
+        <div class="SearchBox">
+            <div class="SetOut"><span>出发</span><input class="InputBox" type="text" placeholder="洛阳汽车站"></div>
+            <div class="Icon"></div>
+            <div class="Arrive"><span>到达</span><input class="InputBox" type="text" placeholder="中文/拼音/首字母"></div>
+            <div class="Date"><span>时间</span><input class="InputBox" type="text" placeholder="2017-11-09"></div>
+            <a class="SearchBtn" href="###">搜索</a>
+        </div>
+        <div class="NewsBox ClearBox">
+            <div class="js_tab NewsList">
+                <ul class="jsTab_title">
+                    <li><i class="NoticeIcon"></i>车站新闻</li>
+                    <li><i class="ServiceIcon"></i>车站服务</li>
+                </ul>
+                <div class="jsTab_con">
+                    <p><a href="###">洛阳机场到洛阳火车站</a></p>
+                    <p><a href="###">洛阳火车站车票预订</a></p>
+                    <p><a href="###">10月洛阳火车站加开4趟临客</a></p>
+                    <p><a href="###">洛阳火车站10月将停运20趟列车</a></p>
+                    <p><a href="###">7月31日起洛阳火车站增加5趟列车</a></p>
+                    <p><a href="###">洛阳火车站5月20日起新增8趟列车</a></p>
+                </div>
+                <div class="jsTab_con">
+                    <p><a href="###">洛阳机场到洛阳火车站</a></p>
+                    <p><a href="###">洛阳火车站车票预订</a></p>
+                    <p><a href="###">10月洛阳火车站加开4趟临客</a></p>
+                    <p><a href="###">洛阳火车站10月将停运20趟列车</a></p>
+                    <p><a href="###">7月31日起洛阳火车站增加5趟列车</a></p>
+                    <p><a href="###">洛阳火车站5月20日起新增8趟列车</a></p>
+                </div>
+            </div>
+            <div class="Rimg img-box"><img src="img/AD.png"></div>
+        </div>
+        <div class="LineBox">
+            <div class="BorTitle">
+                <i class="LineIcon"></i>
+                <strong>旅游专线</strong>
+                <a href="###">更多旅游专线</a>
+            </div>
+            <div class="LineList ClearBox">
+
+                <div class="item-thumbnail">
+                    <a href="###"><img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg"></a>
+                    <p class="item-overlay">洛阳汽车站-洛阳老君山</p>
+                </div>
+
+                <div class="item-thumbnail">
+                    <a href="###"><img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg"></a>
+                    <p class="item-overlay">洛阳汽车站-洛阳老君山</p>
+                </div>
+
+                <div class="item-thumbnail">
+                    <a href="###"><img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg"></a>
+                    <p class="item-overlay">洛阳汽车站-洛阳老君山</p>
+                </div>
+
+                <div class="item-thumbnail">
+                    <a href="###"><img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg"></a>
+                    <p class="item-overlay">洛阳汽车站-洛阳老君山</p>
+                </div>
+
+                <div class="item-thumbnail">
+                    <a href="###"><img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg"></a>
+                    <p class="item-overlay">洛阳汽车站-洛阳老君山</p>
+                </div>
+
+                <div class="item-thumbnail">
+                    <a href="###"><img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg"></a>
+                    <p class="item-overlay">洛阳汽车站-洛阳老君山</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="HotBusBox">
+            <div class="BorTitle">
+                <i class="BusIcon"></i>
+                <strong>热门班车</strong>
+                <a href="###">更多热门班线</a>
+            </div>
+            <div class="BusList ClearBox">
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+                <div class="product-item">
+                    <a href="###">
+                        <b>晋城</b>
+                        <i></i>
+                        <b>安阳</b>
+                        <span>&yen;298起</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="TicketBox">
+            <div class="BorTitle">
+                <i class="TicketIcon"></i>
+                <strong>景点门票</strong>
+                <a href="###">更多景点门票</a>
+            </div>
+            <div class="TicketList ClearBox">
+
+                <div class="product-item-buy">
+                    <img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg">
+                    <div>
+                        <dl>
+                            <dt>莫干山</dt>
+                            <dd>&yen;298起</dd>
+                        </dl>
+                        <a class="BuyBtn" href="###">立即抢购</a>
+                    </div>
+                </div>
+
+                <div class="product-item-buy">
+                    <img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg">
+                    <div>
+                        <dl>
+                            <dt>莫干山</dt>
+                            <dd>&yen;298起</dd>
+                        </dl>
+                        <a class="BuyBtn" href="###">立即抢购</a>
+                    </div>
+                </div>
+
+                <div class="product-item-buy">
+                    <img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg">
+                    <div>
+                        <dl>
+                            <dt>莫干山</dt>
+                            <dd>&yen;298起</dd>
+                        </dl>
+                        <a class="BuyBtn" href="###">立即抢购</a>
+                    </div>
+                </div>
+
+                <div class="product-item-buy">
+                    <img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg">
+                    <div>
+                        <dl>
+                            <dt>莫干山</dt>
+                            <dd>&yen;298起</dd>
+                        </dl>
+                        <a class="BuyBtn" href="###">立即抢购</a>
+                    </div>
+                </div>
+
+                <div class="product-item-buy">
+                    <img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg">
+                    <div>
+                        <dl>
+                            <dt>莫干山</dt>
+                            <dd>&yen;298起</dd>
+                        </dl>
+                        <a class="BuyBtn" href="###">立即抢购</a>
+                    </div>
+                </div>
+
+                <div class="product-item-buy">
+                    <img src="https://dimg03.c-ctrip.com/images/100b0h0000008sclm329F_C_500_280.jpg">
+                    <div>
+                        <dl>
+                            <dt>莫干山</dt>
+                            <dd>&yen;298起</dd>
+                        </dl>
+                        <a class="BuyBtn" href="###">立即抢购</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="LogoBtm ClearBox">
+        <img class="Blogo" src="img/LogoBtm.png">
+        <img class="ewm" src="img/ewm.jpg">
+        <dl>
+            <dt>官方微信号</dt>
+            <dd>XCIUT009</dd>
+        </dl>
+    </div>
+
+</div>
+<script type="text/javascript" src="js/jquery.terseBanner.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

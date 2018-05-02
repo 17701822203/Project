@@ -1,0 +1,33 @@
+/*Created by huang.jun on 17-01-23*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"PingFang SC Regular","Microsoft yahei",arial,Simsun,sans-serif;}
+
+.list-bg{width:17.75rem;height:28.025rem;background:url("../img/list-bg.png") no-repeat;background-size:100% 100%;margin:0 auto;}
+.top-title{width:9.525rem;height:1.625rem;line-height:1.3rem;background:url("../img/title-icon.png") no-repeat;background-size:100% 100%;margin:0 auto;font-size:0.8rem;color:#cc0001;text-align: center;}
+.list-box{padding:0 0.75rem;}
+.list-box li{height:1.125rem;line-height:1.125rem;position:relative;padding:0.75rem 0;border-bottom:1px solid #CA846F;}
+.Airport{float:left;width:8.375rem;font-size:0.7rem;color:#951d1d;}
+.Price{float:left;}
+.Price i{font-style: normal;font-size:0.7rem;color:#cc0001;}
+.Price strong{font-size:1.175rem;color:#cc0001;font-family:Arial;}
+.Price small{font-size:0.6rem;color:#951d1d;text-decoration:line-through;}
+.list-box li a{position: absolute;width:2.9rem;height:1.125rem;background:url("../img/button-s.png") no-repeat;background-size:100% 100%;right:0;top:0.7rem;}
+.button-b{display:block;margin:1rem auto 0 auto;width:13.325rem;height:2.275rem;background:url("../img/button-b.png") no-repeat;background-size:100% 100%;}
+.Activity-Rules{color:#ffebc2;padding-top:1rem;padding-bottom:1rem;}
+.Activity-Rules dt{text-align: center;}
+.Activity-Rules dt strong{width:7.525rem;height:1.625rem;display:inline-block;background:url("../img/title-btm.png") no-repeat;background-size:100% 100%;}
+.Activity-Rules dd{font-size:0.65rem;padding:0 1.1rem;line-height:0.9rem;}
+.Activity-Rules dd p{padding-top:0.5rem;padding-left:0.4rem;position: relative;}
+.Activity-Rules dd p:after{position: absolute;width:0.225rem;height:0.225rem;background:#FFF3CF;-webkit-border-radius:1rem;left:-0.1rem;top:0.8rem;content:"";}
+
+
+
+
+
+
+
+
+

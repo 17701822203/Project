@@ -1,0 +1,116 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="Bg2"><img src="img/Bg2.jpg"></div>
+    <div class="CouponBox">
+        <div class="CouponList">
+            <div class="CouponLeft">
+                <strong>&yen;</strong>
+                <b>50</b>
+            </div>
+            <div class="CouponRight">
+                <h4>酒店新客券</h4>
+                <h5>【酒店新客】最高立减50元</h5>
+                <p>2017年07月31日到期</p>
+            </div>
+        </div>
+
+        <div class="CouponList">
+            <div class="CouponLeft">
+                <strong>&yen;</strong>
+                <b>50</b>
+            </div>
+            <div class="CouponRight">
+                <h4>酒店新客券</h4>
+                <h5>【酒店新客】最高立减50元</h5>
+                <p>2017年07月31日到期</p>
+            </div>
+            <i class="sy"></i>
+        </div>
+
+        <div class="CouponList Gray">
+            <div class="CouponLeft">
+                <strong>&yen;</strong>
+                <b>50</b>
+            </div>
+            <div class="CouponRight">
+                <h4>酒店新客券</h4>
+                <h5>【酒店新客】最高立减50元</h5>
+                <p>2017年07月31日到期</p>
+            </div>
+            <i class="qg"></i>
+        </div>
+
+        <button class="btn-get btn-zt">立即使用</button>
+    </div>
+
+    <div class="BtmTxt">
+        <dl>
+            <dt>机票优惠券使用规则</dt>
+            <dd>
+                <p>1、此优惠券适用于智行App，仅用于抵扣国际机票订单，具体可用产品以券面说明为准；</p>
+                <p>2、有效期内每张优惠券仅限使用一次，不能与其他优惠同享；</p>
+                <p>3、若产生退票，手续费将从实际支付金额中扣减，优惠券不予退回；</p>
+                <p>4、优惠券自领取之日起30天内有效；</p>
+                <p>5、同一手机号，同一个设备仅限使用一次；</p>
+                <p>6、如发现恶意盗刷优惠券等行为，智行有权收回该行为涉及的优惠券，并取消该账户已获取的优惠;</p>
+                <p>7、此活动最终解释权归智行所有。</p>
+            </dd>
+        </dl>
+        <dl>
+            <dt>火车票加速包规则</dt>
+            <dd>
+                <p>1、火车票加速包适用于智行APP，可用于云端监控订单，提高抢票成功率；</p>
+                <p>2、加速包会充入“我的加速”包余额中。仅通过现金充值的加速包可提现，活动领取的免费加速包不可提现；</p>
+                <p>3、加速包自领取之日起60天内有效；</p>
+                <p>4、如涉及退款，加速包金额不退；</p>
+                <p>5、如发现恶意盗刷等行为，智行有权收回该行为涉及的加速包，并取消该账户已获取的优惠；</p>
+                <p>6、此活动最终解释权归智行所有。</p>
+            </dd>
+        </dl>
+    </div>
+
+</body>
+</html>
+

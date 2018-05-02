@@ -1,0 +1,137 @@
+<html class="ie">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+
+<script type="text/javascript"> 
+	function $(class){  
+	   return document.getElementsByClassName(class) 
+	}  
+	function getHeight() {  
+	  $("lstLeft").style.lineHeight=$("lstHeight").offsetHeight + "px";            
+	}  
+  window.onload = function() {  
+	  getHeight();  
+	}  
+</script> 
+
+<script type="text/javascript">
+	function nTabs(thisObj,Num){ 
+	if(thisObj.className == "active")return; var tabObj = thisObj.parentNode.id; 
+	var tabList = document.getElementById("myTab1").getElementsByTagName("li"); for(i=0; i <tabList.length; i++) { 
+	if (i == Num) { 
+   thisObj.className = "active";  
+      document.getElementById("myTab1_Content"+i).style.display = "block"; }else{ 
+   tabList[i].className = "normal";  
+   document.getElementById("myTab1_Content"+i).style.display = "none"; } }  }
+ </script>
+</head>
+
+<body>
+<article>
+	<div class="headTop">
+    	<span class="left"><a href="###"></a></span>
+        <h1>积分规则</h1>
+    </div>
+	
+    <ul id="myTab1" class="rule_tab">
+    	<li class="active" onclick="nTabs(this,0);"><button>如何赚</button></li>
+        <li class="normal" onclick="nTabs(this,1);"><button>如何用</button></li>
+    </ul>
+	
+    <div id="myTab1_Content0">
+    
+        <dl class="rule_lst">
+            <dt><span>每日签到</span></dt>
+            <dd>
+                <p>用户首签可获得10积分，连续签到第二天可获得20积分，第三天可获得30积分……第七天得70积分，其后每日可获得70积分</p>
+                <p>若中途中断，则从10积分重新起计</p>
+                <p><a href="###">立即签到赚积分&gt;&gt;</a></p>
+            </dd>
+        </dl>
+        
+        <dl class="rule_lst">
+            <dt><span>新人首签</span></dt>
+            <dd>
+                <p>新人第一次签到，一次性奖励100积分</p>
+            </dd>
+        </dl>
+    
+        <dl class="rule_lst">
+            <dt><span>购票获得</span></dt>
+            <dd>
+                <p>每次购票均可获得积分，将会以每次支付款金额的1:1兑换积分</p>
+            </dd>
+        </dl>
+    
+        <dl class="rule_lst">
+            <dt><span>每日任务</span></dt>
+            <dd>
+                <p>用户在任务中心按要求完成任务即可获得相应数量的积分</p>
+                <p><a href="###">做任务拿积分&gt;&gt;</a></p>
+            </dd>
+        </dl>
+    
+        <dl class="rule_lst">
+            <dt><span>疯狂找图</span></dt>
+            <dd>
+                <p>铁友特色小游戏，眼疾手快拼脑力，找对一张图即可获得1积分</p>
+                <p><a href="###">疯狂找图赢积分&gt;&gt;</a></p>
+            </dd>
+        </dl>
+    
+        <dl class="rule_lst">
+            <dt><span>积分排行</span></dt>
+            <dd>
+                <p>每日积分情况都会进行排名，当日积分排名前10，即可获得100积分奖励</p>
+                <p><a href="###">查看自己的排名&gt;&gt;</a></p>
+            </dd>
+        </dl>
+	
+    </div>
+    
+    <div id="myTab1_Content1">
+    	
+        <dl class="rule_lst">
+            <dt><span>兑换礼品</span></dt>
+            <dd>
+                <p>在<span><a href="###">积分商城</a></span>兑换实物或虚拟礼品</p>
+            </dd>
+        </dl>
+        
+        <dl class="rule_lst">
+            <dt><span>参与活动</span></dt>
+            <dd>
+                <p>参与抽奖、游戏及其他热门活动</p>
+            </dd>
+        </dl>
+        
+        <dl class="rule_lst">
+            <dt><span>兑换现金券</span></dt>
+            <dd>
+                <p>兑换携程火车票5元、10元、20元现金优惠券，订票用铁友，省钱又方便</p>
+            </dd>
+        </dl>
+        
+    </div>
+ </article>   
+</body>
+</html>

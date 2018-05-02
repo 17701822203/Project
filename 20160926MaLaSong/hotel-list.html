@@ -1,0 +1,226 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>兴业银行</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="http://webresource.c-ctrip.com/code/lizard/2.2/web/3rdlibs/bridge.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script type="text/javascript">
+	document.documentElement.style.fontSize=document.documentElement.clientWidth/6.4+'px';
+	window.addEventListener("resize",setRemSize,false);
+	function setRemSize(){
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/6.4+'px';
+	}
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script type="text/javascript">
+		var app = {
+			callback: function(json_obj) {
+				var tagname = json_obj.tagname;
+				if (tagname == 'web_view_finished_load') {
+					var nav_bar_config_json = {
+						"center": [{"tagname":"title","value": "兴业银行"}]
+					};
+					var json_str = JSON.stringify(nav_bar_config_json);
+					CtripBar.app_refresh_nav_bar(json_str);
+				}
+			}
+		};
+	
+        $(document).ready(function(){
+            $(".tab-nav li").click(function(){
+                $(".tab-nav li").eq($(this).index()).addClass("on").siblings().removeClass('on');
+                $(".tab-box .tab-box").hide().eq($(this).index()).show();
+            })
+			
+			$('.tab-list').click(function(){
+				window.location = $(this).attr('tar_url');
+			})
+        })
+    </script>
+</head>
+
+<body>
+    <article>
+        <div class="top-bg"></div>
+        <div class="top-title"></div>
+        <div class="tab-box">
+            <ul class="tab-nav">
+                <li class="on">舒适型酒店</li>
+                <li>高档型酒店</li>
+            </ul>
+            <div class="tab-box">
+
+                <div class="tab-list" tar_url="http://m.ctrip.com/webapp/diyshx/detail/322521.html">
+                    <dl>
+                        <dt>
+                            <h3>汉庭酒店</h3>
+                            <p>（上海人民广场大沽路店）</p>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>341<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>41<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="http://dimg04.c-ctrip.com/images/fd/hotel/g5/M09/F9/38/CggYsFcfPRSAJes-AAQeJmUjo_o941_W_640_480.jpg">
+                </div>
+
+                <div class="tab-list" tar_url="http://m.ctrip.com/webapp/diyshx/detail/321848.html">
+                    <dl>
+                        <dt>
+                            <h3>（新品）汉庭酒店</h3>
+                            <p>（上海南京路步行街中心店）</p>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>379<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>79<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="img/img2.png">
+                </div>
+
+                <div class="tab-list" tar_url="http://m.ctrip.com/webapp/hotel/hoteldetail/445172.html">
+                    <dl>
+                        <dt>
+                        <h3>如家快捷酒店</h3>
+                        <p>（上海南京路人民广场店）</p>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>404<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>104<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="img/img4.png">
+                </div>
+
+                <div class="tab-list" tar_url="http://m.ctrip.com/webapp/diyshx/detail/321835.html">
+                    <dl>
+                        <dt>
+                        <h3>7天连锁酒店</h3>
+                        <p>(上海南京路步行街店)</p>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>436<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>136<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="http://dimg04.c-ctrip.com/images/200q0800000033a5hB82E_W_640_480.jpg">
+                </div>
+
+                <div class="tab-list" tar_url="http://m.ctrip.com/webapp/diyshx/detail/321843.html">
+                    <dl>
+                        <dt>
+                        <h3>上海宜兰贵斯精品酒店</h3>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>468<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>168<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="img/img5.png">
+                </div>
+
+                <div class="tab-list"  tar_url="http://m.ctrip.com/webapp/diyshx/detail/322527.html">
+                    <dl>
+                        <dt>
+                        <h3>上海外滩八号艺术酒店</h3>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>539<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>239<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="img/img6.png">
+                </div>
+
+                <div class="tab-list" tar_url="http://m.ctrip.com/webapp/diyshx/detail/322524.html">
+                    <dl>
+                        <dt>
+                        <h3>全季酒店</h3>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>2050<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>750<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="http://dimg04.c-ctrip.com/images/fd/hotel/g6/M06/7E/06/CggYs1cy94OAMV0pABvW6JSIrp0760_W_640_480.jpg">
+                </div>
+
+            </div>
+            <div class="tab-box" style="display:none;">
+			    <div class="tab-list" tar_url="http://m.ctrip.com/webapp/diyshx/detail/322149.html">
+                    <dl>
+                        <dt>
+                        <h3>上海和平饭店</h3>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>2050<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>750<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="img/img8.png">
+                </div>
+
+                <div class="tab-list" tar_url="http://m.ctrip.com/webapp/diyshx/detail/322153.html">
+                    <dl>
+                        <dt>
+                            <h3>上海外滩东方商旅酒店</h3>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>1120<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>720<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="http://dimg04.c-ctrip.com/images/hotel/78000/77663/82b948995eb642759acef1f24cf0d317_W_640_480.jpg">
+                </div>
+
+                <div class="tab-list" tar_url="http://m.ctrip.com/webapp/diyshx/detail/322159.html">
+                    <dl>
+                        <dt>
+                            <h3>锦江都城上海外滩经典酒店（原新城饭店）</h3>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>930<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>530<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="http://dimg04.c-ctrip.com/images/200d070000002gyqz9012_W_640_480.jpg">
+                </div>
+
+                <div class="tab-list" tar_url="http://m.ctrip.com/webapp/diyshx/detail/322164.html">
+                    <dl>
+                        <dt>
+                            <h3>上海大酒店<br/>经典酒店</h3>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>978<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>578<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="http://dimg04.c-ctrip.com/images/hotel/69000/68110/0e8d15669e7449399bb4828ada486fa2_W_640_480.jpg">
+                </div>
+
+                <div class="tab-list" tar_url="http://m.ctrip.com/webapp/diyshx/detail/322178.html">
+                    <dl>
+                        <dt>
+                            <h3>上海王宝和大酒店</h3>
+                        </dt>
+                        <dd>
+                            <p>挂牌价：<small>&yen;</small>833<small>起</small></p>
+                            <p>兴业悦享价：<small>&yen;</small>433<small>起</small></p>
+                        </dd>
+                    </dl>
+                    <img src="img/img9.png">
+                </div>
+
+            </div>
+
+            <div class="button-box" onclick="window.location='http://wm.cib.com.cn/application/cardapp/Fast/TwoBar/view?id=68626d783eed483597b8ceff677b2442'">
+                <button class="red-btn">我要办卡</button>
+            </div>
+
+        </div>
+    </article>
+</body>
+</html>

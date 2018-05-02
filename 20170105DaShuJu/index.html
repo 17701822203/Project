@@ -1,0 +1,66 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+	<title></title>
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        function scroll(){
+            $(".top-txt ul").animate({"margin-top":"-1rem"},function(){
+                $(".top-txt ul li:eq(0)").appendTo($(".top-txt ul"))
+                $(".top-txt ul").css({"margin-top":"0"})
+            })
+        }
+        setInterval(scroll,2000)
+    </script>
+</head>
+<body>
+    <div class="btm-btn"><a href="###"><img src="img/btn.png"></a></div>
+    <article>
+        <div class="top-bg">
+            <img src="img/top-img.jpg">
+            <div class="top-txt">
+                <ul>
+                    <li>用户：1880****222，已通过携程</li>
+                    <li>用户：1880****222，已通过携程</li>
+                    <li>用户：1880****222，已通过携程</li>
+                    <li>用户：1880****222，已通过携程</li>
+                    <li>用户：1880****222，已通过携程</li>
+                    <li>用户：1880****222，已通过携程</li>
+                </ul>
+            </div>
+        </div>
+        <div><img src="img/btm-bg.png"></div>
+
+    </article>
+</body>
+</html>

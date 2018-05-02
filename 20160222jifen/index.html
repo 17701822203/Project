@@ -1,0 +1,149 @@
+<html class="ie">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+
+<script>
+var textRoll=function(){
+$('#messagewrap p:last').css({'height':'0px','opacity': '0'}).insertBefore('#messagewrap p:first').animate({'height':'1.344807692307693rem','opacity': '1'}, 'slow', function() { $(this).removeAttr('style');});
+}
+$(function(){
+var roll=setInterval('textRoll()',2000);
+$("#messagewrap p").hover(function() {
+clearInterval(roll);
+}, function() {
+roll = setInterval('textRoll()', 2000)
+});
+});
+</script>
+</head>
+
+<body>
+
+	<div class="headTop">
+    	<span class="left"><a href="###"></a></span>
+        <h1>精选</h1>
+        <span class="right"><a href="###"></a></span>
+    </div>
+    
+	<article>
+    
+    	<div class="jsTopBk">
+        	<dl class="jsTopLft">
+            	<dt><img src="img/indexTopImg.png"></dt>
+                <dd>
+                	<span>积分：300分</span>
+                    <span><a href="###">如何赚取积分&gt;</a></span>
+                </dd>
+            </dl>
+            <button class="jsTopRitBtn">
+            	<big>签到</big>
+                <span>今日可得30积分</span>
+            </button>
+        </div>
+        
+        <div class="toolBox">
+        
+        	<div class="toolLft">
+            	<a href="###">
+                	<img src="img/renwu.png">
+                	<big>任务中心</big>
+                    <span>轻松拿分</span>
+                </a>
+            </div>
+            
+            <div class="toolCenter">
+            	<a href="###">
+                    <img src="img/jifen.png">
+                	<big>积分商城</big>
+                    <span>兑换好礼</span>
+                </a>
+            </div>
+            
+            <div class="toolRit">
+            	<a href="###">
+                	<img src="img/zhaotu.png">
+                	<big>疯狂找图</big>
+                    <span>速赚积分</span>
+                </a>
+            </div>
+            
+        </div>
+        
+        <div class="bannerBox">
+        	<div class="banner_left"><a href="###"></a></div>
+            <div class="banner_right_top"><a href="###"></a></div>
+            <div class="banner_right_bottom"><a href="###"></a></div>
+        </div>
+        
+        <dl class="noticeBox">
+        	<dt></dt>
+            <dd><a href="###"><strong>【兑换】</strong>10元火车票现金券</a></dd>
+        </dl>
+        
+        <div class="lotteryBox">
+        	<p>翻倍赚积分&nbsp;幸运抽大奖</p>
+            <div class="lottery">
+            	<div class="lotteryBk">
+                	<button class="lotteryBtn">
+                    	<strong>50</strong>
+                        <span>积分每次</span>
+                    </button>
+                	<ul class="lotteryImg">
+                    	<li><img src="img/img1.png"></li>
+                    	<li class="on"><img src="img/img2.png"></li>
+                    	<li><img src="img/img3.png"></li>
+                    	<li><img src="img/img4.png"></li>
+                    	<li><img src="img/img5.png"></li>
+                    	<li><img src="img/img6.png"></li>
+                    	<li><img src="img/img7.png"></li>
+                    	<li><img src="img/img8.png"></li>
+                    	<li><img src="img/img9.png"></li>
+                    	<li><img src="img/img10.png"></li>
+                    	<li><img src="img/img11.png"></li>
+                    	<li><img src="img/img12.png"></li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="recordBox">
+       	  <ul class="record">
+           	<li id="messagewrap">
+                	<p>182****4444抽中10元红包</p>
+                    <p>182****4444抽中10元红包</p>
+                    <p>182****4444抽中10元红包</p>
+                    <p>182****4444抽中10元红包</p>
+                    <p>182****4444抽中10元红包</p>
+            </li>
+            <li>
+                	<a href="###">积分排行榜&gt;</a><span>今日排名：20</span>
+                </li>
+            </ul>
+            <button class="recordBtn"><span>中奖纪录</span></button>
+        </div>
+        
+        <div class="btmTxt">当日所得积分排名前100，即可获得1000积分奖励。</div>
+        
+    </article>
+</body>
+</html>

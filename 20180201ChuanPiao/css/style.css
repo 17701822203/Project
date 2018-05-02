@@ -1,0 +1,346 @@
+/*Created by huang.jun on 18-2-1*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+button:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopImg {
+  font-size: 0;
+}
+.TopImg img {
+  width: 100%;
+}
+.TopBg {
+  background: #D92C2E;
+}
+.CouponsWrap {
+  margin: 0 .75rem;
+  background: #FFF0DB;
+  border: 1px solid #FFC38D;
+  padding: .45rem .25rem .25rem .25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.CouponsWrap:after,
+.CouponsWrap:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.CouponsWrap .CouponsBg:nth-of-type(1),
+.CouponsWrap .CouponsBg dt,
+.CouponsWrap .CouponsBg dd,
+.CouponsWrap .CouponsBg dt small,
+.CouponsWrap .CouponsBg dt strong,
+.CouponsWrap .CouponsBg dt ul {
+  float: left;
+}
+.CouponsWrap .CouponsBg:nth-of-type(2) {
+  float: right;
+}
+.CouponsWrap .CouponsBg dt {
+  width: 6.25rem;
+  height: 2.9rem;
+  background: url("../img/CouponsLeft.png") no-repeat;
+  background-size: 100% 100%;
+  color: #fae9c7;
+}
+.CouponsWrap .CouponsBg dt small {
+  font-size: .65rem;
+  padding: 1.15rem 0 0 .7rem;
+}
+.CouponsWrap .CouponsBg dt strong {
+  font-family: "PingFangSC-Semibold";
+  font-size: 1.55rem;
+  padding: .25rem 0 0 0;
+}
+.CouponsWrap .CouponsBg dt ul {
+  padding: .75rem 0 0 .3rem;
+}
+.CouponsWrap .CouponsBg dt ul li:nth-of-type(1) {
+  font-size: .55rem;
+  line-height: .55rem;
+}
+.CouponsWrap .CouponsBg dt ul li:nth-of-type(2) {
+  font-family: "PingFangSC-Light";
+  font-size: .45rem;
+  line-height: .45rem;
+  margin-top: .2rem;
+}
+.CouponsWrap .CouponsBg dd {
+  width: 2rem;
+  height: 2.9rem;
+  background: url("../img/CouponsRight1.png") no-repeat;
+  background-size: 100% 100%;
+}
+.CouponsWrap .CouponsBg.On dt {
+  position: relative;
+}
+.CouponsWrap .CouponsBg.On dt:after {
+  width: 1.3rem;
+  height: .8rem;
+  position: absolute;
+  content: "";
+  background: url("../img/Icon.png") no-repeat;
+  background-size: 100% 100%;
+  right: .2rem;
+  bottom: .3rem;
+}
+.CouponsWrap .CouponsBg.On dd {
+  background: url("../img/CouponsRight2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.ListBox {
+  background-color: #D93B3C;
+  background-image: -webkit-linear-gradient(top, #D93B3C, #BA272F);
+  background-image: -moz-linear-gradient(top, #D93B3C, #BA272F);
+  background-image: -o-linear-gradient(top, #D93B3C, #BA272F);
+  background-image: -ms-linear-gradient(top, #D93B3C, #BA272F);
+  background-image: linear-gradient(top, #D93B3C, #BA272F);
+  padding: .6rem .7rem 0 .7rem;
+}
+.ListBox ul li {
+  height: 2rem;
+  line-height: 2rem;
+  background: #FFEFD8;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  border-radius: 2rem;
+  margin-top: .4rem;
+}
+.ListBox ul li h3 {
+  float: left;
+  font-size: .75rem;
+  color: #333;
+  width: 5.6rem;
+  padding-left: .6rem;
+}
+.ListBox ul li div {
+  color: #a43232;
+  float: left;
+  width: 6rem;
+}
+.ListBox ul li div span {
+  float: left;
+  font-size: .75rem;
+  line-height: .75rem;
+  padding: .65rem 0 0 0;
+}
+.ListBox ul li div big {
+  float: left;
+  font-size: .9rem;
+  line-height: .9rem;
+  padding: .5rem 0 0 .2rem;
+}
+.ListBox ul li div small {
+  float: left;
+  font-size: .45rem;
+  line-height: .45rem;
+  padding: .9rem 0 0 0;
+}
+.ListBox ul li div cite {
+  float: left;
+  font-size: .55rem;
+  line-height: .55rem;
+  color: #999;
+  font-style: inherit;
+  margin-left: .4rem;
+  margin-top: .85rem;
+  text-decoration: line-through;
+}
+.ListBox ul li button {
+  float: right;
+  width: 4.5rem;
+  height: 1.65rem;
+  border: 0;
+  background: #B4242D;
+  color: #ffefda;
+  font-size: .75rem;
+  line-height: 1.65rem;
+  text-align: center;
+  -webkit-border-radius: 1.65rem;
+  -moz-border-radius: 1.65rem;
+  border-radius: 1.65rem;
+  margin: .175rem .175rem 0 0;
+}
+.ListBox .Btn {
+  margin-top: 1.25rem;
+}
+.ListBox .Btn a {
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  font-size: .75rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #F7B34E;
+  background-image: -webkit-linear-gradient(top, #F7B34E, #ED5B36);
+  background-image: -moz-linear-gradient(top, #F7B34E, #ED5B36);
+  background-image: -o-linear-gradient(top, #F7B34E, #ED5B36);
+  background-image: -ms-linear-gradient(top, #F7B34E, #ED5B36);
+  background-image: linear-gradient(top, #F7B34E, #ED5B36);
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  border-radius: 2rem;
+}
+.Title {
+  font-size: 0;
+  position: relative;
+}
+.Title img {
+  width: 100%;
+}
+.Title span {
+  right: .75rem;
+  bottom: .9rem;
+  position: absolute;
+  font-size: .65rem;
+  color: #e7bf74;
+  width: 2.375rem;
+  height: .8rem;
+  line-height: .8rem;
+  text-align: center;
+  border: 1px solid #e7bf74;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+}
+.LayBg {
+  width: 13.325rem;
+  height: 17.625rem;
+  background: url("../img/LayBg.png") no-repeat;
+  background-size: 100% 100%;
+  margin-left: -6.6625rem;
+  position: fixed;
+  z-index: 30;
+  left: 50%;
+  top: 30%;
+}
+.LayBg .RuleList {
+  color: #fff;
+}
+.LayBg .RuleList dt {
+  font-family: "PingFangSC-Heavy";
+  font-size: .75rem;
+  line-height: .75rem;
+  text-align: center;
+  padding-top: 1.25rem;
+}
+.LayBg .RuleList dd {
+  font-size: .55rem;
+  padding: 0 .7rem;
+}
+.LayBg .RuleList dd p {
+  line-height: 1rem;
+  margin-top: .3rem;
+}
+.LayBg .CloseBtn {
+  width: 1.375rem;
+  height: 2.35rem;
+  position: absolute;
+  right: .675rem;
+  top: -2.35rem;
+  background: url("../img/close.png") no-repeat;
+  background-size: 100% 100%;
+}
+.CouponLay {
+  position: fixed;
+  width: 15.25rem;
+  height: 13.25rem;
+  background: url("../img/LayBg2.png") no-repeat;
+  background-size: 100% 100%;
+  z-index: 30;
+  left: 50%;
+  margin-left: -7.625rem;
+  top: 30%;
+}
+.CouponLay .CouponTxt {
+  color: #fff6bb;
+  text-align: center;
+  margin-top: 5.85rem;
+}
+.CouponLay .CouponTxt dt {
+  font-size: 1.65rem;
+  line-height: 1.65rem;
+}
+.CouponLay .CouponTxt dd {
+  font-size: .75rem;
+  line-height: .75rem;
+  margin-top: .7rem;
+}
+.CouponLay .LayBtn {
+  height: 2.25rem;
+  padding: 1rem 1.5rem 0 1.5rem;
+}
+.CouponLay .LayBtn a {
+  background-color: #FFFDC4;
+  background-image: -webkit-linear-gradient(top, #FFFDC4, #FFE48B);
+  background-image: -moz-linear-gradient(top, #FFFDC4, #FFE48B);
+  background-image: -o-linear-gradient(top, #FFFDC4, #FFE48B);
+  background-image: -ms-linear-gradient(top, #FFFDC4, #FFE48B);
+  background-image: linear-gradient(top, #FFFDC4, #FFE48B);
+  display: block;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  color: #ea5b29;
+  font-size: .9rem;
+  -webkit-border-radius: 2.25rem;
+  -moz-border-radius: 2.25rem;
+  border-radius: 2.25rem;
+}
+.CouponLay .CloseBtn {
+  width: 1.75rem;
+  height: 1.75rem;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.875rem;
+  background: url("../img/close2.png") no-repeat;
+  background-size: 100% 100%;
+  bottom: -3rem;
+}

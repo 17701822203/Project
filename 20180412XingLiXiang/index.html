@@ -1,0 +1,404 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/flickity-docs.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+<section style="display:none;">
+    <div class="shadow"></div>
+    <!--==填写人==-->
+    <div class="fill-in" style="display:none;">
+        <dl class="top">
+            <dt>
+                <span class="left">我为</span>
+                <span class="center"><i><!--==点击后去除==--></i><input type="text"></span>
+                <span class="right">整理了一个行李箱</span>
+            </dt>
+            <dd>填写想一起出去玩的TA<br/>家人，基友，姐妹，明星或者自己....</dd>
+        </dl>
+        <div class="btm"><button>完成</button></div>
+    </div>
+
+    <!--==已经登陆==-->
+    <div class="layer-box" style="display:none;">
+        <i class="close"></i>
+        <div class="top-tit">为促成一段双宿双飞的佳话<br/>送你五一出行红包！</div>
+        <div class="coupon-box">
+            <dl class="Coupon">
+                <dt>
+                    <span>&yen;</span>
+                    <strong>10</strong>
+                    <big>火车票加速包</big>
+                </dt>
+                <dd>有效期至2018.05.31</dd>
+            </dl>
+        </div>
+        <div class="layer-btn"><button>领取成功<span>去使用</span></button></div>
+    </div>
+
+    <!--==领取成功==-->
+    <div class="layer-box" style="display:none;">
+        <i class="close"></i>
+        <div class="top-tit"><h4>成功领取红包！</h4></div>
+        <div class="coupon-box">
+            <dl class="Coupon">
+                <dt>
+                    <span>&yen;</span>
+                    <strong>10</strong>
+                    <big>火车票加速包</big>
+                </dt>
+                <dd>有效期至2018.05.31</dd>
+            </dl>
+        </div>
+        <div class="layer-btn"><button>去使用</button></div>
+    </div>
+
+    <!--==领取成功==-->
+    <div class="layer-box" style="display:;">
+        <i class="close"></i>
+        <div class="top-tit">为促成一段双宿双飞的佳话<br/>送你五一出行红包！</div>
+        <dl class="layer-input">
+            <dt><input type="text" placeholder="请输入手机号"><span>获取验证码</span></dt>
+            <dd><input type="text" placeholder="请输入验证码"></dd>
+        </dl>
+        <div class="layer-btn"><button>立即领取红包</button></div>
+    </div>
+
+</section>
+    <div class="Bg1" style="display:none;">
+        <img class="Icon1" src="img/Icon1.png">
+        <label>
+            <img class="Icon2" src="img/Icon2.png">
+            <img class="Icon3" src="img/Icon3.png">
+            <img class="Icon4" src="img/Icon4.png">
+            <img class="Icon5" src="img/Icon5.png">
+            <img class="Icon6" src="img/Icon6.png">
+        </label>
+        <img class="Txt1" src="img/txt1.png">
+        <img class="Txt2" src="img/txt2.png">
+        <img class="Btn1" src="img/btn1.png">
+        <img class="Btn2" src="img/btn2.png">
+    </div>
+    <div class="Bg2" style="display:;">
+        <img class="Return" src="img/Return.png">
+        <img class="TopTitle" src="img/TopTitle.png">
+        <div class="box">
+
+        </div>
+        <button class="complete"></button>
+    </div>
+    <div class="fixed-btm" style="display:;">
+        <div class="js_tab Expression">
+            <div class="tips">还能放<span>11</span>件物品</div>
+            <ul class="jsTab_title">
+                <li class="coat"><img src="img/TabIcon1.png"></li>
+                <li class="underwear"><img src="img/TabIcon2.png"></li>
+                <li class="wash"><img src="img/TabIcon3.png"></li>
+                <li class="equipment"><img src="img/TabIcon4.png"></li>
+                <li class="prop"><img src="img/TabIcon5.png"></li>
+            </ul>
+            <div class="jsTab_con show-neighbors js-flickity" data-flickity-options='{ "wrapAround": true,"prevNextButtons": false }'>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="jsTab_con show-neighbors js-flickity" data-flickity-options='{ "wrapAround": true,"prevNextButtons": false }'>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="jsTab_con show-neighbors js-flickity" data-flickity-options='{ "wrapAround": true,"prevNextButtons": false }'>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="jsTab_con show-neighbors js-flickity" data-flickity-options='{ "wrapAround": true,"prevNextButtons": false }'>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+                <div class="gallery-cell">
+                    <ul>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                        <li><img src="img/test.png"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-change green" style="display:none;">
+        <img class="TopTitle" src="img/TopTitle.png">
+        <img class="Return" src="img/Return.png">
+        <img class="decorate" src="img/decorate.png">
+        <div class="box"></div>
+        <dl class="txt-list">
+            <dt><strong>想去浪的我</strong></dt>
+            <dd>
+                <p>特意带了小猫咪去旅行，怕不是小天使吧！</p>
+                <p>带了这么多衣服，一定友圈自友圈自拍狂魔。</p>
+                <p>带了这么多衣服，一定是朋友圈自拍狂魔友圈自。</p>
+            </dd>
+        </dl>
+        <ul class="btm-btn">
+            <li class="left"><button>领五一出游红包</button></li>
+            <li class="right"><button>晒晒行李箱</button></li>
+        </ul>
+    </div>
+    <div class="btm-ewm" style="display:none;">
+        <img src="img/ewm.jpg">
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var tabs=$(".js_tab");
+            tabs.each(function(){
+                $(this).find(".jsTab_title li").first().addClass("on");
+                $(this).find(".jsTab_con").first().show();
+            });
+            $(".Expression").js_tab();
+//            $(".box2").js_tab();
+//            $(".box3").js_tab();
+//            $(".box4").js_tab();
+//            $(".box5").js_tab();
+        });
+        (function($){
+            $.fn.extend({
+                "js_tab":function(){
+                    $(this).find(".jsTab_title li").each(function(index){
+                        $(this).click(function(){
+                            $(this).siblings("li").removeClass("on");
+                            $(this).addClass("on");
+                            var tab_c=$(this).parents(".js_tab").find(".jsTab_con");
+                            tab_c.hide();
+                            tab_c.eq(index).show();
+                        });
+                        return $(this);
+                    });
+                }
+            });
+        })(jQuery);
+    </script>
+
+</body>
+</html>
+

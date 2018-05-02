@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="css/style.less" rel="stylesheet/less" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript">
+        window.onload=function(){
+            document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+            window.addEventListener("resize",setRemSize,false);
+            function setRemSize(){
+                document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+            }
+        };
+    </script>
+</head>
+
+<body>
+	<article>
+        <img src="img/top-img1.jpg">
+        <img src="img/top-img2.jpg">
+        <div class="btnBox"><a class="btn" href="###">立即购票</a></div>
+        <img src="img/top-img3.jpg">
+        <dl class="btmTxt">
+            <dd><img class="t1" src="img/txtIcon1.png">台铁预售15天（含订票当天）的车票，今早提前准备;<img class="t2" src="img/txtIcon2.png"></dd>
+            <dd><img class="t1" src="img/txtIcon1.png">如目的地火车票紧张，可同一车次分段购票，不用下车，仅换位置即可。例如花莲-枋寮，可买花莲-台东，台东-枋寮的同一车次两段票;<img class="t2" src="img/txtIcon2.png"></dd>
+            <dd><img class="t1" src="img/txtIcon1.png">可选择购买热门目的地的后几站车次，提前下车。如花莲-枋寮，可选择花莲-潮州（屏东、高雄）车次，经过枋寮提前下车;<img class="t2" src="img/txtIcon2.png"></dd>
+            <dd><img class="t1" src="img/txtIcon1.png">可选择购买出发地的前几站车次，本站上车。如瑞芳-花莲，可选择八堵（七堵、台北）-花莲车次，在瑞芳上车;<img class="t2" src="img/txtIcon2.png"></dd>
+        </dl>
+    </article>
+</body>
+</html>

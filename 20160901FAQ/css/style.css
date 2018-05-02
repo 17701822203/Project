@@ -1,0 +1,43 @@
+/*Created by huang.jun on 16-08-17*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB";background:#fff;}
+
+.FqaList{color:#333;}
+.FqaList li{border-bottom:1px solid #ccc;}
+.FqaList li h3{font-size:0.3rem;padding:0.34rem 0.3rem;font-weight: normal;}
+.FqaList li div{display:none;background:#F3F3F3;font-size:0.24rem;padding:0.2rem 0.3rem;}
+.FqaList li div h4{padding:0.2rem 0 0 0;font-size:0.26rem;}
+.FqaList li div p{line-height:0.36rem;margin-top:0.1rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

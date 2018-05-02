@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script src="js/simplefoucs.js" type="text/javascript"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+document.addEventListener('touchstart',function(){},false);
+$(document).ready(function(){
+	$(".close").click(function(){
+		$("section").parent().hide();	
+	})
+})
+</script>
+</head>
+
+<body>
+	<section>
+    	<div class="shadow"></div>
+        <dl class="popBox">
+        	<dt><img src="img/hongbaoBg.png"><img class="close" src="img/closeBtn.png"></dt>
+            <dd><a href="###"><img src="img/redBtn.png"></a></dd>
+        </dl>
+    </section>
+</body>
+</html>

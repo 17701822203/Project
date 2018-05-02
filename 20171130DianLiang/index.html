@@ -1,0 +1,389 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div style="display:;" class="shadow"></div>
+    <div class="BG">
+        <div class="TxtTop">
+            <strong>5</strong>
+            <span>个好友</span>
+        </div>
+        <div class="TxtBtm">帮你点亮家乡</div>
+    </div>
+    <img class="share" src="img/share.png">
+    <span style="width:11rem;margin-left:-7.2rem;" class="LayerTips">请先输入家乡才能点亮哦</span>
+    <span style="display:none;width:8rem;margin-left:-5.7rem;" class="LayerTips">点亮次数还不够哦</span>
+    <div style="display:none;" class="LayerCoupon">
+        <h3>恭喜你</h3>
+        <h4>达到5次点亮，获得了<span>5元</span>抢票加速券</h4>
+        <div class="Coupon">
+            <div class="CouponTxt">
+                <b>&yen;</b>
+                <strong>5</strong>
+                <ul>
+                    <li>火车票</li>
+                    <li>出行立减券</li>
+                </ul>
+                <span>10次点亮可兑换</span>
+            </div>
+        </div>
+        <h5>在携程APP“我的”里查看优惠券详情</h5>
+        <i class="CloseBtn"></i>
+    </div>
+    <div class="LayerBox" style="display:none;">
+        <dl class="LayerHometown">
+            <dt>你的家乡为</dt>
+            <dd>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>乌鲁木齐</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+                <span>北京市</span>
+            </dd>
+        </dl>
+        <i class="CloseBtn"></i>
+    </div>
+    <dl style="display:none;" class="LayerGZ">
+        <dt>活动规则</dt>
+        <dd>
+            <p>参与点亮家乡活动，即可获得抢票优惠券。每个用户仅限发起一次</p>
+            <p>不同的点亮次数，对应不同的优惠券。</p>
+            <p>每个用户仅可主动点亮一次，可邀请好友帮助，好友打开链接即算作点亮一次，一个好友仅能帮助你点亮一次。</p>
+            <p>邀请好友助攻点亮次数越多，可兑换的优惠券也就越多。每张优惠券不可重复获得。</p>
+            <p>活动最终解释权归携程火车票所有</p>
+            <i class="CloseBtn"></i>
+        </dd>
+    </dl>
+    <div class="TopBg">
+        <div class="img-box"><img src="img/TopBg.jpg"></div>
+        <img class="Logo" src="img/Logo.png">
+        <img class="TopTitle" src="img/TitleBig.png">
+        <img class="LightIcon1" src="img/LightIcon.png">
+        <img class="LightIcon2" src="img/LightIcon.png">
+        <img class="LightIcon3" src="img/LightIcon.png">
+        <img class="LightIcon4" src="img/LightIcon.png">
+        <img class="LightIcon5" src="img/LightIcon.png">
+        <img class="LightIcon6" src="img/LightIcon.png">
+        <img class="LightIcon7" src="img/LightIcon.png">
+        <img class="Firecrackers" src="img/Firecrackers.png">
+        <img class="Firecrackers2" src="img/img3.png">
+        <img class="Firecrackers3" src="img/Firecrackers2.png">
+        <img class="Icon1" src="img/Icon1.png">
+        <img class="Icon2" src="img/Icon2.png">
+        <img class="Icon3" src="img/Icon3.png">
+        <img class="Icon4" src="img/Icon4.png">
+        <img class="Icon5" src="img/Icon5.png">
+        <img class="Icon6" src="img/Icon6.png">
+        <img class="BgIcon1" src="img/BgIcon1.png">
+        <img class="BgIcon2" src="img/BgIcon2.png">
+        <!--旋转开始-->
+        <div id="content">
+            <div class="inner pr">
+                <div class="con_bg ">
+                    <div class="section3">
+                        <div class="u_fr">
+                            <div class="ui_base u_p3d">
+                                <div class="ball_c"></div>
+                                <div class="base u_p3d">
+                                    <div class="ball_base u_p3d ball_1">
+                                        <div class="ball">
+                                            <img src="img/Icon7.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ball_base u_p3d ball_2">
+                                        <div class="ball">
+                                            <img src="img/Icon7.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ball_base u_p3d ball_3">
+                                        <div class="ball">
+                                            <img src="img/Icon7.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ball_base u_p3d ball_4">
+                                        <div class="ball">
+                                            <img src="img/Icon7.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ball_base u_p3d ball_5">
+                                        <div class="ball">
+                                            <img src="img/Icon7.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="ball_base u_p3d ball_6">
+                                        <div class="ball">
+                                            <img src="img/Icon7.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--旋转结束-->
+        <div class="Map">
+            <div class="Img1">
+                <img class="map1 ImgAm1" src="img/Map/map1.png">
+                <img class="map2 ImgAm2" src="img/Map/map2.png">
+                <img class="map3 ImgAm3" src="img/Map/map3.png">
+                <img class="map4 ImgAm4" src="img/Map/map4.png">
+                <img class="map5 ImgAm5" src="img/Map/map5.png">
+                <img class="map6 ImgAm1" src="img/Map/map6.png">
+                <img class="map7 ImgAm2" src="img/Map/map7.png">
+                <img class="map8 ImgAm3" src="img/Map/map8.png">
+                <img class="map9 ImgAm4" src="img/Map/map9.png">
+                <img class="map10 ImgAm5" src="img/Map/map10.png">
+                <img class="map11 ImgAm1" src="img/Map/map11.png">
+                <img class="map12 ImgAm2" src="img/Map/map12.png">
+                <img class="map13 ImgAm3" src="img/Map/map13.png">
+                <img class="map14 ImgAm4" src="img/Map/map14.png">
+                <img class="map15 ImgAm5" src="img/Map/map15.png">
+                <img class="map16 ImgAm1" src="img/Map/map16.png">
+                <img class="map17 ImgAm2" src="img/Map/map17.png">
+                <img class="map18 ImgAm3" src="img/Map/map18.png">
+                <img class="map19 ImgAm4" src="img/Map/map19.png">
+                <img class="map20 ImgAm5" src="img/Map/map20.png">
+                <img class="map21 ImgAm1" src="img/Map/map21.png">
+                <img class="map22 ImgAm2" src="img/Map/map22.png">
+                <img class="map23 ImgAm3" src="img/Map/map23.png">
+                <img class="map24 ImgAm4" src="img/Map/map24.png">
+                <img class="map25 ImgAm5" src="img/Map/map25.png">
+                <img class="map26 ImgAm1" src="img/Map/map26.png">
+                <img class="map27 ImgAm2" src="img/Map/map27.png">
+                <img class="map28 ImgAm3" src="img/Map/map28.png">
+                <img class="map29 ImgAm4" src="img/Map/map29.png">
+                <img class="map30 ImgAm5" src="img/Map/map30.png">
+                <img class="map31 ImgAm1" src="img/Map/map31.png">
+                <img class="map32 ImgAm2" src="img/Map/map32.png">
+            </div>
+            <div class="Img2">
+                <img class="map1" src="img/Map/map1_2.png">
+                <img class="map2" src="img/Map/map2_2.png">
+                <img class="map3" src="img/Map/map3_2.png">
+                <img class="map4" src="img/Map/map4_2.png">
+                <img class="map5" src="img/Map/map5_2.png">
+                <img class="map6" src="img/Map/map6_2.png">
+                <img class="map7" src="img/Map/map7_2.png">
+                <img class="map8" src="img/Map/map8_2.png">
+                <img class="map9" src="img/Map/map9_2.png">
+                <img class="map10" src="img/Map/map10_2.png">
+                <img class="map11" src="img/Map/map11_2.png">
+                <img class="map12" src="img/Map/map12_2.png">
+                <img class="map13" src="img/Map/map13_2.png">
+                <img class="map14 on" src="img/Map/map14_2.png">
+                <img class="map15" src="img/Map/map15_2.png">
+                <img class="map16" src="img/Map/map16_2.png">
+                <img class="map17" src="img/Map/map17_2.png">
+                <img class="map18" src="img/Map/map18_2.png">
+                <img class="map19" src="img/Map/map19_2.png">
+                <img class="map20" src="img/Map/map20_2.png">
+                <img class="map21" src="img/Map/map21_2.png">
+                <img class="map22" src="img/Map/map22_2.png">
+                <img class="map23" src="img/Map/map23_2.png">
+                <img class="map24" src="img/Map/map24_2.png">
+                <img class="map25" src="img/Map/map25_2.png">
+                <img class="map26" src="img/Map/map26_2.png">
+                <img class="map27" src="img/Map/map27_2.png">
+                <img class="map28" src="img/Map/map28_2.png">
+                <img class="map29" src="img/Map/map29_2.png">
+                <img class="map30" src="img/Map/map30_2.png">
+                <img class="map31" src="img/Map/map31_2.png">
+                <img class="map32" src="img/Map/map32_2.png">
+                <img class="map33" src="img/Map/MapIcon.png"><!--澳门-->
+                <img class="map34" src="img/Map/MapIcon.png"><!--香港-->
+            </div>
+        </div>
+        <div class="TxtBox">
+            <span>你为家乡</span>
+            <b style="color:#676FA1;"><i class="TxtAm"></i>**省</b><!--选中后去除style跟i标签-->
+            <span>点亮1次</span>
+        </div>
+        <div class="Tips">还剩4次机会</div>
+        <div class="TopBtn"></div>
+        <ul class="Statistics">
+            <li>总点亮：980000次</li>
+            <li>领取红包：350000人</li>
+        </ul>
+    </div>
+    <div class="Title"><img src="img/Title.jpg"></div>
+    <div class="WrapBg">
+        <div class="CouponTop"></div>
+        <div class="CouponCenter">
+            <div class="Coupon">
+                <div class="CouponLeft">
+                    <i></i>
+                    <dl>
+                        <dt>
+                            <span>&yen;</span>
+                            <b>5</b>
+                            <div>
+                                <h4>火车票</h4>
+                                <h5>抢票加速券</h5>
+                            </div>
+                        </dt>
+                        <dd><p>5次点亮可兑换</p></dd>
+                    </dl>
+                </div>
+                <div class="CouponRight1"></div>
+            </div>
+
+            <div class="Coupon">
+                <div class="CouponLeft">
+                    <dl>
+                        <dt>
+                            <span>&yen;</span>
+                            <b>5</b>
+                        <div>
+                            <h4>火车票</h4>
+                            <h5>出行立减券</h5>
+                        </div>
+                        </dt>
+                        <dd><p>10次点亮可兑换</p></dd>
+                    </dl>
+                </div>
+                <div class="CouponRight2"></div>
+            </div>
+
+            <div class="Coupon">
+                <div class="CouponLeft">
+                    <dl>
+                        <dt>
+                            <span>&yen;</span>
+                            <b>5</b>
+                        <div>
+                            <h4>火车票</h4>
+                            <h5>抢票加速券</h5>
+                        </div>
+                        </dt>
+                        <dd><p>20次点亮可兑换</p></dd>
+                    </dl>
+                </div>
+                <div class="CouponRight3"></div>
+            </div>
+
+        </div>
+        <div class="CouponBtm"></div>
+        <div class="Title2"><img src="img/Title2.jpg"></div>
+        <dl class="TimeBox">
+            <dt>今天可抢<span>02</span>月<span>14</span>号 春运车票</dt>
+            <dd>距离除夕仅剩32天</dd>
+        </dl>
+        <div class="RaidersWrap">
+            <div class="Raiders1">
+                <img src="img/Raiders1.jpg">
+                <dl>
+                    <dt>
+                        <h4>预售期前</h4>
+                        <h5>预约抢</h5>
+                    </dt>
+                    <dd><p>最多可提前60天预约，<br/>自动抢票，抢票双保险</p></dd>
+                </dl>
+            </div>
+            <div class="Raiders2">
+                <img src="img/Raiders2.jpg">
+                <dl>
+                    <dt>
+                        <h4>预售开始</h4>
+                        <h5>信用抢</h5>
+                    </dt>
+                    <dd><p>先下单，出票再付款，<br/>抢票更安全</p></dd>
+                </dl>
+            </div>
+            <div class="Raiders3">
+                <img src="img/Raiders3.jpg">
+                <dl>
+                    <dt>
+                        <h4>出发前15天</h4>
+                        <h5>捡漏票</h5>
+                    </dt>
+                    <dd><p>“退票潮”，实时监控，有<br/>票自动抢，抢票更省心</p></dd>
+                </dl>
+            </div>
+            <div class="Raiders4">
+                <img src="img/Raiders4.jpg">
+                <dl>
+                    <dt>
+                        <h4>智能交通方案</h4>
+                    </dt>
+                    <dd><p>火车票+飞机+汽车<br/>智能规划出行方案</p></dd>
+                </dl>
+            </div>
+            <div class="Raiders5">
+                <img src="img/Raiders5.jpg">
+                <dl>
+                    <dt>
+                        <h4>顺风送你回家</h4>
+                    </dt>
+                    <dd><p style="font-size:.7rem;">临近除夕了，还没抢到票？<br/>拼车出发，一路顺风到家！</p></dd>
+                    <dd style="opacity:1;padding-top:1rem;"><img src="img/yuyue.png"></dd>
+                </dl>
+            </div>
+            <div class="Raiders6"><img src="img/Raiders6.jpg"></div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,58 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>夏日狂欢季</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script type="text/javascript">
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+		window.addEventListener("resize",setRemSize,false);
+		function setRemSize(){
+			document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+		}
+    </script>
+    <script>
+        document.addEventListener('touchstart',function(){},false);
+    </script>
+    <script>
+      $(document).ready(function(){
+    	setInterval (function () {
+           $(".txt").animate({marginLeft:"-7.5rem"},7000);
+            $(".txt").animate({marginLeft:"7.5rem"},0)
+        }, 3);   
+      })
+   </script>
+</head>
+
+<body>
+	<article>
+    	<span class="tit"></span>
+        <div style="overflow:hidden;" id="s" class="top-txt"><span class="txt">您的每笔订单都有0.1元直达灾区现场</span></div>
+        <dl class="number">
+        	<dt>
+            	<span>1</span>
+                <span>2</span>
+            	<span>3</span>
+                <span>4</span>
+                <span>5</span>
+            	<span>6</span>
+                <span>7</span>
+            </dt>
+            <dd>份爱心正在传递</dd>
+        </dl>
+        <button class="btn">立即购票</button>
+        <dl class="txt-list">
+        	<dt>爱心说明：</dt>
+            <dd>
+            	<p>1．活动时间：2016.7.7-2016.7.11。</p>
+                <p>2．本次献爱心活动针对近日受洪水影响较大的湖北、安徽、江苏等地。</p>
+                <p>3．携程汽车票按照每笔汽车票订单捐出0.1元，每一次爱心分享捐出0.01元（同一用户多次分享记作1次），所有捐款将放入爱心基金用于慰问重点灾区的长途客运乘客。 </p>
+                <p>4．活动禁止一切恶意刷单行为。</p>
+                <p>5．本次活动最终解释权归携程网所有。</p>
+            </dd>
+        </dl>
+        <div class="btm"></div>
+    </article>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+document.addEventListener('touchstart',function(){},false);
+
+setTimeout(function () {
+	$(".font1").animate({opacity:"1",top:"2.4rem",width:"2.6rem"}, 300);
+	return false;
+}, 10);
+setTimeout(function () {
+	$(".font2").animate({opacity:"1",top:"4.2rem",width:"2rem"}, 200);
+	return false;
+}, 200);
+setTimeout(function () {
+	$(".font3").animate({opacity:"1",top:"5.2rem",width:"2.8rem"}, 200);
+	return false;
+}, 500);
+setTimeout(function () {
+	$(".font4").animate({opacity:"1",top:"4.8rem",width:"2.8rem"}, 50);
+	return false;
+}, 700);
+setTimeout(function () {
+	$(".font5").animate({opacity:"1",top:"7.6rem",width:"1.4rem"}, 50);
+	return false;
+}, 900);
+setTimeout(function () {
+	$(".font6").animate({opacity:"1",top:"8rem",width:"3.6rem"}, 50);
+	return false;
+}, 1100);
+setTimeout(function () {
+	$(".font7").animate({opacity:"1",top:"10rem",width:"3.8rem"}, 50);
+	return false;
+}, 1300);
+setTimeout(function () {
+	$(".font8").animate({opacity:"1",top:"11.5rem",width:"3.4rem"}, 50);
+	return false;
+}, 1500);
+setTimeout(function () {
+	$(".font9").animate({opacity:"1",top:"12rem",width:"2.6rem"}, 50);
+	return false;
+}, 1700);
+setTimeout(function () {
+	$(".font10").animate({opacity:"1",top:"13.8rem",width:"2.2rem"}, 50);
+	return false;
+}, 1400);
+setTimeout(function () {
+	$(".font11").animate({opacity:"1",top:"14.6rem",width:"3rem"}, 200);
+	return false;
+}, 1500);
+setTimeout(function () {
+	$(".font12").animate({opacity:"1",top:"16rem",width:"3rem"}, 200);
+	return false;
+}, 1500);
+</script>
+</head>
+
+<body>
+	<article>
+    	<img src="img/BG.jpg">
+        <img class="font1" src="img/tie.png">
+        <img class="font2" src="img/you.png">
+        <img class="font3" src="img/fu.png">
+        <img class="font4" src="img/li.png">
+        <img class="font5" src="img/qian.png">
+        <img class="font6" src="img/wan.png">
+        <img class="font7" src="img/jiudian.png">
+        <img class="font8" src="img/hong.png">
+        <img class="font9" src="img/bao.png">
+        <img class="font10" src="img/da.png">
+        <img class="font11" src="img/pai.png">
+        <img class="font12" src="img/song.png">
+        <img class="hotel" src="img/hotel.png">
+        <span class="LftIcon"><img src="img/left.png"></span>
+        <span class="RitIcon"><img src="img/right.png"></span>
+        <dl class="popBox">
+        	<dt>恭喜你获得30元酒店优惠券</dt>
+            <dd><img src="img/chakan.png"></dd>
+        </dl>
+        <ul class="btnBox" style="display:;">
+        	<li><a class="btn" href="###">立即订酒店</a></li>
+            <li><a class="btn" href="###">分享给好友</a></li>
+        </ul>
+        <span class="ljlq" style="display:none"><a class="btn" href="###">立即领券</a></span>
+        <div class="txtBg1" style="display:none;">
+            <ul class="txtLst">
+                <li><i><img src="img/on1.png"></i>点击铁友左上角按钮，选择特价酒店按钮。</li>
+                <li><i><img src="img/on2.png"></i>选择酒店、房型，进入订单填写页。</li>
+                <li><i><img src="img/on3.png"></i>选择使用优惠券，提交订单即可</li>
+            </ul>
+        </div>
+        <div class="txtBg2" style="display:;">
+            <ul class="txtLst2">
+                <li><i><img src="img/on1.png"></i>适用于单间大于200元的国内酒店（含港<br/>澳台）房型（旅行社、团购、小时房、特价<br/>房除外）</li>
+                <li><i><img src="img/on2.png"></i>支持在铁友火车票手机客户端使用。</li>
+                <li><i><img src="img/on3.png"></i>使用优惠券成功预定并入住，30元将在订<br/>单成功后3个工作日内返还至您的携程账号。</li>
+                <li><i><img src="img/on4.png"></i>每张优惠券使用一次。每张订单限用一张<br/>优惠券。优惠券不能转让他人。</li>
+                <li><i><img src="img/on5.png"></i>优惠券自发放之日起14天内有效。</li>
+            </ul>
+        </div>
+    </article>
+</body>
+</html>

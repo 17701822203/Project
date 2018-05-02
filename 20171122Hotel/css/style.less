@@ -1,0 +1,146 @@
+/*Created by huang.jun on 17-10-10*/
+*{margin:0;padding:0;}
+a{text-decoration:none;-webkit-tap-highlight-color:transparent;
+  &:active{opacity:.7;}
+}
+ol,ul,li{list-style:none;}
+body{font-family:PingFang SC Regular,sans-serif;}
+.shadow{width:100%;height:100%;position:fixed;z-index:20;background:#000;opacity:.6;top:0;left:0;}
+.img-box{font-size:0;
+  img{width:100%;}
+}
+//四角的半径定制.border-radius-custom(20px, 20px, 0px, 0px);
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+  border-radius: @topleft @topright @bottomright @bottomleft;
+}
+//方块阴影.box-shadow(5px, 5px, 6px, 0.3);
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: .5) {
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+//圆角.border-radius(@radius:5px)
+.border-radius(@radius:5px){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+//input默认字体.placeholder({color:#666;});
+.placeholder(@a){
+  &::-webkit-input-placeholder{@a();}
+  &:-moz-placeholder{@a();}
+  &::-moz-placeholder{@a();}
+  &:-ms-input-placeholder{@a();}
+}
+//线性渐变.gradient(left, #663333, #333333);
+.gradient(@origin:left,@start:#fff,@stop:#000){
+  background-color:@start;
+  background-image:-webkit-linear-gradient(@origin,@start,@stop);
+  background-image:-moz-linear-gradient(@origin,@start,@stop);
+  background-image:-o-linear-gradient(@origin,@start,@stop);
+  background-image:-ms-linear-gradient(@origin,@start,@stop);
+  background-image:linear-gradient(@origin,@start,@stop);
+}
+//清除浮动
+.ClearBox{
+  &:after,&:before{content: " ";display: table;clear: both;}
+}
+
+.TopImg{position:relative;
+  .CityBtn{height:1.375rem;line-height:1.375rem;padding:0 .5rem 0 1.75rem;color:#fff;font-size:.7rem;position:absolute;left:0;top:.7rem;background:rgba(251,51,103,.7);.border-radius-custom(0,.75rem,0,.75rem);
+    &:after{width:.575rem;height:.75rem;position:absolute;content:"";background:url("../img/fixIcon.png") no-repeat;background-size:100% 100%;left:.75rem;top:.25rem;}
+  }
+  .HotelName{font-size:.85rem;line-height:.85rem;color:#fff;position:absolute;left:.6rem;bottom:.95rem;letter-spacing:.1rem;}
+  .CountDown{height:.875rem;position:absolute;bottom:.95rem;right:.7rem;
+    b{color:#FB3367;font-weight:normal;font-size:.65rem;line-height:.875rem;float:left;}
+    span{width:.875rem;height:.875rem;float:left;color:#fff;background:#FB3367;text-align:center;line-height:.875rem;font-family:PingFangHK Semibold;font-size:.7rem;margin-left:.425rem;position: relative;.border-radius(@radius:.075rem);
+      &:nth-of-type(2):after,&:nth-of-type(2):before{width:.075rem;height:.425rem;position:absolute;content:"";background:url("../img/Symbol.png") no-repeat;background-size:100% 100%;top:.25rem;}
+      &:nth-of-type(2):after{left:-.25rem;}
+      &:nth-of-type(2):before{right:-.25rem;}
+    }
+  }
+}
+
+.Remind{height:2.75rem;background:url("../img/TopBg.jpg") no-repeat right top #F7CF49;background-size:5.5rem 2.75rem;
+  small{float:left;font-size:1.4rem;line-height:1.4rem;color:#8b0125;padding-left:.6rem;margin-top:1rem;font-family: Arial;}
+  big{float:left;font-size:2.25rem;line-height:2.25rem;color:#8b0125;margin:.3rem 0 0 .2rem;}
+  b{float:left;font-weight: normal;font-size:1rem;padding-top:1rem;color:#8b0125;}
+  dl{float:left;color:#8b0125;font-size:.6rem;text-align:center;line-height:.6rem;margin-left:.3rem;
+    dt{margin-top:.7rem;}
+    dd{margin-top:.35rem;font-family:PingFang-SC Regular;
+      span{text-decoration:line-through;}
+    }
+  }
+  ul{float:right;padding-right:.6rem;margin-top:.25rem;
+    li{text-align:center;
+      &:nth-of-type(1){
+        a{display:inline-block;width:3.45rem;height:1.4rem;line-height:1.4rem;text-align:center;color:#fff;font-size:.6rem;background:#FB3367;.border-radius(@radius:.075rem);}
+      }
+      &:nth-of-type(2){font-size:.4rem;color:#8b0125;margin-top:.15rem;}
+    }
+  }
+}
+
+.ListBg{background:url("../img/Bg.jpg") no-repeat #F8494C ;background-size:100% 36.875rem;padding:1.15rem .5rem 1rem .5rem;
+  .WrapList{background:#F7D047;padding:0 0 .7rem .5rem;.ClearBox;
+    .Hotel{width:8rem;height:8.925rem;background:#fff;.border-radius(@radius:.15rem);overflow:hidden;float:left;margin:.45rem 0 0 .45rem;
+      .HotelImg{font-size:0;
+        img{width:8rem;height:4.5rem;}
+      }
+      ul{padding:0 .5rem 0 .5rem;
+        .HotelName{font-size:.7rem;line-height:.7rem;color:#3c0f0f;font-weight:bold;padding-top:.55rem;}
+        .HotelPrice{font-size:.55rem;line-height:.55rem;padding-top:.3rem;color:#B19F9F;
+          span{color:#FB3367;}
+        }
+        .HotelBtn{padding-top:.375rem;
+          a{display:block;height:1.5rem;line-height:1.5rem;color:#fff;text-align:center;background:#FA3765;font-size:.7rem;.border-radius(@radius:.15rem);}
+        }
+      }
+    }
+  }
+}
+
+.PopupBox{position:fixed;width:16.125rem;background:#fff;z-index:30;left:50%;margin-left:-8.0625rem;top:5rem;.border-radius(@radius:.25rem);-webkit-box-sizing:border-box;box-sizing:border-box;
+  .CloseBtn{width:1.325rem;height:1.325rem;background:url("../img/Close.png") no-repeat;background-size:100% 100%;position: absolute;bottom:-1.95rem;left:50%;margin-left:-.6625rem;}
+  h4{font-size:.8rem;line-height:.8rem;text-align:center;padding-top:1.05rem;color:#333;}
+  dl{padding:0 1.55rem 1.65rem 0;
+    dt{font-size:.65rem;line-height:.65rem;color:#999;padding:1.5rem 0 0 1.8rem;}
+    dd{.ClearBox;padding:.3rem 0 0 1.3rem;
+      a{float:left;width:3.65rem;height:1.4rem;line-height:1.4rem;text-align:center;font-size:.7rem;margin:.5rem 0 0 .5rem;.border-radius(@radius:.075rem);}
+      &.ctrip a{color:#5495E6;border:1px solid #5495E6;}
+      &.tieyou a{color:#FC6E51;border:1px solid #FC6E51; }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

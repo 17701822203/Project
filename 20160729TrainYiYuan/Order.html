@@ -1,0 +1,70 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>一元免单</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript">
+	document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+	window.addEventListener("resize",setRemSize,false);
+	function setRemSize(){
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+	}
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".add").click(function(){
+                var n=$(this).prev().val();
+                var num=parseInt(n)+1;
+                if(num==0){ return;}
+                $(this).prev().val(num);
+            });
+            $(".jian").click(function(){
+                var n=$(this).next().val();
+                var num=parseInt(n)-1;
+                if(num==0){ return}
+                $(this).next().val(num);
+            });
+            $(".raffle").click(function(){
+                $(".raffle dd").slideToggle("slow");
+                $(this).toggleClass("active"); return false;
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <article>
+        <dl class="Order-top">
+            <dt>
+                <h3>火星探险双人游</h3>
+                <p>(含往返火箭票+参观外星人)</p>
+            </dt>
+            <dd>
+                单价：<big><span>&yen;</span>1.00</big>
+            </dd>
+        </dl>
+        <ul class="Order-center">
+            <li>
+                <label>购买数量</label>
+                <div class="gw_num">
+                    <em class="jian">-</em>
+                    <input type="text" value="1" class="num"/>
+                    <em class="add">+</em>
+                </div>
+            </li>
+            <li><label>姓名</label><input class="txt-input" type="text" value="请输入姓名"/></li>
+            <li><label>身份证</label><input class="txt-input" type="text" value="请输入身份证号码"/></li>
+            <li><label>手机号码</label><input class="txt-input" type="text" value="请输入手机号码"/></li>
+        </ul>
+        <dl class="raffle mt20">
+            <dt><strong>我的抽奖号：</strong><em></em></dt>
+            <dd style="border-top:0.03rem solid #DCDCDC">
+                <p class="rftxt">扫描二维码登录微信. 登录手机微信. 手机上安装并登录微信. 从“发现”，进入“扫一扫”，扫码登录微信网页版. 扫描成功. 请在手机上点击确认以登录，扫描二维码登录微信. 登录手机微信. 手机上安装并登录微信. 从“发现”，进入“扫一扫”，扫码登录微信网页版. 扫描成功. 请在手机上点击确认以登录。</p>
+            </dd>
+        </dl>
+    </article>
+</body>
+</html>

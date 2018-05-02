@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="p1" style="display:none;">
+        <input type="text" class="name name-bg"><!--点击后去除name-bg-->
+        <button class="start"><i></i></button>
+    </div>
+    <div class="p2" style="display:none;">
+        <input type="checkbox" class="option1" />
+        <input type="checkbox" class="option2" />
+        <input type="checkbox" class="option3" />
+    </div>
+    <div class="p3" style="display:none;">
+        <input type="checkbox" class="option1" />
+        <input type="checkbox" class="option2" />
+        <input type="checkbox" class="option3" />
+    </div>
+    <div class="p4" style="display:none;">
+        <input type="checkbox" class="option1" />
+        <input type="checkbox" class="option2" />
+        <input type="checkbox" class="option3" />
+    </div>
+    <div class="p5" style="display:none;">
+        <input type="checkbox" class="option1" />
+        <input type="checkbox" class="option2" />
+        <input type="checkbox" class="option3" />
+    </div>
+    <div class="p6" style="display:none;">
+        <input type="checkbox" class="option1" />
+        <button class="start"></button>
+    </div>
+    <div class="p7" style="display:;">
+        <img class="ewm" src="img/ewm.jpg">
+        <div class="certificate-box">
+            <div class="number">证书编号：002121</div>
+            <img class="tx" src="img/tx.jpg">
+            <dl class="txt-bg">
+                <dt>许门门</dt>
+                <dd><img src="img/txt.png"><span>80%</span></dd>
+            </dl>
+            <dl class="summary">
+                <dt><img src="img/Star.png"><img src="img/Star.png"><img src="img/Star.png"></dt>
+                <dd>
+                    <p>虽然我的工资没涨</p>
+                    <p>但是发际线在上升呀</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="btm-btn">
+            <!--<button class="left"></button>-->
+            <!--<button class="right"></button>-->
+            <button class="center"></button>
+        </div>
+    </div>
+    <div class="p8" style="display:none;">
+        <button class="ctripbtn"></button>
+        <button class="youkubtn"></button>
+    </div>
+</body>
+</html>
+

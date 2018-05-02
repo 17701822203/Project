@@ -1,0 +1,117 @@
+/*Created by huang.jun on 17-02-21*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"PingFang SC Regular","Microsoft yahei",arial,Simsun,sans-serif;}
+
+.bg1{height:11.7rem;background:url("../img/bg1.jpg") no-repeat;background-size:100% 100%;}
+.bg2{height:3.125rem;background:url("../img/bg2.jpg") no-repeat;background-size:100% 100%;}
+.bg2 h3.title{font-size:0.8rem;font-family:Microsoft YaHei;text-align: center;line-height:1.8rem;text-indent:-1.1rem;}
+.bg3{height:2.075rem;background:url("../img/bg3.jpg") no-repeat;background-size:100% 100%;}
+.bg3 h3.title{font-size:0.74rem;text-align: center;line-height:1.8rem;}
+.bg4{height:16.025rem;background:url("../img/bg4.jpg") no-repeat;background-size:100% 100%;position: relative;}
+.bg5{height:27.125rem;background:url("../img/bg5.jpg") no-repeat;background-size:100% 100%;}
+
+.list_lh{height:9.2rem;overflow:hidden;position: absolute;left:0;top:4.8rem;width:100%;}
+.scrollBars-list{font-size:0.7rem;color:#252628;font-family:Microsoft YaHei;padding:0 0 0 3rem;}
+.scrollBars-list li{height:1.3rem;line-height:1.3rem;clear: both;}
+.scrollBars-list li span{display:block;float:left;}
+.scrollBars-list li span:nth-of-type(1){padding-left:1rem;width:2rem;}
+.scrollBars-list li span:nth-of-type(2){padding-left:1rem;}
+.scrollBars-list li span:nth-of-type(3){padding-left:1.9rem;color:#f12a42;}
+.scrollBars-list li span:nth-of-type(3) small{font-size:0.6rem;}
+.scrollBars-list li span:nth-of-type(3) big{font-size:0.95rem;}
+.Activity-rules{font-size:0.65rem;padding:4.6rem 2rem 0 1rem;}
+.Activity-rules li{color:#391919;padding-top:0.36rem;line-height:0.85rem;padding-left:1.4rem;background:url("../img/listIcon.png") no-repeat 0.75rem 0.64rem;background-size:0.35rem 0.35rem;}
+.Activity-rules span{color:#f12a42;}
+
+.logo{width:3.25rem;height:1.2rem;background:url("../img/logo.png") no-repeat;background-size:100% 100%;left:0.5rem;top:0.5rem;position: absolute;}
+.topAm{height:13.75rem;background-image:url("../img/bg.png");background-size:auto 100%;position:relative;}
+.busIcon{width:6.05rem;height:3.525rem;background:url("../img/busIcon.png") no-repeat;background-size:100% 100%;position: absolute;bottom:0.6rem;left:50%;margin-left:-3.025rem;}
+.wq1,.wq2,.wq3{position:absolute;}
+.wq1{background:url("../img/yunIcon1.png") no-repeat;background-size:100% 100%;width:1.225rem;height:1.025rem;left:-2rem;bottom:1rem;}
+.wq2{background:url("../img/yunIcon2.png") no-repeat;background-size:100% 100%;width:0.475rem;height:0.35rem;left:-0.8rem;bottom:0.8rem;}
+.wq3{background:url("../img/yunIcon3.png") no-repeat;background-size:100% 100%;width:0.2rem;height:0.2rem;left:-0.4rem;bottom:0.6rem;}
+.btmBtn{height:19.6rem;background:#FFF8E5;position: relative;}
+.clstxt1{font-size:0.8rem;color:#25292c;line-height:1rem;padding:1rem;letter-spacing:0.02rem;}
+.clstxt2,.clstxt3{font-size:1rem;color:#25292c;text-align: center;padding-top:3rem;}
+.clstxt1 span,.clstxt2 span,.clstxt3 span{color:#ee3053;}
+.button,.AmBtn{width:15.025rem;height:3.4rem;line-height:3.1rem;position: absolute;text-align: center;font-size:1.2rem;color:#4d210e;top:8.05rem;left:50%;margin-left:-7.5125rem;}
+.button{background:url("../img/buttonGray.png") no-repeat;background-size:100% 100%;}
+.AmBtn{background:url("../img/button.png") no-repeat;background-size:100% 100%;}
+
+.btmTxt{text-align:center;font-size:0.8rem;position: absolute;top:13.175rem;width:100%;}
+.btmTxt dt,.btmTxt dd{color:#353342;line-height:1.2rem;height:1.2rem;}
+.btmTxt dd a{color:#5394ff;text-decoration: underline;}
+.TopRight{width:7.1rem;height:2.55rem;background:url("../img/details.png") no-repeat;background-size:100% 100%;position: absolute;right:0rem;top:2rem;}
+.headImg{width:2.05rem;height:2.05rem;position: absolute;left:0.25rem;top:0.25rem;}
+.UserName{font-size:0.7rem;color:#262628;padding-left:2.6rem;height:1rem;line-height:1rem;padding-top:0.2rem;}
+.GongLi{font-size:0.45rem;color:#262628;padding-left:2.6rem;height:0.5rem;line-height:0.5rem;padding-top:0.2rem;}
+.ProgressBox{padding:0 0.375rem 0 2.6rem;}
+.ProgressBar{height:0.35rem;background:#252527;-moz-border-radius:1rem;-webkit-border-radius:1rem;border-radius:1rem;overflow: hidden;}
+.ProgressBar i{background:#F5681A;display:block;height:0.35rem;-moz-border-radius:1rem;-webkit-border-radius:1rem;border-radius:1rem;}
+.BusAnimation{-webkit-animation:am1 3s linear 0ms infinite normal forwards;}
+@-webkit-keyframes am1{
+    from{background-position:0 top;}
+    to{background-position:-32.225rem center;}
+}
+.BusAnimation .busIcon .wq3{-webkit-animation:am2 0.2s linear 0ms infinite normal forwards;}
+@-webkit-keyframes am2{
+    0%{opacity:0;}
+    50%{opacity:1;}
+    100%{opacity:0;}
+}
+.BusAnimation .busIcon .wq2{-webkit-animation:am3 0.25s linear 0ms infinite normal forwards;}
+@-webkit-keyframes am3{
+    0%{opacity:0;}
+    50%{opacity:0.8;}
+    100%{opacity:0;}
+}
+.BusAnimation .busIcon .wq1{-webkit-animation:am4 0.3s linear 0ms infinite normal forwards;}
+@-webkit-keyframes am4{
+    0%{opacity:0;}
+    50%{opacity:0.6;}
+    100%{opacity:0;}
+}
+.gls{width:2.2rem;height:2.2rem;background:url("../img/Kilometers.png") no-repeat;background-size:100% 100%;font-size:0.55rem;position: absolute;font-style:normal;font-family:Airal;text-align: center;line-height:2.8rem;color:#252628;left:2rem;top:-2.5rem;opacity: 0;}
+.btm-txt{position: absolute;width:100%;text-align: center;font-size:0.8rem;line-height:1.2rem;top:1rem;}
+.btm-txt dd a{color:#5394ff;text-decoration: underline;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.str_wrap{overflow:hidden;
+//zoom:1; width:100%; font-size:12px; line-height:16px; position:relative; -moz-user-select: none; -khtml-user-select: none; user-select: none; white-space:nowrap;}
+.str_move{white-space:nowrap; position:absolute; top:0; left:0; cursor:move;}
+.str_move_clone{display:inline-block;
+//display:inline;
+//zoom:1; vertical-align:top; position:absolute; left:100%; top:0;}
+.str_vertical .str_move_clone{left:0; top:100%;}
+.str_down .str_move_clone{left:0; bottom:100%;}
+.str_vertical .str_move,
+.str_down .str_move{white-space:normal; width:100%;}
+.str_static .str_move,
+.no_drag .str_move,
+.noStop .str_move{cursor:inherit;}
+.str_wrap img{max-width:none !important;}

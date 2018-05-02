@@ -1,0 +1,194 @@
+/*Created by huang.jun on 17-08-03*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: PingFang SC Medium, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+section {
+  display: none;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Relative {
+  position: relative;
+}
+.TopBtn {
+  position: absolute;
+  right: 9.2%;
+  margin-top: 68.4%;
+  width: 13.4%;
+}
+.Img1 {
+  position: absolute;
+  left: 2.55%;
+  top: 0;
+  width: 46.5%;
+  -webkit-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  border-radius: 1.25rem;
+}
+.Img2 {
+  position: absolute;
+  right: 2.55%;
+  top: 0;
+  width: 46.5%;
+  -webkit-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  border-radius: 1.25rem;
+}
+.Img3 {
+  position: absolute;
+  left: 2.55%;
+  top: 22.5%;
+  width: 46.5%;
+  -webkit-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  border-radius: 1.25rem;
+}
+.Img4 {
+  position: absolute;
+  right: 2.55%;
+  top: 22.5%;
+  width: 46.5%;
+  -webkit-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  border-radius: 1.25rem;
+}
+.Img5 {
+  position: absolute;
+  left: 2.55%;
+  top: 45%;
+  width: 46.5%;
+  -webkit-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  border-radius: 1.25rem;
+}
+.Img6 {
+  position: absolute;
+  right: 2.55%;
+  top: 45%;
+  width: 46.5%;
+  -webkit-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  border-radius: 1.25rem;
+}
+.Img7 {
+  position: absolute;
+  left: 2.55%;
+  top: 67.5%;
+  width: 46.5%;
+  -webkit-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  border-radius: 1.25rem;
+}
+.Img8 {
+  position: absolute;
+  left: 2.55%;
+  top: 21.5%;
+  width: 95%;
+  -webkit-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 0.875rem rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 1.25rem;
+  -moz-border-radius: 1.25rem;
+  border-radius: 1.25rem;
+}
+.BtmBtn {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 50%;
+  margin-left: -25%;
+}
+.LatBox {
+  width: 12.55rem;
+  height: 6.625rem;
+  background: #fff;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  margin-left: -6.275rem;
+  top: 50%;
+  margin-top: -3.1375rem;
+}
+.LatBox dt {
+  text-align: center;
+  padding-top: .5rem;
+}
+.LatBox dt p {
+  font-size: .75rem;
+  line-height: .75rem;
+  margin-top: .5rem;
+}
+.LatBox dd {
+  padding-top: 1.5rem;
+}
+.LatBox dd a {
+  width: 10rem;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px solid #BFBFBF;
+  line-height: 2.125rem;
+  font-size: .75rem;
+  color: #34b0ff;
+}

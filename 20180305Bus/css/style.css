@@ -1,0 +1,339 @@
+/*Created by huang.jun on 18-2-1*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+button:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  color: #000;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .7;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.swiper-container2 {
+  margin: .75rem 0 0 0;
+  overflow: hidden;
+}
+.swiper-container2:after,
+.swiper-container2:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.swiper-container2 .swiper-slide .swiper-img {
+  font-size: 0;
+  position: relative;
+}
+.swiper-container2 .swiper-slide .swiper-img img {
+  width: 100%;
+}
+.swiper-container2 .swiper-slide .swiper-img span {
+  height: .65rem;
+  line-height: .65rem;
+  position: absolute;
+  padding: 0 .3rem;
+  color: #fff;
+  font-size: .5rem;
+  background: rgba(0, 0, 0, 0.55);
+  left: .2rem;
+  top: .15rem;
+  -webkit-border-radius: 0.65rem;
+  -moz-border-radius: 0.65rem;
+  border-radius: 0.65rem;
+}
+.swiper-container2 .swiper-slide .swiper-introduce {
+  height: 2.85rem;
+  background: #fff;
+  padding: 0 .25rem;
+}
+.swiper-container2 .swiper-slide .swiper-introduce dt {
+  font-size: .6rem;
+  line-height: .6rem;
+  padding-top: .45rem;
+}
+.swiper-container2 .swiper-slide .swiper-introduce dd:after,
+.swiper-container2 .swiper-slide .swiper-introduce dd:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.swiper-container2 .swiper-slide .swiper-introduce dd span {
+  float: left;
+  font-family: "PingFangSC-Heavy";
+  font-size: .6rem;
+  line-height: .6rem;
+  color: #ff7e00;
+  margin: .75rem 0 0 0;
+}
+.swiper-container2 .swiper-slide .swiper-introduce dd strong {
+  float: left;
+  font-family: "PingFangSC-Heavy", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.05rem;
+  color: #ff7e00;
+  margin: .4rem 0 0 .15rem;
+}
+.swiper-container2 .swiper-slide .swiper-introduce dd small {
+  float: left;
+  font-size: .55rem;
+  line-height: .55rem;
+  color: #999;
+  text-decoration: line-through;
+  margin: .8rem 0 0 .65rem;
+}
+.swiper-container2 .swiper-slide .swiper-btn {
+  height: 1.25rem;
+  line-height: 1.25rem;
+  text-align: center;
+  display: block;
+  background: #FF7E00;
+  color: #fff;
+  font-size: .55rem;
+}
+.TxtTitle {
+  height: 2.9rem;
+  background: url("../img/TitleTxt.png") no-repeat center center;
+  background-size: 3.6rem .925rem;
+}
+.CityList1 {
+  padding: .5rem 0 .45rem .555rem;
+  background: #fff;
+}
+.CityList1:after,
+.CityList1:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.CityList1 li {
+  float: left;
+  margin: .45rem 0 0 .85rem;
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 2.45rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  color: #7c7c7c;
+  font-size: .65rem;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+}
+.CityList2 {
+  padding: .5rem 0 .45rem .25rem;
+  background: #fff;
+}
+.CityList2:after,
+.CityList2:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.CityList2 li {
+  float: left;
+  margin: .45rem 0 0 .25rem;
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 4.15rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  color: #7c7c7c;
+  font-size: .65rem;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+}
+.PanicBuying {
+  height: 3rem;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding-left: 1.2rem;
+}
+.PanicBuying .left {
+  float: left;
+  width: 6.75rem;
+}
+.PanicBuying .left dt {
+  font-size: .6rem;
+  line-height: .6rem;
+  color: #333;
+  margin-top: .7rem;
+}
+.PanicBuying .left dd:after,
+.PanicBuying .left dd:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.PanicBuying .left dd span {
+  display: block;
+  height: .675rem;
+  line-height: .675rem;
+  border: 1px solid #19A0F0;
+  float: left;
+  padding: 0 .25rem;
+  font-size: .5rem;
+  color: #19A0F0;
+  margin-top: .25rem;
+  -webkit-border-radius: 0.075rem;
+  -moz-border-radius: 0.075rem;
+  border-radius: 0.075rem;
+}
+.PanicBuying .center {
+  float: left;
+}
+.PanicBuying .center dt {
+  float: left;
+  color: #ff7e00;
+}
+.PanicBuying .center dt span {
+  font-family: PingFangSC-Heavy;
+  font-size: .6rem;
+  line-height: .6rem;
+  float: left;
+  margin: 1.25rem 0 0 0;
+}
+.PanicBuying .center dt strong {
+  font-family: "PingFangSC-Heavy", sans-serif;
+  font-size: .95rem;
+  line-height: .95rem;
+  float: left;
+  margin: .95rem 0 0 .2rem;
+}
+.PanicBuying .center dt small {
+  font-size: .55rem;
+  line-height: .55rem;
+  float: left;
+  margin: 1.25rem 0 0 .05rem;
+}
+.PanicBuying .center dd {
+  float: left;
+  padding: .7rem 0 0 .25rem;
+}
+.PanicBuying .center dd span {
+  font-size: .55rem;
+  color: #999;
+  text-decoration: line-through;
+}
+.PanicBuying .right {
+  float: right;
+  width: 3.5rem;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  text-align: center;
+  font-size: .7rem;
+  background: #19A0F0;
+  color: #fff;
+  margin: .7rem 1.2rem 0 0;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.more-btn {
+  height: 2.2rem;
+  background: #fff;
+  border: 0;
+  font-size: .65rem;
+  color: #333;
+  display: block;
+  width: 100%;
+}
+.more-btn span {
+  position: relative;
+}
+.more-btn span:after {
+  width: .35rem;
+  height: .45rem;
+  content: "";
+  background: url("../img/MoreIcon.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: -0.4rem;
+  top: .2rem;
+}
+.ad-img li {
+  margin-top: .5rem;
+  font-size: 0;
+}
+.ad-img li img {
+  width: 100%;
+}
+.wrapper02 {
+  position: relative;
+  height: 2.5rem;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid #DCDCDC;
+}
+.wrapper02 .scroller {
+  position: absolute;
+}
+.wrapper02 .scroller li {
+  height: 2.5rem;
+  color: #333;
+  float: left;
+  line-height: 2.5rem;
+  font-size: .8rem;
+  text-align: center;
+  padding: 0 .35rem;
+}
+.wrapper02 .scroller li a {
+  color: #333;
+  display: block;
+  margin: 0 .3rem;
+}
+.wrapper02 .scroller li.cur {
+  position: relative;
+}
+.wrapper02 .scroller li.cur:after {
+  content: "";
+  background: #19a0f0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.wrapper02 .scroller li.cur a {
+  color: #19a0f0;
+}

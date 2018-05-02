@@ -1,0 +1,235 @@
+/*Created by huang.jun on 17-07-03*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: PingFang SC-Medium, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.box-scroll {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto;
+}
+.box-scroll.botm {
+  bottom: 2.5rem;
+  padding-bottom: .5rem;
+}
+.box-scroll.white {
+  background: #fff;
+}
+.Top-Bg {
+  height: 14.45rem;
+  background: url("../img/Top_Bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.Top-Bg dt {
+  text-align: center;
+  padding-top: 1.75rem;
+}
+.Top-Bg dt img {
+  width: 4rem;
+}
+.Top-Bg dd {
+  color: #fff;
+  margin-top: 1.3rem;
+}
+.Top-Bg dd h2 {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center;
+}
+.Top-Bg dd p {
+  font-size: .7rem;
+  text-align: center;
+  line-height: .9rem;
+  margin-top: 1rem;
+}
+.Station-wrap {
+  border: 1px solid #EDEDED;
+  margin: 1.2rem .75rem 0 .75rem;
+  padding: .75rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+}
+.Station-Top {
+  padding-bottom: .75rem;
+  border-bottom: 1px dashed #EDEDED;
+  color: #333;
+  position: relative;
+}
+.Station-Top:after,
+.Station-Top:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Station-Top .Station-Left {
+  float: left;
+}
+.Station-Top .Station-Right {
+  float: right;
+}
+.Station-Top ul {
+  font-size: .6rem;
+  font-family: PingFangSC-Regular, sans-serif;
+}
+.Station-Top ul li {
+  line-height: .6rem;
+}
+.Station-Top ul li:nth-of-type(2) {
+  font-size: 1.05rem;
+  line-height: 1.05rem;
+  font-family: PingFangSC-Semibold, sans-serif;
+  margin: .3rem 0;
+}
+.Station-Top .Station-Center {
+  position: absolute;
+  width: 2.8rem;
+  height: 1.1rem;
+  line-height: 1.1rem;
+  text-align: center;
+  border: 1px solid #CFCFCF;
+  left: 50%;
+  margin-left: -1.4rem;
+  top: .8rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  border-radius: 3rem;
+  font-size: .7rem;
+}
+.Station-Top .Station-Center:after,
+.Station-Top .Station-Center:before {
+  width: .7rem;
+  height: 1px;
+  background: #CFCFCF;
+  position: absolute;
+  content: "";
+  top: .55rem;
+}
+.Station-Top .Station-Center:after {
+  left: -0.7rem;
+}
+.Station-Top .Station-Center:before {
+  right: -0.7rem;
+}
+.Station-Btm {
+  height: 2.65rem;
+  font-size: .7rem;
+  position: relative;
+  color: #333;
+  font-family: PingFang-SC-Regular, sans-serif;
+}
+.Station-Btm .personnel-list {
+  line-height: .7rem;
+  padding-top: .75rem;
+}
+.Station-Btm .personnel-list dd {
+  padding-top: .5rem;
+}
+.Station-Btm .Total {
+  position: absolute;
+  right: 0;
+  top: .55rem;
+}
+.btm-btn {
+  margin-top: 1.25rem;
+}
+.btm-btn dt {
+  padding: 0 8%;
+}
+.btm-btn dt a {
+  height: 2.25rem;
+  line-height: 2.25rem;
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: .9rem;
+  background: #099FDE;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  border-radius: 3rem;
+  -moz-box-shadow: 0 5px 15px 0 rgba(9, 159, 222, 0.5);
+  -webkit-box-shadow: 0 5px 15px 0 rgba(9, 159, 222, 0.5);
+  box-shadow: 0 5px 15px 0 rgba(9, 159, 222, 0.5);
+}
+.btm-btn dt a:active {
+  opacity: .7;
+}
+.btm-btn dd {
+  text-align: center;
+  line-height: .75rem;
+  padding-top: 1.05rem;
+}
+.btm-btn dd a {
+  font-size: .75rem;
+  color: #999;
+  text-decoration: underline;
+}
+.btm-btn dd a:active {
+  opacity: .7;
+}
+.lay-box {
+  left: 50%;
+  top: 50%;
+  width: 64%;
+  height: 7rem;
+  background: #fff;
+  position: fixed;
+  z-index: 3;
+  margin-left: -32%;
+  margin-top: -3.5rem;
+  text-align: center;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem;
+}
+.lay-box dt {
+  font-size: 1rem;
+  padding-top: 1.15rem;
+  position: relative;
+  line-height: 1.4rem;
+}
+.lay-box dt img {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  margin-top: -0.2rem;
+  margin-right: .55rem;
+}
+.lay-box dd {
+  font-size: .7rem;
+  margin: 0 6%;
+  color: #666;
+  line-height: 1rem;
+  padding-top: .85rem;
+}

@@ -1,0 +1,113 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".Menu").click(function(){
+                $(".MenuList,.shadow").show();
+                $(".TopNav").css("background","#3B91FF");
+            });
+            $(".shadow").click(function(){
+                $(".MenuList,.shadow").hide();
+                $(".TopNav").css("background","none");
+            })
+        })
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="shadow"></div>
+    <ul class="MenuList">
+        <li class="on"><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="help.html">Help & Contact</a></li>
+    </ul>
+    <div class="TopNav">
+        <a class="Logo" href="###"></a>
+        <span class="Menu"></span>
+    </div>
+    <div class="TopBanner">
+        <img src="img/TopImg.jpg">
+        <a class="ButtonBtn" href="###"><img src="img/ButtonBtn.png"></a>
+    </div>
+    <div class="FeaturesTitle"><img src="img/features.png"></div>
+    <ul class="FeaturesList">
+        <li class="Icon1">
+            <i></i>
+            <strong>No booking fee</strong>
+            <span>No card fee</span>
+        </li>
+        <li class="Icon2">
+            <i></i>
+            <strong>Easy access</strong>
+            <span>Fast checkout</span>
+        </li>
+        <li class="Icon3">
+            <i></i>
+            <strong>Smart engine</strong>
+            <span>Search cheapest fare</span>
+        </li>
+        <li class="Icon4">
+            <i></i>
+            <strong>Best service</strong>
+            <span>Free call 7*24h</span>
+        </li>
+        <li class="Icon5">
+            <i></i>
+            <strong>Secure payment</strong>
+            <span>Fast check-out</span>
+        </li>
+        <li class="Icon6">
+            <i></i>
+            <strong>After-sale system</strong>
+            <span>Refund &amp; change</span>
+        </li>
+    </ul>
+    <div class="BottomBg">
+        <a class="sLogo1" href="###"><img src="img/sLogo1.png"></a>
+        <a class="sLogo2" href="###"><img src="img/sLogo2.png"></a>
+        <a class="sLogo5" href="###"><img src="img/sLogo5.png"></a>
+        <a class="sLogo4" href="###"><img src="img/sLogo4.png"></a>
+        <a class="sLogo3" href="###"><img src="img/sLogo3.png"></a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<html class="ie"><!--<![endif]--><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="css/jquery.min.js"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#box button").click(function(){
+		$(".text").slideToggle("slow");
+		$(this).toggleClass("btn3");
+	});
+	$("#box2 button").click(function(){
+		$("#box2 .text").slideToggle("slow");
+		$(this).toggleClass("btn3");
+	});
+	$("#box3 button").click(function(){
+		$("#box3 .text").slideToggle("slow");
+		$(this).toggleClass("btn3");
+	});
+});
+</script>
+
+</head>
+
+<body>
+	<article>
+    	<div class="top">
+        	<img src="img/img1.jpg">
+            <img src="img/img2.jpg">
+            <img src="img/img3.jpg">
+            <img src="img/img4.jpg">
+            <img src="img/img5.jpg">
+            <img src="img/img6.jpg">
+            <img src="img/img7.jpg">
+            <img src="img/img8.jpg">
+            <img src="img/img9.jpg">
+            <img src="img/img10.jpg">
+            <img src="img/img11.jpg">
+        </div>
+        <div id="box">
+            <div class="bk">
+                <dl class="lstBox">
+                    <dt>Eurail欧洲铁路通票赠送额外乘车天数</dt>
+                    <dd>
+                        <p><strong>促销通票销售日期：</strong>2016年2月1日—2016年4月30日</p>
+                        <p><strong>促销通票乘车日期：</strong>出票日起的11个月内</p>
+                        <p><strong>促销通票明细：</strong></p>
+                        <span class="text">
+                            <p>1）Eurail欧洲经典通票：5天或7天/1个月活期通票，赠送1天额外乘车天数;10天或15天/2个月活期通票，赠送2天额外乘车天数;15天连续乘车型通票，赠送2天额外乘车天数;22天连续乘车型通票，赠送3天额外乘车天数;1个月连续乘车型通票，赠送5天额外乘车天数</p>
+                            <p>2）Eurail欧洲铁路自选通票：任何Eurail欧洲铁路两国、三国、四国自选通票，赠送1天额外乘车天数</p>
+                            <p>3）Eurail欧洲铁路单国通票：任何Eurail欧洲铁路单国通票（希腊岛屿通票除外），赠送1天额外乘车天数</p>
+                            <p><strong>适用车厢：</strong>一等及二等车厢</p>
+                            <p><strong>旅客类型：</strong>任何类型</p>
+                            <p><strong>售后条款：</strong>受一般条款约束</p>
+                        </span>
+                    </dd>
+                </dl>
+            </div>
+            <dl class="btnbox">
+                <dt><button class="btn1"><!--btn3--></button></dt>
+                <dd><a class="btn2" href="###"></a></dd>
+            </dl>
+        </div>
+        <div id="box2">
+            <div class="box2">
+                <img src="img/img12.png">
+                <dl class="lstBox">
+                    <dt>德国铁路通票八折优惠</dt>
+                    <dd>
+                        <p><strong>促销通票销售日期：</strong>2016年2月1日—2016年3月31日</p>
+                        <p><strong>促销通票乘车日期：</strong>2016年2月1日—2016年5月31日</p>
+                        <span class="text">
+                            <p><strong>适用车厢：</strong>一等及二等车厢</p>
+                            <p><strong>旅客类型：</strong>任何类型</p>
+                            <p><strong>售后条款：</strong>促销通票不退不改</p>
+                        </span>
+                    </dd>
+                </dl>
+            </div>
+            <dl class="btnbox">
+                <dt><button class="btn1"></button></dt>
+                <dd><a class="btn2" href="###"></a></dd>
+            </dl>
+        </div>
+        <div id="box3">
+            <div class="box3">
+                <img src="img/img13.png">
+                <dl class="lstBox">
+                    <dt>法国铁路通票八折优惠</dt>
+                    <dd>
+                        <p><strong>促销通票销售日期：</strong>2016年2月1日—2016年3月31日</p>
+                        <p><strong>促销通票乘车日期：</strong>出票日起的11个月内</p>
+                        <span class="text">
+                            <p><strong>适用车厢：</strong>一等及二等车厢</p>
+                            <p><strong>旅客类型：</strong>任何类型</p>
+                            <p><strong>售后条款：</strong>促销通票，不退不改</p>
+                        </span>
+                    </dd>
+                </dl>
+            </div>
+            <dl class="btnbox">
+                <dt><button class="btn1"></button></dt>
+                <dd><a class="btn2" href="###"></a></dd>
+            </dl>
+        </div>
+    </article>
+</body>
+</html>

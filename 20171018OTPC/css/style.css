@@ -1,0 +1,104 @@
+/*Created by huang.jun on 17-09-6*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+article {
+  background: #FFD35E;
+}
+.img-box {
+  font-size: 0;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopBg {
+  height: 630px;
+  background: url("../img/TopImg.jpg") no-repeat center 0;
+}
+.Bg1 {
+  height: 410px;
+  background: url("../img/Img1.jpg") no-repeat center 0;
+}
+.Bg2 {
+  height: 223px;
+  background: url("../img/Img2.jpg") no-repeat center 0;
+  position: relative;
+}
+.Bg2 a {
+  top: 0;
+}
+.Bg3 {
+  height: 374px;
+  background: url("../img/Img3.jpg") no-repeat center 0;
+}
+.Bg4 {
+  height: 249px;
+  background: url("../img/Img4.jpg") no-repeat center 0;
+  position: relative;
+}
+.Bg4 a {
+  top: 32px;
+}
+.Bg5 {
+  height: 372px;
+  background: url("../img/Img5.jpg") no-repeat center 0;
+}
+.Bg6 {
+  height: 249px;
+  background: url("../img/Img6.jpg") no-repeat center 0;
+  position: relative;
+}
+.Bg6 a {
+  top: 32px;
+}
+.Bg7 {
+  height: 343px;
+  background: url("../img/Img7.jpg") no-repeat center 0;
+}
+.Bg8 {
+  height: 278px;
+  background: url("../img/Img8.jpg") no-repeat center 0;
+  position: relative;
+}
+.Bg8 a {
+  top: 32px;
+}
+.Button {
+  position: absolute;
+  width: 269px;
+  height: 72px;
+  background: url("../img/Button.png") no-repeat;
+  left: 50%;
+  margin-left: -134.5px;
+}
+.Button:hover {
+  opacity: .8;
+}
+.Button:active {
+  opacity: .9;
+}

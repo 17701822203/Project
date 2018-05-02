@@ -1,0 +1,120 @@
+.IndexBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/IndexBg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.TopTitle {
+  position: absolute;
+  width: 74%;
+  top: 6%;
+  left: 50%;
+  margin-left: -37%;
+}
+.TopTitleS {
+  position: absolute;
+  width: 74%;
+  top: 6%;
+  left: 50%;
+  margin-left: -37%;
+  top: 17%;
+  display: none;
+}
+.Title3 {
+  position: absolute;
+  width: 96%;
+  left: 50%;
+  top: 21.9%;
+  margin-left: -48%;
+  display: none;
+}
+.BigTxt {
+  position: absolute;
+  width: 64%;
+  left: 50%;
+  top: 30%;
+  margin-left: -32%;
+  display: none;
+}
+.AgedBox {
+  position: absolute;
+  width: 10.775rem;
+  height: 8.575rem;
+  left: 22%;
+  top: 55%;
+  display: none;
+}
+.AgedHead {
+  position: absolute;
+  width: 3.325rem;
+  height: 4.35rem;
+  background: url("../img/AgedHead.png") no-repeat;
+  background-size: 100% 100%;
+  left: 34%;
+  top: 4%;
+  z-index: 2;
+}
+.AgedHeadAm {
+  animation: head .2s infinite linear alternate;
+}
+.AgedBody {
+  position: absolute;
+  width: 10.775rem;
+  height: 8.575rem;
+  background: url("../img/AgedBody.png") no-repeat;
+  background-size: 100% 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.AgedBodyAm {
+  animation: body .08s infinite linear alternate;
+}
+.stool {
+  position: absolute;
+  width: 8.15rem;
+  height: 4.7rem;
+  left: 30%;
+  top: 66.7%;
+  display: none;
+  z-index: 3;
+  background: url("../img/stool.png") no-repeat;
+  background-size: 100% 100%;
+}
+.stoolAm {
+  animation: stool .08s infinite linear alternate;
+}
+.qian {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  right: 28%;
+  top: 59%;
+  z-index: 3;
+  display: none;
+}
+body .IndexBg .qianAm {
+  animation: qianAm 3s infinite linear alternate;
+}
+.sysBtn {
+  position: absolute;
+  width: 13.025rem;
+  height: 2.2rem;
+  background: url("../img/Button.png") no-repeat;
+  background-size: 100% 100%;
+  left: 50%;
+  top: 84%;
+  margin-left: -6.5125rem;
+  display: none;
+}
+.sysBtn i {
+  position: absolute;
+  width: 1.575rem;
+  height: 1.575rem;
+  background: url("../img/Icon.png") no-repeat;
+  background-size: 100% 100%;
+  right: 2.2rem;
+  top: .3rem;
+  animation: IconRight .4s infinite linear alternate;
+}

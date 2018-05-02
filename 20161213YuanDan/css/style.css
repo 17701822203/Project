@@ -1,0 +1,87 @@
+/*Created by huang.jun on 16-12-13*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{background:#F1E7C0;}
+article{height:100%;background:#F1E7C0;}
+
+.bg-box{background:url("../img/bg.png") no-repeat;background-size:100% 18.3rem;height:18.3rem;margin:0 0.525rem;position: relative;}
+.niu{z-index:2;width:5.55rem;height:5.225rem;background:url("../img/niu.png") no-repeat;background-size:100% 100%;position: absolute;left:20%;top:13%;}
+.niu2{z-index:1;width:1.675rem;height:2.725rem;background:url("../img/niujiao.png") no-repeat;background-size:1.675rem 2.725rem;position: absolute;left:61%;top:-2%;-webkit-transform-origin:0.7rem bottom;-webkit-animation:niujiao 2s linear 0ms infinite normal forwards;}
+.yun-box-bg{height:9.45rem;background:url("../img/yun-box.png") no-repeat;background-size:100% 100%;position: absolute;top:48%;left:0%;z-index:3;width:53%;}
+.zhong{position: absolute;right:2%;top:14%;width:5.975rem;height:5.2rem;background:url("../img/zhong.png") no-repeat;background-size:100% 100%;-webkit-animation:zhong 0.2s linear 0ms infinite normal forwards;}
+.sd1{position:absolute;width:1.3rem;height:1.875rem;background:url("../img/sd1.png") no-repeat;background-size:100% 100%;left:6%;top:-20%;-webkit-animation:sd 0.1s linear 0ms infinite normal forwards;}
+.sd2{position:absolute;width:1.65rem;height:1.775rem;background:url("../img/sd2.png") no-repeat;background-size:100% 100%;right:0%;top:0%;-webkit-animation:sd 0.1s linear 0.1ms infinite normal forwards;}
+.yun{width:5.175rem;height:3.725rem;background:url("../img/yun.png") no-repeat;background-size:100% 100%;top:36%;left:15%;position:absolute;}
+.piao{width:1.9rem;height:1.45rem;background:url("../img/piao.png") no-repeat;background-size:100% 100%;top:71%;left:26%;position: absolute;-webkit-animation:Two 1s linear 0ms infinite normal forwards;}
+.Stars{width:1.35rem;height:1.15rem;background:url("../img/Stars.png") no-repeat;background-size:100% 100%;position:absolute;}
+.s1{top:71%;left:49%;-webkit-animation:Stars 0.3s linear 0.1s infinite normal forwards;}
+.s2{top:63%;left:54%;-webkit-animation:Stars 0.3s linear 0.3s infinite normal forwards;}
+.s3{top:65%;left:63%;-webkit-animation:Stars 0.3s linear 0.4s infinite normal forwards;}
+.s4{top:75%;left:93%;-webkit-animation:Stars 0.3s linear 0.1s infinite normal forwards;}
+.s5{top:57%;left:70%;-webkit-animation:Stars 0.3s linear 0.5s infinite normal forwards;}
+.s6{top:73%;left:80%;-webkit-animation:Stars 0.3s linear 0.5s infinite normal forwards;}
+.btm-bg{height:9.95rem;background:url("../img/btm-box.png") no-repeat;background-size:100% 9.95rem;margin:0.45rem 0.525rem 0 0.525rem;position: relative;z-index:5;}
+.red-btn{position:absolute;width:9.25rem;height:2.225rem;background:url("../img/btn.png") no-repeat;background-size:100% 100%;bottom:0;right:0;}
+/*AnimationStart*/
+@-webkit-keyframes niujiao{
+    0%{-webkit-transform:rotate(0deg);transform-origin:0.7rem bottom;opacity:0;}
+    40%{-webkit-transform:rotate(0deg);opacity:1;}
+    50%{-webkit-transform:rotate(160deg);}
+    60%{-webkit-transform:rotate(100deg);}
+    80%{-webkit-transform:rotate(160deg);top:-2%;}
+    90%{-webkit-transform:rotate(150deg);opacity:1;transform-origin:0.7rem bottom;}
+    100%{-webkit-transform:rotate(200deg);top:150%;opacity:0;}
+}
+@-webkit-keyframes zhong{
+    0%{-webkit-transform: rotateY(-30deg);transform-origin:center;}
+    50%{-webkit-transform: rotateY(30deg);}
+    100%{-webkit-transform: rotateY(-30deg);}
+}
+@-webkit-keyframes sd{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+@-webkit-keyframes Two{
+    0%{top:75%;height:0rem;opacity:0;}
+    10%{opacity:1;}
+    60%{opacity:1;}
+    80%{top:200%;opacity:0;height:3rem;-webkit-transform:rotate(10deg);}
+    100%{opacity:0;}
+}
+@-webkit-keyframes Stars{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+/*AnimationEnd*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

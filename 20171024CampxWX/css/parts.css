@@ -1,0 +1,51 @@
+.State {
+  padding: 1.25rem;
+  background: #fff;
+  font-size: .75rem;
+  color: #333;
+}
+.State .StateTop .StateTop1,
+.State .StateTop .StateTop2 {
+  font-size: .85rem;
+  line-height: .85rem;
+  margin-top: .5rem;
+}
+.State .StateTop .StateTop1 {
+  position: relative;
+}
+.State .StateTop .StateTop3 {
+  margin-top: .5rem;
+}
+.State .StateTop i {
+  font-style: normal;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+.State .StateBtm {
+  padding-top: 1rem;
+  line-height: .75rem;
+}
+.State .StateBtm div {
+  margin-top: .3rem;
+}
+.State .StateBtnBox {
+  position: relative;
+  margin-top: 2rem;
+  height: 2rem;
+}
+.State .StateBtnBox a {
+  width: 7.45rem;
+  height: 1.95rem;
+  border: 1px solid #979797;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 1.95rem;
+}
+.State .StateBtnBox a.StateBtnLeft {
+  left: 0;
+}
+.State .StateBtnBox a.StateBtnRight {
+  right: 0;
+}

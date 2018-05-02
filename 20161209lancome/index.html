@@ -1,0 +1,108 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        $(document).ready(function() {
+            setTimeout(function () {
+                $(".yd").fadeOut();
+                $(".animation").fadeIn();
+            }, 4000);
+            $(".animation").click(function(){
+                $(".animation").addClass("lancome");
+                $(".title,.guangyun,.page_movie_tap_scale").remove();
+                setTimeout(function () {
+                    $(".title1").fadeIn();
+                    $(".title2").fadeIn();
+                    $(".xuyuan").fadeIn();
+                }, 1500);
+            })
+            $(".xuyuan").click(function(){
+                $(".animation").fadeOut();
+                setTimeout(function () {
+                    $(".animation").remove();
+                    $(".huaping").fadeIn();
+                }, 300);
+            })
+            $(".button").click(function(){
+                $(".txt-list,.button").fadeOut();
+                $(".txt-end,.button-box2").fadeIn();
+            })
+            $(".shadow,.error").click(function(){
+                $("section").fadeOut();
+            })
+        });
+    </script>
+</head>
+    <body>
+        <section>
+            <div class="shadow"></div>
+            <div class="error"></div>
+        </section>
+        <article>
+            <div class="yd">
+                <em class="txt"></em>
+                <em class="txt1"></em>
+                <em class="txt2"></em>
+            </div>
+            <div class="animation">
+                <img  src="img/page_movie_tap.png" class="page_movie_tap_scale" id="page_movie_tap">
+                <em class="title"></em>
+                <em class="guangyun"></em>
+                <div>
+                    <em class="title1"></em>
+                    <em class="title2"></em>
+                    <a class="xuyuan" href="###"></a>
+                </div>
+            </div>
+            <div class="huaping">
+                <ul class="txt-list">
+                    <li>2017我想去<input type="text">旅行,</li>
+                    <li>因为那里<input type="text">吸引我,</li>
+                    <li>我是<input type="text">我在<input type="text">,联系<input type="text">,</li>
+                    <li>我在等待奇迹。</li>
+                </ul>
+                <div class="button-box"><a href="###" class="button"></a></div>
+                <ul class="txt-end">
+                    <li>你的心愿已邮寄，</li>
+                    <li>兰蔻会在提交心愿用户中抽取</li>
+                    <li><b>2张回家机票</b>及<b>2份春节酒店免房</b>，</li>
+                    <li>将于1月20日公布4位获奖名单，</li>
+                    <li>一起等待奇迹吧！</li>
+                </ul>
+                <div class="button-box2"><a href="###" class="button2"></a></div>
+            </div>
+        </article>
+    </body>
+</html>

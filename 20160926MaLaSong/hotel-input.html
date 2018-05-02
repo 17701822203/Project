@@ -1,0 +1,111 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>兴业银行</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="http://webresource.c-ctrip.com/code/lizard/2.2/web/3rdlibs/bridge.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+	<script type='text/javascript' src='js/filter.js'></script>
+    <script type="text/javascript">
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/6.4+'px';
+		window.addEventListener("resize",setRemSize,false);
+		function setRemSize(){
+			document.documentElement.style.fontSize=document.documentElement.clientWidth/6.4+'px';
+		}
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+	<script>
+		var app = {
+			callback: function(json_obj) {
+				var tagname = json_obj.tagname;
+				if (tagname == 'web_view_finished_load') {
+					var nav_bar_config_json = {
+						"center": [{"tagname":"title","value": "兴业银行"}]
+					};
+					var json_str = JSON.stringify(nav_bar_config_json);
+					CtripBar.app_refresh_nav_bar(json_str);
+				}
+			}
+		};
+	
+		var filter = new Filter();
+		
+		$(function(){	
+			$('.red-btn').click(function(){
+				if(!filter.filter($('#name'))){
+					alert(filter.msg);
+					return false;
+				}
+
+				if(!filter.filter($('#mobile'))){                       
+					alert(filter.msg);
+					return false;
+				}
+				
+				var no = $('#no').val();
+				if(!no){
+					alert('请输入参赛号！');
+					return false;
+				}
+				
+				$.ajax({
+					url: 'http://m.tieyou.com/index.php?param=/xinluo/checkName',
+					dataType:'jsonp',
+					jsonp: 'callback',
+					data: {
+						'name': $('#name').val(),
+						'mobile': $('#mobile').val(),
+						'no': no,
+					},
+					type: 'get',
+					success:function(data){
+						if(data.data > 0){
+							$('section').show().find('.success').show().siblings('dl').hide();
+							setTimeout(function(){
+								window.location = "hotel-list.html?disable_redirect_https=1";
+							}, 2000);
+						}else{
+							$('section').show().find('.error').show().siblings('dl').hide();
+						}
+					}
+				});
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<section style="display:none;">
+        <div class="shadow"></div>
+        <dl class="pop-txt success" style="display:none;">
+            <dt>验证成功<em class="close"></em></dt>
+            <dd>
+                <p>恭喜您获得兴业上马专享优惠！</p>
+            </dd>
+        </dl>
+        <dl class="pop-txt error" style="display:none;">
+            <dt><em class="close"></em></dt>
+            <dd>
+                <p>很抱歉，未查到参赛信息，请确认输入信息的准确性</p>
+            </dd>
+        </dl>
+    </section>
+    <article>
+        <div class="top-bg"></div>
+        <div class="bg">
+            <div class="top-title"></div>
+            <dl class="input-list">
+                <dt>输入你的参赛信息：</dt>
+                <dd>
+                    <p><span>姓&nbsp;&nbsp;&nbsp;名：</span><input type="text" id="name" filter-rule="cName" autocomplete="off"></p>
+                    <p><span>参赛号：</span><input type="text" id="no" autocomplete="off"></p>
+                    <p><span>手机号：</span><input type="text" id="mobile" filter-rule="phone" maxlength="11" autocomplete="off"></p>
+                    <p><span></span><button class="red-btn">立即验证</button></p>
+                </dd>
+            </dl>
+            <div class="txt-btm">上马参赛选手可凭参赛信息获得酒店立减优惠</div>
+        </div>
+    </article>
+</body>
+</html>

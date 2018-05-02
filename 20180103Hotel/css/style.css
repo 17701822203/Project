@@ -1,0 +1,327 @@
+/*Created by huang.jun on 17-12-05*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+button:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TabNav {
+  height: 2.4rem;
+}
+.TabNav li {
+  font-size: .7rem;
+  line-height: 2.4rem;
+  text-align: center;
+  float: left;
+}
+.TabNav li:nth-of-type(1) {
+  width: 33%;
+}
+.TabNav li:nth-of-type(2) {
+  width: 34%;
+}
+.TabNav li:nth-of-type(3) {
+  width: 33%;
+}
+.TabNav li.grayBg {
+  background: #E5E5E5;
+  color: #666;
+}
+.TabNav li.redBg {
+  background: #FB3367;
+  color: #fff;
+}
+.TabNav li.yellowBg {
+  background: #FFF7C2;
+  color: #333;
+}
+.CountDown {
+  height: 4.7rem;
+  position: relative;
+}
+.CountDown .CountDownTop {
+  text-align: center;
+  line-height: .65rem;
+  padding: 1rem 0 0 0 ;
+}
+.CountDown .CountDownTop span {
+  color: #222;
+  letter-spacing: .3rem;
+  font-size: .65rem;
+  position: relative;
+}
+.CountDown .CountDownTop span:after,
+.CountDown .CountDownTop span:before {
+  width: 1.35rem;
+  height: .075rem;
+  background: #999;
+  content: "";
+  position: absolute;
+  top: .4rem;
+}
+.CountDown .CountDownTop span:after {
+  left: -1.75rem;
+}
+.CountDown .CountDownTop span:before {
+  right: -1.35rem;
+}
+.CountDown .CountDownBtm {
+  padding-top: .8rem;
+  width: 9.6rem;
+  margin: 0 auto;
+}
+.CountDown .CountDownBtm li {
+  float: left;
+  font-family: "PingFangHK-Regular";
+  font-size: .65rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  margin: 0 .25rem;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  border-radius: 0.1rem;
+}
+.CountDown .CountDownBtm li.TimeBg {
+  width: .9rem;
+  background: #222;
+  color: #fff;
+  font-size: .8rem;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 0 0 .075rem;
+}
+.CountDown .CityLay {
+  position: absolute;
+  left: 1.6rem;
+  top: 2.8rem;
+  font-size: .85rem;
+  line-height: .85rem;
+  font-weight: bold;
+  color: #FB3367;
+}
+.CountDown .CityLay:after,
+.CountDown .CityLay:before {
+  content: "";
+  position: absolute;
+}
+.CountDown .CityLay:after {
+  width: .7rem;
+  height: .925rem;
+  background: url("../img/Location.png") no-repeat;
+  background-size: 100% 100%;
+  left: -0.85rem;
+  top: -0.1rem;
+}
+.CountDown .CityLay:before {
+  width: .525rem;
+  height: .325rem;
+  background: url("../img/dropdown.png") no-repeat;
+  background-size: 100% 100%;
+  right: -0.8rem;
+  top: .3rem;
+}
+.HotelImg {
+  position: relative;
+  font-size: 0;
+  border-top: .5rem solid #F4F4F4;
+}
+.HotelImg img {
+  width: 100%;
+}
+.HotelImg h4 {
+  position: absolute;
+  font-size: .85rem;
+  color: #fff;
+  left: .6rem;
+  bottom: .95rem;
+}
+.HotelPrice {
+  height: 2.7rem;
+}
+.HotelPrice .left {
+  float: left;
+  padding-left: .6rem;
+  color: #fb3367;
+}
+.HotelPrice .left small,
+.HotelPrice .left big {
+  float: left;
+}
+.HotelPrice .left small {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  padding-top: .85rem;
+}
+.HotelPrice .left big {
+  font-size: 2rem;
+  line-height: 2rem;
+  padding: .35rem 0 0 0;
+}
+.HotelPrice .center {
+  float: left;
+  text-align: center;
+  padding-left: .2rem;
+}
+.HotelPrice .center small,
+.HotelPrice .center big {
+  display: block;
+}
+.HotelPrice .center small {
+  font-size: .6rem;
+  line-height: .6rem;
+  color: #fb3367;
+  padding-top: .75rem;
+}
+.HotelPrice .center big {
+  font-size: .6rem;
+  line-height: .6rem;
+  color: #999;
+  text-decoration: line-through;
+  margin-top: .35rem;
+}
+.HotelPrice .right {
+  float: right;
+  width: 5.9rem;
+  height: 2.7rem;
+  background: url("../img/icon.jpg") no-repeat left top #FFE487;
+  background-size: .85rem 2.7rem;
+  padding-left: 1.4rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.HotelPrice .right button {
+  width: 3.825rem;
+  height: 1.55rem;
+  border: 0;
+  background: #FB3367;
+  color: #fff;
+  font-size: .6rem;
+  -webkit-border-radius: 0.075rem;
+  -moz-border-radius: 0.075rem;
+  border-radius: 0.075rem;
+  margin-top: .3rem;
+}
+.HotelPrice .right small {
+  display: block;
+  font-size: .4rem;
+  line-height: .4rem;
+  margin-top: .15rem;
+  color: #8b0125;
+}
+.YellowBg2 {
+  background: #FFF7C2;
+  padding: .95rem .6rem .7rem .6rem;
+}
+.YellowBg2 .HotelList {
+  background: #F7D047;
+  padding: 0 0 .7rem .75rem;
+}
+.YellowBg2 .HotelList:after,
+.YellowBg2 .HotelList:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.YellowBg2 .HotelList .Hotel {
+  width: 47%;
+  height: 8.95rem;
+  float: left;
+  background: #fff;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+  overflow: hidden;
+  margin-top: .25rem;
+}
+.YellowBg2 .HotelList .Hotel .img-box img {
+  height: 4.5rem;
+}
+.YellowBg2 .HotelList .Hotel .ImgTxt {
+  padding: 0 .5rem;
+}
+.YellowBg2 .HotelList .Hotel .ImgTxt h4 {
+  font-size: .7rem;
+  color: #3c0f0f;
+  line-height: .7rem;
+  margin-top: .55rem;
+}
+.YellowBg2 .HotelList .Hotel .ImgTxt .HotelPriceTxt {
+  font-size: .55rem;
+  line-height: .55rem;
+  margin-top: .3rem;
+}
+.YellowBg2 .HotelList .Hotel .ImgTxt .HotelPriceTxt:after,
+.YellowBg2 .HotelList .Hotel .ImgTxt .HotelPriceTxt:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.YellowBg2 .HotelList .Hotel .ImgTxt .HotelPriceTxt dt {
+  float: left;
+  color: #B19F9F;
+}
+.YellowBg2 .HotelList .Hotel .ImgTxt .HotelPriceTxt dd {
+  float: left;
+  font-weight: bold;
+  color: #FA3663;
+  padding-left: .2rem;
+}
+.YellowBg2 .HotelList .Hotel .ImgTxt a {
+  display: block;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  font-size: .7rem;
+  background: #FB3662;
+  color: #fff;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+  margin-top: .4rem;
+}
+.YellowBg2 .HotelList .Hotel:nth-child(even) {
+  margin-left: .25rem;
+}

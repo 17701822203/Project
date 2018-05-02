@@ -1,0 +1,242 @@
+/*Created by huang.jun on 17-08-21*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: PingFang SC Medium, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.75);
+  display: block;
+}
+.img-box {
+  font-size: 0;
+}
+section {
+  display: none;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Relative {
+  position: relative;
+}
+.TopBtn {
+  position: absolute;
+  left: 20%;
+  top: 0;
+  width: 62%;
+}
+.TsBox {
+  background: #F2A852;
+  padding: 1.15rem 1.4rem 4.75rem 1.4rem;
+}
+.TsTabBox {
+  padding: .8rem .95rem;
+  background: #F6C462;
+  border-bottom: 1px solid #D2730D;
+  border-right: 1px solid #D2730D;
+}
+.TsTab {
+  background: #fff;
+  padding: 0 .75rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: relative;
+}
+.TsTab em {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2.075rem;
+  height: 1.525rem;
+  background: url("../img/HotIcon.png") no-repeat;
+  background-size: 100% 100%;
+}
+.TsTabDecorate {
+  position: relative;
+  height: 3.75rem;
+  color: #333;
+}
+.TsTabDecorate i {
+  content: "";
+  height: 2px;
+  background: #E0E0E0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  margin-top: -1px;
+}
+.TsTabDecorate i:after {
+  width: .3rem;
+  height: .3rem;
+  background: #E0E0E0;
+  content: "";
+  position: absolute;
+  left: 0;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  top: 50%;
+  margin-top: -0.15rem;
+}
+.TsTabDecorate i:before {
+  width: .3rem;
+  height: .3rem;
+  background: #E0E0E0;
+  content: "";
+  position: absolute;
+  right: 0;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  top: 50%;
+  margin-top: -0.15rem;
+}
+.TsTabDecorate span {
+  font-size: .6rem;
+  line-height: .6rem;
+  position: absolute;
+  top: 16%;
+}
+.TsTabDecorate span.TimeLeft {
+  left: 25%;
+  margin-left: -8%;
+}
+.TsTabDecorate span.TimeRight {
+  right: 25%;
+  margin-right: -8%;
+}
+.TsTabDecorate big {
+  border: 1px solid #ccc;
+  position: absolute;
+  font-size: .6rem;
+  left: 50%;
+  height: .9rem;
+  line-height: .9rem;
+  padding: 0 .3rem;
+  margin-left: -7%;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  top: 50%;
+  margin-top: -0.5rem;
+  background: #fff;
+}
+.TsTabDecorate b {
+  font-size: .7rem;
+  position: absolute;
+  bottom: .5rem;
+}
+.TsTabDecorate b.TimeLeft {
+  left: 0;
+}
+.TsTabDecorate b.TimeRight {
+  right: 0;
+}
+.TsTabDecorate img {
+  width: .725rem;
+  height: .7rem;
+  position: absolute;
+  top: 1.5rem;
+}
+.TsTabDecorate img.IconLeft {
+  left: 21%;
+}
+.TsTabDecorate img.IconRight {
+  right: 21%;
+}
+.TsTabBtn {
+  line-height: .65rem;
+}
+.TsTabBtn a {
+  color: #c37440;
+  font-size: .65rem;
+  padding: .4rem 0 .75rem 0;
+  display: block;
+  background-image: -webkit-linear-gradient(left, #C37040, #925430 25%, #985935 50%, #925430 75%, #C37040);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: 200% 100%;
+  -webkit-animation: masked-animation 4s infinite linear;
+}
+.TsTabBtn a span img {
+  font-size: 0;
+  width: .475rem;
+  vertical-align: middle;
+  margin-left: .1rem;
+}
+.more {
+  color: #993300;
+  text-align: center;
+  font-size: .7rem;
+  display: block;
+}
+.more img {
+  width: .5rem;
+  height: .375rem;
+  vertical-align: middle;
+  margin-left: .2rem;
+}
+.active img {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  /* IE 9 */
+  -moz-transform: rotate(180deg);
+  /* Firefox */
+  -webkit-transform: rotate(180deg);
+  /* Safari 和 Chrome */
+  -o-transform: rotate(180deg);
+}
+.Fix {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 4.15rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+.Fix .BtmBtn {
+  position: absolute;
+  display: block;
+  width: 86%;
+  top: 0;
+  left: 0;
+  padding: 1.4% 7% 0 7%;
+}
+#panel {
+  display: none;
+}
+@-webkit-keyframes masked-animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}

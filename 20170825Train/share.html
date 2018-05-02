@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<script>
+
+</script>
+<section>
+    <div class="shadow"></div>
+    <dl class="shareBox">
+        <dt>
+            <p>该手机号已经领取过国庆加速包</p>
+            <p>分享好友一起加速吧！</p>
+        </dt>
+        <dd><a class="shareBtn" href="###">立即分享</a></dd>
+    </dl>
+    <div class="Coupon">
+        <div class="CouponTitle"><img src="img/GXHD.png"></div>
+        <div class="CouponList">
+            <div class="Train">
+                <strong>10</strong>
+                <span>10元火车票优惠券</span>
+            </div>
+            <div class="BB">
+                <strong>50</strong>
+                <span>5元民宿优惠券</span>
+            </div>
+            <div class="Bus">
+                <strong>5</strong>
+                <span>5元汽车票优惠券</span>
+            </div>
+            <div class="hire">
+                <strong>100</strong>
+                <span>5元汽车票优惠券</span>
+            </div>
+            <div class="CouponBtnBox"><a class="CouponBtn" href="###">立即使用</a></div>
+        </div>
+    </div>
+</section>
+<article ontouchstart="" onmouseover="">
+    <div class="share">
+        <div class="shareTit img-box"><img src="img/shareTit.png"></div>
+        <ul class="inputList">
+            <li><input class="mobInput" type="text" placeholder="输入手机号"></li>
+            <li class="img-box"><img src="img/testImg.png"></li>
+            <li><input class="YzmInput" type="text" placeholder="填写短信验证码"><a class="YzmBtn" href="###">获取验证码</a></li>
+            <li><a class="LingQuBtn" href="###">点击领取</a></li>
+        </ul>
+    </div>
+</article>
+</body>
+</html>
+

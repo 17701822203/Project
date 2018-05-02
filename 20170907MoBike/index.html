@@ -1,0 +1,99 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body style="background:#EE782F;" ontouchstart="" onmouseover="">
+    <article>
+        <div class="img-box"><img src="img/TopBg.png"></div>
+        <div class="WrapBox">
+            <!--使用后-->
+            <div class="CouponBox" style="display:">
+                <div class="Coupon">
+                    <small>&yen;</small>
+                    <b>20</b>
+                    <dl>
+                        <dt>携程火车票优惠券</dt>
+                        <dd>有效期至2017-08-24</dd>
+                    </dl>
+                </div>
+                <div class="Coupon">
+                    <small>&yen;</small>
+                    <b>10</b>
+                    <dl>
+                        <dt>携程火车票优惠券</dt>
+                        <dd>有效期至2017-08-24</dd>
+                    </dl>
+                </div>
+                <dl class="MobileLogin">
+                    <dt>领取成功,请使用此手机号（<span>1888888888</span>）</dt>
+                    <dd>登陆携程App内使用，流程如下：</dd>
+                </dl>
+                <div class="Step"><img src="img/Step.png"></div>
+            </div>
+            <!--使用前-->
+            <div class="InputBox" style="display:none;">
+                <div class="MobInput"><input placeholder="请输入手机号领取" type="text"></div>
+                <div class="yzm">
+                    <div><span></span>请按住滑块，拖到最右边</div>
+                </div>
+                <div class="yzmInput">
+                    <input type="text" placeholder="请输入验证码">
+                    <a href="###">获取验证码</a>
+                </div>
+                <div class="InputBtn"><a href="###">立即领取</a></div>
+            </div>
+            <div class="ActivityRules">
+                <dl>
+                    <dt><img src="img/Title.png"></dt>
+                    <dd>
+                        <p>1、该优惠券仅限携程App内使用</p>
+                        <p>2、同一用户（相同手机号、账户名、设备号支付账号银行卡号）仅限领取一次。</p>
+                        <p>3、优惠券有效期为：</p>
+                        <p>4、具体优惠券使用规则请进入【携程App-我的-优惠券】中进行查看。</p>
+                        <p>5、领取优惠券的用户若存在不当行为（包括但不限于恶意套优惠券、虚假刷单等），携程有权取消用户所获得优惠券。</p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </article>
+</body>
+</html>
+

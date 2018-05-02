@@ -1,0 +1,11 @@
+/*Created by huang.jun on 17-04-18*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"PingFang SC Medium","Microsoft YaHei",sans-serif;background:#fff;}
+
+.font0{font-size:0;}
+.bg{height:18.275rem;background:url("../img/img4.jpg") no-repeat;background-size:100% 100%;padding-top:1rem;}
+.bg p{padding:.8rem 10% 0 10%;font-size:.7rem;color:#fff;line-height:0.9rem;}
+.button{position: fixed;bottom:0;left:0;font-size:0;width:100%;}

@@ -1,0 +1,264 @@
+/*Created by huang.jun on 18-03-08*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+button:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+  color: #000;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.TopImg {
+  font-size: 0;
+}
+.TopImg img {
+  width: 100%;
+}
+.Voucher {
+  height: 8.05rem;
+  background: url("../img/Title.jpg") no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.Voucher .yhq {
+  width: 15.175rem;
+  height: 4.275rem;
+  background: url("../img/youhuiquan.png") no-repeat;
+  background-size: 100% 100%;
+  left: 50%;
+  top: 1.1rem;
+  margin-left: -7.5875rem;
+  position: absolute;
+}
+.Voucher .yhq .left {
+  width: 3.35rem;
+  float: left;
+  text-align: center;
+  padding-top: 1.6rem;
+  text-indent: .5rem;
+}
+.Voucher .yhq .left span {
+  color: #f46868;
+  font-family: PingFangSC-Medium;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  position: relative;
+}
+.Voucher .yhq .left span:after {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: .95rem;
+  width: .45rem;
+  height: .575rem;
+  background: url("../img/jg.png") no-repeat;
+  background-size: 100% 100%;
+}
+.Voucher .yhq .center {
+  width: 9.25rem;
+  float: left;
+}
+.Voucher .yhq .center .top2 {
+  font-size: .5rem;
+  color: #ff7474;
+  padding-left: .625rem;
+  margin-top: .875rem;
+}
+.Voucher .yhq .center .top2:after,
+.Voucher .yhq .center .top2:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Voucher .yhq .center .top2 span {
+  float: left;
+  line-height: .5rem;
+  padding: .05rem .25rem;
+  border: 1px solid #E57474;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.Voucher .yhq .center .top2 span:after {
+  content: "";
+  position: absolute;
+  width: 1.975rem;
+  height: .575rem;
+  background: url("../img/yh.png") no-repeat;
+  background-size: 100% 100%;
+  right: -2.25rem;
+  top: 0;
+}
+.Voucher .yhq .center .center2 {
+  font-family: PingFangSC-Medium;
+  font-size: .75rem;
+  line-height: .75rem;
+  padding-left: .8rem;
+  margin-top: .3rem;
+}
+.Voucher .yhq .center .bottom2 {
+  font-size: .55rem;
+  color: #ccc;
+  line-height: .55rem;
+  padding-left: .8rem;
+  margin-top: .3rem;
+}
+.Voucher .yhq .right {
+  width: 2.4rem;
+  float: right;
+}
+.Voucher .yhq .right span {
+  font-size: .75rem;
+  color: #fff;
+  line-height: 1rem;
+  display: block;
+  text-align: center;
+  margin-top: .7rem;
+}
+.Voucher .on {
+  background: url("../img/youhuiquan2.png") no-repeat;
+  background-size: 100% 100%;
+}
+.Voucher .on .right {
+  position: relative;
+}
+.Voucher .on .right:after {
+  content: "";
+  position: absolute;
+  left: -2.15rem;
+  top: .5rem;
+  width: 2.15rem;
+  height: 2rem;
+  background: url("../img/lq.png") no-repeat;
+  background-size: 100% 100%;
+}
+.product-list {
+  background: url("../img/btm.jpg") no-repeat 0 bottom #FFE3E3;
+  padding-bottom: 2.7rem;
+  background-size: 100% 9.6rem;
+}
+.product-list .jsTab_title {
+  background: #fff;
+}
+.product-list .jsTab_title:after,
+.product-list .jsTab_title:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.product-list .jsTab_title li {
+  float: left;
+  width: 50%;
+  font-size: .75rem;
+  text-align: center;
+  color: #333;
+}
+.product-list .jsTab_title li span {
+  display: block;
+  line-height: 1.425rem;
+  margin: 0 1.25rem;
+  border-bottom: 1px solid #fff;
+}
+.product-list .jsTab_title li.on span {
+  border-bottom: 1px solid #f46868;
+  color: #f46868;
+}
+.product-list .jsTab_con {
+  margin-top: 2%;
+}
+.product-list .jsTab_con:after,
+.product-list .jsTab_con:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.product-list .jsTab_con .product {
+  float: left;
+  width: 47%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+.product-list .jsTab_con .product dl {
+  background: #fff;
+  overflow: hidden;
+}
+.product-list .jsTab_con .product dl:after,
+.product-list .jsTab_con .product dl:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.product-list .jsTab_con .product dl dt {
+  float: left;
+  font-size: .6rem;
+  line-height: 1.35rem;
+}
+.product-list .jsTab_con .product dl dt span,
+.product-list .jsTab_con .product dl dt small,
+.product-list .jsTab_con .product dl dt strong,
+.product-list .jsTab_con .product dl dt b {
+  float: left;
+  font-weight: normal;
+  color: #f46868;
+}
+.product-list .jsTab_con .product dl dt span {
+  color: #333;
+  margin-left: .325rem;
+}
+.product-list .jsTab_con .product dl dt small {
+  margin-left: .1rem;
+}
+.product-list .jsTab_con .product dl dd {
+  float: right;
+  width: 3.4rem;
+  background: #F46868;
+  text-align: center;
+  height: 1.35rem;
+  line-height: 1.35rem;
+}
+.product-list .jsTab_con .product dl dd a {
+  display: block;
+  color: #fff;
+  font-size: .6rem;
+}

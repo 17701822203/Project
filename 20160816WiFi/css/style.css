@@ -1,0 +1,10 @@
+/*Created by huang.jun on 16-08-12*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB";background:#fff;}
+
+.TopBox{width:7.5rem;height:6.28rem;background:url("../img/TopImg.jpg") no-repeat;background-size:contain;}
+.btn{width:5.29rem;height:1.07rem;background:#FC6E51;color:#fff;font-size:0.44rem;-webkit-border-radius:0.1rem;border:0;text-align: center;}
+.btnBox{ text-align: center;padding-top:1.61rem;}

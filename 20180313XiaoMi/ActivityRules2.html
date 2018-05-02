@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/parts.js"></script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+<div class="ActivityRules">
+    <h4>活动规则</h4>
+    <div class="TitleImg"><img src="img/LayTopTxt2.jpg"></div>
+    <dl class="ArList" style="padding-top:.4rem;">
+        <dd>
+            <p><i></i>从完成活动的用户中（发起至24小时结束后。当天未满24小时的用户，助攻次数累计到第二天参与抽奖），<span>每天抽取前三位获得好友助攻次数最多的前三位发起者，获得免单奖励。</span></p>
+            <p><i></i><span>获奖用户会在活动首页的获得免单用户的滚动屏展示出。</span>活动截止后在【携程火车票】公众号回复【0元坐火车获奖名单】，亦查看获奖名单。</p>
+            <p><i></i>获得免单名额的用户将收到短信通知。<span>携程客服会于活动全部结束后的三天内，联系获奖用户，</span>退还订单金额，最高免单500元。</p>
+            <p><i></i>获得免单名额的用户，需在携程购买火车票订单，且出行时间在2017.11.20-2017.12.10内，活动结束后，可退还其订单中一张车票的订单金额（限在携程购买的火车票订单，限免单张车票的价格。若订单中包含多张票，则退还其中一张金额最高的票，最高减免500元）。若期间内无订单、订单取消或退票的用户视为放弃免单机会。</p>
+            <p><i></i>参与活动的获奖用户ID需与其下单时的账户ID一致。若ID不一致或提供虚假订单的订单的用户，携程有权视为放弃免单机会。</p>
+            <p><i></i>活动最终解释权归携程火车票所有。</p>
+        </dd>
+    </dl>
+</div>
+</body>
+</html>
+

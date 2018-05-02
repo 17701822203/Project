@@ -1,0 +1,113 @@
+/*Created by huang.jun on 17-02-27*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{background:#fff;font-family:"PingFang SC Medium","Microsoft YaHei";}
+
+.title-box{position:relative;}
+.title-box a{position:absolute;left:0.45rem;top:0;width:2.1rem;height:2.1rem;}
+.title-box a img{-webkit-animation:hb 1s 1s forwards;}
+@-webkit-keyframes hb
+{
+    0%{-webkit-transform:scale(1);transform:scale(1)}
+    10%{-webkit-transform:scaleX(1.25) scaleY(0.75);transform:scaleX(1.25) scaleY(0.75)}
+    20%{-webkit-transform:scaleX(0.75) scaleY(1.25);transform:scaleX(0.75) scaleY(1.25)}
+    30%{-webkit-transform:scaleX(1.15) scaleY(0.85);transform:scaleX(1.15) scaleY(0.85)}
+    40%{-webkit-transform:scale(1);transform:scale(1)}
+    100%{-webkit-transform:scale(1);transform:scale(1)}
+}
+.product{height:9.4rem;background:#01A36E;overflow:hidden;}
+.touch-list{width:100rem;height:8.45rem;}
+.touch-list li{background:#fff;height:8.45rem;float:left;position: relative;margin-left:0.4rem;}
+.touch-list li img{width:5.5rem;height:4.25rem;}
+.touch-list li em{padding:0.05rem 0.3rem;background-color: rgba(0,0,0,0.5);color:#fff;font-size:0.5rem;font-style:normal;position:absolute;top:0.125rem;right:0.125rem;-moz-border-radius:5rem;-webkit-border-radius:5rem;border-radius:5rem;}
+.touch-list li div{padding:0 0.4rem;}
+.touch-list li div:nth-of-type(1){font-size:0.65rem;color:#333;line-height:1rem;padding-top:0.2rem;}
+.touch-list li div:nth-of-type(2){height:1.2rem;line-height:1.2rem;overflow: hidden;}
+.touch-list li div:nth-of-type(2) small{font-size:0.55rem;float:left;padding-top:0.25rem;color:#01a36e;}
+.touch-list li div:nth-of-type(2) big{font-size:1.1rem;float:left;color:#01a36e;padding-left:0.1rem;}
+.touch-list li div:nth-of-type(2) span{color:#999;font-size:0.55rem;float:left;margin:0.2rem 0 0 0.4rem;text-decoration:line-through;}
+.touch-list li div:nth-of-type(3){height:1.2rem;margin-top:0.3rem;}
+.touch-list li div:nth-of-type(3) a{height:1.1rem;line-height:1.1rem;color:#fff;text-align:center;background:#01A36E;display:block;font-size:0.65rem;}
+.fixed-top{height:2.2rem;}
+.hidden-box{overflow-x: scroll;position: relative;}
+::-webkit-scrollbar{width:0px}
+.fixed-nav{height:2.2rem;background:#fff;width:25rem;position: relative;}
+.hidden-box i{z-index:1;content:"";position:absolute;width:2.1rem;height:2.1rem;background:url("../img/right-border.png") no-repeat #fff center center;right:0;top:0;background-size:0.475rem 0.9rem}
+.fixed-nav li{font-size:0.7rem;float:left;line-height:2.2rem;padding-left:1.7rem;}
+.fixed-nav li a{font-family:"PingFang Sc Bold","Microsoft YaHei";color:#333;position:relative;display:block;}
+.fixed-nav li.on a:after{position:absolute;content:"";width:1.25rem;height:0.975rem;background:url("../img/md.png") no-repeat;background-size:contain;left:-1.3rem;top:0.6rem;}
+.fixed-nav li.on a{color:#01a36e;}
+.BusTicket{background:#FFF8BC;padding-bottom:2.25rem;}
+.BusTitle{height:5.9rem;background:url("../img/BusTitle.png") no-repeat center 1.6rem;background-size: 10.025rem 3.3rem;position:relative;}
+.md1{position: absolute;top:-2rem;}
+.CityBox{background:#fff;width:16.75rem;-moz-border-radius:0.25rem;-webkit-border-radius:0.25rem;border-radius:0.25rem;overflow:hidden;margin:0 auto;}
+.CityList{padding:0 0.5rem;overflow: hidden;}
+.CityList li{position:relative;height:2.2rem;line-height:2.2rem;border-bottom:1px solid #dcdcdc;overflow: hidden;}
+.CityList li strong{font-size:0.75rem;color:#333;font-weight: normal;float:left;width:6.3rem;padding-left:0.75rem;}
+.CityList li strong span{font-size:0.5rem;color:#999;}
+.CityList li strong cite{font-size:0.5rem;color:#999;font-style: normal;padding-left:0.1rem;}
+.CityList li small{font-size:0.6rem;color:#01a36e;}
+.CityList li b{font-weight:normal;color:#01a36e;font-size:0.9rem;font-family:Arial;margin-left:-0.2rem;}
+.CityList li em{font-style:normal;font-size:0.6rem;color:#999;text-decoration:line-through;}
+.CityList li a{ letter-spacing:0.1rem;position:absolute;width:3.75rem;height:1.45rem;line-height:1.45rem;text-align:center;font-size:0.6rem;color:#fff;background:#01A36E;right:0.2rem;top:50%;margin-top:-0.725rem;-moz-border-radius:0.175rem;-webkit-border-radius:0.175rem;border-radius:0.175rem;}
+.tab-box .CityList{display:none;}
+.BtmMore{height:2.1rem;line-height:2.1rem;text-align: center;overflow: hidden;}
+.BtmMore a{color:#333;font-size:0.65rem;display:block;}
+.SteamerTicket{background:#D2FCFF;padding-bottom:2.25rem;}
+.SteamerTitle{height:6.55rem;background:url("../img/SteamerTitle.png") no-repeat center 1.8rem;background-size:10.025rem 3.325rem;position: relative;}
+.md2{position: absolute;top:-1.5rem;}
+.Tourism{background:#FFD8D3;padding-bottom:2.25rem;}
+.TourismTitle{height:6.45rem;background:url("../img/TourismTitle.png") no-repeat center 1.6rem;background-size:10.025rem 3.25rem;position: relative;}
+.md3{position: absolute;top:-2rem;}
+.tab-nav{height:2.575rem;border-bottom:1px solid #DCDCDC;margin:0 0.5rem;overflow: hidden;}
+.tab-nav li{float:left;width:33%;text-align: center;line-height:2.5rem;font-size:0.8rem;color:#333;}
+.tab-nav li.on{border-bottom:0.1rem solid #01A36E;}
+.AirportLine{background:#CFFFD0;padding-bottom:2.25rem;}
+.AirportTitle{height:6.6rem;background:url("../img/AirportTitle.png") no-repeat center 1.6rem;background-size:10.025rem 3.25rem;position: relative;}
+.md4{position: absolute;top:-2.1rem;}
+.Car{background:#FFF8BC;padding-bottom:2.25rem;}
+.CarTitle{height:6.325rem;background:url("../img/CarTitle.png") no-repeat center 2.15rem;background-size:10.025rem 3.25rem;position: relative;}
+.md5{position: absolute;top:-2.1rem;}
+.CarBg{height:11.775rem;background:url("../img/CarIcon.png") no-repeat center 0;background-size:11.075rem 10.7rem;}
+.Coupon{width:9.55rem;margin:0 auto;line-height:2.15rem;height:2.15rem;background:url("../img/txtIcon.png") no-repeat right 0;background-size:4.25rem 2.125rem;}
+.Coupon dt{color:#f19665;}
+.Coupon dt span{font-size:2.4rem;float:left;}
+.Coupon dt big{font-size:1.975rem;float:left;}
+.BtnBox{width:9.55rem;margin:0 auto;}
+.BtnBox dd{margin-top:0.55rem;}
+.BtnBox dd a{display:block;height:2.075rem;line-height:2.075rem;text-align: center;font-size:1rem;-moz-border-radius:0.2rem;-webkit-border-radius:0.2rem;border-radius:0.2rem;}
+.CarBtn dd a{background:#01A36E;color:#fff8bc;}
+.BtnBox dt{text-align: right;padding-top:0.3rem;}
+.BtnBox dt a{font-size:0.55rem;color:#333;}
+.operate{background:#FFD6A9;padding-bottom:0.875rem;}
+.operateTitle{height:6.05rem;background:url("../img/operate.png") no-repeat center 1.9rem;background-size:12.5rem 3.5rem;position: relative;}
+.md6{position: absolute;top:-2.1rem;}
+.operateIcon{background:url("../img/operateIcon.png") no-repeat center 0;background-size:10.325rem 10.325rem;height:11.575rem;}
+.RedBtn dd a{background:#E87652;color:#333;}
+.adimg{padding:0.875rem 0.875rem 0 0.875rem;}
+.nav_wrap_fix{position:fixed;top:0;z-index:3;}
+.shadow{width:100%;height:100%;position:fixed;z-index:4;background:#000;opacity:0.8;top:0;left:0;}
+
+.layBox{width:11.5rem;background:#fff;padding:0 1.35rem;left:50%;margin-left:-7.1rem;position:fixed;z-index:5;top:50%;-moz-border-radius:0.2rem;-webkit-border-radius:0.2rem;border-radius:0.2rem;}
+.layTxt1{padding-top:1.25rem;}
+.layTxt1 dt{font-size:0.75rem;text-align:center;color:#00aeff;}
+.layTxt1 dd{font-size:0.65rem;padding-top:1rem;}
+.layTxt1 dd p{line-height:0.9rem;}
+.textIndent{text-indent:-3.2rem;padding-left:3.2rem;}
+.textIndent2{text-indent:-1rem;padding-left:1rem;}
+.close{padding-top:0.75rem;height:2.675rem;}
+.close a{display:block;line-height:2.675rem;text-align: center;color:#00aeff;font-size:0.75rem;border-top:1px solid #ccc;}
+.closeBtn{position: absolute;right:0;top:-3.025rem;width:1.525rem;height:3.025rem;background:url("../img/x.png") no-repeat;background-size:100% 100%;}
+.zhekou{height:3rem;background:url("../img/discount.png") no-repeat center top;background-size:9.375rem 2.825rem;}
+
+.layTxt2{text-align:center;font-size:0.65rem;color:#333;padding-top:1rem;}
+.sjIcon{width:0.325rem;height:0.425rem;vertical-align: middle;margin-left:0.1rem;}
+.top-icon{width:2rem;height:2rem;background:url("../img/top-icon.png") no-repeat;background-size:contain;position:fixed;right:1rem;bottom:5rem;}
+
+
+
+
+
+

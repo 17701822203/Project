@@ -1,0 +1,190 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+$(document).ready(function(){
+	setTimeout(function () {
+		$(".bk1").animate({opacity: "1"}, 500);
+		return false;
+	}, 400);   
+	setTimeout(function () {
+		$(".bk2").animate({top:"0.43rem"}, 200);				
+		return false;
+	}, 900);     
+	setTimeout(function () {
+		$(".yun").animate({opacity:"1"}, 800);				
+		return false;
+	}, 1100);
+	setTimeout(function () {
+		$(".hand").animate({opacity:"1"}, 800);				
+		return false;
+	}, 1900);
+	setTimeout(function () {
+		$(".g2").animate({opacity:"1",left:"0.4rem",top:"8rem"}, 200);				
+		return false;
+	}, 1900);
+	setTimeout(function () {
+		$(".g3").animate({opacity:"1"}, 200);				
+		return false;
+	}, 1900);
+	setTimeout(function () {
+		$(".title").animate({opacity:"1",top:"2.8rem"}, 400);				
+		return false;
+	}, 2100);
+	setTimeout(function () {
+		$(".g1").animate({opacity:"1",top:"1.7rem"}, 600);				
+		return false;
+	}, 2500);
+	setTimeout(function () {
+		$(".light").animate({opacity:"1"}, 200);				
+		return false;
+	}, 3100);
+	setTimeout(function () {
+		$(".sp").animate({opacity:"1"}, 400);				
+		return false;
+	}, 3300);
+	setTimeout(function () {
+		$(".g7").animate({opacity:"1"}, 400);				
+		return false;
+	}, 3300);
+	setTimeout(function () {
+		$(".button").animate({opacity:"1"}, 200);				
+		return false;
+	}, 3700);
+	
+	setTimeout(function () {
+		$(".g4").animate({opacity:"1"}, 400);				
+		return false; 
+	}, 2500);
+	setTimeout(function () {
+		$(".g5").animate({opacity:"1"}, 400);				
+		return false;
+	}, 2100); 
+	setTimeout(function () { 
+		$(".g6").animate({opacity:"1"}, 200);				
+		return false;
+	}, 3100);
+});
+var a = 1;
+function myBtn(){ 
+	if(a==1) 
+	{
+		$(".button").animate({left:"3rem",top:"20rem"}, 200);
+	}
+	else if(a==2) 
+	{
+		$(".button").animate({left:"10rem",top:"22rem"}, 50);
+	}
+	else if(a==3)
+	{
+		$(".button").animate({left:"5rem",top:"15rem"}, 200);
+	}
+	else
+	{
+		$(".button").animate({left:"50%",top:"17.6rem"}, 200);
+		$(".shadow,.pop").css("display","block");
+	}
+	if(a<4)
+	{
+		a++;
+	}
+	else
+	{
+		a = 1;
+	}
+}
+var interval = 100;
+	var timer = setInterval(function(){
+		setTimeout(function(){
+		document.getElementById("g1").src = 'img/g1.png';
+		}, interval * 3);
+		setTimeout(function(){
+		document.getElementById("g1").src = 'img/g1_2.png';
+		}, interval * 10);
+}, interval * 20);
+
+var interval = 100;
+	var timer = setInterval(function(){
+		setTimeout(function(){
+		document.getElementById("g7").src = 'img/g4.png';
+		}, interval * 2);
+		setTimeout(function(){
+		document.getElementById("g7").src = 'img/g4_2.png';
+		}, interval * 1);
+}, interval * 20);
+
+var interval = 130;
+	var timer = setInterval(function(){
+		setTimeout(function(){
+		document.getElementById("g2").src = 'img/g2.png';
+		}, interval * 2);
+		setTimeout(function(){
+		document.getElementById("g2").src = 'img/g2_2.png';
+		}, interval * 10);
+}, interval * 20);
+</script>
+</head>
+
+<body>
+	<section>
+    
+    	<div class="shadow"></div>
+        <div class="pop">
+        	<a class="close" href="###"><img src="img/close.png"></a>
+        	<dl class="pop1">
+            	<dt><img src="img/yrj.png"></dt>
+                <dd>我是红包君，开个小玩笑摸摸头，送你<br/>10元火车票红包安慰你一下</dd>
+                <dd><input placeholder="输入手机号，领取10元红包" type="text"></dd>
+                <dd><a href="###"><img src="img/yrjBtn.png"></a></dd>
+            </dl>
+            <img class="popImg" src="img/popImg.png">
+            <p class="btmTxt">火车出行用铁友</p>
+        </div>
+        <div class="pop_2">
+        	<a class="close" href="###"><img src="img/close2.png"></a>
+            <dl class="pop3">
+            	<dt><img src="img/tittxt.png"></dt>
+                <dd><img src="img/button2.png"></dd>
+                <dd><img src="img/button3.png"></dd>
+            </dl>
+            <img class="popImg" src="img/popImg.png">
+            <p style="color:#7d0000;" class="btmTxt">火车出行用铁友</p>
+        </div>
+    </section>
+	<article>
+    	<img class="bk1" src="img/bk1.png">
+        <img class="light" src="img/dg.png">
+        <img class="bk2" src="img/bk2.png">
+        <img class="title" src="img/tit.png">
+        <img class="sp" src="img/sq.png">
+        <img id="g1" class="g1" src="img/g1.png">
+        <img id="g2" class="g2" src="img/g2.png">
+        <img class="g3" src="img/g3.png">
+        <img class="g4" src="img/g5.png">
+        <img class="g5" src="img/g6.png">
+        <img class="g6" src="img/g7.png">
+        <img id="g7" class="g7" src="img/g4.png">
+        <img class="yun" src="img/yun.png">
+        <img class="hand" src="img/hand.png">
+        <a onClick="myBtn()" class="button" href="###"><img src="img/button.png"></a>
+    </article>
+</body>
+</html>

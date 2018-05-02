@@ -1,0 +1,143 @@
+﻿<html class="ie" xmlns="http://www.w3.org/1999/html"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 9.7 * fontSize){
+                $('#TopNav').addClass('nav_wrap_fix');
+            }else{
+                $('#TopNav').removeClass('nav_wrap_fix');
+            }
+        });
+        $(document).ready(function(){
+            $("#TopNav li").first().addClass("on")
+            var nav=$("#TopNav li");
+            nav.click(function(){
+                $(this).addClass("on").siblings().removeClass("on");
+            })
+            $('#TopNav li.nav1').click(function(){$('html,body').animate({scrollTop:$('.md1').offset().top}, 800);});
+            $('#TopNav li.nav2').click(function(){$('html,body').animate({scrollTop:$('.md2').offset().top}, 800);});
+            $('#TopNav li.nav3').click(function(){$('html,body').animate({scrollTop:$('.md3').offset().top}, 800);});
+            $('#TopNav li.nav4').click(function(){$('html,body').animate({scrollTop:$('.md4').offset().top}, 800);});
+            $('#TopNav li.nav5').click(function(){$('html,body').animate({scrollTop:$('.md5').offset().top}, 800);});
+        })
+    </script>
+</head>
+<body>
+    <article>
+        <div class="TopBg"></div>
+        <div id="TopNav" class="NavBg">
+            <ul class="NavList">
+                <li class="nav1"><span>值机</span></li>
+                <li class="nav2"><span>安检</span></li>
+                <li class="nav3"><span>登机</span></li>
+                <li class="nav4"><span>飞行</span></li>
+                <li class="nav5"><span>降落</span></li>
+            </ul>
+        </div>
+        <div class="Box1">
+            <em class="md1"></em>
+            <div class="Title">
+                <h3><span><em>1</em>值机（打印登机牌）</span></h3>
+            </div>
+            <dl class="TxtList">
+                <dt>柜台值机（托运行李）</dt>
+                <dd>
+                    <p>国内航班建议提前1.5小时到达机场。找到所乘坐的航空公司值机柜台后，办理值机以及行李托运。可以向工作人员要求靠过道、靠窗或者中间的座位，与同行朋友一起值机时，可以要求坐在一起。</p>
+                    <p>特别提醒：</p>
+                    <p>1. 充电宝不能托运，只能随身携带上飞机。</p>
+                    <p>2. 超过100ml的液态或胶状的化妆品不能随身带，只能托运。</p>
+                </dd>
+                <dt>自助值机柜台</dt>
+                <dd>
+                    <p>如果没有托运行李，可以直接在自助值机柜台打印登机牌。</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="Box2">
+            <em class="md2"></em>
+            <div class="Title">
+                <h3><span><em>2</em>安检</span></h3>
+            </div>
+            <dl class="TxtList">
+                <dd style="padding-top:1.1rem;">
+                    <p>身份证与登机牌一起交给工作人员</p>
+                    <p>1. 打火机、刀具、饮料，酒精等不可携带登机。</p>
+                    <p>2. 笔记本、平板电脑、充电宝、相机、雨伞在安检时，需要单独拿出来检查。</p>
+                    <p>3. 洗发水等液体不能超过100ml。</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="Box3">
+            <em class="md3"></em>
+            <div class="Title">
+                <h3><span><em>3</em>登机</span></h3>
+            </div>
+            <dl class="TxtList">
+                <dd style="padding-top:1.1rem;">
+                    <p>找到登机牌上对应的登机口，等待登机时间到后，将登机牌交给工作人员即可。</p>
+                    <p>登机后，参照登机牌上的座位信息，即可找到您的座位。</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="Box4">
+            <em class="md4"></em>
+            <div class="Title">
+                <h3><span><em>4</em>登机</span></h3>
+            </div>
+            <dl class="TxtList">
+                <dd style="padding-top:1.1rem;">
+                    <p>1. 起飞前，请关闭手机，调直座椅靠背，收起小桌板，系好安全带，等待起飞。</p>
+                    <p>2. 起飞和降落时，不能使用任何电子设备。</p>
+                    <p>平稳飞行后，可使用平板电脑，笔记本等设备。但需要关闭wifi功能。</p>
+                    <p>3. 如果需要空服人员的帮忙，可按头顶的服务灯。</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="Box5">
+            <em class="md5"></em>
+            <div class="Title">
+                <h3><span><em>5</em>降落</span></h3>
+            </div>
+            <dl class="TxtList">
+                <dd style="padding-top:1.1rem;">
+                    <p>飞机停稳后，再起身拿随身携带的行李。如有托运行李，可按照机场显示屏找到对应的行李转盘。</p>
+                </dd>
+            </dl>
+        </div>
+    </article>
+</body>
+</html>

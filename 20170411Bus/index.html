@@ -1,0 +1,81 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script language="JavaScript">
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        var fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+<body>
+    <section style="display:none;">
+        <div class="shadow"></div>
+        <dl class="pop">
+            <dt>姓名不能为空</dt>
+            <dd>知道了</dd>
+        </dl>
+    </section>
+    <article>
+        <div class="TopImg"><img src="img/TopImg.jpg"></div>
+        <ul class="list">
+            <li>
+                <strong>企业名称</strong>
+                <input type="text" placeholder="输入公司名称或展开选择">
+                <i></i>
+            </li>
+        </ul>
+        <ul class="list">
+            <li>
+                <strong>姓名</strong>
+                <input type="text" placeholder="企业联系人姓名">
+            </li>
+            <li>
+                <strong>职位</strong>
+                <input type="text" placeholder="企业联系人职位">
+            </li>
+            <li>
+                <strong>电话/邮箱</strong>
+                <input type="text" placeholder="企业联系人电话或邮箱">
+            </li>
+        </ul>
+        <ul class="list">
+            <li>
+                <strong>您的联系方式</strong>
+                <input type="text" placeholder="手机号/QQ号/微信号均可">
+            </li>
+        </ul>
+        <div class="BtnBox">
+            <a href="###">提交</a>
+        </div>
+    </article>
+</body>
+</html>

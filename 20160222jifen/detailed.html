@@ -1,0 +1,53 @@
+<html class="ie">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body>
+
+<article>
+
+	<div class="headTop">
+    	<span class="left"><a href="###"></a></span>
+        <h1>任务详情</h1>
+    </div>
+    
+    <div class="detTop">
+    	<div class="left"><img src="img/my.png"></div>
+        <strong class="center">蚂蚁短租————短租平台</strong>
+        <span class="right">+100积分</span>
+    </div>
+    
+    <div class="detaTxt">
+    	<p>蚂蚁短租-短租房预订网,全家出游住宿新选择!提供高品质短租房、日租房、短租公寓、民宿、酒店式公寓在线预订服务.价格更省,空间更大!房源覆盖国内各大旅游城市的商圈、景点周边.</p>
+        <div class="detaImg"><img src="img/test.png"></div>
+        <h4>获取积分步骤：</h4>
+        <p style="margin:0;">跳转浏览&rarr;验证成功&rarr;获得积分奖励</p>
+        <div class="detaBtnBox">
+        	<a class="detaBtn" href="###">去看看</a>
+        </div>
+    </div>
+    
+</article>
+
+</body>
+</html>

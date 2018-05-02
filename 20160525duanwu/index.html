@@ -1,0 +1,159 @@
+<html class="ie"><!--<![endif]--><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+	window.onload=function(){
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+		window.addEventListener("resize",setRemSize,false);
+		function setRemSize(){
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+		}	
+	};
+	$(document).ready(function(){
+		
+		function selectFrom(lowerValue, upperValue){
+			var choices = upperValue - lowerValue + 1;
+			return Math.floor(Math.random() * choices + lowerValue);
+		}
+		var width=$(window).width();
+		var a=setInterval(function(){foo()},5000);
+		function foo(){
+			var num = selectFrom(0, width);
+			var num2 = selectFrom(0, width);
+			var num3 = selectFrom(0, width);
+			var num4 = selectFrom(0, width);
+			var num5 = selectFrom(0, width);
+			var num6 = selectFrom(0, width);
+			var num7 = selectFrom(0, width);
+			var num8 = selectFrom(0, width);
+			$(".GameBox").append('<img style="left:'+num+'px;" class="rotation" src="img/z1.png"/>');
+			$(".GameBox").append('<img style="left:'+num2+'px;" class="rotation2" src="img/z2.png"/>');
+			$(".GameBox").append('<img style="left:'+num3+'px;" class="rotation3" src="img/z3.png"/>');
+			$(".GameBox").append('<img style="left:'+num4+'px;" class="rotation4" src="img/z4.png"/>');
+			$(".GameBox").append('<img style="left:'+num5+'px;" class="rotation5" src="img/z5.png"/>');
+			$(".GameBox").append('<img style="left:'+num6+'px;" class="rotation6" src="img/z6.png"/>');
+			$(".GameBox").append('<img style="left:'+num7+'px;" class="rotation7" src="img/z7.png"/>');
+			$(".GameBox").append('<img style="left:'+num8+'px;" class="rotation8" src="img/z8.png"/>');
+		}
+		$(".btn2").click(function(){
+			$(".hzIcon,div,span").slideDown("slow");
+			setTimeout(function () {
+				$(".img3").animate({opacity:"1"}, 1000);
+			}, 1);
+			setTimeout(function () {
+				$(".img3").remove()
+			}, 1000);
+			setTimeout(function () {
+				$(".img2").animate({opacity:"1"}, 1000);
+			}, 1000);
+			setTimeout(function () {
+				$(".img2").remove()
+			}, 2000);
+			setTimeout(function () {
+				$(".img1").animate({opacity:"1"}, 1000);
+			}, 2000);
+			setTimeout(function () {
+				$(".img1").remove()
+			}, 3000);
+			setTimeout(function () {
+				$(".game").addClass("GameBox");
+			}, 3000);
+		})
+		setTimeout(function () {
+			$(".txt1").animate({opacity:"1"}, 3000);
+		}, 1);
+		setTimeout(function () {
+			$(".txt2").animate({opacity:"1"}, 3000);
+		}, 1800);
+		setTimeout(function () {
+			$(".txt1,.txt2").hide()
+		}, 5000);
+		setTimeout(function () {
+			$(".txt6").animate({opacity:"1"}, 2000);	
+		}, 5000);
+		setTimeout(function () {
+			$(".txt7,.btn1,.btn2").animate({opacity:"1"}, 1000);	
+		}, 6000);
+		$(".btn1").click(function(){
+			$("section").show()	
+		})
+		$(".close,.shadow").click(function(){
+			$("section,.shadow,.pop-help").hide()	
+		})
+		$(".btn2").click(function(){
+			$("article").hide()	
+		})
+	})
+</script>
+</head>
+
+<body>
+	<section>
+    
+    	<div class="shadow"></div>
+        
+    	<div class="pop-help">
+        	<img class="close2" src="img/close.png">
+        	<ul class="help-list">
+            	<li>1.活动手指，舒展筋骨，抢粽前热身一下；</li>
+                <li>2.30秒内，尽可能抢夺更多粽子，即可获得高分</li>
+                <li>1.活动时间：5/30---6/11</li>
+                <li>2.用户每天可获得一次游戏参与机会</li>
+                <li>3.活动结束后，排名前十的用户均可获得铁友火车票免单福利，客服人员将在7个工作日联系中奖用户，沟通免单事宜</li>
+                <li>4.在法律允许的范围内，铁友旅行网可对活动的规则/条款作出适当调整/修改</li>
+            </ul>
+        </div>
+        
+        <div style="display:none;" class="pop-rank">
+        	<div class="pop-txt">注：榜单前十可获火车票免单</div>
+            <img class="close" src="img/close.png">
+            <img class="pop-left-btn" src="img/btn3.png">
+            <img class="pop-right-btn" src="img/btn4.png">
+        	<span class="fenshu">123</span>
+            <ul class="rank-list">
+            	<li><strong>NO.1</strong><span>我是昵称</span><b>0154<small>分</small></b></li>
+            	<li><strong>NO.2</strong><span>我是昵称</span><b>0154<small>分</small></b></li>
+            	<li><strong>NO.3</strong><span>我是昵称</span><b>0154<small>分</small></b></li>
+            	<li><strong>NO.4</strong><span>我是昵称</span><b>0154<small>分</small></b></li>
+            	<li><strong>NO.5</strong><span>我是昵称</span><b>0154<small>分</small></b></li>
+            	<li><strong>NO.6</strong><span>我是昵称</span><b>0154<small>分</small></b></li>
+            	<li><strong>NO.7</strong><span>我是昵称</span><b>0154<small>分</small></b></li>
+            	<li><strong>NO.8</strong><span>我是昵称</span><b>0154<small>分</small></b></li>
+            	<li><strong>NO.9</strong><span>我是昵称</span><b>0154<small>分</small></b></li>
+            	<li class="on"><strong>NO.100</strong><span>我的排名</span><b>0154<small>分</small></b></li>
+            </ul>
+        </div>
+        
+    </section>
+    <div class="game-box">
+        <span class="txtBox1">59S</span>
+        <img class="txtBox2" src="img/txtBox.png">
+        <strong class="txtBox3">15</strong>
+    	<div class="gameP">
+            <div class="game">
+            	<img class="img1" src="img/img1.png">
+            	<img class="img2" src="img/img2.png">
+            	<img class="img3" src="img/img3.png">
+            </div>
+        </div>
+    	<div class="animation-box">
+        	<div class="Scenes1"></div>
+            <div class="Scenes2"></div>
+            <div class="Scenes3"></div>
+            <div class="Scenes4"></div>
+        </div>
+    </div>
+	<article style="display:;">
+    	<img class="left-icon" src="img/left-icon.png">
+        <img class="txt1" src="img/txt1.png">
+        <img class="txt2" src="img/txt2.png">
+        <img class="txt6" src="img/txt6.png">
+        <img class="btn1" src="img/btn1.png">
+        <img class="btn2" src="img/btn2.png">
+        <div class="txt7"></div>
+    </article>
+</body>
+</html>

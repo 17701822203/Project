@@ -1,0 +1,76 @@
+<html class="ie">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+	(function (doc, win) {
+	  var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function () {
+		  var clientWidth = docEl.clientWidth;
+		  if (!clientWidth) return;
+		  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+		};
+	 
+	  if (!doc.addEventListener) return;
+	  win.addEventListener(resizeEvt, recalc, false);
+	  doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+</script>
+	<article>
+    	<div class="header"><img src="img/topImg.png"></div>
+	  <div class="wrap">
+       		<h3>请协助我们完成如下问卷</h3>
+            <div class="tabLst">
+            	<dl>
+                	<dt>1.你的最近每年旅行的次数：</dt>
+                    <dd>
+                    	<span><label><input type="checkbox"><i>至少每周一次</i></label></span>
+                        <span><label><input type="checkbox"><i>至少每月一次</i></label></span>
+                        <span><label><input type="checkbox"><i>至少每半年一次</i></label></span>
+                    </dd>
+                	<dt>2.您今年的旅游预算是</dt>
+                    <dd>
+                    	<span><label><input type="checkbox"><i>1000元以内</i></label></span>
+                        <span><label><input type="checkbox"><i>1000-1500元</i></label></span>
+                        <span><label><input type="checkbox"><i>5000-10000元</i></label></span>
+                    	<span><label><input type="checkbox"><i>10000元以上</i></label></span>
+                    </dd>
+                	<dt>3.您会选择何种出游方式</dt>
+                    <dd>
+                    	<span><label><input type="checkbox"><i>境内游</i></label></span>
+                        <span><label><input type="checkbox"><i>境外游</i></label></span>
+                    </dd>
+                	<dt>4.在旅途中，您是否愿意为自己和家人购买意外险</dt>
+                    <dd>
+                    	<span><label><input type="checkbox"><i>非常有必要</i></label></span>
+                        <span><label><input type="checkbox"><i>在条件允许下有必要</i></label></span>
+                        <span><label><input type="checkbox"><i>没必要</i></label></span>
+                    </dd>
+                </dl>
+            </div>
+       		<h3>完善信息，给自己一份免费25万元保障</h3>
+            <div class="tabLst">
+            	<ul>
+                	<li><span>您的姓名</span><span><input class="txt" type="text"></span></li>
+                	<li><span>性别</span>
+                        <span>
+                            <label><input type="radio" name="RadioGroup1" value="男" id="RadioGroup1_0"><i>男</i></label>
+                            <label><input type="radio" name="RadioGroup1" value="女" id="RadioGroup1_1"><i>女</i></label>
+                        </span>
+               	    </li>
+                	<li><span>生日</span><span><input class="txt" type="text"></span></li>
+                	<li><span>手机</span><span><input class="txt" type="text"></span></li>
+                </ul>
+          </div>
+          <div class="btnbox"><a class="btn" href="###">免费领取</a></div>
+	  </div>
+    </article>
+</body>
+</html>

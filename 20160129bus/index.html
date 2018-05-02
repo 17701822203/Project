@@ -1,0 +1,54 @@
+<html><!--<![endif]--><head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/slip.min.js"></script>
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="js/style.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        $(document).ready(function(){
+			AddListeners();
+            setTimeout(function () {
+                $(".huijia").animate({opacity: "1"}, 1000);
+                return false;
+            }, 400);
+            setTimeout(function () {
+                $(".bk1,.btn1").animate({opacity: "1"},1000);
+                return false;
+            }, 800);
+        });
+
+    </script>
+	<article class="swipe-wrap" id="slip">
+    	<div class="swipe-box">
+        	<img class="huijia" src="img/huijia.png">
+        	<img class="bk1" src="img/img2.png" />
+            <button class="btn1"><img src="img/button.png"></button>
+            <img class="icon" src="img/ico1.png">
+        </div>
+    	<div class="swipe-box" style="display:none;"><img class="bk2" src="img/page1.jpg"><img class="icon" src="img/ico1.png"></div>
+    	<div class="swipe-box" style="display:none;"><img class="bk3" src="img/page2.jpg"><img class="icon" src="img/ico1.png"></div>
+    	<div class="swipe-box" style="display:none;"><img class="bk4" src="img/page3.jpg"><img class="icon" src="img/ico1.png"></div>
+    	<div class="swipe-box" style="display:none;"><img class="bk5" src="img/page4.jpg"><img class="icon" src="img/ico1.png"></div>
+    	<div class="swipe-box" style="display:none;"><img class="bk6" src="img/page5.jpg"><img class="icon" src="img/ico1.png"></div>
+    	<div class="swipe-box" style="display:none;"><img class="bk7" src="img/page6.jpg"><img class="icon" src="img/ico1.png"></div>
+    	<div class="swipe-box" style="display:none;"><img class="bk8" src="img/page7.jpg"><img class="icon" src="img/ico1.png"></div>
+    	<div class="swipe-box" style="display:none;"><img class="bk9" src="img/page8.jpg"><img class="icon" src="img/ico1.png"></div>
+        <div class="swipe-box" style="display:none;">
+        	<img class="bk10" src="img/di.png">
+            <a class="btn2" href="###"><img src="img/button2.png"></a>
+        </div>
+    </article>
+	<script type="text/javascript">
+        var container = document.getElementById('slip');
+        var pages = document.querySelectorAll('.swipe-box');
+        var slip = Slip(container, 'x').webapp(pages);
+    </script>
+</body>
+</html>

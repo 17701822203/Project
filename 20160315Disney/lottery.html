@@ -1,0 +1,43 @@
+<html class="ie">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript" src="js/myJs.js"></script>
+</head>
+
+<body>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+	<article>
+    	<img src="img/bk.jpg">
+        <img class="sjq" src="img/sjq.png">
+        <button class="canyuBtn">立即参与</button>
+        <dl class="lotteryLst">
+        	<dt>感谢您参与<br/>XXX活动</dt>
+            <dd>
+            	手机号：13701236547<br/>抽奖码：5201314
+            </dd>
+        </dl>
+        <dl class="time">
+        	<dt>开奖时间</dt>
+            <dd>2012年12月31日</dd>
+        </dl>
+    </article>
+</body>
+</html>

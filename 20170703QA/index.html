@@ -1,0 +1,150 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var obj = $('#box');
+            obj.find('dt').on('click',function(){
+                var thisSpan = $(this).children('span');
+                if(!thisSpan.hasClass('on')){
+                    obj.find('dt').children('span').removeClass('on');
+                    obj.find('dd').hide(200);
+                    thisSpan.addClass('on');
+                    $("html,body").scrollTop(thisSpan.offset().top-10);
+                    $(this).siblings("dd").show(200);
+                }else{
+                    thisSpan.removeClass('on');
+                    $(this).siblings('dd').hide(200);
+                }
+            })
+        })
+    </script>
+</head>
+<body style="background:#F3F3F3;">
+    <div class="top_txt">Pay a lot less to travel on the same train,at same times and in the same seat.</div>
+    <article class="box" id="box">
+        <dl>
+            <dt>1.What are split tickets?<span class="on"></span></dt>
+            <dd style="display:block">
+                <p>For example, if you wanted to travel from Station A to Station D, you would expect to buy a ticket direct from A to D. However, depending on your route you may find it a lot cheaper to buy a ticket from A to B, and another from B to C and still another from C to D.</p>
+                <div class="btn_box">
+                    <a class="left_btn" href="###">Helpful</a>
+                    <a class="right_btn" href="###">Unhelpful</a>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>2.How to use split tickets?<span></span></dt>
+            <dd>
+                <p>Passengers traveling using split train tickets travel exactly the same way they would have had they been traveling on a regular through train ticket. The only difference is that by splitting their tickets they may have paid a lot less for the same journey.</p>
+                <p>You still travel on the same train, at the same times and in the same seat but with two or more cheaper tickets instead of one expensive ticket. The only condition when using split train tickets is that the train you take must stop at all the places you have bought tickets for and not just pass through them.</p>
+                <div class="btn_box">
+                    <a class="left_btn" href="###">Helpful</a>
+                    <a class="right_btn" href="###">Unhelpful</a>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>3.Are split tickets legal?<span></span></dt>
+            <dd>
+                <p>Split Ticketing is perfectly legal and is allowed by the National Conditions of Carriage under which all train operating companies on the national rail network do business.</p>
+                <div class="btn_box">
+                    <a class="left_btn" href="###">Helpful</a>
+                    <a class="right_btn" href="###">Unhelpful</a>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>4.Will it work on any journey?<span></span></dt>
+            <dd>
+                <p>To get your route at the price listed, the tickets you buy (and the journey you take) need to exactly match the tickets shown. This includes ticket type (eg, peak or off-peak), destination and journey time. Otherwise it may cost more.</p>
+                <div class="btn_box">
+                    <a class="left_btn" href="###">Helpful</a>
+                    <a class="right_btn" href="###">Unhelpful</a>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>5.Does it work with railcardsrailcardsrailcardsrailcardsrailcards?<span></span></dt>
+            <dd>
+                <p>Yes. After all, you're just buying normal tickets - provided your railcard is valid on them (do check), there's no problem. On odd occasions splitting without using a railcard works out better - so check with and without.</p>
+                <div class="btn_box">
+                    <a class="left_btn" href="###">Helpful</a>
+                    <a class="right_btn" href="###">Unhelpful</a>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>6.Can I split advance tickets?<span></span></dt>
+            <dd>
+                <p>Yes! The savings can be monstrous. Our first incarnation of this tool only let you split tickets on the day, but it now lets you do this for some advance tickets too, taking you to thetrainline.com so you can buy 'em direct.</p>
+                <div class="btn_box">
+                    <a class="left_btn" href="###">Helpful</a>
+                    <a class="right_btn" href="###">Unhelpful</a>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>7.Watch out if you need to change trains<span></span></dt>
+            <dd>
+                <p>My route involves changing trains - is my train being late a problem?</p>
+                <p>If you've a time-specific Advance ticket, or an Anytime ticket, train delays won't be a problem.This is because Anytime tickets are already fully flexible - so you can use 'em on any train. With Advance tickets, if the first train's late and causes you to miss your next, you can get a later train with the same company, at no extra cost.</p>
+                <p>However, if you've an off-peak ticket, a train delay before your split could be a problem. This is because with off-peak tickets, you need to travel at specific times. So in the rare event the train delay takes you outside the off-peak time, you'll have to pay the extra to make it up to a peak ticket. </p>
+                <p>What if the train delays after my split?</p>
+                <p>If the train's delayed after the split in your journey, there's no need to worry - as you'll already be on it. We suggest putting your feet up (not on the seats!) and enjoying a packet of salt 'n' vinegar (Martin's fave).</p>
+                <div class="btn_box">
+                    <a class="left_btn" href="###">Helpful</a>
+                    <a class="right_btn" href="###">Unhelpful</a>
+                </div>
+            </dd>
+        </dl>
+    </article>
+    <div class="btm_txt">if you still feel confused, please email your feedback to <a href="mailto:customerrelations.trainpro.uk@gmail.com">customerrelations.trainpro.uk@gmail.com</a></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

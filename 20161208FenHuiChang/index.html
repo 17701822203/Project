@@ -1,0 +1,497 @@
+﻿<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        $(document).ready(function(e) {
+            function selectFrom(lowerValue, upperValue){
+                var choices = upperValue - lowerValue + 1;
+                return Math.floor(Math.random() * choices + lowerValue);
+            }
+            var width=$(window).width();
+            var a=setInterval(function(){foo()},500);
+            function foo(){
+                var num = selectFrom(0, width);
+                $(".Top-bg").append('<img style="left:'+num+'px;" class="rotation" src="img/xuehua.png" alt=""/>');
+            }
+        });
+        $(document).ready(function(){
+            //锚点
+            $('.top-icon').click(function(){$('html,body').animate({scrollTop:$('.top').offset().top}, 800);});
+            $('#TopNav li.nav1').click(function(){$('html,body').animate({scrollTop:$('.md1').offset().top}, 800);});
+            $('#TopNav li.nav2').click(function(){$('html,body').animate({scrollTop:$('.md2').offset().top}, 800);});
+            $('#TopNav li.nav3').click(function(){$('html,body').animate({scrollTop:$('.md3').offset().top}, 800);});
+            $('#TopNav li.nav4').click(function(){$('html,body').animate({scrollTop:$('.md4').offset().top}, 800);});
+            $('#TopNav li.nav5').click(function(){$('html,body').animate({scrollTop:$('.md5').offset().top}, 800);});
+            $('#TopNav li.nav6').click(function(){$('html,body').animate({scrollTop:$('.md6').offset().top}, 800);});
+            $("#TopNav li").first().addClass("on")
+            var nav=$("#TopNav li");
+            nav.click(function(){
+                $(this).addClass("on").siblings().removeClass("on");
+            })
+            //Tab
+            $(".tab-nav li").first().addClass("on")
+            $(".tab-box label").first().css("display","block");
+            var tab=$(".tab-nav li");
+            tab.click(function(){
+                $(this).addClass("on").siblings().removeClass("on");
+                var index=tab.index(this);
+                $(".tab-box > label")
+                    .eq(index).show()
+                    .siblings().hide()
+            })
+
+        })
+        //导航悬浮
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 27.8 * fontSize){
+                $('#TopNav').addClass('nav_wrap_fix');
+            }else{
+                $('#TopNav').removeClass('nav_wrap_fix');
+            }
+        });
+    </script>
+    <script>
+        function scroll(){
+            $(".scroll ul").animate({"margin-left":"-5.9rem"},function(){
+                $(".scroll ul li:eq(0)").appendTo($(".scroll ul"))
+                $(".scroll ul").css({"margin-left":0})
+            })
+        }
+        setInterval(scroll,2001)
+    </script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            $("#TopNav").scroll(function() {
+                var left = this.scrollLeft;
+                $("#TopNav i").fadeOut();
+            })
+        });
+    </script>
+
+</head>
+<body>
+    <em class="top"></em>
+    <article>
+        <div class="Top-bg">
+
+        </div>
+        <div class="touch" id="topnav-slider">
+            <div class="product">
+                <div class="scroll">
+                    <ul class="touch-list">
+                        <li>
+                            <em>汽车票</em>
+                            <a href="###"><img src="img/img1.jpg"></a>
+                            <div>大连-锦州</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>88</big>
+                                <span>&yen; 125</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+
+                        </li>
+                        <li>
+                            <em>机场巴士</em>
+                            <a href="###"><img src="img/img2.jpg"></a>
+                            <div>咸阳机场-西安</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>9.9</big>
+                                <span>&yen; 20</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                        <li>
+                            <em>景区直通车</em>
+                            <a href="###"><img src="img/img3.jpg"></a>
+                            <div>吴山广场-宋城</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>1</big>
+                                <span>&yen; 5</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                        <li>
+                            <em>船票</em>
+                            <a href="###"><img src="img/img4.jpg"></a>
+                            <div>香港-澳门</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>128</big>
+                                <span>&yen; 150</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                        <li>
+                            <em>景区直通车</em>
+                            <a href="###"><img src="img/img5.jpg"></a>
+                            <div>丽江-玉龙雪山</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>9</big>
+                                <span>&yen; 25</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-top">
+            <div id="TopNav" class="hidden-box" style="width:100%;">
+                <i></i>
+                <ul class="fixed-nav">
+                    <li class="nav1"><a href="###">汽车票</a></li>
+                    <li class="nav2"><a href="###">机场专线</a></li>
+                    <li class="nav3"><a href="###">船票</a></li>
+                    <li class="nav4"><a href="###">旅游专线</a></li>
+                    <li class="nav5"><a href="###">超级巴士</a></li>
+                    <li class="nav6"><a href="###">租车自驾</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="red-bg">
+            <em class="md1"></em>
+            <dl class="product-list">
+                <dd>
+                    <p>
+                        <strong>大连-葫芦岛</strong>
+                        <small>&yen;</small>
+                        <big>85</big>
+                        <span>&yen; 128</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>抚顺-大连</strong>
+                        <small>&yen;</small>
+                        <big>86</big>
+                        <span>&yen; 114</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>沈阳-锦州</strong>
+                        <small>&yen;</small>
+                        <big>50</big>
+                        <span>&yen; 70</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>大连-锦州</strong>
+                        <small>&yen;</small>
+                        <big>85</big>
+                        <span>&yen; 125</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>沈阳-葫芦岛</strong>
+                        <small>&yen;</small>
+                        <big>55</big>
+                        <span>&yen; 77</span>
+                        <a href="###">预订</a>
+                    </p>
+                </dd>
+                <dt><a href="###">更多线路</a></dt>
+            </dl>
+        </div>
+        <div class="orange-bg">
+            <em class="md2"></em>
+            <dl class="product-list">
+                <dd>
+                    <p>
+                        <strong>咸阳机场-西安</strong>
+                        <small>&yen;</small>
+                        <big>9.9</big>
+                        <span>&yen; 20</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>香港-宝安机场</strong>
+                        <small>&yen;</small>
+                        <big>120</big>
+                        <i>起</i>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>宝安机场-香港</strong>
+                        <small>&yen;</small>
+                        <big>130</big>
+                        <i>起</i>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>香港机场-东莞</strong>
+                        <small>&yen;</small>
+                        <big>200</big>
+                        <i>起</i>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>香港机场-深圳</strong>
+                        <small>&yen;</small>
+                        <big>130</big>
+                        <i>起</i>
+                        <a href="###">预订</a>
+                    </p>
+                </dd>
+                <dt><a href="###">更多线路</a></dt>
+            </dl>
+        </div>
+        <div class="purple-bg">
+            <em class="md3"></em>
+            <dl class="product-list">
+                <dd>
+                    <p>
+                        <strong>澳门-深圳</strong>
+                        <small>&yen;</small>
+                        <big>196</big>
+                        <span>&yen; 207</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>香港-澳门</strong>
+                        <small>&yen;</small>
+                        <big>128</big>
+                        <span>&yen; 150</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>大连-仁川</strong>
+                        <small>&yen;</small>
+                        <big>774</big>
+                        <span>&yen; 860</span>
+                        <a href="###">预订</a>
+                    </p>
+                </dd>
+                <dt><a href="###">更多线路</a></dt>
+            </dl>
+        </div>
+        <div class="yellow-bg">
+            <em class="md4"></em>
+            <dl class="product-list">
+                <dd>
+                    <ul class="tab-nav">
+                        <li class="on">华东</li>
+                        <li>四川 重庆</li>
+                        <li>云南</li>
+                    </ul>
+                    <div class="tab-box">
+                        <label>
+                            <p>
+                                <strong>1咸阳机场-西安</strong>
+                                <small>&yen;</small>
+                                <big>9.9</big>
+                                <span>&yen; 20</span>
+                                <a href="###">预订</a>
+                            </p>
+                            <p>
+                                <strong>香港-宝安机场</strong>
+                                <small>&yen;</small>
+                                <big>80</big>
+                                <span>&yen; 120</span>
+                                <a href="###">预订</a>
+                            </p>
+                            <p>
+                                <strong>宝安机场-香港</strong>
+                                <small>&yen;</small>
+                                <big>80</big>
+                                <i>起</i>
+                                <span>&yen; 200</span>
+                                <a href="###">预订</a>
+                            </p>
+                            <p>
+                                <strong>香港机场-东莞</strong>
+                                <small>&yen;</small>
+                                <big>180</big>
+                                <span>&yen; 200</span>
+                                <a href="###">预订</a>
+                            </p>
+                            <p>
+                                <strong>香港机场-深圳</strong>
+                                <small>&yen;</small>
+                                <big>115</big>
+                                <i>起</i>
+                                <span>&yen; 200</span>
+                                <a href="###">预订</a>
+                            </p>
+                            <p>
+                                <strong>香港机场-深圳</strong>
+                                <small>&yen;</small>
+                                <big>115</big>
+                                <i>起</i>
+                                <span>&yen; 200</span>
+                                <a href="###">预订</a>
+                            </p>
+                        </label>
+                        <label>
+                            <p>
+                                <strong>2咸阳机场-西安</strong>
+                                <small>&yen;</small>
+                                <big>9.9</big>
+                                <span>&yen; 20</span>
+                                <a href="###">预订</a>
+                            </p>
+                            <p>
+                                <strong>香港-宝安机场</strong>
+                                <small>&yen;</small>
+                                <big>80</big>
+                                <span>&yen; 120</span>
+                                <a href="###">预订</a>
+                            </p>
+                            <p>
+                                <strong>宝安机场-香港</strong>
+                                <small>&yen;</small>
+                                <big>80</big>
+                                <i>起</i>
+                                <span>&yen; 200</span>
+                                <a href="###">预订</a>
+                            </p>
+                            <p>
+                                <strong>香港机场-东莞</strong>
+                                <small>&yen;</small>
+                                <big>180</big>
+                                <span>&yen; 200</span>
+                                <a href="###">预订</a>
+                            </p>
+                        </label>
+                        <label>
+                            <p>
+                                <strong>3咸阳机场-西安</strong>
+                                <small>&yen;</small>
+                                <big>9.9</big>
+                                <span>&yen; 20</span>
+                                <a href="###">预订</a>
+                            </p>
+                            <p>
+                                <strong>香港-宝安机场</strong>
+                                <small>&yen;</small>
+                                <big>80</big>
+                                <span>&yen; 120</span>
+                                <a href="###">预订</a>
+                            </p>
+                            <p>
+                                <strong>宝安机场-香港</strong>
+                                <small>&yen;</small>
+                                <big>80</big>
+                                <i>起</i>
+                                <span>&yen; 200</span>
+                                <a href="###">预订</a>
+                            </p>
+                            <p>
+                                <strong>香港机场-东莞</strong>
+                                <small>&yen;</small>
+                                <big>180</big>
+                                <span>&yen; 200</span>
+                                <a href="###">预订</a>
+                            </p>
+                        </label>
+                    </div>
+                </dd>
+                <dt><a href="###">更多线路</a></dt>
+            </dl>
+        </div>
+        <div class="peach-red-bg">
+            <em class="md5"></em>
+            <dl class="product-list">
+                <dd>
+                    <p>
+                        <strong>首都机场-北京市区</strong>
+                        <small>&yen;</small>
+                        <big>36</big>
+                        <span>&yen; 43</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>浦东机场-上海市区</strong>
+                        <small>&yen;</small>
+                        <big>36</big>
+                        <span>&yen; 43</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>白云机场-广州市区</strong>
+                        <small>&yen;</small>
+                        <big>39</big>
+                        <span>&yen; 47</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>宝安机场-深圳市区</strong>
+                        <small>&yen;</small>
+                        <big>27</big>
+                        <span>&yen; 32</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>双流机场-成都市区</strong>
+                        <small>&yen;</small>
+                        <big>20</big>
+                        <span>&yen; 24</span>
+                        <a href="###">预订</a>
+                    </p>
+                    <p>
+                        <strong>长水机场-昆明市区</strong>
+                        <small>&yen;</small>
+                        <big>40</big>
+                        <span>&yen; 48</span>
+                        <a href="###">预订</a>
+                    </p>
+                </dd>
+                <dt><a href="###">更多线路</a></dt>
+            </dl>
+        </div>
+        <div class="khaki-bg">
+            <em class="md6"></em>
+            <a href="###">租车回家</a>
+        </div>
+        <div class="btm-box"><em class="top-icon"></em></div>
+        <div id="ios" style="background-color: rgb(255, 255, 255); width: 100%; height:30px;line-height:30px;font-size: 12px; text-align: center; display: block;">该活动苹果不是赞助商，并且也不会以任何形式参与其中！</div>
+    </article>
+</body>
+</html>

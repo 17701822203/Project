@@ -1,0 +1,94 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>一元免单</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript">
+	document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+	window.addEventListener("resize",setRemSize,false);
+	function setRemSize(){
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+	}
+    </script>
+    <script src="js/zepto.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".close").click(function(){
+                $("section").hide();
+            })
+            $("#show").click(function(){
+                $("section").show();
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <section style="display:none;">
+        <div class="shadow"></div>
+        <em class="close"></em>
+        <dl class="pop-box">
+            <dt>活动规则</dt>
+            <dd>
+                <p>领取优惠券后，优惠券会自动发送至所登陆的携程账户中，可至“我的携程”---“优惠券”中查看，具体使用规则以“优惠券说明”为准</p>
+                <p>每份订单限用一张优惠券，使用优惠券的订单取消、超时未支付或购票失败，优惠券将作废；若产生退票或改签，手续费将从实际支付金额中扣减，优惠券不予退回</p>
+            </dd>
+        </dl>
+    </section>
+    <article>
+        <div class="TopBgViolet"><a id="show" href="###">活动规则</a></div>
+        <!--<div class="TopBgRed" style="display:none;"><a id="show" href="###">活动规则</a></div>-->
+        <div class="CouponBox">
+            <div class="gray CouponList">
+                <small>&yen;</small>
+                <b>3</b>
+                <dl>
+                    <dt>新用户专享券</dt>
+                    <dd>携程新客首单专享程新客首单</dd>
+                </dl>
+                <a href="###">立即领取>></a>
+                <em class="Icon1"></em>
+            </div>
+            <div class="pink CouponList">
+                <small>&yen;</small>
+                <b>3</b>
+                <dl>
+                    <dt>新用户专享券</dt>
+                    <dd>携程新客首单专享程新客首单</dd>
+                </dl>
+                <a href="###">立即领取>></a>
+                <em class="Icon2"></em>
+            </div>
+            <div class="blue CouponList">
+                <small>&yen;</small>
+                <b>3</b>
+                <dl>
+                    <dt>新用户专享券</dt>
+                    <dd>携程新客首单专享程新客首单</dd>
+                </dl>
+                <a href="###">立即领取>></a>
+            </div>
+            <div class="orange CouponList">
+                <small>&yen;</small>
+                <b>3</b>
+                <dl>
+                    <dt>新用户专享券</dt>
+                    <dd>携程新客首单专享程新客首单</dd>
+                </dl>
+                <a href="###">立即领取>></a>
+            </div>
+            <div class="violet CouponList">
+                <small>&yen;</small>
+                <b>3</b>
+                <dl>
+                    <dt>新用户专享券</dt>
+                    <dd>携程新客首单专享程新客首单</dd>
+                </dl>
+                <a href="###">立即领取>></a>
+            </div>
+        </div>
+        <div class="banner"><img></div>
+    </article>
+</body>
+</html>

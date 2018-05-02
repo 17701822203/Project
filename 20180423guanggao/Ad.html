@@ -1,0 +1,80 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="TopBox"><img src="img/TopImg.png"></div>
+    <dl class="Txtbox2">
+        <dt>TrainPal - Saving you real money by splitting tickets.</dt>
+        <dd>No booking or credit card fees!</dd>
+    </dl>
+    <dl class="Downloads">
+        <dt><img src="img/icon.png"></dt>
+        <dd>
+            <h4>TrainPal for Android</h4>
+            <p><img src="img/Star.png"><img src="img/Star.png"><img src="img/Star.png"><img src="img/Star.png"><img src="img/StarHui.png"><span>(10,000+ downloads)</span></p>
+        </dd>
+    </dl>
+    <div class="CommentsWrap">
+        <h3>Comments</h3>
+        <div class="Comments">
+            <div class="user-pic"><img src="img/touxiang.png"></div>
+            <div class="comment-entry">
+                <h4>TrainPal user</h4>
+                <p>good and nice app. very easy for me to split tickets. cheap... love it.</p>
+            </div>
+        </div>
+        <div class="Comments">
+            <div class="user-pic"><img src="img/touxiang.png"></div>
+            <div class="comment-entry">
+                <h4>TrainPal user</h4>
+                <p>good and nice app. very easy for me to split tickets. cheap... love it.</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="OpenBtn">
+        <a href="###">Open in app</a>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,99 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+</head>
+<body style="background:#484AA0;">
+    <section style="display:none;">
+        <div class="shadow"></div>
+        <dl class="lay-box" style="display:none;">
+            <dt>您已经领取过了，分享给其它好友吧</dt>
+            <dd><a class="close-btn" href="###">知道了</a></dd>
+        </dl>
+        <div style="display:none;" class="share"><img src="img/share.png"></div>
+    </section>
+    <article>
+        <div class="img-box"><img src="img/TopImg.jpg"></div>
+        <div class="Coupon-box">
+            <div class="Coupon" style="display:none;">
+                <dl>
+                    <dt>获得10元火车票红包</dt>
+                    <dd>有效期至：2017年8月8日</dd>
+                </dl>
+                <p>适用于携程火车票产品</p>
+            </div>
+        </div>
+        <dl class="button-box" style="display:none;">
+            <dt>已经放入您的携程账户：13554412075</dt>
+            <dd>
+                <p><a class="button-y" href="###">立即使用</a></p>
+                <p><a class="button-b" href="###">分享给好友</a></p>
+            </dd>
+        </dl>
+        <ul class="input-box">
+            <li><input class="mob" type="text" placeholder="输入手机号"></li>
+            <li>
+                <div class="slider" id="slider">
+                    <div class="label">请按住滑块，拖到最右边</div>
+                    <div class="track" id="track">
+                        <div class="bg-green">校验成功,通过</div>
+                    </div>
+                    <div class="button" id="btn">
+                        <div class="icon" id="icon"></div>
+                        <div class="spinner" id="spinner"></div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input class="code" type="text" placeholder="输入验证码">
+                <button class="code-button">获取验证码</button>
+            </li>
+            <li><a class="button-y" href="###">立即领取</a></li>
+        </ul>
+        <dl class="Explain">
+            <dt>活动说明</dt>
+            <dd>
+                <p>1.活动时间：2017年1月1日——2017年12月31日</p>
+                <p>2.仅限携程火车票新用户领取使用（指从未购买过携程火车票产品的用户）。</p>
+                <p>3.输入手机号，即可领取新人福利，每个用户（手机号）仅限领取一次。领取后，用该手机号注册或直接登陆携程旅行APP即可查看具体使用规则。</p>
+                <p>4.本活动解释权归携程火车票所有。如发现恶意盗刷优惠券等行为，携程有权收回该行为涉及的优惠券，并取消该账户已获取的优惠。</p>
+            </dd>
+        </dl>
+    </article>
+</body>
+<script src="js/slider.js"></script>
+</html>

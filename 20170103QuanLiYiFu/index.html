@@ -1,0 +1,189 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+	<title></title>
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        function scroll(){
+            $(".content ul").animate({"margin-top":"-2.55rem"},function(){
+                $(".content ul li:eq(0)").appendTo($(".content ul"))
+                $(".content ul").css({"margin-top":"0"})
+            })
+        }
+        setInterval(scroll,2000)
+
+        $(document).ready(function(){
+            $(".txt").click(function(){
+                $("section,.pop-box").fadeIn();
+            })
+            $(".shadow,.close").click(function(){
+                $("section,.pop-box,.btm-radio-list").fadeOut();
+            })
+            $(".home").click(function(){
+                $("section,.btm-radio-list").fadeIn();
+            })
+        })
+    </script>
+</head>
+<body>
+	<article>
+		<div class="bg">
+            <div style="position:relative;height:21.3rem">
+                <img class="number" src="img/am.png">
+                <img class="hongbao" src="img/hongbao.png">
+                <img class="logo" src="img/logo.png">
+                <img class="txt" src="img/txt-img.png">
+                <img class="title" src="img/title.png">
+            </div>
+            <div class="btm-bg">
+                <h4 class="lay-title">已免单XXXX名</h4>
+                <img src="img/btm-bg.png">
+                <div class="content">
+                    <ul>
+                        <li>1.15 用户139****2151获得汽车票免票1张，中奖码 XXX</li>
+                        <li>2.15 用户139****2151机场巴士订单减免5元 ，中奖码XXX</li>
+                        <li>3.15 用户139****2151获得汽车票免票1张，中奖码 XXX</li>
+                        <li>4.15 用户139****2151机场巴士订单减免5元 ，中奖码XXX</li>
+                        <li>5.15 用户139****2151获得汽车票免票1张，中奖码 XXX</li>
+                        <li>6.15 用户139****2151机场巴士订单减免5元 ，中奖码XXX</li>
+                        <li>7.15 用户139****2151获得汽车票免票1张，中奖码 XXX</li>
+                        <li>8.15 用户139****2151机场巴士订单减免5元 ，中奖码XXX</li>
+                        <li>9.15 用户13</li>
+                    </ul>
+                </div>
+                <div class="lay" style="display:none;">
+                    <dl class="top-title">
+                        <dt style="margin-top:0.4rem;"><img src="img/bmcmd.png"></dt>
+                    </dl>
+                    <div class="info-box">
+                        <div class="titpop">
+                            <h3>你报名的【长途大巴】抽奖码是XXXX</h3>
+                            <div>
+                                很遗憾<br/>
+                                免单擦肩而过
+                            </div>
+                        </div>
+                    </div>
+                    <a href="###" class="button">再拼一波RP抽免单</a>
+                </div>
+                <div class="lay" style="">
+                    <dl class="top-title">
+                        <dt style="margin-top:0.4rem;"><img src="img/bmcmd.png"></dt>
+                    </dl>
+                    <div class="info-box">
+                        <div class="titpop">
+                            <h3>你报名的【长途大巴】抽奖码是XXXX</h3>
+                            <h4>恭喜你抽中免单</h4>
+                            <p>请注意查收兑奖短信</p>
+                        </div>
+                    </div>
+                    <a href="###" class="button">好运爆棚再抽免单</a>
+                </div>
+                <div class="lay" style="display:none;">
+                    <dl class="top-title">
+                        <dt><img src="img/bmcmd.png"></dt>
+                        <dd>每日16点开奖</dd>
+                    </dl>
+                    <div class="fill-in">
+                        <dl>
+                            <dt><a class="home" href="###">选择回家方式</a></dt>
+                            <dd><input type="text" placeholder="请输入抽奖手机号"></dd>
+                        </dl>
+                    </div>
+                    <a href="###" class="button">老司机 我要免单</a>
+                </div>
+                <div class="lay" style="display:none;">
+                    <dl class="top-title">
+                        <dt style="margin-top:0.4rem;"><img src="img/bmcmd.png"></dt>
+                    </dl>
+                    <div class="info-box">
+                        <ul class="info-txt">
+                            <li>你的抽奖码是</li>
+                            <li>876896368</li>
+                            <li>每日16：00点开奖</li>
+                        </ul>
+                    </div>
+                    <a href="###" class="button">老司机 我要免单</a>
+                </div>
+            </div>
+            <ul class="banner-list">
+                <li><img src="img/banner.jpg"></li>
+            </ul>
+        </div>
+        <section style="display:none;">
+            <div class="shadow"></div>
+            <div class="pop-box" style="display:none;">
+                <span class="close"></span>
+                <div class="pop-txt">
+                    <h4>“全力以赴 送你回家”活动规则</h4>
+                    <dl>
+                        <dt>一、活动时间</dt>
+                        <dd>
+                            <p>2017.1.5—2017.2.5</p>
+                        </dd>
+                        <dt>二、活动规则</dt>
+                        <dd>
+                            <p>每位参与“我要免单”的用户均可按报名先后顺序获得兑换码，按照当日股票上证指数整数位的排列组合，于当日16点抽取最多17张免票(每种回家方式分别开奖)，同时从报名参与的剩余用户中随机抽取2000名获得订单金额减免。前一天16:00:00—当日15:59:59报名免单的用户均可参与当日开奖。每位用户每天仅可参与一次，开奖后可继续报名。</p>
+                        </dd>
+                        <dt>三、免票额度</dt>
+                        <dd>
+                            <p>汽车票：每天最多6个名额（按上证指数前三位整数排列组合）<br/>超级巴士：每天最多8个名额（按上证指数前四位整数排列组合）<br/>船票：每天1个名额<br/>机场巴士：每天1个名额<br/>租车自驾：每天1个名额<br/>订单金额减免额度：2000名</p>
+                        </dd>
+                        <dt>四、免票抽奖规则：</dt>
+                        <dd>
+                            <p>若上证综指3218.46点，则免票中奖号码为：3218、218、18、8、8123、123、23、3；若指数中出现0，则该整数位视为未中奖。例：上证综指3018.26，则免票中奖号码为：3018、18、8、8103、103、3<br/>周末与节假日的抽奖以最新的上证指数为依据</p>
+                        </dd>
+                        <dt>五、开奖/兑奖说明</dt>
+                        <dd>
+                            <p>每天16点开奖时间后10分钟内，中奖用户将收到中奖短信，用户可根据短信提示进行兑奖，兑奖仅限开奖后3天内有效，携程客服将于开奖后3个工作日为您操作免单事宜。</p>
+                        </dd>
+                        <dd style="color:#999">
+                            <p>注：</p>
+                            <p>*上证综指以证交所公布数字为准。<br/>*汽车票免单最高金额不得超过100元；租车免单金额最高不超过1000元，租车和归还地点必须为同地；超级巴士免单金额最高不超过104元；船票免单金额最高不超过250元；机场巴士免单金额最高不超过100元。<br/>*本次活动最终解释权归携程旅行网所有，如有疑问可以咨询携程客服电话10106666。</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="btm-radio-list" style="display:none;">
+                <ul>
+                    <li><strong>长途大巴</strong><span class="Radio"></span></li>
+                    <li><strong>轮船</strong><span></span></li>
+                    <li><strong>机场巴士</strong><span></span></li>
+                    <li><strong>租车自驾</strong><span></span></li>
+                    <li><strong>超级巴士</strong><span></span><p>花坐大巴车的钱，就可享受从机场直送到家的超值服务</p></li>
+                </ul>
+            </div>
+        </section>
+	</article>
+</body>
+</html>

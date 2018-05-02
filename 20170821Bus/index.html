@@ -1,0 +1,340 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/tween.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#CityTab_Container .City_box").first().css("display","block")
+        $(".CityNav li").first().addClass("TabActive")
+        var nav=$(".CityNav li");
+        nav.click(function(){
+            $(this).addClass("TabActive").siblings().removeClass("TabActive");
+            var index=nav.index(this);
+            $("#CityTab_Container>.City_box")
+                    .eq(index).show()
+                    .siblings().hide()
+        })
+    });
+</script>
+<article ontouchstart="" onmouseover="">
+    <ul class="NavBox">
+        <li class="on">
+            <span>9.8开启</span>
+            <b>十一储钱罐</b>
+            <small>存路费 翻100倍</small>
+        </li>
+        <li>
+            <span>9.15开启</span>
+            <b>1元秒杀</b>
+            <small>抢100000张车票</small>
+        </li>
+        <li>
+            <span>9.22开启</span>
+            <b>全民砍价</b>
+            <small>抄底价出游</small>
+        </li>
+        <li>
+            <span>9.29开启</span>
+            <b>黄金周狂欢</b>
+            <small>1元再来 疯狂免单</small>
+        </li>
+    </ul>
+    <div class="Animation img-box">
+        <img src="img/TopImg.jpg">
+        <img class="Pig" src="img/Pig.png">
+        <img class="Ship" src="img/Ship.png">
+        <img class="Gold" src="img/Gold.png">
+        <img class="GoldBig" src="img/GoldBig.png">
+        <img class="GoldBig2" src="img/RitGold.png">
+        <img class="Parachute" src="img/Parachute.png">
+        <img class="IconBlock1" src="img/IconBlock1.png">
+        <img class="IconBlock2" src="img/IconBlock2.png">
+        <img class="IconBlock3" src="img/IconBlock3.png">
+        <img class="IconBlock4" src="img/IconBlock4.png">
+        <img class="IconBlock5" src="img/IconBlock5.png">
+        <img class="Bus" src="img/Bus.png">
+        <img class="Mask" src="img/Mask.png">
+        <img class="Floor" src="img/Floor.png">
+        <img class="yuan" src="img/yuan.png">
+        <img class="yuan2" src="img/yuan_1.png">
+        <img class="yuan3" src="img/yuan.png">
+        <img class="yuan4" src="img/yuan_1.png">
+        <img class="yuan5" src="img/yuan.png">
+        <img class="yuan6" src="img/yuan_1.png">
+        <img class="yuan7" src="img/yuan.png">
+        <img class="yuan8" src="img/yuan_1.png">
+    </div>
+    <dl class="TopBtn">
+        <dt><h1>随机翻倍！最高翻100倍！</h1><span class="PopupBtn2">我的路费</span><span class="PopupBtn1">规则</span></dt>
+        <dd>
+            <span class="no">1元</span>
+            <span>5元</span>
+            <span>10元</span>
+        </dd>
+    </dl>
+    <div style="background:#6977F8;">
+        <div class="BtnBg img-box">
+            <a href="###">
+                <img src="img/BigBtn.png">
+                <img class="BigBtnIcon" src="img/BigBtnIcon.png">
+            </a>
+        </div>
+        <div class="horn my-scroll">
+            <ul>
+                <li>138****2456 刚刚存了X元 获得了XXX元国庆路费</li>
+                <li>138****2456 刚刚存了X元 获得了XXX元国庆路费</li>
+                <li>138****2456 刚刚存了X元 获得了XXX元国庆路费</li>
+                <li>138****2456 刚刚存了X元 获得了XXX元国庆路费</li>
+            </ul>
+        </div>
+    </div>
+    <div class="img-box"><img src="img/Title.jpg"></div>
+    <div class="CityTab">
+        <ul class="CityNav">
+            <li><span>华东</span></li>
+            <li><span>华中</span></li>
+            <li><span>华南</span></li>
+            <li><span>华北</span></li>
+            <li><span>华西</span></li>
+        </ul>
+        <div id="CityTab_Container">
+            <div class="City_box">
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <a href="###" class="MoreBtn">更多线路>></a>
+            </div>
+            <div class="City_box">
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <a href="###" class="MoreBtn">更多线路>></a>
+            </div>
+            <div class="City_box">
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <a href="###" class="MoreBtn">更多线路>></a>
+            </div>
+            <div class="City_box">
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <a href="###" class="MoreBtn">更多线路>></a>
+            </div>
+            <div class="City_box">
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <div class="CityList">
+                    <strong>上海南-北京西</strong>
+                    <i>&yen;</i>
+                    <b>120</b>
+                    <small>起</small>
+                    <a href="###">预约购票>></a>
+                </div>
+                <a href="###" class="MoreBtn">更多线路>></a>
+            </div>
+        </div>
+    </div>
+    <div class="img-box"><img src="img/btmBg.jpg"></div>
+</article>
+</body>
+</html>
+

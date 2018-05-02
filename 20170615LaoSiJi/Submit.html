@@ -1,0 +1,75 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+<body>
+    <article>
+        <div class="close_box"><a href="javascript:void(0)" class="close"></a></div>
+        <div class="date_cite">
+            <dt>9月27日&nbsp;周二&nbsp;14:25</dt>
+            <dd>上海客运总站-苏州</dd>
+        </div>
+        <div class="list-box">
+            <dl class="dz">
+                <dt>总体感受</dt>
+                <dd>
+                    <span class="cur">点赞</span>
+                    <span>需改善</span>
+                </dd>
+            </dl>
+            <dl class="time">
+                <dt>到达时间</dt>
+                <dd>
+                    请选择<i></i>
+                </dd>
+            </dl>
+            <dl class="bus">
+                <dt>到达车站</dt>
+                <dd>
+                    <div>其他<i></i></div>
+                    <div><input type="text" placeholder="请填写您实际到达的车站"></div>
+                </dd>
+            </dl>
+        </div>
+        <div class="text_box">
+            <textarea rows="10" cols="30">我是一个文本框。</textarea>
+            <span>0/60</span>
+        </div>
+        <div class="btn_box"><a href="###">匿名提交，得抽奖机会一次</a></div>
+    </article>
+</body>
+</html>

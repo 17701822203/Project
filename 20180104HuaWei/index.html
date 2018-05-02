@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="//webresource.c-ctrip.com/ares/infosec/captcha/~2.4.0/default/js/captcha.min.js?expires=1d"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <img class="Shake" src="img/Shake.png">
+    <div class="TopImg"><img src="img/TopImg.jpg"></div>
+    <div class="TopBg">
+        <div class="VerificationBox">
+            <ul class="InputList">
+                <li class="Mob"><input type="text" value="输入手机号" onfocus="if (value =='输入手机号'){value =''}" onblur="if (value ==''){value='输入手机号'}" ></li>
+                <li><div id="verification-code" style="margin:0 auto"></div></li>
+                <li class="Verification"><input type="text" value="输入验证码" onfocus="if (value =='输入验证码'){value =''}" onblur="if (value ==''){value='输入验证码'}" ><button>获取验证码</button></li>
+                <li class="ReceiveBtn"><button>立即领取</button></li>
+            </ul>
+            <ul style="display:none" class="CouponBox">
+                <li>
+                    <div class="Coupon">
+                        <div class="left">
+                            <small>&yen;</small>
+                            <big>20</big>
+                        </div>
+                        <div class="right">
+                            <big>携程火车票抢票优惠券</big>
+                            <small>2017-12-31前有效</small>
+                        </div>
+                    </div>
+                </li>
+                <li style="margin-top:.65rem;" class="Account">已经放入您的携程账户：13554412075</li>
+                <li class="GreenBtn"><button>立即使用</button></li>
+                <li class="RedBtn"><button>分享给好友</button></li>
+            </ul>
+        </div>
+    </div>
+    <dl class="TxtList">
+        <dt><span>活动规则</span></dt>
+        <dd>
+            <p>1.活动时间：2017年1月1日——2017年12月31日</p>
+            <p>2.仅限携程火车票新用户领取使用（指从未购买过携程火车票产品的用户）。</p>
+            <p>3.输入手机号，即可领取新人福利，每个用户（手机号）仅限领取一次。领取后，用该手机号注册或直接登陆携程旅行APP即可查看具体使用规则。</p>
+            <p>4.本活动解释权归携程火车票所有。如发现恶意盗刷优惠券等行为，携程有权收回该行为涉及的优惠券，并取消该账户已获取的优惠。</p>
+        </dd>
+    </dl>
+</body>
+</html>

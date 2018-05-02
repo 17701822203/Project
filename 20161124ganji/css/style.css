@@ -1,0 +1,119 @@
+/*Created by huang.jun on 16-11-24*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Microsoft YaHei";background:#fff;}
+
+.top-box{height:33.6rem;background:url("../img/top-bg1.jpg") no-repeat;background-size:100% 100%;position: relative;}
+.logo{width:5.825rem;height:2.15rem;position:absolute;left:3%;top:26%;}
+.bg{height:27.65rem;background:url("../img/bg.jpg") no-repeat;background-size:100% 100%;}
+
+.paizi{display:block;width:3.075rem;height:6.725rem;background:url("../img/jiangpai-icon.png") no-repeat;background-size:cover;}
+.ul-box{padding-top:0rem;}
+.ul-box .flip-3d{float:left;margin-top:0.375rem;width:3.075rem;height:6.725rem;font-family:STHeiti;}
+.ul-box .flip-3d figure{position:relative;}
+.ul-box .flip-3d figure figcaption{position: absolute;top:0;text-align:center;opacity:0;width:3.075rem;height:6.725rem;background:url("../img/jiangpai-icon.png") no-repeat;background-size:cover;}
+.ul-box .flip-3d figure.Positive figcaption{-webkit-animation:zhuan 1s 0.2s forwards;}
+.ul-box .flip-3d figure.Positive figcaption b{-webkit-animation:zhuan2 1s 0.1s forwards;}
+.ul-box .flip-3d figure.Positive2 figcaption{-webkit-animation:zhuan3 1s 0.2s forwards;}
+.ul-box .flip-3d figure.Positive2 figcaption b{-webkit-animation:zhuan4 1s 0.1s forwards;}
+.ul-box .flip-3d figure .paizi span,.ul-box .flip-3d figure .paizi b{text-align: center;display:block;width:100%;}
+.ul-box .flip-3d figure .paizi span:nth-of-type(1),.ul-box .flip-3d figure .paizi span:nth-of-type(2){font-size:0.65rem;}
+.ul-box .flip-3d figure .paizi span:nth-of-type(1){padding-top:2.1rem;}
+.ul-box .flip-3d figure .paizi b:nth-of-type(1){font-size:0.7rem;color:#336666;height:0.7rem;line-height:0.7rem;padding-top:0.1rem;}
+.ul-box .flip-3d figure .paizi b:nth-of-type(2){font-size:0.65rem;height:0.65rem;line-height:0.65rem;}
+.ul-box .flip-3d figure .paizi b:nth-of-type(3){font-size:0.55rem;color:#990000;height:0.55rem;line-height:0.55rem;}
+.ul-box .flip-3d figure .paizi span:nth-of-type(2){padding-top:0.2rem;font-size:0.5rem;height:0.5rem;line-height:0.5rem;}
+.ul-box .flip-3d figure figcaption b{display:block;width:100%;text-align: center;}
+.ul-box .flip-3d figure figcaption b:nth-of-type(1){font-size:0.75rem;padding-top:2.1rem;}
+.ul-box .flip-3d figure figcaption b:nth-of-type(2){font-size:0.65rem;height:0.65rem;}
+.ul-box .flip-3d figure figcaption b:nth-of-type(3){font-size:0.75rem;color:#990000;height:0.75rem;padding-top:0.4rem;}
+.ul-box .flip-3d figure figcaption b:nth-of-type(4){font-size:0.65rem;color:#990000;height:0.65rem;padding-top:0.1rem;}
+.Positive{-webkit-animation:Positive 1s 0s forwards;}
+.Positive2{-webkit-animation:Positive2 1s 0s forwards;}
+
+/*按钮*/
+.button-box{text-align: center;padding-top:1.9rem;clear:both;width:100%;}
+.btn{position:relative;display:inline-block;width:9.825rem;height:2.8rem;line-height:2.3rem;background:url("../img/button.png") no-repeat;background-size:100% 100%;border:0;font-size:1.05rem;color:#fff;}
+.btn:after,.btn:before{content:"";width:1.8rem;height:1.2rem;position: absolute;top:0.7rem;}
+.btn:after{background:url("../img/left-icon.png") no-repeat;background-size:100% 100%;right:-3rem;-webkit-animation:left 1.4s 0s infinite;}
+.btn:before{background:url("../img/right-icon.png") no-repeat;background-size:100% 100%;left:-3rem;-webkit-animation:right 1.4s 0s infinite;}
+/******动画******/
+@-webkit-keyframes Positive
+{
+    to{-webkit-transform:rotateY(180deg);}
+    from{-webkit-transform:rotateY(0deg);}
+}
+@-webkit-keyframes Positive2
+{
+    to{-webkit-transform:rotateY(0deg);}
+    from{-webkit-transform:rotateY(180deg);}
+}
+@-webkit-keyframes zhuan
+{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+@-webkit-keyframes zhuan2
+{
+    from{opacity:0;-webkit-transform:rotateY(0deg)}
+    to{opacity:1;-webkit-transform:rotateY(180deg)}
+}
+@-webkit-keyframes zhuan3
+{
+    from{opacity:1;}
+    to{opacity:0;}
+}
+@-webkit-keyframes zhuan4
+{
+    from{opacity:1;-webkit-transform:rotateY(180deg)}
+    to{opacity:0;-webkit-transform:rotateY(0deg)}
+}
+@-webkit-keyframes am
+{
+    0%{-webkit-transform:rotateY(-20deg);-webkit-transform:rotateX(-20deg);top:8rem;left:-4rem;}
+    50%{-webkit-transform:rotateY(30deg);-webkit-transform:rotateX(30deg);top:12.2rem;left:0rem;}
+    100%{-webkit-transform:rotateY(-20deg);-webkit-transform:rotateX(-20deg);top:8rem;left:-4rem;}
+}
+@-webkit-keyframes left
+{
+    from{right:-4rem;opacity:1;}
+    to{right:-1rem;opacity:0;}
+}
+@-webkit-keyframes right
+{
+    from{left:-4rem;opacity:1;}
+    to{left:-1rem;opacity:0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#E8E8E8;">
+    <view class="GrayBg2">
+        <view class="p5">
+            <view class="YellowBox">
+                <view class="Ytx"><image class="yimg" src="http://img2.imgtn.bdimg.com/it/u=2450994032,3525797548&fm=27&gp=0.jpg"></image></view>
+                <text class="Yname">Mavis</text>
+                <view class="yuyin">
+                    <image class="left" src="img/BtnYy3.png"></image>
+                    <button class="right">
+                        <text class="on">11</text>
+                    </button>
+                </view>
+                <text class="YuyinTxt">广东省-潮汕话：快来掂被康啊哒哒哒大大大大大大师撒大大大大大大撒大大撒点</text>
+                <view class="RenBtnBox"><button class="RedBtn">我也要玩</button></view>
+            </view>
+        </view>
+        <view class="fixBtmBox">
+            <view class="left">
+                <text>普通话让我们走得更远</text>
+                <text>方言让我们记住家的方向</text>
+            </view>
+            <button class="right">买票回家</button>
+        </view>
+        <image class="caina" src="img/caina.png"></image>
+    </view>
+</body>
+</html>

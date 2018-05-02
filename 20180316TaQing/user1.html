@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <article class="WrapBg">
+        <div class="WhiteBox">
+            <dl class="CouponList">
+                <dt>
+                    <div class="CouponGreen">
+                        <div class="left">
+                            <strong>&yen;</strong>
+                            <b>5</b>
+                        </div>
+                        <div class="right">
+                            <span>首单使用</span>
+                            <big>火车返现券</big>
+                        </div>
+                    </div>
+                    <div class="CouponRed">
+                        <div class="left">
+                            <strong>千元</strong>
+                            <span>出行券包</span>
+                        </div>
+
+                        <div class="right"><p>包含20元火车票抢票优惠券、500元旅游满减券等</p></div>
+                    </div>
+                </dt>
+                <dd>
+                    <span>立即使用</span>
+                    <p>火车出行优惠已放入13556612075的携程账户</p>
+                </dd>
+            </dl>
+            <div class="clear"></div>
+            <dl class="guize">
+                <dt><strong>活动规则</strong></dt>
+                <dd>
+                    <p>活动时间：2018.2.20-2018.4.30</p>
+                    <p>输入手机号，即可领取最高25元携程火车出行优惠券，含5元火车返现优惠券(限新客领取)、千元出行券包：包含20元火车票抢票优惠券、500元旅游满减券、30元周边游等。</p>
+                    <p>若该手机号未注册携程账号，携程将自动为该手机号注册携程账户，并发送优惠券至您的账户。</p>
+                    <p>优惠券使用<br/>优惠券仅限在携程H5、APP7.9及以上版本购买火车票订单时使用。优惠券使用有效期时间是领取之日起30天内有效。<br/>5元返现优惠券，限携程火车票新客领取，订单金额大于优惠券金额即可使用，出行成功后，1-10个工作日内返还优惠券金额。<br/>20元抢票优惠券，在携程购买火车票抢票套餐的订单，即可使用。</p>
+                </dd>
+            </dl>
+        </div>
+    </article>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+/*Created by huang.jun on 16-12-05*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Microsoft YaHei";background:#fff;}
+
+article{background:#F1E7C0;height:100%;}
+.top-title{position: absolute;width:9.325rem;height:2.525rem;background:url("../img/title-bg.png") no-repeat;background-size:100% 100%;left:50%;margin-left:-4.6625rem;z-index:2;}
+.animation-box{width:17.65rem;height:17.4rem;overflow:hidden;background:url("../img/img-bg.png") no-repeat;background-size:100% 100%;top:1.725rem;left:50%;position: absolute;margin-left:-8.825rem;z-index:1;}
+.animation-box i,.sp1{position:absolute;}
+.Broom{width:5.425rem;height:7.35rem;background:url("../img/Broom.png") no-repeat;background-size:100% 100%;left:2.5rem;top:0.8rem;-webkit-animation:One 2s linear 0ms infinite normal forwards;}
+.cloud{width:5.175rem;height:3.725rem;background:url("../img/cloud.png") no-repeat;background-size:100% 100%;left:11rem;top:5rem;-webkit-transform:rotate(10deg);}
+.cloud em{position: absolute;width:1.9rem;height:1.45rem;background:url("../img/ticket.png") no-repeat;background-size:100% 100%;-webkit-animation:Two 2s linear 0ms infinite normal forwards;left:1.4rem;top:2.7rem;}
+.heliports{width:4.825rem;height:3.675rem;background:url("../img/heliports-left.png") no-repeat;background-size:100% 100%;left:0.5rem;top:13rem;-webkit-animation:Three 0.1s linear 0ms infinite normal forwards;z-index:4;}
+.tail{width:1.325rem;height:0.8rem;background:url("../img/tail.png") no-repeat;background-size:100% 100%;left:0.4rem;top:9.9rem;-webkit-animation:Four 1s linear 0ms infinite normal forwards;transform-origin:left top;z-index:4;}
+.carrousel{right:0.1rem;top:13.5rem;position: absolute;width:4.125rem;height:3.775rem;-webkit-animation:Move 3s linear 0ms infinite normal forwards;}
+.carrousel i{width:4.125rem;height:3.775rem;background:url("../img/carrousel.png") no-repeat;background-size:100% 100%;-webkit-animation:Embedded 0.5s linear 0ms infinite normal forwards;}
+.big-box{padding-top:19.8rem;}
+.big-title{width:17.65rem;height:6.4rem;background:url("../img/BigTitle.png") no-repeat;background-size:100% 100%;margin:0 auto;}
+.bottom-box{position:relative;width:17.55rem;height:2.225rem;margin:0 auto;text-align:right;padding-top:0.5rem;}
+.bottom-box:after{width:7.8rem;height:2.175rem;background:url("../img/describe.png") no-repeat;background-size:100% 100%;position: absolute;content: "";left:0;bottom:0;}
+.bottom-box button{border:0;width:9.25rem;height:2.225rem;background:url("../img/btn.png") no-repeat;background-size:100% 100%;}
+.bottom-box button:active{opacity:0.7;}
+.sp1{width:8.4rem;height:9.975rem;background:url("../img/sp1.png") no-repeat;background-size:100% 100%;bottom:0;left:0;z-index:3;}
+
+/*AnimationStart*/
+@-webkit-keyframes One{
+    0%{background-position:center center;background-size:0% 10%;}
+    50%{background-position:center center;background-size:100% 100%;}
+    70%{background-position:center center;background-size:100% 100%;}
+    100%{background-position:center center;background-size:0% 0%;}
+}
+@-webkit-keyframes Two{
+    0%{top:75%;height:0rem;}
+    10%{opacity:1;}
+    60%{opacity:1;}
+    80%{top:100%;opacity:0;height:3rem;-webkit-transform:rotate(10deg);}
+    100%{opacity:0;}
+}
+@-webkit-keyframes Three{
+    0%{background:url("../img/heliports-left.png") no-repeat;background-size:100% 100%;}
+    50%{background:url("../img/heliports-right.png") no-repeat;background-size:100% 100%;}
+    100%{background:url("../img/heliports-left.png") no-repeat;background-size:100% 100%;}
+}
+@-webkit-keyframes Four{
+    0%{-webkit-transform:rotate(-20deg);}
+    50%{-webkit-transform:rotate(70deg);}
+    100%{-webkit-transform:rotate(-20deg);}
+}
+@-webkit-keyframes Embedded{
+    0%{-webkit-transform:rotate(-10deg);}
+    50%{-webkit-transform:rotate(10deg);}
+    100%{-webkit-transform:rotate(-10deg);}
+}
+@-webkit-keyframes Move{
+    0%{right:0;width:0;}
+    1%{width:4.125rem;}
+    100%{right:80%;}
+}
+/*AnimationEnd*/

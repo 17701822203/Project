@@ -1,0 +1,254 @@
+/*Created by huang.jun on 17-08-21*/
+*{margin:0;padding:0;}
+a{text-decoration:none;-webkit-tap-highlight-color:transparent;
+  &:active{opacity:.7;}
+}
+ol,ul,li{list-style:none;}
+//img{width:100%;}
+body{font-family:PingFang SC Medium,sans-serif;}
+.shadow{width:100%;height:100%;position:fixed;z-index:10;background:#000;opacity:0.7;top:0;left:0;}
+.img-box {font-size:0;}
+
+//四角的半径定制.border-radius-custom(20px, 20px, 0px, 0px);
+.border-radius-custom(@topleft:5px,@topright:5px,@bottomleft:5px,@bottomright:5px) {
+  -webkit-border-radius:@topleft @topright @bottomright @bottomleft;
+  -moz-border-radius:@topleft @topright @bottomright @bottomleft;
+  border-radius:@topleft @topright @bottomright @bottomleft;
+}
+//方块阴影.box-shadow(5px,5px,6px,.3);
+.box-shadow(@x:0px,@y:3px,@blur:5px,@alpha:.5) {
+  -webkit-box-shadow:@x @y @blur rgba(0,68,171,@alpha);
+  -moz-box-shadow:@x @y @blur rgba(0,68,171,@alpha);
+  box-shadow:@x @y @blur rgba(0,68,171,@alpha);
+}
+//圆角.border-radius(@radius:5px)
+.border-radius(@radius:5px) {
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+//input默认字体.placeholder({color:#666;});
+.placeholder(@a) {
+  &::-webkit-input-placeholder{@a();}
+  &:-moz-placeholder{@a();}
+  &::-moz-placeholder{@a();}
+  &:-ms-input-placeholder{@a();}
+}
+//线性渐变.gradient(left, #633, #333);
+.gradient(@origin:left,@start:#fff,@stop:#000) {
+  background-color:@start;
+  background-image:-webkit-linear-gradient(@origin,@start,@stop);
+  background-image:-moz-linear-gradient(@origin,@start,@stop);
+  background-image:-o-linear-gradient(@origin,@start,@stop);
+  background-image:-ms-linear-gradient(@origin,@start,@stop);
+  background-image:linear-gradient(@origin,@start,@stop);
+}
+
+section{display:block;}
+//清除浮动
+.ClearBox{
+  &:after,&:before{content: " ";display: table;clear: both;}
+}
+//相对定位
+.Relative{position:relative;}
+
+.TopNav{.ClearBox;
+  a{float:left;width:25%;background:#00BF8E;height:2.75rem;color:#fff;text-align:center;
+    span{font-size:.55rem;line-height:.55rem;display:block;margin-top:.3rem;}
+    strong{font-size:.7rem;line-height:.7rem;display:block;margin-top:.25rem;}
+    small{font-size:.5rem;line-height:.5rem;display:block;margin-top:.2rem;}
+    &.on{background:#CE0000;color:#ffde00;}
+  }
+}
+
+.Animation{.Relative;overflow:hidden;
+  img{width:100%;
+    &.TopTitleB{width:75%;position:absolute;left:12%;top:3%;}
+    &.TopTitleS{width:50%;position:absolute;left:23%;top:25%;}
+    &.House{width:24%;position:absolute;left:17.3%;top:69%;z-index:2;}
+    &.Yacht{width:15%;position:absolute;right:13.3%;top:75%;animation:ShipUpDown 2.6s infinite linear alternate;z-index:1;}
+    &.Bus{width:8%;position:absolute;right:18.3%;top:51%;animation:BusUpDown 3s linear infinite;z-index:1;}
+    &.FireworksS{width:2%;position:absolute;z-index:1;}
+    &.FireworksB{width:2%;position:absolute;z-index:1;}
+    &.Mask{width:18.4%;position:absolute;left:66.8%;top:43.2%;z-index:2;}
+    &.ad1{position: absolute;left:61%;top:64.5%;width:7%;opacity:0;animation:ad1 3s infinite linear alternate;z-index:1;}
+    &.ad2{position: absolute;left:60.4%;top:66.8%;width:8%;opacity:0;animation:ad2 3s infinite linear alternate;z-index:1;}
+  }
+  .TopBtn{height:2.2rem;line-height:2.2rem;text-align:center;position:absolute;left:50%;bottom:0;width:92%;margin-left:-46%;.gradient(top,#FF3000,#FF7D00);.border-radius(@radius:2rem);color:#fff;font-size:.95rem;
+    &:after{width:2.1rem;height:1.85rem;position:absolute;background:url("../img/RabbitIcon.png") no-repeat;background-size:100% 100%;content:"";left:0;top:-1.1rem;}
+  }
+}
+.nav-height{height:2.2rem;.Relative;}
+.nav-wrap{height:2.2rem;background:#fff;.Relative;
+  ul{.ClearBox;width:31rem;
+    li{float:left;line-height:2.2rem;font-size:.7rem;
+      a{color:#333;padding-left:1.4rem;.Relative;
+        &.active{color:#de4e70;
+          &:after{content:"";position:absolute;width:.5rem;height:.675rem;background:url("../img/NavIcon.png") no-repeat;background-size:100% 100%;left:.6rem;top:.08rem;}
+        }
+      }
+    }
+  }
+  &:after{content:"";width:1.2rem;height:2.2rem;position:absolute;right:0;top:0;background:#fff;border-left:1px solid #ccc;}
+}
+.nav_wrap_fix{position:fixed;top:0;z-index: 3;}
+.NavBox{overflow-y: hidden;overflow-x: scroll;width:18.75rem;.Relative;}
+
+.horn{height:1.375rem;overflow:hidden;margin:0 4%;font-size:.65rem;color:#fff;background:url("../img/HornIcon.png") no-repeat #FF9F00;background-size:2.075rem 1.375rem;padding-left:20%;.border-radius(@radius:2rem);
+  ul{height:1.375rem;
+    li{line-height:1.375rem;}
+  }
+}
+
+.TitBus{.img-box;.Relative;
+  img{width:100%;}
+  .RuleBtn{position:absolute;text-align:center;width:2.75rem;line-height:.85rem;border:1px solid #fff;font-size:.55rem;right:.8rem;top:2.2rem;color:#fff;.border-radius(@radius:.4rem);}
+}
+.js_tab{}
+.TimeTab{.ClearBox;background:#FFAE00;height:2.5rem;color:#fff;
+  li{float:left;width:20%;text-align:center;height:2.5rem;
+    strong,span{display:block;}
+    strong{font-size:.75rem;line-height:.75rem;margin-top:.5rem;}
+    span{font-size:.6rem;line-height:.6rem;margin-top:.2rem;}
+    &.on{background:#FF8400;}
+  }
+}
+.box1 .jsTab_con{background:#FFC300;padding-top:1rem;display:none;}
+.jsTab_con{display:none;}
+.BusTp{width:17.275rem;height:4.6rem;background:url("../img/BusTp.png") no-repeat;background-size:100% 100%;margin:0 auto;.Relative;}
+.BookingTicket{padding:1.25rem 1.1rem;
+  a{line-height:2.15rem;display:block;.gradient(top,#FF3400,#FF9900);text-align:center;font-size:.9rem;color:#fff;.border-radius(@radius:2.15rem);}
+}
+.TitSteamer{.img-box;.Relative;
+  img{width:100%;}
+  .RuleBtn{position:absolute;text-align:center;width:2.75rem;line-height:.85rem;border:1px solid #fff;font-size:.55rem;right:.8rem;top:2.5rem;color:#fff;.border-radius(@radius:.4rem);}
+}
+
+.Discount{.ClearBox;
+  li{height:2rem;float:left;width:50%;background:#303FD2;line-height:2rem;text-align:center;color:#fff;font-size:.8rem;
+    &.on{background:#3B45E3;}
+  }
+}
+.SeckillBox{padding:0 .75rem 1.35rem .75rem;background:#3B45E3;}
+.Seckill{.img-box;border-top:.75rem solid #3B45E3;.Relative;
+  img{width:100%;}
+  .TopLabel{height:1.1rem;line-height:1.1rem;color:#000;background:#F2B834;font-size:.6rem;position: absolute;left:0;top:0;padding:0 .25rem;}
+  .TopLabelEnd{width:3rem;height:1.75rem;font-size:.6rem;color:#fff;position: absolute;left:0;top:0;background:#8A8A8A;
+    b{font-weight: normal;line-height:.6rem;display:block;padding:.2rem 0 0 .3rem;}
+  }
+  .KillBtn{position:absolute;right:.5rem;bottom:.65rem;width:6.5rem;height:1.8rem;line-height:1.8rem;color:#fff;font-size:.9rem;text-align:center;.gradient(left, #F1A04D, #F26E62);.border-radius(@radius:.25rem);}
+  h3{font-size:.9rem;line-height:.9rem;position: absolute;left:.65rem;bottom:1.75rem;color:#fff;}
+  i{font-size:.75rem;font-style:normal;position:absolute;color:#fff;left:.65rem;bottom:.3rem;}
+  big{font-size:1.25rem;position:absolute;color:#fff;left:1.2rem;bottom:.1rem;}
+  small{font-size:.75rem;position:absolute;color:#fff;left:2.3rem;bottom:.3rem;text-decoration:line-through;}
+}
+.SeckillBtn{padding:.75rem 2.3rem 0 2.3rem;
+  a{height:2.15rem;line-height:2.15rem;text-align:center;display:block;.gradient(left, #F1A04D, #F26E62);.border-radius(@radius:2.15rem);font-size:.9rem;color:#fff;}
+}
+.TitleAirport{.img-box;.Relative;
+  img{width:100%;}
+  .RuleBtn{position:absolute;text-align:center;width:2.75rem;line-height:.85rem;border:1px solid #fff;font-size:.55rem;right:.8rem;top:2.1rem;color:#fff;.border-radius(@radius:.4rem);}
+}
+.AirportList{padding:.6rem .75rem 1.25rem .75rem;background:#EF2E82;
+  .AirporColumn{height:2rem;background:#fff;.border-radius(@radius:2rem);margin-top:.4rem;padding:0 0 0 .6rem;.ClearBox;
+    h4{float:left;width:10rem;font-size:.7rem;font-weight:normal;line-height:2rem;}
+    .AirporPrice{float:left;color:#333;
+      big,b,span{float:left;}
+      big{font-size:.75rem;margin-top:.55rem;}
+      b{font-size:1.25rem;line-height:1.25rem;margin:.3rem 0 0 .1rem;font-weight: normal;}
+      span{font-size:.6rem;line-height:.6rem;text-decoration: line-through;margin:.8rem 0 0 .1rem;}
+    }
+    .AirporBtn{float:right;width:3.25rem;height:1.65rem;background:#E12374;line-height:1.65rem;text-align: center;color:#fff;font-size:.75rem;.border-radius(@radius:4rem);margin:.175rem .175rem 0 0;}
+    .SellOut{width:3.15rem;height:1.55rem;line-height:1.55rem;border:1px solid #E41B73;background:#fff;color:#E41B73;font-size:.55rem;}
+  }
+  .AirporMore{margin-top:.4rem;
+    a{display:block;height:2rem;line-height:2rem;text-align: center;color:#fff;font-size:.75rem;background:#DC2475;.border-radius(@radius:4rem);}
+  }
+}
+.TitleTourism{.img-box;.Relative;
+  img{width:100%;}
+  .RuleBtn{position:absolute;text-align:center;width:2.75rem;line-height:.85rem;border:1px solid #fff;font-size:.55rem;right:.8rem;top:2.7rem;color:#fff;.border-radius(@radius:.4rem);}
+}
+.RegionNav{.ClearBox;background:#6B47E7;
+  li{float:left;width:25%;text-align: center;height:2rem;line-height:2rem;color:#fff;font-size:.8rem;
+    &.on{background:#744FF6;}
+  }
+}
+.RegionBox{padding:.35rem .5rem 1.25rem .5rem;background:#744FF6;}
+.Region{padding:.375rem 0 .425rem .25rem;margin-top:.4rem;background:#fff;.ClearBox;
+  img{float:left;width:7.75rem;}
+  .RegionRight{float:left;padding-left:.5rem;color:#333;.Relative;width:9rem;
+    h4{font-size:.75rem;line-height:.8rem;margin-top:.35rem;}
+    img{width:3.425rem;height:2.425rem;position: absolute;right:0;top:1.1rem;}
+    div:nth-of-type(1){.ClearBox;
+      strong,b,span{float:left;}
+      strong{font-size:.8rem;line-height:.8rem;margin-top:1.15rem;font-weight:normal;}
+      b{font-size:1.5rem;line-height:1.5rem;margin-top:.5rem;font-weight:normal;}
+      span{font-size:.75rem;line-height:.75rem;margin:1.1rem 0 0 .2rem;text-decoration: line-through;}
+    }
+    div:nth-of-type(2){margin-top:.65rem;
+      a{display:block;width:7.75rem;height:1.7rem;line-height:1.7rem;text-align:center;font-size:.8rem;color:#fff;.gradient(left, #F1A04D, #F26E62);.border-radius(@radius:.25rem);}
+    }
+  }
+}
+.TitleRegion{.img-box;
+  img{width:100%;display:block;}
+  .RuleBtn{position:absolute;text-align:center;width:2.75rem;line-height:.85rem;border:1px solid #fff;font-size:.55rem;right:.8rem;top:2.7rem;color:#fff;.border-radius(@radius:.4rem);}
+}
+.InBusNav{background:#0CAAA4;.ClearBox;
+  li{line-height:2rem;float:left;width:50%;text-align:center;font-size:.8rem;color:#fff;
+    &.on{background:#19BFB9;}
+  }
+}
+.InBusBox{padding:.35rem .5rem 1.25rem .5rem;background:#19BFB9;}
+
+.circle{width:2.45rem;height:2.45rem;position:absolute;border-radius:50%;right:6.5%;top:.25rem;.gradient(left,#F1665A,#E53D52);
+  .pie_left, .pie_right{width:2.45rem;height:2.45rem;position:absolute;top:0;left:0;}
+  .left, .right{width:2.45rem;height:2.45rem;border-radius:50%;position:absolute;top:0;left:0;background:#FD9AA8;}
+  .pie_right, .right {clip:rect(0,auto,auto,1.22rem);}
+  .pie_left, .left {clip:rect(0,1.22rem,auto,0);}
+  .mask{width:2.15rem;height:2.15rem;border-radius:50%;left:.15rem;top:.15rem;background:#FFF;position:absolute;text-align:center;font-size:.55rem;font-weight: bold;color:#e02c6b;
+    em{position:absolute;font-style:normal;left:0;top:.55rem;width:100%;line-height:.55rem;}
+    small{font-size:.55rem;}
+    .CountDown{text-align:center;line-height:.55rem;margin-top:1.25rem;}
+  }
+}
+
+.RedBtn{width:3.75rem;height:1.2rem;line-height:1.2rem;position:absolute;.gradient(left,#EF735C,#DF3E61);font-size:.7rem;color:#fff;text-align:center;.border-radius(@radius:2rem);right:.55rem;top:2.9rem;}
+.grayBtn{.RedBtn;background:#A9A9A9;}
+.time{width:4.825rem;position: absolute;right:0;top:0;
+  dt{font-size:.7rem;line-height:.7rem;text-align: center;padding-top:1.15rem;}
+  dd{.ClearBox;padding:.4rem 0 0 .5rem;
+    time,span{float:left;}
+    time{width:1rem;height:1rem;font-size:.65rem;line-height:1rem;text-align: center;.gradient(top,#F1665A,#E53D52);color:#fff;.border-radius(@radius:.1rem);}
+    span{width:.4rem;line-height:1rem;text-align: center;color:#FBBEC1;}
+  }
+}
+.ZuCheNav{background:#F43F44;.ClearBox;
+  li{line-height:2rem;float:left;width:50%;text-align:center;font-size:.8rem;color:#fff;
+    &.on{background:#FF595E;}
+  }
+}
+.ZuCheBox{padding:.35rem .5rem 1.25rem .5rem;background:#FF595E;}
+
+.JsRuleList{background:#FFC501;padding:0 5% .4rem 5%;
+  img{width:100%;}
+  li{
+    &:nth-of-type(3){text-align:center;
+      span{position: relative;color:#ff6600;font-size:.5rem;
+        &:after{content:"";position: absolute;width:.475rem;height:.225rem;background:url("../img/Eicon.png") no-repeat;background-size:100% 100%;right:-.7rem;top:.25rem;}
+        &.active{
+          &:after{transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -o-transform: rotate(180deg);}
+        }
+      }
+    }
+  }
+}
+
+.adBox{padding:0 5%;background:#FFC501;
+  img{width:100%;}
+}

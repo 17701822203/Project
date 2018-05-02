@@ -1,0 +1,15 @@
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Lucida Grande",Verdana,"Microsoft YaHei",hei;}
+
+.bg{width:7.5rem;padding:11.47rem 0 0.96rem 0;background:url(../img/top-bg.jpg) #FFD200 no-repeat;background-size:7.5rem 11.47rem;}
+.txt-list{width:7.1rem;height:2.67rem;background:url(../img/box.jpg) no-repeat;background-size:contain;margin:0.15rem auto 0 auto;}
+.txt-list dt{padding:0.42rem 0 0 0.53rem; position:relative;}
+.txt-list dt em{float:left;width:0.62rem;height:0.62rem;}
+.txt-list dt span{font-size:0.32rem;font-weight:bold;line-height:0.62rem;padding-left:0.13rem;}
+.txt-list dt a{position:absolute;width:2.08rem;height:0.62rem;background:url(../img/look-active.jpg) no-repeat;background-size:contain;right:0.55rem;top:0.42rem;}
+.txt-list dt a:active{background:url(../img/look.jpg) no-repeat;background-size:contain;right:0.55rem;top:0.42rem;}
+.txt-list dd{font-size:0.26rem;padding:0 0.53rem 0 0.53rem;}
+.txt-list dd p{line-height:0.36rem;padding:0.1rem 0 0 0;text-indent:0.5rem}

@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+
+document.addEventListener('touchstart',function(){},false);
+
+$(document).ready(function(e) {
+    function selectFrom(lowerValue, upperValue){
+        var choices = upperValue - lowerValue + 1;
+        return Math.floor(Math.random() * choices + lowerValue);
+    }
+    var width=$(window).width();
+    var a=setInterval(function(){foo()},600);
+    function foo(){
+		var num = selectFrom(0, width);
+		var num2 = selectFrom(0, width);
+		var num3 = selectFrom(0, width);
+		$(".GameBox").append('<img style="left:'+num+'px;" class="rotation" src="img/Icon1.png"/>');
+		$(".GameBox").append('<img style="left:'+num2+'px;" class="rotation2" src="img/Icon2.png"/>');
+		$(".GameBox").append('<img style="left:'+num3+'px;" class="rotation3" src="img/Icon3.png"/>');
+    }
+	$(".start").click(function(){
+		$(".start,.bg").remove();
+		$("div").addClass("GameBox");
+		$(".hzIcon,div,span").slideDown("slow");
+	})
+	
+});
+</script>
+</head>
+
+<body style="background:url(img/p3.jpg) #2789C8 no-repeat;background-size:contain">
+	<article class="p3Bg">
+    	<div></div>
+    	<img class="bg" src="img/btmBg.png">
+        <img class="hzIcon" src="img/hzIcon.png">
+        <img class="start" src="img/start.png">
+        <span>1X5分=5分</span>
+        <span>1X5分=5分</span>
+        <span>1X5分=5分</span>
+    </article>
+</body>
+</html>

@@ -1,0 +1,83 @@
+/*Created by huang.jun on 16-05-05*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:Microsoft YaHei;}
+
+.bk1,.bk2{position:relative;}
+.bk1{background:url(../img/bg1.jpg) no-repeat;background-size:contain;width:16rem;height:20.2512077294686rem;}
+.bk2{background:url(../img/bg2.jpg) no-repeat;background-size:contain;width:16rem;height:25rem;}
+
+.btn1,.btn2,.btn3,.lftIcon,.ritIcon,.yun,.txt,.txtLst{position:absolute;}
+.btn1{width:6.72463768115942rem;height:2.608695652173913rem;left:50%;top:15.4rem;margin-left:-3.2rem;}
+.btn2{width:6.840579710144928rem;height:2.357487922705314rem;left:50%;top:14.8rem;margin-left:-3.6rem;}
+.btn3{width:6.454106280193237rem;height:1.91304347826087rem;left:50%;top:17.4rem;margin-left:-3.227053140096619rem;}
+.btn1:active,.btn2:active,.btn3:active{ opacity:0.7;}
+
+.lftIcon,.ritIcon{width:1.70048309178744rem;height:1.159420289855072rem;top:16.46rem;}
+.lftIcon{left:2.2rem;-webkit-animation:leftIcon 0.2s infinite linear;}
+.ritIcon{left:12rem;-webkit-animation:rightIcon 0.2s infinite linear;}
+.yun{left:0;top:1rem;}
+.txt{text-align:center;font-size:0.7729468599033816rem;width:100%;font-weight:bold;color:#ff8401;top:6.7rem;}
+.txtBox1,.txtBox2{margin-top:8rem;}
+
+@-webkit-keyframes leftIcon{
+	0%{-webkit-transform:rotate(10deg);}
+	50%{-webkit-transform:rotate(0deg);}
+	100%{-webkit-transform:rotate(10deg);}
+}
+@-webkit-keyframes rightIcon{
+	0%{-webkit-transform:rotate(10deg);}
+	50%{-webkit-transform:rotate(0deg);}
+	100%{-webkit-transform:rotate(10deg);}
+}
+
+.txtLst{left:3rem;top:13.6rem;}
+.txtLst li{float:left;font-size:0;}
+.txtLst li span{display:block;width:0.7342995169082126rem;height:0.6763285024154589rem;line-height:0.67rem;text-align:center;background:#650906;color:#FFC100;font-size:0.5410628019323671rem;margin-left:0.1rem;font-weight:bold;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

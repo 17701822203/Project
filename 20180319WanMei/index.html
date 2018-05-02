@@ -1,0 +1,158 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <section class="show-pop">
+        <div class="shadow"></div>
+        <div class="PopBg">
+            <em class="close"></em>
+            <h3 class="TitleTop"></h3>
+            <div class="pop-txt">
+                <h4>领导好，</h4>
+                <p>昨天下班后，在玉林路尽头小酒馆遇到民间神医，经其全面检查，诊断为重度起床障碍，望批准！</p>
+                <div>申请人：GIGYIN</div>
+            </div>
+            <div class="wx-img"><img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=3515920666,1677097457&fm=58"></div>
+            <dl class="text">
+                <dt>给我8天假期，带你上天入地<br/>给我8天假期，带你上天入地<br/>给我8天假期，带你上天入地</dt>
+                <dd>——digyin</dd>
+            </dl>
+            <ul class="pop-btn">
+                <li>晒晒我的假条</li>
+                <li>马上去度假</li>
+            </ul>
+        </div>
+    </section>
+    <article class="BgWrap">
+        <div class="am-gb">
+            <img class="am-txt1" src="img/txt-bg1.png">
+            <img class="am-txt2" src="img/txt-bg2.png">
+            <img class="am-txt3" src="img/txt-bg3.png">
+            <img class="am-txt4" src="img/txt-bg4.png">
+            <img class="am-txt5" src="img/txt-bg5.png">
+            <img class="am-txt6" src="img/txt-bg3.png">
+            <img class="am-txt7" src="img/txt-bg2.png">
+            <img class="am-txt8" src="img/txt-bg5.png">
+            <img class="am-txt9" src="img/txt-bg1.png">
+            <img class="am-txt10" src="img/txt-bg4.png">
+            <img class="am-txt11" src="img/txt-bg1.png">
+            <img class="am-txt12" src="img/txt-bg4.png">
+            <img class="am-txt13" src="img/txt-bg1.png">
+            <img class="am-txt14" src="img/txt-bg2.png">
+            <img class="am-txt15" src="img/txt-bg3.png">
+            <img class="am-txt16" src="img/txt-bg4.png">
+
+            <img class="am-txt18" src="img/txt-bg1.png">
+            <img class="am-txt19" src="img/txt-bg2.png">
+            <img class="am-txt20" src="img/txt-bg3.png">
+            <img class="am-txt21" src="img/txt-bg4.png">
+            <img class="am-txt22" src="img/txt-bg5.png">
+            <img class="am-txt23" src="img/txt-bg1.png">
+            <img class="am-txt24" src="img/txt-bg2.png">
+            <img class="am-txt25" src="img/txt-bg3.png">
+            <img class="am-txt26" src="img/txt-bg4.png">
+            <img class="am-txt27" src="img/txt-bg5.png">
+        </div>
+        <div class="MachineTop"><img src="img/MachineTop.png"></div>
+        <div class="MachineCenter">
+            <div class="switch1">
+                <input type="checkbox" id="control1" class="control">
+                <label for="control1" class="checkbox"></label>
+            </div>
+            <div class="switch2">
+                <input type="checkbox" id="control2" class="control">
+                <label for="control2" class="checkbox"></label>
+            </div>
+            <div class="switch3">
+                <input type="checkbox" id="control3" class="control">
+                <label for="control3" class="checkbox"></label>
+            </div>
+            <div class="slider-top">
+                <input type='range'/>
+                <img class="txt20" src="img/20.png">
+                <img class="txt25" src="img/25.png">
+                <img class="txt30" src="img/30.png">
+                <img class="txt35" src="img/35.png">
+                <img class="txt40" src="img/40.png">
+                <img class="txt45" src="img/45.png">
+                <img class="txt50" src="img/50.png">
+            </div>
+            <div class="slider-left">
+                <input type='range'/>
+                <img class="yqrx" src="img/yqrx.png">
+                <img class="ygqn" src="img/ygqn.png">
+                <img class="zdbc" src="img/zdbc.png">
+            </div>
+            <div class="slider-right">
+                <input type='range'/>
+                <img class="bdzc" src="img/bdzc.png">
+                <img class="nxtt" src="img/nxtt.png">
+                <img class="ynzn" src="img/ynzn.png">
+            </div>
+            <div class="element-exit">
+                <em></em>
+                <i></i>
+                <span></span>
+            </div>
+            <img src="img/MachineCenter.png">
+        </div>
+        <div class="MachineBtm"><img src="img/MachineBtm.png"><button></button></div>
+    </article>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".MachineBtm button").click(function(){
+                $(".element-exit i").addClass("animation1");
+                $(".element-exit span").addClass("animation2");
+                setTimeout(function(){
+                    $(".show-pop").show();
+                },1000);
+            })
+            $(".close").click(function(){
+                $(".show-pop").hide();
+            })
+        })
+    </script>
+</body>
+</html>
+

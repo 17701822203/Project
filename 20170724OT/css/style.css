@@ -1,0 +1,28 @@
+/*Created by huang.jun on 17-07-24*/
+*{margin:0;padding:0;border:0;}
+ol,ul,li{list-style:none;}
+a{ text-decoration:none;}
+body{font-family: PingFangSC-Regular, sans-serif;color:#333;}
+
+.Img1{height:203px;background:url("../img/Img1.jpg") no-repeat center top;}
+.Img2{height:251px;background:url("../img/Img2.jpg") no-repeat center top;}
+.Img3{height:224px;background:url("../img/Img3.jpg") no-repeat center top;}
+.Img4{height:259px;background:url("../img/Img4.jpg") no-repeat center top;}
+.Img5{height:290px;background:url("../img/Img5.jpg") no-repeat center top;}
+.Img6{height:246px;background:url("../img/Img6.jpg") no-repeat center top;}
+.Img7{height:235px;background:url("../img/Img7.jpg") no-repeat center top;}
+.Img8{height:225px;background:url("../img/Img8.jpg") no-repeat center top;}
+.Img9{height:245px;background:url("../img/Img9.jpg") no-repeat center top;}
+.Img10{height:153px;background:url("../img/Img10.jpg") no-repeat center top;}
+.Img11{height:453px;background:url("../img/Img11.jpg") no-repeat center top;}
+.Img12{height:400px;background:url("../img/Img12.jpg") no-repeat center top;}
+.Img13{height:337px;background:url("../img/Img13.jpg") no-repeat center top;}
+.wrap900{width:900px;margin:0 auto;position:relative;}
+.S-Btn{width:185px;height:54px;position:absolute;background:url("../img/Btn1.jpg") no-repeat;right:15px;}
+.S-Btn:hover{background:url("../img/Btn2.jpg") no-repeat;}
+.btn1{top:5px;}
+.btn2{top:124px;}
+.btn3{top:244px;}
+.btn4{top:366px;}
+.B-Btn{position:absolute;width:321px;height:65px;background:url("../img/Btn3.jpg") no-repeat;left:50%;margin-left:-160.5px;top:86px;}
+.B-Btn:active,.S-Btn:active{opacity:.8;}

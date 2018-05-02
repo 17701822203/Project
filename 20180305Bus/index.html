@@ -1,0 +1,268 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#F1F1F1;">
+
+    <!-- Swiper -->
+    <div class="swiper-container2">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiper-img"><img src="img/TopImg.jpg"><span>汽车票</span></div>
+                <dl class="swiper-introduce">
+                    <dt>大连-葫芦岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>&yen;&nbsp;125</small>
+                    </dd>
+                </dl>
+                <a class="swiper-btn" href="###">火速预订</a>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-img"><img src="img/TopImg.jpg"><span>汽车票</span></div>
+                <dl class="swiper-introduce">
+                    <dt>大连-葫芦岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>&yen;&nbsp;125</small>
+                    </dd>
+                </dl>
+                <a class="swiper-btn" href="###">火速预订</a>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-img"><img src="img/TopImg.jpg"><span>汽车票</span></div>
+                <dl class="swiper-introduce">
+                    <dt>大连-葫芦岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>&yen;&nbsp;125</small>
+                    </dd>
+                </dl>
+                <a class="swiper-btn" href="###">火速预订</a>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-img"><img src="img/TopImg.jpg"><span>汽车票</span></div>
+                <dl class="swiper-introduce">
+                    <dt>大连-葫芦岛</dt>
+                    <dd>
+                        <span>&yen;</span>
+                        <strong>88</strong>
+                        <small>&yen;&nbsp;125</small>
+                    </dd>
+                </dl>
+                <a class="swiper-btn" href="###">火速预订</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="TxtTitle"></div>
+
+    <div class="wrapper02" id="demo06">
+        <div class="scroller">
+            <ul class="clearfix">
+                <li><a href="javascript:void(0)">汽车票</a></li>
+                <li><a href="javascript:void(0)">船票</a></li>
+                <li><a href="javascript:void(0)">机场专线</a></li>
+                <li><a href="javascript:void(0)">旅游专线</a></li>
+                <li><a href="javascript:void(0)">酒店</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <ul class="CityList1">
+        <li>1京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+    </ul>
+    <ul class="CityList2">
+        <li>1京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+        <li>北京</li>
+    </ul>
+    <div class="PanicBuying">
+        <dl class="left">
+            <dt>香港是是-澳门船票</dt>
+            <dd><span>买一送一</span></dd>
+        </dl>
+        <dl class="center">
+            <dt>
+                <span>&yen;</span>
+                <strong>128</strong>
+                <small>起</small>
+            </dt>
+            <dd>
+                <span>&yen;&nbsp;150</span>
+            </dd>
+        </dl>
+        <a class="right" href="###">抢购</a>
+    </div>
+    <div class="PanicBuying">
+        <dl class="left">
+            <dt>香港是是-澳门船票</dt>
+            <dd><span>买一送一</span></dd>
+        </dl>
+        <dl class="center">
+            <dt>
+                <span>&yen;</span>
+                <strong>128</strong>
+                <small>起</small>
+            </dt>
+            <dd>
+                <span>&yen;&nbsp;150</span>
+            </dd>
+        </dl>
+        <a class="right" href="###">抢购</a>
+    </div>
+    <div class="PanicBuying">
+        <dl class="left">
+            <dt>香港是是-澳门船票</dt>
+            <dd><span>买一送一</span></dd>
+        </dl>
+        <dl class="center">
+            <dt>
+                <span>&yen;</span>
+                <strong>128</strong>
+                <small>起</small>
+            </dt>
+            <dd>
+                <span>&yen;&nbsp;150</span>
+            </dd>
+        </dl>
+        <a class="right" href="###">抢购</a>
+    </div>
+    <div class="PanicBuying">
+        <dl class="left">
+            <dt>香港是是-澳门船票</dt>
+            <dd><span>买一送一</span></dd>
+        </dl>
+        <dl class="center">
+            <dt>
+                <span>&yen;</span>
+                <strong>128</strong>
+                <small>起</small>
+            </dt>
+            <dd>
+                <span>&yen;&nbsp;150</span>
+            </dd>
+        </dl>
+        <a class="right" href="###">抢购</a>
+    </div>
+    <div class="PanicBuying">
+        <dl class="left">
+            <dt>香港是是-澳门船票</dt>
+            <dd><span>买一送一</span></dd>
+        </dl>
+        <dl class="center">
+            <dt>
+                <span>&yen;</span>
+                <strong>128</strong>
+                <small>起</small>
+            </dt>
+            <dd>
+                <span>&yen;&nbsp;150</span>
+            </dd>
+        </dl>
+        <a class="right" href="###">抢购</a>
+    </div>
+    <button class="more-btn"><span>更多线路</span></button>
+
+    <ul class="ad-img">
+        <li><a href="###"><img src="img/ad.jpg"></a></li>
+        <li><a href="###"><img src="img/ad2.jpg"></a></li>
+    </ul>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container2',{
+            slidesOffsetBefore :12,
+            slidesPerView: 3,
+            spaceBetween:12
+        })
+    </script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/navbarscroll.js"></script>
+    <script type="text/javascript">
+        $(function(){
+
+            //demo示例一到四 通过lass调取，一句可以搞定，用于页面中可能有多个导航的情况
+            $('.wrapper').navbarscroll();
+
+            //demo示例五 通过id调取
+            $('#demo05').navbarscroll({
+                defaultSelect:6,
+                endClickScroll:function(obj){
+                    console.log(obj.text())
+                }
+            });
+
+            //demo示例六 通过id调取
+            $('#demo06').navbarscroll({
+                defaultSelect:3,
+                scrollerWidth:6,
+                fingerClick:1,
+                endClickScroll:function(obj){
+                    console.log(obj.text())
+                }
+            });
+        });
+    </script>
+</body>
+</html>

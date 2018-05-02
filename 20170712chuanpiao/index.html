@@ -1,0 +1,272 @@
+﻿<html class="ie" xmlns="http://www.w3.org/1999/html"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 13.825 * fontSize){
+                $('.nav-wrap').addClass('nav_wrap_fix');
+            }else{
+                $('.nav-wrap').removeClass('nav_wrap_fix');
+            }
+        });
+    </script>
+</head>
+<body>
+    <article>
+        <div class="TopBg"></div>
+        <div class="nav-height" id="navHeight">
+            <nav class="nav-wrap" id="nav-wrap">
+                <ul class="clearfix">
+                    <li><a href="#section1" class="active">泰国</a></li>
+                    <li><a href="#section2">马来西亚</a></li>
+                    <li><a href="#section3">新加坡</a></li>
+                    <li><a href="#section4">印度尼西亚</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="WrapBg1" id="section1">
+            <em class="md1"></em>
+            <div style="padding-top:4.475rem;">
+                <ul class="BookingList">
+                    <li>
+                        <big>普吉岛—皮皮岛</big>
+                        <small>(最短耗时：3時30分)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>皮皮岛—普吉岛</big>
+                        <small>(最短耗时：3時30分)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>素叻他尼—苏梅岛</big>
+                        <small>(最短耗时：1時30分)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>苏梅岛—素叻他尼</big>
+                        <small>(最短耗时：1時30分)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>素叻他尼—帕岸岛</big>
+                        <small>(最短耗时：1時30分)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>素叻他尼—帕岸岛</big>
+                        <small>(最短耗时：1時30分)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="WrapBg2" id="section2">
+            <em class="md2"></em>
+            <div style="padding-top:3.65rem;">
+                <ul class="BookingList">
+                    <li>
+                        <big>柔佛—刁曼岛</big>
+                        <small>(最短耗时：1時30分)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>刁曼岛—柔佛</big>
+                        <small>(最短耗时：1時30分)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>登嘉楼—热浪岛</big>
+                        <small>(最短耗时：1小时)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>登嘉楼—停泊岛</big>
+                        <small>(最短耗时：45分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>停泊岛—登嘉楼</big>
+                        <small>(最短耗时：45分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>柔佛—新加坡</big>
+                        <small>(最短耗时：30分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>柔佛—巴淡岛</big>
+                        <small>(最短耗时：45分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big style="font-size:.6rem;">瓜拉大汉—瓜拉淡比灵</big>
+                        <small>(最短耗时：3小时)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="WrapBg3" id="section3">
+            <em class="md3"></em>
+            <div style="padding-top:3.675rem;">
+                <ul class="BookingList">
+                    <li>
+                        <big>新加坡—民丹岛</big>
+                        <small>(最短耗时：2小时)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>新加坡—巴淡岛</big>
+                        <small>(最短耗时：50分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>新加坡—圣约翰岛</big>
+                        <small>(最短耗时：45分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>新加坡—龟屿岛</big>
+                        <small>(最短耗时：45分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>新加坡—柔佛</big>
+                        <small>(最短耗时：30分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>槟城—兰卡威</big>
+                        <small>(最短耗时：4時05分)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="WrapBg4" id="section4">
+            <em class="md4"></em>
+            <div style="padding-top:4.075rem;">
+                <ul class="BookingList">
+                    <li>
+                        <big>巴淡岛—柔佛</big>
+                        <small>(最短耗时：45分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>巴淡岛—新加坡</big>
+                        <small>(最短耗时：70分钟)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <big>民丹岛—新加坡</big>
+                        <small>(最短耗时：1小时)</small>
+                        <span>&yen;</span>
+                        <strong>128</strong>
+                        <a href="###">预订</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="BtmBox">
+                <a href="###">查看更多</a>
+            </div>
+        </div>
+    </article>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.navScroll.js"></script>
+    <script>
+        $('.nav-wrap').navScroll({
+            mobileDropdown: true,
+            mobileBreakpoint:100,
+            scrollSpy: true
+        });
+
+        //        $('.click-me').navScroll({
+        //            navHeight: 0
+        //        });
+
+        //        $('.nav').on('click', '.nav-mobile', function (e) {
+        //            e.preventDefault();
+        //            $('.nav ul').slideToggle('fast');
+        //        });
+    </script>
+</body>
+</html>

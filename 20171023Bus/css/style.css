@@ -1,0 +1,707 @@
+/*Created by huang.jun on 17-09-6*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+article {
+  background: #FFD35E;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.banner {
+  height: 375px;
+}
+.banner ul li {
+  background-position-x: center;
+  background-size: auto 100%;
+  position: relative;
+}
+.banner ul li dl {
+  position: absolute;
+  top: 98px;
+  left: 50%;
+  color: #fff;
+  width: 1064px;
+  margin-left: -532px;
+}
+.banner ul li dl dt div {
+  font-size: 40px;
+  line-height: 40px;
+  font-family: PingFangSC-Semibold;
+  position: relative;
+  padding-left: 20px;
+}
+.banner ul li dl dt div:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 9px;
+  height: 34px;
+  background: #FF9232;
+}
+.banner ul li dl dt p {
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 12px;
+}
+.banner ul li dl dd {
+  padding-top: 16px;
+}
+.banner ul li dl dd p {
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: 10px;
+}
+.banner .tb-btn {
+  bottom: 28px;
+}
+.banner .tb-btn a {
+  width: 13px;
+  height: 13px;
+  margin: 0 7px;
+}
+.banner .tb-btn a.active {
+  background: #FF9232;
+}
+.BgBox {
+  background: #F2F3F4;
+}
+.Wrap1064 {
+  margin: 0 auto;
+  width: 1064px;
+  padding-top: 15px;
+}
+.SearchBox {
+  background: #fff;
+  height: 78px;
+  box-shadow: 1px 1px 3px 0 rgba(133, 133, 133, 0.5);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+.SearchBox .SetOut,
+.SearchBox .Arrive,
+.SearchBox .Date {
+  float: left;
+  border: .5px solid #cdcdcd;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  border-radius: 11px;
+  overflow: hidden;
+  margin-top: 22px;
+}
+.SearchBox .SetOut {
+  margin-left: 44px;
+}
+.SearchBox .Arrive {
+  margin-left: 7px;
+}
+.SearchBox .Date {
+  margin-left: 11px;
+}
+.SearchBox .Icon {
+  float: left;
+  width: 34px;
+  height: 2px;
+  background: #E6E6E6;
+  position: relative;
+  margin: 38px 0 0 7px;
+}
+.SearchBox .Icon:after,
+.SearchBox .Icon:before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #D8D8D8;
+  position: absolute;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  top: -1.5px;
+}
+.SearchBox .Icon:after {
+  left: 0;
+}
+.SearchBox .Icon:before {
+  right: 0;
+}
+.SearchBox span {
+  width: 63px;
+  height: 30px;
+  background: #ededed;
+  float: left;
+  text-align: center;
+  line-height: 30px;
+  color: #4C4C4C;
+}
+.SearchBox .InputBox {
+  float: left;
+  width: 172px;
+  height: 30px;
+  line-height: 30px;
+  border: 0;
+  margin: 0;
+  font-size: 16px;
+  color: #282828;
+  text-indent: 10px;
+  outline: none;
+}
+.SearchBox .InputBox::-webkit-input-placeholder {
+  color: #cdcdcd;
+}
+.SearchBox .InputBox:-moz-placeholder {
+  color: #cdcdcd;
+}
+.SearchBox .InputBox::-moz-placeholder {
+  color: #cdcdcd;
+}
+.SearchBox .InputBox:-ms-input-placeholder {
+  color: #cdcdcd;
+}
+.SearchBox .SearchBtn {
+  width: 165px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  background: #ff9232;
+  float: left;
+  margin: 23px 0 0 40px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  border-radius: 11px;
+}
+.SearchBox .SearchBtn:hover {
+  background: rgba(247, 151, 0, 0.8);
+}
+.NewsBox {
+  padding-top: 20px;
+}
+.NewsBox .NewsList {
+  float: left;
+  width: 390px;
+  background: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(133, 133, 133, 0.5);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.NewsBox .NewsList .jsTab_title {
+  height: 40px;
+  background: #C5C5C5;
+}
+.NewsBox .NewsList .jsTab_title li {
+  float: left;
+  width: 50%;
+  line-height: 40px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+.NewsBox .NewsList .jsTab_title li.on {
+  height: 40px;
+  background: #fff;
+  color: #000;
+}
+.NewsBox .NewsList .jsTab_title li .NoticeIcon,
+.NewsBox .NewsList .jsTab_title li .ServiceIcon {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.NewsBox .NewsList .jsTab_title li .NoticeIcon {
+  background: url("../img/NoticeIcon.png") no-repeat;
+  background-size: 100% 100%;
+}
+.NewsBox .NewsList .jsTab_title li .ServiceIcon {
+  background: url("../img/ServiceIcon.png") no-repeat;
+  background-size: 100% 100%;
+}
+.NewsBox .NewsList .jsTab_con {
+  display: none;
+  padding: 18px 0 25px 28px;
+}
+.NewsBox .NewsList .jsTab_con p {
+  font-size: 16px;
+  line-height: 16px;
+  margin-top: 20px;
+  position: relative;
+  padding-left: 12px;
+}
+.NewsBox .NewsList .jsTab_con p a {
+  color: #6C6C6C;
+}
+.NewsBox .NewsList .jsTab_con p a:hover {
+  color: #000;
+}
+.NewsBox .NewsList .jsTab_con p:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid #D8D8D8;
+}
+.NewsBox .Rimg {
+  float: right;
+  width: 655px;
+}
+.BorTitle {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 23px;
+  background: #F5F5F5;
+}
+.BorTitle strong {
+  margin-left: 10px;
+}
+.BorTitle a {
+  float: right;
+  font-size: 15px;
+  color: #777;
+  margin-right: 22px;
+  padding-right: 21px;
+  background: url("../img/More.png") no-repeat right 14px;
+  background-size: 13px 13px;
+}
+.BorTitle a:hover {
+  color: #333;
+}
+.LineBox {
+  margin-top: 14px;
+  background: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(133, 133, 133, 0.5);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.LineBox .LineIcon {
+  float: left;
+  width: 26px;
+  height: 20px;
+  background: url("../img/LineIcon.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: 10px;
+}
+.LineBox .LineList {
+  padding: 11px 0 23px 13px;
+}
+.LineBox .LineList .item-thumbnail {
+  position: relative;
+  width: 332px;
+  height: 187px;
+  margin: 11px 0 0 11px;
+  overflow: hidden;
+  float: left;
+}
+.LineBox .LineList .item-thumbnail img {
+  transition: transform 0.3s ease 0s;
+  width: 332px;
+  height: 187px;
+}
+.LineBox .LineList .item-thumbnail .item-overlay {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 37px;
+  line-height: 37px;
+  padding: 0 5px;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 18px;
+}
+.LineBox .LineList .item-thumbnail:hover img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.HotBusBox {
+  margin-top: 14px;
+  background: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(133, 133, 133, 0.5);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.HotBusBox .BusIcon {
+  float: left;
+  width: 26px;
+  height: 20px;
+  background: url("../img/BusIcon.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: 10px;
+}
+.HotBusBox .BusList {
+  padding: 11px 0 23px 13px;
+}
+.HotBusBox .BusList .product-item {
+  width: 195px;
+  height: 43px;
+  line-height: 43px;
+  background: #F5F5F5;
+  float: left;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  border-radius: 90px;
+  overflow: hidden;
+  margin: 15px 0 0 10px;
+  padding: 0 26px 0 25px;
+}
+.HotBusBox .BusList .product-item b,
+.HotBusBox .BusList .product-item i {
+  float: left;
+  font-weight: normal;
+}
+.HotBusBox .BusList .product-item b {
+  font-size: 16px;
+  font-family: PingFangSC-Light;
+  color: #000;
+}
+.HotBusBox .BusList .product-item i {
+  width: 21px;
+  height: 5px;
+  background: url("../img/Icon-round.png") no-repeat;
+  background-size: 100% 100%;
+  margin: 19px 6px 0 6px;
+}
+.HotBusBox .BusList .product-item span {
+  float: right;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #FF9232;
+}
+.TicketBox {
+  margin-top: 14px;
+  background: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(133, 133, 133, 0.5);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.TicketBox .TicketIcon {
+  float: left;
+  width: 24px;
+  height: 15px;
+  background: url("../img/TicketIcon.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: 13px;
+}
+.TicketBox .TicketList {
+  padding: 11px 0 23px 13px;
+}
+.TicketBox .TicketList .product-item-buy {
+  position: relative;
+  width: 333px;
+  height: 192px;
+  margin: 10px 0 0 9px;
+  overflow: hidden;
+  float: left;
+}
+.TicketBox .TicketList .product-item-buy img {
+  transition: transform .3s ease 0s;
+  width: 333px;
+  height: 192px;
+}
+.TicketBox .TicketList .product-item-buy div {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 49px;
+  line-height: 49px;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.TicketBox .TicketList .product-item-buy div dl {
+  float: left;
+  padding-left: 4px;
+}
+.TicketBox .TicketList .product-item-buy div dl dt {
+  font-size: 18px;
+  height: 18px;
+  line-height: 18px;
+  color: #fff;
+  padding-top: 6px;
+}
+.TicketBox .TicketList .product-item-buy div dl dd {
+  font-size: 16px;
+  line-height: 16px;
+  height: 16px;
+  color: #FF9232;
+  padding-top: 2px;
+}
+.TicketBox .TicketList .product-item-buy div .BuyBtn {
+  float: right;
+  font-size: 12px;
+  background: #FF9232;
+  width: 89px;
+  height: 22px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  color: #fff;
+  line-height: 22px;
+  text-align: center;
+  font-family: PingFangSC-Semibold;
+  margin: 16px 7px 0 0;
+}
+.TicketBox .TicketList .product-item-buy div .BuyBtn:hover {
+  background: rgba(247, 151, 0, 0.8);
+}
+.TicketBox .TicketList .product-item-buy:hover img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.LogoBtm {
+  padding: 70px 0;
+  width: 350px;
+  margin: 0 auto;
+}
+.LogoBtm .Blogo {
+  width: 135px;
+  height: 68px;
+  float: left;
+  margin-top: 8px;
+}
+.LogoBtm .ewm {
+  margin-left: 20px;
+  float: left;
+  width: 68px;
+  height: 68px;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #D5D5D5;
+}
+.LogoBtm dl {
+  color: #636363;
+  font-size: 18px;
+  font-family: PingFangSC-Light;
+  float: left;
+  padding-left: 6px;
+}
+.LogoBtm dl dt {
+  float: left;
+  padding-top: 16px;
+}
+.TopBg {
+  height: 467px;
+  background: url("../img/TopBg.jpg") no-repeat center top;
+  position: relative;
+}
+.TopNav {
+  height: 48px;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 48px;
+}
+.TopNav a {
+  color: #fff;
+  font-size: 18px;
+  padding: 0 24px;
+  position: relative;
+}
+.TopNav a:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 28px;
+  background: #fff;
+  left: 0;
+  top: 0;
+}
+.TopNav a:nth-of-type(1):after {
+  display: none;
+}
+.TopNav a:hover {
+  opacity: .8;
+}
+.wrap1099 {
+  width: 1099px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.CityTitle {
+  height: 38px;
+  line-height: 38px;
+  padding-left: 19px;
+  background: #F5F5F5;
+}
+.CityTitle .CityIcon {
+  float: left;
+  width: 17px;
+  height: 18px;
+  background: url("../img/CityIcon.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: 10px;
+}
+.CityTitle strong {
+  margin-left: 10px;
+}
+.CityTitle a {
+  float: right;
+  font-size: 15px;
+  color: #777;
+  margin-right: 22px;
+  padding-right: 21px;
+  background: url("../img/More.png") no-repeat right 12px;
+  background-size: 13px 13px;
+}
+.CityTitle a:hover {
+  color: #333;
+}
+.CityBox {
+  background: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(133, 133, 133, 0.5);
+  border-radius: 7px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.CityList {
+  padding: 24px 0 24px 29px;
+}
+.CityList .product-item-city {
+  position: relative;
+  width: 323px;
+  height: 163px;
+  margin: 10px 0 0 18px;
+  overflow: hidden;
+  float: left;
+}
+.CityList .product-item-city img {
+  transition: transform 0.3s ease 0s;
+  width: 323px;
+  height: 163px;
+}
+.CityList .product-item-city p {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 37px;
+  line-height: 37px;
+  padding: 0 5px;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 18px;
+}
+.CityList .product-item-city:hover img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.PageBox {
+  padding: 36px 0;
+  height: 80px;
+  text-align: right;
+  font-family: PingFangSC-Medium;
+}
+.PageBox a:hover {
+  opacity: .8;
+}
+.PageBox a:active {
+  opacity: 1;
+}
+.PageBox .Prev,
+.PageBox .Next {
+  font-size: 15px;
+  color: #FF9232;
+  background: #fff;
+  padding: 7px 11px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.PageBox .Prev {
+  padding-left: 30px;
+}
+.PageBox .Prev:after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 11px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 12px solid #FF9232;
+}
+.PageBox .Next {
+  padding-right: 30px;
+}
+.PageBox .Next:after {
+  content: "";
+  position: absolute;
+  right: 8px;
+  top: 11px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 12px solid #FF9232;
+}
+.PageBox label a {
+  color: #FF9232;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 4px 10px;
+}
+.PageBox label a.active {
+  background: #FF9232;
+  color: #fff;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+}

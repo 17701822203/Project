@@ -1,0 +1,66 @@
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:PingFang SC Medium,sans-serif;}
+article{
+  background:#EFEFF4;
+  ul{
+    &:nth-of-type(2){border-bottom:1px solid #E0E0E0;}
+  }
+}
+.TopImg{font-size:0;}
+.bg-f{background:#fff;}
+.list{
+  background:#fff;padding-left:0.75rem;margin-top:0.4rem;
+  li{
+    height:2.2rem;position:relative;border-top:1px solid #E0E0E0;
+    &:nth-of-type(1){border-top:0;}
+    strong{width:5.225rem;height:2.2rem;font-size:0.75rem;line-height:2.2rem;font-weight:normal;position: absolute;left:0;top:0;}
+    input{width:100%;text-indent:5.225rem;border:0;font-size:0.75rem;margin-top:0.5rem;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+    i{position:absolute;width:2.2rem;height:2.2rem;background:url("../img/icon.png") no-repeat center center;background-size:0.375rem 0.625rem;right:0rem;top:0rem;}
+  }
+}
+.BtnBox{
+  margin-top:2.2rem;padding:0 0.75rem 2rem 0.75rem;position:relative;
+  &:after{position:absolute;content:"仅用于沟通&发放免费乘车奖励";font-size:0.65rem;left:0.75rem;top:-1.7rem;color:#999;}
+  a{height:2.2rem;line-height:2.2rem;background:#FC992D;color:#fff;text-align: center;font-size:0.75rem;display:block;letter-spacing:10px;.border_radius(0.2rem);}
+}
+.border_radius(@radius:5px){
+  -wekit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+.shadow{width:100%;height:100%;position:fixed;z-index:2;background:#000;opacity:0.8;top:0;left:0;}
+.pop{
+  background:#fff;width:13rem;height:5rem;text-align: center;position: fixed;z-index:3;top:50%;left:50%;margin-left:-6.5rem;margin-top:-2.5rem;.border_radius(0.75rem);
+  dt{height:2.85rem;line-height:2.85rem;border-bottom:1px solid #C6C6C6;font-size:0.7rem;color:#000;}
+  dd{height:2.125rem;line-height:2.125rem;font-size:0.8rem;color:#3c85e2;}
+}
+.feedback{
+  padding-top:5rem;text-align:center;
+  dt{
+    position: relative;padding-top:6.1rem;
+    &::after{position: absolute;content:"";width:4.825rem;height:4.825rem;background:url("../img/icon2.png") no-repeat;background-size:100% 100%;left:50%;top:0;margin-left:-2.4125rem;}
+    h4{font-size:1rem;font-weight: normal;}
+    p{font-size:0.65rem;padding-top:0.2rem;line-height:1rem;}
+  }
+  dd{font-size:0.65rem;padding-top:2.35rem;color:#999;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

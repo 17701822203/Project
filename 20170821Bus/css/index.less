@@ -1,0 +1,476 @@
+/*Created by huang.jun on 17-08-21*/
+*{margin:0;padding:0;}
+a{text-decoration:none;-webkit-tap-highlight-color:transparent;
+  &:active{opacity:.7;}
+}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:PingFang SC Medium,sans-serif;}
+.shadow{width:100%;height:100%;position:fixed;z-index:2;background:#000;opacity:0.7;top:0;left:0;}
+.img-box {font-size:0;}
+
+//四角的半径定制.border-radius-custom(20px, 20px, 0px, 0px);
+.border-radius-custom(@topleft:5px,@topright:5px,@bottomleft:5px,@bottomright:5px) {
+  -webkit-border-radius:@topleft @topright @bottomright @bottomleft;
+  -moz-border-radius:@topleft @topright @bottomright @bottomleft;
+  border-radius:@topleft @topright @bottomright @bottomleft;
+}
+//方块阴影.box-shadow(5px,5px,6px,.3);
+.box-shadow(@x:0px,@y:3px,@blur:5px,@alpha:.5) {
+  -webkit-box-shadow:@x @y @blur rgba(0,68,171,@alpha);
+  -moz-box-shadow:@x @y @blur rgba(0,68,171,@alpha);
+  box-shadow:@x @y @blur rgba(0,68,171,@alpha);
+}
+//圆角.border-radius(@radius:5px)
+.border-radius(@radius:5px) {
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+//input默认字体.placeholder({color:#666;});
+.placeholder(@a) {
+  &::-webkit-input-placeholder{@a();}
+  &:-moz-placeholder{@a();}
+  &::-moz-placeholder{@a();}
+  &:-ms-input-placeholder{@a();}
+}
+//线性渐变.gradient(left, #633, #333);
+.gradient(@origin:left,@start:#fff,@stop:#000) {
+  background-color:@start;
+  background-image:-webkit-linear-gradient(@origin,@start,@stop);
+  background-image:-moz-linear-gradient(@origin,@start,@stop);
+  background-image:-o-linear-gradient(@origin,@start,@stop);
+  background-image:-ms-linear-gradient(@origin,@start,@stop);
+  background-image:linear-gradient(@origin,@start,@stop);
+}
+
+section{display:none;}
+//清除浮动
+.ClearBox{
+  &:after,&:before{content: " ";display: table;clear: both;}
+}
+//相对定位
+.Relative{position:relative;}
+
+article{background:#4A51DC;}
+
+.NavBox{.ClearBox;background:#6B46E3;color:#fff;height:2.725rem;border-bottom:.075rem solid #AE39D2;
+  li{float:left;width:25%;text-align:center;height:2.725rem;
+    span{font-size:.55rem;line-height:.55rem;display:block;padding-top:.3rem;}
+    b{font-size:.7rem;line-height:.7rem;display:block;padding-top:.2rem;}
+    small{font-size:.5rem;line-height:.5rem;display:block;padding-top:.2rem;}
+    &.on{.gradient(left, #EB41B3, #FD775C);}
+  }
+}
+
+.Animation{.Relative;background:#6263EF;
+  .Pig{width:13.4%;position:absolute;left:68%;top:61.8%;z-index:4;}
+  .Ship{width:15%;position:absolute;left:42%;top:88%;animation: ShipUpDown 1.5s infinite linear alternate;}
+  .Gold{width:4.5%;position:absolute;left:73%;top:62%;z-index:3;animation: Gold2UpDown 2s infinite linear alternate;}
+  .GoldBig{width:16%;position:absolute;left:2%;top:31%;z-index:1;animation: GoldUpDown 1s infinite linear alternate;}
+  .GoldBig2{width:9%;position:absolute;left:80%;top:31%;z-index:1;animation: GoldRitUpDown 1.5s infinite linear alternate;}
+  .Parachute{width:6%;position:absolute;left:50%;top:47%;z-index:4;animation: FlipUpDown 25s infinite linear alternate;}
+  .IconBlock1{width:10%;position:absolute;left:23%;top:31%;z-index:1;animation: BlockUpDown 3.5s infinite linear alternate;}
+  .IconBlock2{width:9%;position:absolute;left:85%;top:46%;z-index:1;animation: Block2UpDown 4.5s infinite linear alternate;}
+  .IconBlock3{width:6%;position:absolute;left:57%;top:32%;z-index:1;animation: Block4UpDown 3.5s infinite linear alternate;}
+  .IconBlock4{width:6%;position:absolute;left:8%;top:55%;z-index:1;animation: Block5UpDown 1s infinite linear alternate;}
+  .IconBlock5{width:6%;position:absolute;left:90%;top:65%;z-index:1;animation: Block3UpDown 3s infinite linear alternate;}
+  .Bus{width:8%;position:absolute;left:56%;top:63%;z-index:1;animation: BusUpDown 3s linear infinite;}
+  .Mask{width:35.2%;position:absolute;left:38.2%;top:45.1%;z-index:2;animation:Mask 3s infinite linear alternate;}
+  .Floor{width:18%;position:absolute;left:18%;top:61.6%;z-index:2;}
+  .yuan{width:7.2%;position:absolute;left:42.1%;top:28.5%;z-index:3;.border-radius(@radius:12rem);animation:Yuan1 1s infinite linear alternate;}
+  .yuan2{width:7.2%;position:absolute;left:42.1%;top:28.5%;z-index:3;}
+  .yuan3{width:6%;position:absolute;left:32.3%;top:39.3%;z-index:3;.border-radius(@radius:12rem);animation:Yuan2 1.2s infinite linear alternate;}
+  .yuan4{width:6%;position:absolute;left:32.3%;top:39.3%;z-index:3;}
+  .yuan5{width:6%;position:absolute;left:24.3%;top:59.5%;z-index:3;.border-radius(@radius:12rem);animation:Yuan1 1.4s infinite linear alternate;}
+  .yuan6{width:6%;position:absolute;left:24.3%;top:59.5%;z-index:3;}
+  .yuan7{width:12%;position:absolute;left:58.9%;top:39.4%;z-index:3;.border-radius(@radius:12rem);animation:Yuan1 .8s infinite linear alternate;}
+  .yuan8{width:12%;position:absolute;left:58.9%;top:39.4%;z-index:3;}
+}
+
+.TopBtn{.gradient(top, #6263EF, #6977F8);
+  dt{padding-left:1.05rem;color:#fff;line-height:.7rem;.ClearBox;
+    h1{float:left;font-size:.7rem;font-weight:normal;margin-top:.35rem;}
+    span{float:right;display:block;line-height:1rem;padding:0 .3rem;background:#4A49BC;.border-radius(@radius:1rem);margin:.15rem 1rem 0 0;font-size:.7rem;}
+  }
+  dd{.ClearBox;padding:.5rem 0 .5rem .5rem;
+    span{float:left;width:5rem;height:1.6rem;text-align: center;border:.1rem solid #FFF100;margin-left:.5rem;.border-radius(@radius:1rem);font-size:1.1rem;color:#FFF100;
+      &.no{background:#FFF100;color:#dc4769;}
+    }
+  }
+}
+
+.BtnBg{.Relative;
+  .BigBtnIcon{position:absolute;width:10%;left:84%;top:14%;animation:BtnIcon .8s infinite linear alternate;}
+}
+
+.horn{height:1.35rem;background:url("../img/HornIcon.png") no-repeat #5A59E4;background-size:2.075rem 1.375rem;margin:.4rem .85rem 0 .85rem;.border-radius(@radius:1rem);position: relative;overflow:hidden;
+  ul{content:"";margin-left:2.5rem;background:#5958E4;font-size:.65rem;line-height:1.35rem;color:#fff;}
+}
+
+.CityTab{padding-bottom:2.25rem;}
+.CityNav{.ClearBox;padding-top:.475rem;
+  li{float:left;font-size:.9rem;color:#fff;line-height:.9rem;width:20%;
+    span{display:block;padding-left:1.2rem;margin:0 0.2rem;padding-bottom:.45rem;}
+    &.TabActive{
+      span{border-bottom:.1rem solid #FFD900;position:relative;color:#FFD900;
+        &:after{content:"";position:absolute;left:.4rem;top:0;width:.55rem;height:.725rem;background:url("../img/position.png") no-repeat;background-size:100% 100%;}
+      }
+    }
+  }
+}
+
+.City_box{padding:.25rem .75rem 0 .75rem;display:none;
+  .CityList{height:2rem;background:#5660E7;.border-radius(@radius:3rem);margin-top:.4rem;.ClearBox;
+    strong{float:left;padding-left:.9rem;width:6.5rem;font-size:.75rem;line-height:2rem;color:#fff;font-weight: normal;}
+    i{float:left;font-style: normal;color:#fff;padding-top:.5rem;padding-right:.1rem;font-size:.75rem;}
+    b{float:left;font-size:.9rem;line-height:.9rem;color:#fff;padding-top:.5rem;font-weight: normal;}
+    small{float:left;font-size:.5rem;color:#fff;padding-top:.65rem;padding-left:.3rem;}
+    a{float:right;width:5.5rem;height:1.65rem;line-height:1.65rem;font-size:.75rem;.gradient(left, #FB8B75, #EC3C88);.border-radius(@radius:2rem);color:#fff;text-align:center;margin:.18rem .18rem 0 0;}
+  }
+  .MoreBtn{height:2rem;background:#5660E7;.border-radius(@radius:3rem);margin-top:.4rem;display:block;font-size:.75rem;line-height:2rem;text-align:center;color:#fff;}
+}
+
+//大金币
+@keyframes GoldUpDown
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+
+@-moz-keyframes GoldUpDown /* Firefox */
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+
+@-webkit-keyframes GoldUpDown /* Safari 和 Chrome */
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+
+@-o-keyframes GoldUpDown /* Opera */
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+//大金币右
+@keyframes GoldRitUpDown
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+
+@-moz-keyframes GoldRitUpDown /* Firefox */
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+
+@-webkit-keyframes GoldRitUpDown /* Safari 和 Chrome */
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+
+@-o-keyframes GoldRitUpDown /* Opera */
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+
+//方块左二
+@keyframes BlockUpDown
+{
+  from {transform: translateY(2rem);}
+  to {transform: translateY(-1rem);}
+}
+
+@-moz-keyframes BlockUpDown /* Firefox */
+{
+  from {transform: translateY(2rem);}
+  to {transform: translateY(-1rem);}
+}
+
+@-webkit-keyframes BlockUpDown /* Safari 和 Chrome */
+{
+  from {transform: translateY(2rem);}
+  to {transform: translateY(-1rem);}
+}
+
+@-o-keyframes BlockUpDown /* Opera */
+{
+  from {transform: translateY(2rem);}
+  to {transform: translateY(-1rem);}
+}
+//方块右二
+@keyframes Block2UpDown
+{
+  from {transform: translateY(1.5rem);}
+  to {transform: translateY(-1.5rem);}
+}
+
+@-moz-keyframes Block2UpDown /* Firefox */
+{
+  from {transform: translateY(1.5rem);}
+  to {transform: translateY(-1.5rem);}
+}
+
+@-webkit-keyframes Block2UpDown /* Safari 和 Chrome */
+{
+  from {transform: translateY(1.5rem);}
+  to {transform: translateY(-1.5rem);}
+}
+
+@-o-keyframes Block2UpDown /* Opera */
+{
+  from {transform: translateY(1.5rem);}
+  to {transform: translateY(-1.5rem);}
+}
+//方块右一
+@keyframes Block3UpDown
+{
+  from {transform: translateY(1.5rem);}
+  to {transform: translateY(-1.5rem);}
+}
+
+@-moz-keyframes Block3UpDown /* Firefox */
+{
+  from {transform: translateY(1.5rem);}
+  to {transform: translateY(-1.5rem);}
+}
+
+@-webkit-keyframes Block3UpDown /* Safari 和 Chrome */
+{
+  from {transform: translateY(1.5rem);}
+  to {transform: translateY(-1.5rem);}
+}
+
+@-o-keyframes Block3UpDown /* Opera */
+{
+  from {transform: translateY(1.5rem);}
+  to {transform: translateY(-1.5rem);}
+}
+//方块中间
+@keyframes Block4UpDown
+{
+  from {transform: translateY(1rem);}
+  to {transform: translateY(-1rem);}
+}
+
+@-moz-keyframes Block4UpDown /* Firefox */
+{
+  from {transform: translateY(1rem);}
+  to {transform: translateY(-1rem);}
+}
+
+@-webkit-keyframes Block4UpDown /* Safari 和 Chrome */
+{
+  from {transform: translateY(1rem);}
+  to {transform: translateY(-1rem);}
+}
+
+@-o-keyframes Block4UpDown /* Opera */
+{
+  from {transform: translateY(1rem);}
+  to {transform: translateY(-1rem);}
+}
+//方块左一
+@keyframes Block5UpDown
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+
+@-moz-keyframes Block5UpDown /* Firefox */
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+
+@-webkit-keyframes Block5UpDown /* Safari 和 Chrome */
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+
+@-o-keyframes Block5UpDown /* Opera */
+{
+  from {transform: translateY(.5rem);}
+  to {transform: translateY(-.5rem);}
+}
+//猪金币
+@keyframes Gold2UpDown
+{
+  from{transform:translateY(.5rem)}
+ to{transform:translateY(-3rem)}
+}
+
+@-moz-keyframes Gold2UpDown /* Firefox */
+{
+  from{transform:translateY(.5rem)}
+  to{transform:translateY(-3rem)}
+}
+
+@-webkit-keyframes Gold2UpDown /* Safari 和 Chrome */
+{
+  from{transform:translateY(.5rem)}
+  to{transform:translateY(-3rem)}
+}
+
+@-o-keyframes Gold2UpDown /* Opera */
+{
+  from{transform:translateY(.5rem)}
+  to{transform:translateY(-3rem)}
+}
+//船
+@keyframes ShipUpDown
+{
+  from {transform: translateY(0);width:15%;}
+  to {transform: translateY(-.3rem);width:17%;}
+}
+
+@-moz-keyframes ShipUpDown /* Firefox */
+{
+  from {transform: translateY(0);width:15%;}
+  to {transform: translateY(-.3rem);width:17%;}
+}
+
+@-webkit-keyframes ShipUpDown /* Safari 和 Chrome */
+{
+  from {transform: translateY(0);width:15%;}
+  to {transform: translateY(-.3rem);width:17%;}
+}
+
+@-o-keyframes ShipUpDown /* Opera */
+{
+  from {transform: translateY(0);width:15%;}
+  to {transform: translateY(-.3rem);width:17%;}
+}
+
+//降落伞
+@keyframes FlipUpDown
+{
+  0% {transform:translateX(12rem);width:8%}
+  50%{transform:translateY(-4rem);width:3%}
+  100% {transform:translateX(-14rem);width:8%}
+}
+
+@-moz-keyframes FlipUpDown /* Firefox */
+{
+  0% {transform:translateX(12rem);width:8%}
+  50%{transform:translateY(-4rem);width:3%}
+  100% {transform:translateX(-14rem);width:8%}
+}
+
+@-webkit-keyframes FlipUpDown /* Safari 和 Chrome */
+{
+  0% {transform:translateX(12rem);width:8%}
+  50%{transform:translateY(-4rem);width:3%}
+  100% {transform:translateX(-14rem);width:8%}
+}
+
+@-o-keyframes FlipUpDown /* Opera */
+{
+  0% {transform:translateX(12rem);width:8%}
+  50%{transform:translateY(-4rem);width:3%}
+  100% {transform:translateX(-14rem);width:8%}
+}
+//Bus
+@keyframes BusUpDown
+{
+  from {transform: translateX(0);}
+  to {transform: translateX(-8rem) translateY(4.4rem);}
+}
+
+@-moz-keyframes BusUpDown /* Firefox */
+{
+  from {transform: translateX(0);}
+  to {transform: translateX(-8rem) translateY(4.4rem);}
+}
+
+@-webkit-keyframes BusUpDown /* Safari 和 Chrome */
+{
+  from {transform: translateX(0);}
+  to {transform: translateX(-8rem) translateY(4.4rem);}
+}
+
+@-o-keyframes BusUpDown /* Opera */
+{
+  from {transform: translateX(0);}
+  to {transform: translateX(-8rem) translateY(4.4rem);}
+}
+//圆1
+@keyframes Yuan1
+{
+  from {background:#FE3157;}
+  to {background:#F3664B;}
+}
+
+@-moz-keyframes Yuan1 /* Firefox */
+{
+  from {background:#FE3157;}
+  to {background:#F3664B;}
+}
+
+@-webkit-keyframes Yuan1 /* Safari 和 Chrome */
+{
+  from {background:#FE3157;}
+  to {background:#F3664B;}
+}
+
+@-o-keyframes Yuan1 /* Opera */
+{
+  from {background:#FE3157;}
+  to {background:#F3664B;}
+}
+//圆2
+@keyframes Yuan2
+{
+  from {background:#FE3157;}
+  to {background:#F3664B;}
+}
+
+@-moz-keyframes Yuan2 /* Firefox */
+{
+  from {background:#FE3157;}
+  to {background:#F3664B;}
+}
+
+@-webkit-keyframes Yuan2 /* Safari 和 Chrome */
+{
+  from {background:#FE3157;}
+  to {background:#F3664B;}
+}
+
+@-o-keyframes Yuan2 /* Opera */
+{
+  from {background:#FE3157;}
+  to {background:#F3664B;}
+}
+
+//按钮小图标动画
+@keyframes BtnIcon
+{
+  from {transform:scale(1,1)}
+  to {transform:scale(1.2,1.2)}
+}
+
+@-moz-keyframes BtnIcon /* Firefox */
+{
+  from {transform:scale(1,1)}
+  to {transform:scale(1.2,1.2)}
+}
+
+@-webkit-keyframes BtnIcon /* Safari 和 Chrome */
+{
+  from {transform:scale(1,1)}
+  to {transform:scale(1.2,1.2)}
+}
+
+@-o-keyframes BtnIcon /* Opera */
+{
+  from {transform:scale(1,1)}
+  to {transform:scale(1.2,1.2)}
+}

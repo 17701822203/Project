@@ -1,0 +1,90 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+                        // doc.body.style.fontSize = '1rem';
+                    };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+        if(navigator.userAgent.toLowerCase().indexOf("micromessenger") > 0){
+            var si = setInterval(function () {
+                if (typeof(window.Mkt) != "undefined" && typeof(window.Mkt.Weixin) != "undefined") {
+                    if (typeof(window.Mkt.Weixin.wxIsInstall) != "undefined") {
+                        window.Mkt.Weixin.wxIsInstall(function (data) {
+                            if (data) {
+                                isAppInstalled = true;
+                            } else {
+                                isAppInstalled = false;
+                            }
+                            clearInterval(si);
+                        });
+                    }
+                }
+            }, 200);
+        }
+        var isAppInstalled = undefined;
+    </script>
+</head>
+<body>
+    <section style="display:none;">
+        <div class="shadow"></div>
+        <div class="pop-txt">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <em class="close"></em>
+            <dl>
+                <dt>春运团体票规则</dt>
+                <dd>
+                    <p>1.一人成团,企业独家增开车次,外部无法获得</p>
+                    <p>2.提交订单无需支付,短信通知出票成功后,代售点付款取票</p>
+                    <p>3.以查询界面显示站点、时间、车次、席位为主</p>
+                    <p>4.非100%有票,不影响用户其它渠道正常购票</p>
+                </dd>
+            </dl>
+        </div>
+    </section>
+    <article>
+        <a class="guize" href="###">活动规则</a>
+        <div class="top-bg"></div>
+        <div class="input-bg">
+            <ul class="input-box">
+                <li><span>上海</span><span>苏州</span><i></i></li>
+                <li><span>12月12日</span><span>明天</span></li>
+                <li><label><span>只查高铁动车</span><i class="on"><!--复选框默认去除class--></i></label></li>
+                <li><button>查询</button></li>
+                <li><span>我的订单</span></li>
+            </ul>
+        </div>
+        <div class="txt-bg">
+            <h3 class="txt-title">春运团体票预订须知</h3>
+            <dl class="txt-list">
+                <dt>1.预订范围</dt>
+                <dd>2016年春运增开列车硬座及动车组二等座车票，以查询页显示站点、席位为主</dd>
+                <dt>2.预订次数</dt>
+                <dd>支持每位用户1次下单1张车票</dd>
+                <dt>3.乘车日期</dt>
+                <dd>2016年1月24日（农历腊月十五）— 2016年3月3日<br/>（正月二十五）</dd>
+                <dt>3.预订日期</dt>
+                <dd>2015年12月6日—2015年12月12日（人满为止）</dd>
+                <dt>4.取票时间</dt>
+                <dd>2015年12月16日—2015年12月25日23:00前</dd>
+            </dl>
+            <div class="tips">注：春运团体票数量车次、起始站点有限，具体预定参上</div>
+        </div>
+    </article>
+</body>
+</html>

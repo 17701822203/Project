@@ -1,0 +1,62 @@
+/*Created by huang.jun on 17-01-17*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"PingFang SC Regular","Microsoft yahei",arial,Simsun,sans-serif;}
+
+article div:nth-of-type(1){background:#FBF1D5;height:100%;}
+article div:nth-of-type(2){background:#E9D9C0;height:100%;}
+article div:nth-of-type(3){background:#F76027;height:100%;}
+article div:nth-of-type(4){background:#F6F2E7;height:100%;}
+article div:nth-of-type(5){background:#F3E5CB;height:100%;}
+.swipe-box{position:relative;}
+.swipe-box i{display:block;position: absolute;}
+.swipe-box img{height:0;}
+.bg1 img,
+.bg2 img,
+.bg3 img,
+.bg4 img,
+.bg5 img{-webkit-animation:lightSpeedIn 0.5s 0s;-webkit-animation-fill-mode: forwards;height:0rem;}
+.bg1 .b-1{width:15.675rem;height:4.85rem;background:url("../img/1.1.png") no-repeat;background-size:15.675rem 4.85rem;}
+.bg1 .b-2{width:14.15rem;height:3.575rem;background:url("../img/1.png") no-repeat;background-size:14.15rem 3.575rem;}
+.bg2 .b-1{width:17.125rem;height:4.8rem;background:url("../img/2.1.png") no-repeat;background-size:17.125rem 4.8rem;}
+.bg2 .b-2{width:14.05rem;height:3.525rem;background:url("../img/2.png") no-repeat;background-size:14.05rem 3.525rem;}
+.bg3 .b-1{width:17.15rem;height:4.85rem;background:url("../img/3.png") no-repeat;background-size:17.15rem 4.85rem;}
+.bg3 .b-2{width:14.1rem;height:3.65rem;background:url("../img/3.1.png") no-repeat;background-size:14.1rem 3.65rem;}
+.bg4 .b-1{width:17.15rem;height:4.85rem;background:url("../img/4.png") no-repeat;background-size:17.15rem 4.85rem;}
+.bg4 .b-2{width:14.075rem;height:3.625rem;background:url("../img/4.1.png") no-repeat;background-size:14.075rem 3.625rem;}
+.bg5 .b-1{width:17.1rem;height:4.825rem;background:url("../img/5.png") no-repeat;background-size:17.1rem 4.825rem;}
+.bg5 .b-2{width:14.175rem;height:3.45rem;background:url("../img/5.1.png") no-repeat;background-size:14.175rem 3.45rem;}
+.bg1 .b-1,.bg2 .b-1,.bg3 .b-1,.bg4 .b-1,.bg5 .b-1{bottom:2%;left:0;-webkit-animation:left-bg 0.3s 0.5s;-webkit-animation-fill-mode: forwards;background-position:-20rem 0;}
+.bg1 .b-2,.bg2 .b-2,.bg3 .b-2,.bg4 .b-2,.bg5 .b-2{bottom:14%;right:0;-webkit-animation:right-bg 0.3s 0.5s;-webkit-animation-fill-mode: forwards;background-position:20rem 0;}
+.br-icon{width:1.625rem;height:1.125rem;background:url("../img/brIcon.png") no-repeat;background-size:1.625rem 1.125rem;position: absolute;right:5%;bottom:2%;-webkit-animation: start 1.5s infinite ease-in-out;}
+@-webkit-keyframes lightSpeedIn{
+    from {
+        height:0rem;
+    }
+    to {
+        height:30.2rem;
+    }
+}
+@-webkit-keyframes left-bg{
+    from {
+        background-position:-20rem 0;
+    }
+    to {
+        background-position:0 0;
+    }
+}
+@-webkit-keyframes right-bg{
+    from {
+        background-position:20rem 0;
+    }
+    to {
+        background-position:0 0;
+    }
+}
+@-webkit-keyframes start {
+    0%,30% {opacity: 0;-webkit-transform: translate(-8px,0);}
+    60% {opacity: 1;-webkit-transform: translate(0,0);}
+    100% {opacity: 0;-webkit-transform: translate(10px,0);}
+}

@@ -1,0 +1,200 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script language="JavaScript">
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script type="text/javascript">
+    </script>
+</head>
+<body>
+    <article class="img-box"><img src="img/Img1.jpg"></article>
+    <article>
+        <div class="img-box"><img src="img/Img2.jpg"></div>
+        <div class="discount">
+            <div class="discount-box">
+                <div class="img-box"><img src="img/Img8.jpg"></div>
+                <dl>
+                    <dt>上海—拈花湾/灵山大佛车票</dt>
+                    <dd>
+                        <div class="xianjia">
+                            <span>秒杀价:</span>
+                            <span>&yen;</span>
+                            <span>9.9</span>
+                            <!--<span>(后返)</span>-->
+                        </div>
+                        <div class="yuanjia">
+                            <span>原价:</span>
+                            <span>&yen;</span>
+                            <span>59</span>
+                        </div>
+                        <a class="button" href="###">秒杀</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="discount-box">
+                <div class="img-box"><img src="img/Img9.jpg"></div>
+                <dl>
+                    <dt>拈花湾/灵山大佛—上海车票</dt>
+                    <dd>
+                        <div class="xianjia">
+                            <span>秒杀价:</span>
+                            <span>&yen;</span>
+                            <span>9.9</span>
+                            <!--<span>(后返)</span>-->
+                        </div>
+                        <div class="yuanjia">
+                            <span>原价:</span>
+                            <span>&yen;</span>
+                            <span>59</span>
+                        </div>
+                        <a class="button" href="###">秒杀</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="ts">即日起- 5月14日 每日前10人可享受9.9元秒杀价 </div>
+        </div>
+        <div class="img-box"><img src="img/Img3.jpg"></div>
+        <ul class="tab-nav">
+            <li>华东</li>
+            <li>四川</li>
+            <li>云南</li>
+        </ul>
+        <div class="tab-box">
+            <ul class="switch-list">
+                <li>
+                    <span>南京—西塘</span>
+                    <span>&yen;78</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>西塘—南京</span>
+                    <span>&yen;78</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>南京—乌镇</span>
+                    <span>&yen;68</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>乌镇—南京</span>
+                    <span>&yen;68</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>桐庐—千岛湖</span>
+                    <span>&yen;25</span>
+                    <a href="###">立即购票>></a>
+                </li>
+				<li>
+                    <span>千岛湖-桐庐</span>
+                    <span>&yen;20</span>
+                    <a href="###">立即购票>></a>
+                </li>
+            </ul>
+            <ul class="switch-list">
+                <li>
+                    <span>成都—九寨沟去程</span>
+                    <span>&yen;116</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>九寨沟—成都返程</span>
+                    <span>&yen;99</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>成都—九寨沟往返</span>
+                    <span>&yen;210</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>成都—九寨沟车+票</span>
+                    <span>&yen;520</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>成都—九寨沟黄龙</span>
+                    <span>&yen;285</span>
+                    <a href="###">立即购票>></a>
+                </li>
+            </ul>
+            <ul class="switch-list">
+                <li>
+                    <span>丽江—泸沽湖2日</span>
+                    <span>&yen;89</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>丽江—泸沽湖3日</span>
+                    <span>&yen;89</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>丽江—玉龙雪山</span>
+                    <span>&yen;389</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>丽江—香格里拉2日</span>
+                    <span>&yen;109</span>
+                    <a href="###">立即购票>></a>
+                </li>
+                <li>
+                    <span>丽江—香格里拉3日</span>
+                    <span>&yen;109</span>
+                    <a href="###">立即购票>></a>
+                </li>
+            </ul>
+        </div>
+        <div class="button-box">
+            <a class="more-button" href="###">更多线路>></a>
+        </div>
+        <div class="img-box red-packets"><img src="img/Img5.png"><a href="###"><img src="img/Img6.png"></a></div>
+        <div class="img-box"><img src="img/Img4.jpg"></div>
+        <div class="delivery">
+            <ul>
+                <li><a href="###"><img src="img/Img12.jpg"></a></li>
+                <li><a href="###"><img src="img/Img11.jpg"></a></li>
+                <li><a href="###"><img src="img/Img10.jpg"></a></li>
+            </ul>
+        </div>
+        <div class="img-box"><img src="img/Img7.jpg"></div>
+    </article>
+</body>
+</html>

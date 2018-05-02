@@ -1,0 +1,171 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        var fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".rule").click(function(){
+                $("section").show();
+            })
+            $(".close,.shadow").click(function(){
+                $("section").hide();
+            })
+        })
+    </script>
+</head>
+<body>
+    <section>
+        <div class="shadow"></div>
+        <dl class="txt-list">
+            <i class="close"></i>
+            <dt>活动规则</dt>
+            <dd>
+                <p><span>1</span>活动时间：即日起至2017.1.15</p>
+                <p><span>2</span>用户在携程旅行网平台用百度钱包支付火车票订单时，享受最高立减20元的优惠。订单金额小于所减金额时订单减至0.01元；订单金额大于所减金额时，享受立减最高20元优惠。</p>
+                <p><span>3</span>同一用户仅可享受一次优惠（同一百度账号、同一银行卡号、同一手机号、同一身份证号均视为同一百度钱包快捷支付用户）。</p>
+                <p><span>4</span>在法律允许范围内，携程旅行网可能对活动规则/条款做出适当修改/调整，且对本次活动拥有最终解释权。</p>
+                <p>如有疑问请致电携程客服热线1010-6666</p>
+            </dd>
+        </dl>
+    </section>
+    <article>
+        <div class="top-box">
+            <a class="rule" href="###">规则</a>
+            <a class="btn" href="###">立即抢票</a>
+        </div>
+        <div class="title-bg">
+            <h1>更多春运福利</h1>
+        </div>
+        <div class="list-box">
+            <ul class="list">
+                <li>
+                    <a href="###">
+                        <div class="violet-red">
+                            <i class="icon7"></i>
+                            <dl class="txt">
+                                <dt>2000元机票</dt>
+                                <dd>1分钱赢</dd>
+                            </dl>
+                            <span>抢></span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <div class="box-red">
+                            <i class="icon1"></i>
+                            <dl class="txt">
+                                <dt>500元火车票</dt>
+                                <dd>1元赢</dd>
+                            </dl>
+                            <span>抢></span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <div class="box-blue">
+                            <i class="icon2"></i>
+                            <dl class="txt">
+                                <dt>100元携程券</dt>
+                                <dd>1分钱购</dd>
+                            </dl>
+                            <span>抢></span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <div class="box-yellow">
+                            <i class="icon3"></i>
+                            <dl class="txt">
+                                <dt>iPhone5S手机</dt>
+                                <dd>0元赢</dd>
+                            </dl>
+                            <span>抢></span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <div class="box-Pink">
+                            <i class="icon4"></i>
+                            <dl class="txt">
+                                <dt>手机充值卡</dt>
+                                <dd>1元赢</dd>
+                            </dl>
+                            <span>抢></span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <div class="box-SkyBlue">
+                            <i class="icon5"></i>
+                            <dl class="txt">
+                                <dt>最高5元话费 </dt>
+                                <dd>1分钱得</dd>
+                            </dl>
+                            <span>抢></span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <div class="box-green">
+                            <i class="icon6"></i>
+                            <dl class="txt">
+                                <dt>爱奇艺会员</dt>
+                                <dd>1元赢</dd>
+                            </dl>
+                            <span>抢></span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <div class="purple-box">
+                            <i class="icon8"></i>
+                            <dl class="txt">
+                                <dt>百度外卖新客</dt>
+                                <dd>立减10元</dd>
+                            </dl>
+                            <span>抢></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </article>
+</body>
+</html>

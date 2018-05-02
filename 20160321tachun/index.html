@@ -1,0 +1,42 @@
+<html class="ie">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+
+<body>
+	<script type="text/javascript">
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+        };
+     
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+	<article>
+    	<img src="img/img1.jpg">
+        <img src="img/img2.jpg">
+        <img src="img/img3.jpg">
+        <img src="img/img4.jpg">
+        <img src="img/img5.jpg">
+    	<div class="btnBox">
+        	<img src="img/img6.jpg">
+            <a href="###"><img src="img/btn.png"></a>
+        </div>
+        <img src="img/img7.jpg">
+        <img src="img/img8.jpg">
+        <img src="img/img9.jpg">
+        <img src="img/img10.jpg">
+        <img src="img/img11.jpg">
+    </article>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>一元免单</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript">
+	document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+	window.addEventListener("resize",setRemSize,false);
+	function setRemSize(){
+		document.documentElement.style.fontSize=document.documentElement.clientWidth/7.5+'px';
+	}
+    </script>
+    <script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btn-left3").click(function(){
+                $(".friends-btn-box span").animate({opacity:'0',top:"-4rem"},2000);
+                $(".friends-btn-box span").animate({opacity:'1',top:"0.4rem"},0);
+            })
+        })
+    </script>
+</head>
+
+<body>
+	<article>
+        <div class="top-box-bg2">
+            <dl class="wx">
+                <dt><img src="img/tx.png"></dt>
+                <dd></dd>
+            </dl>
+        </div>
+        <div class="friends-box">
+            <h3>集齐40个赞即可召唤土豪冰淇淋</h3>
+            <h4>快来帮我点个赞吧</h4>
+            <em class="ic"></em>
+            <div class="cjrs">已有<span>32</span>人帮你点赞</div>
+            <div class="friends-btn-box"><span>+1</span><button class="btn-left3"></button><button class="btn-right3"></button></div>
+        </div>
+        <div class="txt-box-btm">
+            <dl class="txt-list1">
+                <dt>
+                <h3>点赞规则</h3>
+                </dt>
+                <dd>
+                    <p class="txt">点击“给TA集赞”，即可帮助好友集攒进度，集齐40个赞可协助好友召唤土豪冰淇淋一份</p>
+                </dd>
+            </dl>
+        </div>
+    </article>
+</body>
+</html>

@@ -1,0 +1,35 @@
+/*Created by huang.jun on 16-08-05*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB W6";font-size:0.26rem;color:#fff;}
+article{height:100%;}
+
+.TopBg{width:7.5rem;height:7.09rem;background:url("../img/TopBg.jpg") no-repeat;background-size:7.5rem 7.09rem;}
+.TxtBg1{width:7.5rem;height:6.1rem;background:url("../img/TxtBg1.jpg") no-repeat;background-size:7.5rem 6.1rem;}
+.TxtBg2{width:7.5rem;height:7.4rem;background:url("../img/TxtBg2.jpg") no-repeat;background-size:7.5rem 7.4rem;}
+
+.TxtBg1{}
+.TxtBg1 dt{padding:0.92rem 0.45rem 0 0.61rem;height:0.28rem;}
+.TxtBg1 dt strong,.TxtBg1 dd span{float:left;text-align: center;}
+.TxtBg1 dt strong:nth-of-type(1),.TxtBg1 dd span:nth-of-type(1){width:2.2rem;}
+.TxtBg1 dt strong:nth-of-type(2),.TxtBg1 dd span:nth-of-type(2){width:2rem;}
+.TxtBg1 dt strong:nth-of-type(3),.TxtBg1 dd span:nth-of-type(3){width:2rem;}
+.TxtBg1 dd{padding:0 0.45rem 0 0.61rem;}
+.TxtBg1 dd p{height:0.28rem;margin-top:0.3rem;}
+
+.TxtList{font-size:0.24rem;color:#fff;width:5.8rem;padding:0.6rem 0 0 0.8rem;}
+.TxtList li{padding:0.14rem 0 0 0.32rem;line-height:0.34rem;position: relative;}
+.TxtList li:after{content:"";position: absolute;width:0.17rem;height:0.17rem;background:url("../img/Icon.png") no-repeat;background-size:0.17rem 0.17rem;left:0;top:0.2rem;}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12" type="text/javascript"></script>
+    <script>
+        var fontSize = 0;
+
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+<body>
+    <article>
+
+        <div class="bg-box">
+            <div class="niu">
+                <i class="niu2"></i>
+            </div>
+            <div class="zhong">
+                <i class="sd1"></i>
+                <i class="sd2"></i>
+            </div>
+            <div class="yun-box-bg">
+                <i class="yun">
+                    <em class="piao"></em>
+                </i>
+            </div>
+            <i class="Stars s1"></i>
+            <i class="Stars s2"></i>
+            <i class="Stars s3"></i>
+            <i class="Stars s4"></i>
+            <i class="Stars s5"></i>
+            <i class="Stars s6"></i>
+        </div>
+        <div class="btm-bg">
+            <a class="red-btn" href="###"></a>
+        </div>
+    </article>
+</body>
+</html>

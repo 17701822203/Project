@@ -1,0 +1,212 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+	<title></title>
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="//webresource.c-ctrip.com/code/lizard/2.2/web/lite.seed.js" needWeiXin="true"></script>
+	<script type="text/javascript" src="//webresource.c-ctrip.com/code/lizard/2.1/web/3rdlibs/bridge.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/date.js" charset="utf-8"></script>
+	<script>
+		var ua = navigator.userAgent,isInWechat = !!ua.match(/micromessenger/i),isInIOS = !!ua.match(/iphone|ipad|ipod/i),isInCtripApp = !!ua.match(/ctripwireless/i),isInQQ = !!ua.match(/qq/i),isInWebClient = !ua.match(/ctripwireless/i)&&(!ua.match(/micromessenger/i)&&!ua.match(/weibo/i));
+	</script>
+
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        var fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+		
+		$(document).ready(function(){
+			initCalendar();
+			
+            //翻牌子
+            $('.ul-box li').click(function() {
+				var obj = $(this).children('figure');
+
+				if(typeof obj.attr('class') == 'undefined'){
+					obj.addClass('Positive');
+				}else{
+					if(obj.hasClass('Positive')){
+						obj.removeClass('Positive').addClass('Positive2');
+					}else{
+						obj.removeClass('Positive2').addClass('Positive');
+					}
+				}
+            });
+			
+			if(isInCtripApp && isInIOS){
+				var elem2 = document.createElement('div');
+				elem2.id = 'ios';
+				elem2.className = 'ios';
+				elem2.innerHTML = '该活动苹果不是赞助商，并且苹果也不会以任何形式参与其中！';
+				document.body.appendChild(elem2)
+				document.getElementById('ios').style.display = 'block';
+			}
+
+        })
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+	<script type="text/javascript">
+		var arrayT = ['抢票', '相亲', '表白', '加薪', '健身', '放松', '怀旧', '请客', '卖萌', '孝顺', '购物', '拼车', '出行', '会友', '送礼', '旅行', '理财', '祈福'];
+		var arrayF = ['加班', '约炮', '调戏', '素颜', '暧昧', '求关注', '赖床', '八卦', '话唠', '损人', '夜店', '生气', '醉酒'];
+		var startDate = '2016-12-22';
+		var controlDay = 29;
+		
+		var shareOption = {
+			imageUrl: "http://pages.ctrip.com/commerce/promote/201601/other/xinluo2/img/share.jpg",
+			title: '春运',
+			text: "新罗签到送大礼",
+			linkUrl: "http://pages.ctrip.com/commerce/promote/201611/train/cy/index.html"
+		}
+		
+		var app = {
+            callback: function(json_obj) {
+                var tagname = json_obj.tagname;
+                if (tagname == 'web_view_finished_load') {
+					CtripUtil.app_init_member_H5_info();
+				
+                    var nav_bar_config_json = {
+                        "center": [{"tagname":"title","value": "王者荣耀助力春运"}],
+						"right": [{ "tagname": "share", "value": '分享'}]
+                    };
+                    var json_str = JSON.stringify(nav_bar_config_json);
+                    CtripBar.app_refresh_nav_bar(json_str);
+                }else if(tagname == 'share'){
+					var dataList = [{
+						shareType: "Default",
+						imageUrl: shareOption.imageUrl,
+						title: shareOption.title,
+						text: shareOption.text,
+						linkUrl: shareOption.linkUrl
+					}];
+
+					CtripShare.app_call_custom_share(dataList, '', {'isDisableShareResultToast' : true});
+				}
+			}
+		};
+		
+		LizardLite.weixinReady(function(cShell){    
+			var options = {
+				title: shareOption.title,
+				desc: shareOption.text,
+				// 链接地址
+				href: shareOption.linkUrl,
+				// 分享图标
+				icon: shareOption.imageUrl
+			};
+			try{
+				cShell
+					.share(options)
+					.done(function(){})
+					.fail(function(){});
+			}catch(e){
+			}
+		  //cShell.share.run( function () { alert("分享成功")/* 分享成功 */ },function (err) {alert("吞吞吐吐") /* 分享失败 */ },options)
+		});
+		
+		function initCalendar(){
+			$('.ul-box').html('');
+			
+			for(var i=0; i<20; i++){
+				var objDate = new BaseDate(startDate);
+			
+				var strLi = '<li class="flip-3d"><figure><span class="paizi">';
+				objDate.addDay(i);
+				strLi += '<span>' + objDate.formate('M.D') + '</span><span>' + objDate.formate('周W') + '</span>'
+					   + '<b>可购</b><b>' + objDate.addDay(controlDay).formate('M.D') + '</b>';
+				
+				objDate.trimDay();
+				var cDate = objDate.getFtv(objDate);
+				
+				if(!cDate){
+					var lunar = objDate.getLunar(objDate.getNativeDate());
+					if(!lunar.isLeap){
+						cDate = objDate.getLFtv(lunar);
+					}
+					if(!cDate){
+						cDate = objDate.getCDay(lunar.getNativeDate().getDate());
+					}
+				}
+				
+				strLi += '<b>' + cDate + '</b></span><figcaption><b>宜</b><b>' + arrayT[Math.floor(Math.random() * arrayT.length)] + '</b>'
+					   + '<b>忌</b><b>' + arrayF[Math.floor(Math.random() * arrayF.length)] + '</b></figcaption></figure></li>';
+					   
+				$('.ul-box').append(strLi);
+			}
+		}
+		
+		//获取参数
+		function $G(){
+			var Url=document.URL;
+			var u,g,StrBack='';
+			if(Url.indexOf("#")!=-1)
+				Url=Url.split("#")[0];
+			u=Url.split("?");
+			if (u.length==1) g='';
+			else g=u[1];
+			if(g!=''){
+				gg=g.split("&");
+				var MaxI=gg.length;
+				str = arguments[0]+"=";
+				for(i=0;i<MaxI;i++){
+					if(gg[i].indexOf(str)==0) {
+						StrBack=gg[i].replace(str,"");
+						break;
+					}
+				}
+			}
+			return StrBack;
+		}
+		
+		function book(){
+			if(isInCtripApp){
+				CtripUtil.app_open_url('ctrip://wireless/train_inquire', 1);
+			}else{
+				window.location.href = "http://m.ctrip.com/webapp/train/";
+			}
+		}
+    </script>
+	<style>
+		#ios{ width:100%;padding-top:0;margin-top:0;font-size:10px;line-height:2;text-align:center;color:#999999; }
+	</style>
+</head>
+<body>
+    <article>
+        <div class="top-bg">
+            <i class="gy"></i>
+        </div>
+        <div class="wrap">
+            <ul class="ul-box">
+            </ul>
+            <div class="btn-box"><a href="javascript:void(0)" onclick="book()"></a></div>
+        </div>
+    </article>
+	<input type='hidden' id="page_id" value="10320642546" />
+	<script type="text/javascript">
+		;(function(){if(!window.$_bf||!window.$_bf.loaded){var a=new Date,b="?v="+a.getFullYear()+a.getMonth()+"_"+a.getDate(),a=document.createElement("script");a.type="text/javascript";a.charset="utf-8";a.async=!0;a.src="//webresource.c-ctrip.com/code/ubt/_mubt.min.js"+b;b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}})();
+	</script>
+	<script src='https://w.cnzz.com/c.php?id=1260884112' language='JavaScript'></script>
+</body>
+</html>

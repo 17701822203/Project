@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#fff;">
+    <view class="Rule">
+        <text class="RuleTxt1">活动时间：2018年1月24日-2月13日</text>
+        <text class="RuleTitle">【方言大作战】</text>
+        <text class="RuleTxt2">每道方言题均有奖励。抢答成功即可获得现金红包1个，金额随机，可提现。</text>
+        <text class="RuleTxt2">每道方言题的红包数量有限，先到先得。</text>
+        <text class="RuleTxt2">每道选择题仅有1个正确选项，每个人只可答一次。</text>
+        <text class="RuleTxt2">方言考题每天不定期更新。同时，还会定点放出大红包考题，敬请留意。</text>
+        <text class="RuleTxt2">关于提现：在【我的奖励】界面中，可将获得的现金红包提取到微信零钱包。提现金额每次至少1.00元，每天最多提现8次。</text>
+        <text class="RuleTitle">【留下乡音】</text>
+        <text class="RuleTxt3">"世界范围内，平均每两周就有1种语言消失。"</text>
+        <text class="RuleTxt3">方言作为承载中国丰富多彩的地域文化的一部分，也正在以惊人的速度逐渐消亡。因而，携程汽车票与讯飞输入法联合发起“方言保护计划”，呼吁大家留下自己的家乡话。你的乡音，将成为珍贵的方言资料。</text>
+        <text class="RuleTxt3">通过活动，按要求上传方言。</text>
+        <text class="RuleTxt3">如果你贡献的方言足够热门（点赞数高），你的声音将被采纳作为方言大作战的考题。</text>
+        <text class="RuleTxt3">一经采纳，你将获得现金红包，奖励将自动发放到你的微信钱包。</text>
+        <text class="RuleTxt3">请勿上传违反相关法律法规的内容。本小程序保留删除权利。</text>
+        <text class="RuleTxt3">活动最终解释权归携程旅行网所有，如有疑问请致电携程客服热线1010666。</text>
+    </view>
+</body>
+</html>

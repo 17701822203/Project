@@ -1,0 +1,497 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+                        // doc.body.style.fontSize = '1rem';
+                    };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+        if(navigator.userAgent.toLowerCase().indexOf("micromessenger") > 0){
+            var si = setInterval(function () {
+                if (typeof(window.Mkt) != "undefined" && typeof(window.Mkt.Weixin) != "undefined") {
+                    if (typeof(window.Mkt.Weixin.wxIsInstall) != "undefined") {
+                        window.Mkt.Weixin.wxIsInstall(function (data) {
+                            if (data) {
+                                isAppInstalled = true;
+                            } else {
+                                isAppInstalled = false;
+                            }
+                            clearInterval(si);
+                        });
+                    }
+                }
+            }, 200);
+        }
+        var isAppInstalled = undefined;
+
+        $(document).ready(function(){
+            //翻牌子
+            $('.ul-box li').click(function() {
+                $(this).children('figure').addClass("Positive");
+            });
+            //锚点
+            $('li.nav1').click(function(){$('html,body').animate({scrollTop:$('.md1').offset().top}, 800);});
+            $('li.nav2').click(function(){$('html,body').animate({scrollTop:$('.md2').offset().top}, 800);});
+            $('li.nav3').click(function(){$('html,body').animate({scrollTop:$('.md3').offset().top}, 800);});
+            $('li.nav4').click(function(){$('html,body').animate({scrollTop:$('.md4').offset().top}, 800);});
+        })
+        //导航悬浮
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num>200){
+                $('#TopNav').addClass('nav_wrap_fix');
+            }else{
+                $('#TopNav').removeClass('nav_wrap_fix');
+            }
+        });
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+</head>
+<body>
+    <cite class="md1"></cite>
+    <cite class="md2"></cite>
+    <cite class="md3"></cite>
+    <cite class="md4"></cite>
+    <article>
+        <div class="shadow"></div>
+        <div class="lay-pop">
+            <i class="lay-bg1"></i>
+            <i class="lay-bg2"></i>
+            <button class="btn4">立即使用</button>
+        </div>
+    </article>
+    <section>
+        <ul id="TopNav" class="top-nav">
+            <li class="nav1"><a href="###"></a></li>
+            <li class="nav2"><a href="###"></a></li>
+            <li class="nav3"><a href="###"></a></li>
+            <li class="nav4"><a href="###"></a></li>
+        </ul>
+        <button class="top-btn">抢票去</button>
+        <div class="top-animation">
+            <span class="title1"></span>
+            <span class="am"></span>
+        </div>
+        <div class="bg2">
+            <span class="left-baozhu"></span>
+            <span class="right-baozhu"></span>
+            <span class="txt1"></span>
+            <ul class="ul-box">
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.22</b>
+                            <b>腊月廿五</b>
+                            <span>周四</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="flip-3d">
+                    <figure>
+                        <span class="paizi">
+                            <span>11.22</span>
+                            <b>可够</b>
+                            <b>1.20</b>
+                            <b>小年</b>
+                            <span>周二</span>
+                        </span>
+                        <figcaption>
+                            <b>宜</b>
+                            <b>约会</b>
+                            <b>忌</b>
+                            <b>加班</b>
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+        <div class="bg3">
+            <span class="txt2"></span>
+            <span class="photo-bg1"></span>
+            <button class="go-home-btn">拼车回家</button>
+            <span class="txt3"></span>
+            <span class="photo-bg2"></span>
+            <button class="go-bus-home-btn">大巴回家</button>
+        </div>
+        <div class="bg4">
+            <span class="txt4"></span>
+            <span class="lhj-lay">
+                <span id="deng"></span>
+                <span id="deng2"></span>
+                <span class="yaogan"></span>
+                <span id="d1"></span>
+                <span id="d2"></span>
+                <span id="d3"></span>
+                <span id="d4"></span>
+                <span id="d5"></span>
+                <div class="container">
+                    <div class="num num1">
+                        <div class="num-con num-con1">
+                            <div class="num-img"></div>
+                            <div class="num-img"></div>
+                        </div>
+                    </div>
+                    <div class="num num2">
+                        <div class="num-con num-con2">
+                            <div class="num-img"></div>
+                            <div class="num-img"></div>
+                        </div>
+                    </div>
+                    <div class="num num3">
+                        <div class="num-con num-con3">
+                            <div class="num-img"></div>
+                            <div class="num-img"></div>
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <button class="btn"><span>分享得暴击，中奖几率翻番</span></button>
+        </div>
+    </section>
+    <script type="text/javascript">
+        //老虎机
+        $(".yaogan").click(function () {
+            $("#d1").addClass("d1");
+            $("#d2").addClass("d2");
+            $("#d3").addClass("d3");
+            $("#d4").addClass("d4");
+            $("#d5").addClass("d5");
+            $("#deng").addClass("deng");
+            $("#deng2").addClass("deng2");
+            $(".yaogan").addClass("rod");
+            if(!flag){
+                flag=true;
+                reset();
+                letGo();
+                setTimeout(function () {
+                    flag=false;
+                    if(index==2){
+                        $(".fix,.pop-form").show();
+                    }else{
+                        $(".fix,.pop").show();
+                        $(".pop-text span").text(""+String(4-TextNum1)+(8-TextNum2))
+                    }
+                },300);
+                index++;
+            }
+        });
+
+        var flag=false;
+        var index=0;
+        var TextNum1
+        var TextNum2
+        var TextNum3
+
+        function letGo(){
+            $(".num-con1").animate({top:"-29.1rem"},800,"linear", function () {
+                $(this).css("top",0).animate({top:"-0rem"},1000,"linear");
+            });
+            $(".num-con2").animate({top:"-29.1rem"},800,"linear", function () {
+                $(this).css("top",0).animate({top:"-4.85rem"},1800,"linear");
+            });
+            $(".num-con3").animate({top:"-29.1rem"},800,"linear", function () {
+                $(this).css("top",0).animate({top:"-9.7rem"},1300,"linear");
+            });
+        }
+        function reset(){
+            $(".num-con1,.num-con2,.num-con3").css({top:"0rem"});
+        }
+    </script>
+    <script src="js/libraries.min.js"></script>
+    <script src="js/jquery.parallax.js"></script>
+    <script src="js/tuoluoyi.js"></script>
+</body>
+</html>

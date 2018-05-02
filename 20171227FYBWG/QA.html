@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#E8E8E8;">
+    <view class="QaWrap">
+        <view class="TxtTop">1、问:为什么为什么为什么?</view>
+        <view class="TxtBtm">答:因为因为因为因为因为因为因为因为因 为因为因为因为因为因为因为因为因为因为 因为因为因为因为因为因为</view>
+        <view class="TxtTop">2、问:为什么为什么为什么?</view>
+        <view class="TxtBtm">答:因为因为因为因为因为因为因为因为因 为因为因为因为因为因为因为因为因为因为 因为因为因为因为因为因为</view>
+        <view class="TxtTop">3、问:为什么为什么为什么?</view>
+        <view class="TxtBtm">答:因为因为因为因为因为因为因为因为因 为因为因为因为因为因为因为因为因为因为 因为因为因为因为因为因为</view>
+    </view>
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+</head>
+<body>
+    <section style="display:none;">
+        <div class="shadow"></div>
+        <!--分享-->
+        <div class="share" style="display:;">
+            <em class="close"></em>
+            <h2>成功报名参与抢票免单活动</h2>
+            <h3>活动期间抢票赢免单大奖</h3>
+            <p><a class="redBtn" href="###">立即分享，获奖几率更高</a></p>
+        </div>
+        <!--输入手机号-->
+        <div class="Mob" style="display:none;">
+            <h2>请输入正确的手机号</h2>
+            <p><a class="redBtn" href="###">重新输入</a></p>
+        </div>
+    </section>
+    <article>
+        <div class="img-box"><img src="img/TopImg1.jpg"></div>
+        <div class="mob_list_box">
+            <div class="mob_list">
+                <ul class="mob_top">
+                    <li>手机号</li>
+                    <li>日期</li>
+                    <li>免单金额</li>
+                </ul>
+                <div class="my-scroll-box">
+                    <div class="my-scroll">
+                        <ul>
+                            <li>
+                                <span>185****2345</span>
+                                <span>2017/12/02</span>
+                                <span>209元</span>
+                            </li>
+                            <li>
+                                <span>185****2345</span>
+                                <span>2017/12/02</span>
+                                <span>209元</span>
+                            </li>
+                            <li>
+                                <span>185****2345</span>
+                                <span>2017/12/02</span>
+                                <span>209元</span>
+                            </li>
+                            <li>
+                                <span>185****2345</span>
+                                <span>2017/12/02</span>
+                                <span>209元</span>
+                            </li>
+                            <li>
+                                <span>185****2345</span>
+                                <span>2017/12/02</span>
+                                <span>209元</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn_box"><a class="hvr-ripple-out" href="###">立即抢票</a></div>
+        <div class="textBox"><input class="textInput" type="text" placeholder="输入抢票手机号"><a class="textBtn" href="###">赢免单</a></div>
+        <dl class="rule_list">
+            <dt>活动规则：</dt>
+            <dd>
+                <p>1. 活动时间：2017.7.1-2017.7.14</p>
+                <p>2.参与方式：在携程APP上购买火车票“抢票”订单，即可参与活动赢取每日免单大礼。</p>
+                <p>3.携程每天从抢票且出票成功的订单中，抽取20名获奖用户，赢得免单的用户在出行当天，携程会将订单金额返还其携程账户。中奖后携程客服将于三个工作日内联系免单事宜，请保持手机畅通。</p>
+                <p>4.如何查看是否获奖？获奖用户奖在上方滚动屏展示出，且中奖名单奖以短信方式告知获奖用户（节假日顺延至工作日）。关注【携程火车票】微信公众号，回复【抢票免单】，即可查看获奖公告。</p>
+                <p>5. 本活动解释权归携程火车票所有。如发现恶意欺诈免单的行为，携程有权收回该行为涉及的免单金额。</p>
+            </dd>
+        </dl>
+    </article>
+</body>
+</html>

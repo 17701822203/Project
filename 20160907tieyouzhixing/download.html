@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>下载</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+<!--    <script type="text/javascript">
+    (function() {
+         var docEl = document.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+             recalc = function() {
+                 var clientWidth = docEl.clientWidth;
+                 if (!clientWidth) {
+                     return;
+                 }
+                 var fontSize = 20 * (clientWidth / 375);
+                 fontSize = (fontSize > 50) ? 50 : fontSize;
+
+                 //如果是pc访问
+                 if (!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                     fontSize = 20;
+                }
+                docEl.style.fontSize = fontSize + 'px';
+
+                 var dpi = window.devicePixelRatio;
+                var viewport = document.querySelector('meta[name="viewport"]');
+
+                 docEl.setAttribute('data-dpi', dpi);
+                 var scale = 1 / dpi;
+             };
+         if (document.addEventListener) {
+             window.addEventListener(resizeEvt, recalc, false);
+             document.addEventListener('DOMContentLoaded', recalc, false);
+         }
+    }())
+    </script>-->
+    <style type="text/css">
+    body,
+    div,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre,
+    code,
+    form,
+    fieldset,
+    legend,
+    input,
+    textarea,
+    p,
+    blockquote,
+    th,
+    td,
+    hr,
+    button,
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body,
+    button,
+    input,
+    select,
+    textarea {
+        font: 400 14px/1.5 Arial, "Lucida Grande", Verdana, "Microsoft YaHei", hei;
+    }
+    
+    body {
+        background: #f5f5f5;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        min-width: 320px;
+        overflow-x: hidden;
+    }
+    
+    img {
+        border: 0;
+    }
+    
+    .wrapper {
+        background-size: cover;
+        background-image: url('http://images3.c-ctrip.com/train/tieyou/tyzx/bg.jpg');
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        width: 100%;
+    }
+    
+    .icon_area {
+        padding-top: 1.2rem;
+        padding-left: 8%;
+    }
+    
+    .icon_area img {
+        max-height: 1.5rem;
+    }
+    
+    .info_container {
+        padding-top: 2.75rem;
+    }
+    
+    .info_container,
+    .title3 {
+        color: white;
+        text-align: center;
+        font-size: 1.3rem;
+        text-shadow:0 0 10px rgba(255,255,255,.3);
+    }
+    
+    .title2 {
+        color: #ffca3a;
+        font-size: 2.25rem;
+        text-align: center;
+        text-shadow:0 0 10px rgba(255,255,255,.3);
+        position:relative;
+        margin-bottom:.8rem;
+    }
+    .title2:after{
+        width:70%;
+        height:1px;
+        position:absolute;
+        content:"";
+        bottom:0;
+        left:15%;
+        background: -moz-linear-gradient(left, transparent 0%,#fff 40%, #fff 60%, transparent 100%);
+        background: -webkit-linear-gradient(left, transparent 0%,#fff 40%, #fff 60%, transparent 100%);
+        background: linear-gradient(left, transparent 0%,#fff 40%, #fff 60%, transparent 100%);
+    }
+    
+    .app_desc {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 3rem;
+        position: relative;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+    .app_desc div {
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: 20%;
+        color: white;
+        text-align: center;
+        position: relative;
+        font-size: .9rem;
+    }
+    
+    .app_desc div:first-child {
+        -webkit-box-flex: 1.2;
+        -moz-box-flex: 1.2;
+        -webkit-flex: 1.2;
+        -ms-flex: 1.2;
+        flex: 1.2
+    }
+    
+    .app_desc span {
+        padding-left: 1rem;
+    }
+    
+    .app_desc span:before {
+        position: absolute;
+        content: "";
+        width: .4rem;
+        height: .4rem;
+        border-radius: .2rem;
+        background-color: white;
+        top: 50%;
+        margin-top: -.2rem;
+        margin-left: -.6rem;
+    }
+    
+    .download_area {
+        position: relative;
+        padding-left: 8%;
+        padding-right: 8%;
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+    
+    .download_area img {
+        max-width: 100%;
+    }
+    
+    .qr_area {
+        position: relative;
+        text-align: center;
+        padding-top: 2.5rem;
+    }
+    
+    .qr_area img {
+        width:6.8rem;
+    }
+    
+    .wechat_area {
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+        padding-top: 1.5rem;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="icon_area">
+            <img src="http://images3.c-ctrip.com/train/tieyou/tyzx/ty_icon.png">
+        </div>
+        <div class="info_container">
+            <p class="title1"><span class="channel">铁友</span>已帮</p>
+            <p class="title2"><span class="qiang_num">17890350</span>人</p>
+            <p class="title3">抢票回家</p>
+        </div>
+        <div class="app_desc">
+            <div><span>先抢票再付钱</span></div>
+            <div><span>自动下单</span></div>
+            <div><span>极速提交</span></div>
+        </div>
+        <div class="download_area">
+            <img src="http://images3.c-ctrip.com/train/tieyou/tyzx/ty_dl.png">
+        </div>
+        <div class="qr_area">
+            <img src="http://images3.c-ctrip.com/train/tieyou/tyzx/ty_qr.png">
+        </div>
+        <div class="wechat_area">
+            <p>长按关注<span class="channel">铁友</span>公众号，获得更多火车抢票信息</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+    (function() {
+        function getQuery(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        };
+
+        function getDoms(sel) {
+        	return document.querySelectorAll(sel)
+        }
+
+
+        function getDom(sel) {
+        	return document.querySelector(sel);
+        }
+
+        var $download = getDom('.download_area');
+
+        $download.addEventListener('click', function(e) {
+        	// window.location = ''
+
+        }, false)
+
+        var channel = getQuery('channel');
+
+
+    }())
+    </script>
+</body>
+
+</html>

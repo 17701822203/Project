@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+document.addEventListener('touchstart',function(){},false);
+
+$(document).ready(function() {
+	$(".wrap div").first().css("display","block")
+	$("nav a").first().addClass("now")
+	var nav=$("nav a");
+	nav.click(function(){
+		$(this).addClass("now").siblings().removeClass("now");
+		var index=nav.index(this);
+		$(".wrap>div")
+		.eq(index).show()
+		.siblings().hide()
+	})
+});
+</script>
+</head>
+
+<body>
+<div style="display:;">
+	<header><img src="img/a1.jpg"></header>
+    <article>
+		<nav>
+        	<a class="now" href="###">热门</a>
+            <a href="###">华东</a>
+            <a href="###">西南</a>
+        </nav>
+        <div class="wrap">
+            <div>
+                <ul class="ImgBox">
+                    <li><a href="###"><img src="img/m1.png"></a></li>
+                    <li><a href="###"><img src="img/m2.png"></a></li>
+                    <li><a href="###"><img src="img/m3.png"></a></li>
+                    <li><a href="###"><img src="img/m4.png"></a></li>
+                    <li><a href="###"><img src="img/m5.png"></a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="ImgBox">
+                    <li><a href="###"><img src="img/d1.png"></a></li>
+                    <li><a href="###"><img src="img/d2.png"></a></li>
+                    <li><a href="###"><img src="img/d3.png"></a></li>
+                    <li><a href="###"><img src="img/d4.png"></a></li>
+                    <li><a href="###"><img src="img/d5.png"></a></li>
+                    <li><a href="###"><img src="img/d6.png"></a></li>
+                    <li><a href="###"><img src="img/d7.png"></a></li>
+                    <li><a href="###"><img src="img/d8.png"></a></li>
+                </ul>
+            </div>
+            <div>
+                <ul class="ImgBox">
+                    <li><a href="###"><img src="img/x1.png"></a></li>
+                    <li><a href="###"><img src="img/x2.png"></a></li>
+                    <li><a href="###"><img src="img/x3.png"></a></li>
+                    <li><a href="###"><img src="img/x4.png"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div><img src="img/btm.jpg"></div>
+    </article>
+</div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper.animate.min.js"></script>
+    <script src="js/stam.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body ontouchstart="" onmouseover="">
+<div class="PageBg"></div>
+<img class="TopTitle" src="img/TitleBg3.jpg">
+<img class="TopTitleS" src="img/TitleS3.png">
+<img class="Title3" src="img/Title3.png">
+<div class="Notebook2Bg swiper-container">
+        <div class="swiper-wrapper">
+            <!-------------slide1----------------->
+            <section class="swiper-slide">
+                <dl class="autotype" id="autotype">
+                    <dt>如果活到80岁 你的一生大概<br/>是这么度过的...</dt>
+                    <dd>
+                        <p>睡觉<span>30</span>年</p>
+                        <p>在马桶上度过<span>173</span>天</p>
+                        <p>啪啪啪啪了<span>7</span>个月</p>
+                        <p>排队花了<span>1年半</span>!</p>
+                        <p>洗澡<span>200</span>天</p>
+                        <p>看剧看电视<span>XXXX</span>小时 ......</p>
+                        <p style="padding-top:.3rem;">剩下的日子里,你还能遭遇<span>XXX</span>次水逆</p>
+                        <p>见证祖国母亲<span>XXX</span>岁生日</p>
+                        <p>看<span>XX次</span>世界杯</p>
+                        <p>过<span>XX次</span>本命年</p>
+                    </dd>
+                </dl>
+                <img  class="rightan" src="img/q1.png">
+            </section>
+            <!---------------slide2-------------->
+            <section class="swiper-slide">
+                <div class="ResultBox">
+                    <h3><strong>6888<small>元</small></strong></h3>
+                    <p>你现在平均一个小时价值</p>
+                    <p>如果维持现状</p>
+                    <h4><strong>1278888<small>元</small></strong></h4>
+                    <p>这辈子大概还能再赚</p>
+                    <div class="mayun"></div>
+                    <p>马云大概只要XX分钟就赚到这些钱了!</p>
+                    <div class="nixi"><a href="###"></a></div>
+                </div>
+            </section>
+        </div>
+    </div>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        direction: 'vertical',
+        effect : 'fade',
+        fade: {
+            crossFade: true,
+        }
+    });
+</script>
+<script>
+    $.fn.autotype = function() {
+        var $text = $(this);
+        console.log('this', this);
+        var str = $text.html(); //返回被选 元素的内容
+        var index = 0;
+        var x = $text.html('');
+        //$text.html()和$(this).html('')有区别
+        var timer = setInterval(function() {
+                    //substr(index, 1) 方法在字符串中抽取从index下标开始的一个的字符
+                    var current = str.substr(index, 1);
+                    if (current == '<') {
+                        //indexOf() 方法返回">"在字符串中首次出现的位置。
+                        index = str.indexOf('>', index) + 1;
+                    } else {
+                        index++;
+                    }
+                    //console.log(["0到index下标下的字符",str.substring(0, index)],["符号",index & 1 ? '_': '']);
+                    //substring() 方法用于提取字符串中介于两个指定下标之间的字符
+                    $text.html(str.substring(0, index) + (index & 1 ? ' ': ''));
+                    if (index >= str.length) {
+                        clearInterval(timer);
+                    }
+                },
+                20);
+    };
+    $("#autotype").autotype();
+</script>
+</body>
+</html>
+

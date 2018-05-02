@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+<body>
+<div class="swipe-wrap" id="slip">
+	<article class="swipe">
+		<div class="swipe-box">
+			<img src="img/bk1.jpg">
+            <dl class="P1TxtLst">
+            	<dt>活动规则</dt>
+                <dd>
+                	<p>凡在活动期间预约试驾，即有机会获得<strong>500元</strong>携程周末游代金券，共10名。名额有限，快来参加！</p>
+                    <p>（具体使用规则请见优惠券详情）</p>
+                </dd>
+            </dl>
+            <dl class="p1TxtBtm">
+            	<dt><span>活动时间</span></dt>
+                <dd>4月13日-4月30日</dd>
+            </dl>
+            <span class="btmBtn"><img src="img/btmBtn.png"></span>
+		</div>
+		<div class="swipe-box">
+        	<img src="img/bk2.jpg">
+            <img style="display:none;" class="miaobiao1" src="img/miaobiao.png">
+            <div class="miaobiao2">
+            	<img src="img/miaobiao2.png">
+                <dl class="biaopanTxt">
+                	<dt>
+                    	<h3>从XX到XX<br/>距离XXXXKM</h3>
+                        <h3>驾驶东风标致301<br/>仅需XXXX元油费</h3>
+                    </dt>
+                    <dd>
+                    	<p>301自动挡平均油耗<br/>6.1升/百公里</p>
+                    </dd>
+                </dl>
+            </div>
+            <dl class="cityLst">
+            	<dt>输入出发地和目的地<br/>一起开启东风标致301节油之路！</dt>
+                <dd><input placeholder="输入出发地" type="text"></dd>
+                <dd><img class="change" src="img/changeBtn.png"></dd>
+                <dd><input placeholder="输入目的地" type="text"></dd>
+                <dd><a href="###">生成路程数据</a></dd>
+            </dl>
+            <span class="btmBtn"><img src="img/btmBtn.png"></span>
+		</div>
+        <div class="swipe-box">
+        	<div class="">
+                <img src="img/bk4.jpg">
+                <dl class="infoLst">
+                    <dd><label>姓名：</label><input class="NameInput" placeholder="请填写姓名" type="text"><span class="on">男</span><span>女</span></dd>
+                    <dd><label>联系方式：</label><input placeholder="请填写11位手机号码" type="text"></dd>
+                    <dd><label>所在省份：</label><select><option>省份</option></select></dd>
+                    <dd><label>所在城市：</label><select><option>城市</option></select></dd>
+                    <dd><label>意向经销商：</label><select><option>经销商名称</option></select></dd>
+                    <dt>填写试驾信息，有机会赢取携程千元自驾游代金券。试驾东风标致301，请至离您最近的授权经销商。</dt>
+                </dl>
+                <a class="submit" href="###">提交抽奖</a>
+            </div>
+            <section style="display:none;">
+            	<div class="shadow"></div>
+                <dl class="tijiao">
+                	<dt>
+                    	<img src="img/zq.png">
+                        <h3>提交成功</h3>
+                        <p>如中奖，我们会尽快通知您</p>
+                    </dt>
+                    <dd><a href="###">返回</a></dd>
+                </dl>
+            </section>
+        </div>
+		<div class="swipe-box">
+        	<div class="filter"><!--==弹窗后增加filter==-->
+                <img src="img/bk3.jpg">
+                <dl class="jmct">
+                    <dt><img src="img/p4topTit.png"></dt>
+                    <dd>
+                        <p>东风标致301 安全升级</p>
+                        <p>东风标致301 超大空间，轴距达到2652毫米</p>
+                        <p>东风标致301 经济省油，百公里油耗仅6.1升</p>
+                    </dd>
+                </dl>
+                
+                <dl class="p4Img">
+                    <dt>点击可查看大图▼</dt>
+                    <dd>
+                        <img src="img/img1.png">
+                        <img src="img/img2.png">
+                        <img src="img/img3.png">
+                    </dd>
+                </dl>
+            </div>
+            <section style="display:none;">
+                <dl class="ImgLst">
+                	<dt>
+                    	东风标致301经济省油<br/>百公里油耗仅6.1升
+                    </dt>
+                    <dd>
+                    	<img src="img/img3.png">
+                    </dd>
+                </dl>
+                <div class="lrBtn"><img src="img/lftBtn.png"><img src="img/ritBtn.png"></div>
+            </section>
+		</div>
+	</article>
+</div>
+<script type="text/javascript" src="js/slip.min.js"></script>
+<script type="text/javascript">
+var container = document.getElementById('slip');
+var pages = document.querySelectorAll('.swipe-box');
+var slip = Slip(container, 'y').webapp(pages);
+</script>
+</body>
+</html>

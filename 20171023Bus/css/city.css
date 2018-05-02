@@ -1,0 +1,126 @@
+.TopBg {
+  height: 467px;
+  background: url("../img/TopBg.jpg") no-repeat center top;
+  position: relative;
+}
+.TopNav {
+  height: 48px;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 48px;
+}
+.TopNav a {
+  color: #fff;
+  font-size: 18px;
+  padding: 0 24px;
+  position: relative;
+}
+.TopNav a:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 28px;
+  background: #fff;
+  left: 0;
+  top: 0;
+}
+.TopNav a:nth-of-type(1):after {
+  display: none;
+}
+.TopNav a:hover {
+  opacity: .8;
+}
+.wrap1099 {
+  width: 1099px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.CityTitle {
+  height: 38px;
+  line-height: 38px;
+  padding-left: 19px;
+  background: #F5F5F5;
+}
+.CityTitle .CityIcon {
+  float: left;
+  width: 17px;
+  height: 18px;
+  background: url("../img/CityIcon.png") no-repeat;
+  background-size: 100% 100%;
+  margin-top: 10px;
+}
+.CityTitle strong {
+  margin-left: 10px;
+}
+.CityTitle a {
+  float: right;
+  font-size: 15px;
+  color: #777;
+  margin-right: 22px;
+  padding-right: 21px;
+  background: url("../img/More.png") no-repeat right 12px;
+  background-size: 13px 13px;
+}
+.CityTitle a:hover {
+  color: #333;
+}
+.CityBox {
+  background: #fff;
+  box-shadow: 1px 1px 3px 0 rgba(133, 133, 133, 0.5);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.CityList {
+  padding: 24px 0 24px 29px;
+}
+.CityList .product-item-city {
+  position: relative;
+  width: 323px;
+  height: 163px;
+  margin: 10px 0 0 18px;
+  overflow: hidden;
+  float: left;
+}
+.CityList .product-item-city img {
+  transition: transform 0.3s ease 0s;
+  width: 323px;
+  height: 163px;
+}
+.CityList .product-item-city p {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 37px;
+  line-height: 37px;
+  padding: 0 5px;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 18px;
+}
+.CityList .product-item-city:hover img {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.PageBox {
+  padding: 36px 0;
+  height: 80px;
+  text-align: right;
+}
+.PageBox .Prev,
+.PageBox .Next {
+  font-size: 15px;
+  font-family: PingFangSC-Medium;
+  color: #FF9232;
+  background: #fff;
+  padding: 11px;
+}

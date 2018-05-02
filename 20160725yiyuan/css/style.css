@@ -1,0 +1,132 @@
+/*Created by huang.jun on 16-07-25*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB","Lucida Grande",Verdana,"Microsoft YaHei",hei;background:#E9E9E9;}
+
+.red-btn{height:0.8rem;line-height:0.8rem;color:#fff;font-size:0.36rem;text-align: center;background:#EA2C4B;border:0;-webkit-border-radius:0.15rem;font-family: "Hiragino Sans GB";}
+.gray-btn{height:0.8rem;line-height:0.8rem;color:#fff;font-size:0.36rem;text-align: center;background:#ccc;border:0;-webkit-border-radius:0.15rem;font-family: "Hiragino Sans GB";}
+.white-btn{height:0.76rem;line-height:0.76rem;color:#ea2c4b;font-size:0.36rem;text-align: center;background:#fff;border:0.02rem solid #FF0000;-webkit-border-radius:0.15rem;font-family: "Hiragino Sans GB";}
+.btn-Active:active{opacity: 0.8;}
+
+.top-bg{width:7.5rem;height:4.01rem;position:relative;}
+.top-CountDown{width:7.5rem;height:0.6rem;line-height:0.6rem;background-color: rgba(17,21,42,0.6);font-size:0.28rem;color:#fff;position: absolute;bottom:0;left:0;}
+.top-CountDown dt{float:left;padding-left:0.2rem;}
+.top-CountDown dd{float:left;}
+.top-CountDown dd span{display:inline-block;width:0.46rem;vertical-align:middle;height:0.4rem;line-height:0.4rem;background:#94969F;margin:0 0.1rem;margin-top:-0.05rem;text-align: center;font-family: "Hiragino Sans GB";}
+.forDetailsTxt{background:#fff;}
+.forDetailsTitle{line-height:0.46rem;padding-top:0.2rem;font-size:0.36rem;font-family: "Hiragino Sans GB";padding-left:0.2rem;font-weight: normal;color:#333;}
+.forNumber{height:1.05rem;line-height:1.05rem;font-family: "Hiragino Sans GB W6";padding-left:0.2rem;position: relative;}
+.forNumber button{width:2.18rem;height:0.62rem;background:url("../img/huifang.png") no-repeat;background-size:contain;position: absolute;right:0.2rem;top:0.2rem;border:0;}
+.forNumber span{color:#666;font-size:0.28rem;}
+.forNumber strong{color:#f01818;font-size:0.56rem;padding-right:0.3rem;}
+.tabNumber{height:0.84rem;padding-left:0.2rem;padding-bottom:0.2rem;}
+.tabNumber span{display:block;float:left;width:3.5rem;height:0.8rem;color:#666;font-size:0.32rem;border-top:0.02rem solid #ccc;border-bottom:0.02rem solid #ccc;text-align: center;line-height:0.8rem;}
+.tabNumber span:nth-of-type(2){border-left:0.02rem solid #ccc;}
+.tabNumber span em{font-style: normal;color:#ea2c4b;}
+.userBox{background:#fff;height:6rem;padding-left:0.5rem;overflow: hidden;}
+.user-scrolled-down{height:1rem;}
+.user-scrolled-down dt{float:left;padding-top:0.1rem;position: relative;}
+.user-scrolled-down dt:after{content:"";position: absolute;width:0.02rem;height:0.61rem;background:#ccc;left:0.97rem;top:0.2rem;}
+.user-scrolled-down dt img{width:0.8rem;height:0.8rem;-webkit-border-radius:1rem;}
+.user-scrolled-down dd{float:left;padding:0.2rem 0 0 0.47rem;}
+.user-scrolled-down dd h3{font-size:0.32rem;color:#333;font-weight: normal;font-family: "Hiragino Sans GB";line-height:0.32rem;}
+.user-scrolled-down dd p{font-size:0.24rem;color:#999;line-height:0.24rem;padding-top:0.08rem;}
+.user-btn{ position:fixed;bottom:0;width:100%;text-align: center;}
+.user-btn .red-btn{width:100%;-webkit-border-radius:0rem;height:1rem;line-height:1rem;}
+.user-btn .gray-btn{width:100%;-webkit-border-radius:0rem;height:1rem;line-height:1rem;}
+
+.shadow{width:100%;height:100%;position:fixed;z-index:1;background:#000;opacity:0.7;top:0;left:0;}
+.pop-box{width:5.8rem;position: fixed;left:50%;margin-left:-2.9rem;background:#fff;-webkit-border-radius:0.15rem;z-index:2;top:2.23rem;}
+.pop1 dt,.pop2 dt{text-align: center;position: relative;padding-top:0.59rem;}
+.pop1 dt h3,.pop2 dt h3{font-family: "Hiragino Sans GB W6";font-size:0.56rem;color:#333;line-height:0.56rem;}
+.pop1 dt p,.pop2 dt p{font-family: "Hiragino Sans GB";font-size:0.32rem;color:#666;line-height:0.32rem;padding-top:0.1rem;}
+.pop1 dd{padding:0.25rem 0 0.6rem 0;}
+.pop1 dd p{text-align: center;padding-top:0.24rem;}
+.pop1 dd p button.red-btn{width:4.4rem;}
+.pop1 dd p button.white-btn{width:4.36rem;}
+.close{width:0.72rem;height:0.97rem;background:url("../img/close.png") no-repeat;background-size:contain;position: absolute;right:0;top:-0.97rem;}
+.pop2{padding:0 0.51rem 0 0.49rem;}
+.pop2 dd{padding:0.5rem 0 0.6rem 0;}
+.pop2 dd p{height:0.8rem;}
+.pop2 dd p:nth-of-type(2){padding-top:0.20rem;}
+.pop2 dd p:nth-of-type(3){padding-top:0.36rem;}
+.w476,.w256{height:0.76rem;border:0.02rem solid #ccc;-webkit-border-radius:0.15rem;color:#999;padding-left:0.1rem;}
+.w256{font-size:0.32rem;width:2.56rem;float:left;}
+.w210{width:2.1rem;height:0.76rem;line-height:0.8rem;text-align: center;border:0;-webkit-border-radius:0.15rem;background:#784AC4;float:right;font-size:0.28rem;color:#fff;}
+.gray-btn{background:#9a9a9a;}
+.w476{width:4.76rem;font-size:0.36rem;}
+.pop2 dd p .red-btn{width:100%;}
+.pop-error{width:2.4rem;line-height:0.48rem;background-color:rgba(0,0,0,0.7);position: absolute;color:#fff;font-size:0.28rem;-webkit-border-radius:0.15rem;text-align: center;left:50%;margin-left:-1.2rem;top:2.7rem;}
+
+.bg-box{background:url("../img/topBox.jpg") no-repeat #381081;background-size:contain;padding-top:4rem;}
+.title{padding:0 0.3rem 0 0.23rem;color:#fff;font-size:0.32rem;font-family: "Hiragino Sans GB";height:0.3rem;}
+.title h3{font-weight: normal;height:0.3rem;line-height:0.3rem;float:left;position: relative;font-size:0.32rem;padding-left:0.2rem;}
+.title h3:after{position: absolute;width:0.06rem;height:0.3rem;background:url("../img/title-icon.jpg") no-repeat;background-size:contain;left:0;top:0;content:"";}
+.more{width:0.7rem;height:0.28rem;line-height:0.28rem;color:#fff;background:url("../img/icon.jpg") no-repeat right top;float: right;background-size:contain;padding-right:0.3rem;font-size:0.28rem;}
+.video-list{height:3.51rem;padding:0.24rem 0 0 0.2rem;}
+.video-box{width:3.38rem;height:2.93rem;background:#fff;border:0.06rem solid #fff;position: relative;float:left;}
+.video-box:nth-of-type(2){margin-left:0.1rem;}
+.video-box img{width:3.38rem;height:2.44rem;}
+.video-box h3{font-size:0.28rem;color:#fff;position: absolute;left:0;top:0;font-family: "Hiragino Sans GB";font-weight: normal;padding:0.16rem 0 0 0.1rem;}
+.video-box em{width:0.64rem;height:0.64rem;background:url("../img/play-icon.png") no-repeat;background-size:contain;position: absolute;left:50%;top:0.9rem;margin-left:-0.32rem;}
+.video-btm{height:0.5rem;line-height:0.5rem;font-size:0;}
+.video-btm span{color:#666;font-size:0.24rem;font-family: "Hiragino Sans GB";}
+.video-btm span:nth-of-type(1){float:left;}
+.video-btm span:nth-of-type(2){float:right;}
+.baobei-list{padding:0.14rem 0 0 0.14rem;height:1%;min-height:20px;}
+.baobei-list:after{clear:both;content:".";display:block;height:0;visibility:hidden;}
+.baobei-box{width:2.23rem;height:3.32rem;background:#fff;border:0.04rem solid #fff;margin:0.06rem 0 0 0.06rem;float:left;overflow: hidden;position: relative;}
+.kaijiang{width:0.89rem;height:0.32rem;background:url("../img/kaijiang.png") no-repeat;background-size:contain;position: absolute;left:0;top:0;}
+.baobei-box img{width:2.23rem;height:1.92rem;}
+.btxt{font-size:0.28rem;color:#333;padding:0.06rem;font-family: "Hiragino Sans GB";letter-spacing: 0.01rem;height:0.8rem;line-height:0.36rem;}
+.step-box{width:2.1rem;height:0.06rem;background:#E3CCE2;margin-left:0.06rem;overflow: hidden;-webkit-border-radius:1rem;}
+.step-box em{display:block;height:0.06rem;background:#F7313F;-webkit-border-radius:1rem;-webkit-animation:jindu 1s  linear;}
+@-webkit-keyframes jindu{
+    from{width:0%;}
+}
+.crowdfunding{font-size:0.24rem;font-family: "Hiragino Sans GB";padding:0.1rem 0 0 0.06rem;}
+.crowdfunding strong{color:#666;font-weight:normal;}
+.crowdfunding span{color:#e63f3f;}
+.crowdfunding span em{font-family:SimSun;font-style: normal;}
+.crowdfunding small{float:right;font-size:0.26rem;color:#666;padding-right:0.12rem;}
+.btm-bg{height:1.83rem;background:url("../img/btm-bg.jpg") no-repeat center bottom;background-size:cover;}
+
+.bg-box2{background:#36167B;height: 100%;}
+.liveRadio-box{padding:0.3rem 0 0 0.26rem;}
+.liveRadio{width:6.9rem;height:2rem;background:#fff;border:0.06rem solid #fff;margin-top:0.1rem;}
+.left-img{float:left;position: relative;}
+.left-img small{width:0.64rem;height:0.64rem;background:url("../img/play-icon.png") no-repeat;background-size:contain;position: absolute;left:50%;margin-left:-0.32rem;top:50%;margin-top:-0.32rem;}
+.left-img img{width:2.4rem;height:2rem;}
+.live-txt{width:4.1rem;float:left;padding-left:0.23rem;font-family: "Hiragino Sans GB";}
+.live-txt dt{font-size:0.36rem;color:#333;height:1.14rem;padding-top:0.1rem;line-height:0.4rem;}
+.live-txt dd{font-size:0.24rem;}
+.live-txt dd p{line-height:0.36rem;padding-top:0.06rem;}
+.live-txt dd p span{color:#999;}
+.live-txt dd p small{fomt-size:0.24rem;color:#333;}
+.live-txt dd p label{float:left;width:1.9rem;height:0.22rem;line-height:0.22rem;}
+.live-txt dd p label:nth-of-type(2){border-left:0.02rem solid #ccc;padding-left:0.2rem;}
+.no-box{width:7.24rem;height:2.69rem;background:url("../img/no.png") no-repeat;background-size:contain;margin-left:0.1rem;position: relative;margin-top:0.14rem;}
+.no-txt-box{width:6.6rem;height:2.03rem;overflow:hidden;position: absolute;left:0.33rem;top:0.22rem;position:relative;text-align: center;}
+.no-txt-box h3{color:#ef10ff;font-size:0.48rem; font-family: "Hiragino Sans GB W6";position: absolute;top:0.5rem;font-weight: normal;width:6.6rem;-webkit-animation:txt1 2s  linear;left:-0em;}
+.no-txt-box p{color:#9f35db;font-size:0.42rem;font-family: "Hiragino Sans GB";position: absolute;top:1.12rem;-webkit-animation:txt2 3s  linear;width:6.6rem;left:0rem;}
+@-webkit-keyframes txt1{
+    from{left:7.5rem;}
+}
+@-webkit-keyframes txt2{
+    from{left:7.5rem;}
+}
+.error{width:2.4rem;line-height:0.48rem;background-color:rgba(0,0,0,0.7);position:fixed;color:#fff;font-size:0.28rem;-webkit-border-radius:0.15rem;text-align: center;left:50%;margin-left:-1.2rem;top:50%;margin-top:-0.24rem;}
+
+.txt{color:#666;font-size:0.28rem; text-align:center;line-height:0.6rem;font-family: "Hiragino Sans GB";}
+.hdsm{font-family: "Hiragino Sans GB";color:#fff;padding:0.56rem 0.2rem 0 0.2rem; clear:both;}
+.hdsm dt{height:0.34rem;background:url(../img/hdgz.png) no-repeat center top;background-size:3.34rem 0.34rem;}
+.hdsm dd{font-size:0.24rem;padding-top:0.1rem;}
+.hdsm dd p{ opacity:0.6;line-height:0.3rem;padding:0.2rem 0 0 0.18rem; text-indent:-0.18rem;}
+
+.btm-pop{height:0.59rem;line-height:0.59rem;background:rgba(0,0,0,0.8); position:fixed;bottom:0;font-size:0.28rem;color:#fff;width:100%; text-align:center;}
+.userBox h3{    font-size: 0.28rem;
+    line-height: 0.7rem;}
+
+

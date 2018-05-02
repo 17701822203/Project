@@ -1,0 +1,18 @@
+/*Created by huang.jun on 17-03-28*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{background:#fff;font-family:"PingFang SC Medium","Microsoft YaHei";}
+
+.TopBg{height:18.275rem;background:url("../img/TopBg.jpg") no-repeat;background-size:100% 100%;}
+.WrapBg{height:12.45rem;background:url("../img/WrapBg.jpg") no-repeat;background-size:100% 100%;}
+.presentation{height:19.35rem;background:url("../img/presentation.jpg") no-repeat;background-size:100% 100%;}
+.TopTxt{text-align: center;font-size:0.9rem;color:#1f5959;padding-top:1.65rem;}
+.CouponBox{padding-top:0.75rem;}
+.Coupon{margin:0 auto;width:10.225rem;height:4.475rem;background:url("../img/button.png") no-repeat;background-size:100% 100%;position:relative;}
+.Coupon small{font-size:0.8rem;color:#fff;position: absolute;left:3.7rem;top:1.4rem;}
+.Coupon big{position:absolute;font-size:1.5rem;color:#fff;left:4.4rem;top:0.7rem;}
+.Coupon span{font-size:0.6rem;color:#ffcab0;position: absolute;left:3.7rem;top:2.4rem;}
+.ButtonBox{text-align: center;padding-top:0.75rem;}
+.Button{display:inline-block;width:14.95rem;height:2.525rem;background:url("../img/Button2.png") no-repeat;background-size:100% 100%;}

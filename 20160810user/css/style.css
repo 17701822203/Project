@@ -1,0 +1,42 @@
+/*Created by huang.jun on 16-08-05*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Hiragino Sans GB W6";}
+article{height:100%;}
+
+.bgBox{width:7.5rem;height:19.35rem;background:url("../img/bg.jpg") no-repeat;background-size:7.5rem 19.35rem;}
+.txtList{padding:11rem 0.5rem 0 0.5rem;}
+.txtList dt{font-size:0.39rem;color:#fffaa7;}
+.txtList dd{padding-top:0.1rem;}
+.txtList dd p{color:#fff;font-size:0.24rem;line-height:0.43rem;letter-spacing: 0.01rem;padding:0 0 0 0.26rem;text-indent:-0.26rem;}
+.txtList dd p span{color:#fdff70;}
+.btn{position: absolute;width:4.15rem;height:1.21rem;background:url("../img/button.png") no-repeat;background-size:4.15rem 1.21rem;border:0;left:50%;margin-left:-2.075rem;top:9.3rem;}
+.btn:active{background:url("../img/buttonActive.png") no-repeat;background-size:4.15rem 1.21rem;}
+.btmTxt{color:#fff;text-align: center;padding-top:1.05rem;}
+.btmTxt dt{font-size:0.24rem;}
+.btmTxt dd{font-size:0.22rem;padding-top:0.3rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

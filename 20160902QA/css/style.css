@@ -1,0 +1,42 @@
+/*Created by huang.jun on 16-08-17*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:airal;background:#fff;}
+
+.HeaderBox{height:1rem;background:#242C3B;position: relative;}
+.HeaderBox h1{color:#fff;line-height:1rem;font-size:0.36rem;text-align: center;font-weight:normal;position: absolute;width:100%;z-index:1;}
+.HeaderBox h1.Title-Txt{text-align: left;height:1rem;margin:0 0 0 1rem;text-overflow:ellipsis; overflow:hidden; white-space:nowrap;width:6rem;}
+.HeaderBox .header-icon-left{width:1rem;height:1rem;line-height:1rem;text-align:center;cursor: pointer;float:left;position: relative;z-index:2;}
+.HeaderBox .header-icon-left i{width:0.3rem;height:0.3rem;display:inline-block;margin-top:0.35rem;}
+.HeaderBox .header-icon-left i:after{content: "";display: inline-block;width:0.3rem;height:0.3rem;vertical-align: middle;border-left:2px solid #fff;border-bottom: 2px solid #fff;-webkit-transform: rotate(45deg);transform: rotate(45deg);box-sizing: border-box;}
+.HeaderBox .header-icon-left:active i:after{border-left:2px solid #92969D;border-bottom: 2px solid #92969D;}
+
+
+.ListBox dt{color:#3f4447;padding:0.4rem 0 0.16rem 0;background:#F4F4F4;font-size:0;margin:0;}
+.ListBox dt h2{font-size:0.3rem;font-family:"airal";height:0.3rem;line-height:0.3rem;border-left:0.06rem solid #E92953;padding-left:0.27rem;}
+.ListBox dd{font-size:0.3rem;font-family:"Helvetica Neue";}
+.ListBox dd a{line-height:0.87rem;height:0.87rem;padding-left:0.3rem;display:block;position: relative;}
+.ListBox dd a:active{background:#E9E9EB;}
+.ListBox dd a span{border-bottom:1px solid #F1F1F1;color:#3f4447;display: block;padding-left:0.03rem;}
+.ListBox dd a:nth-last-child(1) span{border:0;}
+.ListBox dd a i{width:0.3rem;height:0.3rem;position: absolute;right:0.3rem;top:0.35rem;}
+.ListBox dd a i:after{content: "";display: inline-block;width:0.2rem;height:0.2rem;vertical-align: middle;border-left:1px solid #484D57;border-bottom:1px solid #484D57;-webkit-transform: rotate(45deg);transform: rotate(225deg);box-sizing: border-box;}
+
+.Details{padding:0 0.4rem 0.4rem 0.4rem;}
+.DetailsTop dt{font-family:"Helvetica Bold";font-size:0.4rem;font-weight: bold;line-height:0.4rem;padding-top:0.4rem;}
+.DetailsTop dd{font-family:"Helvetica Neue";font-size:0.26rem;padding-top:0.2rem;}
+
+.DetailsList dt{font-family:"Helvetica Bold";font-size:0.36rem;font-weight: bold;line-height: 0.4rem;padding-top:0.6rem;}
+.DetailsList dd{padding-top:0.34rem;}
+.DetailsList dd h2{font-family:"Helvetica Bold";font-size:0.28rem;line-height: 0.4rem;}
+.DetailsList dd p{font-family:"Helvetica Neue";font-size:0.26rem;padding-top:0.15rem;}
+
+
+
+
+
+
+
+

@@ -1,0 +1,170 @@
+/*Created by huang.jun on 17-09-6*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+@keyframes SMB {
+  from {
+    transform: translateX(-5%);
+  }
+  to {
+    transform: translateX(5%);
+  }
+}
+@-webkit-keyframes SMB {
+  /* Safari 和 Chrome */
+  from {
+    transform: translateX(-5%);
+  }
+  to {
+    transform: translateX(5%);
+  }
+}
+/******************************************************************/
+/******************************************************************/
+@keyframes sm1 {
+  from {
+    transform: translateY(0) translateX(5%);
+  }
+  to {
+    transform: translateY(30%) translateX(10%);
+  }
+}
+@-webkit-keyframes sm1 {
+  /* Safari 和 Chrome */
+  from {
+    transform: translateY(0) translateX(5%);
+  }
+  to {
+    transform: translateY(30%) translateX(10%);
+  }
+}
+/******************************************************************/
+/******************************************************************/
+@keyframes sm2 {
+  from {
+    transform: translateY(0) translateX(5%);
+  }
+  to {
+    transform: translateY(20%) translateX(-26%);
+  }
+}
+@-webkit-keyframes sm2 {
+  /* Safari 和 Chrome */
+  from {
+    transform: translateY(0) translateX(5%);
+  }
+  to {
+    transform: translateY(30%) translateX(-26%);
+  }
+}
+/******************************************************************/
+/******************************************************************/
+@keyframes sm3 {
+  from {
+    transform: translateY(0) translateX(5%);
+  }
+  to {
+    transform: translateY(30%) translateX(-25%);
+  }
+}
+@-webkit-keyframes sm3 {
+  /* Safari 和 Chrome */
+  from {
+    transform: translateY(0) translateX(5%);
+  }
+  to {
+    transform: translateY(30%) translateX(-25%);
+  }
+}
+/******************************************************************/
+/******************************************************************/
+@keyframes sm4 {
+  from {
+    transform: translateY(0) translateX(5%);
+  }
+  to {
+    transform: translateY(20%) translateX(-30%);
+  }
+}
+@-webkit-keyframes sm4 {
+  /* Safari 和 Chrome */
+  from {
+    transform: translateY(0) translateX(5%);
+  }
+  to {
+    transform: translateY(20%) translateX(-30%);
+  }
+}
+/******************************************************************/
+/******************************************************************/
+@keyframes sm5 {
+  from {
+    transform: translateY(0) translateX(5%);
+  }
+  to {
+    transform: translateY(30%) translateX(30%);
+  }
+}
+@-webkit-keyframes sm5 {
+  /* Safari 和 Chrome */
+  from {
+    transform: translateY(0) translateX(5%);
+  }
+  to {
+    transform: translateY(30%) translateX(30%);
+  }
+}
+/******************************************************************/
+/******************************************************************/
+@keyframes Progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes Progress {
+  /* Safari 和 Chrome */
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

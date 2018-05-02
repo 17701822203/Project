@@ -1,0 +1,106 @@
+/*Created by huang.jun on 18-1-11*/
+*{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+a{text-decoration:none;-webkit-tap-highlight-color:transparent;
+  &:active{opacity:.7;}
+}
+button:active{opacity:.7;}
+ol,ul,li{list-style:none;}
+body{font-family:PingFang-SC-Regular,sans-serif;-webkit-text-size-adjust: 100% !important;text-size-adjust: 100% !important;-moz-text-size-adjust: 100% !important;background:#171636;}
+.shadow{width:100%;height:100%;position:fixed;z-index:20;background:#000;opacity:.6;top:0;left:0;}
+.img-box{font-size:0;
+  img{width:100%;}
+}
+//四角的半径定制.border-radius-custom(20px, 20px, 0px, 0px);
+.border-radius-custom (@topleft: 5px, @topright: 5px, @bottomleft: 5px, @bottomright: 5px) {
+  -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+  -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+  border-radius: @topleft @topright @bottomright @bottomleft;
+}
+//方块阴影.box-shadow(5px, 5px, 6px, 0.3);
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @alpha: .5) {
+  -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
+}
+//圆角.border-radius(@radius:5px)
+.border-radius(@radius:5px){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+//input默认字体.placeholder({color:#666;});
+.placeholder(@a){
+  &::-webkit-input-placeholder{@a();}
+  &:-moz-placeholder{@a();}
+  &::-moz-placeholder{@a();}
+  &:-ms-input-placeholder{@a();}
+}
+//线性渐变.gradient(left, #663333, #333333);
+.gradient(@origin:left,@start:#fff,@stop:#000){
+  background-color:@start;
+  background-image:-webkit-linear-gradient(@origin,@start,@stop);
+  background-image:-moz-linear-gradient(@origin,@start,@stop);
+  background-image:-o-linear-gradient(@origin,@start,@stop);
+  background-image:-ms-linear-gradient(@origin,@start,@stop);
+  background-image:linear-gradient(@origin,@start,@stop);
+}
+//清除浮动
+.ClearBox{
+  &:after,&:before{content: " ";display: table;clear:both;}
+}
+
+.TopImg{.img-box;}
+article{padding:0 1rem;
+  .VerificationBox{background:#fff;.border-radius(@radius:.25rem);
+    .InputList{padding:.6rem 1.15rem 1.6rem 1.15rem;
+      li{margin-top:.8rem;
+        &.Mob{
+          input{width:100%;border:0;height:2.25rem;padding-left:.6rem;-webkit-box-sizing:border-box;box-sizing:border-box;.border-radius(@radius:.25rem);font-size:.8rem;color:#a69b9b;background:#E0E0E0;}
+        }
+        &.Verification{.ClearBox;
+          input{height:2.2rem;background:#E0E0E0;.border-radius(@radius:.25rem);border:0;text-align:center;font-size:.8rem;color:#a69b9b;width:50%;float:left;}
+          button{float:right;.border-radius(@radius:.25rem);height:2.2rem;border:0;background:#DE4933;color:#fae4c5;width:40%;font-size:.8rem;}
+        }
+        &.ReceiveBtn{.img-box;
+          img:active{opacity:.7;}
+        }
+      }
+    }
+    .CouponWrap{padding:1.6rem 1.25rem 1.55rem 1.25rem;
+      .Coupon{height:3.75rem;.gradient(left,#EB5740 30%,#FBA344 70%);.border-radius(@radius:.35rem);
+        .left{float:left;width:4.25rem;height:3.75rem;position:relative;
+          small,big{float:left;color:#FFE5C2;}
+          small{font-size:.9rem;line-height:.9rem;padding:1.975rem 0 0 .45rem;}
+          big{font-size:2.2rem;line-height:2.2rem;font-family:"PingFangSC-Medium";padding-top:.85rem;}
+          &:after{width:.3rem;height:4rem;background:url("../img/Icon.png") no-repeat;background-size:100% 100%;content:"";position:absolute;right:0;top:-.15rem;}
+        }
+        .right{float:left;height:3.75rem;color:#fae6c6;padding-left:1rem;
+          dt{font-size:.75rem;line-height:.75rem;padding-top:1.1rem;}
+          dd{font-size:.5rem;line-height:.5rem;padding-top:.4rem;}
+        }
+      }
+      .Account{color:#81483c;font-size:.6rem;line-height:.6rem;text-align:center;margin-top:.85rem;}
+      .BtnBox{.img-box;margin-top:1.45rem;
+        li:nth-of-type(2){margin-top:.5rem;}
+      }
+    }
+  }
+
+  .RuleTxt{padding:1.55rem .2rem 1rem .2rem;color:#fff7e9;
+    dt{text-align:center;font-size:.9rem;line-height:.9rem;}
+    dd{font-size:.65rem;line-height:.9rem;margin-top:.7rem;
+      p{margin-top:.3rem;}
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+<html class="ie"><!--<![endif]--><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+<script type="text/javascript" src="js/jquery.rotate.min.js"></script>
+	<script type="text/javascript">
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+        };
+     
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+	$(document).ready(function(){
+		var value2 = 0;
+		$('.btn_cen').rotate({ 
+			bind: {
+				click: function(){
+					value2 +=180;
+					$(".btn_cen").rotate({
+						animateTo: value2
+					});
+				}
+			}
+		});
+		setTimeout(function () {
+			$(".men").animate({opacity:"1"},1000);
+			return false;
+		}, 500);   
+		setTimeout(function () {
+			$(".girl").animate({opacity:"1"},1500);
+			return false;
+		}, 1200);   
+		setTimeout(function () {
+			$(".head_txt").animate({opacity:"1"},4000);
+			return false;
+		}, 1700);   
+	})
+    </script>
+</head>
+
+<body>
+	<div class="top_bk">
+    	<img src="img/head_bk.png">
+        <img class="head_txt" src="img/head_txt.png">
+        <img class="girl" src="img/girl.png">
+        <img class="men" src="img/men.png">
+        <input value="请输入出发地" class="txt_lft" name="" type="text" onFocus="this.value='';" onBlur="this.value='请输入出发地';" >
+        <button class="btn_cen"></button>
+        <input value="请输入家乡名" class="txt_rit" name="" type="text" onFocus="this.value='';" onBlur="this.value='请输入家乡名';" >
+    </div>
+    <dl class="btmBox">
+    	<dt><img src="img/txt.png"></dt>
+        <dd><a href="dsj.html" class="red_btn">生成我的回家大数据</a></dd>
+    </dl>
+</body>
+</html>

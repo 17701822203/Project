@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#E8E8E8;">
+    <view class="RewardTop">
+        <view class="RewardImg"><img src="http://img2.imgtn.bdimg.com/it/u=2450994032,3525797548&fm=27&gp=0.jpg"></view>
+        <view class="Settlement">
+            <view class="left">
+                <view class="TopTxt">抢答</view>
+                <view class="BtmTxt">
+                    <text>18</text><text>关</text>
+                </view>
+            </view>
+            <view class="center">
+                <view class="TopTxt">红包</view>
+                <view class="BtmTxt">
+                    <text>9.21</text><text>元</text>
+                </view>
+            </view>
+            <view class="right">
+                <view class="TopTxt">优惠券</view>
+                <view class="BtmTxt">
+                    <text>15.00</text><text>元</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="RewardTitle">奖励记录</view>
+    <view class="RewardWrap">
+        <view class="RewardList">
+            <view class="left">1</view>
+            <view class="center">
+                <text>携程汽车票</text>
+                <text>上海话：节棍是什么意思？</text>
+            </view>
+            <view class="right">
+                <view><text>&yen;</text><text>0.66</text></view>
+                <view>现金红包</view>
+            </view>
+        </view>
+        <view class="RewardList">
+            <view class="left">2</view>
+            <view class="center">
+                <text>携程汽车票</text>
+                <text>上海话：节棍是什么意思？</text>
+            </view>
+            <view class="right">
+                <view><text>&yen;</text><text>0.66</text></view>
+                <view>现金红包</view>
+            </view>
+        </view>
+        <view class="RewardList">
+            <view class="left">3</view>
+            <view class="center">
+                <text>携程汽车票</text>
+                <text>上海话：节棍是什么意思？</text>
+            </view>
+            <view class="right">
+                <view><text>&yen;</text><text>0.66</text></view>
+                <view>现金红包</view>
+            </view>
+        </view>
+    </view>
+    <view class="FixBtmTxt">猜你是广东人 现在离家还有XX公里! 买票回家></view>
+    <view class="HbIcon"></view>
+</body>
+</html>

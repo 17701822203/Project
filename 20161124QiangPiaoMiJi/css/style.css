@@ -1,0 +1,40 @@
+/*Created by huang.jun on 16-11-24*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"Microsoft YaHei";background:#fff;}
+
+.bg{height:33.35rem;background:url("../img/bg.jpg") no-repeat;background-size:100% 100%;position: relative;}
+.bg1,.bg2,.bg3{position: absolute;left:50%;}
+.bg1{width:8.35rem;height:5.9rem;background:url("../img/bg1.png") no-repeat;background-size:8.35rem 5.9rem;margin-left:-4.17rem;top:16rem;}
+.bg3{width:3.025rem;height:1.825rem;background:url("../img/bg3.png") no-repeat;background-size:100% 100%;margin-left:-1.5125rem;top:20.7rem;-webkit-animation:piao 1.5s 0s infinite;}
+@-webkit-keyframes piao
+{
+    from{-webkit-transform:rotateY(0deg);-webkit-transform:rotateX(0deg);height:0;-webkit-transform-origin: center bottom;}
+    to{-webkit-transform:rotateY(76deg);-webkit-transform:rotateX(76deg);height:8rem;opacity: 0;-webkit-transform-origin: center bottom;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

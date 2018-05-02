@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body>
+	<article>
+    	<img src="img/bk.jpg">
+        <p class="TopTxtBox">700元现金券已放入222333333 账号内<br/>立即下载APP查看使用吧</p>
+        <dl class="txtLst">
+        	<dt>
+            	<!--p><a href="###">下载APP</a></p>
+                <p><a href="###">分享给好友</a></p-->
+            	<p><input type="text" placeholder="输入手机号"></p>
+                <p><a href="###">立即领券</a></p>
+            </dt>
+            <dd><img src="img/titTxt.png"></dd>
+            <dd>1.领取的现金券，将会记录在您的手机号码<br/>下，您只需要用改手机号码登录携程APP，即<br/>可使用。</dd>
+            <dd>2.现金券只用于在携程网消费是抵扣消费金额。</dd>
+            <dd>3.优惠券自获得之日起30日内有效。</dd>
+            <dd>4.在法律允许的范围内，携程旅行网可能对活<br/>动的规则/条款作出适当修改/调整。</dd>
+        </dl>
+    </article>
+</body>
+</html>

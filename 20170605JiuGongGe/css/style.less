@@ -1,0 +1,59 @@
+/*Created by huang.jun on 17-05-27*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:PingFang SC Medium,sans-serif;}
+.shadow{width:100%;height:100%;position:fixed;z-index:2;background:#000;opacity:0.7;top:0;left:0;}
+article{background:#fff;}
+.border-radius(@radius:5px){
+  -webkit-border-radius:@radius;
+  -moz-border-radius:@radius;
+  border-radius:@radius;
+}
+.img-box{font-size:0;}
+
+#lottery{position:absolute;left:0;margin-top:37.5%;top:0;.img-box;width:100%;
+  table{width:77%;margin:0 auto;
+    td{text-align:center;padding-top:2%;width:33%;
+      &.td_4,&.td_5,&.td_6{padding-top:3%;
+        span{top:1%}
+      }
+      &.td_7,&.td_8,&.td_9{padding-top:3%;
+        span{top:1%}
+      }
+      img{width:90%;}
+      &.active{position:relative;
+        span{display:block;}
+      }
+      span{display:none;position:absolute;left:-5%;top:-2%;width:110%;}
+    }
+  }
+  .red-btn{position: absolute;left:8%;top:114%;width:11.275rem;height:2.5rem;font-size:.85rem;line-height:2.125rem;color:#fff;text-align:center;background:url("../img/red_btn.png") no-repeat;background-size:100% 100%;}
+  .gray-btn{.red-btn;background:url("../img/gray_btn.png") no-repeat;background-size:100% 100%;}
+  .share-btn{position: absolute;width:4.15rem;height:2.5rem;line-height:2.125rem;text-align:center;color:#fff;font-size:.85rem;right:8%;top:114%;background:url("../img/share.png") no-repeat;background-size:100% 100%;}
+  .lay-share{position: absolute;z-index:2;width:9.425rem;height:3.25rem;right:0;top:100%;background:url("../img/lay-share.png") no-repeat;background-size:100% 100%;font-size:.75rem;line-height:3rem;line-height:2.5rem;text-indent:1.7rem;}
+}
+
+.activity-rules{background:#FAD736;
+  dl{padding:1.5rem;color:#4f2e2e;font-size:.65rem;
+    dt{font-weight:bold;}
+    dd{
+      p{line-height:1.15rem;}
+    }
+  }
+}
+
+.lay-box{position:fixed;background:#FFE467;z-index:3;margin:0 10%;width:80%;top:30%;padding-bottom:1.125rem;.border-radius(@radius:.25rem);
+  dt{text-align:center;padding-top:2rem;
+    h3{font-size:.8rem;line-height:.8rem;}
+    h4{font-size:1.1rem;line-height:1.1rem;padding-top:.6rem;color:#9d2e2e;font-weight:bold;}
+    p{font-size:.6rem;padding-top:.2rem;}
+  }
+  dd{padding:1rem 1.125rem 0 1.125rem;
+    a{display:block;color:#fff;height:2.25rem;line-height:2.25rem;text-align:center;.border-radius(@radius:.25rem);margin-top:.5rem;
+      &.lay-red-btn{background:#FF5E5E;}
+      &.lay-blue-btn{background:#657EFF;}
+    }
+  }
+}

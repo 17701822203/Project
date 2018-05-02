@@ -1,0 +1,9 @@
+Mob            绑定手机
+Ticket         门票
+Presentation   乐园介绍
+Center         个人中心
+Order          我的订单
+Info           个人信息
+Booking        订票成功
+Story          故事
+log            日志

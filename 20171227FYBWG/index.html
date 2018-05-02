@@ -1,0 +1,174 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#E8E8E8;">
+    <!--<view class="shadow"></view>-->
+
+    <!--<view class="PopBox1" style="top:4.55rem;">-->
+        <!--<view class="img-box"><img src="img/PopBg1.jpg"></view>-->
+        <!--<view class="PopTxt1">任务包的奖励已被抢空</view>-->
+        <!--<view class="PopBtn1"><button class="RedBtn">继续抢答</button><button class="CloseBtn"></button></view>-->
+    <!--</view>-->
+
+    <!--<view class="PopBox1" style="top:4.55rem;">-->
+        <!--<view class="img-box"><img src="img/PopBg2.jpg"></view>-->
+        <!--<view class="PopTxt1">答错啦！无缘奖励</view>-->
+        <!--<view class="PopBtn1"><button class="RedBtn">继续抢答</button><button class="CloseBtn"></button></view>-->
+    <!--</view>-->
+
+    <!--<view class="PopBox1" style="top:4.55rem;">-->
+        <!--<view class="img-box"><img src="img/PopBg3.jpg"></view>-->
+        <!--<view class="PopTxt1">你成功抢到</view>-->
+        <!--<view class="PopTxt2"><text>&yen;</text><text>5.00</text><text>火车票优惠券</text></view>-->
+        <!--<view class="PopTxt3"><text>可在“我的奖励”里查看&体现</text></view>-->
+        <!--<view class="PopBtn1"><button class="RedBtn">继续抢答</button><button class="CloseBtn"></button></view>-->
+    <!--</view>-->
+
+    <!--<view class="PopBox1" style="top:4.55rem;">-->
+        <!--<view class="img-box"><img src="img/PopBg3.jpg"></view>-->
+        <!--<view class="PopTxt1">你成功抢到</view>-->
+        <!--<view class="PopTxt2"><text>&yen;</text><text>5.00</text><text>现金红包</text></view>-->
+        <!--<view class="PopTxt3"><text>可在“我的奖励”里查看&体现</text></view>-->
+        <!--<view class="PopBtn1"><button class="RedBtn">继续抢答</button><button class="CloseBtn"></button></view>-->
+    <!--</view>-->
+
+    <!--<view style="display:none;" class="PopTxt">挑战失败 再试一次</view>-->
+
+
+
+    <view class="TopBG">
+        <!--<view class="TopLogo"><img src="img/logo.png"></view>-->
+        <!--<text class="CustomTxt">动物园里有大西几!大凶许!大脑斧 !梅发怒!小海疼!发福蝶!</text>-->
+        <!--<view class="VoiceBtnBox"><text>按住说出口令 即可抢红包&lt;!&ndash;灰色class="GrayBg"&ndash;&gt;</text></view>-->
+        <!--<view class="TopLink">-->
+            <!--<text class="left">更多题目</text>-->
+            <!--<text class="center">我的奖励</text>-->
+            <!--<text class="right">转发此题</text>-->
+        <!--</view>-->
+
+        <view class="TopLogo"><img src="img/logo.png"></view>
+        <view class="VoiceBtnBox2"><text>点击播放原音</text></view>
+        <view class="Give"><!--灰色按钮GrayBtn-->
+            <button class="judge">我孩子不见了<img class="Correct" src="img/Correct.png"></button>
+            <button class="judge">我们还见不<img class="Error" src="img/Error.png"></button>
+            <button>我鞋子不见了</button>
+            <button>以上都不对</button>
+        </view>
+        <view class="TopLink">
+            <text class="left">更多题目</text>
+            <text class="center">我的奖励</text>
+            <text class="right">转发此题</text>
+        </view>
+
+        <!--<view class="TopLogo"><img src="img/logo.png"></view>-->
+        <!--<view class="GiveImg"><img src="img/test.jpg"></view>-->
+        <!--<view class="Give">-->
+            <!--<button>上海话:超级赞</button>-->
+            <!--<button>陕西话:爸爸</button>-->
+            <!--<button>四川话:yeah</button>-->
+            <!--<button>以上都不对</button>-->
+        <!--</view>-->
+        <!--<view class="TopLink">-->
+            <!--<text class="left">更多题目</text>-->
+            <!--<text class="center">我的奖励</text>-->
+            <!--<text class="right">转发此题</text>-->
+        <!--</view>-->
+
+        <!--<view class="TopLogo"><img src="img/logo.png"></view>-->
+        <!--<view class="Explain">上海话中“结棍”是什么意思?</view>-->
+        <!--<view class="Give">-->
+            <!--<button>结实结实结实结结实</button>-->
+            <!--<button>厉害</button>-->
+            <!--<button>结婚</button>-->
+            <!--<button>老顽固</button>-->
+        <!--</view>-->
+        <!--<view class="TopLink">-->
+            <!--<text class="left">更多题目</text>-->
+            <!--<text class="center">我的奖励</text>-->
+            <!--<text class="right">转发此题</text>-->
+        <!--</view>-->
+
+
+
+
+
+    </view>
+    <view class="BtmWrap">
+        <text class="Summary">共10000个奖励，已抢3298份</text>
+        <view class="DetailsList">
+            <view class="DetailsTx"><img src="http://img2.imgtn.bdimg.com/it/u=2450994032,3525797548&fm=27&gp=0.jpg"></view>
+            <view class="DetailsTxt">
+                <view class="name">V.Chung</view>
+                <view class="date"><text>01-24</text><text>18:45</text><text>答对了</text></view>
+            </view>
+            <view class="MoneyRight">
+                <view class="MoneyTop"><text>&yen;</text><text>0.66</text></view>
+                <view class="MoneyBtm">现金红包</view>
+            </view>
+        </view>
+        <view class="DetailsList">
+            <view class="DetailsTx"><img src="http://img2.imgtn.bdimg.com/it/u=2450994032,3525797548&fm=27&gp=0.jpg"></view>
+            <view class="DetailsTxt">
+                <view class="name">V.Chung</view>
+                <view class="date"><text>01-24</text><text>18:45</text><text>答对了</text></view>
+            </view>
+            <view class="MoneyRight">
+                <view class="MoneyTop"><text>&yen;</text><text>0.66</text></view>
+                <view class="MoneyBtm">现金红包</view>
+            </view>
+        </view>
+        <view class="DetailsList">
+            <view class="DetailsTx"><img src="http://img2.imgtn.bdimg.com/it/u=2450994032,3525797548&fm=27&gp=0.jpg"></view>
+            <view class="DetailsTxt">
+                <view class="name">V.Chung</view>
+                <view class="date"><text>01-24</text><text>18:45</text><text>答对了</text></view>
+            </view>
+            <view class="MoneyRight">
+                <view class="MoneyTop"><text>&yen;</text><text>0.66</text></view>
+                <view class="MoneyBtm">现金红包</view>
+            </view>
+        </view>
+    </view>
+</body>
+</html>

@@ -1,0 +1,491 @@
+/*Created by huang.jun on 17-12-05*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFangSC-Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Layer1 {
+  width: 16.35rem;
+  font-family: PingFangHK-Regular;
+  position: fixed;
+}
+.Layer1 .LayerTitle {
+  width: 16.35rem;
+  font-size: 0;
+}
+.Layer1 .LayerTitle img {
+  width: 100%;
+}
+.Layer1 .LayerWrap {
+  width: 16.125rem;
+  background: #fff;
+  text-align: center;
+  -webkit-border-radius: 0 0 0.5rem 0.5rem;
+  -moz-border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.Layer1 .LayerWrap h4,
+.Layer1 .LayerWrap h5 {
+  font-size: .75rem;
+  line-height: .75rem;
+  font-weight: normal;
+}
+.Layer1 .LayerWrap h4 {
+  padding-top: 1.6rem;
+}
+.Layer1 .LayerWrap h5 {
+  padding-top: .75rem;
+}
+.Layer1 .LayerWrap h5 b {
+  font-size: 1.25rem;
+  color: #ff1e00;
+}
+.Layer1 .LayerWrap .BtnBox {
+  padding-top: 1.3rem;
+}
+.Layer1 .LayerWrap .BtnBox span {
+  width: 13.05rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  text-align: center;
+  display: inline-block;
+  -webkit-border-radius: 2.2rem;
+  -moz-border-radius: 2.2rem;
+  border-radius: 2.2rem;
+  background-color: #FF1E00;
+  background-image: -webkit-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: -moz-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: -o-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: -ms-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: linear-gradient(left, #FF1E00, #FF5400);
+  font-size: .75rem;
+  color: #fff;
+}
+.Layer1 .LayerWrap .BtmTxt {
+  text-align: center;
+  font-size: 0;
+  padding: .65rem 0;
+}
+.Layer1 .LayerWrap .BtmTxt img {
+  width: 100%;
+}
+.Layer1 .LayerWrap .BtmTxt img {
+  width: 7.925rem;
+}
+.Layer1 .CloseBtn {
+  left: 50%;
+  width: 1.825rem;
+  height: 1.825rem;
+  background: url("../img/CloseBtn.png") no-repeat;
+  background-size: 100% 100%;
+  margin-left: -0.9125rem;
+  bottom: -3rem;
+  position: absolute;
+}
+.Layer2 {
+  width: 16.35rem;
+  font-family: PingFangHK-Regular;
+  position: fixed;
+}
+.Layer2 .LayerTitle {
+  width: 16.35rem;
+  font-size: 0;
+  position: relative;
+}
+.Layer2 .LayerTitle img {
+  width: 100%;
+}
+.Layer2 .LayerTitle .TopTxt {
+  font-family: AdobeHeitiStd-Regular;
+  font-size: .975rem;
+  line-height: .975rem;
+  color: #fff;
+  position: absolute;
+  top: 2rem;
+  text-align: center;
+  width: 100%;
+}
+.Layer2 .LayerWrap {
+  width: 16.125rem;
+  background: #fff;
+  text-align: center;
+  -webkit-border-radius: 0 0 0.5rem 0.5rem;
+  -moz-border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.Layer2 .LayerWrap .CouponBg {
+  padding: 1.05rem 0 .925rem 0;
+}
+.Layer2 .LayerWrap .CouponBg dl {
+  width: 13.125rem;
+  height: 4.95rem;
+  background: url("../img/CouponBg.png") no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.Layer2 .LayerWrap .CouponBg dl dt {
+  width: 4.125rem;
+  float: left;
+  position: relative;
+  color: #ff0000;
+}
+.Layer2 .LayerWrap .CouponBg dl dt b,
+.Layer2 .LayerWrap .CouponBg dl dt strong {
+  float: left;
+  font-weight: normal;
+}
+.Layer2 .LayerWrap .CouponBg dl dt b {
+  padding-left: .95rem;
+  font-size: 1.05rem;
+  padding-top: 1.7rem;
+}
+.Layer2 .LayerWrap .CouponBg dl dt strong {
+  font-size: 2.15rem;
+  line-height: 2.15rem;
+  padding-top: 1rem;
+}
+.Layer2 .LayerWrap .CouponBg dl dt span {
+  position: absolute;
+  width: 2.375rem;
+  height: .725rem;
+  line-height: .75rem;
+  text-align: center;
+  border: 1px solid #FF0000;
+  font-family: AdobeHeitiStd-Regular;
+  font-size: .55rem;
+  left: .825rem;
+  top: 3.15rem;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  border-radius: 0.1rem;
+}
+.Layer2 .LayerWrap .CouponBg dl dd {
+  width: 8.775rem;
+  float: right;
+  text-align: center;
+}
+.Layer2 .LayerWrap .CouponBg dl dd h4 {
+  line-height: 1.05rem;
+  font-size: 1.05rem;
+  padding-top: 1.35rem;
+}
+.Layer2 .LayerWrap .CouponBg dl dd p {
+  line-height: .8rem;
+  font-size: .8rem;
+  padding-top: .4rem;
+  color: #333;
+}
+.Layer2 .LayerWrap .BtnBox span {
+  width: 13.05rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  text-align: center;
+  display: inline-block;
+  -webkit-border-radius: 2.2rem;
+  -moz-border-radius: 2.2rem;
+  border-radius: 2.2rem;
+  background-color: #FF1E00;
+  background-image: -webkit-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: -moz-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: -o-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: -ms-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: linear-gradient(left, #FF1E00, #FF5400);
+  font-size: .75rem;
+  color: #fff;
+}
+.Layer2 .LayerWrap .BtmTxt {
+  text-align: center;
+  font-size: 0;
+  padding: 1.3rem 0 .65rem 0;
+}
+.Layer2 .LayerWrap .BtmTxt img {
+  width: 100%;
+}
+.Layer2 .LayerWrap .BtmTxt img {
+  width: 7.925rem;
+}
+.Layer2 .LayerWrap .fxgz {
+  padding: 1.25rem 1.5rem 0 1.5rem;
+}
+.Layer2 .LayerWrap .fxgz dt {
+  font-size: .65rem;
+  line-height: .65rem;
+  height: .65rem;
+  position: relative;
+}
+.Layer2 .LayerWrap .fxgz dt:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #E4E4E4;
+  left: 0;
+  top: 50%;
+  margin-top: -0.5px;
+}
+.Layer2 .LayerWrap .fxgz dt span {
+  position: relative;
+  color: #666;
+  background: #fff;
+  padding: 0 1rem;
+  z-index: 2;
+}
+.Layer2 .LayerWrap .fxgz dd {
+  padding-top: .5rem;
+}
+.Layer2 .LayerWrap .fxgz dd p {
+  font-size: .6rem;
+  line-height: 1rem;
+}
+.Layer2 .LayerWrap .fxgz dd p b {
+  color: #ff1e00;
+  font-size: 1rem;
+}
+.Layer2 .CloseBtn {
+  left: 50%;
+  width: 1.825rem;
+  height: 1.825rem;
+  background: url("../img/CloseBtn.png") no-repeat;
+  background-size: 100% 100%;
+  margin-left: -0.9125rem;
+  bottom: -3rem;
+  position: absolute;
+}
+.Layer3 {
+  background-color: #FF8800;
+  background-image: -webkit-linear-gradient(left, #FF8800, #FF0000);
+  background-image: -moz-linear-gradient(left, #FF8800, #FF0000);
+  background-image: -o-linear-gradient(left, #FF8800, #FF0000);
+  background-image: -ms-linear-gradient(left, #FF8800, #FF0000);
+  background-image: linear-gradient(left, #FF8800, #FF0000);
+  width: 16.075rem;
+  padding: 0 1.45rem 1.5rem 1.45rem;
+  position: fixed;
+}
+.Layer3 .LayerTitle {
+  height: 7.075rem;
+}
+.Layer3 .LayerTitle:after {
+  content: "";
+  position: absolute;
+  width: 18.975rem;
+  height: 6.75rem;
+  background: url("../img/TopBg.png") no-repeat;
+  background-size: 18.975rem 6.75rem;
+  left: -1.45rem;
+  top: 0;
+}
+.Layer3 .LayerTitle dl {
+  position: relative;
+  z-index: 2;
+}
+.Layer3 .LayerTitle dl dt {
+  font-size: .95rem;
+  line-height: .95rem;
+  color: #fff;
+  text-align: center;
+  padding-top: 2.25rem;
+}
+.Layer3 .LayerTitle dl dd {
+  font-size: 0;
+  text-align: center;
+  padding-top: .3rem;
+}
+.Layer3 .LayerTitle dl dd img {
+  width: 100%;
+}
+.Layer3 .LayerTitle dl dd img {
+  width: 13rem;
+}
+.Layer3 .LayerWrap {
+  background: #fff;
+  padding: 0 1.45rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.Layer3 .LayerWrap .CouponBg {
+  padding: 1.2rem 0 1.05rem 0;
+}
+.Layer3 .LayerWrap .CouponBg dl {
+  width: 13.125rem;
+  height: 4.95rem;
+  background: url("../img/CouponBg.png") no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+.Layer3 .LayerWrap .CouponBg dl dt {
+  width: 4.125rem;
+  float: left;
+  position: relative;
+  color: #ff0000;
+}
+.Layer3 .LayerWrap .CouponBg dl dt b,
+.Layer3 .LayerWrap .CouponBg dl dt strong {
+  float: left;
+  font-weight: normal;
+}
+.Layer3 .LayerWrap .CouponBg dl dt b {
+  padding-left: .95rem;
+  font-size: 1.05rem;
+  padding-top: 1.7rem;
+}
+.Layer3 .LayerWrap .CouponBg dl dt strong {
+  font-size: 2.15rem;
+  line-height: 2.15rem;
+  padding-top: 1rem;
+}
+.Layer3 .LayerWrap .CouponBg dl dt span {
+  position: absolute;
+  width: 2.375rem;
+  height: .725rem;
+  line-height: .75rem;
+  text-align: center;
+  border: 1px solid #FF0000;
+  font-family: AdobeHeitiStd-Regular;
+  font-size: .55rem;
+  left: .825rem;
+  top: 3.15rem;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  border-radius: 0.1rem;
+}
+.Layer3 .LayerWrap .CouponBg dl dd {
+  width: 8.775rem;
+  float: right;
+  text-align: center;
+}
+.Layer3 .LayerWrap .CouponBg dl dd h4 {
+  line-height: 1.05rem;
+  font-size: 1.05rem;
+  padding-top: 1.35rem;
+}
+.Layer3 .LayerWrap .CouponBg dl dd p {
+  line-height: .8rem;
+  font-size: .8rem;
+  padding-top: .4rem;
+  color: #333;
+}
+.Layer3 .LayerWrap .LayerBtnBox:after,
+.Layer3 .LayerWrap .LayerBtnBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Layer3 .LayerWrap .LayerBtnBox span {
+  width: 6.375rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  background-color: #FF1E00;
+  background-image: -webkit-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: -moz-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: -o-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: -ms-linear-gradient(left, #FF1E00, #FF5400);
+  background-image: linear-gradient(left, #FF1E00, #FF5400);
+  -webkit-border-radius: 2.2rem;
+  -moz-border-radius: 2.2rem;
+  border-radius: 2.2rem;
+  text-align: center;
+  color: #fff;
+  font-size: .75rem;
+}
+.Layer3 .LayerWrap .LayerBtnBox .Btn-left {
+  float: left;
+}
+.Layer3 .LayerWrap .LayerBtnBox .Btn-Right {
+  float: right;
+}
+.Layer3 .LayerWrap .fxgz {
+  padding-top: 1.25rem;
+}
+.Layer3 .LayerWrap .fxgz dt {
+  font-size: .65rem;
+  line-height: .65rem;
+  height: .65rem;
+  position: relative;
+  text-align: center;
+}
+.Layer3 .LayerWrap .fxgz dt:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #E4E4E4;
+  left: 0;
+  top: 50%;
+  margin-top: -0.5px;
+}
+.Layer3 .LayerWrap .fxgz dt span {
+  position: relative;
+  color: #666;
+  background: #fff;
+  padding: 0 1rem;
+  z-index: 2;
+}
+.Layer3 .LayerWrap .fxgz dd {
+  padding-top: .5rem;
+}
+.Layer3 .LayerWrap .fxgz dd p {
+  font-size: .6rem;
+  line-height: .875rem;
+  color: #666;
+  margin-top: .25rem;
+}
+.Layer3 .LayerWrap .BtmTxt {
+  text-align: center;
+  font-size: 0;
+  padding: .65rem 0;
+}
+.Layer3 .LayerWrap .BtmTxt img {
+  width: 100%;
+}
+.Layer3 .LayerWrap .BtmTxt img {
+  width: 7.925rem;
+}
+.Layer3 .CloseBtn {
+  left: 50%;
+  width: 1.825rem;
+  height: 1.825rem;
+  background: url("../img/CloseBtn.png") no-repeat;
+  background-size: 100% 100%;
+  margin-left: -0.9125rem;
+  bottom: -3rem;
+  position: absolute;
+}

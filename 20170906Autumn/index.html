@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+<body ontouchstart="" onmouseover="">
+    <!--活动规则开始-->
+    <section style="display:none;">
+        <div class="shadow"></div>
+        <i class="CloseBtn"></i>
+        <div class="guize"><img src="img/guize.jpg"></div>
+    </section>
+    <!--活动规则开始-->
+
+    <article>
+        <div class="nav img-box">
+            <img class="navBg" src="img/nav.jpg">
+            <!--链接图片-->
+            <a href="###"><img class="link1" src="img/link.png"></a>
+            <a href="###"><img class="link2" src="img/link.png"></a>
+            <a href="###"><img class="link3" src="img/link.png"></a>
+            <a href="###"><img class="link4" src="img/link.png"></a>
+        </div>
+        <style>
+            .nav{position:relative;}
+            .navBg{width:100%;}
+            .link1,.link2,.link3,.link4{width:25%;position:absolute;top:0;}
+            .link1{left:0;}
+            .link2{left:25%;}
+            .link3{left:50%;}
+            .link4{left:75%;}
+        </style>
+        <div class="TopAmBgBox">
+            <!--<img class="cloudIcon1" src="img/cloudIcon1.png">-->
+            <img class="cloudIcon2" src="img/cloudIcon2.png">
+            <img class="cloudIcon3" src="img/cloudIcon3.png">
+            <!--<img class="cloudIcon4" src="img/cloudIcon4.png">-->
+            <img src="img/TopAmBg.jpg">
+            <img class="GoldIcon" src="img/GoldIcon.png">
+            <img class="GoldIcon2" src="img/GoldIcon2.png">
+            <img class="ShuntIcon" src="img/Shunt.png">
+            <img class="mask1" src="img/mask1.png">
+            <img class="mask2" src="img/mask2.png">
+            <img class="CraneIcon" src="img/CraneIcon.png">
+            <img class="CraneBtm"  src="img/CraneBtm.png">
+            <img class="check1" src="img/check1.png">
+            <img class="Red1" src="img/Red1.png">
+            <img class="Red2" src="img/Red2.png">
+            <img class="Red3" src="img/Red1.png">
+            <img class="Red4" src="img/Red2.png">
+            <img class="check2" src="img/check2.png">
+            <img class="mask3" src="img/mask3.png">
+            <img class="ship" src="img/ship.png">
+            <img class="Top-Title" src="img/Top-Title.png">
+            <a class="TopBtn" href="###">我发起的瓜分</a>
+            <a class="LayBtn" href="###">规则</a>
+        </div>
+        <div class="step"><img src="img/step.png"></div>
+        <div class="BtmBg">
+            <div class="bus-custom">
+                <span class="CityNameLeft">上海</span>
+                <span class="CityNameRight">哈尔滨东</span>
+                <a class="Change" href="###"></a>
+                <span class="Date">01月19日</span>
+                <span class="Week">周日</span>
+            </div>
+            <div class="BtmBtn">
+                <a href="###">查询</a>
+            </div>
+        </div>
+    </article>
+</body>
+</html>
+

@@ -1,0 +1,16 @@
+/*Created by huang.jun on 17-01-03*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"PingFang SC Regular","Microsoft yahei",arial,Simsun,sans-serif;}
+
+article{background:#fff;}
+.top-txt{position:absolute;top:0;left:0;text-align:center;width:100%;margin-top:0.2rem;color:#999;font-size:0.6rem;overflow: hidden;height:1rem;}
+.top-txt ul{}
+.top-txt ul li{height:1rem;line-height:1rem;}
+
+.btm-btn{padding:0.675rem 0;position:fixed;background:rgba(0,0,0,0.45);z-index:1;bottom:0;width:100%;}
+.btm-btn a{padding:0 2.5rem;display:block;}
+
+

@@ -1,0 +1,44 @@
+/*Created by huang.jun on 17-05-10*/
+*{margin:0;padding:0;}
+a{ text-decoration:none;}
+ol,ul,li{list-style:none;}
+img{width:100%;}
+body{font-family:"PingFang SC Medium","Microsoft YaHei",sans-serif;}
+
+article{background:url("../img/TopBg.jpg") no-repeat #E6E2D4;background-size:100% 14.9rem;min-height:14.9rem;padding-bottom:4rem;}
+.Title1{height:0.975rem;background:url("../img/Title1.png") no-repeat center bottom;background-size:4.7rem 0.925rem;padding-top:15.5rem;}
+.TabNav{width:10.775rem;height:1.25rem;border:0.075rem solid #748C27;background:#748C27;-moz-border-radius:1rem;-webkit-border-radius:1rem;border-radius:1rem;overflow: hidden;margin:0 auto;}
+.TabNav li{float:left;width:50%;text-align: center;line-height:1.25rem;height:1.25rem;font-size:0.7rem;color:#748C27;background:#E6E2D4;}
+.TabNav li.on{background:#748C27;color:#fff;line-height:1.25rem;height:1.25rem;}
+.TabBox{position:relative;}
+.TabBox label{position:absolute;width:2.75rem;height:1.475rem;background:url("../img/Icon.png") no-repeat;background-size:100% 100%;color:#FFE83C;top:-0.5rem;right:18%;}
+.TabBox label small,.TabBox label strong,.TabBox label span{float:left;line-height:1.2rem;}
+.TabBox label small{font-size:0.6rem;padding-left:0.3rem;}
+.TabBox label strong{font-size:0.7rem;padding:0 0.1rem;}
+.TabBox label span{font-size:0.6rem;}
+.ListBox{background:#fff;-moz-border-radius:0.4rem;-webkit-border-radius:0.4rem;border-radius:0.4rem;padding:0.4rem 0;display:none;}
+.ListBox li{height:2.2rem;line-height:2.2rem;position:relative;}
+.ListBox li span{font-size:0.75rem;padding-left:1.125rem;}
+.ListBox li label{position: absolute;right:4.775rem;top:0.1rem;color:#903B3B;}
+.ListBox li label small{font-size:0.9rem;}
+.ListBox li label strong{font-size:0.9rem;}
+.ListBox li a{width:3rem;height:1.5rem;line-height:1.5rem;text-align:center;color:#fff;position: absolute;right:0.875rem;top:0.4rem;background:#748C27;font-size:0.7rem;-moz-border-radius:1rem;-webkit-border-radius:1rem;border-radius:1rem;}
+.Offers{width:18.35rem;height:2.85rem;background:url("../img/offers.png") no-repeat;background-size:100% 100%;margin:0 auto;position:relative;}
+.Offers strong{font-size:0.75rem;color:#fff;left:3.55rem;top:0.7rem;position:absolute;}
+.Offers span{position: absolute;left:11.3rem;top:0.6rem;font-size:0.9rem;color:#FFE83C;}
+.Offers a{position: absolute;right:0.9rem;top:0.45rem;width:3rem;height:1.5rem;background:#FFE83C;color:#903b3b;font-size:0.7rem;text-align: center;line-height:1.5rem;-moz-border-radius:1rem;-webkit-border-radius:1rem;border-radius:1rem;}
+.Title2{height:0.9rem;background:url("../img/Title2.png") no-repeat center bottom;background-size:3.725rem 0.9rem;padding-top:1.25rem;}
+.Title3{height:0.875rem;background:url("../img/Title3.png") no-repeat center bottom;background-size:3.7rem 0.875rem;padding-top:1.25rem;}
+.LayerButton{position:fixed;height:2.35rem;line-height:2.35rem;background:#903B3B;color:#fff;font-size:0.8rem;text-align:center;bottom:0;left:0;width:100%;-webkit-box-shadow:0 0 1rem 0.6rem rgba(0,0,0,0.1);}
+
+
+
+
+
+
+
+
+
+
+
+

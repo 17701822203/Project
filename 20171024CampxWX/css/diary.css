@@ -1,0 +1,11 @@
+.DiaryTop {
+  height: 5.15rem;
+  background: #fff;
+}
+.DiaryTop .DiaryTx {
+  float: left;
+}
+.DiaryTop .DiaryTx img {
+  width: 3.15rem;
+  height: 3.15rem;
+}

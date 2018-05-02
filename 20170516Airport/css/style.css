@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+body {
+  font-family: PingFang SC Medium, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 2;
+  background: #000;
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+}
+article {
+  background: #2BAB6E;
+}
+.img-box {
+  font-size: 0;
+}
+.ms-txt {
+  background: #269B6E;
+  text-align: center;
+  height: 3.175rem;
+  color: #fbf9e0;
+}
+.ms-txt dt {
+  font-size: .8rem;
+  line-height: .8rem;
+  padding-top: .65rem;
+}
+.ms-txt dd {
+  font-size: .65rem;
+  line-height: .65rem;
+  padding-top: .25rem;
+}
+.ms-txt dd a {
+  color: #fff668;
+  text-decoration: underline;
+  margin-left: 0.1rem;
+}
+.airport-ms {
+  background: #2BAB6E;
+  padding-left: 0.575rem;
+}
+.airport-ms:after,
+.airport-ms:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.airport-card {
+  width: 8.5rem;
+  height: 3.65rem;
+  background: url("../img/Airport.png") no-repeat;
+  background-size: 100% 100%;
+  margin: .3rem 0 0 .35rem;
+  float: left;
+}
+.airport-card .airport-card-top {
+  height: 1.775rem;
+  line-height: 1.775rem;
+  color: #fbf9e0;
+  font-size: .8rem;
+  padding-left: .5rem;
+}
+.airport-card .airport-card-top span {
+  float: left;
+}
+.airport-card .airport-card-top span:nth-of-type(2) {
+  padding-left: 1.2rem;
+  background: url("../img/icon.png") no-repeat 0.15rem 0.6rem;
+  background-size: 1.025rem .3rem;
+}
+.airport-card .airport-card-btm {
+  height: 1.875rem;
+  padding-left: .5rem;
+}
+.airport-card .airport-card-btm small {
+  color: #fc4029;
+  font-size: .8rem;
+}
+.airport-card .airport-card-btm b {
+  color: #fc4029;
+  font-size: 1.35rem;
+}
+.airport-card .airport-card-btm span {
+  color: #999;
+  font-size: .8rem;
+  text-decoration: line-through;
+  padding-left: .3rem;
+}
+.tc {
+  background: #2BAB6E;
+  font-size: 0;
+  padding: 0 .725rem 1rem .725rem;
+}
+.tc li {
+  padding-top: .5rem;
+}
+.tehui {
+  height: 3.85rem;
+  background: #269B6E;
+  text-align: center;
+}
+.tehui dt {
+  color: #fff668;
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+  font-family: PingFang SC Heavy, sans-serif;
+  padding-top: .75rem;
+}
+.tehui dd {
+  color: #fbf9e0;
+  font-size: .9rem;
+  line-height: .9rem;
+  padding-top: .5rem;
+}
+.touch-nav-box {
+  height: 2rem;
+  background: #FBF9E0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.touch-nav-box ul {
+  height: 2rem;
+  width: 58rem;
+}
+.touch-nav-box ul li {
+  float: left;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: .7rem;
+  margin-left: 1.6rem;
+}
+.touch-nav-box ul li.on {
+  position: relative;
+}
+.touch-nav-box ul li.on:after {
+  position: absolute;
+  width: .65rem;
+  height: .85rem;
+  content: "";
+  background: url("../img/icon3.png") no-repeat;
+  background-size: 100% 100%;
+  left: -1rem;
+  top: .5rem;
+}
+.touch-tab-box {
+  background: #2BAB6E;
+  padding: 0 .7rem;
+  position: relative;
+}
+.touch-tab-box ul {
+  padding-top: .65rem;
+  display: none;
+}
+.touch-tab-box ul li {
+  height: 2rem;
+  background: #2B996D;
+  padding-left: .5rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  margin-top: .5rem;
+  position: relative;
+}
+.touch-tab-box ul li span {
+  float: left;
+  line-height: 2rem;
+}
+.touch-tab-box ul li span:nth-of-type(1) {
+  font-size: .7rem;
+  color: #fbf9e0;
+  width: 12.5rem;
+}
+.touch-tab-box ul li span:nth-of-type(2) {
+  font-size: .75rem;
+  color: #fff668;
+}
+.touch-tab-box ul li:after {
+  content: "";
+  position: absolute;
+  width: .475rem;
+  height: .725rem;
+  background: url("../img/icon2.png") no-repeat;
+  background-size: 100% 100%;
+  right: 1.2rem;
+  top: .65rem;
+}
+.touch-tab-box:after {
+  width: 2rem;
+  height: 2rem;
+  content: "";
+  background: #FBF9E0;
+  border-left: 1px solid #999;
+  right: 0;
+  top: -2rem;
+  position: absolute;
+}
+.ButtonBox {
+  margin-top: .5rem;
+  padding: 0 .7rem 1.25rem .7rem;
+}
+.hb-box {
+  padding: 0 .75rem 1.65rem .75rem;
+  font-size: 0;
+}
+.title {
+  padding: 1.4rem 0 .5rem 0;
+  background: #F8F6DE;
+  font-size: 0;
+}
+.btm-box {
+  background: #F8F6DE;
+  font-size: 0;
+  padding: 0 .75rem 2.25rem .75rem;
+}
+.btm-box li {
+  padding-top: .25rem;
+}
+section {
+  display: none;
+}
+.guize {
+  width: 15.5rem;
+  background: #fff;
+  position: fixed;
+  z-index: 3;
+  left: 50%;
+  top: 50%;
+  margin-left: -7.75rem;
+  margin-top: -11.95rem;
+}
+.guize dt {
+  color: #333;
+  padding-top: 0.95rem;
+}
+.guize dt h3 {
+  font-size: 0.9rem;
+  line-height: 0.9rem;
+  text-align: center;
+}
+.guize dt p {
+  font-size: 0.65rem;
+  line-height: .9rem;
+  padding: 0.9rem 1.75rem 0 1.75rem;
+}
+.guize dd {
+  padding: 0 1.4rem;
+}
+.guize dd p {
+  padding-left: 0.375rem;
+  color: #666;
+  font-size: 0.65rem;
+  margin-top: 0.2rem;
+  line-height: .9rem;
+  position: relative;
+}
+.guize dd p span {
+  position: absolute;
+  width: .55rem;
+  height: .55rem;
+  text-align: center;
+  line-height: .55rem;
+  background: #999;
+  color: #fff;
+  font-size: .55rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
+  left: -0.5rem;
+  top: .1rem;
+}
+.guize dd .ok {
+  border-top: 1px solid #999;
+  margin-top: .6rem;
+}
+.guize dd .ok a {
+  display: block;
+  text-align: center;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: .9rem;
+  color: #666;
+}

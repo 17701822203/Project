@@ -1,0 +1,214 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <title>红包</title>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <section>
+        <div class="shadow"></div>
+        <div class="CouponLay">
+            <dl class="CouponTxt">
+                <dt>恭喜您</dt>
+                <dd>恭喜您! 领取10元船票新客券</dd>
+            </dl>
+            <div class="LayBtn"><a href="###">立即使用</a></div>
+            <i class="CloseBtn"></i>
+        </div>
+        <div class="LayBg" style="display:none;">
+            <i class="CloseBtn"></i>
+            <dl class="RuleList">
+                <dt>活动规则</dt>
+                <dd>
+                    <p>1、活动时间：2.8—2.28</p>
+                    <p>2、活动期间，同一用户仅限领取和使用一次5元船票通用券；10元优惠券仅限船票新客领取和使用1次。</p>
+                    <p>3、活动期间，仅限通过活动页预订Top10的航线，可享受5元立减活动，每个用户只可参与1次。通其他渠道预订，不能享受优惠价。</p>
+                    <p>4、5元/10元优惠券和Top10线路立减5元活动不可在同一订单中同时使用。</p>
+                    <p>5、在法律允许范围内，携程旅行网可能对活动的规则/条款作出适当修改/调整，且对本次活动拥有最终解释权。如有疑问请致电携程客服热线1010-6666。</p>
+                </dd>
+            </dl>
+        </div>
+    </section>
+    <article>
+        <div class="TopImg">
+            <img src="img/TopImg1.jpg">
+            <img src="img/TopImg2.jpg">
+            <img src="img/TopImg3.jpg">
+            <img src="img/TopImg4.jpg">
+            <img src="img/TopImg5.jpg">
+            <img src="img/TopImg6.jpg">
+        </div>
+        <div class="TopBg">
+            <div class="CouponsWrap">
+                <dl class="CouponsBg">
+                    <dt>
+                        <small>&yen;</small>
+                        <strong>10</strong>
+                        <ul>
+                            <li>船票新客券</li>
+                            <li>先到先得</li>
+                        </ul>
+                    </dt>
+                    <dd></dd>
+                </dl>
+                <dl class="CouponsBg On">
+                    <dt>
+                        <small>&yen;</small>
+                        <strong>10</strong>
+                    <ul>
+                        <li>船票新客券</li>
+                        <li>先到先得</li>
+                    </ul>
+                    </dt>
+                    <dd></dd>
+                </dl>
+            </div>
+            <div class="Title"><img src="img/Title.jpg"><span>规则</span></div>
+            <div class="ListBox">
+                <ul>
+                    <li>
+                        <h3>涠洲岛-涠洲岛</h3>
+                        <div>
+                            <span>&yen;</span>
+                            <big>100</big>
+                            <small>起</small>
+                            <cite>原价 &yen; 120</cite>
+                        </div>
+                        <button>立即秒杀</button>
+                    </li>
+                    <li>
+                        <h3>涠洲岛-涠洲岛</h3>
+                        <div>
+                            <span>&yen;</span>
+                            <big>100</big>
+                            <small>起</small>
+                            <cite>原价 &yen; 120</cite>
+                        </div>
+                        <button>立即秒杀</button>
+                    </li>
+                    <li>
+                        <h3>涠洲岛-涠洲岛</h3>
+                        <div>
+                            <span>&yen;</span>
+                            <big>100</big>
+                            <small>起</small>
+                            <cite>原价 &yen; 120</cite>
+                        </div>
+                        <button>立即秒杀</button>
+                    </li>
+                    <li>
+                        <h3>涠洲岛-涠洲岛</h3>
+                        <div>
+                            <span>&yen;</span>
+                            <big>100</big>
+                            <small>起</small>
+                            <cite>原价 &yen; 120</cite>
+                        </div>
+                        <button>立即秒杀</button>
+                    </li>
+                    <li>
+                        <h3>涠洲岛-涠洲岛</h3>
+                        <div>
+                            <span>&yen;</span>
+                            <big>100</big>
+                            <small>起</small>
+                            <cite>原价 &yen; 120</cite>
+                        </div>
+                        <button>立即秒杀</button>
+                    </li>
+                    <li>
+                        <h3>涠洲岛-涠洲岛</h3>
+                        <div>
+                            <span>&yen;</span>
+                            <big>100</big>
+                            <small>起</small>
+                            <cite>原价 &yen; 120</cite>
+                        </div>
+                        <button>立即秒杀</button>
+                    </li>
+                    <li>
+                        <h3>涠洲岛-涠洲岛</h3>
+                        <div>
+                            <span>&yen;</span>
+                            <big>100</big>
+                            <small>起</small>
+                            <cite>原价 &yen; 120</cite>
+                        </div>
+                        <button>立即秒杀</button>
+                    </li>
+                    <li>
+                        <h3>涠洲岛-涠洲岛</h3>
+                        <div>
+                            <span>&yen;</span>
+                            <big>100</big>
+                            <small>起</small>
+                            <cite>原价 &yen; 120</cite>
+                        </div>
+                        <button>立即秒杀</button>
+                    </li>
+                    <li>
+                        <h3>涠洲岛-涠洲岛</h3>
+                        <div>
+                            <span>&yen;</span>
+                            <big>100</big>
+                            <small>起</small>
+                            <cite>原价 &yen; 120</cite>
+                        </div>
+                        <button>立即秒杀</button>
+                    </li>
+                    <li>
+                        <h3>涠洲岛-涠洲岛</h3>
+                        <div>
+                            <span>&yen;</span>
+                            <big>100</big>
+                            <small>起</small>
+                            <cite>原价 &yen; 120</cite>
+                        </div>
+                        <button>立即秒杀</button>
+                    </li>
+                </ul>
+                <div class="Btn"><a href="###">更多优惠线路</a></div>
+            </div>
+            <div class="img-box"><img src="img/BtmImg.jpg"></div>
+        </div>
+    </article>
+</body>
+</html>

@@ -1,0 +1,259 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="" style="background:#84B148;">
+    <section>
+        <span class="shadow-txt">活动尚未开启，敬请期待</span>
+    </section>
+    <article>
+        <div class="img-box"><a class="gz-btn" href="###"><img src="img/gz.png"></a><img src="img/TopImg1.jpg"><img src="img/TopImg2.jpg"><img src="img/TopImg3.jpg"></div>
+        <div class="WrapBg">
+
+            <!--==人数==-->
+            <div class="outnumber">
+                <span class="number-bg">1</span>
+                <span class="number-bg">2</span>
+                <span class="number-bg">3</span>
+                <span class="number-bg">4</span>
+                <span class="number-bg">5</span>
+                <span class="number-bg">6</span>
+                <span class="number-txt">个小伙伴在点亮</span>
+            </div>
+
+            <!--==点亮==-->
+            <div class="Entry">
+                <a class="on" href="###"></a>
+            </div>
+
+            <!--==汽车票==-->
+            <div class="bus-title">
+                <i class="a"></i>
+                <nav id="TopNav">
+                    <ul>
+                        <li class="on" id="scroll_a">汽车票</li>
+                        <li id="scroll_b">船票</li>
+                        <li id="scroll_c">机场专线</li>
+                        <li id="scroll_d">旅游专线</li>
+                    </ul>
+                </nav>
+                <dl>
+                    <dt>汽车票</dt>
+                    <dd>新客预订返现5元</dd>
+                </dl>
+            </div>
+            <dl class="bus-box">
+                <dt><img src="img/top-bg-bus.jpg"></dt>
+                <dd><a href="###">预订车票</a></dd>
+            </dl>
+
+            <!--==船票==-->
+            <dl class="title-top-bg">
+                <dt>船票<i class="b"></i></dt>
+                <dd>超低价线路5折起</dd>
+            </dl>
+            <dl class="list-box">
+                <dt><img src="img/top-bg-SteamerTicket.jpg"></dt>
+                <dd>
+                    <div>
+                        <strong>北海—涠洲岛</strong>
+                        <small>&yen;</small>
+                        <big>120</big>
+                        <span>起</span>
+                        <cite>免票后返</cite>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong>深圳—香港</strong>
+                        <small>&yen;</small>
+                        <big>120</big>
+                        <span>起</span>
+                        <cite>买二免一</cite>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong>上海—大阪</strong>
+                        <small>&yen;</small>
+                        <big>650</big>
+                        <span>起</span>
+                        <em>1200</em>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong>深圳—外伶仃岛</strong>
+                        <small>&yen;</small>
+                        <big>340</big>
+                        <span>起</span>
+                        <em>1200</em>
+                        <a href="###">预订</a>
+                    </div>
+                    <button><span>查看更多</span></button>
+                </dd>
+            </dl>
+            <!--==旅游==-->
+            <dl class="title-top-bg">
+                <dt>旅游专线<i class="c"></i></dt>
+                <dd>超低价线路6.5折起</dd>
+            </dl>
+            <dl class="list-box">
+                <dt><img src="img/top-bg-Tourism.jpg"></dt>
+                <dd>
+                    <div>
+                        <strong>乌镇—杭州</strong>
+                        <small>&yen;</small>
+                        <big>85</big>
+                        <span>起</span>
+                        <em>160</em>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong>乌镇—上海</strong>
+                        <small>&yen;</small>
+                        <big>85</big>
+                        <span>起</span>
+                        <em>160</em>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong>杭州—乌镇</strong>
+                        <small>&yen;</small>
+                        <big>85</big>
+                        <span>起</span>
+                        <em>160</em>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong>上海—乌镇</strong>
+                        <small>&yen;</small>
+                        <big>85</big>
+                        <span>起</span>
+                        <em>160</em>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong>丽江—泸沽湖</strong>
+                        <small>&yen;</small>
+                        <big>85</big>
+                        <span>起</span>
+                        <em>160</em>
+                        <a href="###">预订</a>
+                    </div>
+                    <button><span>查看更多</span></button>
+                </dd>
+            </dl>
+            <!--==机场专线==-->
+            <dl class="title-top-bg">
+                <dt>机场专线<i class="d"></i></dt>
+                <dd>超低价线路8.5折起</dd>
+            </dl>
+            <dl class="list-box">
+                <dt><img src="img/top-bg-Airport.jpg"></dt>
+                <dd>
+                    <div>
+                        <strong style="width:6.5rem;">启东—浦东机场</strong>
+                        <small>&yen;</small>
+                        <big>135</big>
+                        <span>起</span>
+                        <em>180</em>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong style="width:6.5rem;">海门—浦东机场</strong>
+                        <small>&yen;</small>
+                        <big>235</big>
+                        <span>起</span>
+                        <em>180</em>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong style="width:6.5rem;">无锡—浦东机场</strong>
+                        <small>&yen;</small>
+                        <big>345</big>
+                        <span>起</span>
+                        <em>180</em>
+                        <a href="###">预订</a>
+                    </div>
+                    <div>
+                        <strong style="width:6.5rem;">南通—浦东机场</strong>
+                        <small>&yen;</small>
+                        <big>123</big>
+                        <span>起</span>
+                        <em>180</em>
+                        <a href="###">预订</a>
+                    </div>
+                    <button><span>查看更多</span></button>
+                </dd>
+            </dl>
+
+            <!--==banner==-->
+            <ul class="banner-list">
+                <li><a href="###"><img src="img/banner.jpg"></a></li>
+                <li><a href="###"><img src="img/banner.jpg"></a></li>
+            </ul>
+        </div>
+    </article>
+    <script type="text/javascript">
+        $(document).ready(function (){
+            <!--==点击切换==-->
+            $("#TopNav li").each(function(index){
+                $(this).click(function(){
+                    $("#TopNav li").removeClass("on");
+                    $("#TopNav li").eq(index).addClass("on");
+                });
+            });
+            <!--==锚点==-->
+            $('#scroll_a').click(function(){$('html,body').animate({scrollTop:$('.a').offset().top}, 800);});
+            $('#scroll_b').click(function(){$('html,body').animate({scrollTop:$('.b').offset().top}, 800);});
+            $('#scroll_c').click(function(){$('html,body').animate({scrollTop:$('.c').offset().top}, 800);});
+            $('#scroll_d').click(function(){$('html,body').animate({scrollTop:$('.d').offset().top}, 800);});
+            $('#scroll_e').click(function(){$('html,body').animate({scrollTop:$('.e').offset().top}, 800);});
+            $('#scroll_f').click(function(){$('html,body').animate({scrollTop:$('.f').offset().top}, 800);});
+            $('#scroll_g').click(function(){$('html,body').animate({scrollTop:$('.g').offset().top}, 800);});
+        });
+        <!--==屏幕距离隐藏显示==-->
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 30 * fontSize){
+                $('#TopNav').addClass('Nav-List');
+            }else{
+                $('#TopNav').removeClass('Nav-List');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript">
+(function (doc, win) {
+  var docEl = doc.documentElement,
+	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+	recalc = function () {
+	  var clientWidth = docEl.clientWidth;
+	  if (!clientWidth) return;
+	  docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+	};
+ 
+  if (!doc.addEventListener) return;
+  win.addEventListener(resizeEvt, recalc, false);
+  doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+</script>
+</head>
+
+<body>
+	<article>
+    	<div><img src="img/bk1.jpg"></div>
+    	<div><img src="img/bk2.jpg"><a class="rbtn" href="###">立即预订</a></div>
+    	<div><img src="img/bk3.jpg"><a class="rbtn" href="###">立即预订</a></div>
+    	<div><img src="img/bk4.jpg"><a class="rbtn" href="###">立即预订</a></div>
+    	<div><img src="img/bk5.jpg"><a class="rbtn" href="###">立即预订</a></div>
+    	<div><img src="img/bk6.jpg"><a class="btn" href="###">立即预订</a></div>
+    </article>
+</body>
+</html>

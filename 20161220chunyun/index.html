@@ -1,0 +1,838 @@
+<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+	<title>春运抢票上携程</title>
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript" src="//webresource.c-ctrip.com/code/lizard/2.2/web/lite.seed.js" needWeiXin="true"></script>
+	<script type="text/javascript" src="//webresource.c-ctrip.com/code/lizard/2.2/web/3rdlibs/bridge.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/date.js" charset="utf-8"></script>
+	<script type="text/javascript" src="js/filter.js"></script>
+	<script src="js/flickity-docs.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jQuery.textSlider.js"></script>
+	<script type="text/javascript" src="js/loader.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        var fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+	<script>
+		var ua = navigator.userAgent,isInWechat = !!ua.match(/micromessenger/i),isInIOS = !!ua.match(/iphone|ipad|ipod/i),isInCtripApp = !!ua.match(/ctripwireless/i),isInQQ = !!ua.match(/qq/i),isInWebClient = !ua.match(/ctripwireless/i)&&(!ua.match(/micromessenger/i)&&!ua.match(/weibo/i));
+	</script>
+	<script type="text/javascript">
+		var arrayT = ['抢票', '相亲', '表白', '加薪', '健身', '放松', '怀旧', '请客', '卖萌', '孝顺', '购物', '拼车', '出行', '会友', '送礼', '旅行', '理财', '祈福'];
+		var arrayF = ['加班', '约炮', '调戏', '素颜', '暧昧', '求关注', '赖床', '八卦', '话唠', '损人', '夜店', '生气', '醉酒'];
+		var arrayTips = ['<li>抢票时记得勾选时间段</li><li>后台将搜索该时段内所有余票并自动下单</li>', '<li>下单时勾选信用抢</li><li>先抢票，后扣款，不出车票不付钱！</li>', '<li>选择改签抢票，系统智能改签！</li><li>原车票保底，新车票一出立即升级！</li>',
+		'<li>突破预售极限，63天超长预售期</li><li>赶快预约抢票，快人一步！</li>',
+		'<li>抢票黑科技：24小时VIP抢票通道</li><li>半夜自动刷票，全天无歇，成功率翻番</li>'];
+		var startDate = '2016-12-22';
+		var controlDay = 29;
+		
+		var shareOption = {
+			imageUrl: "https://pages.ctrip.com/commerce/promote/201612/train/unionpayh5/img/share.jpg",
+			title: '春运抢票上携程，最高可得60元抢票券，24小时光速秒票！',
+			text: "放票即抢，一键到手,云端24小时实时监控,自动开枪，智能占座",
+			linkUrl: "https://pages.ctrip.com/commerce/promote/201612/train/unionpayh5/index.html"
+		}
+		
+		var clientID = cAuth = imgToken = msgToken = '';
+		
+		var filter = new Filter();
+		var msgCodeFlag = true;
+		
+		if(isInCtripApp){
+			var app = {
+				callback: function(json_obj) {
+					var tagname = json_obj.tagname;
+					if (tagname == 'web_view_finished_load') {
+						CtripUtil.app_init_member_H5_info();
+					
+						var nav_bar_config_json = {
+							"center": [{"tagname":"title","value": "春运抢票上携程"}],
+							"right": [{ "tagname": "share", "value": '分享'}]
+						};
+						var json_str = JSON.stringify(nav_bar_config_json);
+						CtripBar.app_refresh_nav_bar(json_str);
+					}else if(tagname == 'share'){
+						var dataList = [{
+							shareType: "Default",
+							imageUrl: shareOption.imageUrl,
+							title: shareOption.title,
+							text: shareOption.text,
+							linkUrl: shareOption.linkUrl
+						}];
+
+						CtripShare.app_call_custom_share(dataList, '', {'isDisableShareResultToast' : true});
+					}else if(tagname == 'call_custom_share'){
+						if(!json_obj.hasOwnProperty('error_code')){
+							//window.location = 'http://m.ctrip.com';
+						}
+					}else if(tagname == 'init_member_H5_info'){
+						if(json_obj.hasOwnProperty('param')){
+							clientID = json_obj.param.clientID;
+							
+							if(json_obj.param.hasOwnProperty('userInfo')){
+								cAuth = json_obj.param.userInfo.data.Auth;
+							}
+						}
+					}else if(tagname == 'member_login'){
+						if(json_obj.hasOwnProperty('param')){
+							clientID = json_obj.param.clientID;
+							
+							if(json_obj.param.hasOwnProperty('data')){
+								cAuth = json_obj.param.data.Auth;
+								
+								sendCoupon();
+							}else{
+								CtripUser.app_member_login();
+							}
+						}
+					}
+				}
+			};
+		}		
+		
+		if(isInWechat){
+			LizardLite.weixinReady(function(cShell){    
+				var options = {
+					title: shareOption.title,
+					desc: shareOption.text,
+					// 链接地址
+					href: shareOption.linkUrl,
+					// 分享图标
+					icon: shareOption.imageUrl
+				};
+				try{
+					cShell
+						.share(options)
+						.done(function(){})
+						.fail(function(){});
+				}catch(e){
+				}
+			  //cShell.share.run( function () { alert("分享成功")/* 分享成功 */ },function (err) {alert("吞吞吐吐") /* 分享失败 */ },options)
+			});
+		}
+		
+		$(document).ready(function(){
+			initCalendar();
+			
+			//getLogo();
+			
+			refreshCode();
+			
+			initTips();
+		
+            //翻牌子
+            $('.ul-box li').click(function() {
+                var obj = $(this).children('figure');
+				
+				if(obj.find('figcaption').is(":hidden")){
+					obj.addClass('Positive2');
+					obj.find('figcaption').fadeIn();
+				}else{
+					obj.addClass('Positive2');
+					obj.find('figcaption').fadeOut();
+				}
+				
+				setTimeout(function(){
+					obj.removeClass('Positive2');
+				}, 1000);
+            });
+			
+			$('.top-btn').click(function(){
+				if(isInCtripApp){
+					openUrl('ctrip://wireless/train_qiangpiao');
+				}else{
+					openUrl("http://m.ctrip.com/webapp/train/qiangpiao/info?autoawaken=close&hiderecommapp=1&popup=close");
+				}
+			})
+			
+			$('.go-home-btn').click(function(){
+				if(isInCtripApp){
+					openUrl('ctrip://wireless/h5?path=car&page=index.html');
+				}else{
+					openUrl("http://m.ctrip.com/webapp/car/?autoawaken=close&hiderecommapp=1&popup=close");
+				}
+			})
+			
+			$('.go-bus-home-btn').click(function(){
+				if(isInCtripApp){
+					CtripUtil.app_open_url("https://m.ctrip.com/html5/bus/huodong/20161212/index.html?disable_redirect_https=1&popup=close", 0);
+				}else{
+					openUrl("https://m.ctrip.com/html5/bus/huodong/20161212/index.html?disable_redirect_https=1&popup=close");
+				}
+			})
+			
+			$('.btn-yzm').click(function(){
+				if(msgCodeFlag){
+					getMessageCode();
+				}
+			})
+			
+            //锚点
+            $('li.qpmj').click(function(){
+				if(isInCtripApp){
+					CtripUtil.app_open_url("http://unionpaycoupon.cagoe.com/?from=singlemessage&isappinstalled=0", 0);
+				}else{
+					openUrl("http://unionpaycoupon.cagoe.com/?from=singlemessage&isappinstalled=0");
+				}
+			});
+			
+            $('li.nav1').click(function(){$('html,body').animate({scrollTop:$('.md1').offset().top}, 800);});
+            $('li.nav2').click(function(){$('html,body').animate({scrollTop:$('.md2').offset().top}, 800);});
+            $('li.nav3').click(function(){$('html,body').animate({scrollTop:$('.md3').offset().top}, 800);});
+			
+            //弹窗
+            $(".hb-icon").click(function(){
+                if(isInCtripApp){
+					if(cAuth){
+						sendCoupon();
+					}else{
+						showSection('hongbao');
+					}
+				}else{
+					LizardLite.Member.isLogin(function(data){
+						if(!data){
+							showSection('hongbao');
+						}else{
+							cAuth = LizardLite.Utils.getCookie('cticket');
+						
+							if(cAuth){
+								sendCoupon();
+							}else{
+								showSection('hongbao');
+							}
+						}
+					})
+				}
+
+            })
+			
+            $('.shadow').click(function(){
+				hideSection();
+			})
+			
+			$("#scrollDiv2").textSlider({line:2,speed:500,timer:1500});
+			
+			if(isInCtripApp && isInIOS){
+				var elem2 = document.createElement('div');
+				elem2.id = 'ios';
+				elem2.className = 'ios';
+				elem2.innerHTML = '该活动苹果不是赞助商，并且苹果也不会以任何形式参与其中！';
+				document.body.appendChild(elem2)
+				document.getElementById('ios').style.display = 'block';
+			}
+			
+			loader.start();
+			
+			setTimeout(function(){
+				$('.flickity-prev-next-button').remove();
+			}, 300);
+        })
+				
+		function initCalendar(){
+			$('.swiper-wrapper').html('');
+			
+			//var objDateNow = new BaseDate();
+			//objDateNow.addDay(36);
+			//
+			//var cDateNow = objDateNow.getFtv(objDateNow);
+			//if(!cDateNow){
+			//	var lunarNow = objDateNow.getLunar(objDateNow.getNativeDate());
+			//	if(!lunarNow.isLeap){
+			//		cDateNow = objDateNow.getLFtv(lunarNow);
+			//	}
+			//	if(!cDateNow){
+			//		cDateNow = objDateNow.getCDay(lunarNow.getNativeDate().getDate());
+			//	}
+			//}
+			//
+			//$('.top-date dt span').eq(1).html(objDateNow.formate('M/D') + '&nbsp;&nbsp;腊月' + cDateNow);
+			
+			for(var i=0; i<3; i++){
+				var str = '<ul class="ul-box">';
+			
+				for(var j=0; j<8; j++){
+					var index = i * 8 + j;
+					var objDate = new BaseDate(startDate);
+			
+					str += '<li class="flip-3d"><figure><span class="paizi">';
+					objDate.addDay(index);
+					str += '<span>' + objDate.formate('M.D') + '</span><span>' + objDate.formate('周W') + '</span>'
+						 + '<b>可购</b><b>' + objDate.addDay(controlDay).formate('M.D') + '</b>';
+					
+					objDate.trimDay();
+					var cDate = objDate.getFtv(objDate);
+					
+					if(!cDate){
+						var lunar = objDate.getLunar(objDate.getNativeDate());
+						if(!lunar.isLeap){
+							cDate = objDate.getLFtv(lunar);
+						}
+						if(!cDate){
+							cDate = objDate.getCDay(lunar.getNativeDate().getDate());
+						}
+					}
+					
+					str += '<b>' + cDate + '</b></span><figcaption><b>宜</b><b>' + arrayT[Math.floor(Math.random() * arrayT.length)] + '</b>'
+						   + '<b>忌</b><b>' + arrayF[Math.floor(Math.random() * arrayF.length)] + '</b></figcaption></figure></li>';
+				}
+				
+				str += '</ul>';
+				$('.swiper-wrapper').append(str);
+			}
+		}
+		
+		function sendCoupon(){
+			var source = $G('source') ? $G('source'): 'ctrip';
+		
+			showSection('load');
+		
+			if(cAuth){
+				$.ajax({
+					type: "GET",
+					data:{
+						'cAuth': cAuth,
+						'act_type': '2017cy',
+						'client_id': source,
+						'requestType': 'rem'
+					},
+					url: 'https://order.tieyou.com/index.php?param=/activity/sendCtripCoupon.html',
+					dataType: "jsonp",
+					success:function(res){
+						if(res.state == "success"){
+							if(res.message == 60){
+								$('.q-box').append('<li><img src="img/q3.png"></li><li><img src="img/q3.png"></li><li><img src="img/q3.png"></li>');
+								showSection('result');
+							}else if(res.message == 5){
+								$('.q-box').append('<li><img src="img/q5.png"></li>');
+								showSection('result');
+							}else{
+								$('.success dt').html('领取成功！');
+								showSection('success');
+							}
+						}else if(res.state == 'exist'){
+							$('.success dt').html(res.message);
+							showSection('success');
+						}else{
+							showSection(res.message);
+						}
+					},
+					error: function(){
+						showSection('网络异常，请稍后再试');
+					}
+				})
+			}else{
+				if(!filter.filter($('.mobile'))){
+					showSection(filter.msg);
+					return false;
+				}
+				
+				var mobile = $('.mobile').val();
+				var imgCode = $('.input2').val();
+				var msgCode = $('.msgCode').val();
+				
+				if(!imgCode || imgCode.length < 4){
+					showSection('请输入正确的图片验证码');
+					return false;
+				}
+				
+				if(!msgCode || msgCode.length < 6){
+					showSection('请输入正确的短信验证码');
+					return false;
+				}
+				
+				$.ajax({
+					type: "GET",
+					data:{
+						'act_type': '2017cymessage',
+						'requestType': 'rem',
+						'mobile': mobile,
+						'token': msgToken,
+						'client_id': source,
+						'verify_code': msgCode
+					},
+					url: 'https://order.tieyou.com/index.php?param=/activity/sendCtripCoupon.html',
+					dataType: "jsonp",
+					success:function(res){
+						if(res.state == "success"){
+							if(res.message == '60'){
+								$('.q-box').append('<li><img src="img/q3.png"></li><li><img src="img/q3.png"></li><li><img src="img/q3.png"></li>');
+								showSection('result');
+							}else if(res.message == '5'){
+								$('.q-box').append('<li><img src="img/q5.png"></li>');
+								showSection('result');
+							}else{
+								$('.success dt').html('领取成功！');
+								showSection('success');
+							}
+						}else if(res.state == 'exist'){
+							$('.success dt').html(res.message);
+							showSection('success');
+						}else{
+							showSection(res.message);
+						}
+					},
+					error: function(){
+						showSection('网络异常，请稍后再试');
+					}
+				})
+			}
+		}
+		
+		function showSection(type){
+			if('load' == type){
+				$('section').show().find('.loading-box2').show().siblings('dl').hide();
+			}else if('success' == type){
+				$('section').show().find('.success').show().siblings('dl').hide();
+				//$('section').show().find('.hongbaoapp').show().siblings('dl').hide();
+			}else if('hongbao' == type){
+				$('section').show().find('.hongbaoh5').show().siblings('dl').hide();
+			}else if('result' == type){
+				$('section').show().find('.hongbaoapp').show().siblings('dl').hide();
+			}else{
+				$('.error dt').html(type);
+				$('section').show().find('.error').show().siblings('dl').hide();
+			}
+		}
+		
+		function hideSection(){
+			$('section').hide();
+		}
+		
+		function openUrl(url){
+			if(isInCtripApp){
+				CtripUtil.app_open_url(url, 1);
+			}else{
+				window.location.href = url;
+			}
+		}
+		
+		function book(){
+			if(isInCtripApp){
+				openUrl('ctrip://wireless/train_inquire');
+			}else{
+				openUrl("http://m.ctrip.com/webapp/train/?autoawaken=close&hiderecommapp=1&popup=close");
+			}
+		}
+		
+		function refreshCode(){
+			$('.input2').val('');
+			$.ajax({
+				type: "GET",
+				data: {
+					'requestType': 'remyz'
+				},
+				url: 'https://order.tieyou.com/index.php?param=yanzhengma/getYanzhengmaPic.html',
+				dataType: "jsonp",
+				success:function(res){
+					$('.imgCode').attr('src', 'data:image/png;base64,' + res.img);
+					imgToken = res.key;
+				},
+				error: function(){
+					showSection('网络异常，请稍后再试');
+				}
+			})
+		}
+		
+		function getMessageCode(){
+			if(!filter.filter($('.mobile'))){
+				showSection(filter.msg);
+				return false;
+			}
+			
+			var mobile = $('.mobile').val();
+			var imgCode = $('.input2').val();
+			
+			if(!imgCode || imgCode.length < 1){
+				showSection('请输入正确的图片验证码');
+				return false;
+			}
+			
+			$.ajax({
+				type: "GET",
+				data: {
+					'requestType': 'rem',
+					'mobile': mobile,
+					'imgCode': imgCode,
+					'token': imgToken
+				},
+				url: 'https://order.tieyou.com/index.php?param=/activity/sendCtripMsgCode',
+				dataType: "jsonp",
+				success:function(res){
+					if(res.code == 200){
+						msgCodeFlag = false;
+                        var countSecs = 60;
+						var intervalId = setInterval(function() {
+							countSecs--;
+							$('.btn-yzm').html(countSecs + 'S后重发');
+							if(countSecs <= 0){
+								clearInterval(intervalId);
+								countSecs = 0;
+								msgCodeFlag = true;
+								$('.btn-yzm').html('获取验证码');
+								return;
+							}
+						}, 1000);
+                        msgToken = res.token;
+                    }else{
+						showSection(res.message != '' ? res.message : "短信发送失败，请重试");
+                        refreshCode();
+                    }
+				},
+				error: function(){
+					showSection('网络异常，请稍后再试');
+				}
+			})
+		}
+		
+		//获取参数
+		function $G(){
+			var Url=document.URL;
+			var u,g,StrBack='';
+			if(Url.indexOf("#")!=-1)
+				Url=Url.split("#")[0];
+			u=Url.split("?");
+			if (u.length==1) g='';
+			else g=u[1];
+			if(g!=''){
+				gg=g.split("&");
+				var MaxI=gg.length;
+				str = arguments[0]+"=";
+				for(i=0;i<MaxI;i++){
+					if(gg[i].indexOf(str)==0) {
+						StrBack=gg[i].replace(str,"");
+						break;
+					}
+				}
+			}
+			return StrBack;
+		}
+
+		function getLogo(){
+			var source = $G('source');
+			var logo = '';
+
+			switch(source){
+				case 'hao123':
+					logo = 'logo1';
+					break;
+				case 'lvcha':
+					logo = 'logo2';
+					break;
+				case 'vc':
+					logo = 'logo3';
+					break;
+				case 'meizus':
+					logo = 'logo5';
+					break;
+				case '58':
+					logo = 'logo6';
+					break;
+				case 'qianbao':
+					logo = 'logo7';
+					break;
+				case 'fanli':
+					logo = 'logo8';
+					break;
+				case 'youpiao':
+					logo = 'logo9';
+					break;
+				default:
+					logo = 'logo4';
+					break;
+			}
+
+			$('.bg1').append('<i class="' + logo + '"></i>');
+		}
+
+		function initTips(){
+			for(var i=0; i<arrayTips.length; i++){
+				$('#scrollDiv2 ul').append(arrayTips[Math.floor(Math.random() * arrayTips.length)]);
+			}
+		}
+		
+		function goYuyue(){
+			var objDateNow = new BaseDate();
+			objDateNow.addDay(36);
+		
+			if(isInCtripApp){
+				openUrl('ctrip://wireless/train_inquire?c3=' + objDateNow.formate('YMD'));
+			}else{
+				openUrl("http://m.ctrip.com/webapp/train/?autoawaken=close&hiderecommapp=1&popup=close&dDate=" + objDateNow.formate('Y-M-D'));
+			}
+		}
+	</script>
+	<style type="text/css">
+		.loading-layer2:before,
+		.loading-cycle{background-image: url("data:image/png;base64,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") !important;background-size: 135px auto;background-repeat: no-repeat;position: absolute;}
+
+		/* loading layer */
+		.loading-box2 {  position: fixed;left:50%;top:50%;margin-left:-56px;margin-top: -56px; width:100%; z-index:3000;}
+		.loading-layer2 {background-color: #fff;width: 112px;height: 27px;padding-top: 85px;border-radius: 7px;z-index:10000;color: #666;font-size: 12px;text-align: center;}
+		.loading-layer2:before {content: "";width: 64px;height: 57px;background-position: -72px 0;top: 20px;left: 25px;}
+		.loading-cycle{width: 69px;height: 69px;background-position: 0 0;top: 10px;left: 20px;-webkit-animation:loading 1s linear 0s infinite;animation:loading 1s linear 0s infinite;
+		}
+		@-webkit-keyframes loading {
+			0% {
+				-webkit-transform: rotate(0deg);
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+			}
+		}
+		@keyframes loading {
+			0% {
+				transform: rotate(0deg);
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		#ios{ width:100%;padding-top:12px;margin-top:20px;font-size:10px;line-height:2;text-align:center;color:#999999; }
+	</style>
+</head>
+<body>
+	<div style="width: 18.75rem; overflow: hidden;">
+		<div class="loading">
+			<i class="yun-icon">
+				<span></span>
+			</i>
+			<div class="info-list" id="scrollDiv2">
+				<div style="height:1.9rem;overflow: hidden;">
+					<ul>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<section style="display:none">
+			<div class="shadow"></div>
+			<dl class="hongbao hongbaoapp" style="display:none;">
+				<div class="hongbao-top"></div>
+				<div class="hongbao-center">
+					<ul class="q-box">
+						
+					</ul>
+					<div class="btn-box"><button onclick="book()">立即使用</button></div>
+				</div>
+				<div class="hongbao-bottom"></div>
+			</dl>
+			<dl class="hongbao hongbaoh5" style="display:none;">
+				<div class="hongbao-top"></div>
+				<div class="hongbao-center">
+					<ul class="pop-input">
+						<li><input class="input1 mobile" filter-rule="phone" maxlength="11" autocomplete="off" type="tel" placeholder="输入手机号码"></li>
+						<li>
+							<input class="input2" maxlength="4" autocomplete="off" type="text" placeholder="输入图片验证码"><img class="imgCode" style="width:4.35rem;height:1.575rem;" onclick="refreshCode()">
+						</li>
+						<li><input class="input2 msgCode" maxlength="6" autocomplete="off" type="number" placeholder="输入短信验证码"><button class="btn-yzm">获取验证码</button></li>
+						<li><button class="ljlq" onclick="sendCoupon()">60元红包立即领取</button></li>
+					</ul>
+				</div>
+				<div class="hongbao-bottom"></div>
+			</dl>
+			<dl class="pop success" style="display:none;">
+				<dt></dt>
+				<dd><a href="javascript:void(0)" onclick="hideSection()">好的</a><a href="javascript:void(0)" onclick="book()">立即使用</a></dd>
+			</dl>
+			<dl class="pop error" style="display:none;">
+				<dt></dt>
+				<dd><a href="javascript:void(0)" onclick="hideSection()">知道了</a></dd>
+			</dl>
+			<dl class="loading-box2" style="display:none;">
+				<div class="loading-layer2">
+					游游努力加载中...
+					<div class="loading-cycle"></div>
+				</div>
+			</dl>
+		</section>
+		<div class="main_div">
+			<ul>
+				<li class="md1"></li>
+				<li class="md2"></li>
+				<li class="md3"></li>
+			</ul>
+			<nav>
+				<ul>
+					<li class="nav1"><a href="###"></a></li>
+					<li class="nav2"><a href="###"></a></li>
+					<li class="nav3"><a href="###"></a></li>
+					<li class="qpmj"><a href="###"></a></li>
+				</ul>
+			</nav>
+			<article>
+				<div class="bg1">
+					<!--<i class="hb-icon"></i>-->
+					<!--<i class="logo1"></i>-->
+					<!--<i class="logo2"></i>-->
+					<!--<i class="logo3"></i>-->
+					<!--<i class="logo4"></i>-->
+				</div>
+				<div class="bg2">
+					<i class="title1"></i>
+					<i class="left-btn"></i>
+					<i class="right-btn next"></i>
+					<dl class="top-date">
+						<dt>
+							<span>今日可预约除夕火车票</span>
+							<span>1/27&nbsp;&nbsp;除夕</span>
+						</dt>
+						<dd>
+							<a onclick="goYuyue()">去预约></a>
+						</dd>
+					</dl>
+					<div class="paizi-box" id="touchBox">
+						<div class="swiper-wrapper js-flickity" data-flickity-options='{ "wrapAround": true }'>
+							
+						</div>
+					</div>
+					<a class="btn top-btn">立即购票</a>
+				</div>
+				<div class="bg6">
+					<a class="btn top-btn">立即购票</a>
+				</div>
+				<div class="bg5">
+					<i class="title4"></i>
+						<span class="lhj-lay">
+							<span id="deng" class="deng"></span>
+							<span id="deng2" class="deng2"></span>
+							<span class="yaogan"></span>
+							<span id="d1"></span>
+							<span id="d2"></span>
+							<span id="d3"></span>
+							<span id="d4"></span>
+							<span id="d5"></span>
+							<div class="container">
+								<div class="num num1">
+									<div class="num-con num-con1">
+										<div class="num-img"></div>
+										<div class="num-img"></div>
+									</div>
+								</div>
+								<div class="num num2">
+									<div class="num-con num-con2">
+										<div class="num-img"></div>
+										<div class="num-img"></div>
+									</div>
+								</div>
+								<div class="num num3">
+									<div class="num-con num-con3">
+										<div class="num-img"></div>
+										<div class="num-img"></div>
+									</div>
+								</div>
+							</div>
+						</span>
+					<h3 class="title5"></h3>
+					<!--<button class="btm-btn">分享得暴击，中奖几率翻番</button>-->
+				</div>
+			</article>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var chance = 3;
+		
+		setChance(chance);
+	
+		//老虎机
+        $(".yaogan").click(function () {
+			if(chance > 0){
+				$("#d1").addClass("d1");
+				$("#d2").addClass("d2");
+				$("#d3").addClass("d3");
+				$("#d4").addClass("d4");
+				$("#d5").addClass("d5");
+				$("#deng").addClass("deng");
+				$("#deng2").addClass("deng2");
+				$(".yaogan").addClass("rod");
+				if(!flag){
+					flag=true;
+					reset();
+					letGo(Math.floor(Math.random()*10), Math.floor(Math.random()*10), Math.floor(Math.random()*10));
+					setTimeout(function () {
+						showSection('很遗憾，您没有中奖！');
+						chance --;
+						setChance(chance);
+					}, 3000);
+					index++;
+				}
+			}else{
+				showSection('抽奖机会已经用完');
+			}
+        });
+
+		var flag=false;
+        var index=0;
+        var TextNum1;
+        var TextNum2;
+        var TextNum3;
+
+        function letGo(a, b, c){
+			var unit = -4.85;
+		
+            $(".num-con1").animate({top:"-29.1rem"},800,"linear", function () {
+                $(this).css("top",0).animate({top: (a * unit) + "rem"}, 1000, "linear");
+            });
+            $(".num-con2").animate({top:"-29.1rem"},800,"linear", function () {
+                $(this).css("top",0).animate({top: (b * unit) + "rem"}, 1800, "linear");
+            });
+            $(".num-con3").animate({top:"-29.1rem"},800,"linear", function () {
+                $(this).css("top",0).animate({top: (c * unit) + "rem"},1300,"linear");
+            });
+			
+			setTimeout(function(){
+                flag = false;
+				$("#d1").removeClass("d1");
+				$("#d2").removeClass("d2");
+				$("#d3").removeClass("d3");
+				$("#d4").removeClass("d4");
+				$("#d5").removeClass("d5");
+				$("#deng").removeClass("deng");
+				$("#deng2").removeClass("deng2");
+				$(".yaogan").removeClass("rod");
+			}, 3000);
+        }
+		
+        function reset(){
+            $(".num-con1,.num-con2,.num-con3").css({top:"0rem"});
+        }
+		
+		function setChance(chance){
+			$('.title5').html('您还有' + chance + '次抽奖机会');
+		}
+	</script>
+	<input type='hidden' id="page_id" value="10320642761" />
+	<script type="text/javascript">
+		window.onload = function(){
+			;(function(){if(!window.$_bf||!window.$_bf.loaded){var a=new Date,b="?v="+a.getFullYear()+a.getMonth()+"_"+a.getDate(),a=document.createElement("script");a.type="text/javascript";a.charset="utf-8";a.async=!0;a.src="//webresource.c-ctrip.com/code/ubt/_mubt.min.js"+b;b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)}})();
+		}
+	</script>
+	<script src='https://w.cnzz.com/c.php?id=1260923486' language='JavaScript'></script>
+
+</body>
+</html>

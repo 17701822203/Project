@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/parts.js"></script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+<div class="ActivityRules">
+    <h4>活动规则</h4>
+    <div class="TitleImg"><img src="img/LayTopTxt1.jpg"></div>
+    <div class="hdTime">活动时间：2017.11.20-2017.12.10</div>
+    <dl class="ArList">
+        <dt>如何参与？</dt>
+        <dd>
+            <p><i></i>输入出发地和目的地，生成火车出行价格，并发起活动，邀请好友助攻。<span>好友助攻次数越多，获得火车票优惠金额就越高。</span></p>
+            <p><i></i>活动期间内，<span>每个用户仅限可发起一次0元坐火车活动，邀请好友助攻时限为24小时。</span>不同阶梯的火车出行优惠金额，在砍价时限内可累计获得。（同一用户名、手机号、设备号、订单联系人均视为同一用户）</p>
+        </dd>
+        <dt>有什么奖励？</dt>
+        <dd>
+            <p><i></i>求好友助攻的24小时内，不同的助攻次数，可获得不同的火车出行优惠金额。优惠券金额可累计获得。发起活动24小时后，自动截止。</p>
+            <p><i></i>从完成活动的用户中（发起24小时结束后。当天未满24小时的用户，助攻次数累计到第二天参与抽奖），<span>每天抽取前三位获得好友助攻次数最多的前三位发起者，获得免单奖励。</span></p>
+            <p><i></i>活动最终解释权归携程火车票所有。</p>
+        </dd>
+    </dl>
+</div>
+</body>
+</html>
+

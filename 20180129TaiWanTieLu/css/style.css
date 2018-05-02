@@ -1,0 +1,76 @@
+/*Created by huang.jun on 17-10-24*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang SC Regular, sans-serif;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .8;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.Button {
+  position: absolute;
+  left: 0;
+  top: 10%;
+  font-size: .9rem;
+  color: #fff;
+  width: 100%;
+}
+.Button li {
+  height: 2.15rem;
+  line-height: 2.15rem;
+  background: #ff8a00;
+  text-align: center;
+  margin: .8rem 16% 0 16%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.Button li:active {
+  opacity: .8;
+}
+.Button li span {
+  position: relative;
+}
+.Button li span:after {
+  content: "";
+  position: absolute;
+  right: -1.55rem;
+  top: -0.2rem;
+  width: 1.35rem;
+  height: 1.35rem;
+  background: url("../img/Icon.png") no-repeat;
+  background-size: 100% 100%;
+}

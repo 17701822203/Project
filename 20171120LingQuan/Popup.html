@@ -1,0 +1,100 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <section>
+        <div class="shadow"></div>
+        <div class="PopHb" style="display:none;">
+            <figure class="TopTitle">
+                <figcaption>邀请好友</figcaption>
+                <p>互得3元红包</p>
+            </figure>
+            <div class="HbWrap">
+                <b>3<span>元</span></b>
+            </div>
+            <p class="term">汽车票 7天内使用</p>
+            <div class="BtmBtnBox"><a href="###"></a></div>
+            <a class="CloseBtn" href="###"></a>
+        </div>
+        <div class="Pop2" style="display:none;">
+            <div class="TopTitle1"><img src="img/popTitle1.png"><p class="TopTitle1">互得3元红包奖励</p></div>
+            <div class="PopWrap">
+                <div class="CouponBox">
+                    <div class="CouponBor1">
+                        <div class="CouponLeft"><b>3<span>&yen;</span></b></div>
+                        <ul class="CouponRight">
+                            <li><span>APP专享</span></li>
+                            <li>汽车票红包</li>
+                            <li>7天内有效</li>
+                        </ul>
+                    </div>
+                    <a class="ShareBtn" href="###">分享领取</a>
+                </div>
+            </div>
+            <a class="CloseBtn" href="###"></a>
+        </div>
+        <div class="Pop2" style="display:;">
+            <div class="TopTitle1"><img src="img/popTitle2.png"><p class="TopTitle1">3元购票红包奖励</p></div>
+            <div class="PopWrap">
+                <div class="CouponBox">
+                    <div class="TopTips">已放入您的15899992222携程账号中</div>
+                    <div class="CouponBor2">
+                        <div class="CouponLeft"><b>3<span>&yen;</span></b></div>
+                        <ul class="CouponRight">
+                            <li><span>APP专享</span></li>
+                            <li>汽车票红包</li>
+                            <li>7天内有效</li>
+                        </ul>
+                    </div>
+                    <div class="PopBtnBox">
+                        <a class="PopBtnLeft" href="###">预订返程</a>
+                        <a class="PopBtnRight" href="###">立即查看</a>
+                    </div>
+                </div>
+            </div>
+            <a class="CloseBtn" href="###"></a>
+        </div>
+    </section>
+</body>
+</html>
+

@@ -1,0 +1,645 @@
+﻿<html class="ie"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320.1, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://img3.tieyou.com/js/jquery-1.4.2.min.js?v=20150707.12"></script>
+    <script>
+        var fontSize = 0;
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        fontSize = 20 * (clientWidth / 375);
+                        fontSize = (fontSize > 50) ? 50: fontSize;
+
+                        //如果是pc访问
+                        if(!/windows phone|iphone|android/ig.test(window.navigator.userAgent)) {
+                            fontSize = 20;
+                        }
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <script>document.addEventListener('touchstart',function(){},false);</script>
+    <script>
+        $(document).ready(function(e) {
+            function selectFrom(lowerValue, upperValue){
+                var choices = upperValue - lowerValue + 1;
+                return Math.floor(Math.random() * choices + lowerValue);
+            }
+            var width=$(window).width();
+            var a=setInterval(function(){foo()},500);
+            function foo(){
+                var num = selectFrom(0, width);
+                $(".Top-bg").append('<img style="left:'+num+'px;" class="rotation" src="img/xuehua.png" alt=""/>');
+            }
+        });
+        $(document).ready(function(){
+            $(".LayBtn1").click(function(){
+                $(".shadow,.Lay4").fadeIn();
+            })
+            $(".Lay4Btn,.shadow").click(function(){
+                $(".shadow,.Lay4").fadeOut();
+            })
+            $(".LayBtn2").click(function(){
+                $(".shadow,.Lay3").fadeIn();
+            })
+            $(".Lay3Btn,.shadow").click(function(){
+                $(".shadow,.Lay3").fadeOut();
+            })
+            $(".Explain1").click(function(){
+                $(".shadow,.Lay2").fadeIn();
+            })
+            $(".Lay2 .closeBtn,.shadow,.Lay2 .close a").click(function(){
+                $(".shadow,.Lay2").fadeOut();
+            })
+            $(".Explain2").click(function(){
+                $(".shadow,.Lay1").fadeIn();
+            })
+            $(".Lay1 .closeBtn,.shadow,.Lay1 .close a").click(function(){
+                $(".shadow,.Lay1").fadeOut();
+            })
+            //锚点
+            $('.top-icon').click(function(){$('html,body').animate({scrollTop:$('.top').offset().top}, 800);});
+            $('#TopNav li.nav1').click(function(){$('html,body').animate({scrollTop:$('.md1').offset().top}, 800);});
+            $('#TopNav li.nav2').click(function(){$('html,body').animate({scrollTop:$('.md2').offset().top}, 800);});
+            $('#TopNav li.nav3').click(function(){$('html,body').animate({scrollTop:$('.md3').offset().top}, 800);});
+            $('#TopNav li.nav4').click(function(){$('html,body').animate({scrollTop:$('.md4').offset().top}, 800);});
+            $('#TopNav li.nav5').click(function(){$('html,body').animate({scrollTop:$('.md5').offset().top}, 800);});
+            $('#TopNav li.nav6').click(function(){$('html,body').animate({scrollTop:$('.md6').offset().top}, 800);});
+            $("#TopNav li").first().addClass("on")
+            var nav=$("#TopNav li");
+            nav.click(function(){
+                $(this).addClass("on").siblings().removeClass("on");
+            })
+            //Tab
+            $(".tab-nav li").first().addClass("on")
+            $(".tab-box .CityList").first().css("display","block");
+            var tab=$(".tab-nav li");
+            tab.click(function(){
+                $(this).addClass("on").siblings().removeClass("on");
+                var index=tab.index(this);
+                $(".tab-box > .CityList")
+                        .eq(index).show()
+                        .siblings().hide()
+            })
+
+        })
+        //导航悬浮
+        $(window).scroll(function(){
+            var h_num=$(window).scrollTop();
+            if(h_num > 27.8 * fontSize){
+                $('#TopNav').addClass('nav_wrap_fix');
+            }else{
+                $('#TopNav').removeClass('nav_wrap_fix');
+            }
+        });
+    </script>
+    <script>
+        function scroll(){
+            $(".scroll ul").animate({"margin-left":"-5.9rem"},function(){
+                $(".scroll ul li:eq(0)").appendTo($(".scroll ul"))
+                $(".scroll ul").css({"margin-left":0})
+            })
+        }
+        setInterval(scroll,2001)
+    </script>
+</head>
+<body>
+    <em class="top"></em>
+    <section>
+
+        <div class="shadow" style="display:none;"></div>
+
+        <div class="layBox Lay1" style="margin-top:-9rem;display:none;">
+            <i class="closeBtn"></i>
+            <dl class="layTxt1">
+                <dt>活动规则</dt>
+                <dd>
+                    <p>领取时间：2017.03.01——2017.4.15</p>
+                    <p class="textIndent">领取条件：携程会员账号，每个用户活动期间仅限领取一次</p>
+                    <p>礼包包含：</p>
+                    <p>1）【携程专车】7折接送机券1张</p>
+                    <p>2）【超级巴士】8折接送机券1张</p>
+                    <p>3）【携程专车】7折接送站券1张</p>
+                    <p>4）【携程专车】8折专车券1张</p>
+                    <p style="padding-top:1rem;">优惠券详细使用规则可登录“我的携程-优惠券”查看</p>
+                    <p style="padding-top:1rem;">在法律允许范围内,携程旅行网可能对活动的规则/条款作出适当修改/调整,且对本次活动拥有最终解释权。如有疑问请致电携程客服热线1010-6666。</p>
+                </dd>
+            </dl>
+            <div class="close">
+                <a href="###">知道了</a>
+            </div>
+        </div>
+
+        <div class="layBox Lay2" style="margin-top:-9rem;display:none;">
+            <i class="closeBtn"></i>
+            <dl class="layTxt1">
+                <dt>活动规则</dt>
+                <dd>
+                    <p>领取时间：2017.03.01——2017.4.15</p>
+                    <p class="textIndent">领取条件：携程会员账号，每个用户活动期间仅限领取一次</p>
+                    <p>礼包包含：</p>
+                    <p>1）30元国内自驾优惠券1张</p>
+                    <p class="textIndent2">2）50元国内自驾优惠券1张，租满2天即可使用</p>
+                    <p style="padding-top:1rem;">优惠券详细使用规则可登录“我的携程-优惠券”查看</p>
+                    <p style="padding-top:1rem;">在法律允许范围内,携程旅行网可能对活动的规则/条款作出适当修改/调整,且对本次活动拥有最终解释权。如有疑问请致电携程客服热线1010-6666。</p>
+                </dd>
+            </dl>
+            <div class="close">
+                <a href="###">知道了</a>
+            </div>
+        </div>
+
+        <div class="layBox Lay3" style="margin-top:-4rem;display:none;">
+            <div class="layTxt2"><p>恭喜获得七折接送机/站券、<br/>八折专车券！</p></div>
+            <div class="close">
+                <a class="Lay3Btn" href="###">知道了</a>
+            </div>
+        </div>
+
+        <div class="layBox Lay4" style="margin-top:-4rem;display:none;">
+            <div class="layTxt2"><p>恭喜获得80元自驾优惠券！</p></div>
+            <div class="close">
+                <a class="Lay4Btn" href="###">知道了</a>
+            </div>
+        </div>
+
+    </section>
+    <article>
+        <div><img src="img/img1.jpg"></div>
+        <div class="title-box"><img src="img/title-img.jpg"><a href="###"><img src="img/CouponIcon.png"></a></div>
+        <div class="touch" id="topnav-slider">
+            <div class="product">
+                <div class="scroll">
+                    <ul class="touch-list">
+                        <li>
+                            <img src="img/img2.jpg">
+                            <em>汽车票</em>
+                            <div>大连-葫芦岛1</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>88</big>
+                                <span>&yen; 125</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/img2.jpg">
+                            <em>汽车票</em>
+                            <div>大连-葫芦岛2</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>88</big>
+                                <span>&yen; 125</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/img2.jpg">
+                            <em>汽车票</em>
+                            <div>大连-葫芦岛3</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>88</big>
+                                <span>&yen; 125</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/img2.jpg">
+                            <em>汽车票</em>
+                            <div>大连-葫芦岛4</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>88</big>
+                                <span>&yen; 125</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/img2.jpg">
+                            <em>汽车票</em>
+                            <div>大连-葫芦岛5</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>88</big>
+                                <span>&yen; 125</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/img2.jpg">
+                            <em>汽车票</em>
+                            <div>大连-葫芦岛6</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>88</big>
+                                <span>&yen; 125</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/img2.jpg">
+                            <em>汽车票</em>
+                            <div>大连-葫芦岛7</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>88</big>
+                                <span>&yen; 125</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/img2.jpg">
+                            <em>汽车票</em>
+                            <div>大连-葫芦岛8</div>
+                            <div>
+                                <small>&yen;</small>
+                                <big>88</big>
+                                <span>&yen; 125</span>
+                            </div>
+                            <div>
+                                <a href="###">火速预订</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-top">
+            <div id="TopNav" class="hidden-box" style="width:100%;">
+                <ul class="fixed-nav">
+                    <li class="nav1"><a href="###">汽车票</a></li>
+                    <li class="nav2"><a href="###">船票</a></li>
+                    <li class="nav3"><a href="###">旅游专线</a></li>
+                    <li class="nav4"><a href="###">机场专线</a></li>
+                    <li class="nav5"><a href="###">自驾</a></li>
+                    <li class="nav6"><a href="###">接送机/站</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="BusTicket">
+            <div class="BusTitle"><i class="md1"></i></div>
+            <div class="CityBox">
+                <ul class="CityList">
+                    <li>
+                        <strong>大连—葫芦岛</strong>
+                        <small>&yen;</small>
+                        <b>197</b>
+                        <em>&yen;197</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>大连—葫芦岛</strong>
+                        <small>&yen;</small>
+                        <b>197</b>
+                        <em>&yen;197</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>大连—葫芦岛</strong>
+                        <small>&yen;</small>
+                        <b>197</b>
+                        <em>&yen;197</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>大连—葫芦岛</strong>
+                        <small>&yen;</small>
+                        <b>197</b>
+                        <em>&yen;197</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>大连—葫芦岛</strong>
+                        <small>&yen;</small>
+                        <b>197</b>
+                        <em>&yen;197</em>
+                        <a href="###">预订</a>
+                    </li>
+                </ul>
+                <div class="BtmMore"><a href="###">更多线路<img class="sjIcon" src="img/sj.png"></a></div>
+            </div>
+        </div>
+        <div class="SteamerTicket">
+            <div class="SteamerTitle"><i class="md2"></i></div>
+            <div class="CityBox">
+                <ul class="CityList">
+                    <li>
+                        <strong>上海—普陀山</strong>
+                        <small>&yen;</small>
+                        <b>196</b>
+                        <em>&yen;207</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>北海—涠洲岛</strong>
+                        <small>&yen;</small>
+                        <b>128</b>
+                        <em>&yen;150</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>厦门—鼓浪到<cite>(往返)</cite></strong>
+                        <small>&yen;</small>
+                        <b>774</b>
+                        <em>&yen;860</em>
+                        <a href="###">预订</a>
+                    </li>
+                </ul>
+                <div class="BtmMore"><a href="###">更多线路<img class="sjIcon" src="img/sj.png"></a></div>
+            </div>
+        </div>
+        <div class="Tourism">
+            <div class="TourismTitle"><i class="md3"></i></div>
+            <div class="CityBox">
+                <ul class="tab-nav">
+                    <li class="on">华东</li>
+                    <li>四川&nbsp;重庆</li>
+                    <li>云南</li>
+                </ul>
+                <div class="tab-box">
+                    <ul class="CityList">
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>大连—仁川</strong>
+                            <small>&yen;</small>
+                            <b>774</b>
+                            <em>&yen;860</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong style="line-height:0.9rem;padding-top:0.3rem;">上海—海湾<br/><span style="padding-left:1.3rem;">(森林公园)</span></strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong style="line-height:0.9rem;padding-top:0.3rem;">上海—周庄<br/><span>(往返车票+门票)</span></strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                    </ul>
+                    <ul class="CityList">
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>大连—仁川</strong>
+                            <small>&yen;</small>
+                            <b>774</b>
+                            <em>&yen;860</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong style="line-height:0.9rem;padding-top:0.3rem;">上海—海湾<br/><span style="padding-left:1.3rem;">(森林公园)</span></strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong style="line-height:0.9rem;padding-top:0.3rem;">上海—周庄<br/><span>(往返车票+门票)</span></strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                    </ul>
+                    <ul class="CityList">
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>大连—仁川</strong>
+                            <small>&yen;</small>
+                            <b>774</b>
+                            <em>&yen;860</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong>香港—澳门</strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong style="line-height:0.9rem;padding-top:0.3rem;">上海—海湾<br/><span style="padding-left:1.3rem;">(森林公园)</span></strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                        <li>
+                            <strong style="line-height:0.9rem;padding-top:0.3rem;">上海—周庄<br/><span>(往返车票+门票)</span></strong>
+                            <small>&yen;</small>
+                            <b>128</b>
+                            <em>&yen;150</em>
+                            <a href="###">预订</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="BtmMore"><a href="###">更多线路<img class="sjIcon" src="img/sj.png"></a></div>
+            </div>
+        </div>
+        <div class="AirportLine">
+            <div class="AirportTitle"><i class="md4"></i></div>
+            <div class="CityBox">
+                <ul class="CityList">
+                    <li>
+                        <strong>咸阳机场—西安</strong>
+                        <small>&yen;</small>
+                        <b>9.9</b>
+                        <em>&yen;20</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>北海—涠洲岛</strong>
+                        <small>&yen;</small>
+                        <b>128</b>
+                        <em>&yen;150</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>厦门—鼓浪屿</strong>
+                        <small>&yen;</small>
+                        <b>774</b>
+                        <em>&yen;860</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>咸阳机场—西安</strong>
+                        <small>&yen;</small>
+                        <b>9.9</b>
+                        <em>&yen;20</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>咸阳机场—西安</strong>
+                        <small>&yen;</small>
+                        <b>9.9</b>
+                        <em>&yen;20</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>咸阳机场—西安</strong>
+                        <small>&yen;</small>
+                        <b>9.9</b>
+                        <em>&yen;20</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>咸阳机场—西安</strong>
+                        <small>&yen;</small>
+                        <b>9.9</b>
+                        <em>&yen;20</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>咸阳机场—西安</strong>
+                        <small>&yen;</small>
+                        <b>9.9</b>
+                        <em>&yen;20</em>
+                        <a href="###">预订</a>
+                    </li>
+                    <li>
+                        <strong>咸阳机场—西安</strong>
+                        <small>&yen;</small>
+                        <b>9.9</b>
+                        <em>&yen;20</em>
+                        <a href="###">预订</a>
+                    </li>
+                </ul>
+                <div class="BtmMore"><a href="###">更多线路<img class="sjIcon" src="img/sj.png"></a></div>
+            </div>
+        </div>
+        <div class="Car">
+            <div class="CarTitle"><i class="md5"></i></div>
+            <div class="CarBg"></div>
+            <dl class="Coupon">
+                <dt><span>80</span><big>元</big></dt>
+            </dl>
+            <dl class="BtnBox CarBtn">
+                <dd><a class="LayBtn1" href="###">立即领取</a></dd>
+                <dd><a href="###">马上租车</a></dd>
+                <dt><a class="Explain1" href="###">优惠券使用规则<img class="sjIcon" src="img/sj.png"></a></dt>
+            </dl>
+        </div>
+        <div class="operate">
+            <div class="operateTitle"><i class="md6"></i></div>
+            <div class="operateIcon"></div>
+            <div class="Discount"></div>
+            <div class="zhekou"></div>
+            <dl class="BtnBox RedBtn">
+                <dd><a class="LayBtn2" href="###">立即领取</a></dd>
+                <dd><a href="###">马上租车</a></dd>
+                <dt><a class="Explain2" href="###">优惠券使用规则<img class="sjIcon" src="img/sj.png"></a></dt>
+            </dl>
+            <div class="adimg" style="display:none;"><a href="###"><img src="img/ad.jpg"></a></div>
+        </div>
+        <div><img src="img/btmImg.jpg"></div>
+        <em class="top-icon"></em>
+    </article>
+</body>
+</html>

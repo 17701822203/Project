@@ -1,0 +1,1300 @@
+/*Created by huang.jun on 17-10-24*/
+*{margin:0;padding:0;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .8;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.FieldInfo {
+  background: #fff;
+  padding-left: .65rem;
+  height: 5.95rem;
+  position: relative;
+  z-index: 2;
+}
+.FieldInfo dt {
+  font-size: .85rem;
+  line-height: .85rem;
+  padding-top: 1rem;
+  position: relative;
+  font-weight: bold;
+}
+.FieldInfo dd {
+  font-size: .7rem;
+  line-height: .7rem;
+}
+.FieldInfo dd p {
+  margin-top: .75rem;
+  position: relative;
+}
+.FieldInfo dd p .map {
+  width: .65rem;
+  height: .75rem;
+  position: absolute;
+  right: 1.125rem;
+  top: -0.15rem;
+  background: url("../img/Map.png") no-repeat;
+  background-size: 100% 100%;
+}
+.FieldInfo .phone {
+  width: .7rem;
+  height: .675rem;
+  background: url("../img/Phone.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 1.125rem;
+  top: 1.25rem;
+}
+.FieldInfo .wifi,
+.FieldInfo .pet,
+.FieldInfo .kitchen {
+  display: inline-block;
+  vertical-align: middle;
+}
+.FieldInfo .wifi {
+  width: .8rem;
+  height: .575rem;
+  background: url("../img/Wifi.png") no-repeat;
+  background-size: 100% 100%;
+}
+.FieldInfo .pet {
+  width: .925rem;
+  height: .675rem;
+  background: url("../img/Pet.png") no-repeat;
+  background-size: 100% 100%;
+  margin-left: .75rem;
+}
+.FieldInfo .kitchen {
+  width: .875rem;
+  height: .75rem;
+  background: url("../img/Kitchen.png") no-repeat;
+  background-size: 100% 100%;
+  margin-left: .75rem;
+}
+.SliderBox {
+  height: 4rem;
+  display: block;
+  white-space: nowrap;
+  overflow-x: scroll;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  font-size: 0;
+  padding: .25rem 0;
+  background: url("../img/txtright.jpg") no-repeat top right;
+  background-size: 2.5rem 4rem;
+}
+.SliderBox a {
+  display: inline-block;
+  height: 4rem;
+  overflow: hidden;
+  border-left: .25rem solid #EBEBEB;
+  width:5.75rem;
+  background:#EBEBEB;
+}
+.SliderBox a img {
+  width: 5.75rem;
+  height: 4rem;
+}
+.SliderBox a:nth-of-type(1) {
+  border-left: 0;
+}
+.SliderBox span {
+  width: 1.25rem;
+  height: 4rem;
+  font-size: 0;
+}
+.SliderBox span img {
+  width: 1.25rem;
+}
+.SliderBox figure {
+  display: none;
+}
+.content {
+  float: left;
+}
+.Activities {
+  padding: 0 0 0 .75rem;
+  background: #fff;
+  height: 4.9rem;
+}
+.Activities dt {
+  padding-top: .8rem;
+  font-size: .8rem;
+  line-height: .8rem;
+}
+.Activities dd {
+  padding-top: .25rem;
+}
+.Activities dd p {
+  font-size: .6rem;
+  line-height: 1rem;
+  height: 1rem;
+  padding-left: 3.5rem;
+  position: relative;
+  margin-top: .2rem;
+}
+.Activities dd p span {
+  color: #EA4164;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: .8rem;
+  line-height: .8rem;
+  border: 1px solid #EA4164;
+  padding: 0 .15rem;
+  -webkit-border-radius: 0.125rem;
+  -moz-border-radius: 0.125rem;
+  border-radius: 0.125rem;
+}
+.Activities dd p a {
+  font-size: .7rem;
+  position: absolute;
+  color: #000;
+  top: -0.1rem;
+  right: .875rem;
+}
+.RoomTitle {
+  margin-top: .6rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  background: #fff;
+  font-size: .8rem;
+  padding-left: .65rem;
+}
+.RoomList {
+  border-top: 1px solid #EBEBEB;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  height: 4.5rem;
+}
+.RoomList:after,
+.RoomList:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.RoomList .my-gallery {
+  width: 6.45rem;
+  overflow: hidden;
+  position: absolute;
+}
+.RoomList .my-gallery img {
+  width: 6.45rem;
+  height: 4.5rem;
+}
+.RoomList .my-gallery figcaption {
+  display: none;
+}
+.RoomList .my-gallery figure {
+  font-size: 0;
+}
+.RoomList .Introduce {
+  float: left;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 0 0 7rem;
+}
+.RoomList .Introduce h4 {
+  font-size: .75rem;
+  line-height: .75rem;
+  margin-top: .6rem;
+}
+.RoomList .Introduce h4:after,
+.RoomList .Introduce h4:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.RoomList .Introduce h4 span {
+  float: left;
+}
+.RoomList .Introduce h4 span:nth-of-type(2) {
+  margin-top: -0.15rem;
+  color: #EA4164;
+  height: .8rem;
+  line-height: .8rem;
+  border: 1px solid #EA4164;
+  padding: 0 .15rem;
+  font-size: .6rem;
+  margin-left: .5rem;
+  -webkit-border-radius: 0.125rem;
+  -moz-border-radius: 0.125rem;
+  border-radius: 0.125rem;
+  font-weight: normal;
+}
+.RoomList .Introduce p {
+  font-size: .65rem;
+  line-height: 1rem;
+  margin-top: .4rem;
+}
+.RoomList .Introduce div {
+  font-size: .65rem;
+  margin-top: .28rem;
+}
+.RoomList .Introduce a {
+  height: 4.5rem;
+  float: left;
+  width: 100%;
+  color: #000;
+}
+.RoomList .Introduce a:active{opacity:.6;}
+.btmtxt {
+  color: #fff;
+}
+.btmtxt dt:after,
+.btmtxt dt:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.btmtxt dt b {
+  float: left;
+}
+.btmtxt dt strong {
+  float: right;
+  margin-right: .5rem;
+}
+.btmtxt dd {
+  line-height: 1rem;
+  padding-top: .6rem;
+  font-size: .75rem;
+}
+.Choose {
+  font-size: 0;
+}
+.Choose figure {
+  display: none;
+}
+.NavTop {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.subNav {
+  height: 2.2rem;
+  background: #F2F2F2;
+  position: relative;
+}
+.subNav .floatR {
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: #F2F2F2;
+  z-index: 2;
+  opacity: .9;
+}
+.subNav .floatR span {
+  width: .4rem;
+  height: .7rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -0.35rem;
+  margin-left: -0.2rem;
+  background: url("../img/Ricon.png") no-repeat;
+  background-size: 100% 100%;
+}
+.subNav_menu {
+  height: 2.2rem;
+  display: block;
+  white-space: nowrap;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.subNav_menu ul {
+  width: 100%;
+}
+.subNav_menu ul li {
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: .75rem;
+  line-height: 2.2rem;
+  margin: 0 .5rem;
+}
+.subNav_menu ul li a {
+  color: #333;
+}
+.subNav_menu ul li.subNav_curr a {
+  color: #08BB08;
+}
+.subNav_chooseCont {
+  background: #F2F2F2;
+  position: absolute;
+  top: 2.2rem;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+.subNav_chooseCont .chooseCont_list li {
+  float: left;
+  font-size: .75rem;
+  width: 25%;
+  margin-bottom: 10px;
+}
+.subNav_chooseCont .chooseCont_list li a {
+  display: block;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  line-height: 1.6rem;
+  text-align: center;
+  color: #131313;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  border-radius: 0.2rem;
+}
+.AlbumsBox {
+  background: #fff;
+  padding: 2.2rem 1% .65rem 1%;
+}
+.AlbumsBox:after,
+.AlbumsBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.AlbumsBox a {
+  width: 45%;
+  float: left;
+  overflow: hidden;
+  padding: 2% 2% 0 2%;
+  font-size: 0;
+}
+.AlbumsBox a img {
+  width: 8.9rem;
+  height: 6.6rem;
+}
+.MoreBtn {
+  position: absolute;
+  right: .5rem;
+  top: .6rem;
+  font-size: .65rem;
+  color: #08BB08;
+  transition: opacity .2s;
+}
+body .pswp__top-bar .pswp__button--close {
+  float: left;
+  display: none;
+}
+.pswp__top-bar .pswp__counter {
+  width: 100%;
+  text-align: center;
+  font-size: .75rem;
+}
+body .pswp__top-bar .pswp__button--fs,
+body .pswp__top-bar .pswp__button--zoom,
+body .pswp__top-bar .pswp__button--share {
+  display: none;
+}
+.pswp__caption .pswp__caption__center {
+  font-size: .75rem;
+}
+.subNav_chooseCont {
+  visibility: hidden;
+}
+.ShopList {
+  margin-top: .6rem;
+}
+.ShopList:nth-of-type(1) {
+  margin-top: 0;
+}
+.ShopList img {
+  height: 7rem;
+  width: 100%;
+}
+.ShopList .ShopTxt {
+  background: #fff;
+  padding: .6rem;
+}
+.ShopList .ShopTxt dt {
+  font-size: .85rem;
+  line-height: .85rem;
+  position: relative;
+}
+.ShopList .ShopTxt dt span {
+  font-size: .7rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.ShopList .ShopTxt dd {
+  font-size: .65rem;
+}
+.ShopList .ShopTxt dd p {
+  line-height: .65rem;
+  margin-top: .4rem;
+}
+.ShopList .ShopTxt dd p span {
+  display: inline-block;
+  width: 1.75rem;
+  height: .8rem;
+  border: 1px solid #999;
+  text-align: center;
+  line-height: .8rem;
+  margin-left: .425rem;
+  color: #666;
+  -webkit-border-radius: 0.1rem;
+  -moz-border-radius: 0.1rem;
+  border-radius: 0.1rem;
+}
+.TopPhoto {
+  position: relative;
+}
+.TopPhoto img {
+  width: 100%;
+}
+.TopPhoto span {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: .7rem;
+  position: absolute;
+  bottom: .45rem;
+  right: .45rem;
+  height: 1.35rem;
+  line-height: 1.35rem;
+  padding: 0 .4rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.titleTxt {
+  font-size: .85rem;
+  line-height: .85rem;
+  font-weight: bold;
+}
+.Introduce {
+  background: #fff;
+  padding: .9rem;
+}
+.Introduce dt {
+  font-size: .85rem;
+  line-height: .85rem;
+  font-weight: bold;
+}
+.Introduce dd {
+  font-size: .65rem;
+  padding-top: .25rem;
+  position: relative;
+}
+.Introduce dd p {
+  line-height: .95rem;
+}
+.Introduce dd span {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+.ChoiceBox {
+  padding: .9rem;
+  background: #fff;
+  margin-top: .55rem;
+}
+.ChoiceBox h4 {
+  font-size: .85rem;
+  line-height: .85rem;
+  font-weight: bold;
+}
+.jsTab_title {
+  padding-top: .4rem;
+}
+.jsTab_title:after,
+.jsTab_title:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.jsTab_title li {
+  width: 4.9rem;
+  height: 2.725rem;
+  border: 1px solid #E0E0E0;
+  float: left;
+  text-align: center;
+  margin-left: 1.125rem;
+}
+.jsTab_title li dt {
+  line-height: .75rem;
+  padding-top: .25rem;
+  color: #333;
+}
+.jsTab_title li dt big {
+  font-size: .75rem;
+}
+.jsTab_title li dt small {
+  font-size: .6rem;
+}
+.jsTab_title li dd {
+  line-height: .9rem;
+  padding-top: .25rem;
+}
+.jsTab_title li dd small {
+  font-size: .6rem;
+  color: #EA4164;
+}
+.jsTab_title li dd b {
+  font-size: .9rem;
+  color: #EA4164;
+}
+.jsTab_title li dd span {
+  font-size: .6rem;
+  color: #666;
+}
+.jsTab_title li:nth-of-type(1) {
+  margin-left: 0;
+}
+.jsTab_title li.on {
+  border: 1px solid #fff;
+  position: relative;
+}
+.jsTab_title li.on:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4.85rem;
+  height: 2.631rem;
+  border: 2px solid #08BB08;
+}
+.jsTab_title li.on dt {
+  color: #08BB08;
+}
+.jsTab_con {
+  color: #333;
+}
+.jsTab_con .PerCapita {
+  font-size: .65rem;
+  line-height: .65rem;
+  color: #666;
+  padding-top: .45rem;
+}
+.jsTab_con .Configure {
+  font-size: .65rem;
+  padding-top: 1rem;
+}
+.jsTab_con .Configure dt {
+  line-height: .7rem;
+}
+.jsTab_con .Configure dd {
+  padding-top: .3rem;
+  position: relative;
+}
+.jsTab_con .Configure dd p {
+  line-height: 1rem;
+}
+.jsTab_con .Configure dd span {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+.Choice {
+  margin-top: .55rem;
+  background: #fff;
+}
+.Choice li {
+  height: 2.825rem;
+  line-height: 2.825rem;
+  border-top: 1px solid #EBEBEB;
+  padding-left: .75rem;
+}
+.Choice li:nth-of-type(1) {
+  border-top: 0;
+}
+.Choice li b {
+  font-size: .85rem;
+  float: left;
+  color: #333;
+}
+.Choice li span {
+  float: right;
+  font-size: .85rem;
+  margin-right: .675rem;
+  padding-right: 1.5rem;
+  color: #08BB08;
+  position: relative;
+}
+.Choice li span:after {
+  content: "";
+  position: absolute;
+  width: .4rem;
+  height: .7rem;
+  background: url("../img/Ricon.png") no-repeat;
+  background-size: 100% 100%;
+  right: 0;
+  top: 1.05rem;
+}
+.InputFillIn {
+  margin-top: .55rem;
+  background: #fff;
+}
+.InputFillIn li {
+  height: 2.825rem;
+  line-height: 2.825rem;
+  border-top: 1px solid #EBEBEB;
+  padding-left: .75rem;
+}
+.InputFillIn li:nth-of-type(1) {
+  border-top: 0;
+}
+.InputFillIn li b {
+  font-size: .85rem;
+  float: left;
+  color: #333;
+}
+.InputFillIn li input {
+  width: 11.25rem;
+  margin-left: 3.5rem;
+  float: left;
+  border: 0;
+  font-size: .85rem;
+  margin-top: .75rem;
+}
+.InputFillIn li input::-webkit-input-placeholder {
+  color: #D1D1D1;
+  font-size: .85rem;
+}
+.InputFillIn li input:-moz-placeholder {
+  color: #D1D1D1;
+  font-size: .85rem;
+}
+.InputFillIn li input::-moz-placeholder {
+  color: #D1D1D1;
+  font-size: .85rem;
+}
+.InputFillIn li input:-ms-input-placeholder {
+  color: #D1D1D1;
+  font-size: .85rem;
+}
+.Remarks {
+  padding: .9rem 0 0 .75rem;
+}
+.Remarks dt {
+  font-size: .85rem;
+  line-height: .85rem;
+  font-weight: bold;
+}
+.Remarks dd {
+  padding-top: .75rem;
+  padding-right: .75rem;
+}
+.Remarks dd textarea {
+  width: 100%;
+  height: 4.25rem;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .75rem;
+  font-size: .75rem;
+}
+.Remarks dd textarea::-webkit-input-placeholder {
+  color: #D1D1D1;
+  font-size: .75rem;
+}
+.Remarks dd textarea:-moz-placeholder {
+  color: #D1D1D1;
+  font-size: .75rem;
+}
+.Remarks dd textarea::-moz-placeholder {
+  color: #D1D1D1;
+  font-size: .75rem;
+}
+.Remarks dd textarea:-ms-input-placeholder {
+  color: #D1D1D1;
+  font-size: .75rem;
+}
+.SubmitBox {
+  height: 2.75rem;
+  line-height: 2.75rem;
+  background: #fff;
+  padding-left: .75rem;
+  margin-top: .5rem;
+}
+.SubmitBox:after,
+.SubmitBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.SubmitBox span,
+.SubmitBox b,
+.SubmitBox i {
+  float: left;
+}
+.SubmitBox span {
+  font-size: .7rem;
+}
+.SubmitBox b {
+  font-size: .7rem;
+  color: #EA4164;
+  width: 3rem;
+}
+.SubmitBox i {
+  font-style: normal;
+  margin-top: -0.2rem;
+}
+.SubmitBox i a {
+  font-size: .65rem;
+  color: #333;
+  text-decoration: underline;
+}
+.SubmitBox .SubmitBtn {
+  width: 5.25rem;
+  height: 2.15rem;
+  line-height: 2.15rem;
+  text-align: center;
+  color: #fff;
+  float: right;
+  background: #08BB08;
+  margin: .325rem .325rem 0 0;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+}
+.State {
+  padding: 1.25rem;
+  background: #fff;
+  font-size: .75rem;
+  color: #333;
+}
+.State .StateTop .StateTop1,
+.State .StateTop .StateTop2 {
+  font-size: .85rem;
+  line-height: .85rem;
+  margin-top: .5rem;
+}
+.State .StateTop .StateTop1 {
+  position: relative;
+}
+.State .StateTop .StateTop1 .RedTxt {
+  color: #FE3824;
+}
+.State .StateTop .StateTop1 .GreenTxt {
+  color: #088808;
+}
+.State .StateTop .StateTop3 {
+  margin-top: .5rem;
+  position: relative;
+}
+.State .StateTop .StateTop3 em {
+  right: 0;
+  top: 0;
+  position: absolute;
+  width: .65rem;
+  height: .75rem;
+  background: url("../img/Map.png") no-repeat;
+  background-size: 100% 100%;
+}
+.State .StateTop i {
+  font-style: normal;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+.State .StateBtm {
+  padding-top: 1rem;
+  line-height: .75rem;
+}
+.State .StateBtm div {
+  margin-top: .4rem;
+}
+.State .StateBtm .StateBtm3 span {
+  color: #666;
+  line-height: 1rem;
+}
+.State .StateBtnBox {
+  position: relative;
+  margin-top: 2rem;
+  height: 2rem;
+}
+.State .StateBtnBox a {
+  width: 7.45rem;
+  height: 1.95rem;
+  border: 1px solid #979797;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  line-height: 1.95rem;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+  font-size: .85rem;
+  color: #333;
+}
+.State .StateBtnBox a.StateBtnLeft {
+  left: 0;
+}
+.State .StateBtnBox a.StateBtnRight {
+  right: 0;
+}
+.State .StateBtnBox a.invalid {
+  border: 1px solid #ccc;
+  color: #ccc;
+}
+.State .StateBtnBox a.invalid:active {
+  opacity: 1;
+}
+/*******************底部控件******************/
+.GearDate {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9900;
+  overflow: hidden;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.GearDate .date_ctrl {
+  vertical-align: middle;
+  background-color: white;
+  color: #363837;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 9901;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.GearDate .date_ctrl .date_btn_box {
+  height: 2.1rem;
+  line-height: 2.1rem;
+  background: #F1F1F1;
+  font-size: .8rem;
+  color: #08BB08;
+}
+.GearDate .date_ctrl .date_btn_box .lcalendar_cancel {
+  float: left;
+  padding: 0 .8rem;
+}
+.GearDate .date_ctrl .date_btn_box .lcalendar_finish {
+  float: right;
+  padding: 0 .8rem;
+}
+.GearDate .date_ctrl .date_roll_mask {
+  position: relative;
+  -webkit-mask: -webkit-gradient(linear, 0% 40%, 0% 0%, from(#debb47), to(rgba(36, 142, 36, 0)));
+  -webkit-mask: -webkit-linear-gradient(bottom, #debb47 50%, rgba(36, 142, 36, 0));
+}
+.GearDate .date_ctrl .date_roll_mask .date_roll {
+  display: -webkit-box;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: transparent;
+  -webkit-mask: -webkit-gradient(linear, 0% 50%, 0% 100%, from(#debb47), to(rgba(36, 142, 36, 0)));
+  -webkit-mask: -webkit-linear-gradient(top, #debb47 50%, rgba(36, 142, 36, 0));
+}
+.GearDate .date_ctrl .date_roll_mask .date_roll .Mask {
+  font-size: .8rem;
+  height: 11rem;
+  float: left;
+  position: relative;
+}
+.GearDate .date_ctrl .date_roll_mask .date_roll .Mask:nth-of-type(1) {
+  margin-left: 4.75rem;
+  width: 4rem;
+}
+.GearDate .date_ctrl .date_roll_mask .date_roll .Mask:nth-of-type(2) {
+  margin-left: 0;
+  width: 7rem;
+}
+.GearDate .date_ctrl .date_roll_mask .date_roll .Mask .gear {
+  float: left;
+  position: absolute;
+  z-index: 9902;
+}
+.GearDate .date_ctrl .date_roll_mask .date_roll .Mask .gear .tooth {
+  height: 2.2rem;
+  line-height: 2.2rem;
+  text-align: center;
+}
+.GearDate .date_ctrl .date_roll_mask .FlxBor {
+  position: absolute;
+  width: 100%;
+  height: 2rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  left: 0;
+  top: 4.5rem;
+}
+.GearDate .slideInUp {
+  animation: slideInUp 0.3s ease-in;
+  -webkit-animation: slideInUp 0.3s ease-in;
+}
+.time_ctrl {
+  vertical-align: middle;
+  background-color: white;
+  color: #363837;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 9901;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.time_ctrl .date_btn_box {
+  height: 2.1rem;
+  line-height: 2.1rem;
+  background: #F1F1F1;
+  font-size: .8rem;
+  color: #08BB08;
+  position: relative;
+}
+.time_ctrl .date_btn_box .lcalendar_cancel {
+  float: left;
+  padding: 0 .8rem;
+}
+.time_ctrl .date_btn_box .lcalendar_finish {
+  float: right;
+  padding: 0 .8rem;
+}
+.time_ctrl .date_btn_box .lcalendar_center {
+  position: absolute;
+  left: 50%;
+  color: #666;
+  font-size: .8rem;
+  width: 8rem;
+  margin-left: -4rem;
+  text-align: center;
+}
+.time_ctrl table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #333;
+}
+.time_ctrl table td {
+  height: 2.25rem;
+  line-height: 2.25rem;
+  text-align: center;
+  width: 20%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #F1F1F1;
+  font-size: .85rem;
+}
+.time_ctrl table td.GrayTxt {
+  color: #ccc;
+}
+.time_ctrl table td.DarkGreenTxt {
+  color: #fff;
+  background: #08BB08;
+}
+.time_ctrl table td.DarkGreenTxt dl {
+  line-height: .85rem;
+}
+.time_ctrl table td.DarkGreenTxt dl dd {
+  padding-top: .1rem;
+  font-size: .75rem;
+}
+.time_ctrl table td.PaleGreenTxt {
+  background: #CEF1CE;
+}
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+/*************弹层****************/
+.PopupBox {
+  width: 16rem;
+  background: #fff;
+  position: fixed;
+  z-index: 30;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+  border-radius: 0.3rem;
+}
+.Popup1 {
+  text-align: center;
+}
+.Popup1 dt {
+  padding-top: 1.65rem;
+  font-size: .9rem;
+  line-height: .9rem;
+}
+.Popup1 dd {
+  padding-top: 1.75rem;
+}
+.Popup1 dd p {
+  font-size: .75rem;
+  line-height: .75rem;
+}
+.Popup1 dd .PopupBtnBox {
+  height: 3.75rem;
+  padding: 1.8rem 1.25rem 0 1.25rem;
+}
+.Popup1 dd .PopupBtnBox a {
+  font-size: .85rem;
+  width: 6.45rem;
+  height: 1.95rem;
+  line-height: 1.95rem;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+}
+.Popup1 dd .PopupBtnBox a.whiteBtn {
+  float: left;
+  border: 1px solid #979797;
+  color: #333;
+}
+.Popup1 dd .PopupBtnBox a.greenBtn {
+  float: right;
+  background: #08BB08;
+  border: 1px solid #08BB08;
+  color: #fff;
+}
+.Popup2 dt {
+  padding-top: 1.65rem;
+  font-size: .9rem;
+  line-height: .9rem;
+  text-align: center;
+}
+.Popup2 dd {
+  padding-top: 1.5rem;
+}
+.Popup2 dd div {
+  font-size: .75rem;
+  text-align: left;
+}
+.Popup2 dd div p {
+  line-height: .75rem;
+  margin-top: .3rem;
+  padding-left: 1.3rem;
+}
+.Popup2 dd div:nth-of-type(2) {
+  margin-top: .8rem;
+}
+.Popup2 dd div.PopupBtnBox {
+  height: 3.75rem;
+  padding: 2rem 1.25rem 0 1.25rem;
+}
+.Popup2 dd div.PopupBtnBox a {
+  font-size: .85rem;
+  height: 1.95rem;
+  line-height: 1.95rem;
+  -webkit-border-radius: 0.15rem;
+  -moz-border-radius: 0.15rem;
+  border-radius: 0.15rem;
+  text-align: center;
+}
+.Popup2 dd div.PopupBtnBox a.whiteBtn {
+  float: left;
+  border: 1px solid #979797;
+  color: #333;
+  width: 4.95rem;
+}
+.Popup2 dd div.PopupBtnBox a.greenBtn {
+  float: right;
+  background: #08BB08;
+  border: 1px solid #08BB08;
+  color: #fff;
+  width: 7.95rem;
+}
+.Popup3 {
+  text-align: center;
+  height: 4rem;
+  line-height: 4rem;
+  font-size: .9rem;
+}
+.Popup3 span {
+  color: #08BB08;
+}
+.Popup3 span b {
+  font-size: 1.2rem;
+  padding-left: .6rem;
+}
+.Popup3 span big {
+  font-size: 1.5rem;
+}
+.Popup3 span strong {
+  padding-left: .2rem;
+}
+.Popup4 {
+  text-align: center;
+}
+.Popup4 dt {
+  padding-top: 1.65rem;
+  font-size: .9rem;
+  line-height: .9rem;
+}
+.Popup4 dd {
+  padding: 1rem 1.25rem 1rem 1.25rem;
+}
+.Popup4 dd p {
+  font-size: .75rem;
+  text-align: left;
+}
+/***************订单详情***************/
+.OrderTxt {
+  padding: 1rem;
+}
+.OrderTxt p {
+  font-size: .75rem;
+  line-height: 1rem;
+  margin-top: .2rem;
+}
+.DiaryTop {
+  height: 5.15rem;
+  background: #fff;
+}
+.DiaryTop .DiaryTx {
+  float: left;
+  padding: 1.175rem 0 0 .825rem;
+}
+.DiaryTop .DiaryTx img {
+  width: 3.15rem;
+  height: 3.15rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+}
+.DiaryTop .DiaryName {
+  float: left;
+  padding: 1.3rem 0 0 .35rem;
+  color: #333;
+}
+.DiaryTop .DiaryName dt {
+  font-size: .85rem;
+  line-height: .85rem;
+}
+.DiaryTop .DiaryName dd {
+  font-size: .75rem;
+  line-height: .75rem;
+}
+.DiaryTop .DiaryName dd p {
+  margin-top: .35rem;
+}
+.DiaryTop .DiaryTopBtn {
+  float: right;
+  width: 3.45rem;
+  height: 1.2rem;
+  text-align: center;
+  line-height: 1.2rem;
+  font-size: .7rem;
+  color: #666;
+  border: 1px solid #666;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  margin: 3rem 1rem 0 0;
+}
+.DiaryTitle {
+  padding: 1.25rem 0 0 .95rem;
+  font-size: .8rem;
+  line-height: .8rem;
+  height: 1.15rem;
+}
+.DiaryList {
+  background: #fff;
+}
+.DiaryList .DiaryListGreen {
+  height: 4.15rem;
+  border-bottom: 1px solid #ECECEC;
+  padding-left: 1rem;
+}
+.DiaryList .DiaryListGreen .DiaryListRight {
+  color: #08BB08;
+}
+.DiaryList .DiaryListLeft {
+  font-size: .85rem;
+  padding-top: .325rem;
+  float: left;
+}
+.DiaryList .DiaryListLeft li {
+  line-height: .85rem;
+  margin-top: .6rem;
+}
+.DiaryList .DiaryListLeft li:nth-of-type(1) span {
+  padding-left: 1.5rem;
+}
+.DiaryList .DiaryListLeft li:nth-of-type(2) span {
+  padding-left: .3rem;
+}
+.DiaryList .DiaryListRight {
+  float: right;
+  font-size: .8rem;
+  line-height: .8rem;
+  margin: 2.4rem .65rem 0 0;
+}
+.DiaryList .DiaryListRed {
+  height: 4.15rem;
+  border-bottom: 1px solid #ECECEC;
+  padding-left: 1rem;
+}
+.DiaryList .DiaryListRed .DiaryListRight {
+  color: #08BB08;
+}
+.DiaryList .DiaryListRed .DiaryListRight {
+  color: #FE3824;
+}
+.CreditRecord {
+  padding: 1.5rem 0 0 1.25rem;
+  font-size: .75rem;
+}
+.CreditRecord dt {
+  line-height: .75rem;
+  position: relative;
+}
+.CreditRecord dt b {
+  right: 1.75rem;
+  top: 0;
+  position: absolute;
+}
+.CreditRecord dt b.Green {
+  color: #08BB08;
+}
+.CreditRecord dt b.Red {
+  color: #FE3824;
+}
+.CreditRecord dt span {
+  padding-left: .25rem;
+}
+.CreditRecord dd {
+  line-height: .75rem;
+  padding-top: .6rem;
+}

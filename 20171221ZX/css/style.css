@@ -1,0 +1,129 @@
+/*Created by huang.jun on 17-12-05*/
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:active {
+  opacity: .7;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: PingFang-SC-Regular, sans-serif;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+}
+.shadow {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 20;
+  background: #000;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+.img-box {
+  font-size: 0;
+}
+.img-box img {
+  width: 100%;
+}
+.ClearBox:after,
+.ClearBox:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.ImgBg {
+  font-size: 0;
+  padding-bottom: 3rem;
+  background: #CC3046;
+}
+.ImgBg img {
+  width: 100%;
+}
+.ImgBg li:nth-of-type(1) {
+  position: relative;
+}
+.ImgBg li:nth-of-type(1) .LogoCtrip,
+.ImgBg li:nth-of-type(1) .LogoTieyou,
+.ImgBg li:nth-of-type(1) .LogoZhixing {
+  position: absolute;
+  left: 3%;
+  top: 5%;
+  width: 26%;
+}
+.ImgBg li:last-child {
+  position: relative;
+}
+.ImgBg li:last-child .ShareBtn {
+  position: absolute;
+  left: 0;
+  top: 14%;
+  width: 100%;
+  text-align: center;
+}
+.ImgBg li:last-child .ShareBtn dt {
+  font-size: .8rem;
+  color: #f8f2d6;
+  line-height: .8rem;
+}
+.ImgBg li:last-child .ShareBtn dd {
+  padding: 1rem 2rem 0 2rem;
+}
+.ImgBg li:last-child .ShareBtn dd a {
+  display: block;
+  height: 2.55rem;
+  line-height: 2.55rem;
+  background: #FE9F07;
+  color: #962a20;
+  font-size: 1.2rem;
+  -webkit-border-radius: 2.55rem;
+  -moz-border-radius: 2.55rem;
+  border-radius: 2.55rem;
+}
+.FixBtn {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.FixBtn li {
+  float: left;
+  width: 50%;
+}
+.FixBtn li span {
+  display: block;
+  height: 3rem;
+  color: #F8EDC5;
+  text-align: center;
+  line-height: 3rem;
+}
+.FixBtn li span.Btn1 {
+  background-color: #E7261D;
+  background-image: -webkit-linear-gradient(left, #E7261D, #EE6014);
+  background-image: -moz-linear-gradient(left, #E7261D, #EE6014);
+  background-image: -o-linear-gradient(left, #E7261D, #EE6014);
+  background-image: -ms-linear-gradient(left, #E7261D, #EE6014);
+  background-image: linear-gradient(left, #E7261D, #EE6014);
+}
+.FixBtn li span.Btn2 {
+  background-color: #FF7400;
+  background-image: -webkit-linear-gradient(left, #FF7400, #FF9800);
+  background-image: -moz-linear-gradient(left, #FF7400, #FF9800);
+  background-image: -o-linear-gradient(left, #FF7400, #FF9800);
+  background-image: -ms-linear-gradient(left, #FF7400, #FF9800);
+  background-image: linear-gradient(left, #FF7400, #FF9800);
+}
+.FixBtn li span:active {
+  opacity: .7;
+}

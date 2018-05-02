@@ -1,0 +1,35 @@
+.CouponBg {
+  background: url("../img/CouponBg.jpg") no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.Coupon-Top {
+  height: 6rem;
+  text-align: center;
+}
+.Coupon-Top dt {
+  line-height: .95rem;
+  font-size: .95rem;
+  color: #fff;
+  padding-top: 2.35rem;
+}
+.Coupon-Top dd {
+  line-height: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffda46;
+  padding-top: .4rem;
+}
+.Coupon-Top dd b {
+  font-family: Impact, sans-serif;
+  vertical-align: middle;
+  font-size: 1.05rem;
+  font-weight: normal;
+}
+.CouponBox {
+  margin: 0 .75rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.175rem 1.075rem;
+}
