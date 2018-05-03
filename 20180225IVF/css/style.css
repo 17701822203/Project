@@ -428,6 +428,19 @@ body {
   text-align: center;
   font-weight: bold;
 }
+.CP .CpList:after,
+.CP .CpList:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+.CP .CpList li {
+  float: left;
+}
+.CP .CpList li img {
+  height: 2.75rem;
+  width: auto;
+}
 .information-title {
   line-height: 2.5rem;
   font-size: .9rem;
