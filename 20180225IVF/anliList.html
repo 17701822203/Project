@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/modernizr.js" type="text/javascript"></script>
+    <script src="js/flickity-docs.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="TopBox">
+        <a href="#" class="nav__trigger"><span class="nav__icon"></span></a>
+        <!--<img class="center" src="img/Logo.png">-->
+        <h4 class="txt-center">知名案例</h4>
+        <a class="right" href="###">联系我们</a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#">知名案例</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">签约专家</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">签约医院</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">赴美流程</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">合作伙伴</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">预约来访</a></li>
+                <li class="nav__ContactUs"><a href="###">联系我们</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="anli">
+        <dl>
+            <dt><img src="img/case.png"></dt>
+            <dd>
+                <p><a class="new" href="###">三胞胎？孙子、儿子、弟弟！</a></p>
+                <p><a href="###">国内第一例冻卵解冻后龙凤胎成功受孕</a></p>
+                <p><a href="###">福娃之父：儿子54天，妈妈54岁，爸爸82岁？</a></p>
+                <p><a href="###">失独老母亲再享天伦之乐</a></p>
+                <p><a href="###">三胞胎？孙子、儿子、弟弟</a></p>
+                <p><a href="###">国内第一例冻卵解冻后龙凤胎成功受孕</a></p>
+                <p><a href="###">福娃之父：儿子54天，妈妈54岁，爸爸82岁</a></p>
+                <p><a href="###">失独老母亲再享天伦之乐</a></p>
+                <p><a href="###">三胞胎？孙子、儿子、弟弟</a></p>
+                <p><a href="###">国内第一例冻卵解冻后龙凤胎成功受孕</a></p>
+                <p><a href="###">福娃之父：儿子54天，妈妈54岁，爸爸82岁</a></p>
+                <p><a href="###">失独老母亲再享天伦之乐</a></p>
+            </dd>
+        </dl>
+    </div>
+    <div class="bottom-box" style="border-top:0;">
+        <ul class="ewm">
+            <li><span class="wx">微信<img class="wx-img" src="img/wx-img.jpg"></span></li>
+            <li><span class="wb">微博<img class="wb-img" src="img/wb-img.jpg"></span></li>
+        </ul>
+        <dl class="address">
+            <dt>北京总部</dt>
+            <dd>
+                <p>地址：天津市丰台区南四环西路128号诺德中心 2号楼1511</p>
+                <p>幸福热线：400-015-6612</p>
+            </dd>
+            <dt>上海分公司</dt>
+            <dd>
+                <p>地址：上海市丰台区南四环西路128号诺德中心 2号楼1511</p>
+                <p>幸福热线：400-015-6612</p>
+            </dd>
+            <dt>洛杉矶分公司</dt>
+            <dd>
+                <p>地址：xxxxxxxxxxxx 2号楼1511</p>
+            </dd>
+        </dl>
+        <ul class="bottom-txt">
+            <li>Copyright©1999-2016, ctrip.com. All rights reserved.</li>
+            <li>ICP证：沪B2-20050130</li>
+            <li>沪公网备31010502000018号</li>
+        </ul>
+    </div>
+
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.nav__trigger').on('click', function(e){
+                e.preventDefault();
+                $(this).parent().toggleClass('nav--active');
+            });
+            $(".flickity-viewport").height("auto");
+        })
+    </script>
+</body>
+</html>
