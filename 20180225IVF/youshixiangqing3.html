@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/modernizr.js" type="text/javascript"></script>
+    <script src="js/flickity-docs.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <div class="TopBox">
+        <a href="#" class="nav__trigger"><span class="nav__icon"></span></a>
+        <h4 class="txt-center">上级标题</h4>
+        <a class="right" href="###">联系我们</a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#">知名案例</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">签约专家</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">签约医院</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">赴美流程</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">合作伙伴</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">预约来访</a></li>
+                <li class="nav__ContactUs"><a href="###">联系我们</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="youshi-wrap">
+        <img src="img/img11.jpg">
+        <p>智特医疗IVF USA在八年的发展历程中，不断为客人提供高专业性、高品质、高成功率的一站式管家服务。</p>
+        <p>流程中所涉及的护照、出行、翻译、出生证、专家、诊所、实验室、保险公司、心理咨询公司、律师、第三方辅助生殖服务管机构以及服务者等方面，都有专人为您进行安排接洽，让您全流程无需担心，求子之旅将变成一种享受。</p>
+        <img src="img/img12.jpg">
+        <p>智特医疗IVF USA与国内其他中介形式机构有着本质上的区别，不以利益作为出发点，坚持始终代表客户利益，将优质专业服务进行到底的理念。智特医疗IVF USA的全部流程都以客户成功率为主，为客户不断努力，协助客户尽早得子。</p>
+        <p>智特医疗IVF USA一站式管家服务，全流程高品质贴心服务。全流程就医中文翻译，接送，进行出行安排，并安排相关人员辅助。</p>
+        <img src="img/img13.jpg">
+        <p>智特医疗IVF USA致力于辅助生殖领域，与美国知名生殖机构、专家，以及专业的法律团队全力合作，为中国备孕家庭提供高专业性、高品质、高成功率的一站管家式辅助生殖医疗服务，只为让您的家庭如愿以偿获得新生命。</p>
+        <p>智特医疗IVF USA从迈向辅助生殖领域至今，经过了八年时间。迄今为止已经有数千家庭，通过智特医疗IVF USA成功得子，组建了幸福的家庭。</p>
+    </div>
+    <div class="bottom-box">
+        <ul class="ewm">
+            <li><span class="wx">微信<img class="wx-img" src="img/wx-img.jpg"></span></li>
+            <li><span class="wb">微博<img class="wb-img" src="img/wb-img.jpg"></span></li>
+        </ul>
+        <dl class="address">
+            <dt>北京总部</dt>
+            <dd>
+                <p>地址：天津市丰台区南四环西路128号诺德中心 2号楼1511</p>
+                <p>幸福热线：400-015-6612</p>
+            </dd>
+            <dt>上海分公司</dt>
+            <dd>
+                <p>地址：上海市丰台区南四环西路128号诺德中心 2号楼1511</p>
+                <p>幸福热线：400-015-6612</p>
+            </dd>
+            <dt>洛杉矶分公司</dt>
+            <dd>
+                <p>地址：xxxxxxxxxxxx 2号楼1511</p>
+            </dd>
+        </dl>
+        <ul class="bottom-txt">
+            <li>Copyright©1999-2016, ctrip.com. All rights reserved.</li>
+            <li>ICP证：沪B2-20050130</li>
+            <li>沪公网备31010502000018号</li>
+        </ul>
+    </div>
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.nav__trigger').on('click', function(e){
+                e.preventDefault();
+                $(this).parent().toggleClass('nav--active');
+            });
+            $(".flickity-viewport").height("auto");
+        })
+    </script>
+</body>
+</html>

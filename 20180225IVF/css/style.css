@@ -307,15 +307,26 @@ body {
   line-height: 1rem;
   font-size: .6rem;
 }
+.gallery-cell .new-expert dd p:nth-of-type(3),.gallery-cell .new-expert dd p:nth-of-type(1){
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.gallery-cell .new-expert dd p:nth-of-type(2){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .expert-box {
   overflow: hidden;
   position: relative;
 }
 .expert-box .gallery-cell {
-  height: 18.35rem;
+  height: 19rem;
 }
 .expert-box .flickity-slider {
-  height: 18.35rem;
+  height: 19rem;
 }
 .hospital-box {
   overflow: hidden;
@@ -436,6 +447,8 @@ body {
 }
 .CP .CpList li {
   float: left;
+  width:50%;
+  text-align:center;
 }
 .CP .CpList li img {
   height: 2.75rem;
@@ -906,3 +919,27 @@ body {
 .detailed dl dt{font-size:1.2rem;color:#333;line-height:1.5rem;padding-top:1.6rem;}
 .detailed dl dd{font-size:.7rem;color:#333;padding-bottom:3.4rem;}
 .detailed dl dd p{line-height:1.1rem;margin-top:1.4rem;}
+/*****优势详情******/
+.youshi-wrap{background:#fff;}
+.youshi-wrap img{margin-top:2rem;width:100%;}
+.youshi-wrap p{padding:0 1rem;font-size:.7rem;color:#333;line-height:1.1rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
