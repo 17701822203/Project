@@ -31,12 +31,11 @@ body {
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 20;
-  background: #000;
-  opacity: .7;
+  z-index:19;
+  background: #fff;
+  opacity: .5;
   top: 0;
   left: 0;
-  display: none;
 }
 .img-box {
   font-size: 0;
@@ -923,23 +922,31 @@ body {
 .youshi-wrap{background:#fff;}
 .youshi-wrap img{margin-top:2rem;width:100%;}
 .youshi-wrap p{padding:0 1rem;font-size:.7rem;color:#333;line-height:1.1rem;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*****项目详情*****/
+.shengyu-wrap{background:#fff;}
+.shengyu-top-img{font-size:0;padding-top:2.5rem;}
+.shengyu-top-img img{width:100%;}
+.jsTab_title{height:2.8rem;background:#f8f8f8;}
+.jsTab_title li{float:left;width:33%;font-size:1rem;color:#333;padding-top:.8rem;text-align:center;}
+.jsTab_title li span{line-height:1rem;padding:0 .5rem;}
+.jsTab_title li.on span{color:#5f9d04;position: relative;}
+.jsTab_title li.on span:after{position: absolute;content:"";width:100%;height:.25rem;background:#70bd00;bottom:-.5rem;left:50%;margin-left:-50%;}
+.jsTab_con .qa{font-size:.75rem;padding:0 1.35rem;}
+.jsTab_con .qa dt{margin-top:1.85rem;}
+.jsTab_con .qa dd{line-height:1.2rem;}
+.jsTab_con .qa dd p span{color:#5f9d04;white-space:nowrap;}
+/*****联系我们*****/
+.AboutUs-wrap{text-align:center;width:15.825rem;height:19.075rem;background:#fff;position: fixed;left:50%;margin-left:-7.9125rem;z-index:30;top:4.85rem;}
+.AboutUs-wrap:after{position: absolute;left:50%;top:9.5rem;content:"";width:8rem;margin-left:-4rem;height:1px;background:#c6c6c6;}
+.a1,.a4{font-size:1.2rem;line-height:1.2rem;color:#333;}
+.a2,.a5{font-size:.75rem;line-height:.75rem;color:#666;}
+.a1{margin-top:1.8rem;}
+.a2{margin-top:.85rem;}
+.a3{margin-top:1.05rem;}
+.a4{margin-top:3.75rem;}
+.a5{margin-top:.8rem;}
+.a6{margin-top:1.05rem;}
+.a3 button{width:8.65rem;height:1.9rem;color:#fff;font-size:.75rem;background:url("../img/dianhua.png") .95rem .55rem no-repeat #70bd00;background-size:.825rem .825rem;-webkit-border-radius:2rem;-moz-border-radius:2rem;border-radius:2rem;border:0;text-indent:1rem;}
+.a6 button{-webkit-border-radius:2rem;-moz-border-radius:2rem;border-radius:2rem;border:0;height:1.9rem;width:6.65rem;background:#ed5f18;color:#fff;font-size:.75rem;}
+.close-btn{width:1.35rem;height:1.35rem;background:url("../img/close-btn.png") no-repeat;background-size:100% 100%;position: absolute;right:0;top:-1.6rem;}
+.flx-btn{height:2.45rem;background:#6cb603;color:#fff;font-size:.9rem;position: fixed;left:0;bottom:0;width:100%;border:0;}

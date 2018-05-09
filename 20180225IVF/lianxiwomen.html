@@ -1,0 +1,220 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/modernizr.js" type="text/javascript"></script>
+    <script src="js/flickity-docs.min.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function () {
+                        var clientWidth = docEl.clientWidth;
+                        if (!clientWidth) return;
+                        if( clientWidth > 400 & clientWidth<=500){
+                            clientWidth = 400;
+                        }
+                        if( clientWidth > 500){
+                            clientWidth = 500;
+                        }
+                        var fontSize = 20 * (clientWidth / 375);
+                        docEl.style.fontSize = fontSize + 'px';
+
+                        var dpi =  window.devicePixelRatio;
+                        var viewport = document.querySelector('meta[name="viewport"]');
+
+                        docEl.setAttribute('data-dpi',dpi);
+                        var scale = 1/dpi;
+                    };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        var a = document.getElementsByTagName('a');
+        for(var i = 0; i < a.length; i++)
+        {
+            a[i].addEventListener('touchstart',function(){},false);
+        }
+    </script>
+</head>
+
+<body ontouchstart="" onmouseover="">
+    <!--====联系我们====-->
+    <section>
+        <div class="shadow"></div>
+        <div class="AboutUs-wrap">
+            <span class="close-btn"></span>
+            <h3 class="a1">致电我们</h3>
+            <p class="a2">联系我们的中文客服</p>
+            <div class="a3"><button>400 674 6263</button></div>
+            <h3 class="a4">预约回电</h3>
+            <p class="a5">填写基本信息，我们会尽快联系您</p>
+            <div class="a6"><button>马上预约</button></div>
+        </div>
+    </section>
+
+    <div class="TopBox">
+        <a href="#" class="nav__trigger"><span class="nav__icon"></span></a>
+        <!--<img class="center" src="img/Logo.png">-->
+        <h4 class="txt-center">签约专家</h4>
+        <a class="right" href="###">关闭</a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="#">知名案例</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">签约专家</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">签约医院</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">赴美流程</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">合作伙伴</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">预约来访</a></li>
+                <li class="nav__ContactUs"><a href="###">联系我们</a></li>
+            </ul>
+        </nav>
+        <div class="NavRegion" style="display:none;">
+            <span>全部地区</span>
+            <span class="on">纽约</span>
+            <span>华盛顿</span>
+            <span>洛杉矶</span>
+        </div>
+        <div class="NavAddress" style="display:none;">
+            <span class="on">全部医院</span>
+            <span>亨廷顿</span>
+            <span>巴拉停顿</span>
+            <span>亨廷顿</span>
+            <span>巴拉停顿</span>
+        </div>
+    </div>
+    <div class="ListWrap">
+        <div class="List">
+            <div class="img-box"><img src="img/Img2.png"><span class="colour1">全美TOP10</span></div>
+            <dl>
+                <dt>Dr.J</dt>
+                <dd>
+                    <p><strong>履历：</strong>美国西海岸最大的生殖中心生殖中心主任，多次被评为美国顶级好医生；多次被美国CNN、ABC电视台和PEOPLE杂志采访</p>
+                    <p><strong>资质：</strong>妇产科和辅助生殖双医学执照认证</p>
+                    <p><strong>擅长：</strong>高龄女性的不育不孕治疗，各种试管婴儿医疗方案的制定，供者，代孕者的筛查和配对</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="List">
+            <div class="img-box"><img src="img/Img2.png"><span class="colour2">试管婴儿之父</span></div>
+            <dl>
+                <dt>Dr.J</dt>
+                <dd>
+                    <p><strong>履历：</strong>美国西海岸最大的生殖中心生殖中心主任，多次被评为美国顶级好医生；多次被美国CNN、ABC电视台和PEOPLE杂志采访</p>
+                    <p><strong>资质：</strong>妇产科和辅助生殖双医学执照认证</p>
+                    <p><strong>擅长：</strong>高龄女性的不育不孕治疗，各种试管婴儿医疗方案的制定，供者，代孕者的筛查和配对</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="List">
+            <div class="img-box"><img src="img/Img2.png"><span class="colour3">全美TOP10</span></div>
+            <dl>
+                <dt>Dr.J</dt>
+                <dd>
+                    <p><strong>履历：</strong>美国西海岸最大的生殖中心生殖中心主任，多次被评为美国顶级好医生；多次被美国CNN、ABC电视台和PEOPLE杂志采访</p>
+                    <p><strong>资质：</strong>妇产科和辅助生殖双医学执照认证</p>
+                    <p><strong>擅长：</strong>高龄女性的不育不孕治疗，各种试管婴儿医疗方案的制定，供者，代孕者的筛查和配对</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="List">
+            <div class="img-box"><img src="img/Img2.png"><span class="colour4">全美TOP10</span></div>
+            <dl>
+                <dt>Dr.J</dt>
+                <dd>
+                    <p><strong>履历：</strong>美国西海岸最大的生殖中心生殖中心主任，多次被评为美国顶级好医生；多次被美国CNN、ABC电视台和PEOPLE杂志采访</p>
+                    <p><strong>资质：</strong>妇产科和辅助生殖双医学执照认证</p>
+                    <p><strong>擅长：</strong>高龄女性的不育不孕治疗，各种试管婴儿医疗方案的制定，供者，代孕者的筛查和配对</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="List">
+            <div class="img-box"><img src="img/Img2.png"><span class="colour5">全美TOP10</span></div>
+            <dl>
+                <dt>Dr.J</dt>
+                <dd>
+                    <p><strong>履历：</strong>美国西海岸最大的生殖中心生殖中心主任，多次被评为美国顶级好医生；多次被美国CNN、ABC电视台和PEOPLE杂志采访</p>
+                    <p><strong>资质：</strong>妇产科和辅助生殖双医学执照认证</p>
+                    <p><strong>擅长：</strong>高龄女性的不育不孕治疗，各种试管婴儿医疗方案的制定，供者，代孕者的筛查和配对</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="List">
+            <div class="img-box"><img src="img/Img2.png"><span class="colour6">全美TOP10</span></div>
+            <dl>
+                <dt>Dr.J</dt>
+                <dd>
+                    <p><strong>履历：</strong>美国西海岸最大的生殖中心生殖中心主任，多次被评为美国顶级好医生；多次被美国CNN、ABC电视台和PEOPLE杂志采访</p>
+                    <p><strong>资质：</strong>妇产科和辅助生殖双医学执照认证</p>
+                    <p><strong>擅长：</strong>高龄女性的不育不孕治疗，各种试管婴儿医疗方案的制定，供者，代孕者的筛查和配对</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="List">
+            <div class="img-box"><img src="img/Img2.png"><span class="colour7">全美TOP10</span></div>
+            <dl>
+                <dt>Dr.J</dt>
+                <dd>
+                    <p><strong>履历：</strong>美国西海岸最大的生殖中心生殖中心主任，多次被评为美国顶级好医生；多次被美国CNN、ABC电视台和PEOPLE杂志采访</p>
+                    <p><strong>资质：</strong>妇产科和辅助生殖双医学执照认证</p>
+                    <p><strong>擅长：</strong>高龄女性的不育不孕治疗，各种试管婴儿医疗方案的制定，供者，代孕者的筛查和配对</p>
+                </dd>
+            </dl>
+        </div>
+        <div class="List">
+            <div class="img-box"><img src="img/Img2.png"><span class="colour8">全美TOP10</span></div>
+            <dl>
+                <dt>Dr.J</dt>
+                <dd>
+                    <p><strong>履历：</strong>美国西海岸最大的生殖中心生殖中心主任，多次被评为美国顶级好医生；多次被美国CNN、ABC电视台和PEOPLE杂志采访</p>
+                    <p><strong>资质：</strong>妇产科和辅助生殖双医学执照认证</p>
+                    <p><strong>擅长：</strong>高龄女性的不育不孕治疗，各种试管婴儿医疗方案的制定，供者，代孕者的筛查和配对</p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="bottom-box" style="border-top:0;">
+        <ul class="ewm">
+            <li><span class="wx">微信<img class="wx-img" src="img/wx-img.jpg"></span></li>
+            <li><span class="wb">微博<img class="wb-img" src="img/wb-img.jpg"></span></li>
+        </ul>
+        <dl class="address">
+            <dt>北京总部</dt>
+            <dd>
+                <p>地址：天津市丰台区南四环西路128号诺德中心 2号楼1511</p>
+                <p>幸福热线：400-015-6612</p>
+            </dd>
+            <dt>上海分公司</dt>
+            <dd>
+                <p>地址：上海市丰台区南四环西路128号诺德中心 2号楼1511</p>
+                <p>幸福热线：400-015-6612</p>
+            </dd>
+            <dt>洛杉矶分公司</dt>
+            <dd>
+                <p>地址：xxxxxxxxxxxx 2号楼1511</p>
+            </dd>
+        </dl>
+        <ul class="bottom-txt">
+            <li>Copyright©1999-2016, ctrip.com. All rights reserved.</li>
+            <li>ICP证：沪B2-20050130</li>
+            <li>沪公网备31010502000018号</li>
+        </ul>
+    </div>
+    <button class="flx-btn">立即咨询</button>
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.nav__trigger').on('click', function(e){
+                e.preventDefault();
+                $(this).parent().toggleClass('nav--active');
+            });
+            $(".flickity-viewport").height("auto");
+        })
+    </script>
+</body>
+</html>
