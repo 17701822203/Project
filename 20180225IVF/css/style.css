@@ -419,6 +419,7 @@ body {
 .white-box {
   background: #fff;
   margin-top: .625rem;
+  padding-bottom:1rem;
 }
 .process dt {
   line-height: 2.5rem;
@@ -919,7 +920,7 @@ body {
 .detailed dl dd{font-size:.7rem;color:#333;padding-bottom:3.4rem;}
 .detailed dl dd p{line-height:1.1rem;margin-top:1.4rem;}
 /*****优势详情******/
-.youshi-wrap{background:#fff;}
+.youshi-wrap{background:#fff;padding-bottom:2rem;}
 .youshi-wrap img{margin-top:2rem;width:100%;}
 .youshi-wrap p{padding:0 1rem;font-size:.7rem;color:#333;line-height:1.1rem;}
 /*****项目详情*****/
