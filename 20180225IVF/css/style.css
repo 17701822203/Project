@@ -94,12 +94,19 @@ body {
 .img-change {
   font-size: 0;
   padding-top: 2.5rem;
+  height:18.25rem;
 }
 .img-change img {
   width: 100%;
-}
-.img-change img {
   height: 18.25rem;
+}
+.carousel-cell {
+  width:100%;
+  height:18.25rem;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
 }
 .service-content {
   height: 7rem;
@@ -424,7 +431,6 @@ body {
 .white-box {
   background: #fff;
   margin-top: .625rem;
-  padding-bottom:1rem;
 }
 .process dt {
   line-height: 2.5rem;
@@ -518,7 +524,7 @@ body {
   font-weight: bold;
 }
 .message-input {
-  padding: 0 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 .message-input dd {
   line-height: 2.25rem;
@@ -783,6 +789,7 @@ body {
   font-weight: bold;
   line-height: .75rem;
   top:1rem;
+
 }
 .NavRegion span.on {
   color: #6FBD00;
@@ -900,6 +907,7 @@ body {
 .DetailsWrap dl dd p:last-child {
   padding-top: 1rem;
 }
+.DetailsWrap dl dd img,.detailed dl dd img{width:100%;}
 /*********2018.5.5********/
 /******案例列表*****/
 .anli{padding:3rem .45rem 2.5rem .45rem;}
@@ -929,7 +937,7 @@ body {
 .youshi-wrap img{margin-top:2rem;width:100%;}
 .youshi-wrap p{padding:0 1rem;font-size:.7rem;color:#333;line-height:1.1rem;}
 /*****项目详情*****/
-.shengyu-wrap{background:#fff;padding-bottom:1rem;}
+.shengyu-wrap{background:#fff;padding-bottom: 1rem;}
 .shengyu-top-img{font-size:0;padding-top:2.5rem;}
 .shengyu-top-img img{width:100%;}
 .jsTab_title{height:2.8rem;background:#f8f8f8;}
@@ -938,7 +946,7 @@ body {
 .jsTab_title li.on span{color:#5f9d04;position: relative;}
 .jsTab_title li.on span:after{position: absolute;content:"";width:100%;height:.25rem;background:#70bd00;bottom:-.5rem;left:50%;margin-left:-50%;}
 .jsTab_con .qa{font-size:.75rem;padding:0 1.35rem;}
-.jsTab_con .qa dt{margin-top:1.85rem;}
+.jsTab_con .qa dt{margin-top:1.85rem;font-weight: bold;}
 .jsTab_con .qa dd{line-height:1.2rem;}
 .jsTab_con .qa dd p span{color:#5f9d04;white-space:nowrap;}
 /*****联系我们*****/
@@ -956,3 +964,5 @@ body {
 .a6 button{-webkit-border-radius:2rem;-moz-border-radius:2rem;border-radius:2rem;border:0;height:1.9rem;width:6.65rem;background:#ed5f18;color:#fff;font-size:.75rem;}
 .close-btn{width:1.35rem;height:1.35rem;background:url("../img/close-btn.png") no-repeat;background-size:100% 100%;position: absolute;right:0;top:-1.6rem;}
 .flx-btn{height:2.45rem;background:#6cb603;color:#fff;font-size:.9rem;position: fixed;left:0;bottom:0;width:100%;border:0;}
+
+
