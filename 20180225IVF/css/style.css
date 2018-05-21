@@ -95,6 +95,7 @@ body {
   font-size: 0;
   padding-top: 2.5rem;
   height:18.25rem;
+  overflow: hidden;
 }
 .img-change img {
   width: 100%;
