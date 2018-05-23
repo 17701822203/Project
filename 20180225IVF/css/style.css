@@ -16,7 +16,7 @@ button:active {
 }
 ol,
 ul,
-li {
+li{
   list-style: none;
 }
 body {
@@ -584,9 +584,9 @@ body {
 }
 .bottom-box:after,
 .bottom-box:before {
-  content: " ";
-  display: table;
-  clear: both;
+  content:" ";
+  display:table;
+  clear:both;
 }
 .bottom-box .ewm {
   padding-top: 3.7rem;
@@ -922,7 +922,7 @@ body {
 .anli dl dt{font-size:0;}
 .anli dl dt img{width:100%;}
 .anli dl dd{background:#fff;padding-left:.925rem;padding-bottom:1.3rem;}
-.anli dl dd p{font-size:.75rem;line-height:.75rem;padding-top:.75rem;padding-left:.5rem;position: relative;}
+.anli dl dd p{font-size:.75rem;line-height:.75rem;padding-top:.75rem;padding-left:.5rem;position:relative;}
 .anli dl dd p:after{content:"";position:absolute;width:.15rem;height:.15rem;background:#94979a;left:0;top:1.1rem;-webkit-border-radius: 1rem;-moz-border-radius:1rem;border-radius:1rem;}
 .anli dl dd p a{color:#333;position:relative;}
 .anli dl dd p .new:after{width:1.425rem;height:.6rem;content:"";position: absolute;background:url("../img/new.png") no-repeat;background-size:100% 100%;right:-1.6rem;top:.25rem;}
@@ -952,8 +952,8 @@ body {
 .jsTab_con .qa dd{line-height:1.2rem;}
 .jsTab_con .qa dd p span{color:#5f9d04;white-space:nowrap;}
 /*****联系我们*****/
-.AboutUs-wrap{text-align:center;width:15.825rem;height:19.075rem;background:#fff;position: fixed;left:50%;margin-left:-7.9125rem;z-index:30;top:4.85rem;}
-.AboutUs-wrap:after{position: absolute;left:50%;top:9.5rem;content:"";width:8rem;margin-left:-4rem;height:1px;background:#c6c6c6;}
+.AboutUs-wrap{text-align:center;width:15.825rem;height:19.075rem;background:#fff;position:fixed;left:50%;margin-left:-7.9125rem;z-index:30;top:4.85rem;}
+.AboutUs-wrap:after{position:absolute;left:50%;top:9.5rem;content:"";width:8rem;margin-left:-4rem;height:1px;background:#c6c6c6;}
 .a1,.a4{font-size:1.2rem;line-height:1.2rem;color:#333;}
 .a2,.a5{font-size:.75rem;line-height:.75rem;color:#666;}
 .a1{margin-top:1.8rem;}
@@ -964,8 +964,8 @@ body {
 .a6{margin-top:1.05rem;}
 .a3 button{width:8.65rem;height:1.9rem;color:#fff;font-size:.75rem;background:url("../img/dianhua.png") .95rem .55rem no-repeat #70bd00;background-size:.825rem .825rem;-webkit-border-radius:2rem;-moz-border-radius:2rem;border-radius:2rem;border:0;text-indent:1rem;}
 .a6 button{-webkit-border-radius:2rem;-moz-border-radius:2rem;border-radius:2rem;border:0;height:1.9rem;width:6.65rem;background:#ed5f18;color:#fff;font-size:.75rem;}
-.close-btn{width:1.35rem;height:1.35rem;background:url("../img/close-btn.png") no-repeat;background-size:100% 100%;position: absolute;right:0;top:-1.6rem;}
-.flx-btn{height:2.45rem;background:#6cb603;color:#fff;font-size:.9rem;position: fixed;left:0;bottom:0;width:100%;border:0;}
+.close-btn{width:1.35rem;height:1.35rem;background:url("../img/close-btn.png") no-repeat;background-size:100% 100%;position:absolute;right:0;top:-1.6rem;}
+.flx-btn{height:2.45rem;background:#6cb603;color:#fff;font-size:.9rem;position:fixed;left:0;bottom:0;width:100%;border:0;}
 /**头图轮播点**/
 .flickity-page-dots{position:absolute;width:100%;bottom:1rem;padding:0;margin:0;list-style:none;text-align:center;line-height:1;}
 .flickity-rtl .flickity-page-dots{direction:rtl;}
